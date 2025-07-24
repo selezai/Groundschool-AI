@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayFast Modern API Signature Tester</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; background: #f8f9fa; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .input-group { margin-bottom: 15px; }
+        label { font-weight: 600; display: block; margin-bottom: 5px; color: #495057; }
+        input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        button { background: #007bff; color: white; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; margin-top: 10px; }
+        button:hover { background: #0056b3; }
+        .result { background: #e9ecef; border: 1px solid #dee2e6; padding: 15px; border-radius: 4px; margin-top: 10px; font-family: 'Monaco', 'Consolas', monospace; font-size: 12px; white-space: pre-wrap; word-wrap: break-word; }
+        .error { color: #dc3545; background-color: #f8d7da; border-color: #f5c6cb; }
+        .success { color: #155724; background-color: #d4edda; border-color: #c3e6cb; }
+        h1, h2 { color: #343a40; text-align: center; }
+        h2 { font-size: 1.2em; margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PayFast Modern API Signature Tester</h1>
+        
+        <div class="input-group">
+            <label for="merchantIdInput">merchant-id</label>
+            <input type="text" id="merchantIdInput" value="10039481">
+        </div>
+        <div class="input-group">
+            <label for="versionInput">version</label>
+            <input type="text" id="versionInput" value="v1">
+        </div>
+        <div class="input-group">
+            <label for="timestampInput">timestamp (YYYYMMDDHHMMSS)</label>
+            <input type="text" id="timestampInput" placeholder="e.g., 20250626171500">
+        </div>
+        <div class="input-group">
+            <label for="testingInput">testing</label>
+            <input type="text" id="testingInput" value="true">
+        </div>
+        <div class="input-group">
+            <label for="passphraseInput">Passphrase</label>
+            <input type="text" id="passphraseInput" placeholder="Enter your PayFast passphrase">
+        </div>
+        
+        <button onclick="generateSignature()">Generate Signature</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        // Auto-populate timestamp on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const timestampInput = document.getElementById('timestampInput');
+            if (timestampInput) {
+                const now = new Date();
+                const timestamp = now.toISOString().slice(0, 19) + 'Z';
+                timestampInput.value = timestamp;
+            }
+        });
+
+        /**
+         * Custom URL encoding to match PayFast's specific requirements (spaces as '+').
+         */
+        function payfastEncode(str) {
+            return encodeURIComponent(str).replace(/%20/g, '+');
+        }
+
+        function generateSignature() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = ''; // Clear previous results
+            
+            try {
+                const params = {
+                    'merchant-id': document.getElementById('merchantIdInput').value,
+                    'version': document.getElementById('versionInput').value,
+                    'timestamp': document.getElementById('timestampInput').value,
+                    'testing': document.getElementById('testingInput').value,
+                };
+                const passphrase = document.getElementById('passphraseInput').value.trim();
+                if (!passphrase) throw new Error('Passphrase cannot be empty.');
+
+                // 1. Create the parameter string with correct sorting and encoding.
+                const sortedKeys = Object.keys(params).sort();
+                const paramString = sortedKeys
+                    .map(key => `${key}=${payfastEncode(params[key])}`)
+                    .join('&');
+
+                // 2. Append the passphrase in the correct format.
+                const finalStringToHash = `${paramString}&passphrase=${passphrase}`;
+
+                // 3. Generate the final MD5 hash.
+                const generatedSignature = CryptoJS.MD5(finalStringToHash).toString();
+
+                // 4. Display the results.
+                resultsDiv.innerHTML = `
+                    <h2>Results</h2>
+                    <h3>Final String (Before Hashing)</h3>
+                    <div class="result">${finalStringToHash}</div>
+                    <h3>Generated Signature (MD5)</h3>
+                    <div class="result success">${generatedSignature}</div>
+                `;
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `<div class="result error">Error: ${error.message}</div>`;
+                console.error("Signature generation error:", error);
+            }
+        }
+    </script>
+</body>
+</html>
