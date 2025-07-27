@@ -1,0 +1,26 @@
+# Ignore Python development tools and files
+dev-tools/
+*.py
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Ignore development and testing files
+tests/
+*.test.js
+*.test.ts
+jest.config.js
+
+# Ignore local development files
+.env.local
+.env.development
+node_modules/
+.expo/
+.expo-shared/
+
+# Ignore documentation and non-essential files
+docs/
+README.md
+CONTRIBUTING.md
+INSTALLATION.md
+LICENSE
