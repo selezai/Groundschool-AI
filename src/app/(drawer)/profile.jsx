@@ -229,7 +229,6 @@ const ProfileScreen = () => {
   };
 
   const handleSignOut = async () => {
-    logger.info('ProfileScreen:handleSignOut', 'Attempting sign out.');
     try {
       await signOut();
       logger.info('ProfileScreen:handleSignOut', 'Sign out successful.');
@@ -238,6 +237,56 @@ const ProfileScreen = () => {
       logger.error('ProfileScreen:handleSignOut', 'Error during sign out', { error: err });
       Alert.alert('Error Signing Out', err.message || 'An unexpected error occurred.');
     }
+  };
+
+  const handleDeleteAccount = () => {
+    Alert.alert(
+      'Delete Account',
+      'Are you sure you want to permanently delete your account? This action cannot be undone and will delete all your data, documents, and exam history.',
+      [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Delete Account',
+          style: 'destructive',
+          onPress: async () => {
+            try {
+              // First, delete the user's profile and related data
+              const { error: profileError } = await supabase
+                .from('profiles')
+                .delete()
+                .eq('id', user.id);
+
+              if (profileError) {
+                logger.error('Failed to delete user profile', { error: profileError });
+                Alert.alert('Error', 'Failed to delete account data. Please try again.');
+                return;
+              }
+
+              // Then delete the auth user
+              const { error: authError } = await supabase.auth.admin.deleteUser(user.id);
+              
+              if (authError) {
+                logger.error('Failed to delete auth user', { error: authError });
+                Alert.alert('Error', 'Failed to delete account. Please contact support.');
+                return;
+              }
+
+              logger.info('Account deleted successfully', { userId: user.id });
+              Alert.alert('Account Deleted', 'Your account has been permanently deleted.');
+              
+              // Sign out the user
+              signOut();
+            } catch (error) {
+              logger.error('Exception during account deletion', { error });
+              Alert.alert('Error', 'An unexpected error occurred. Please try again.');
+            }
+          },
+        },
+      ]
+    );
   };
 
   const handleUpgradePress = () => {
@@ -524,8 +573,14 @@ const ProfileScreen = () => {
 
       {/* Sign Out Button */}
       <TouchableOpacity style={styles.signOutButton} onPress={handleSignOut}>
-        <Ionicons name="log-out-outline" size={20} color={theme.colors.white} style={styles.signOutButtonIcon} />
+        <Ionicons name="log-out-outline" size={20} color="#0a0e23" style={styles.signOutButtonIcon} />
         <Text style={styles.signOutButtonText}>Sign Out</Text>
+      </TouchableOpacity>
+
+      {/* Delete Account Button */}
+      <TouchableOpacity style={styles.deleteAccountButton} onPress={handleDeleteAccount}>
+        <Ionicons name="trash-outline" size={20} color={theme.colors.white} style={styles.deleteAccountButtonIcon} />
+        <Text style={styles.deleteAccountButtonText}>Delete Account</Text>
       </TouchableOpacity>
 
     
@@ -907,22 +962,43 @@ const getStyles = createThemedStyles((theme) => ({
     fontWeight: 'bold',
   },
   signOutButton: {
-    backgroundColor: theme.colors.error, // Prominent error color for sign out
-    paddingVertical: theme.spacing.m,
-    borderRadius: 8, // Was theme.borderRadius.medium
-    flexDirection: 'row',
+    backgroundColor: theme.colors.primary, // Match upload button style
+    paddingVertical: theme.spacing.s + 2,
+    paddingHorizontal: theme.spacing.m + 4,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
+    minHeight: 48,
     marginHorizontal: theme.spacing.m, // Align with card margins
     marginTop: theme.spacing.l, // Space above sign out
-    marginBottom: theme.spacing.m, // Space below sign out
+    marginBottom: theme.spacing.s, // Reduced space below sign out
   },
   signOutButtonIcon: {
     marginRight: theme.spacing.s,
   },
   signOutButtonText: {
+    color: theme.colors.primaryContent, // Match upload button text color
+    fontSize: theme.typography.body.fontSize,
+    fontWeight: '600',
+  },
+  deleteAccountButton: {
+    backgroundColor: theme.colors.error, // Prominent error color for delete account
+    paddingVertical: theme.spacing.m,
+    borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: theme.spacing.m, // Align with card margins
+    marginTop: theme.spacing.s, // Small space above delete account
+    marginBottom: theme.spacing.m, // Space below delete account
+  },
+  deleteAccountButtonIcon: {
+    marginRight: theme.spacing.s,
+  },
+  deleteAccountButtonText: {
     ...theme.typography.button,
-    color: theme.colors.white, // Assuming error button text is white
+    color: theme.colors.white, // Error button text is white
     fontWeight: 'bold',
   },
 

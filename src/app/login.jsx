@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, TextInput, ActivityIndicator, Platform, KeyboardAvoidingView, Alert, TouchableOpacity, Linking } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useAuth } from '../contexts/AuthContext';
+import { authService } from '../services/authService';
 import { darkColors, spacing, typography, createThemedStyles } from '../theme/theme';
 import logger from '../services/loggerService';
 
@@ -44,6 +45,52 @@ export default function LoginScreen() {
     // Basic regex for email validation - you can use a more comprehensive one if needed
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(emailToTest);
+  };
+
+  // Handle forgot password functionality
+  const handleForgotPassword = async () => {
+    if (!email.trim()) {
+      const message = 'Please enter your email address first.';
+      if (Platform.OS === 'web') {
+        setUiError(message);
+      } else {
+        Alert.alert('Email Required', message);
+      }
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      const message = 'Please enter a valid email address.';
+      if (Platform.OS === 'web') {
+        setUiError(message);
+      } else {
+        Alert.alert('Invalid Email', message);
+      }
+      return;
+    }
+
+    try {
+      await authService.sendPasswordResetEmail(email);
+      const successMessage = `Password reset email sent to ${email}. Please check your inbox and follow the instructions to reset your password.`;
+      
+      if (Platform.OS === 'web') {
+        setUiError(null); // Clear any previous errors
+        Alert.alert('Reset Email Sent', successMessage);
+      } else {
+        Alert.alert('Reset Email Sent', successMessage);
+      }
+      
+      logger.info('Password reset email sent successfully', { email });
+    } catch (error) {
+      logger.error('Failed to send password reset email', { email, error });
+      const errorMessage = 'Failed to send password reset email. Please try again later.';
+      
+      if (Platform.OS === 'web') {
+        setUiError(errorMessage);
+      } else {
+        Alert.alert('Reset Failed', errorMessage);
+      }
+    }
   };
 
   const toggleMode = () => {
@@ -244,6 +291,11 @@ export default function LoginScreen() {
           {isSignUp ? 'Already have an account? Log In' : 'Need an account? Sign Up'}
         </Text>
       </TouchableOpacity>
+      {!isSignUp && (
+        <TouchableOpacity style={styles.forgotPasswordButton} onPress={handleForgotPassword}>
+          <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+        </TouchableOpacity>
+      )}
     </KeyboardAvoidingView>
   );
 }
@@ -303,5 +355,15 @@ const getStyles = createThemedStyles((theme) => ({
     textAlign: 'center',
     fontSize: theme.typography.caption.fontSize + 2,
     color: theme.colors.error,
+  },
+  forgotPasswordButton: {
+    marginTop: theme.spacing.m + 4,
+    alignItems: 'center',
+    padding: theme.spacing.xs + 2,
+  },
+  forgotPasswordText: {
+    fontSize: theme.typography.body.fontSize,
+    fontWeight: '500',
+    color: theme.colors.link,
   },
 }));
