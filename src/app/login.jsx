@@ -5,6 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { authService } from '../services/authService';
 import { darkColors, spacing, typography, createThemedStyles } from '../theme/theme';
 import logger from '../services/loggerService';
+import posthogService from '../services/posthogService';
 
 export default function LoginScreen() {
   // Initialize styles at the component level
@@ -32,10 +33,17 @@ export default function LoginScreen() {
   useFocusEffect(
     useCallback(() => {
       console.log('[DEBUG] LoginScreen FOCUSED. Current uiError:', uiError);
+      
+      // Track screen view
+      posthogService.screen('Login Screen', {
+        is_signup_mode: isSignUp,
+        has_error: !!uiError,
+      });
+      
       return () => {
         console.log('[DEBUG] LoginScreen BLURRED. Last uiError was:', uiError);
       };
-    }, [uiError])
+    }, [uiError, isSignUp])
   );
 
 

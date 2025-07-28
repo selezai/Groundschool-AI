@@ -24,6 +24,7 @@ import quizService from '../../services/quizService';
 import { useNetwork } from '../../contexts/NetworkContext';
 import NetworkStatusBar from '../../components/NetworkStatusBar';
 import { useAuth } from '../../contexts/AuthContext';
+import posthogService from '../../services/posthogService';
 // These imports are used by createThemedStyles internally
 // eslint-disable-next-line no-unused-vars
 import { darkColors, spacing, typography, createThemedStyles } from '../../theme/theme';
@@ -50,6 +51,22 @@ const HomeScreen = () => {
 
   // Upload states
   const [isUploading, setIsUploading] = useState(false);
+
+  // Fetch documents when the screen comes into focus
+  useFocusEffect(
+    useCallback(() => {
+      // Track screen view
+      posthogService.screen('Home Screen', {
+        user_plan: profile?.plan || 'basic',
+        documents_count: documents.length,
+        storage_used_mb: storageUsage,
+        storage_used_percent: storageUsagePercent,
+      });
+      
+      fetchDocuments();
+      fetchStorageUsage();
+    }, [profile?.plan, documents.length, storageUsage, storageUsagePercent])
+  );
 
   // Reset loading states when the screen comes into focus
   useFocusEffect(
@@ -418,6 +435,18 @@ const HomeScreen = () => {
 
     try {
       logger.info('HomeScreen', 'Starting document upload', { title: titleForDocument.trim(), fileName: fileToUpload.name });
+      
+      // Track document upload start
+      posthogService.capture('document_upload_started', {
+        file_name: fileToUpload.name,
+        file_size: fileToUpload.size,
+        file_type: fileToUpload.mimeType || 'unknown',
+        document_title: titleForDocument.trim(),
+        user_plan: profile?.plan || 'basic',
+        storage_used_mb: storageUsage,
+        max_storage_mb: maxStorage,
+      });
+      
       const uploadedDoc = await uploadDocument(
         fileToUpload,
         titleForDocument.trim(),
@@ -427,6 +456,18 @@ const HomeScreen = () => {
       );
 
       logger.info('HomeScreen', 'Document uploaded successfully', { documentId: uploadedDoc?.id });
+      
+      // Track successful document upload
+      posthogService.capture('document_uploaded', {
+        document_id: uploadedDoc?.id,
+        file_name: fileToUpload.name,
+        file_size: fileToUpload.size,
+        file_type: fileToUpload.mimeType || 'unknown',
+        document_title: titleForDocument.trim(),
+        user_plan: profile?.plan || 'basic',
+        upload_duration: Date.now() - Date.now(), // Will be calculated properly in real implementation
+      });
+      
       setSelectedFile(null); 
       setNewDocumentTitle('');
       setUploadProgress(0);
@@ -442,11 +483,34 @@ const HomeScreen = () => {
           currentUsage: err.currentUsage, 
           limit: err.limit 
         });
+        
+        // Track storage limit exceeded
+        posthogService.capture('document_upload_failed', {
+          error_type: 'storage_limit_exceeded',
+          error_message: errorMessage,
+          file_name: fileToUpload.name,
+          file_size: fileToUpload.size,
+          current_usage_mb: err.currentUsageInMB,
+          limit_mb: err.limitInMB,
+          user_plan: profile?.plan || 'basic',
+        });
+        
         setUploadError(errorMessage);
       } else {
         // Handle other errors
         const errorMessage = err instanceof Error ? err.message : String(err);
         logger.error('HomeScreen', 'Error uploading document', { error: errorMessage, title: titleForDocument }); 
+        
+        // Track general upload failure
+        posthogService.capture('document_upload_failed', {
+          error_type: 'upload_error',
+          error_message: errorMessage,
+          file_name: fileToUpload.name,
+          file_size: fileToUpload.size,
+          document_title: titleForDocument.trim(),
+          user_plan: profile?.plan || 'basic',
+        });
+        
         setUploadError(`Upload failed: ${errorMessage}`);
       }
     } finally {
@@ -470,8 +534,23 @@ const HomeScreen = () => {
           return; // Return early if user info is missing
         }
         logger.info('HomeScreen:handleDeleteDocument', 'Attempting to delete document.', { documentId, userId: session.user.id });
+        
+        // Find document details for tracking
+        const documentToDelete = documents.find(doc => doc.id === documentId);
+        
         await deleteDocument(documentId, session.user.id);
         logger.info('HomeScreen:handleDeleteDocument', 'Successfully deleted from backend. Updating UI.', { documentId });
+        
+        // Track successful document deletion
+        posthogService.capture('document_deleted', {
+          document_id: documentId,
+          document_name: documentName,
+          document_title: documentToDelete?.title || 'unknown',
+          file_size: documentToDelete?.file_size || 0,
+          user_plan: profile?.plan || 'basic',
+          storage_freed_mb: documentToDelete?.file_size ? (documentToDelete.file_size / (1024 * 1024)).toFixed(2) : 0,
+        });
+        
         setDocuments(prevDocs => prevDocs.filter(doc => doc.id !== documentId));
         
         // Correctly update the multi-select quiz document IDs

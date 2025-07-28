@@ -17,6 +17,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../services/supabaseClient';
 import logger from '../../services/loggerService';
+import posthogService from '../../services/posthogService';
 import { useTheme, createThemedStyles } from '../../theme/theme';
 import { WebView } from 'react-native-webview';
 import CustomWebAlert from '../../components/CustomWebAlert';
@@ -172,6 +173,15 @@ const ProfileScreen = () => {
   // useFocusEffect to refetch stats when the screen comes into focus
   useFocusEffect(
     useCallback(() => {
+      // Track screen view
+      posthogService.screen('Profile Screen', {
+        user_plan: profile?.plan || 'basic',
+        plan_status: profile?.plan_status || 'unknown',
+        storage_used_mb: storageUsage,
+        exams_count: examsCount,
+        monthly_quizzes_remaining: profile?.monthly_quizzes_remaining || 0,
+      });
+      
       logger.info('ProfileScreen:useFocusEffect', 'Screen focused.');
       if (user?.id && profile) {
         // User and profile are available, re-fetch stats.
