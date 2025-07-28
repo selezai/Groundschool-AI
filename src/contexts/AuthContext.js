@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect, useContext, useCallback } fr
 import { supabase, isSupabaseReady, refreshSession, getSupabase } from '../services/supabaseClient';
 import { authService } from '../services/authService';
 import logger from '../services/loggerService';
+import posthogService from '../services/posthogService';
 import { Platform } from 'react-native';
 import Constants from 'expo-constants';
 
@@ -429,6 +430,18 @@ export const AuthProvider = ({ children }) => {
         setSession(result.session);
         setUser(result.user);
         logger.info('AuthContext', 'Sign in successful, session active', { userId: result.user.id });
+        
+        // Track sign in event
+        posthogService.identify(result.user.id, {
+          email: result.user.email,
+          email_verified: result.user.email_confirmed_at ? true : false,
+          sign_in_method: 'email',
+        });
+        posthogService.capture('user_signed_in', {
+          method: 'email',
+          user_id: result.user.id,
+        });
+        
         return { success: true, data: result };
       } else {
         logger.error('AuthContext', 'Unexpected success structure from authService.signIn', { result });
@@ -459,6 +472,18 @@ export const AuthProvider = ({ children }) => {
         setSession(serviceResult.session);
         setUser(serviceResult.user);
         logger.info('AuthContext', 'Sign up successful, session active', { userId: serviceResult.user.id });
+        
+        // Track sign up event
+        posthogService.identify(serviceResult.user.id, {
+          email: serviceResult.user.email,
+          email_verified: serviceResult.user.email_confirmed_at ? true : false,
+          sign_up_method: 'email',
+        });
+        posthogService.capture('user_signed_up', {
+          method: 'email',
+          user_id: serviceResult.user.id,
+        });
+        
         return { success: true, data: serviceResult };
       } else if (serviceResult.message) {
         logger.info('AuthContext', 'Sign up initiated', { message: serviceResult.message });
@@ -485,6 +510,14 @@ export const AuthProvider = ({ children }) => {
         logger.error('AuthContext', 'Supabase client not initialized during sign out');
         throw new Error('Authentication services are not initialized yet');
       }
+      // Track sign out event before clearing user data
+      if (user) {
+        posthogService.capture('user_signed_out', {
+          user_id: user.id,
+        });
+        posthogService.reset(); // Clear PostHog user data
+      }
+      
       await authService.signOut();
       setSession(null);
       setUser(null);

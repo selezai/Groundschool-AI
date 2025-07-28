@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ExpoRoot } from 'expo-router';
@@ -12,6 +12,7 @@ import { AuthProvider } from './src/contexts/AuthContext';
 // Removed: import { ThemeProvider } from './src/theme/theme'; // File does not exist
 
 import { darkColors } from './src/theme/theme';
+import posthogService from './src/services/posthogService';
 
 // Define your custom themes
 const MyDarkTheme = {
@@ -38,6 +39,11 @@ const MyDarkTheme = {
 export default function App() {
   // Force dark theme as per application design
   const currentTheme = MyDarkTheme;
+
+  // Initialize PostHog analytics
+  useEffect(() => {
+    posthogService.initialize();
+  }, []);
 
   return (
     <SafeAreaProvider>
