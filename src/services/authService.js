@@ -1,5 +1,7 @@
 import { supabase } from './supabaseClient'; // Use the newly created client
 import logger from './loggerService'; // Assuming loggerService exists or will be created
+import { getDefaultPlanForNewUsers, calculateTrialEndDate, shouldAutoUpgradeNewUsers } from '../config/featureFlags';
+import posthogService from './posthogService';
 
 // --- Profile Management ---
 
@@ -13,10 +15,42 @@ const createProfile = async (userId, profileData = {}) => {
   try {
     logger.info(`Attempting to create/update profile (upsert) for userId: ${userId}`, { profileData });
 
+    // Apply feature flag for default plan assignment
+    const defaultPlan = getDefaultPlanForNewUsers();
+    const planEndDate = shouldAutoUpgradeNewUsers() ? calculateTrialEndDate() : null;
+    
+    // Set default plan and status for new users based on feature flag
+    const planDefaults = {
+      plan: defaultPlan,
+      plan_status: defaultPlan === 'captains_club' ? 'active' : 'basic',
+      plan_period_end: planEndDate ? planEndDate.toISOString() : null,
+    };
+    
+    // Log feature flag usage for monitoring
+    if (shouldAutoUpgradeNewUsers()) {
+      logger.info(`[FeatureFlag] Auto-upgrading new user to Captain's Club`, {
+        userId,
+        plan: defaultPlan,
+        trialEndDate: planEndDate,
+        isPermanent: planEndDate === null
+      });
+      
+      // Track feature flag usage in PostHog
+      posthogService.capture('user_auto_upgraded_to_captains_club', {
+        user_id: userId,
+        feature_flag: 'AUTO_UPGRADE_NEW_USERS_TO_CAPTAINS_CLUB',
+        plan_assigned: defaultPlan,
+        trial_end_date: planEndDate,
+        is_permanent_access: planEndDate === null,
+        upgrade_method: 'feature_flag_auto_upgrade'
+      });
+    }
+
     const upsertPayload = {
       id: userId,
       updated_at: new Date(),
-      ...profileData, // Spreads fields like full_name, username, avatar_url from profileData
+      ...planDefaults, // Apply feature flag defaults first
+      ...profileData, // User-provided data can override defaults if needed
     };
 
     // The Supabase trigger 'handle_new_user' already populates 'email' from 'auth.users'.
