@@ -19,6 +19,7 @@ import { supabase } from '../../services/supabaseClient';
 import logger from '../../services/loggerService';
 import { useTheme, createThemedStyles } from '../../theme/theme';
 import { WebView } from 'react-native-webview';
+import CustomWebAlert from '../../components/CustomWebAlert';
 
 const PAYFAST_RETURN_URL_IDENTIFIER = '/payment-success.html';
 const PAYFAST_CANCEL_URL_IDENTIFIER = '/payment-cancel.html';
@@ -28,6 +29,8 @@ const ProfileScreen = () => {
   const [examsCount, setExamsCount] = useState(0);
   const [isLoadingUsage, setIsLoadingUsage] = useState(true);
   const [usageError, setUsageError] = useState(null);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [isDeletingAccount, setIsDeletingAccount] = useState(false);
   const theme = useTheme(); // Define theme using the hook
   const styles = getStyles();
   const router = useRouter();
@@ -240,53 +243,82 @@ const ProfileScreen = () => {
   };
 
   const handleDeleteAccount = () => {
-    Alert.alert(
-      'Delete Account',
-      'Are you sure you want to permanently delete your account? This action cannot be undone and will delete all your data, documents, and exam history.',
-      [
-        {
-          text: 'Cancel',
-          style: 'cancel',
-        },
-        {
-          text: 'Delete Account',
-          style: 'destructive',
-          onPress: async () => {
-            try {
-              // First, delete the user's profile and related data
-              const { error: profileError } = await supabase
-                .from('profiles')
-                .delete()
-                .eq('id', user.id);
-
-              if (profileError) {
-                logger.error('Failed to delete user profile', { error: profileError });
-                Alert.alert('Error', 'Failed to delete account data. Please try again.');
-                return;
-              }
-
-              // Then delete the auth user
-              const { error: authError } = await supabase.auth.admin.deleteUser(user.id);
-              
-              if (authError) {
-                logger.error('Failed to delete auth user', { error: authError });
-                Alert.alert('Error', 'Failed to delete account. Please contact support.');
-                return;
-              }
-
-              logger.info('Account deleted successfully', { userId: user.id });
-              Alert.alert('Account Deleted', 'Your account has been permanently deleted.');
-              
-              // Sign out the user
-              signOut();
-            } catch (error) {
-              logger.error('Exception during account deletion', { error });
-              Alert.alert('Error', 'An unexpected error occurred. Please try again.');
-            }
+    if (Platform.OS === 'web') {
+      setShowDeleteConfirm(true);
+    } else {
+      Alert.alert(
+        'Delete Account',
+        'Are you sure you want to permanently delete your account? This action cannot be undone and will delete all your data, documents, and exam history.',
+        [
+          {
+            text: 'Cancel',
+            style: 'cancel',
           },
+          {
+            text: 'Delete Account',
+            style: 'destructive',
+            onPress: () => performAccountDeletion(),
+          },
+        ]
+      );
+    }
+  };
+
+  const performAccountDeletion = async () => {
+    if (isDeletingAccount) return;
+    
+    setIsDeletingAccount(true);
+    
+    try {
+      logger.info('Starting account deletion process', { userId: user.id });
+      
+      // Call the Edge Function to delete the account
+      const { data: sessionData } = await supabase.auth.getSession();
+      
+      if (!sessionData.session) {
+        throw new Error('No active session found');
+      }
+      
+      const response = await fetch(`${process.env.EXPO_PUBLIC_SUPABASE_URL}/functions/v1/delete-user-account`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${sessionData.session.access_token}`,
+          'Content-Type': 'application/json',
         },
-      ]
-    );
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to delete account');
+      }
+      
+      logger.info('Account deleted successfully', { userId: user.id });
+      
+      // Show success message
+      if (Platform.OS === 'web') {
+        alert('Account deleted successfully. You will now be signed out.');
+      } else {
+        Alert.alert('Account Deleted', 'Your account has been permanently deleted.');
+      }
+      
+      // Sign out the user
+      await signOut();
+      
+    } catch (error) {
+      logger.error('Exception during account deletion', { error });
+      
+      const errorMessage = error.message || 'An unexpected error occurred. Please try again.';
+      
+      if (Platform.OS === 'web') {
+        alert(`Error: ${errorMessage}`);
+      } else {
+        Alert.alert('Error', errorMessage);
+      }
+    } finally {
+      setIsDeletingAccount(false);
+      setShowDeleteConfirm(false);
+    }
   };
 
   const handleUpgradePress = () => {
@@ -578,10 +610,43 @@ const ProfileScreen = () => {
       </TouchableOpacity>
 
       {/* Delete Account Button */}
-      <TouchableOpacity style={styles.deleteAccountButton} onPress={handleDeleteAccount}>
-        <Ionicons name="trash-outline" size={20} color={theme.colors.white} style={styles.deleteAccountButtonIcon} />
-        <Text style={styles.deleteAccountButtonText}>Delete Account</Text>
+      <TouchableOpacity 
+        style={[styles.deleteAccountButton, isDeletingAccount && styles.buttonDisabled]} 
+        onPress={handleDeleteAccount}
+        disabled={isDeletingAccount}
+      >
+        {isDeletingAccount ? (
+          <ActivityIndicator size="small" color={theme.colors.white} style={styles.deleteAccountButtonIcon} />
+        ) : (
+          <Ionicons name="trash-outline" size={20} color={theme.colors.white} style={styles.deleteAccountButtonIcon} />
+        )}
+        <Text style={styles.deleteAccountButtonText}>
+          {isDeletingAccount ? 'Deleting Account...' : 'Delete Account'}
+        </Text>
       </TouchableOpacity>
+
+      {/* Custom Web Alert for Delete Confirmation */}
+      <CustomWebAlert
+        visible={showDeleteConfirm}
+        title="Delete Account"
+        message="Are you sure you want to permanently delete your account? This action cannot be undone and will delete all your data, documents, and exam history."
+        buttons={[
+          {
+            text: 'Cancel',
+            style: 'cancel',
+            onPress: () => setShowDeleteConfirm(false),
+          },
+          {
+            text: 'Delete Account',
+            style: 'destructive',
+            onPress: () => {
+              setShowDeleteConfirm(false);
+              performAccountDeletion();
+            },
+          },
+        ]}
+        onClose={() => setShowDeleteConfirm(false)}
+      />
 
     
       {/* Payfast WebView Modal */}
@@ -1000,6 +1065,9 @@ const getStyles = createThemedStyles((theme) => ({
     ...theme.typography.button,
     color: theme.colors.white, // Error button text is white
     fontWeight: 'bold',
+  },
+  buttonDisabled: {
+    opacity: 0.6,
   },
 
   // Styles for New Subscription Boxes (June 2025 Redesign)
