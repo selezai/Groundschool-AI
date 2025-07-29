@@ -763,7 +763,8 @@ const HomeScreen = () => {
             />
           </View>
           <Text style={styles.guidanceText}>
-            (e.g., 3-20 recommended). Actual number may vary.
+            • More questions = longer generation time{"\n"}
+            • Final count may vary based on document content
           </Text>
 
           <TouchableOpacity 
