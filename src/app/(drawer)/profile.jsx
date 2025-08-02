@@ -32,6 +32,10 @@ const ProfileScreen = () => {
   const [usageError, setUsageError] = useState(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [isDeletingAccount, setIsDeletingAccount] = useState(false);
+  
+  // Testing phase flag - set to true to hide billing elements
+  // When user says "activate cc", change this to false to restore normal functionality
+  const isTestingPhase = true;
   const theme = useTheme(); // Define theme using the hook
   const styles = getStyles();
   const router = useRouter();
@@ -492,7 +496,8 @@ const ProfileScreen = () => {
         <View style={[styles.planBox, { marginTop: theme.spacing.m }, profile.plan === 'captains_club' && styles.planBoxHighlighted]}>
           <View style={styles.planHeader}>
             <Text style={styles.planNameText}>Captain's Club{profile.plan === 'captains_club' ? ' (Current)' : ''}</Text>
-            <Text style={styles.planPriceText}>R99/month</Text>
+            {/* Hide price during testing phase */}
+            {!isTestingPhase && <Text style={styles.planPriceText}>R99/month</Text>}
           </View>
           <Text style={styles.planDescriptionText}>
             {captainFeatures.join(', ')}
@@ -505,14 +510,20 @@ const ProfileScreen = () => {
                   {profile.plan_status ? profile.plan_status.charAt(0).toUpperCase() + profile.plan_status.slice(1) : 'N/A'}
                 </Text>
               </View>
-              {profile.plan_period_end && (
+              {/* Hide next billing date during testing phase */}
+              {!isTestingPhase && profile.plan_period_end && (
                 <View style={styles.infoRowBorderless}>
                   <Text style={styles.infoLabel}>Next Billing Date</Text>
                   <Text style={styles.infoValue}>{formatDate(profile.plan_period_end)}</Text>
                 </View>
               )}
-              <TouchableOpacity style={styles.cancelButton} onPress={handleCancelPress}>
-                <Text style={styles.cancelButtonText}>Cancel Subscription</Text>
+              {/* Disable cancel button during testing phase */}
+              <TouchableOpacity 
+                style={[styles.cancelButton, isTestingPhase && styles.disabledButton]} 
+                onPress={isTestingPhase ? null : handleCancelPress}
+                disabled={isTestingPhase}
+              >
+                <Text style={[styles.cancelButtonText, isTestingPhase && { opacity: 0.5 }]}>Cancel Subscription</Text>
               </TouchableOpacity>
             </>
           )}

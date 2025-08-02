@@ -14,6 +14,7 @@ export default function LoginScreen() {
   // 1. State declarations (useState)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false);
   const [name, setName] = useState(''); // Ensure name state is declared here
   const [uiError, setUiError] = useState(null);
@@ -106,6 +107,7 @@ export default function LoginScreen() {
     setUiError(null);
     console.log('[DEBUG] toggleMode called. Called setUiError with null. uiError should be updated in next render.');
     setName('');
+    setConfirmPassword(''); // Clear confirm password when switching modes
     setIsSignUp(!isSignUp);
   };
 
@@ -125,8 +127,19 @@ export default function LoginScreen() {
       return;
     }
 
-    if ((isSignUp && !name) || !email || !password) {
+    if ((isSignUp && !name) || !email || !password || (isSignUp && !confirmPassword)) {
       Alert.alert('Error', isSignUp ? 'Please fill in all fields.' : 'Please enter both email and password.');
+      return;
+    }
+
+    // Password confirmation validation for signup
+    if (isSignUp && password !== confirmPassword) {
+      const errorMessage = 'Passwords do not match. Please try again.';
+      if (Platform.OS === 'web') {
+        setUiError(errorMessage);
+      } else {
+        Alert.alert('Password Mismatch', errorMessage);
+      }
       return;
     }
     // setIsLoading(true); // Removed, AuthContext handles isProcessingAuth
@@ -255,7 +268,7 @@ export default function LoginScreen() {
       {isSignUp && (
         <TextInput
           style={styles.input}
-          placeholder="Full Name"
+          placeholder="Name"
           placeholderTextColor={darkColors.subtext}
           value={name}
           onChangeText={setName}
@@ -279,6 +292,16 @@ export default function LoginScreen() {
         onChangeText={setPassword}
         secureTextEntry
       />
+      {isSignUp && (
+        <TextInput
+          style={styles.input}
+          placeholder="Repeat Password"
+          placeholderTextColor={darkColors.subtext}
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
+          secureTextEntry
+        />
+      )}
       {isProcessingAuth ? (
         <ActivityIndicator size="large" color={darkColors.primary} />
       ) : (
