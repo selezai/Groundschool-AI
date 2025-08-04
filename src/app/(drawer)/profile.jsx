@@ -440,7 +440,7 @@ const ProfileScreen = () => {
   }
 
   const captainFeatures = [
-    "Unlimited Quizzes",
+    "Unlimited Exams",
     "500MB Secure Storage",
     "Full Access to 'My Exams'",
     "Priority Support"
@@ -549,7 +549,7 @@ const ProfileScreen = () => {
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Usage & Quotas</Text>
         <View style={styles.usageQuotaItem}>
-          <Text style={styles.usageQuotaLabel}>Monthly Quizzes</Text>
+          <Text style={styles.usageQuotaLabel}>Monthly Exams</Text>
           <Text style={styles.usageQuotaValue}>
             {isLoadingUsage ? '...' : `${examsCount} / ${profile?.plan === 'basic' ? 10 : 'Unlimited'}`}
           </Text>
@@ -587,7 +587,7 @@ const ProfileScreen = () => {
           <View style={styles.statsRowContainer}>
             <View style={styles.statItem}>
               <Text style={styles.statValue}>{stats.quizCount}</Text>
-              <Text style={styles.statLabel}>Quizzes</Text>
+              <Text style={styles.statLabel}>Exams</Text>
             </View>
             <View style={styles.statItemSeparator} />
             <View style={styles.statItem}>
