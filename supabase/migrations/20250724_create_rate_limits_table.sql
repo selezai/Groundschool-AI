@@ -22,11 +22,20 @@ ALTER TABLE rate_limits ENABLE ROW LEVEL SECURITY;
 
 -- Create policy to allow service role to manage rate limits
 -- This is needed for Edge Functions to read/write rate limit data
-CREATE POLICY IF NOT EXISTS "Service role can manage rate limits"
-  ON rate_limits FOR ALL
-  TO service_role
-  USING (true)
-  WITH CHECK (true);
+DO $$ 
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_policies 
+    WHERE tablename = 'rate_limits' 
+    AND policyname = 'Service role can manage rate limits'
+  ) THEN
+    CREATE POLICY "Service role can manage rate limits"
+      ON rate_limits FOR ALL
+      TO service_role
+      USING (true)
+      WITH CHECK (true);
+  END IF;
+END $$;
 
 -- Create function to help with rate limit table creation from Edge Functions
 CREATE OR REPLACE FUNCTION create_rate_limits_table()

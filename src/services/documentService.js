@@ -4,6 +4,7 @@ import * as FileSystem from 'expo-file-system';
 import offlineService from './offlineService';
 import { Platform } from 'react-native';
 import logger from './loggerService';
+import { validateFile } from '../utils/fileValidation.js';
 
 // --- Dynamic Storage Limits ---
 export const PLAN_PRO = 'captains_club';
@@ -347,9 +348,6 @@ export const performSyncedDocumentUpload = async (fileAsset, title, user) => {
  * @returns {Promise<object>} The newly created document metadata record from the database.
  */
 export const uploadDocument = async (fileAsset, title, onProgress) => {
-  // Import file validation utility
-  const { validateFile } = await import('../utils/fileValidation.js');
-  
   // Enhanced security validation
   const validationResult = await validateFile(fileAsset);
   if (!validationResult.isValid) {

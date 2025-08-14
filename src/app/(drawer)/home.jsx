@@ -499,7 +499,12 @@ const HomeScreen = () => {
       } else {
         // Handle other errors
         const errorMessage = err instanceof Error ? err.message : String(err);
-        logger.error('HomeScreen', 'Error uploading document', { error: errorMessage, title: titleForDocument }); 
+        logger.error('HomeScreen', 'Error uploading document', { 
+          error: errorMessage, 
+          errorStack: err instanceof Error ? err.stack : undefined,
+          errorName: err instanceof Error ? err.name : undefined,
+          title: titleForDocument 
+        }); 
         
         // Track general upload failure
         posthogService.capture('document_upload_failed', {
