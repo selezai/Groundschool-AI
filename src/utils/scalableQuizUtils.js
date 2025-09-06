@@ -1,7 +1,7 @@
-console.log('--- scalableQuizUtils.js script starting ---');
 import { QuizJSONParser } from './quizParserUtils.js';
 // eslint-disable-next-line no-unused-vars
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
+import logger from '../services/loggerService.js';
 
 const defaultSafetySettings = [
   { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
@@ -44,9 +44,7 @@ class ScalableQuizGenerator {
     if (!this.genAI) {
       throw new Error(`${this.logTag} GoogleGenerativeAI instance (genAI) is required.`);
     }
-    if (this.options.enableLogging) {
-      console.info(`${this.logTag} Initialized with model: ${this.modelName}, strategy: ${this.strategy}`);
-    }
+    logger.debug('ScalableQuiz', `Initialized with model: ${this.modelName}, strategy: ${this.strategy}`);
   }
 
   async generateScaledQuiz(documentInfos, totalQuestions = 10, onProgressUpdate = () => {}) {
@@ -55,28 +53,26 @@ class ScalableQuizGenerator {
         typeof docInfo.title !== 'string' || !docInfo.content ||
         !docInfo.content.inlineData || !docInfo.content.inlineData.data || !docInfo.content.inlineData.mimeType
     )) {
-      console.error(`${this.logTag} Invalid documentInfos input for generateScaledQuiz. Expected array of objects with id, title, and valid content (Part with inlineData).`, { documentInfos });
+      logger.error('ScalableQuiz', 'Invalid documentInfos input for generateScaledQuiz. Expected array of objects with id, title, and valid content (Part with inlineData).');
       throw new Error('Invalid documentInfos input: Expected array of objects with id, title, and valid content (Part with inlineData).');
     }
-    if (this.options.enableLogging) {
-      console.info(`${this.logTag} 🎯 Generating ${totalQuestions} questions from ${documentInfos.length} documents using ${this.modelName}`);
-    }
+    logger.debug('ScalableQuiz', `Generating ${totalQuestions} questions from ${documentInfos.length} documents using ${this.modelName}`);
     onProgressUpdate(`Starting scalable exam generation for ${documentInfos.length} document(s)...`);
     
     if (documentInfos.length === 0) {
-      console.warn(`${this.logTag} No documents provided to generateScaledQuiz.`);
+      logger.warn('ScalableQuiz', 'No documents provided to generateScaledQuiz.');
       return { questions: [], metadata: { strategy: 'none', message: 'No documents provided' } };
     }
     
     // Single document optimization
     if (documentInfos.length === 1) {
-      if (this.options.enableLogging) console.info(`${this.logTag} Single document detected, using generateFromSingleDocument directly.`);
+      logger.debug('ScalableQuiz', 'Single document detected, using generateFromSingleDocument directly.');
       onProgressUpdate('Single document detected. Generating questions directly...');
       return await this.generateFromSingleDocument(documentInfos[0], totalQuestions, 0, onProgressUpdate); 
     }
     
     const strategyToUse = this.strategy === 'auto' ? this.determineOptimalStrategy(documentInfos.length, totalQuestions) : this.strategy;
-    if (this.options.enableLogging) console.info(`${this.logTag} 📋 Using strategy: ${strategyToUse}`);
+    logger.debug('ScalableQuiz', `Using strategy: ${strategyToUse}`);
     onProgressUpdate(`Determined strategy: ${strategyToUse}. Proceeding with generation...`);
     
     let result;
@@ -98,42 +94,40 @@ class ScalableQuizGenerator {
   }
 
   determineOptimalStrategy(documentCount, totalQuestions) {
-    if (this.options.enableLogging) {
-        console.info(`${this.logTag} [Strategy] Determining for ${documentCount} docs, ${totalQuestions} Qs. Config: QsPerDoc=${this.questionsPerDocument}, MaxDocsPerBatch=${this.maxDocumentsPerBatch}`);
-    }
+    logger.debug('ScalableQuiz', `[Strategy] Determining for ${documentCount} docs, ${totalQuestions} Qs. Config: QsPerDoc=${this.questionsPerDocument}, MaxDocsPerBatch=${this.maxDocumentsPerBatch}`);
     if (documentCount === 0) return 'balanced'; // Or handle error, though generateScaledQuiz checks this
     if (documentCount === 1) return 'perDocument'; // Handled by generateScaledQuiz, but good for clarity
 
     const avgQuestionsPerDocTarget = totalQuestions / documentCount;
 
     if (avgQuestionsPerDocTarget < 1 && totalQuestions < documentCount) { // Fewer questions than docs
-        if (this.options.enableLogging) console.info(`${this.logTag} [Strategy] Decision: Fewer Qs than docs. Using 'balanced' to pick best docs.`);
+        logger.debug('ScalableQuiz', "[Strategy] Decision: Fewer Qs than docs. Using 'balanced' to pick best docs.");
         return 'balanced'; // Let balanced mode pick best docs for few questions
     }
     if (documentCount <= this.maxDocumentsPerBatch) {
-        if (this.options.enableLogging) console.info(`${this.logTag} [Strategy] Decision: Docs fit in one batch. Using 'balanced'.`);
+        logger.debug('ScalableQuiz', "[Strategy] Decision: Docs fit in one batch. Using 'balanced'.");
         return 'balanced'; // All docs can be sent in one go
     }
     if (avgQuestionsPerDocTarget >= this.questionsPerDocument && documentCount > this.maxDocumentsPerBatch) {
-        if (this.options.enableLogging) console.info(`${this.logTag} [Strategy] Decision: High Qs/doc, many docs. Using 'batched'.`);
+        logger.debug('ScalableQuiz', "[Strategy] Decision: High Qs/doc, many docs. Using 'batched'.");
         return 'batched'; // Good candidate for batching
     }
     // If asking for very few questions per document on average, and many documents
     if (avgQuestionsPerDocTarget < (this.questionsPerDocument / 2) && documentCount > this.maxDocumentsPerBatch * 1.5) {
-        if (this.options.enableLogging) console.info(`${this.logTag} [Strategy] Decision: Low Qs/doc, many docs. Using 'perDocument'.`);
+        logger.debug('ScalableQuiz', "[Strategy] Decision: Low Qs/doc, many docs. Using 'perDocument'.");
         return 'perDocument';
     }
     
-    if (this.options.enableLogging) console.info(`${this.logTag} [Strategy] Decision: Defaulting to 'hybrid'.`);
+    logger.debug('ScalableQuiz', "[Strategy] Decision: Defaulting to 'hybrid'.");
     return 'hybrid'; // Default for complex cases
   }
 
   async generatePerDocumentQuiz(documentInfos, totalQuestions, onProgressUpdate = () => {}) {
-    if (this.options.enableLogging) console.info(`${this.logTag} 📄 Using per-document strategy for ${documentInfos.length} documents, aiming for ${totalQuestions} total questions.`);
+    logger.debug('ScalableQuiz', `Using per-document strategy for ${documentInfos.length} documents, aiming for ${totalQuestions} total questions.`);
     onProgressUpdate(`Using per-document strategy for ${documentInfos.length} documents, targeting ${totalQuestions} questions...`);
     
     const questionsPerDoc = Math.max(1, Math.ceil(totalQuestions / documentInfos.length));
-    if (this.options.enableLogging) console.info(`${this.logTag} Aiming for ~${questionsPerDoc} questions per document.`);
+    logger.debug('ScalableQuiz', `Aiming for ~${questionsPerDoc} questions per document.`);
     let allQuestions = [];
     
     const documentBatches = this.createConcurrentBatches(documentInfos, this.concurrentRequests);
@@ -145,7 +139,7 @@ class ScalableQuizGenerator {
         try {
           return await this.generateFromSingleDocument(docInfo, questionsPerDoc, overallDocIndex, onProgressUpdate);
         } catch (error) {
-          console.error(`${this.logTag} Error generating from single document ID ${docInfo.id} (index ${overallDocIndex}):`, error);
+          logger.error('ScalableQuiz', `Error generating from single document ID ${docInfo.id} (index ${overallDocIndex}): ${error.message}`);
           onProgressUpdate(`Error generating questions for document ${docInfo.title || docInfo.id}: ${error.message}`);
           return { questions: [], metadata: { error: true, documentId: docInfo.id, strategy: 'perDocument' } }; // Ensure consistent return
         }
@@ -156,11 +150,11 @@ class ScalableQuizGenerator {
       batchResults.forEach((result, i) => {
         const docInfo = docBatch[i]; // Get the corresponding docInfo
         if (result.status === 'fulfilled' && result.value && result.value.questions) {
-          if (this.options.enableLogging) console.info(`${this.logTag} Successfully got ${result.value.questions.length} questions for doc ID ${docInfo.id}.`);
+          logger.debug('ScalableQuiz', `Successfully got ${result.value.questions.length} questions for doc ID ${docInfo.id}.`);
           allQuestions.push(...result.value.questions);
           // onProgressUpdate(`Successfully processed document: ${docInfo.title || docInfo.id}`); // Potentially too verbose, covered by generateFromSingleDocument
         } else {
-          console.warn(`${this.logTag} ⚠️ Failed to generate from document ID ${docInfo.id}:`, result.reason || 'No questions returned');
+          logger.warn('ScalableQuiz', `Failed to generate from document ID ${docInfo.id}: ${result.reason || 'No questions returned'}`);
           onProgressUpdate(`Failed to generate questions for document ${docInfo.title || docInfo.id}. Reason: ${result.reason || 'Unknown'}`);
         }
       });
@@ -174,7 +168,7 @@ class ScalableQuizGenerator {
   }
 
   async generateBatchedQuiz(documentInfos, totalQuestions, onProgressUpdate = () => {}) {
-    if (this.options.enableLogging) console.info(`${this.logTag} 📦 Using batched strategy for ${documentInfos.length} documents, ${totalQuestions} total questions.`);
+    logger.debug('ScalableQuiz', `Using batched strategy for ${documentInfos.length} documents, ${totalQuestions} total questions.`);
     onProgressUpdate(`Using batched strategy for ${documentInfos.length} documents, targeting ${totalQuestions} questions...`);
     
     const docBatches = this.createDocumentBatches(documentInfos, this.maxDocumentsPerBatch);
@@ -183,20 +177,20 @@ class ScalableQuizGenerator {
     
     for (let i = 0; i < docBatches.length; i++) {
       const batch = docBatches[i];
-      if (this.options.enableLogging) console.info(`${this.logTag} 📦 Processing batch ${i + 1}/${docBatches.length} with ${batch.length} documents, aiming for ${questionsPerBatchTarget} questions.`);
+      logger.debug('ScalableQuiz', `Processing batch ${i + 1}/${docBatches.length} with ${batch.length} documents, aiming for ${questionsPerBatchTarget} questions.`);
       onProgressUpdate(`Processing batch ${i + 1}/${docBatches.length} with ${batch.length} documents (batched strategy), aiming for ${questionsPerBatchTarget} questions.`);
       
       try {
         const batchResult = await this.generateFromDocumentBatch(batch, questionsPerBatchTarget, i, onProgressUpdate);
         if (batchResult && batchResult.questions) {
-          if (this.options.enableLogging) console.info(`${this.logTag} Batch ${i+1} yielded ${batchResult.questions.length} questions.`);
+          logger.debug('ScalableQuiz', `Batch ${i+1} yielded ${batchResult.questions.length} questions.`);
           allQuestions.push(...batchResult.questions);
         } else {
-          console.warn(`${this.logTag} Batch ${i+1} yielded no questions or invalid result.`);
+          logger.warn('ScalableQuiz', `Batch ${i+1} yielded no questions or invalid result.`);
           onProgressUpdate(`Batch ${i + 1} yielded no questions or an invalid result.`);
         }
       } catch (error) {
-        console.error(`${this.logTag} ⚠️ Batch ${i + 1} failed:`, error);
+        logger.error('ScalableQuiz', `Batch ${i + 1} failed: ${error.message}`);
         onProgressUpdate(`Error processing batch ${i + 1}: ${error.message}`);
       }
       
@@ -209,7 +203,7 @@ class ScalableQuizGenerator {
   }
   
   async generateHybridQuiz(documentInfos, totalQuestions) {
-    if (this.options.enableLogging) console.info(`${this.logTag} 🔄 Using hybrid strategy for ${documentInfos.length} docs, ${totalQuestions} Qs.`);
+    logger.debug('ScalableQuiz', `Using hybrid strategy for ${documentInfos.length} docs, ${totalQuestions} Qs.`);
     
     const splitIndex = Math.ceil(documentInfos.length / 2);
     const firstHalfDocs = documentInfos.slice(0, splitIndex);
@@ -221,13 +215,13 @@ class ScalableQuizGenerator {
     let allQuestions = [];
     
     if (firstHalfDocs.length > 0 && questionsFromFirstHalf > 0) {
-      if (this.options.enableLogging) console.info(`${this.logTag} Hybrid: Part 1 (per-document) for ${firstHalfDocs.length} docs, ${questionsFromFirstHalf} Qs.`);
+      logger.debug('ScalableQuiz', `Hybrid: Part 1 (per-document) for ${firstHalfDocs.length} docs, ${questionsFromFirstHalf} Qs.`);
       const firstHalfResult = await this.generatePerDocumentQuiz(firstHalfDocs, questionsFromFirstHalf);
       if (firstHalfResult && firstHalfResult.questions) allQuestions.push(...firstHalfResult.questions);
     }
     
     if (secondHalfDocs.length > 0 && questionsFromSecondHalf > 0) {
-      if (this.options.enableLogging) console.info(`${this.logTag} Hybrid: Part 2 (batched) for ${secondHalfDocs.length} docs, ${questionsFromSecondHalf} Qs.`);
+      logger.debug('ScalableQuiz', `Hybrid: Part 2 (batched) for ${secondHalfDocs.length} docs, ${questionsFromSecondHalf} Qs.`);
       const secondHalfResult = await this.generateBatchedQuiz(secondHalfDocs, questionsFromSecondHalf);
       if (secondHalfResult && secondHalfResult.questions) allQuestions.push(...secondHalfResult.questions);
     }
@@ -236,7 +230,7 @@ class ScalableQuizGenerator {
   }
 
   async generateBalancedQuiz(documentInfos, totalQuestions) {
-    if (this.options.enableLogging) console.info(`${this.logTag} ⚖️ Using balanced strategy for ${documentInfos.length} docs, ${totalQuestions} Qs.`);
+    logger.debug('ScalableQuiz', `Using balanced strategy for ${documentInfos.length} docs, ${totalQuestions} Qs.`);
     
     const textualPrompt = this.buildBalancedPromptText(documentInfos, totalQuestions);
     const promptParts = [{ text: textualPrompt }];
@@ -244,7 +238,7 @@ class ScalableQuizGenerator {
       if (docInfo && docInfo.content) {
         promptParts.push(docInfo.content);
       } else if (docInfo) {
-        console.warn(`${this.logTag} [Balanced] Document content missing for ID: ${docInfo.id}`);
+        logger.warn('ScalableQuiz', `[Balanced] Document content missing for ID: ${docInfo.id}`);
       }
     });
     
@@ -253,24 +247,24 @@ class ScalableQuizGenerator {
       const quiz = this.parser.parseQuizJSON(responseText);
       
       if (quiz && quiz.questions) {
-         if (this.options.enableLogging) console.info(`${this.logTag} [Balanced] Successfully parsed ${quiz.questions.length} questions.`);
+         logger.debug('ScalableQuiz', `[Balanced] Successfully parsed ${quiz.questions.length} questions.`);
         return this.finalizeQuiz(quiz.questions, totalQuestions, 'balanced', callMeta?.suggestedTitle || quiz.title);
       } else {
-        console.warn(`${this.logTag} [Balanced] Failed to parse quiz from response or no questions found.`);
+        logger.warn('ScalableQuiz', '[Balanced] Failed to parse quiz from response or no questions found.');
         return this.finalizeQuiz([], totalQuestions, 'balanced');
       }
     } catch (error) {
-      console.error(`${this.logTag} [Balanced] Error in balanced quiz generation:`, error);
+      logger.error('ScalableQuiz', `[Balanced] Error in balanced quiz generation: ${error.message}`);
       
       // Check if this is a truncation error and retry with fewer questions
       if (this.isTruncationError(error) && totalQuestions > 10) {
         const reducedQuestions = Math.max(10, Math.floor(totalQuestions * 0.6));
-        console.warn(`${this.logTag} [Balanced] Detected truncation error. Retrying with ${reducedQuestions} questions instead of ${totalQuestions}`);
+        logger.warn('ScalableQuiz', `[Balanced] Detected truncation error. Retrying with ${reducedQuestions} questions instead of ${totalQuestions}`);
         
         try {
           return await this.generateBalancedQuiz(documentInfos, reducedQuestions, onProgressUpdate);
         } catch (retryError) {
-          console.error(`${this.logTag} [Balanced] Retry with fewer questions also failed:`, retryError);
+          logger.error('ScalableQuiz', `[Balanced] Retry with fewer questions also failed: ${retryError.message}`);
         }
       }
       
@@ -282,12 +276,12 @@ class ScalableQuizGenerator {
     // Proactive question count adjustment based on document size
     const adjustedQuestionCount = this.adjustQuestionCountForDocument(documentInfo, questionCount);
     if (adjustedQuestionCount !== questionCount) {
-      console.log(`${this.logTag} [Single Doc] Proactively reduced questions from ${questionCount} to ${adjustedQuestionCount} based on document size`);
+      logger.info('ScalableQuiz', `[Single Doc] Proactively reduced questions from ${questionCount} to ${adjustedQuestionCount} based on document size`);
       onProgressUpdate(`📊 Adjusted to ${adjustedQuestionCount} questions for large document "${documentInfo.title || `Document ${documentIndex + 1}`}"...`);
       questionCount = adjustedQuestionCount;
     }
     
-    if (this.options.enableLogging) console.info(`${this.logTag} Generating ~${questionCount} Qs from single document ID ${documentInfo.id} (index ${documentIndex}).`);
+    logger.debug('ScalableQuiz', `Generating ~${questionCount} Qs from single document ID ${documentInfo.id} (index ${documentIndex}).`);
     onProgressUpdate(`Preparing to generate ${questionCount} questions for document: ${documentInfo.title || `ID ${documentInfo.id}`}...`);
     const textualPrompt = this.buildPromptForSingleDocument(questionCount, documentInfo.title, documentInfo.id, documentIndex);
     
@@ -296,7 +290,7 @@ class ScalableQuizGenerator {
       promptParts.push(documentInfo.content);
     } else {
       onProgressUpdate(`Content missing for document: ${documentInfo.title || `ID ${documentInfo.id}`}. Skipping.`);
-      console.error(`${this.logTag} Content missing for single document ID ${documentInfo.id}`);
+      logger.error('ScalableQuiz', `Content missing for single document ID ${documentInfo.id}`);
       return { questions: [], metadata: { error: true, message: `Content missing for doc ${documentInfo.id}`, strategy:'single', documentId: documentInfo.id } };
     }
 
@@ -330,29 +324,29 @@ class ScalableQuizGenerator {
         onProgressUpdate(`No questions parsed or error during parsing for "${documentInfo.title || `ID ${documentInfo.id}`}".`);
       }
     } catch (error) {
-      console.error(`${this.logTag} [Single Doc] Error generating from document ${documentInfo.id}:`, error);
+      logger.error('ScalableQuiz', `[Single Doc] Error generating from document ${documentInfo.id}: ${error.message}`);
       
       // Check if this is a truncation error and retry with fewer questions
       if (this.isTruncationError(error) && questionCount > 3) {
         // More aggressive reduction: 70% reduction instead of 40%
         const reducedQuestions = Math.max(3, Math.floor(questionCount * 0.3));
-        console.warn(`${this.logTag} [Single Doc] Detected truncation error. Retrying with ${reducedQuestions} questions instead of ${questionCount}`);
+        logger.warn('ScalableQuiz', `[Single Doc] Detected truncation error. Retrying with ${reducedQuestions} questions instead of ${questionCount}`);
         onProgressUpdate(`🔄 Truncation detected. Retrying with ${reducedQuestions} questions for "${documentInfo.title || `ID ${documentInfo.id}`}"...`);
         
         try {
           return await this.generateFromSingleDocument(documentInfo, reducedQuestions, documentIndex, onProgressUpdate);
         } catch (retryError) {
-          console.error(`${this.logTag} [Single Doc] Retry with fewer questions also failed:`, retryError);
+          logger.error('ScalableQuiz', `[Single Doc] Retry with fewer questions also failed: ${retryError.message}`);
           
           // If still failing, try ultra-minimal approach (2 questions)
           if (this.isTruncationError(retryError) && reducedQuestions > 2) {
-            console.warn(`${this.logTag} [Single Doc] Final attempt with minimal questions (2)`);
+            logger.warn('ScalableQuiz', '[Single Doc] Final attempt with minimal questions (2)');
             onProgressUpdate(`⚡ Final attempt with 2 questions for "${documentInfo.title || `ID ${documentInfo.id}`}"...`);
             
             try {
               return await this.generateFromSingleDocument(documentInfo, 2, documentIndex, onProgressUpdate);
             } catch (finalError) {
-              console.error(`${this.logTag} [Single Doc] All retry attempts failed:`, finalError);
+              logger.error('ScalableQuiz', `[Single Doc] All retry attempts failed: ${finalError.message}`);
               onProgressUpdate(`❌ Failed to generate questions for "${documentInfo.title || `ID ${documentInfo.id}`}" after all attempts.`);
             }
           } else {
@@ -369,7 +363,7 @@ class ScalableQuizGenerator {
   }
 
   async generateFromDocumentBatch(batchOfDocumentInfos, questionCount, batchIndex, onProgressUpdate = () => {}) {
-    if (this.options.enableLogging) console.info(`${this.logTag} Generating ~${questionCount} Qs from batch ${batchIndex} with ${batchOfDocumentInfos.length} documents.`);
+    logger.debug('ScalableQuiz', `Generating ~${questionCount} Qs from batch ${batchIndex} with ${batchOfDocumentInfos.length} documents.`);
     onProgressUpdate(`Preparing to generate ${questionCount} questions for document batch ${batchIndex + 1} (${batchOfDocumentInfos.length} documents)...`);
     const textualPrompt = this.buildBatchPromptText(batchOfDocumentInfos, questionCount, batchIndex);
     
@@ -378,7 +372,7 @@ class ScalableQuizGenerator {
       if (docInfo && docInfo.content) {
         promptParts.push(docInfo.content);
       } else if (docInfo) {
-        console.warn(`${this.logTag} [Batch] Document content missing for ID: ${docInfo.id} in batch ${batchIndex}`);
+        logger.warn('ScalableQuiz', `[Batch] Document content missing for ID: ${docInfo.id} in batch ${batchIndex}`);
         onProgressUpdate(`[Batch ${batchIndex + 1}] Document content missing for ID: ${docInfo.id}. It will be excluded from this batch prompt.`);
       }
     });
@@ -493,9 +487,9 @@ ${this._getBasePromptRequirements(questionCount)}
   }
 
   finalizeQuiz(allQuestions, totalQuestions, strategy, suggestedTitle = null) {
-    if (this.options.enableLogging) console.info(`${this.logTag} Finalizing quiz. Initially ${allQuestions.length} questions, target ${totalQuestions}. Strategy: ${strategy}`);
+    logger.debug('ScalableQuiz', `Finalizing quiz. Initially ${allQuestions.length} questions, target ${totalQuestions}. Strategy: ${strategy}`);
     const selectedQuestions = this.selectBestQuestions(allQuestions, totalQuestions);
-    if (this.options.enableLogging) console.info(`${this.logTag} Selected ${selectedQuestions.length} best questions.`);
+    logger.debug('ScalableQuiz', `Selected ${selectedQuestions.length} best questions.`);
     return { 
       questions: selectedQuestions, 
       metadata: { 
@@ -515,14 +509,12 @@ ${this._getBasePromptRequirements(questionCount)}
   }
 
   async callGemini(promptParts, batchInfo = null, attempt = 1, onProgressUpdate = () => {}) {
-    if (this.options.enableLogging) {
-      const partsSummary = promptParts.map(p => {
-        if (p.text) return { type: 'text', length: p.text.length, preview: p.text.substring(0, 70) + (p.text.length > 70 ? '...' : '') };
-        if (p.inlineData) return { type: 'inlineData', mimeType: p.inlineData.mimeType, dataLength: p.inlineData.data?.length };
-        return { type: 'unknown' };
-      });
-      console.info(`${this.logTag} [callGemini] Attempt ${attempt}/${this.maxRetries + 1}. Sending ${promptParts.length} parts to API. Batch: ${JSON.stringify(batchInfo)}. Structure:`, JSON.stringify(partsSummary, null, 2));
-    }
+    const partsSummary = promptParts.map(p => {
+      if (p.text) return { type: 'text', length: p.text.length, preview: p.text.substring(0, 70) + (p.text.length > 70 ? '...' : '') };
+      if (p.inlineData) return { type: 'inlineData', mimeType: p.inlineData.mimeType, dataLength: p.inlineData.data?.length };
+      return { type: 'unknown' };
+    });
+    logger.debug('ScalableQuiz', `[callGemini] Attempt ${attempt}/${this.maxRetries + 1}. Sending ${promptParts.length} parts to API. Batch: ${JSON.stringify(batchInfo)}. Structure: ${JSON.stringify(partsSummary, null, 2)}`);
     if (batchInfo) {
       if (batchInfo.type === 'single-doc') {
         onProgressUpdate(`Calling AI for document: ${batchInfo.title || `ID ${batchInfo.id}`} (Attempt ${attempt})...`);
@@ -551,13 +543,11 @@ ${this._getBasePromptRequirements(questionCount)}
       }
 
       if (!responseText.trim()) {
-        console.warn(`${this.logTag} [callGemini] Empty response text from API. Batch: ${JSON.stringify(batchInfo)} Attempt: ${attempt}`);
+        logger.warn('ScalableQuiz', `[callGemini] Empty response text from API. Batch: ${JSON.stringify(batchInfo)} Attempt: ${attempt}`);
         throw new Error('Empty response text from Gemini API.'); 
       }
 
-      if (this.options.enableLogging) {
-        console.info(`${this.logTag} [callGemini] Received response (first 100 chars): "${responseText.substring(0,100)}..." Batch: ${JSON.stringify(batchInfo)}`);
-      }
+      logger.debug('ScalableQuiz', `[callGemini] Received response (first 100 chars): "${responseText.substring(0,100)}..." Batch: ${JSON.stringify(batchInfo)}`);
       
       let suggestedTitle = null;
       try {
@@ -585,16 +575,12 @@ ${this._getBasePromptRequirements(questionCount)}
       }
 
       if (attempt <= this.maxRetries) {
-        if (this.options.enableLogging) {
-            console.warn(`${this.logTag} [callGemini] Attempt ${attempt}/${this.maxRetries} failed for ${targetName}. Error: ${error.message}. Retrying... Batch: ${JSON.stringify(batchInfo)}`);
-        }
+        logger.warn('ScalableQuiz', `[callGemini] Attempt ${attempt}/${this.maxRetries} failed for ${targetName}. Error: ${error.message}. Retrying... Batch: ${JSON.stringify(batchInfo)}`);
         onProgressUpdate(`AI call failed for ${targetName} (Attempt ${attempt}): ${error.message}. Retrying (${attempt}/${this.maxRetries})...`);
         await this.sleep(this.rateLimitDelay * attempt); // Exponential backoff
         return this.callGemini(promptParts, batchInfo, attempt + 1, onProgressUpdate);
       } else {
-        if (this.options.enableLogging) {
-            console.error(`${this.logTag} [callGemini] Failed after ${attempt -1} attempts for ${targetName}. Error: ${error.message}. Batch: ${JSON.stringify(batchInfo)}`);
-        }
+        logger.error('ScalableQuiz', `[callGemini] Failed after ${attempt -1} attempts for ${targetName}. Error: ${error.message}. Batch: ${JSON.stringify(batchInfo)}`);
         onProgressUpdate(`AI call failed definitively for ${targetName} after ${attempt -1} attempts: ${error.message}`);
         throw error; // Re-throw after max retries
       }
