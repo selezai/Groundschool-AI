@@ -404,33 +404,53 @@ class ScalableQuizGenerator {
   // --- Prompt Building Helpers ---
   _getBasePromptRequirements(questionCount) {
     return `
-Generate EXACTLY ${questionCount} multiple-choice questions from the document.
+You are an AVIATION EDUCATION expert. Generate EXACTLY ${questionCount} multiple-choice questions from the aviation content in the provided documents.
+
+CONTENT REQUIREMENTS:
+- Questions MUST be directly related to AVIATION topics (flight training, regulations, aircraft systems, weather, navigation, aerodynamics, etc.)
+- Questions MUST be based on the specific aviation content in the provided documents
+- DO NOT generate questions about unrelated topics (general knowledge, non-aviation subjects)
+- If documents contain non-aviation content, IGNORE it and focus only on aviation-related sections
+- Each question must test practical aviation knowledge relevant to pilots
+
+QUESTION LIMIT ENFORCEMENT:
+- Generate EXACTLY ${questionCount} questions, NO MORE, NO LESS
+- Count your questions before responding to ensure exact count
+- If you generate more than ${questionCount} questions, remove the extras
 
 RULES:
 - 4 options per question (A,B,C,D)
-- Include correct_answer_id and brief explanation
+- Include correct_answer_id and brief aviation-focused explanation
 - Questions must have "text" field
-- Return ONLY JSON, no markdown
+- Return ONLY valid JSON, no markdown, no code blocks
+- Ensure all JSON strings are properly escaped
+- No trailing commas anywhere in the JSON
 
 JSON FORMAT:
 {
-  "title": "Exam Title",
+  "title": "Aviation Exam Title",
   "questions": [
     {
-      "text": "Question text here?",
+      "text": "Aviation-specific question text here?",
       "options": [
-        {"id": "A", "text": "Option A"},
-        {"id": "B", "text": "Option B"},
-        {"id": "C", "text": "Option C"},
-        {"id": "D", "text": "Option D"}
+        {"id": "A", "text": "Aviation option A"},
+        {"id": "B", "text": "Aviation option B"},
+        {"id": "C", "text": "Aviation option C"},
+        {"id": "D", "text": "Aviation option D"}
       ],
       "correct_answer_id": "B",
-      "explanation": "Brief explanation",
+      "explanation": "Aviation-focused explanation",
       "difficulty": "medium"
     }
-    // ... more questions ...
   ]
-}`;
+}
+
+VALIDATION CHECKLIST:
+✓ Generated EXACTLY ${questionCount} questions (count them!)
+✓ All questions are aviation-related and based on document content
+✓ Valid JSON syntax with proper escaping
+✓ No trailing commas
+✓ No markdown or code blocks`;
   }
 
   buildPromptForSingleDocument(questionCount, docTitle, docId, docIndex) {
@@ -503,9 +523,59 @@ ${this._getBasePromptRequirements(questionCount)}
   }
 
   selectBestQuestions(questions, targetCount) {
-    // Simple selection for now, can be expanded (e.g., ensure variety, difficulty spread)
-    if (!Array.isArray(questions)) return [];
-    return questions.slice(0, targetCount);
+    // Enhanced selection with question count validation and aviation content filtering
+    if (!Array.isArray(questions)) {
+      logger.warn('ScalableQuiz', 'selectBestQuestions received non-array input');
+      return [];
+    }
+    
+    // Filter for aviation-related questions
+    const aviationQuestions = this.filterAviationQuestions(questions);
+    logger.debug('ScalableQuiz', `Filtered ${aviationQuestions.length} aviation questions from ${questions.length} total`);
+    
+    // Enforce exact count - never exceed targetCount
+    const selectedQuestions = aviationQuestions.slice(0, targetCount);
+    
+    if (selectedQuestions.length !== targetCount && aviationQuestions.length >= targetCount) {
+      logger.warn('ScalableQuiz', `Question count mismatch: selected ${selectedQuestions.length}, target ${targetCount}`);
+    }
+    
+    logger.debug('ScalableQuiz', `Final selection: ${selectedQuestions.length} questions (target: ${targetCount})`);
+    return selectedQuestions;
+  }
+  
+  filterAviationQuestions(questions) {
+    // Keywords that indicate aviation-related content
+    const aviationKeywords = [
+      'aircraft', 'airplane', 'flight', 'pilot', 'aviation', 'airport', 'runway', 'airspace',
+      'altitude', 'navigation', 'weather', 'wind', 'turbulence', 'landing', 'takeoff',
+      'engine', 'fuel', 'radio', 'communication', 'atc', 'control tower', 'instrument',
+      'vfr', 'ifr', 'regulation', 'far', 'faa', 'airworthiness', 'maintenance',
+      'aerodynamics', 'lift', 'drag', 'thrust', 'weight', 'stall', 'spin',
+      'crosswind', 'headwind', 'tailwind', 'visibility', 'ceiling', 'metar', 'taf'
+    ];
+    
+    return questions.filter(question => {
+      if (!question || !question.text) return false;
+      
+      const questionText = question.text.toLowerCase();
+      const optionsText = question.options ? 
+        question.options.map(opt => opt.text || '').join(' ').toLowerCase() : '';
+      const explanationText = question.explanation ? question.explanation.toLowerCase() : '';
+      
+      const fullText = `${questionText} ${optionsText} ${explanationText}`;
+      
+      // Check if question contains aviation keywords
+      const hasAviationContent = aviationKeywords.some(keyword => 
+        fullText.includes(keyword)
+      );
+      
+      if (!hasAviationContent) {
+        logger.debug('ScalableQuiz', `Filtered out non-aviation question: ${question.text.substring(0, 50)}...`);
+      }
+      
+      return hasAviationContent;
+    });
   }
 
   async callGemini(promptParts, batchInfo = null, attempt = 1, onProgressUpdate = () => {}) {

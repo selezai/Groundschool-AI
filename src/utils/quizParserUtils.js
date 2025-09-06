@@ -838,39 +838,56 @@ class GeminiQuizGenerator {
    * Enhanced prompt that works better with the parser
    */
   buildEnhancedPrompt(questionCount = 10) { // Removed documents parameter
-    return `You are a quiz generation expert. Generate ${questionCount} multiple-choice questions based on the provided documents.
+    return `You are an AVIATION EDUCATION expert specializing in pilot training and aviation knowledge. Generate EXACTLY ${questionCount} multiple-choice questions based STRICTLY on the aviation content from the provided documents.
+
+CONTENT REQUIREMENTS:
+- Questions MUST be directly related to AVIATION topics (flight training, regulations, aircraft systems, weather, navigation, etc.)
+- Questions MUST be based on the specific content in the provided documents
+- DO NOT generate questions about unrelated topics (general knowledge, non-aviation subjects)
+- If the document contains non-aviation content, IGNORE it and focus only on aviation-related sections
+- Each question must test practical aviation knowledge relevant to pilots
+
+QUESTION LIMIT ENFORCEMENT:
+- Generate EXACTLY ${questionCount} questions, NO MORE, NO LESS
+- Count your questions before responding to ensure exact count
+- If you generate more than ${questionCount} questions, remove the extras
 
 CRITICAL JSON FORMAT REQUIREMENTS:
-1. Return ONLY valid JSON, no markdown, no explanations
+1. Return ONLY valid JSON, no markdown, no explanations, no code blocks
 2. Each option must be EXACTLY: {"id": "A", "text": "Option text"}
 3. NEVER use: {"id": "A": "Option text"} - this is WRONG
 4. NEVER use: {"id": "A": "text": "Option text"} - this is WRONG
+5. Ensure all JSON strings are properly escaped
+6. No trailing commas anywhere in the JSON
 
 Required JSON structure:
 {
   "questions": [
     {
-      "text": "Question text here",
+      "text": "Aviation-specific question text here",
       "options": [
-        {"id": "A", "text": "First option"},
-        {"id": "B", "text": "Second option"},
-        {"id": "C", "text": "Third option"},
-        {"id": "D", "text": "Fourth option"}
+        {"id": "A", "text": "First aviation option"},
+        {"id": "B", "text": "Second aviation option"},
+        {"id": "C", "text": "Third aviation option"},
+        {"id": "D", "text": "Fourth aviation option"}
       ],
       "correct": "A",
-      "explanation": "Why this answer is correct"
+      "explanation": "Aviation-focused explanation of why this answer is correct"
     }
   ]
 }
 
 VALIDATION CHECKLIST before responding:
+✓ Generated EXACTLY ${questionCount} questions (count them!)
+✓ All questions are aviation-related and based on document content
 ✓ Each option has both "id" and "text" keys
 ✓ No extra colons in option objects
 ✓ Valid JSON syntax throughout
-✓ All strings properly quoted
+✓ All strings properly quoted and escaped
 ✓ No trailing commas
+✓ No markdown code blocks or explanations outside JSON
 
-Generate the JSON now:`; // Document content will be passed as separate parts
+Generate the aviation quiz JSON now:`; // Document content will be passed as separate parts
   }
 
   /**
