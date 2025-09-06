@@ -1,3 +1,5 @@
+import logger from '../services/loggerService.js';
+
 class QuizJSONParser {
   constructor(options = {}) {
     this.enableLogging = options.enableLogging || false;
@@ -18,10 +20,8 @@ class QuizJSONParser {
   parseQuizJSON(rawResponse) {
     this.correctionStats.totalAttempts++;
     
-    if (this.enableLogging) {
-      console.log('🔍 Raw LLM Response Length:', rawResponse.length);
-      console.log('📝 Raw Response Preview:', rawResponse.substring(0, 200) + '...');
-    }
+    logger.debug('QuizParser', `Raw LLM Response Length: ${rawResponse.length}`);
+    logger.debug('QuizParser', `Raw Response Preview: ${rawResponse.substring(0, 200)}...`);
 
     // Declare correctedJSON at the outer scope so it's available in the catch block
     let cleanedJSON = '';
@@ -42,33 +42,29 @@ class QuizJSONParser {
       
       this.correctionStats.successfulCorrections++;
       
-      if (this.enableLogging) {
-        console.log('✅ Successfully parsed quiz with', validatedData.questions?.length || 0, 'questions');
-        this.logStats();
-      }
+      logger.debug('QuizParser', `Successfully parsed quiz with ${validatedData.questions?.length || 0} questions`);
+      this.logStats();
       
       return validatedData;
       
     } catch (error) {
       this.correctionStats.failedCorrections++;
       
-      if (this.enableLogging) {
-        console.error('❌ Failed to parse quiz JSON:', error.message);
-        
-        // Analyze the type of parsing failure
-        const failureAnalysis = this.analyzeParsingFailure(rawResponse, correctedJSON, error);
-        console.error('🔍 Failure Analysis:', failureAnalysis);
-        
-        // Only log correctedJSON if it's defined
-        if (typeof correctedJSON !== 'undefined') {
-          console.error('📄 Problematic JSON (first 500 chars):', correctedJSON.substring(0, 500));
-          console.error('📄 Problematic JSON (last 500 chars):', correctedJSON.substring(Math.max(0, correctedJSON.length - 500)));
-        } else {
-          console.error('JSON parsing failed before corrections could be applied');
-        }
-        console.error('🔧 Attempted corrections:', Object.keys(this.correctionStats.correctionTypes));
-        this.logStats();
+      logger.error('QuizParser', `Failed to parse quiz JSON: ${error.message}`);
+      
+      // Analyze the type of parsing failure
+      const failureAnalysis = this.analyzeParsingFailure(rawResponse, correctedJSON, error);
+      logger.debug('QuizParser', `Failure Analysis: ${JSON.stringify(failureAnalysis)}`);
+      
+      // Only log correctedJSON if it's defined
+      if (typeof correctedJSON !== 'undefined') {
+        logger.debug('QuizParser', `Problematic JSON (first 500 chars): ${correctedJSON.substring(0, 500)}`);
+        logger.debug('QuizParser', `Problematic JSON (last 500 chars): ${correctedJSON.substring(Math.max(0, correctedJSON.length - 500))}`);
+      } else {
+        logger.debug('QuizParser', 'JSON parsing failed before corrections could be applied');
       }
+      logger.debug('QuizParser', `Attempted corrections: ${Object.keys(this.correctionStats.correctionTypes)}`);
+      this.logStats();
       
       if (this.throwOnUnrecoverable) {
         const enhancedError = new Error(`Unable to parse quiz JSON after corrections: ${error.message}. Analysis: ${this.analyzeParsingFailure(rawResponse, correctedJSON, error).summary}`);
@@ -135,17 +131,13 @@ class QuizJSONParser {
    * Detect and handle truncated JSON responses
    */
   handleTruncatedJSON(jsonString) {
-    if (this.enableLogging) {
-      console.log('🔍 Checking for truncated JSON...');
-    }
+    logger.debug('QuizParser', 'Checking for truncated JSON...');
     
     // Check if JSON appears to be truncated
     const isTruncated = this.detectTruncation(jsonString);
     
     if (isTruncated) {
-      if (this.enableLogging) {
-        console.warn('⚠️ Detected truncated JSON response. Attempting to recover...');
-      }
+      logger.warn('QuizParser', 'Detected truncated JSON response. Attempting to recover...');
       
       return this.recoverTruncatedJSON(jsonString);
     }
@@ -191,9 +183,7 @@ class QuizJSONParser {
     // Try partial parsing first - extract complete questions
     const partialResult = this.attemptPartialParsing(recovered);
     if (partialResult) {
-      if (this.enableLogging) {
-        console.log(`🔧 Partial parsing successful - extracted ${partialResult.questions?.length || 0} complete questions`);
-      }
+      logger.debug('QuizParser', `Partial parsing successful - extracted ${partialResult.questions?.length || 0} complete questions`);
       return JSON.stringify(partialResult);
     }
     
@@ -206,9 +196,7 @@ class QuizJSONParser {
     
     this.trackCorrection('truncated_json_recovery');
     
-    if (this.enableLogging) {
-      console.log('🔧 Truncated JSON recovery applied');
-    }
+    logger.debug('QuizParser', 'Truncated JSON recovery applied');
     
     return recovered;
   }
@@ -218,9 +206,7 @@ class QuizJSONParser {
    */
   attemptPartialParsing(jsonString) {
     try {
-      if (this.enableLogging) {
-        console.log('🔍 Attempting partial parsing of truncated JSON...');
-      }
+      logger.debug('QuizParser', 'Attempting partial parsing of truncated JSON...');
       
       // Look for the title and start of questions array
       const titleMatch = jsonString.match(/"title"\s*:\s*"([^"]+)"/i);
@@ -293,15 +279,11 @@ class QuizJSONParser {
               
               if (validOptions) {
                 completeQuestions.push(question);
-                if (this.enableLogging) {
-                  console.log(`✅ Found complete question: "${question.text.substring(0, 50)}..."`);
-                }
+                logger.debug('QuizParser', `Found complete question: "${question.text.substring(0, 50)}..."`);
               }
             }
           } catch (e) {
-            if (this.enableLogging) {
-              console.log(`⚠️ Skipping malformed question: ${e.message}`);
-            }
+            logger.debug('QuizParser', `Skipping malformed question: ${e.message}`);
           }
         }
       }
@@ -309,23 +291,17 @@ class QuizJSONParser {
       // If we found at least one complete question, return partial result
       if (completeQuestions.length > 0) {
         this.trackCorrection('partial_parsing_success');
-        if (this.enableLogging) {
-          console.log(`🎯 Partial parsing successful: extracted ${completeQuestions.length} complete questions`);
-        }
+        logger.debug('QuizParser', `Partial parsing successful: extracted ${completeQuestions.length} complete questions`);
         return {
           title: title,
           questions: completeQuestions
         };
       }
       
-      if (this.enableLogging) {
-        console.log('❌ No complete questions found in truncated JSON');
-      }
+      logger.debug('QuizParser', 'No complete questions found in truncated JSON');
       return null;
     } catch (error) {
-      if (this.enableLogging) {
-        console.warn('⚠️ Partial parsing failed:', error.message);
-      }
+      logger.warn('QuizParser', `Partial parsing failed: ${error.message}`);
       return null;
     }
   }
@@ -391,9 +367,7 @@ class QuizJSONParser {
     corrected = corrected.replace(pattern1, (match, id, text) => {
       correctionCount++;
       this.trackCorrection('pattern1_id_colon_text');
-      if (this.enableLogging) {
-        console.warn(` Fixed Pattern 1: ${match} -> {"id": "${id}", "text": "${text}"}`);
-      }
+      logger.debug('QuizParser', `Fixed Pattern 1: ${match} -> {"id": "${id}", "text": "${text}"}`);
       return `{"id": "${id}", "text": "${text}"}`;
     });
     
@@ -402,9 +376,7 @@ class QuizJSONParser {
     corrected = corrected.replace(pattern2, (match, id, text) => {
       correctionCount++;
       this.trackCorrection('pattern2_id_colon_text_colon');
-      if (this.enableLogging) {
-        console.warn(` Fixed Pattern 2: ${match} -> {"id": "${id}", "text": "${text}"}`);
-      }
+      logger.debug('QuizParser', `Fixed Pattern 2: ${match} -> {"id": "${id}", "text": "${text}"}`);
       return `{"id": "${id}", "text": "${text}"}`;
     });
     
@@ -415,9 +387,7 @@ class QuizJSONParser {
       if (!match.includes('"text":')) {
         correctionCount++;
         this.trackCorrection('pattern3_flexible_id_content');
-        if (this.enableLogging) {
-          console.warn(` Fixed Pattern 3: ${match} -> {"id": "${id}", "text": "${content}"}`);
-        }
+        logger.debug('QuizParser', `Fixed Pattern 3: ${match} -> {"id": "${id}", "text": "${content}"}`);
         return `{"id": "${id}", "text": "${content}"}`;
       }
       return match;
@@ -429,16 +399,14 @@ class QuizJSONParser {
       if (!match.includes('"text":')) {
         correctionCount++;
         this.trackCorrection('pattern4_escaped_content');
-        if (this.enableLogging) {
-          console.warn(` Fixed Pattern 4: ${match} -> {"id": "${id}", "text": "${content}"}`);
-        }
+        logger.debug('QuizParser', `Fixed Pattern 4: ${match} -> {"id": "${id}", "text": "${content}"}`);
         return `{"id": "${id}", "text": "${content}"}`;
       }
       return match;
     });
     
-    if (correctionCount > 0 && this.enableLogging) {
-      console.log(`✅ Applied ${correctionCount} option format corrections`);
+    if (correctionCount > 0) {
+      logger.debug('QuizParser', `Applied ${correctionCount} option format corrections`);
     }
     
     return corrected;
@@ -515,9 +483,7 @@ class QuizJSONParser {
 
     // Ensure questions array exists
     if (!Array.isArray(data.questions)) {
-      if (this.enableLogging) {
-        console.warn('🔧 Creating missing questions array');
-      }
+      logger.debug('QuizParser', 'Creating missing questions array');
       data.questions = [];
       this.trackCorrection('missing_questions_array');
     }
@@ -535,17 +501,13 @@ class QuizJSONParser {
    */
   validateQuestion(question, index) {
     if (!question || typeof question !== 'object') {
-      if (this.enableLogging) {
-        console.warn(`⚠️ Removing invalid question at index ${index}`);
-      }
+      logger.debug('QuizParser', `Removing invalid question at index ${index}`);
       return null;
     }
 
     // Ensure options array exists
     if (!Array.isArray(question.options)) {
-      if (this.enableLogging) {
-        console.warn(`🔧 Creating missing options array for question ${index}`);
-      }
+      logger.debug('QuizParser', `Creating missing options array for question ${index}`);
       question.options = [];
       this.trackCorrection('missing_options_array');
     }
@@ -557,9 +519,7 @@ class QuizJSONParser {
 
     // Ensure minimum structure
     if (!question.text && !question.question) {
-      if (this.enableLogging) {
-        console.warn(`⚠️ Question ${index} missing text/question field`);
-      }
+      logger.debug('QuizParser', `Question ${index} missing text/question field`);
       question.text = question.text || question.question || `Question ${index + 1}`;
     }
 
@@ -571,9 +531,7 @@ class QuizJSONParser {
    */
   validateOption(option, questionIndex, optionIndex) {
     if (!option || typeof option !== 'object') {
-      if (this.enableLogging) {
-        console.warn(`⚠️ Removing invalid option at Q${questionIndex}:O${optionIndex}`);
-      }
+      logger.debug('QuizParser', `Removing invalid option at Q${questionIndex}:O${optionIndex}`);
       return null;
     }
 
@@ -608,9 +566,7 @@ class QuizJSONParser {
    * Create fallback structure when all else fails
    */
   createFallbackStructure() {
-    if (this.enableLogging) {
-      console.warn('🚨 Creating fallback quiz structure');
-    }
+    logger.warn('QuizParser', 'Creating fallback quiz structure');
     
     return {
       questions: [],
@@ -636,11 +592,12 @@ class QuizJSONParser {
    * Log correction statistics
    */
   logStats() {
-    console.log('📊 Parser Statistics:', {
+    const stats = {
       totalAttempts: this.correctionStats.totalAttempts,
       successRate: `${((this.correctionStats.successfulCorrections / this.correctionStats.totalAttempts) * 100).toFixed(1)}%`,
       correctionTypes: this.correctionStats.correctionTypes
-    });
+    };
+    logger.debug('QuizParser', `Parser Statistics: ${JSON.stringify(stats)}`);
   }
 
   /**
