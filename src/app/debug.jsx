@@ -5,6 +5,22 @@ import { checkSupabaseSetup } from '../utils/checkSupabaseSetup';
 import logger from '../services/loggerService';
 
 export default function DebugScreen() {
+  // Security: Block access in production environment
+  const isProduction = process.env.EXPO_PUBLIC_ENV === 'production';
+  
+  if (isProduction) {
+    return (
+      <View style={styles.container}>
+        <Stack.Screen options={{ title: 'Access Denied' }} />
+        <View style={styles.accessDeniedContainer}>
+          <Text style={styles.accessDeniedTitle}>🔒 Access Denied</Text>
+          <Text style={styles.accessDeniedText}>
+            Debug and diagnostics pages are not available in production for security reasons.
+          </Text>
+        </View>
+      </View>
+    );
+  }
   const [results, setResults] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -252,5 +268,24 @@ const styles = StyleSheet.create({
   },
   instructionText: {
     lineHeight: 20,
+  },
+  accessDeniedContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 32,
+  },
+  accessDeniedTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#d32f2f',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  accessDeniedText: {
+    fontSize: 16,
+    color: '#666',
+    textAlign: 'center',
+    lineHeight: 24,
   },
 });

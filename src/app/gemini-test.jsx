@@ -6,6 +6,22 @@ import { generateQuestionsFromDocument } from '../services/geminiService';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function GeminiTestScreen() {
+  // Security: Block access in production environment
+  const isProduction = process.env.EXPO_PUBLIC_ENV === 'production';
+  
+  if (isProduction) {
+    return (
+      <View style={styles.container}>
+        <Stack.Screen options={{ title: 'Access Denied' }} />
+        <View style={styles.accessDeniedContainer}>
+          <Text style={styles.accessDeniedTitle}>🔒 Access Denied</Text>
+          <Text style={styles.accessDeniedText}>
+            Test pages are not available in production for security reasons.
+          </Text>
+        </View>
+      </View>
+    );
+  }
   const { session } = useAuth();
   const [documents, setDocuments] = useState([]);
   const [selectedDocument, setSelectedDocument] = useState(null);
@@ -345,5 +361,24 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     textAlign: 'center',
     padding: 16,
+  },
+  accessDeniedContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 32,
+  },
+  accessDeniedTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#d32f2f',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  accessDeniedText: {
+    fontSize: 16,
+    color: '#666',
+    textAlign: 'center',
+    lineHeight: 24,
   },
 });
