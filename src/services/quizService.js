@@ -777,7 +777,7 @@ export const submitQuizAttempt = async (quizId, answers, score, completionTime) 
       user_id: user.id, // CRITICAL: Add user_id for online inserts
     };
 
-    console.log('RAW INSERT DATA:', JSON.stringify(insertData, null, 2)); // Raw log for insertData
+    logger.debug('quizService:submitQuizAttempt', 'Raw insert data:', insertData);
     logger.debug('quizService:submitQuizAttempt', 'Submitting to quiz_attempts with data:', insertData);
 
     const { data: dbAttempt, error: attemptError } = await supabaseClient
@@ -787,7 +787,7 @@ export const submitQuizAttempt = async (quizId, answers, score, completionTime) 
       .single();
 
     if (attemptError) {
-      console.log('RAW ATTEMPT ERROR:', JSON.stringify(attemptError, null, 2)); // Raw log for attemptError
+      logger.error('quizService:submitQuizAttempt', 'Database error inserting quiz attempt:', attemptError);
       // The previous console.log(attemptError) might not have been fully captured or stringified well by all log viewers.
       logger.error('quizService:submitQuizAttempt', 'Error inserting quiz attempt, attempting offline save. Full error object:', attemptError); 
       logger.error('quizService:submitQuizAttempt', 'Error details for quiz_attempts insert:', { 

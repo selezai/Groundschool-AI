@@ -717,7 +717,7 @@ export const getUserDocuments = async () => {
  * @returns {Promise<void>}
  */
 export const deleteDocument = async (documentId, userId) => {
-  console.log('--- deleteDocument CALLED in documentService.js --- Document ID:', documentId, 'User ID:', userId);
+  logger.debug('documentService:deleteDocument', 'Delete document requested:', { documentId, userId });
   if (!documentId || !userId) {
     logger.error('documentService:deleteDocument', 'Document ID and User ID are required.');
     throw new Error('Document ID and User ID are required.');

@@ -24,16 +24,16 @@ export default function LoginScreen() {
   const router = useRouter();
   // Log component mount, unmount, and uiError updates
   useEffect(() => {
-    console.log('[DEBUG] LoginScreen MOUNTED or uiError UPDATED. Current uiError:', uiError);
+    logger.debug('login:useEffect', 'Component mounted or uiError updated', { uiError });
     return () => {
-      console.log('[DEBUG] LoginScreen UNMOUNTED. Last uiError was:', uiError);
+      logger.debug('login:useEffect', 'Component unmounted', { lastUiError: uiError });
     };
   }, [uiError]);
 
   // Log screen focus and blur
   useFocusEffect(
     useCallback(() => {
-      console.log('[DEBUG] LoginScreen FOCUSED. Current uiError:', uiError);
+      logger.debug('login:useFocusEffect', 'Screen focused', { uiError });
       
       // Track screen view
       posthogService.screen('Login Screen', {
@@ -42,7 +42,7 @@ export default function LoginScreen() {
       });
       
       return () => {
-        console.log('[DEBUG] LoginScreen BLURRED. Last uiError was:', uiError);
+        logger.debug('login:useFocusEffect', 'Screen blurred', { lastUiError: uiError });
       };
     }, [uiError, isSignUp])
   );
@@ -103,18 +103,18 @@ export default function LoginScreen() {
   };
 
   const toggleMode = () => {
-    console.log('[DEBUG] toggleMode called. About to call setUiError with null.');
+    logger.debug('login:toggleMode', 'Switching authentication mode');
     setUiError(null);
-    console.log('[DEBUG] toggleMode called. Called setUiError with null. uiError should be updated in next render.');
+    logger.debug('login:toggleMode', 'UI error cleared, switching to', { newMode: !isSignUp ? 'signup' : 'signin' });
     setName('');
     setConfirmPassword(''); // Clear confirm password when switching modes
     setIsSignUp(!isSignUp);
   };
 
   const handleAuth = async () => {
-    console.log('[DEBUG] handleAuth called. About to call setUiError with null.');
+    logger.debug('login:handleAuth', 'Authentication process started');
     setUiError(null);
-    console.log("LOGIN.JSX: handleAuth - FUNCTION TOP (reverted from Alert)");
+    logger.debug('login:handleAuth', 'Starting authentication flow');
 
     // Email format validation
     if (!isValidEmail(email)) {
@@ -179,12 +179,12 @@ export default function LoginScreen() {
           setIsSignUp(false);
         }
       } else {
-        console.log("LOGIN.JSX: MARKER A: Just before signIn call (reverted from Alert)");
+        logger.debug('login:handleAuth', 'Attempting sign in');
         const { error } = await signIn({ email, password });
-        console.log("LOGIN.JSX: MARKER B: After signIn call. Error object: ", error ? JSON.stringify(error, Object.getOwnPropertyNames(error)) : "NULL or Undefined");
-        console.log("LOGIN.JSX: handleAuth - Just before if(error) check");
+        logger.debug('login:handleAuth', 'Sign in completed', { hasError: !!error });
+        logger.debug('login:handleAuth', 'Checking for authentication errors');
         if (error) {
-          console.log("LOGIN.JSX: MARKER D: INSIDE if(error) block. Error: ", JSON.stringify(error, Object.getOwnPropertyNames(error)));
+          logger.error('login:handleAuth', 'Authentication error occurred:', error);
           // Determine if this is a network connectivity issue
           const isNetworkError = 
             error.message?.toLowerCase().includes('failed to fetch') ||
@@ -237,7 +237,7 @@ export default function LoginScreen() {
             );
           }
         } else {
-          console.log("LOGIN.JSX: handleAuth - INSIDE ELSE block (no error from signIn)");
+          logger.debug('login:handleAuth', 'Authentication successful');
         }
       }
     } catch (err) {

@@ -524,7 +524,7 @@ const HomeScreen = () => {
   };
 
   const handleDeleteDocument = async (documentId, documentName) => {
-    console.log('--- handleDeleteDocument CALLED in home.jsx --- Document ID:', documentId, 'Name:', documentName);
+    logger.debug('home:handleDeleteDocument', 'Delete document requested:', { documentId, documentName });
     if (!isConnected) {
       Alert.alert('Offline Mode', 'Deleting documents requires an internet connection.');
       return;
@@ -700,7 +700,7 @@ const HomeScreen = () => {
           <TouchableOpacity 
             onPress={(e) => { 
               e.stopPropagation(); // Prevent triggering select on delete
-              console.log('--- DELETE BUTTON CLICKED (WEB TEST) --- Full Item:', JSON.stringify(item, null, 2)); 
+              logger.debug('home:deleteButton', 'Delete button clicked for item:', { id: item.id, title: item.title || item.name }); 
               handleDeleteDocument(item.id, item.name || item.title); 
             }}
             style={styles.deleteButton}
