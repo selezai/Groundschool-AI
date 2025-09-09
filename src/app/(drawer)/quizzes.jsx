@@ -467,7 +467,7 @@ const QuizzesScreen = () => {
             {item.title || 'Untitled Exam'}
           </Text>
           <Text style={styles.quizDetails}>
-            {item.num_questions} Questions • {quizDate} at {quizTime}
+            {item.question_count} Questions • {quizDate} at {quizTime}
           </Text>
           {item.is_cached && <Text style={styles.cachedBadge}>Cached</Text>}
         </View>
