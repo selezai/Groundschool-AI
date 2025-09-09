@@ -25,6 +25,7 @@ import { useNetwork } from '../../contexts/NetworkContext';
 import NetworkStatusBar from '../../components/NetworkStatusBar';
 import { useAuth } from '../../contexts/AuthContext';
 import posthogService from '../../services/posthogService';
+import cacheService, { CACHE_KEYS } from '../../services/cacheService';
 // These imports are used by createThemedStyles internally
 // eslint-disable-next-line no-unused-vars
 import { darkColors, spacing, typography, createThemedStyles } from '../../theme/theme';
@@ -48,11 +49,55 @@ const HomeScreen = () => {
   const [maxStorage, setMaxStorage] = useState(getMaxStorageForPlan(null)); // Default to free plan limit
   const [storageUsagePercent, setStorageUsagePercent] = useState(0);
   const [isLoadingStorageUsage, setIsLoadingStorageUsage] = useState(false);
+  
+  // Cache for storage data
+  const [storageCache, setStorageCache] = useState({
+    data: null,
+    isValid: false
+  });
 
   // Upload states
   const [isUploading, setIsUploading] = useState(false);
 
-  // Fetch documents when the screen comes into focus
+  // Track if this is the initial load to prevent unnecessary refetches on window focus
+  const [hasInitiallyLoaded, setHasInitiallyLoaded] = useState(false);
+
+  // Cache invalidation utility for storage
+  const invalidateStorageCache = useCallback((skipDocumentRefresh = false) => {
+    logger.info('HomeScreen:invalidateStorageCache', 'Invalidating storage cache', { skipDocumentRefresh });
+    setStorageCache(prev => ({
+      ...prev,
+      isValid: false
+    }));
+    // Also refresh documents when storage changes (upload/delete)
+    // Skip document refresh if we've already optimistically updated the UI
+    if (hasInitiallyLoaded && !skipDocumentRefresh) {
+      fetchDocuments();
+    }
+  }, [hasInitiallyLoaded]);
+  
+  // Register with cache service for storage updates
+  useEffect(() => {
+    cacheService.registerInvalidationCallback(CACHE_KEYS.STORAGE_USAGE, invalidateStorageCache);
+    
+    return () => {
+      cacheService.unregisterInvalidationCallback(CACHE_KEYS.STORAGE_USAGE, invalidateStorageCache);
+    };
+  }, [invalidateStorageCache]);
+
+  // Initial load effect - runs once when component mounts and when session changes
+  useEffect(() => {
+    if (session?.user?.id && !hasInitiallyLoaded) {
+      fetchDocuments();
+      fetchStorageUsage();
+      setHasInitiallyLoaded(true);
+    } else if (!session?.user?.id) {
+      // Reset the flag when user logs out so it loads fresh on next login
+      setHasInitiallyLoaded(false);
+    }
+  }, [session?.user?.id, hasInitiallyLoaded]);
+
+  // Fetch documents when the screen comes into focus (but only on native platforms)
   useFocusEffect(
     useCallback(() => {
       // Track screen view
@@ -63,9 +108,12 @@ const HomeScreen = () => {
         storage_used_percent: storageUsagePercent,
       });
       
-      fetchDocuments();
-      fetchStorageUsage();
-    }, [profile?.plan, documents.length, storageUsage, storageUsagePercent])
+      // Only fetch documents on native platforms where focus events are reliable
+      if (Platform.OS !== 'web' && hasInitiallyLoaded) {
+        fetchDocuments();
+        fetchStorageUsage(); // Will use cache if valid
+      }
+    }, [profile?.plan, documents.length, storageUsage, storageUsagePercent, hasInitiallyLoaded])
   );
 
   // Reset loading states when the screen comes into focus
@@ -98,12 +146,23 @@ const HomeScreen = () => {
   const [examGenerationError, setExamGenerationError] = useState(null);
   const [quizProgressMessage, setQuizProgressMessage] = useState(''); // For granular progress updates
 
-  // Fetch storage usage information
-  const fetchStorageUsage = useCallback(async () => {
+  // Fetch storage usage information with caching
+  const fetchStorageUsage = useCallback(async (forceRefresh = false) => {
     if (!session || !session.user) {
       setStorageUsage(0);
       setMaxStorage(getMaxStorageForPlan(null));
       setStorageUsagePercent(0);
+      return;
+    }
+
+    // Check if we have valid cached data and don't need to force refresh
+    if (!forceRefresh && storageCache.isValid && storageCache.data) {
+      logger.info('HomeScreen:fetchStorageUsage', 'Using cached storage data');
+      const cachedData = storageCache.data;
+      setStorageUsage(cachedData.totalBytes);
+      setMaxStorage(cachedData.maxStorage);
+      setStorageUsagePercent(cachedData.percent);
+      setIsLoadingStorageUsage(false);
       return;
     }
 
@@ -117,24 +176,36 @@ const HomeScreen = () => {
         .single();
 
       const currentMaxStorage = getMaxStorageForPlan(profile?.plan);
-      setMaxStorage(currentMaxStorage);
-
       const totalBytes = await getUserTotalStorageUsage(session.user.id);
-      setStorageUsage(totalBytes);
       
       const percent = currentMaxStorage > 0 
         ? Math.min(100, Math.round((totalBytes / currentMaxStorage) * 100)) 
         : 0;
 
+      const newStorageData = {
+        totalBytes,
+        maxStorage: currentMaxStorage,
+        percent
+      };
+
+      setStorageUsage(totalBytes);
+      setMaxStorage(currentMaxStorage);
       setStorageUsagePercent(percent);
-      logger.info('HomeScreen', `Storage usage fetched: ${totalBytes} bytes of ${currentMaxStorage} (${percent}%)`);
+      
+      // Update cache with fresh data
+      setStorageCache({
+        data: newStorageData,
+        isValid: true
+      });
+      
+      logger.info('HomeScreen', `Storage usage fetched and cached: ${totalBytes} bytes of ${currentMaxStorage} (${percent}%)`);
     } catch (err) {
       logger.error('HomeScreen', 'Error fetching storage usage', err);
       // Don't show an error to the user, just log it
     } finally {
       setIsLoadingStorageUsage(false);
     }
-  }, [session]);
+  }, [session, storageCache]);
 
   const fetchDocuments = useCallback(async (showRefreshing = false) => {
     if (!session) {
@@ -177,15 +248,18 @@ const HomeScreen = () => {
   }, [session, isConnected]);
 
   useEffect(() => {
-    if (session && session.user) {
+    if (session?.user?.id) {
       // When session is available, fetch user data.
       // updateExistingDocumentSizes can run in the background to ensure accuracy.
       updateExistingDocumentSizes(session.user.id).catch(err => {
         logger.error('HomeScreen', 'Background update of document sizes failed', err);
       });
       
-      fetchDocuments();
-      fetchStorageUsage();
+      // Only fetch documents if we haven't loaded them yet or if the user ID actually changed
+      if (!hasInitiallyLoaded) {
+        fetchDocuments();
+        fetchStorageUsage();
+      }
     } else {
       // When there is no session (user is logged out), clear all user-specific data.
       logger.info('HomeScreen', 'No session, clearing user data.');
@@ -197,10 +271,10 @@ const HomeScreen = () => {
       setDocumentError(null);
       setSelectedDocumentIdsForQuiz([]);
     }
-  // This effect should re-run whenever the session or profile changes.
+  // This effect should re-run whenever the user ID or profile changes.
   // Adding profile ensures storage limits update when user upgrades to Captain's Club.
   // fetchDocuments and fetchStorageUsage are stable and have their own dependencies.
-  }, [session, profile]);
+  }, [session?.user?.id, profile, hasInitiallyLoaded]);
 
   const handlePickDocument = async () => {
     if (isUploading) return;
@@ -472,7 +546,7 @@ const HomeScreen = () => {
       setNewDocumentTitle('');
       setUploadProgress(0);
       fetchDocuments(); // Refresh the document list
-      fetchStorageUsage(); // Update storage usage after successful upload
+      fetchStorageUsage(true); // Force refresh storage usage after successful upload
       Alert.alert('Success', 'Document uploaded successfully!');
     } catch (err) {
       if (err instanceof StorageLimitExceededError) {
@@ -543,7 +617,7 @@ const HomeScreen = () => {
         // Find document details for tracking
         const documentToDelete = documents.find(doc => doc.id === documentId);
         
-        await deleteDocument(documentId, session.user.id);
+        await deleteDocument(documentId, session.user.id, true); // Skip cache invalidation
         logger.info('HomeScreen:handleDeleteDocument', 'Successfully deleted from backend. Updating UI.', { documentId });
         
         // Track successful document deletion
@@ -556,6 +630,7 @@ const HomeScreen = () => {
           storage_freed_mb: documentToDelete?.file_size ? (documentToDelete.file_size / (1024 * 1024)).toFixed(2) : 0,
         });
         
+        // Optimistically update the UI by removing the document from the list
         setDocuments(prevDocs => prevDocs.filter(doc => doc.id !== documentId));
         
         // Correctly update the multi-select quiz document IDs
@@ -563,7 +638,11 @@ const HomeScreen = () => {
           prevSelectedIds.filter(id => id !== documentId)
         );
 
-        fetchStorageUsage(); // Update storage usage after successful deletion
+        // Manually invalidate caches without triggering callbacks
+        cacheService.invalidateCaches([CACHE_KEYS.PROFILE_STATS, CACHE_KEYS.STORAGE_USAGE]);
+        
+        // Refresh storage usage to update the UI
+        fetchStorageUsage(true);
         Alert.alert('Success', `"${documentName}" has been deleted.`);
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : String(err);

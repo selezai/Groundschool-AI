@@ -21,6 +21,7 @@ import posthogService from '../../services/posthogService';
 import { useTheme, createThemedStyles } from '../../theme/theme';
 import { WebView } from 'react-native-webview';
 import CustomWebAlert from '../../components/CustomWebAlert';
+import cacheService, { CACHE_KEYS } from '../../services/cacheService';
 
 const PAYFAST_RETURN_URL_IDENTIFIER = '/payment-success.html';
 const PAYFAST_CANCEL_URL_IDENTIFIER = '/payment-cancel.html';
@@ -32,6 +33,32 @@ const ProfileScreen = () => {
   const [usageError, setUsageError] = useState(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [isDeletingAccount, setIsDeletingAccount] = useState(false);
+  
+  // Cache for activity stats
+  const [statsCache, setStatsCache] = useState({
+    data: null,
+    timestamp: null,
+    isValid: false
+  });
+  const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes in milliseconds
+  
+  // Cache invalidation utility
+  const invalidateStatsCache = useCallback(() => {
+    logger.info('ProfileScreen:invalidateStatsCache', 'Invalidating stats cache');
+    setStatsCache(prev => ({
+      ...prev,
+      isValid: false
+    }));
+  }, []);
+  
+  // Register with cache service
+  useEffect(() => {
+    cacheService.registerInvalidationCallback(CACHE_KEYS.PROFILE_STATS, invalidateStatsCache);
+    
+    return () => {
+      cacheService.unregisterInvalidationCallback(CACHE_KEYS.PROFILE_STATS, invalidateStatsCache);
+    };
+  }, [invalidateStatsCache]);
   
   // Testing phase flag - set to true to hide billing elements
   // When user says "activate cc", change this to false to restore normal functionality
@@ -66,14 +93,28 @@ const ProfileScreen = () => {
     averageScore: 0,
   });
 
-  const fetchUserStats = useCallback(async () => {
+  const fetchUserStats = useCallback(async (forceRefresh = false) => {
     if (!user?.id) {
       logger.warn('ProfileScreen:fetchUserStats', 'No user ID, cannot fetch stats.');
       setStats({ quizCount: 0, documentCount: 0, averageScore: 0 });
       setIsFetchingStats(false); // Not fetching if no user
       return;
     }
-    logger.info('ProfileScreen:fetchUserStats', 'Fetching stats for user:', { userId: user.id });
+
+    // Check if we have valid cached data and don't need to force refresh
+    const now = Date.now();
+    if (!forceRefresh && statsCache.isValid && statsCache.data && statsCache.timestamp) {
+      const cacheAge = now - statsCache.timestamp;
+      if (cacheAge < CACHE_DURATION) {
+        logger.info('ProfileScreen:fetchUserStats', 'Using cached stats data', { cacheAge: Math.round(cacheAge / 1000) + 's' });
+        setStats(statsCache.data);
+        setIsFetchingStats(false);
+        setError(null);
+        return;
+      }
+    }
+
+    logger.info('ProfileScreen:fetchUserStats', 'Fetching fresh stats for user:', { userId: user.id, forceRefresh });
     setIsFetchingStats(true);
     setError(null); // Clear previous errors
     try {
@@ -97,23 +138,43 @@ const ProfileScreen = () => {
         logger.error('ProfileScreen:fetchUserStats', 'Error fetching quiz attempts', { error: attemptsData.error });
       }
 
-      setStats({
+      const newStats = {
         quizCount: quizCount || 0,
         documentCount: documentCount || 0,
         averageScore: averageScore || 0,
+      };
+
+      setStats(newStats);
+      
+      // Update cache with fresh data
+      setStatsCache({
+        data: newStats,
+        timestamp: now,
+        isValid: true
       });
-      logger.info('ProfileScreen:fetchUserStats', 'Stats fetched successfully');
+      
+      logger.info('ProfileScreen:fetchUserStats', 'Stats fetched and cached successfully');
     } catch (e) {
       logger.error('ProfileScreen:fetchUserStats', 'Exception fetching user stats', { error: e });
       setError('Failed to load your activity statistics. Please try again.');
     } finally {
       setIsFetchingStats(false); // Done fetching stats (or failed)
     }
-  }, [user?.id]);
+  }, [user?.id, statsCache, CACHE_DURATION]);
+
+  // Track if usage data has been initially loaded to prevent unnecessary refetches on window focus
+  const [hasInitiallyLoadedUsage, setHasInitiallyLoadedUsage] = useState(false);
 
   useEffect(() => {
     const fetchUsageData = async () => {
-      if (!session?.user?.id) return;
+      if (!session?.user?.id) {
+        // Reset the flag when user logs out so it loads fresh on next login
+        setHasInitiallyLoadedUsage(false);
+        return;
+      }
+
+      // Only fetch if we haven't loaded yet for this user session
+      if (hasInitiallyLoadedUsage) return;
 
       setIsLoadingUsage(true);
       setUsageError(null);
@@ -143,6 +204,7 @@ const ProfileScreen = () => {
         if (examsError) throw examsError;
 
         setExamsCount(count || 0);
+        setHasInitiallyLoadedUsage(true);
 
       } catch (error) {
         console.error('Error fetching usage data:', error.message);
@@ -153,7 +215,7 @@ const ProfileScreen = () => {
     };
 
     fetchUsageData();
-  }, [session]);
+  }, [session?.user?.id, hasInitiallyLoadedUsage]);
 
   // Effect for initial profile loading state and triggering stats fetch
   useEffect(() => {
@@ -188,7 +250,7 @@ const ProfileScreen = () => {
       
       logger.info('ProfileScreen:useFocusEffect', 'Screen focused.');
       if (user?.id && profile) {
-        // User and profile are available, re-fetch stats.
+        // User and profile are available, fetch stats (will use cache if valid).
         fetchUserStats();
       } else if (!user?.id) {
         // No user, ensure all loading is false and stats are cleared.
@@ -579,7 +641,7 @@ const ProfileScreen = () => {
            <View style={styles.loadingOrErrorContainer}>
              <Ionicons name="warning-outline" size={24} color={theme.colors.error} />
              <Text style={[styles.loadingOrErrorText, {color: theme.colors.error}]}>{error}</Text>
-             <TouchableOpacity style={[styles.secondaryButton, {marginTop: theme.spacing.small}]} onPress={fetchUserStats}>
+             <TouchableOpacity style={[styles.secondaryButton, {marginTop: theme.spacing.small}]} onPress={() => fetchUserStats(true)}>
                 <Text style={styles.secondaryButtonText}>Try Again</Text>
             </TouchableOpacity>
            </View>

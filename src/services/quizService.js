@@ -14,6 +14,7 @@ import offlineService from './offlineService';
 import NetworkService from './networkService';
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
+import cacheService, { CACHE_KEYS } from './cacheService';
 
 const MAX_QUIZZES_PER_USER = 20;
 
@@ -218,6 +219,9 @@ export const createQuizFromDocument = async (document, difficulty = 'medium') =>
       }
       quiz = newQuizData;
       logger.info('quizService:createQuizFromDocument', 'Quiz record created successfully', { quizId: quiz.id });
+      
+      // Invalidate profile stats cache since quiz count has changed
+      cacheService.invalidateCache(CACHE_KEYS.PROFILE_STATS);
     } catch (dbError) {
       logger.error('quizService:createQuizFromDocument', 'Exception during quiz creation database operation', dbError);
       throw new Error(`Database error creating quiz: ${dbError.message}`);
@@ -716,6 +720,9 @@ export const deleteQuiz = async (quizId) => {
     }
 
     logger.info('quizService:deleteQuiz', 'Successfully deleted quiz and its related data (attempts, responses)', { quizId });
+    
+    // Invalidate profile stats cache since quiz count and potentially average score have changed
+    cacheService.invalidateCache(CACHE_KEYS.PROFILE_STATS);
   } catch (error) {
     logger.error('quizService:deleteQuiz', 'Error in quiz deletion process', error);
     throw error;
@@ -801,6 +808,9 @@ export const submitQuizAttempt = async (quizId, answers, score, completionTime) 
     }
 
     logger.info('quizService:submitQuizAttempt', 'Quiz attempt submitted successfully online', { attemptId: dbAttempt.id });
+    
+    // Invalidate profile stats cache since average score may have changed
+    cacheService.invalidateCache(CACHE_KEYS.PROFILE_STATS);
 
     if (dbAttempt && dbAttempt.id) {
       const responsesData = answers.map(answer => ({

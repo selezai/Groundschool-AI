@@ -182,18 +182,15 @@ const SettingsScreen = () => {
     }
   };
 
-  if (isLoading) {
-    return (
-      <SafeAreaView style={styles.containerCentered}>
-        <ActivityIndicator size="large" color={darkColors.text} />
-        <Text style={styles.loadingText}>Loading Settings...</Text>
-      </SafeAreaView>
-    );
-  }
-
   return (
     <SafeAreaView style={styles.safeArea}>
       <Stack.Screen options={{ title: 'Settings', headerTintColor: darkColors.text, headerStyle: { backgroundColor: darkColors.background } }} />
+      {isLoading ? (
+        <View style={styles.containerCentered}>
+          <ActivityIndicator size="large" color={darkColors.text} />
+          <Text style={styles.loadingText}>Loading Settings...</Text>
+        </View>
+      ) : (
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text style={styles.header}>Edit Profile</Text>
         {error && <Text style={styles.errorText}>{error}</Text>}
@@ -226,6 +223,13 @@ const SettingsScreen = () => {
         </View>
 
         <TouchableOpacity 
+          style={[styles.button, styles.changePasswordButton]}
+          onPress={openChangePasswordModal} // Updated onPress
+        >
+          <Text style={styles.buttonText}>Change Password</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
           style={[styles.button, styles.saveButton, isSaving && styles.buttonDisabled]}
           onPress={handleSaveProfile}
           disabled={isSaving}
@@ -237,15 +241,8 @@ const SettingsScreen = () => {
           )}
         </TouchableOpacity>
 
-        <Text style={styles.header}>Account</Text>
-        <TouchableOpacity 
-          style={[styles.button, styles.changePasswordButton]}
-          onPress={openChangePasswordModal} // Updated onPress
-        >
-          <Text style={styles.buttonText}>Change Password</Text>
-        </TouchableOpacity>
-
       </ScrollView>
+      )}
 
       {/* Change Password Modal */}
       <Modal
@@ -270,8 +267,6 @@ const SettingsScreen = () => {
               secureTextEntry
               value={newPassword}
               onChangeText={setNewPassword}
-              placeholder="Enter new password"
-              placeholderTextColor={darkColors.textSecondary}
               editable={!isUpdatingPassword}
             />
 
@@ -281,8 +276,6 @@ const SettingsScreen = () => {
               secureTextEntry
               value={confirmNewPassword}
               onChangeText={setConfirmNewPassword}
-              placeholder="Confirm new password"
-              placeholderTextColor={darkColors.textSecondary}
               editable={!isUpdatingPassword}
             />
 
@@ -303,7 +296,7 @@ const SettingsScreen = () => {
               onPress={() => setIsChangePasswordModalVisible(false)}
               disabled={isUpdatingPassword}
             >
-              <Text style={[styles.modalButtonText, { color: darkColors.text }]}>Cancel</Text>
+              <Text style={styles.modalButtonText}>Cancel</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -384,7 +377,7 @@ const getStyles = createThemedStyles((theme) => ({
     paddingVertical: theme.spacing.m,
     borderRadius: theme.spacing.xs,
     alignItems: 'center',
-    marginTop: theme.spacing.md,
+    marginTop: theme.spacing.m,
   },
   // Modal Styles
   modalOverlay: { 
@@ -418,13 +411,13 @@ const getStyles = createThemedStyles((theme) => ({
     marginBottom: theme.spacing.xs,
   },
   modalInput: { 
-    backgroundColor: theme.colors.cardBorder, 
+    backgroundColor: theme.colors.surface,
     color: theme.colors.text,
     paddingHorizontal: theme.spacing.m,
     paddingVertical: theme.spacing.s,
     borderRadius: theme.spacing.xs,
     borderWidth: 1,
-    borderColor: theme.colors.cardBorder,
+    borderColor: theme.colors.border,
     fontSize: theme.typography.body.fontSize,
     marginBottom: theme.spacing.m, 
   },
@@ -435,21 +428,17 @@ const getStyles = createThemedStyles((theme) => ({
   },
   modalButton: { 
     backgroundColor: theme.colors.accent,
-    paddingVertical: theme.spacing.s,
-    paddingHorizontal: theme.spacing.m,
+    paddingVertical: theme.spacing.m,
     borderRadius: theme.spacing.xs,
     alignItems: 'center',
-    flex: 1, 
-    marginHorizontal: theme.spacing.xs, 
+    marginTop: theme.spacing.m,
   },
   modalButtonSecondary: { 
     backgroundColor: theme.colors.cardBorder,
-    paddingVertical: theme.spacing.s,
-    paddingHorizontal: theme.spacing.m,
+    paddingVertical: theme.spacing.m,
     borderRadius: theme.spacing.xs,
     alignItems: 'center',
-    flex: 1,
-    marginHorizontal: theme.spacing.xs,
+    marginTop: theme.spacing.m,
   },
   modalButtonText: {
     color: theme.colors.background,

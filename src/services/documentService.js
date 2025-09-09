@@ -1,10 +1,13 @@
 import { supabase } from './supabaseClient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as FileSystem from 'expo-file-system';
-import offlineService from './offlineService';
 import { Platform } from 'react-native';
 import logger from './loggerService';
 import { validateFile } from '../utils/fileValidation.js';
+import cacheService, { CACHE_KEYS } from './cacheService';
+
+// Request deduplication for getUserDocuments
+let activeDocumentFetchPromise = null;
 
 // --- Dynamic Storage Limits ---
 export const PLAN_PRO = 'captains_club';
@@ -422,6 +425,7 @@ export const uploadDocument = async (fileAsset, title, onProgress) => {
   }
   
   // Step 3: Check if we're offline (this comes after successful storage verification and limit check)
+  const offlineService = await import('./offlineService');
   const isConnected = await offlineService.getNetworkStatus();
   if (!isConnected) {
     logger.info('documentService:uploadDocument', 'Device is offline, queuing document upload');
@@ -499,7 +503,8 @@ export const uploadDocument = async (fileAsset, title, onProgress) => {
     if (dbData && dbData.file_size > 0) {
         await updateUserStorageUsage(user.id, dbData.file_size);
     }
-    // --- END NEW ---
+    // Invalidate caches since document count and storage usage have changed
+    cacheService.invalidateCaches([CACHE_KEYS.PROFILE_STATS, CACHE_KEYS.STORAGE_USAGE]);
 
     return dbData;
 
@@ -605,106 +610,134 @@ export const updateExistingDocumentSizes = async (userId) => {
   }
 };
 
-export const getUserDocuments = async () => {
-  // Check if we're offline
-  const isConnected = await offlineService.getNetworkStatus();
-  
-  // If offline, return cached documents
-  if (!isConnected) {
-    logger.info('documentService:getUserDocuments', 'Device is offline, returning cached documents');
-    const offlineDocuments = await getOfflineDocuments();
-    return offlineDocuments;
-  }
-  
-  // If online, proceed with normal fetch
-  let userDetails, authErrorDetails;
-  try {
-    const { data, error } = await supabase.auth.getUser();
-    userDetails = data?.user;
-    authErrorDetails = error;
-  } catch (e) { // Catch if supabase.auth.getUser() itself throws an unexpected error
-    logger.error('documentService:getUserDocuments', 'Unexpected error during supabase.auth.getUser() call.', { error: e });
-    const criticalAuthError = new Error('Critical error during user authentication.');
-    criticalAuthError.isCriticalAuthError = true;
-    throw criticalAuthError;
+export const getUserDocuments = async (forceRefresh = false) => {
+  // Request deduplication - if there's already an active request and we're not forcing refresh, return it
+  if (!forceRefresh && activeDocumentFetchPromise) {
+    logger.info('documentService:getUserDocuments', 'Returning existing active request to prevent duplicate fetching');
+    return activeDocumentFetchPromise;
   }
 
-  if (authErrorDetails) {
-    const errorMessage = authErrorDetails.message ? authErrorDetails.message.toLowerCase() : '';
-    if (errorMessage.includes('failed to fetch') || errorMessage.includes('err_internet_disconnected') || errorMessage.includes('network request failed')) {
-      logger.warn('documentService:getUserDocuments', 'Network error during user authentication. Documents cannot be fetched.', { error: authErrorDetails });
-      const networkAuthError = new Error('Network error during user authentication. Please check your connection and try again.');
-      networkAuthError.isNetworkError = true;
-      networkAuthError.isAuthFailure = true;
-      throw networkAuthError;
-    }
-    logger.error('documentService:getUserDocuments', 'Authentication error (non-network). Documents cannot be fetched.', { error: authErrorDetails });
-    const authError = new Error('User authentication failed. Documents cannot be fetched.');
-    authError.isAuthFailure = true;
-    throw authError;
-  }
-
-  if (!userDetails) {
-    logger.error('documentService:getUserDocuments', 'No authenticated user found after auth attempt (user object is null). Documents cannot be fetched.');
-    const noUserError = new Error('No active user session. Please log in to view documents.');
-    noUserError.isAuthFailure = true; // Treat as an auth failure for UI purposes
-    throw noUserError;
-  }
-  const user = userDetails; // Assign to user to maintain consistency with the rest of the function
-
-  try {
-    logger.info('documentService:getUserDocuments', 'Fetching documents for user:', user.id);
-    
-    // First check if the documents table exists
-    const { error: tableCheckError } = await supabase
-      .from('documents')
-      .select('count')
-      .limit(1);
-    
-    if (tableCheckError && tableCheckError.code === '42P01') { // PostgreSQL code for undefined_table
-      logger.error('documentService:getUserDocuments', 'Documents table does not exist.', tableCheckError);
-      throw new Error('The documents table does not exist in the database. Please set up the database schema.');
-    }
-    
-    const { data, error } = await supabase
-      .from('documents')
-      .select('*')
-      .eq('user_id', user.id) // RLS also enforces this, but explicit check is good practice
-      .order('created_at', { ascending: false });
-
-    if (error) {
-      logger.error('documentService:getUserDocuments', 'Error fetching documents from DB.', error);
-      throw new Error(`Database error: ${error.message || 'Unknown database error'}`);
-    }
-    
-    // Get offline documents to merge with online documents
-    const offlineDocuments = await getOfflineDocuments();
-    
-    // Filter out offline documents that have been uploaded (by tempId)
-    const pendingOfflineDocuments = offlineDocuments.filter(doc => 
-      doc.status === 'pending_upload' && !data.some(onlineDoc => onlineDoc.id === doc.id.replace('temp_', ''))
-    );
-    
-    // Cache online documents for offline access
-    await cacheOnlineDocuments(data);
-    
-    // Combine online and offline documents
-    const allDocuments = [...data, ...pendingOfflineDocuments];
-    
-    logger.info('documentService:getUserDocuments', `Found ${allDocuments.length} documents (${data.length} online, ${pendingOfflineDocuments.length} offline).`);
-    return allDocuments;
-  } catch (error) {
-    logger.error('documentService:getUserDocuments', 'An error occurred during document retrieval.', error);
-    
-    // If we encounter an error fetching online, try to return offline documents
+  // Create the actual fetch promise
+  const fetchPromise = async () => {
     try {
-      const offlineDocuments = await getOfflineDocuments();
-      logger.info('documentService:getUserDocuments', `Returning ${offlineDocuments.length} cached documents after online fetch error.`);
-      return offlineDocuments;
-    } catch (offlineError) {
-      logger.error('documentService:getUserDocuments', 'Failed to get offline documents after online error', offlineError);
-      throw error; // Throw the original error
+      // Lazy import to avoid circular dependency
+      const offlineService = await import('./offlineService');
+      
+      // Check if we're offline
+      const isConnected = await offlineService.getNetworkStatus();
+      
+      // If offline, return cached documents
+      if (!isConnected) {
+        logger.info('documentService:getUserDocuments', 'Device is offline, returning cached documents');
+        const offlineDocuments = await getOfflineDocuments();
+        return offlineDocuments;
+      }
+  
+      // If online, proceed with normal fetch
+      let userDetails, authErrorDetails;
+      try {
+        const { data, error } = await supabase.auth.getUser();
+        userDetails = data?.user;
+        authErrorDetails = error;
+      } catch (e) { // Catch if supabase.auth.getUser() itself throws an unexpected error
+        logger.error('documentService:getUserDocuments', 'Unexpected error during supabase.auth.getUser() call.', { error: e });
+        const criticalAuthError = new Error('Critical error during user authentication.');
+        criticalAuthError.isCriticalAuthError = true;
+        throw criticalAuthError;
+      }
+
+      if (authErrorDetails) {
+        const errorMessage = authErrorDetails.message ? authErrorDetails.message.toLowerCase() : '';
+        if (errorMessage.includes('failed to fetch') || errorMessage.includes('err_internet_disconnected') || errorMessage.includes('network request failed')) {
+          logger.warn('documentService:getUserDocuments', 'Network error during user authentication. Documents cannot be fetched.', { error: authErrorDetails });
+          const networkAuthError = new Error('Network error during user authentication. Please check your connection and try again.');
+          networkAuthError.isNetworkError = true;
+          networkAuthError.isAuthFailure = true;
+          throw networkAuthError;
+        }
+        logger.error('documentService:getUserDocuments', 'Authentication error (non-network). Documents cannot be fetched.', { error: authErrorDetails });
+        const authError = new Error('User authentication failed. Documents cannot be fetched.');
+        authError.isAuthFailure = true;
+        throw authError;
+      }
+
+      if (!userDetails) {
+        logger.error('documentService:getUserDocuments', 'No authenticated user found after auth attempt (user object is null). Documents cannot be fetched.');
+        const noUserError = new Error('No active user session. Please log in to view documents.');
+        noUserError.isAuthFailure = true; // Treat as an auth failure for UI purposes
+        throw noUserError;
+      }
+      const user = userDetails; // Assign to user to maintain consistency with the rest of the function
+
+      try {
+        logger.info('documentService:getUserDocuments', 'Fetching documents for user:', user.id);
+        
+        // First check if the documents table exists
+        const { error: tableCheckError } = await supabase
+          .from('documents')
+          .select('count')
+          .limit(1);
+        
+        if (tableCheckError && tableCheckError.code === '42P01') { // PostgreSQL code for undefined_table
+          logger.error('documentService:getUserDocuments', 'Documents table does not exist.', tableCheckError);
+          throw new Error('The documents table does not exist in the database. Please set up the database schema.');
+        }
+        
+        const { data, error } = await supabase
+          .from('documents')
+          .select('*')
+          .eq('user_id', user.id) // RLS also enforces this, but explicit check is good practice
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          logger.error('documentService:getUserDocuments', 'Error fetching documents from DB.', error);
+          throw new Error(`Database error: ${error.message || 'Unknown database error'}`);
+        }
+        
+        // Get offline documents to merge with online documents
+        const offlineDocuments = await getOfflineDocuments();
+        
+        // Filter out offline documents that have been uploaded (by tempId)
+        const pendingOfflineDocuments = offlineDocuments.filter(doc => 
+          doc.status === 'pending_upload' && !data.some(onlineDoc => onlineDoc.id === doc.id.replace('temp_', ''))
+        );
+        
+        // Cache online documents for offline access
+        await cacheOnlineDocuments(data);
+        
+        // Combine online and offline documents
+        const allDocuments = [...data, ...pendingOfflineDocuments];
+        
+        logger.info('documentService:getUserDocuments', `Found ${allDocuments.length} documents (${data.length} online, ${pendingOfflineDocuments.length} offline).`);
+        return allDocuments;
+      } catch (error) {
+        logger.error('documentService:getUserDocuments', 'An error occurred during document retrieval.', error);
+        
+        // If we encounter an error fetching online, try to return offline documents
+        try {
+          const offlineDocuments = await getOfflineDocuments();
+          logger.info('documentService:getUserDocuments', `Returning ${offlineDocuments.length} cached documents after online fetch error.`);
+          return offlineDocuments;
+        } catch (offlineError) {
+          logger.error('documentService:getUserDocuments', 'Failed to get offline documents after online error', offlineError);
+          throw error; // Throw the original error
+        }
+      }
+    } catch (error) {
+      logger.error('documentService:getUserDocuments', 'Critical error in getUserDocuments', error);
+      throw error;
     }
+  };
+
+  // Set the active promise and execute it
+  activeDocumentFetchPromise = fetchPromise();
+  
+  try {
+    const result = await activeDocumentFetchPromise;
+    return result;
+  } finally {
+    // Clear the active promise when done
+    activeDocumentFetchPromise = null;
   }
 };
 
@@ -716,7 +749,7 @@ export const getUserDocuments = async () => {
  * @param {string} userId - The ID of the user (for verification).
  * @returns {Promise<void>}
  */
-export const deleteDocument = async (documentId, userId) => {
+export const deleteDocument = async (documentId, userId, skipCacheInvalidation = false) => {
   logger.debug('documentService:deleteDocument', 'Delete document requested:', { documentId, userId });
   if (!documentId || !userId) {
     logger.error('documentService:deleteDocument', 'Document ID and User ID are required.');
@@ -810,9 +843,13 @@ export const deleteDocument = async (documentId, userId) => {
 
     // --- NEW: Update storage usage ---
     if (document && document.file_size > 0) {
-        await updateUserStorageUsage(userId, -document.file_size); // Decrement storage
+        await updateUserStorageUsage(userId, -document.file_size); // Negative to reduce usage
     }
-    // --- END NEW ---
+    
+    // Invalidate caches since document count and storage usage have changed
+    if (!skipCacheInvalidation) {
+      cacheService.invalidateCaches([CACHE_KEYS.PROFILE_STATS, CACHE_KEYS.STORAGE_USAGE]);
+    }
 
     return { success: true, message: 'Document deleted successfully.' };
 
@@ -861,19 +898,16 @@ const queueDocumentUpload = async (fileAsset, title) => {
     };
     
     // Queue the upload operation
-    await offlineService.queueOperation({
-      type: 'document_upload',
-      data: {
-        tempId,
-        fileAsset: {
-          uri: localUri,
-          name: fileAsset.name,
-          mimeType: fileAsset.mimeType,
-          size: fileAsset.size
-        },
-        title
+    const offlineService = await import('./offlineService');
+    await offlineService.queueOperation('document_upload', {
+      tempId,
+      fileAsset: {
+        uri: localUri,
+        name: fileAsset.name,
+        mimeType: fileAsset.mimeType,
+        size: fileAsset.size
       },
-      createdAt: new Date().toISOString()
+      title
     });
     
     // Save the temporary document to local storage
@@ -947,6 +981,7 @@ export const getDocumentById = async (documentId) => {
   }
   
   // Check if we're offline
+  const offlineService = await import('./offlineService');
   const isConnected = await offlineService.getNetworkStatus();
   
   // If offline, try to get from cache
@@ -1017,6 +1052,7 @@ export const updateDocument = async (documentId, updates) => {
   }
   
   // Check if we're offline
+  const offlineService = await import('./offlineService');
   const isConnected = await offlineService.getNetworkStatus();
   
   // If offline, queue the update
@@ -1094,13 +1130,10 @@ const queueDocumentUpdate = async (documentId, updates) => {
     await AsyncStorage.setItem(OFFLINE_DOCUMENTS_KEY, JSON.stringify(offlineDocuments));
     
     // Queue the update operation
-    await offlineService.queueOperation({
-      type: 'document_update',
-      data: {
-        documentId: documentId.startsWith('temp_') ? documentId.replace('temp_', '') : documentId,
-        updates
-      },
-      createdAt: new Date().toISOString()
+    const offlineService = await import('./offlineService');
+    await offlineService.queueOperation('document_update', {
+      documentId: documentId.startsWith('temp_') ? documentId.replace('temp_', '') : documentId,
+      updates
     });
     
     logger.info('documentService:queueDocumentUpdate', 'Document update queued', { documentId });
@@ -1132,6 +1165,7 @@ export const createSignedUrl = async (filePath, expiresInSeconds = 3600) => {
   }
   
   // Check if we're offline
+  const offlineService = await import('./offlineService');
   const isConnected = await offlineService.getNetworkStatus();
   if (!isConnected) {
     logger.info('documentService:createSignedUrl', 'Device is offline, checking for cached version', { filePath });

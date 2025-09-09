@@ -61,9 +61,13 @@ const ALLOWED_FILE_TYPES = {
     signatures: [
       [0x00, 0x00, 0x00, 0x18, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63], // HEIC
       [0x00, 0x00, 0x00, 0x20, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63], // HEIC variant
+      [0x00, 0x00, 0x00, 0x24, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63], // HEIC variant (airdropped)
+      [0x00, 0x00, 0x00, 0x1C, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63], // HEIC variant
+      [0x00, 0x00, 0x00, 0x28, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63], // HEIC variant
     ],
     extensions: ['.heic'],
     maxSize: 5 * 1024 * 1024, // 5MB
+    customValidation: 'heic', // Use custom validation for HEIC files
   },
 };
 
@@ -117,6 +121,33 @@ const validateFileExtension = (filename, mimeType) => {
 };
 
 /**
+ * Custom validation for HEIC files with flexible box size
+ * @param {Uint8Array} bytes - File bytes
+ * @returns {boolean} - True if valid HEIC signature
+ */
+const validateHEICSignature = (bytes) => {
+  // HEIC files start with: [4 bytes box size][4 bytes 'ftyp'][4 bytes 'heic']
+  // The box size can vary, so we check the pattern: 00 00 00 XX 66 74 79 70 68 65 69 63
+  if (bytes.length < 12) return false;
+  
+  // Check for the pattern: 00 00 00 [variable] 66 74 79 70 68 65 69 63
+  // Bytes 0-2: should be 00 00 00
+  if (bytes[0] !== 0x00 || bytes[1] !== 0x00 || bytes[2] !== 0x00) return false;
+  
+  // Byte 3: box size (can be various values like 0x18, 0x20, 0x24, 0x1C, 0x28, etc.)
+  // We'll accept any reasonable box size (0x10 to 0x40)
+  if (bytes[3] < 0x10 || bytes[3] > 0x40) return false;
+  
+  // Bytes 4-7: should be 'ftyp' (0x66 0x74 0x79 0x70)
+  if (bytes[4] !== 0x66 || bytes[5] !== 0x74 || bytes[6] !== 0x79 || bytes[7] !== 0x70) return false;
+  
+  // Bytes 8-11: should be 'heic' (0x68 0x65 0x69 0x63)
+  if (bytes[8] !== 0x68 || bytes[9] !== 0x65 || bytes[10] !== 0x69 || bytes[11] !== 0x63) return false;
+  
+  return true;
+};
+
+/**
  * Validates file signature (magic numbers) against declared MIME type
  * @param {ArrayBuffer} fileBuffer - First few bytes of the file
  * @param {string} mimeType - The declared MIME type
@@ -130,6 +161,18 @@ const validateFileSignature = (fileBuffer, mimeType) => {
   }
   
   const bytes = new Uint8Array(fileBuffer);
+  
+  // Use custom validation for HEIC files
+  if (allowedType.customValidation === 'heic') {
+    const isValid = validateHEICSignature(bytes);
+    if (!isValid) {
+      logger.error('fileValidation:validateFileSignature', 'HEIC file signature validation failed', { 
+        mimeType, 
+        actualBytes: Array.from(bytes.slice(0, 16)).map(b => '0x' + b.toString(16).padStart(2, '0')).join(' ') 
+      });
+    }
+    return isValid;
+  }
   
   // Check if any of the allowed signatures match
   for (const signature of allowedType.signatures) {

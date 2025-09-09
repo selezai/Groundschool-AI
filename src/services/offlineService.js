@@ -15,7 +15,6 @@ import NetInfo from '@react-native-community/netinfo';
 import { Platform } from 'react-native';
 import { supabase } from './supabaseClient';
 import logger from './loggerService';
-import { performSyncedDocumentUpload, StorageLimitExceededError } from './documentService';
 
 // Constants for AsyncStorage keys
 const OFFLINE_QUEUE_KEY = 'groundschool_offline_queue';
@@ -315,6 +314,9 @@ const processDocumentUpload = async (operation, user) => {
   logger.info('offlineService:processDocumentUpload', 'Attempting to process offline document upload.', { tempId, title, fileName: fileAsset.name });
 
   try {
+    // Lazy import to avoid circular dependency
+    const { performSyncedDocumentUpload, StorageLimitExceededError } = await import('./documentService');
+    
     // Call the centralized upload function in documentService
     await performSyncedDocumentUpload(fileAsset, title, user);
 
@@ -331,6 +333,7 @@ const processDocumentUpload = async (operation, user) => {
     // The calling function (processOperationQueue) will handle removing the operation from the queue on success (i.e., no error thrown here)
   } catch (error) {
     // Handle storage limit exceeded error specifically
+    const { StorageLimitExceededError } = await import('./documentService');
     if (error instanceof StorageLimitExceededError) {
       logger.warn('offlineService:processDocumentUpload', 'Storage limit exceeded during sync of offline document.', { 
         tempId, 
