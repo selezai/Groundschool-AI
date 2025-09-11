@@ -34,7 +34,7 @@ export default ({ config }) => {
       },
       web: {
         ...(config.expo?.web || {}),
-        favicon: "./assets/round.png",
+        favicon: "./public/assets/round.png",
         bundler: "metro", // Recommended for PWAs with Expo
         output: "single", // Generates a single index.html for SPA deployment
         indexHtml: "./web/index.html", // Explicitly use our custom index.html
