@@ -1,11 +1,3 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "installCommand": "npm install --legacy-peer-deps",
-  "rewrites": [
-    {
-      "source": "/((?!api/|_next/|static/|public/|favicon.ico|assets/|.*\\..*).*)",
-      "destination": "/index.html"
-    }
-  ]
+  "framework": "nextjs"
 }
