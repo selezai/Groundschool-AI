@@ -32,7 +32,7 @@ class ScalableQuizGenerator {
     this.strategy = options.strategy || 'auto';
     this.questionsPerDocument = options.questionsPerDocument || 3;
     this.maxDocumentsPerBatch = options.maxDocumentsPerBatch || 5; // Adjusted default
-    this.modelName = options.model || 'gemini-1.5-flash-latest';
+    this.modelName = options.model || 'gemini-2.0-flash';
     
     this.maxRetries = options.maxRetries || 2;
     this.concurrentRequests = options.concurrentRequests || 3; // Adjusted default

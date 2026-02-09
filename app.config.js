@@ -81,7 +81,8 @@ export default ({ config }) => {
         },
         supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,
         supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
-        GOOGLE_API_KEY: process.env.GOOGLE_API_KEY, 
+        GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+        GROQ_API_KEY: process.env.GROQ_API_KEY,
       },
     },
   };

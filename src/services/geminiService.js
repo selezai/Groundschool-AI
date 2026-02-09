@@ -1,8 +1,11 @@
 /**
- * Gemini AI Service
+ * AI Quiz Generation Service
  * 
- * This service provides an interface to the Google Gemini API for generating
- * quiz questions directly from document files.
+ * Multi-provider AI service for generating quiz questions from documents.
+ * Provider priority: Groq (primary) → Gemini (fallback)
+ * 
+ * Groq: Free, fast, reliable (Llama 3.3 70B)
+ * Gemini: Google's API as fallback when Groq is unavailable
  */
 
 import Constants from 'expo-constants';
@@ -11,6 +14,22 @@ import { supabase, getSupabase, isSupabaseReady } from './supabaseClient.js';
 import logger from './loggerService.js';
 import { ProductionQuizGenerator } from '../utils/quizParserUtils.js';
 import { ScalableQuizGenerator } from '../utils/scalableQuizUtils.js';
+import { isGroqAvailable, generateQuizWithGroq, extractTextFromPart } from './groqService.js';
+
+/**
+ * Normalize question format from AI providers to match quizService expected schema.
+ * AI prompts return: { text, options, correct, explanation }
+ * quizService expects: { text, options, correct_answer_id, explanation }
+ */
+const normalizeQuestions = (questions) => {
+  if (!Array.isArray(questions)) return questions;
+  return questions.map(q => ({
+    ...q,
+    text: q.text || q.question_text,
+    correct_answer_id: q.correct_answer_id || q.correct,
+    explanation: q.explanation || null
+  }));
+};
 
 // Helper function to get a validated Supabase client
 const getValidatedSupabase = () => {
@@ -200,23 +219,19 @@ const blobToBase64 = (blob) => {
  */
 export const generateQuestionsFromDocument = async (document, questionCount = 10, difficulty = 'medium') => {
   try {
-    if (!genAI) {
-      throw new Error('Google Generative AI client is not initialized. Check your API key configuration.');
-    }
-    if (!GOOGLE_API_KEY) {
-      throw new Error('Google API key is not available for ProductionQuizGenerator.');
-    }
-
     if (!document || !document.file_path) {
       throw new Error('Invalid document or missing file path');
     }
 
-    logger.info('geminiService:generateQuestionsFromDocument', 'Generating quiz questions for single document', { 
+    logger.info('aiService:generateQuestionsFromDocument', 'Generating quiz questions for single document', { 
       documentId: document.id, 
       questionCount,
-      difficulty 
+      difficulty,
+      groqAvailable: isGroqAvailable(),
+      geminiAvailable: !!genAI && !!GOOGLE_API_KEY
     });
 
+    // Step 1: Download the document (shared across providers)
     const supabaseClient = getValidatedSupabase();
     
     let fileData = null;
@@ -226,7 +241,7 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
     
     while (retryCount < maxRetries && !fileData) {
       if (retryCount > 0) {
-        logger.info('geminiService:generateQuestionsFromDocument', `Retrying file download (attempt ${retryCount + 1})`);
+        logger.info('aiService:generateQuestionsFromDocument', `Retrying file download (attempt ${retryCount + 1})`);
         await new Promise(resolve => setTimeout(resolve, 500 * retryCount));
       }
       
@@ -238,30 +253,30 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
       fileError = result.error;
       
       if (fileError) {
-        logger.warn('geminiService:generateQuestionsFromDocument', `File download attempt ${retryCount + 1} failed`, fileError);
+        logger.warn('aiService:generateQuestionsFromDocument', `File download attempt ${retryCount + 1} failed`, fileError);
       }
       retryCount++;
     }
 
     if (fileError || !fileData) {
-      logger.error('geminiService:generateQuestionsFromDocument', 'Failed to download document from storage after multiple retries', fileError);
+      logger.error('aiService:generateQuestionsFromDocument', 'Failed to download document from storage after multiple retries', fileError);
       throw new Error(`Failed to download document: ${fileError?.message || 'Unknown error'}`);
     }
 
     const fileSizeMB = (fileData.size || 0) / (1024 * 1024);
-    logger.info('geminiService:generateQuestionsFromDocument', 'Document downloaded successfully', { 
+    logger.info('aiService:generateQuestionsFromDocument', 'Document downloaded successfully', { 
       size: fileData.size,
       sizeMB: fileSizeMB.toFixed(1)
     });
     
-    const mimeType = document.document_type || 'application/pdf'; // Fallback to PDF if type is unknown
+    const mimeType = document.document_type || 'application/pdf';
     
     let filePart;
     try {
       filePart = await fileToGenerativePart(fileData, mimeType);
     } catch (sizeError) {
       if (sizeError.message && sizeError.message.includes('Document too large for AI processing')) {
-        logger.error('geminiService:generateQuestionsFromDocument', 'Document is too large for AI processing', {
+        logger.error('aiService:generateQuestionsFromDocument', 'Document is too large for AI processing', {
           documentId: document.id,
           title: document.title,
           sizeMB: fileSizeMB.toFixed(1),
@@ -269,27 +284,66 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
         });
         throw new Error(`Document "${document.title || 'Untitled'}" is too large for AI processing (${fileSizeMB.toFixed(1)}MB). Please use a smaller document or split large documents into smaller sections.`);
       }
-      throw sizeError; // Re-throw other errors
+      throw sizeError;
     }
 
+    // Step 2: Try Groq first (primary provider)
+    if (isGroqAvailable()) {
+      try {
+        logger.info('aiService:generateQuestionsFromDocument', 'Attempting quiz generation with Groq (primary)');
+        const documentText = extractTextFromPart(filePart);
+        
+        if (documentText && documentText.length > 50) {
+          const groqResult = await generateQuizWithGroq(documentText, questionCount);
+          
+          if (groqResult.success && groqResult.quiz && Array.isArray(groqResult.quiz.questions) && groqResult.quiz.questions.length > 0) {
+            logger.info('aiService:generateQuestionsFromDocument', 'Successfully generated questions with Groq', {
+              questionsGenerated: groqResult.quiz.questions.length,
+              provider: 'groq'
+            });
+            return normalizeQuestions(groqResult.quiz.questions);
+          }
+          logger.warn('aiService:generateQuestionsFromDocument', 'Groq returned unsuccessful result, falling back to Gemini', {
+            error: groqResult.error
+          });
+        } else {
+          logger.warn('aiService:generateQuestionsFromDocument', 'Insufficient text extracted for Groq, falling back to Gemini', {
+            textLength: documentText?.length || 0
+          });
+        }
+      } catch (groqError) {
+        logger.warn('aiService:generateQuestionsFromDocument', 'Groq failed, falling back to Gemini', {
+          error: groqError.message
+        });
+      }
+    }
+
+    // Step 3: Fall back to Gemini
+    if (!genAI || !GOOGLE_API_KEY) {
+      throw new Error('No AI providers available. Configure GROQ_API_KEY or GOOGLE_API_KEY in your environment.');
+    }
+
+    logger.info('aiService:generateQuestionsFromDocument', 'Using Gemini (fallback) for quiz generation');
+
     const generator = new ProductionQuizGenerator(GOOGLE_API_KEY, genAI, {
-      enableLogging: true, // Or false, depending on your preference
-      model: 'gemini-1.5-flash-latest' // Or your preferred model
+      enableLogging: true,
+      model: 'gemini-2.0-flash'
     });
 
-    const documentParts = [filePart]; // ProductionQuizGenerator expects an array of parts
+    const documentParts = [filePart];
 
-    logger.info('geminiService:generateQuestionsFromDocument', 'Calling ProductionQuizGenerator for single document', { questionCount });
+    logger.info('aiService:generateQuestionsFromDocument', 'Calling ProductionQuizGenerator for single document', { questionCount });
     const generationResult = await generator.generateQuiz(documentParts, questionCount);
 
     if (generationResult.success && generationResult.quiz && Array.isArray(generationResult.quiz.questions)) {
-      logger.info('geminiService:generateQuestionsFromDocument', 'Successfully generated questions from single document', {
+      logger.info('aiService:generateQuestionsFromDocument', 'Successfully generated questions with Gemini (fallback)', {
         questionsGenerated: generationResult.quiz.questions.length,
+        provider: 'gemini',
         metadata: generationResult.metadata
       });
-      return generationResult.quiz.questions;
+      return normalizeQuestions(generationResult.quiz.questions);
     } else {
-      logger.error('geminiService:generateQuestionsFromDocument', 'Failed to generate questions using ProductionQuizGenerator', {
+      logger.error('aiService:generateQuestionsFromDocument', 'Failed to generate questions using Gemini', {
         error: generationResult.error,
         metadata: generationResult.metadata
       });
@@ -297,7 +351,7 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
     }
 
   } catch (error) {
-    logger.error('geminiService:generateQuestionsFromDocument', 'Error generating questions from document', error);
+    logger.error('aiService:generateQuestionsFromDocument', 'Error generating questions from document', error);
     throw error;
   }
 };
@@ -310,19 +364,15 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
  * @returns {Promise<Array>} - Array of generated questions
  */
 export const generateQuestionsFromMultipleDocuments = async (documents, questionCount = 10, difficulty = 'medium', onProgressUpdate = () => {}) => {
-  logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Starting generation for multiple documents', { numDocs: documents?.length, questionCount, difficulty });
+  logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Starting generation for multiple documents', { 
+    numDocs: documents?.length, questionCount, difficulty,
+    groqAvailable: isGroqAvailable(),
+    geminiAvailable: !!genAI && !!GOOGLE_API_KEY
+  });
   onProgressUpdate('Initializing quiz generation from multiple documents...');
   try {
-    if (!genAI) {
-      logger.error('geminiService:generateQuestionsFromMultipleDocuments', 'Google Generative AI client is not initialized.');
-      throw new Error('Google Generative AI client is not initialized. Check your API key configuration.');
-    }
-    if (!GOOGLE_API_KEY) {
-      logger.error('geminiService:generateQuestionsFromMultipleDocuments', 'Google API key is not available.');
-      throw new Error('Google API key is not available for quiz generation.');
-    }
     if (!documents || documents.length === 0) {
-      logger.warn('geminiService:generateQuestionsFromMultipleDocuments', 'No documents provided.');
+      logger.warn('aiService:generateQuestionsFromMultipleDocuments', 'No documents provided.');
       return { title: 'No Documents Provided', questions: [] };
     }
 
@@ -331,11 +381,11 @@ export const generateQuestionsFromMultipleDocuments = async (documents, question
 
     for (const [index, doc] of documents.entries()) {
       if (!doc || !doc.file_path) {
-        logger.warn('geminiService:generateQuestionsFromMultipleDocuments', 'Skipping invalid document or document with missing file path', { documentId: doc?.id });
+        logger.warn('aiService:generateQuestionsFromMultipleDocuments', 'Skipping invalid document or document with missing file path', { documentId: doc?.id });
         continue;
       }
 
-      logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Processing document for quiz generation', { documentId: doc.id, filePath: doc.file_path });
+      logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Processing document for quiz generation', { documentId: doc.id, filePath: doc.file_path });
       onProgressUpdate(`Downloading document ${index + 1} of ${documents.length}: ${doc.title || 'Untitled'}...`);
 
       let fileData = null;
@@ -345,8 +395,8 @@ export const generateQuestionsFromMultipleDocuments = async (documents, question
 
       while (retryCount < maxRetries && !fileData) {
         if (retryCount > 0) {
-          logger.info('geminiService:generateQuestionsFromMultipleDocuments', `Retrying file download (attempt ${retryCount + 1}/${maxRetries}) for doc ID ${doc.id}`);
-          await new Promise(resolve => setTimeout(resolve, 1000 * retryCount)); // Exponential backoff
+          logger.info('aiService:generateQuestionsFromMultipleDocuments', `Retrying file download (attempt ${retryCount + 1}/${maxRetries}) for doc ID ${doc.id}`);
+          await new Promise(resolve => setTimeout(resolve, 1000 * retryCount));
         }
         try {
           const result = await supabaseClient.storage
@@ -357,28 +407,28 @@ export const generateQuestionsFromMultipleDocuments = async (documents, question
           fileError = result.error;
 
           if (fileError) {
-            logger.warn('geminiService:generateQuestionsFromMultipleDocuments', `File download attempt ${retryCount + 1} failed for doc ID ${doc.id}`, fileError);
+            logger.warn('aiService:generateQuestionsFromMultipleDocuments', `File download attempt ${retryCount + 1} failed for doc ID ${doc.id}`, fileError);
           } else if (!fileData) {
-            logger.warn('geminiService:generateQuestionsFromMultipleDocuments', `File download attempt ${retryCount + 1} for doc ID ${doc.id} returned no data.`);
+            logger.warn('aiService:generateQuestionsFromMultipleDocuments', `File download attempt ${retryCount + 1} for doc ID ${doc.id} returned no data.`);
           }
         } catch (e) {
-          logger.warn('geminiService:generateQuestionsFromMultipleDocuments', `Exception during file download attempt ${retryCount + 1} for doc ID ${doc.id}`, e);
-          fileError = e; // Store the exception as an error
+          logger.warn('aiService:generateQuestionsFromMultipleDocuments', `Exception during file download attempt ${retryCount + 1} for doc ID ${doc.id}`, e);
+          fileError = e;
         }
         retryCount++;
       }
 
       if (fileError || !fileData) {
-        logger.error('geminiService:generateQuestionsFromMultipleDocuments', `Failed to download document ${doc.file_path} (ID: ${doc.id}) after ${maxRetries} retries. Skipping.`, fileError);
-        continue; // Skip this document
+        logger.error('aiService:generateQuestionsFromMultipleDocuments', `Failed to download document ${doc.file_path} (ID: ${doc.id}) after ${maxRetries} retries. Skipping.`, fileError);
+        continue;
       }
 
       onProgressUpdate(`Processing document ${index + 1} of ${documents.length}: ${doc.title || 'Untitled'}...`);
       try {
-        const mimeType = doc.document_type || 'application/pdf'; // Default to PDF if not specified
+        const mimeType = doc.document_type || 'application/pdf';
         const fileSizeMB = (fileData.size || 0) / (1024 * 1024);
         
-        logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Converting file to generative part', { 
+        logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Converting file to generative part', { 
           documentId: doc.id, 
           mimeType, 
           fileSizeMB: fileSizeMB.toFixed(1) 
@@ -388,67 +438,115 @@ export const generateQuestionsFromMultipleDocuments = async (documents, question
         documentInfos.push({
           id: doc.id,
           title: doc.title,
-          content: generativePart, // This is the GoogleGenerativeAI.Part object
+          content: generativePart,
           mimeType: mimeType
         });
-        logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Successfully prepared generative part for document', { documentId: doc.id });
+        logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Successfully prepared generative part for document', { documentId: doc.id });
       } catch (partError) {
-        // Check if this is a document size error
         if (partError.message && partError.message.includes('Document too large for AI processing')) {
-          logger.error('geminiService:generateQuestionsFromMultipleDocuments', `Document ${doc.title || doc.id} is too large for AI processing and will be skipped.`, {
+          logger.error('aiService:generateQuestionsFromMultipleDocuments', `Document ${doc.title || doc.id} is too large for AI processing and will be skipped.`, {
             documentId: doc.id,
             title: doc.title,
             error: partError.message
           });
-          onProgressUpdate(`⚠️ Skipping oversized document: ${doc.title || 'Untitled'} - Too large for AI processing`);
+          onProgressUpdate(`Skipping oversized document: ${doc.title || 'Untitled'} - Too large for AI processing`);
         } else {
-          logger.error('geminiService:generateQuestionsFromMultipleDocuments', `Error creating generative part for document ${doc.id}. Skipping.`, partError);
-          onProgressUpdate(`⚠️ Error processing document: ${doc.title || 'Untitled'} - ${partError.message}`);
+          logger.error('aiService:generateQuestionsFromMultipleDocuments', `Error creating generative part for document ${doc.id}. Skipping.`, partError);
+          onProgressUpdate(`Error processing document: ${doc.title || 'Untitled'} - ${partError.message}`);
         }
-        continue; // Skip this document if part creation fails
+        continue;
       }
     }
 
     if (documentInfos.length === 0) {
-      logger.warn('geminiService:generateQuestionsFromMultipleDocuments', 'No documents could be processed successfully.');
+      logger.warn('aiService:generateQuestionsFromMultipleDocuments', 'No documents could be processed successfully.');
       return { title: 'Quiz Generation Failed', questions: [] };
     }
 
-    logger.info('geminiService:generateQuestionsFromMultipleDocuments', `Successfully prepared ${documentInfos.length} documents for ScalableQuizGenerator.`);
+    logger.info('aiService:generateQuestionsFromMultipleDocuments', `Successfully prepared ${documentInfos.length} documents.`);
     onProgressUpdate(`All ${documentInfos.length} documents prepared. Handing off to AI for quiz generation...`);
+
+    // Try Groq first (primary provider)
+    if (isGroqAvailable()) {
+      try {
+        logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Attempting quiz generation with Groq (primary)');
+        onProgressUpdate('Generating quiz with Groq AI (primary)...');
+        
+        // Extract text from all document parts and combine
+        const combinedText = documentInfos.map(docInfo => {
+          try {
+            const text = extractTextFromPart(docInfo.content);
+            return `--- Document: ${docInfo.title} ---\n${text}`;
+          } catch (_e) {
+            logger.warn('aiService:generateQuestionsFromMultipleDocuments', `Failed to extract text from document ${docInfo.id} for Groq`);
+            return '';
+          }
+        }).filter(t => t.length > 50).join('\n\n');
+
+        if (combinedText.length > 100) {
+          const groqResult = await generateQuizWithGroq(combinedText, questionCount);
+          
+          if (groqResult.success && groqResult.quiz && Array.isArray(groqResult.quiz.questions) && groqResult.quiz.questions.length > 0) {
+            let generatedTitle = `Quiz from ${documentInfos.length} document(s)`;
+            if (documentInfos.length === 1 && documentInfos[0].title) {
+              generatedTitle = documentInfos[0].title;
+            }
+
+            logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Successfully generated quiz with Groq', {
+              numQuestions: groqResult.quiz.questions.length,
+              provider: 'groq',
+              title: generatedTitle
+            });
+            onProgressUpdate('AI processing complete. Finalizing quiz data...');
+            return { title: generatedTitle, questions: normalizeQuestions(groqResult.quiz.questions) };
+          }
+          logger.warn('aiService:generateQuestionsFromMultipleDocuments', 'Groq returned unsuccessful result, falling back to Gemini', {
+            error: groqResult.error
+          });
+        } else {
+          logger.warn('aiService:generateQuestionsFromMultipleDocuments', 'Insufficient text extracted for Groq, falling back to Gemini');
+        }
+      } catch (groqError) {
+        logger.warn('aiService:generateQuestionsFromMultipleDocuments', 'Groq failed, falling back to Gemini', {
+          error: groqError.message
+        });
+      }
+    }
+
+    // Fall back to Gemini
+    if (!genAI || !GOOGLE_API_KEY) {
+      throw new Error('No AI providers available. Configure GROQ_API_KEY or GOOGLE_API_KEY in your environment.');
+    }
+
+    logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Using Gemini (fallback) for multi-document quiz generation');
+    onProgressUpdate('Generating quiz with Gemini AI (fallback)...');
 
     const scaler = new ScalableQuizGenerator(genAI, {
       apiKey: GOOGLE_API_KEY,
       enableLogging: true,
-      // model: 'gemini-1.5-pro-latest', // Or let ScalableQuizGenerator use its default/passed one
-      parserOptions: { 
-        // Add any specific parser options if needed, e.g., custom validation
-        // modelName: 'gemini-1.5-pro-latest' // Ensure parser also knows the model if it affects parsing
-      }
+      model: 'gemini-2.0-flash',
+      parserOptions: {}
     });
 
-    logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Invoking ScalableQuizGenerator.generateScaledQuiz');
-    const result = await scaler.generateScaledQuiz(documentInfos, questionCount, onProgressUpdate); // Pass callback
-    // Expected result: { questions: Array, metadata: Object }
+    logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Invoking ScalableQuizGenerator.generateScaledQuiz');
+    const result = await scaler.generateScaledQuiz(documentInfos, questionCount, onProgressUpdate);
 
     let generatedTitle = `Quiz from ${documentInfos.length} document(s)`;
     if (documentInfos.length === 1 && documentInfos[0].title) {
       generatedTitle = documentInfos[0].title;
     }
-    // Consider a more sophisticated title if multiple documents, e.g., from metadata
     if (result.metadata && result.metadata.suggestedTitle) {
       generatedTitle = result.metadata.suggestedTitle;
     }
 
-    logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Successfully generated quiz using ScalableQuizGenerator', { numQuestions: result.questions?.length, title: generatedTitle });
+    logger.info('aiService:generateQuestionsFromMultipleDocuments', 'Successfully generated quiz with Gemini (fallback)', { numQuestions: result.questions?.length, title: generatedTitle });
     onProgressUpdate('AI processing complete. Finalizing quiz data...');
 
-    return { title: generatedTitle, questions: result.questions || [] };
+    return { title: generatedTitle, questions: normalizeQuestions(result.questions || []) };
 
   } catch (error) {
-    logger.error('geminiService:generateQuestionsFromMultipleDocuments', 'Error generating quiz from multiple documents', error);
+    logger.error('aiService:generateQuestionsFromMultipleDocuments', 'Error generating quiz from multiple documents', error);
     onProgressUpdate(`Error during AI quiz generation: ${error.message}`);
-    // Consider re-throwing or returning a specific error structure
     return { title: 'Error Generating Quiz', questions: [], error: error.message };
   }
 };

@@ -830,7 +830,7 @@ class GeminiQuizGenerator {
       enableLogging: options.enableLogging || false,
       throwOnUnrecoverable: options.throwOnUnrecoverable || false
     });
-    this.model = options.model || 'gemini-1.5-flash-latest';
+    this.model = options.model || 'gemini-2.0-flash';
     this.maxRetries = options.maxRetries || 3;
     this.retryDelay = options.retryDelay || 1000;
   }
@@ -1235,7 +1235,7 @@ class ProductionQuizGenerator {
       enableLogging: options.enableLogging || false,
       throwOnUnrecoverable: false, // Always use fallback in production
       maxRetries: options.maxRetries || 3,
-      model: options.model || 'gemini-1.5-flash-latest'
+      model: options.model || 'gemini-2.0-flash'
     });
     
     this.metrics = {
