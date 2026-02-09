@@ -110,10 +110,22 @@ logger.info('supabaseClient', 'Initializing Supabase client', {
 // Create the Supabase client
 let supabase;
 
+// Custom no-op lock function for platforms that don't support navigator.locks (iOS Safari)
+// navigator.locks API is not fully supported on iOS Safari and causes the app to crash
+const noOpLock = async (name, acquireTimeout, fn) => {
+  return await fn();
+};
+
 // Only initialize the client if we're in a browser environment or on a mobile device
 // This prevents SSR issues with localStorage and session handling
 if (Platform.OS !== 'web' || isBrowser) {
   try {
+    // Check if navigator.locks is supported (not available on iOS Safari)
+    const supportsNavigatorLocks = typeof globalThis !== 'undefined' && 
+      globalThis.navigator && 
+      typeof globalThis.navigator.locks !== 'undefined' &&
+      typeof globalThis.navigator.locks.request === 'function';
+    
     supabase = createClient(supabaseUrl || '', supabaseAnonKey || '', {
       auth: {
         storage: storageAdapter,
@@ -121,6 +133,9 @@ if (Platform.OS !== 'web' || isBrowser) {
         persistSession: true,
         detectSessionInUrl: Platform.OS === 'web',
         debug: __DEV__,
+        // Use no-op lock on web if navigator.locks is not supported (iOS Safari)
+        // This prevents crashes on platforms that don't support the Web Locks API
+        lock: Platform.OS === 'web' && !supportsNavigatorLocks ? noOpLock : undefined,
       },
     });
   
