@@ -132,8 +132,8 @@ const HomeScreen = () => {
     }, []) // Empty dependency array means it relies on no props/state from parent scope for the callback itself
   );
   const [numberOfQuestions, setNumberOfQuestions] = useState(10); // State for number of questions
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [newDocumentTitle, setNewDocumentTitle] = useState('');
+  const [_selectedFile, setSelectedFile] = useState(null);
+  const [_newDocumentTitle, setNewDocumentTitle] = useState('');
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadError, setUploadError] = useState(null);
 
@@ -382,22 +382,22 @@ const HomeScreen = () => {
 
                       if (!determinedMimeType) {
                         switch (extension) {
-                          case 'jpg':
-                          case 'jpeg':
-                            determinedMimeType = 'image/jpeg';
-                            break;
-                          case 'png':
-                            determinedMimeType = 'image/png';
-                            break;
-                          case 'gif':
-                            determinedMimeType = 'image/gif';
-                            break;
-                          case 'heic':
-                            determinedMimeType = 'image/heic';
-                            break;
-                          default:
-                            determinedMimeType = `image/${extension}`;
-                            logger.warn('HomeScreen:ImagePicker', `Unknown image extension '${extension}', guessed mimeType: ${determinedMimeType}`);
+                        case 'jpg':
+                        case 'jpeg':
+                          determinedMimeType = 'image/jpeg';
+                          break;
+                        case 'png':
+                          determinedMimeType = 'image/png';
+                          break;
+                        case 'gif':
+                          determinedMimeType = 'image/gif';
+                          break;
+                        case 'heic':
+                          determinedMimeType = 'image/heic';
+                          break;
+                        default:
+                          determinedMimeType = `image/${extension}`;
+                          logger.warn('HomeScreen:ImagePicker', `Unknown image extension '${extension}', guessed mimeType: ${determinedMimeType}`);
                         }
                       } else {
                         if (determinedMimeType === 'image/jpg') {
@@ -764,9 +764,9 @@ const HomeScreen = () => {
         onPress={handleSelectDocument}
       >
         <Ionicons 
-          name={isSelected ? "checkbox-outline" : "square-outline"} 
+          name={isSelected ? 'checkbox-outline' : 'square-outline'} 
           size={24} 
-          color={isSelected ? "#4A90E2" : "#A0AEC0"} 
+          color={isSelected ? '#4A90E2' : '#A0AEC0'} 
           style={styles.checkboxIcon} 
         />
         <View style={styles.documentInfoContainer}>
@@ -847,7 +847,7 @@ const HomeScreen = () => {
             />
           </View>
           <Text style={styles.guidanceText}>
-            • More questions = longer generation time{"\n"}
+            • More questions = longer generation time{'\n'}
             • Final count may vary based on document content
           </Text>
 
@@ -875,7 +875,7 @@ const HomeScreen = () => {
           {examGenerationError && !isGeneratingQuiz && (
             <View style={styles.quizErrorContainer}>
               <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 8}}>
-                <Ionicons name="alert-circle-outline" size={20} color={styles.errorText?.color || "#EF4444"} style={{ marginRight: 8 }} />
+                <Ionicons name="alert-circle-outline" size={20} color={styles.errorText?.color || '#EF4444'} style={{ marginRight: 8 }} />
                 <Text style={styles.errorText}>{examGenerationError}</Text>
               </View>
               <View style={styles.errorActionsContainer}>
@@ -911,7 +911,7 @@ const HomeScreen = () => {
               <View 
                 style={[styles.storageBarFill, { width: `${storageUsagePercent}%` }, 
                   storageUsagePercent > 90 ? styles.storageBarCritical : 
-                  storageUsagePercent > 70 ? styles.storageBarWarning : null]}
+                    storageUsagePercent > 70 ? styles.storageBarWarning : null]}
               />
             </View>
             {isLoadingStorageUsage && (
@@ -950,11 +950,11 @@ const HomeScreen = () => {
             <ActivityIndicator size="large" color="#8dffd6" style={{ marginTop: 20 }} />
           ) : documentError ? (
             <View style={styles.errorContainer}>
-                <Ionicons name="alert-circle-outline" size={30} color="#EF4444" />
-                <Text style={styles.errorText}>{documentError}</Text>
-                <TouchableOpacity onPress={() => fetchDocuments()} style={styles.retryButton}>
-                    <Text style={styles.retryButtonText}>Retry</Text>
-                </TouchableOpacity>
+              <Ionicons name="alert-circle-outline" size={30} color="#EF4444" />
+              <Text style={styles.errorText}>{documentError}</Text>
+              <TouchableOpacity onPress={() => fetchDocuments()} style={styles.retryButton}>
+                <Text style={styles.retryButtonText}>Retry</Text>
+              </TouchableOpacity>
             </View>
           ) : documents.length === 0 ? (
             <Text style={styles.emptyMessage}>No documents found. Upload one to get started!</Text>

@@ -4,6 +4,71 @@ import { applyRateLimit, RATE_LIMIT_CONFIGS } from '../_shared/rateLimiter.ts';
 
 console.log('PayFast ITN Handler starting...');
 
+// ============================================================================
+// SECURITY: PayFast IP Allowlist
+// PayFast sends ITN notifications from specific IP ranges.
+// See: https://developers.payfast.co.za/docs#step-4-confirm-payment-source
+// ============================================================================
+const PAYFAST_ALLOWED_IPS = [
+  // PayFast Production IPs
+  '197.97.145.144/28',   // 197.97.145.144 - 197.97.145.159
+  '41.74.179.192/27',    // 41.74.179.192 - 41.74.179.223
+  // PayFast Sandbox IPs (for testing)
+  '197.97.145.144/28',
+  '41.74.179.192/27',
+];
+
+// Helper to check if IP is in CIDR range
+function ipInCidr(ip: string, cidr: string): boolean {
+  const [range, bits] = cidr.split('/');
+  const mask = ~(2 ** (32 - parseInt(bits)) - 1);
+  
+  const ipToInt = (ipStr: string): number => {
+    const parts = ipStr.split('.').map(Number);
+    return (parts[0] << 24) | (parts[1] << 16) | (parts[2] << 8) | parts[3];
+  };
+  
+  return (ipToInt(ip) & mask) === (ipToInt(range) & mask);
+}
+
+// Check if request IP is from PayFast
+function isPayFastIP(ip: string): boolean {
+  // Skip IP validation in development/sandbox mode if configured
+  const skipIpValidation = Deno.env.get('PAYFAST_SKIP_IP_VALIDATION') === 'true';
+  if (skipIpValidation) {
+    console.log('[SECURITY] IP validation skipped (development mode)');
+    return true;
+  }
+  
+  for (const cidr of PAYFAST_ALLOWED_IPS) {
+    if (ipInCidr(ip, cidr)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// ============================================================================
+// SECURITY: Structured Request Logging
+// ============================================================================
+interface SecurityLog {
+  timestamp: string;
+  event: string;
+  ip: string;
+  userAgent: string;
+  paymentId?: string;
+  userId?: string;
+  status: 'success' | 'failure' | 'blocked' | 'warning';
+  details?: Record<string, unknown>;
+}
+
+function logSecurityEvent(log: SecurityLog): void {
+  console.log(JSON.stringify({
+    type: 'SECURITY_EVENT',
+    ...log,
+  }));
+}
+
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? ''
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
@@ -403,11 +468,35 @@ Deno.serve(async (req) => {
     'Access-Control-Allow-Methods': 'POST, OPTIONS'
   };
 
+  // Extract client IP for security checks
+  const clientIP = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() 
+    || req.headers.get('x-real-ip') 
+    || 'unknown';
+  const userAgent = req.headers.get('user-agent') || 'unknown';
+
   if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: corsHeaders });
   }
 
-  // 🚦 SECURITY: Apply rate limiting for webhook endpoint
+  // � SECURITY: IP Allowlist Check
+  // Only accept requests from PayFast's known IP ranges
+  if (!isPayFastIP(clientIP)) {
+    logSecurityEvent({
+      timestamp: new Date().toISOString(),
+      event: 'ITN_IP_BLOCKED',
+      ip: clientIP,
+      userAgent,
+      status: 'blocked',
+      details: { reason: 'IP not in PayFast allowlist' }
+    });
+    
+    return new Response('Forbidden', {
+      status: 403,
+      headers: { ...corsHeaders, 'Content-Type': 'text/plain' }
+    });
+  }
+
+  // � SECURITY: Apply rate limiting for webhook endpoint
   // Allow legitimate PayFast traffic but prevent abuse
   const rateLimitResponse = await applyRateLimit(
     req,
@@ -418,7 +507,14 @@ Deno.serve(async (req) => {
   );
   
   if (rateLimitResponse) {
-    console.warn('🚦 PayFast ITN webhook rate limited:', req.headers.get('x-forwarded-for') || 'unknown-ip');
+    logSecurityEvent({
+      timestamp: new Date().toISOString(),
+      event: 'ITN_RATE_LIMITED',
+      ip: clientIP,
+      userAgent,
+      status: 'blocked',
+      details: { reason: 'Rate limit exceeded' }
+    });
     return rateLimitResponse;
   }
   
@@ -493,7 +589,16 @@ Deno.serve(async (req) => {
     // Validate signature using the raw body to preserve exact encoding
     const signatureValid = await validatePayFastSignature(body);
     if (!signatureValid) {
-      console.error('[ERROR] Invalid PayFast signature');
+      logSecurityEvent({
+        timestamp: new Date().toISOString(),
+        event: 'ITN_SIGNATURE_INVALID',
+        ip: clientIP,
+        userAgent,
+        paymentId,
+        userId,
+        status: 'failure',
+        details: { reason: 'Signature validation failed' }
+      });
       return new Response('Unauthorized - Invalid signature', {
         status: 401,
         headers: { ...corsHeaders, 'Content-Type': 'text/plain' }
@@ -537,6 +642,20 @@ Deno.serve(async (req) => {
         });
       }
       
+      logSecurityEvent({
+        timestamp: new Date().toISOString(),
+        event: 'ITN_PAYMENT_SUCCESS',
+        ip: clientIP,
+        userAgent,
+        paymentId,
+        userId,
+        status: 'success',
+        details: { 
+          amount,
+          nextBillingDate,
+          pfPaymentId: itnData.pf_payment_id
+        }
+      });
       console.log(`[SUCCESS] User ${userId} upgraded to Captain's Club subscription`);
       console.log(`[INFO] Next billing date: ${nextBillingDate}`);
     } else {
@@ -558,6 +677,14 @@ Deno.serve(async (req) => {
     });
     
   } catch (error) {
+    logSecurityEvent({
+      timestamp: new Date().toISOString(),
+      event: 'ITN_PROCESSING_ERROR',
+      ip: clientIP,
+      userAgent,
+      status: 'failure',
+      details: { error: error instanceof Error ? error.message : String(error) }
+    });
     console.error('[ERROR] ITN processing failed:', error);
     return new Response('Internal Server Error', {
       status: 500,

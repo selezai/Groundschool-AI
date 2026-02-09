@@ -47,12 +47,12 @@ const DocumentDownloadButton = ({ document, onActionComplete }) => {
       try {
         // On iOS, title is not used with url. On Android, title is used.
         const shareOptions = {
-            title: document.name || 'Document',
-            url: localUri, // For iOS, this is enough. For Android, might need file:// prefix or specific content type handling.
+          title: document.name || 'Document',
+          url: localUri, // For iOS, this is enough. For Android, might need file:// prefix or specific content type handling.
         };
         if (Platform.OS === 'android') {
-            // Android sharing can be tricky with file URIs. Ensure it's accessible.
-            // Using just `url` often works for many apps.
+          // Android sharing can be tricky with file URIs. Ensure it's accessible.
+          // Using just `url` often works for many apps.
         }
         await Share.share(shareOptions);
         logger.info('DocumentDownloadButton', 'Share intent initiated', { documentId: document.id, localUri });
@@ -82,41 +82,41 @@ const DocumentDownloadButton = ({ document, onActionComplete }) => {
   // Render different button states
   const renderButtonContent = () => {
     switch (status) {
-      case 'downloading':
-        return (
-          <View style={styles.statusContainer}>
-            <ActivityIndicator size="small" color="#FFFFFF" style={styles.icon} />
-            <Text style={styles.buttonText}>{Math.round(downloadProgress * 100)}%</Text>
-          </View>
-        );
-      case 'success': // Indicates download successful, share attempted
-        return (
-          <>
-            <Ionicons name="checkmark-circle-outline" size={16} color="#FFFFFF" style={styles.icon} />
-            <Text style={styles.buttonText}>Downloaded</Text>
-          </>
-        );
-      case 'error':
-        return (
-          <>
-            <Ionicons name="alert-circle-outline" size={16} color="#FFFFFF" style={styles.icon} />
-            <Text style={styles.buttonText}>Error</Text>
-          </>
-        );
-      default: // idle
-        return (
-          <>
-            <Ionicons 
-              name="download-outline" 
-              size={16} 
-              color={isConnected ? "#FFFFFF" : "#A1A1AA"} 
-              style={styles.icon} 
-            />
-            <Text style={[styles.buttonText, !isConnected && styles.disabledText]}>
+    case 'downloading':
+      return (
+        <View style={styles.statusContainer}>
+          <ActivityIndicator size="small" color="#FFFFFF" style={styles.icon} />
+          <Text style={styles.buttonText}>{Math.round(downloadProgress * 100)}%</Text>
+        </View>
+      );
+    case 'success': // Indicates download successful, share attempted
+      return (
+        <>
+          <Ionicons name="checkmark-circle-outline" size={16} color="#FFFFFF" style={styles.icon} />
+          <Text style={styles.buttonText}>Downloaded</Text>
+        </>
+      );
+    case 'error':
+      return (
+        <>
+          <Ionicons name="alert-circle-outline" size={16} color="#FFFFFF" style={styles.icon} />
+          <Text style={styles.buttonText}>Error</Text>
+        </>
+      );
+    default: // idle
+      return (
+        <>
+          <Ionicons 
+            name="download-outline" 
+            size={16} 
+            color={isConnected ? '#FFFFFF' : '#A1A1AA'} 
+            style={styles.icon} 
+          />
+          <Text style={[styles.buttonText, !isConnected && styles.disabledText]}>
               Download
-            </Text>
-          </>
-        );
+          </Text>
+        </>
+      );
     }
   };
 

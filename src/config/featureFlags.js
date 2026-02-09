@@ -5,6 +5,8 @@
  * specific functionality during testing or rollout phases.
  */
 
+import logger from '../services/loggerService';
+
 /**
  * Get feature flag value with environment variable override support
  * @param {string} envVarName - Environment variable name
@@ -83,7 +85,7 @@ export const getFeatureFlag = (flagName, defaultValue = false) => {
   const value = featureFlags[flagName];
   
   if (featureFlags.LOG_FEATURE_FLAG_USAGE) {
-    console.log(`[FeatureFlag] ${flagName}: ${value}`);
+    logger.debug('FeatureFlags', `${flagName}: ${value}`);
   }
   
   return value !== undefined ? value : defaultValue;
@@ -129,13 +131,13 @@ export const calculateTrialEndDate = (startDate = new Date()) => {
 export const getDefaultPlanForNewUsers = () => {
   if (shouldAutoUpgradeNewUsers()) {
     if (featureFlags.LOG_FEATURE_FLAG_USAGE) {
-      console.log('[FeatureFlag] New user will get Captain\'s Club plan');
+      logger.debug('FeatureFlags', 'New user will get Captain\'s Club plan');
     }
     return 'captains_club';
   }
   
   if (featureFlags.LOG_FEATURE_FLAG_USAGE) {
-    console.log('[FeatureFlag] New user will get basic plan');
+    logger.debug('FeatureFlags', 'New user will get basic plan');
   }
   return 'basic';
 };

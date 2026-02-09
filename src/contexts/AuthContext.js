@@ -299,7 +299,7 @@ export const AuthProvider = ({ children }) => {
         email: user.email,
         fullName: currentProfile.full_name,
         itemName: "Captain's Club",
-        amount: "99.00",
+        amount: '99.00',
         itemDescription: "Monthly subscription to Captain's Club",
         isInitialSetup: false,
       };

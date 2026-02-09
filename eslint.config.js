@@ -17,9 +17,15 @@ export default tseslint.config(
       'node_modules/',
       '.expo/',
       'dist/',
-      'babel.config.js', // Often not linted
-      'metro.config.js', // Often not linted
-      'jest.config.js',  // Often not linted
+      'babel.config.js',
+      'metro.config.js',
+      'jest.config.js',
+      'supabase/functions/**/*.ts', // Deno runtime, not Node.js ESLint
+      'src/tests/**', // Test files can use console.log
+      'src/scripts/**', // Script files can use console.log
+      'src/utils/checkSupabaseSetup.js', // Utility script
+      'src/utils/scalableQuizUtils.js', // Contains demo functions with console.log
+      'test-*.js', // Test scripts in root
     ],
   },
   {
@@ -32,8 +38,7 @@ export default tseslint.config(
         ...globals.browser,
         ...globals.node,
         ...globals.jest,
-        // Add any Expo-specific or React Native globals here if not covered
-        // e.g., __DEV__: 'readonly',
+        __DEV__: 'readonly',
       },
       parserOptions: {
         ecmaFeatures: {
@@ -58,10 +63,10 @@ export default tseslint.config(
       'react-hooks/exhaustive-deps': 'warn',
       // React Native specific rules
       'react-native/no-unused-styles': 'warn',
-      'react-native/split-platform-components': 'warn',
-      'react-native/no-inline-styles': 'warn', // Encourages StyleSheet usage
-      'react-native/no-color-literals': 'warn', // Encourages theme/variable usage
-      'react-native/no-raw-text': 'warn', // Helps with i18n and consistency
+      'react-native/split-platform-components': 'off',
+      'react-native/no-inline-styles': 'off', // Too many to fix, low priority
+      'react-native/no-color-literals': 'off', // Using theme colors where practical
+      'react-native/no-raw-text': 'off', // Not using i18n currently
       // General improvements
       'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }], // Warn on unused vars, allow unused args starting with _
       'no-console': ['warn', { allow: ['warn', 'error', 'info'] }], // Allow console.warn/error/info

@@ -28,7 +28,7 @@ const createProfile = async (userId, profileData = {}) => {
     
     // Log feature flag usage for monitoring
     if (shouldAutoUpgradeNewUsers()) {
-      logger.info(`[FeatureFlag] Auto-upgrading new user to Captain's Club`, {
+      logger.info('[FeatureFlag] Auto-upgrading new user to Captain\'s Club', {
         userId,
         plan: defaultPlan,
         trialEndDate: planEndDate,
@@ -277,10 +277,10 @@ const updateUserPassword = async (newPassword) => {
  * @param {object} metadata
  */
 const updateUserMetadata = async (metadata) => {
- try {
+  try {
     logger.info('Attempting to update user metadata.');
     const { data, error } = await supabase.auth.updateUser({ data: metadata });
-     if (error) {
+    if (error) {
       logger.error('Supabase user metadata update error:', error);
       throw error;
     }

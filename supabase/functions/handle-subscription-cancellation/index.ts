@@ -5,6 +5,26 @@ import { corsHeaders } from '../_shared/cors.ts';
 // Rate limiting for security
 import { applyRateLimit, RATE_LIMIT_CONFIGS } from '../_shared/rateLimiter.ts';
 
+// ============================================================================
+// SECURITY: Structured Request Logging
+// ============================================================================
+interface SecurityLog {
+  timestamp: string;
+  event: string;
+  ip: string;
+  userAgent: string;
+  userId?: string;
+  status: 'success' | 'failure' | 'blocked' | 'warning';
+  details?: Record<string, unknown>;
+}
+
+function logSecurityEvent(log: SecurityLog): void {
+  console.log(JSON.stringify({
+    type: 'SECURITY_EVENT',
+    ...log,
+  }));
+}
+
 console.log(`🚀 Function 'handle-subscription-cancellation' up and running! (Modern API v1)`);
 
 /**

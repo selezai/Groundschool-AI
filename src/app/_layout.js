@@ -4,7 +4,7 @@ import { Stack, useRouter, usePathname } from 'expo-router'; // Import usePathna
 import { useAuth } from '../contexts/AuthContext';
 import { NetworkProvider } from '../contexts/NetworkContext';
 import { ThemeProvider, darkColors, spacing, typography } from '../theme/theme';
-import { ActivityIndicator, View, StyleSheet, Text } from 'react-native';
+import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import logger from '../services/loggerService';
 
 export default function RootLayoutNav() {

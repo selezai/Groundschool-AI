@@ -230,7 +230,7 @@ const validateFileSize = (fileSize, mimeType) => {
  */
 const sanitizeFilename = (filename) => {
   // Remove path separators and dangerous characters
-  let sanitized = filename.replace(/[\/\\:*?"<>|]/g, '_');
+  let sanitized = filename.replace(/[/\\:*?"<>|]/g, '_');
   
   // Remove leading/trailing dots and spaces
   sanitized = sanitized.replace(/^[.\s]+|[.\s]+$/g, '');

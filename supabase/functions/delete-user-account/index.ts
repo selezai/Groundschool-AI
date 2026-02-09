@@ -1,12 +1,38 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
+// ============================================================================
+// SECURITY: Structured Request Logging
+// ============================================================================
+interface SecurityLog {
+  timestamp: string;
+  event: string;
+  ip: string;
+  userAgent: string;
+  userId?: string;
+  status: 'success' | 'failure' | 'blocked' | 'warning';
+  details?: Record<string, unknown>;
+}
+
+function logSecurityEvent(log: SecurityLog): void {
+  console.log(JSON.stringify({
+    type: 'SECURITY_EVENT',
+    ...log,
+  }));
+}
+
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
 serve(async (req) => {
+  // Extract client info for security logging
+  const clientIP = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() 
+    || req.headers.get('x-real-ip') 
+    || 'unknown';
+  const userAgent = req.headers.get('user-agent') || 'unknown';
+
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
@@ -112,6 +138,15 @@ serve(async (req) => {
       )
     }
 
+    logSecurityEvent({
+      timestamp: new Date().toISOString(),
+      event: 'ACCOUNT_DELETED',
+      ip: clientIP,
+      userAgent,
+      userId: user.id,
+      status: 'success',
+      details: { message: 'User account and all data deleted' }
+    });
     console.log('Account deleted successfully for user:', user.id)
 
     return new Response(
@@ -123,6 +158,14 @@ serve(async (req) => {
     )
 
   } catch (error) {
+    logSecurityEvent({
+      timestamp: new Date().toISOString(),
+      event: 'ACCOUNT_DELETION_ERROR',
+      ip: clientIP,
+      userAgent,
+      status: 'failure',
+      details: { error: error instanceof Error ? error.message : String(error) }
+    });
     console.error('Exception in delete-user-account function:', error)
     return new Response(
       JSON.stringify({ error: 'Internal server error', details: error.message }),

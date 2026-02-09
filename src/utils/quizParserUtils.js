@@ -1,3 +1,4 @@
+/* eslint-disable no-control-regex, no-useless-escape, no-console */
 import logger from '../services/loggerService.js';
 
 class QuizJSONParser {
@@ -952,11 +953,11 @@ Generate the aviation quiz JSON now:`; // Document content will be passed as sep
     const instructionPromptWithVariation = this.addAttemptVariation(instructionPromptText, attempt);
 
     const finalApiContents = [{
-        role: "user",
-        parts: [
-            { text: instructionPromptWithVariation }, 
-            ...documentParts 
-        ]
+      role: 'user',
+      parts: [
+        { text: instructionPromptWithVariation }, 
+        ...documentParts 
+      ]
     }];
     
     try {
@@ -1058,7 +1059,7 @@ Generate the aviation quiz JSON now:`; // Document content will be passed as sep
 
     // Log the request being sent to Gemini for debugging
     if (this.parser.enableLogging) { // Assuming parser's enableLogging can be used here
-        console.log('🔍 Gemini API Request:', JSON.stringify(contentsForApi, null, 2));
+      console.log('🔍 Gemini API Request:', JSON.stringify(contentsForApi, null, 2));
     }
 
     const result = await model.generateContent({ contents: contentsForApi });
@@ -1071,8 +1072,8 @@ Generate the aviation quiz JSON now:`; // Document content will be passed as sep
     
     const responseText = response.text();
     if (responseText === undefined || responseText === null) {
-        console.error('GeminiQuizGenerator:makeGeminiRequest', 'Gemini API response.text() returned undefined or null. Full response:', JSON.stringify(response));
-        throw new Error('Empty text response from Gemini API (text is undefined/null)');
+      console.error('GeminiQuizGenerator:makeGeminiRequest', 'Gemini API response.text() returned undefined or null. Full response:', JSON.stringify(response));
+      throw new Error('Empty text response from Gemini API (text is undefined/null)');
     }
     
     return { text: responseText };
@@ -1415,41 +1416,42 @@ class QuizUtilities {
    */
   static convertQuizFormat(quiz, format = 'simple') {
     switch (format) {
-      case 'simple':
-        return quiz.questions.map((q, i) => ({
+    case 'simple':
+      return quiz.questions.map((q, i) => ({
+        question: q.text,
+        options: q.options.map(o => o.text),
+        answer: q.options.findIndex(o => o.id === q.correct)
+      }));
+        
+    case 'kahoot':
+      return {
+        title: 'Generated Quiz',
+        questions: quiz.questions.map(q => ({
           question: q.text,
-          options: q.options.map(o => o.text),
-          answer: q.options.findIndex(o => o.id === q.correct)
-        }));
-        
-      case 'kahoot':
-        return {
-          title: 'Generated Quiz',
-          questions: quiz.questions.map(q => ({
-            question: q.text,
-            answers: q.options.map(o => ({
-              answer: o.text,
-              correct: o.id === q.correct
-            }))
+          answers: q.options.map(o => ({
+            answer: o.text,
+            correct: o.id === q.correct
           }))
-        };
+        }))
+      };
         
-      case 'csv':
-        const csvRows = [['Question', 'Option A', 'Option B', 'Option C', 'Option D', 'Correct', 'Explanation']];
-        quiz.questions.forEach(q => {
-          const row = [q.text];
-          ['A', 'B', 'C', 'D'].forEach(id => {
-            const option = q.options.find(o => o.id === id);
-            row.push(option ? option.text : '');
-          });
-          row.push(q.correct);
-          row.push(q.explanation || '');
-          csvRows.push(row);
+    case 'csv': {
+      const csvRows = [['Question', 'Option A', 'Option B', 'Option C', 'Option D', 'Correct', 'Explanation']];
+      quiz.questions.forEach(q => {
+        const row = [q.text];
+        ['A', 'B', 'C', 'D'].forEach(id => {
+          const option = q.options.find(o => o.id === id);
+          row.push(option ? option.text : '');
         });
-        return csvRows.map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
+        row.push(q.correct);
+        row.push(q.explanation || '');
+        csvRows.push(row);
+      });
+      return csvRows.map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
+    }
         
-      default:
-        return quiz;
+    default:
+      return quiz;
     }
   }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  View,
   Text,
   StyleSheet,
   ScrollView,
@@ -9,7 +8,7 @@ import {
 import { Stack } from 'expo-router';
 
 const PrivacyPolicyScreen = () => {
-  const lastUpdatedDate = 'May 18, 2025'; // Dynamically set or update as needed
+  const _lastUpdatedDate = 'May 18, 2025'; // Dynamically set or update as needed
 
   return (
     <SafeAreaView style={styles.safeArea}>

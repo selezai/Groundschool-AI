@@ -4,8 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ExpoRoot } from 'expo-router';
 // import { registerRootComponent } from 'expo'; // This is in index.js
-import { ThemeProvider as ReactNavigationThemeProvider, DefaultTheme, DarkTheme } from '@react-navigation/native';
-import { Appearance } from 'react-native';
+import { ThemeProvider as ReactNavigationThemeProvider, DarkTheme } from '@react-navigation/native';
 
 // Import contexts
 import { AuthProvider } from './src/contexts/AuthContext';

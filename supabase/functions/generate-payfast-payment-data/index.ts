@@ -6,6 +6,25 @@ import { encode } from 'https://deno.land/std@0.204.0/encoding/hex.ts';
 // Rate limiting for security
 import { applyRateLimit, RATE_LIMIT_CONFIGS } from '../_shared/rateLimiter.ts';
 
+// ============================================================================
+// SECURITY: Structured Request Logging
+// ============================================================================
+interface SecurityLog {
+  timestamp: string;
+  event: string;
+  ip: string;
+  userAgent: string;
+  userId?: string;
+  status: 'success' | 'failure' | 'blocked' | 'warning';
+  details?: Record<string, unknown>;
+}
+
+function logSecurityEvent(log: SecurityLog): void {
+  console.log(JSON.stringify({
+    type: 'SECURITY_EVENT',
+    ...log,
+  }));
+}
 
 console.log('generate-payfast-payment-data function invoked');
 
@@ -39,6 +58,12 @@ function payfastEncode(str: string | number | null | undefined): string {
 Deno.serve(async (req: Request) => {
   console.log('--- generate-payfast-payment-data: Function invoked ---');
   
+  // Extract client info for security logging
+  const clientIP = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() 
+    || req.headers.get('x-real-ip') 
+    || 'unknown';
+  const userAgent = req.headers.get('user-agent') || 'unknown';
+  
   // Handle OPTIONS preflight request
   if (req.method === 'OPTIONS') {
     console.log('Handling OPTIONS preflight request for generate-payfast-payment-data...');
@@ -58,7 +83,14 @@ Deno.serve(async (req: Request) => {
   );
   
   if (rateLimitResponse) {
-    console.warn('🚦 Payment endpoint rate limited:', req.headers.get('x-forwarded-for') || 'unknown-ip');
+    logSecurityEvent({
+      timestamp: new Date().toISOString(),
+      event: 'PAYMENT_GENERATION_RATE_LIMITED',
+      ip: clientIP,
+      userAgent,
+      status: 'blocked',
+      details: { reason: 'Rate limit exceeded' }
+    });
     return rateLimitResponse;
   }
 

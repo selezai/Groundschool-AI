@@ -697,24 +697,6 @@ const getStyles = createThemedStyles((theme) => ({
     color: theme.colors.textSecondary, 
     fontStyle: 'italic' 
   },
-  actionButtons: { 
-    flexDirection: 'row', 
-    justifyContent: 'center', 
-    marginTop: theme.spacing.m,
-  },
-  restartButton: {
-    backgroundColor: '#10b981',
-    paddingVertical: theme.spacing.s,
-    paddingHorizontal: theme.spacing.l,
-    borderRadius: theme.spacing.xs,
-    alignItems: 'center',
-    marginHorizontal: theme.spacing.xs,
-  },
-  restartButtonText: { 
-    color: '#FFFFFF',
-    fontSize: theme.typography.body.fontSize, 
-    fontWeight: '600' 
-  },
 }));
 
 export default QuizScreen;

@@ -14,14 +14,14 @@ import { Stack, useRouter } from 'expo-router';
 import { useAuth } from '../contexts/AuthContext'; // Assuming useAuth provides session/user
 import { supabase } from '../services/supabaseClient'; // Direct Supabase client
 import logger from '../services/loggerService';
-import { darkColors, spacing, typography, createThemedStyles } from '../theme/theme';
+import { darkColors, createThemedStyles } from '../theme/theme';
 
 const SettingsScreen = () => {
   // Initialize styles at the component level
   const styles = getStyles();
   
-  const router = useRouter();
-  const { user, session } = useAuth(); // Get user from AuthContext
+  const _router = useRouter();
+  const { user, session: _session } = useAuth(); // Get user from AuthContext
 
   const [fullName, setFullName] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
@@ -149,8 +149,8 @@ const SettingsScreen = () => {
       return;
     }
     if (newPassword.length < 6) { // Example: Basic length validation
-        setPasswordChangeError('Password must be at least 6 characters long.');
-        return;
+      setPasswordChangeError('Password must be at least 6 characters long.');
+      return;
     }
 
     setIsUpdatingPassword(true);
@@ -174,7 +174,7 @@ const SettingsScreen = () => {
       // Error already set if it's a Supabase error with a message
       // For other exceptions, ensure a generic message is shown if not already set by Supabase error.
       if (!passwordChangeError) {
-          setPasswordChangeError('An unexpected error occurred.');
+        setPasswordChangeError('An unexpected error occurred.');
       }
       logger.error('SettingsScreen:handleConfirmPasswordChange', 'Exception during password update', { error: e });
     } finally {
@@ -191,57 +191,57 @@ const SettingsScreen = () => {
           <Text style={styles.loadingText}>Loading Settings...</Text>
         </View>
       ) : (
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <Text style={styles.header}>Edit Profile</Text>
-        {error && <Text style={styles.errorText}>{error}</Text>}
+        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+          <Text style={styles.header}>Edit Profile</Text>
+          {error && <Text style={styles.errorText}>{error}</Text>}
         
-        <View style={styles.inputGroup}>
-          <Text style={styles.label}>Name</Text>
-          <TextInput
-            style={styles.input}
-            value={fullName}
-            onChangeText={setFullName}
-            editable={!isSaving}
-            autoCapitalize="words"
-            textContentType="name"
-          />
-        </View>
+          <View style={styles.inputGroup}>
+            <Text style={styles.label}>Name</Text>
+            <TextInput
+              style={styles.input}
+              value={fullName}
+              onChangeText={setFullName}
+              editable={!isSaving}
+              autoCapitalize="words"
+              textContentType="name"
+            />
+          </View>
 
-        <View style={styles.inputGroup}>
-          <Text style={styles.label}>Avatar URL</Text>
-          <TextInput
-            style={styles.input}
-            value={avatarUrl}
-            onChangeText={setAvatarUrl}
-            placeholder="https://example.com/avatar.png"
-            placeholderTextColor={darkColors.textSecondary}
-            keyboardType="url"
-            editable={!isSaving}
-            autoCapitalize="none"
-            textContentType="URL"
-          />
-        </View>
+          <View style={styles.inputGroup}>
+            <Text style={styles.label}>Avatar URL</Text>
+            <TextInput
+              style={styles.input}
+              value={avatarUrl}
+              onChangeText={setAvatarUrl}
+              placeholder="https://example.com/avatar.png"
+              placeholderTextColor={darkColors.textSecondary}
+              keyboardType="url"
+              editable={!isSaving}
+              autoCapitalize="none"
+              textContentType="URL"
+            />
+          </View>
 
-        <TouchableOpacity 
-          style={[styles.button, styles.changePasswordButton]}
-          onPress={openChangePasswordModal} // Updated onPress
-        >
-          <Text style={styles.buttonText}>Change Password</Text>
-        </TouchableOpacity>
+          <TouchableOpacity 
+            style={[styles.button, styles.changePasswordButton]}
+            onPress={openChangePasswordModal} // Updated onPress
+          >
+            <Text style={styles.buttonText}>Change Password</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity 
-          style={[styles.button, styles.saveButton, isSaving && styles.buttonDisabled]}
-          onPress={handleSaveProfile}
-          disabled={isSaving}
-        >
-          {isSaving ? (
-            <ActivityIndicator color={darkColors.text} />
-          ) : (
-            <Text style={styles.buttonText}>Save Profile</Text>
-          )}
-        </TouchableOpacity>
+          <TouchableOpacity 
+            style={[styles.button, styles.saveButton, isSaving && styles.buttonDisabled]}
+            onPress={handleSaveProfile}
+            disabled={isSaving}
+          >
+            {isSaving ? (
+              <ActivityIndicator color={darkColors.text} />
+            ) : (
+              <Text style={styles.buttonText}>Save Profile</Text>
+            )}
+          </TouchableOpacity>
 
-      </ScrollView>
+        </ScrollView>
       )}
 
       {/* Change Password Modal */}

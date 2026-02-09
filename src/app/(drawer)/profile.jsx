@@ -30,7 +30,7 @@ const ProfileScreen = () => {
   const [storageUsage, setStorageUsage] = useState(0);
   const [examsCount, setExamsCount] = useState(0);
   const [isLoadingUsage, setIsLoadingUsage] = useState(true);
-  const [usageError, setUsageError] = useState(null);
+  const [_usageError, setUsageError] = useState(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [isDeletingAccount, setIsDeletingAccount] = useState(false);
   
@@ -76,7 +76,7 @@ const ProfileScreen = () => {
     subscriptionError,
     resetSubscriptionState,
     cancelSubscription,
-    isCancelling,
+    isCancelling: _isCancelling,
     showPayfastWebView,
     payfastPaymentData,
     fetchUserProfile,
@@ -444,16 +444,16 @@ const ProfileScreen = () => {
     }
   };
 
-  const getPlanDisplayName = (planKey) => {
+  const _getPlanDisplayName = (planKey) => {
     if (!planKey) return 'N/A';
     switch (planKey.toLowerCase()) {
-      case 'basic': return 'Basic Plan';
-      case 'captains_club': return "Captain's Club";
-      default: return planKey.charAt(0).toUpperCase() + planKey.slice(1);
+    case 'basic': return 'Basic Plan';
+    case 'captains_club': return "Captain's Club";
+    default: return planKey.charAt(0).toUpperCase() + planKey.slice(1);
     }
   };
 
-  const getStorageDisplay = () => {
+  const _getStorageDisplay = () => {
     if (!profile) return 'N/A';
     const used = profile.storage_used_mb || 0;
     const limit = profile.plan === 'captains_club' ? 500 : 25;
@@ -487,7 +487,7 @@ const ProfileScreen = () => {
 
   // If not signed in (user and session are null)
   if (!user && !session) {
-     return (
+    return (
       <View style={styles.container}>
         <Stack.Screen options={{ title: 'Profile', headerTintColor: theme.colors.text }} />
         <View style={styles.centeredMessageContainer}>
@@ -502,19 +502,19 @@ const ProfileScreen = () => {
   }
 
   const captainFeatures = [
-    "Unlimited Exams",
-    "500MB Secure Storage",
+    'Unlimited Exams',
+    '500MB Secure Storage',
     "Full Access to 'My Exams'",
-    "Priority Support"
+    'Priority Support'
   ];
 
   // If signed in, but profile is still null after initial loading period (should be rare if trigger works)
   if (user && !profile) {
     return (
       <View style={styles.container}>
-        <Stack.Screen options={{ title: 'Profile', headerTintColor: darkColors.text }} />
+        <Stack.Screen options={{ title: 'Profile', headerTintColor: theme.colors.text }} />
         <View style={styles.centeredMessageContainer}>
-          <Ionicons name="alert-circle-outline" size={48} color={darkColors.warning} />
+          <Ionicons name="alert-circle-outline" size={48} color={theme.colors.warning} />
           <Text style={styles.messageText}>Could not load your profile data. Please try refreshing the app or contact support if the issue persists.</Text>
         </View>
       </View>
@@ -623,9 +623,9 @@ const ProfileScreen = () => {
           </Text>
         </View>
         {profile.last_quota_reset_date && profile.plan === 'basic' && (
-           <View style={[styles.quotaResetTextContainer, {borderTopWidth: 0, marginTop: theme.spacing.xs, paddingTop: theme.spacing.xs}]}>
-             <Text style={[styles.quotaResetText, {textAlign: 'left', marginTop: theme.spacing.s}]}>Quotas next reset on: {formatDate(new Date(new Date(profile.last_quota_reset_date).setMonth(new Date(profile.last_quota_reset_date).getMonth() + 1)))}</Text>
-           </View>
+          <View style={[styles.quotaResetTextContainer, {borderTopWidth: 0, marginTop: theme.spacing.xs, paddingTop: theme.spacing.xs}]}>
+            <Text style={[styles.quotaResetText, {textAlign: 'left', marginTop: theme.spacing.s}]}>Quotas next reset on: {formatDate(new Date(new Date(profile.last_quota_reset_date).setMonth(new Date(profile.last_quota_reset_date).getMonth() + 1)))}</Text>
+          </View>
         )}
       </View>
 
@@ -638,13 +638,13 @@ const ProfileScreen = () => {
             <Text style={styles.loadingOrErrorText}>Loading stats...</Text>
           </View>
         ) : error ? (
-           <View style={styles.loadingOrErrorContainer}>
-             <Ionicons name="warning-outline" size={24} color={theme.colors.error} />
-             <Text style={[styles.loadingOrErrorText, {color: theme.colors.error}]}>{error}</Text>
-             <TouchableOpacity style={[styles.secondaryButton, {marginTop: theme.spacing.small}]} onPress={() => fetchUserStats(true)}>
-                <Text style={styles.secondaryButtonText}>Try Again</Text>
+          <View style={styles.loadingOrErrorContainer}>
+            <Ionicons name="warning-outline" size={24} color={theme.colors.error} />
+            <Text style={[styles.loadingOrErrorText, {color: theme.colors.error}]}>{error}</Text>
+            <TouchableOpacity style={[styles.secondaryButton, {marginTop: theme.spacing.small}]} onPress={() => fetchUserStats(true)}>
+              <Text style={styles.secondaryButtonText}>Try Again</Text>
             </TouchableOpacity>
-           </View>
+          </View>
         ) : (
           <View style={styles.statsRowContainer}>
             <View style={styles.statItem}>

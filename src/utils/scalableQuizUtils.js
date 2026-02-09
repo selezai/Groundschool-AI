@@ -49,7 +49,7 @@ class ScalableQuizGenerator {
 
   async generateScaledQuiz(documentInfos, totalQuestions = 10, onProgressUpdate = () => {}) {
     if (!Array.isArray(documentInfos) || documentInfos.some(docInfo => 
-        !docInfo || typeof docInfo.id !== 'string' || 
+      !docInfo || typeof docInfo.id !== 'string' || 
         typeof docInfo.title !== 'string' || !docInfo.content ||
         !docInfo.content.inlineData || !docInfo.content.inlineData.data || !docInfo.content.inlineData.mimeType
     )) {
@@ -77,18 +77,18 @@ class ScalableQuizGenerator {
     
     let result;
     switch (strategyToUse) {
-      case 'perDocument':
-        result = await this.generatePerDocumentQuiz(documentInfos, totalQuestions, onProgressUpdate);
-        break;
-      case 'batched':
-        result = await this.generateBatchedQuiz(documentInfos, totalQuestions, onProgressUpdate);
-        break;
-      case 'hybrid':
-        result = await this.generateHybridQuiz(documentInfos, totalQuestions, onProgressUpdate);
-        break;
-      default: // 'balanced'
-        result = await this.generateBalancedQuiz(documentInfos, totalQuestions, onProgressUpdate);
-        break;
+    case 'perDocument':
+      result = await this.generatePerDocumentQuiz(documentInfos, totalQuestions, onProgressUpdate);
+      break;
+    case 'batched':
+      result = await this.generateBatchedQuiz(documentInfos, totalQuestions, onProgressUpdate);
+      break;
+    case 'hybrid':
+      result = await this.generateHybridQuiz(documentInfos, totalQuestions, onProgressUpdate);
+      break;
+    default: // 'balanced'
+      result = await this.generateBalancedQuiz(documentInfos, totalQuestions, onProgressUpdate);
+      break;
     }
     return result;
   }
@@ -101,21 +101,21 @@ class ScalableQuizGenerator {
     const avgQuestionsPerDocTarget = totalQuestions / documentCount;
 
     if (avgQuestionsPerDocTarget < 1 && totalQuestions < documentCount) { // Fewer questions than docs
-        logger.debug('ScalableQuiz', "[Strategy] Decision: Fewer Qs than docs. Using 'balanced' to pick best docs.");
-        return 'balanced'; // Let balanced mode pick best docs for few questions
+      logger.debug('ScalableQuiz', "[Strategy] Decision: Fewer Qs than docs. Using 'balanced' to pick best docs.");
+      return 'balanced'; // Let balanced mode pick best docs for few questions
     }
     if (documentCount <= this.maxDocumentsPerBatch) {
-        logger.debug('ScalableQuiz', "[Strategy] Decision: Docs fit in one batch. Using 'balanced'.");
-        return 'balanced'; // All docs can be sent in one go
+      logger.debug('ScalableQuiz', "[Strategy] Decision: Docs fit in one batch. Using 'balanced'.");
+      return 'balanced'; // All docs can be sent in one go
     }
     if (avgQuestionsPerDocTarget >= this.questionsPerDocument && documentCount > this.maxDocumentsPerBatch) {
-        logger.debug('ScalableQuiz', "[Strategy] Decision: High Qs/doc, many docs. Using 'batched'.");
-        return 'batched'; // Good candidate for batching
+      logger.debug('ScalableQuiz', "[Strategy] Decision: High Qs/doc, many docs. Using 'batched'.");
+      return 'batched'; // Good candidate for batching
     }
     // If asking for very few questions per document on average, and many documents
     if (avgQuestionsPerDocTarget < (this.questionsPerDocument / 2) && documentCount > this.maxDocumentsPerBatch * 1.5) {
-        logger.debug('ScalableQuiz', "[Strategy] Decision: Low Qs/doc, many docs. Using 'perDocument'.");
-        return 'perDocument';
+      logger.debug('ScalableQuiz', "[Strategy] Decision: Low Qs/doc, many docs. Using 'perDocument'.");
+      return 'perDocument';
     }
     
     logger.debug('ScalableQuiz', "[Strategy] Decision: Defaulting to 'hybrid'.");
@@ -229,7 +229,7 @@ class ScalableQuizGenerator {
     return this.finalizeQuiz(allQuestions, totalQuestions, 'hybrid');
   }
 
-  async generateBalancedQuiz(documentInfos, totalQuestions) {
+  async generateBalancedQuiz(documentInfos, totalQuestions, onProgressUpdate = () => {}) {
     logger.debug('ScalableQuiz', `Using balanced strategy for ${documentInfos.length} docs, ${totalQuestions} Qs.`);
     
     const textualPrompt = this.buildBalancedPromptText(documentInfos, totalQuestions);
@@ -247,7 +247,7 @@ class ScalableQuizGenerator {
       const quiz = this.parser.parseQuizJSON(responseText);
       
       if (quiz && quiz.questions) {
-         logger.debug('ScalableQuiz', `[Balanced] Successfully parsed ${quiz.questions.length} questions.`);
+        logger.debug('ScalableQuiz', `[Balanced] Successfully parsed ${quiz.questions.length} questions.`);
         return this.finalizeQuiz(quiz.questions, totalQuestions, 'balanced', callMeta?.suggestedTitle || quiz.title);
       } else {
         logger.warn('ScalableQuiz', '[Balanced] Failed to parse quiz from response or no questions found.');
@@ -744,7 +744,7 @@ class ScalingDemo {
           const promptPartsArray = contents[0].parts;
           ScalingDemo.lastPromptPartsReceived = promptPartsArray;
 
-          let textualPrompt = "";
+          let textualPrompt = '';
           const textPartObject = promptPartsArray.find(part => part && typeof part.text === 'string');
           if (textPartObject && textPartObject.text) {
             textualPrompt = textPartObject.text;
@@ -771,7 +771,7 @@ class ScalingDemo {
               ],
               correct_answer_id: 'A',
               explanation: `Mock explanation for Q${i+1}. File parts received: ${filePartsCount}.`,
-              difficulty: "medium",
+              difficulty: 'medium',
               source_document_reference: `Mock Source (Call ${ScalingDemo.mockCallCount})`
             });
           }
@@ -790,7 +790,7 @@ class ScalingDemo {
   }
 
   static _createMockDoc(id, titleSuffix, charCount = 100) {
-    const contentData = Buffer.from("M".repeat(charCount)).toString('base64'); // Simple mock base64
+    const contentData = Buffer.from('M'.repeat(charCount)).toString('base64'); // Simple mock base64
     return {
       id: `doc_${id}`,
       title: `Document ${titleSuffix}`,
@@ -801,18 +801,18 @@ class ScalingDemo {
   static async demonstrateScaling() {
     const mockGenAI = ScalingDemo.getMockGenAI();
     const generator = new ScalableQuizGenerator(mockGenAI, { 
-        enableLogging: true, 
-        strategy: 'auto', // Let it choose
-        questionsPerDocument: 2, // For strategy calculation
-        maxDocumentsPerBatch: 3   // For strategy calculation
+      enableLogging: true, 
+      strategy: 'auto', // Let it choose
+      questionsPerDocument: 2, // For strategy calculation
+      maxDocumentsPerBatch: 3   // For strategy calculation
     });
 
     const scenarios = [
-      { docs: 1, questions: 3, name: "1 Doc, 3 Qs" },
-      { docs: 3, questions: 6, name: "3 Docs, 6 Qs (Balanced)" },
-      { docs: 5, questions: 5, name: "5 Docs, 5 Qs (Likely Batched/Hybrid)" },
-      { docs: 7, questions: 7, name: "7 Docs, 7 Qs (Likely Hybrid/PerDoc)" },
-      { docs: 10, questions: 5, name: "10 Docs, 5 Qs (Balanced for selection)" },
+      { docs: 1, questions: 3, name: '1 Doc, 3 Qs' },
+      { docs: 3, questions: 6, name: '3 Docs, 6 Qs (Balanced)' },
+      { docs: 5, questions: 5, name: '5 Docs, 5 Qs (Likely Batched/Hybrid)' },
+      { docs: 7, questions: 7, name: '7 Docs, 7 Qs (Likely Hybrid/PerDoc)' },
+      { docs: 10, questions: 5, name: '10 Docs, 5 Qs (Balanced for selection)' },
     ];
 
     for (const scenario of scenarios) {
@@ -821,48 +821,48 @@ class ScalingDemo {
       const result = await generator.generateScaledQuiz(mockDocs, scenario.questions);
       console.info(`[DEMO RESULT for ${scenario.name}] Strategy: ${result.metadata?.strategy}. Requested: ${scenario.questions}, Selected: ${result.questions?.length}`);
       if (result.questions?.length > 0) {
-        console.info("  First question text:", result.questions[0].question_text);
+        console.info('  First question text:', result.questions[0].question_text);
       }
-      console.info("  Last prompt parts received by mock:", ScalingDemo.lastPromptPartsReceived?.map(p => p.text ? {text: p.text.substring(0,50)+'...'} : {inlineData: p.inlineData.mimeType}));
+      console.info('  Last prompt parts received by mock:', ScalingDemo.lastPromptPartsReceived?.map(p => p.text ? {text: p.text.substring(0,50)+'...'} : {inlineData: p.inlineData.mimeType}));
     }
   }
   
   static async testGenerateFromSingleDocument() {
-    console.info("\n--- Test: generateFromSingleDocument ---");
+    console.info('\n--- Test: generateFromSingleDocument ---');
     const mockGenAI = ScalingDemo.getMockGenAI();
     const generator = new ScalableQuizGenerator(mockGenAI, { enableLogging: true });
-    const doc = ScalingDemo._createMockDoc(1, "Single Test");
+    const doc = ScalingDemo._createMockDoc(1, 'Single Test');
     const result = await generator.generateFromSingleDocument(doc, 2, 0);
-    console.info("[Test Result Single Doc] Questions:", result.questions?.length);
+    console.info('[Test Result Single Doc] Questions:', result.questions?.length);
     // console.log("Last prompt parts:", ScalingDemo.lastPromptPartsReceived);
   }
 
   static async testGenerateFromDocumentBatch() {
-    console.info("\n--- Test: generateFromDocumentBatch ---");
+    console.info('\n--- Test: generateFromDocumentBatch ---');
     const mockGenAI = ScalingDemo.getMockGenAI();
     const generator = new ScalableQuizGenerator(mockGenAI, { enableLogging: true });
-    const batchDocs = [ScalingDemo._createMockDoc(1, "Batch A"), ScalingDemo._createMockDoc(2, "Batch B")];
+    const batchDocs = [ScalingDemo._createMockDoc(1, 'Batch A'), ScalingDemo._createMockDoc(2, 'Batch B')];
     const result = await generator.generateFromDocumentBatch(batchDocs, 4, 0);
-    console.info("[Test Result Batch Doc] Questions:", result.questions?.length);
+    console.info('[Test Result Batch Doc] Questions:', result.questions?.length);
     // console.log("Last prompt parts:", ScalingDemo.lastPromptPartsReceived);
   }
   
   static showPromptComparison() {
-    console.info("\n--- Prompt Comparison ---");
+    console.info('\n--- Prompt Comparison ---');
     const generator = new ScalableQuizGenerator(null, { enableLogging: false }); // No AI needed for prompt building
     const docs = [
-        ScalingDemo._createMockDoc(1, "Alpha"),
-        ScalingDemo._createMockDoc(2, "Beta"),
-        ScalingDemo._createMockDoc(3, "Gamma")
+      ScalingDemo._createMockDoc(1, 'Alpha'),
+      ScalingDemo._createMockDoc(2, 'Beta'),
+      ScalingDemo._createMockDoc(3, 'Gamma')
     ];
 
-    console.info("\n[Single Document Prompt (for Doc Alpha, 2 Qs)]");
+    console.info('\n[Single Document Prompt (for Doc Alpha, 2 Qs)]');
     console.log(generator.buildPromptForSingleDocument(2, docs[0].title, docs[0].id, 0));
 
-    console.info("\n[Balanced Prompt (for 3 Docs, 5 Qs)]");
+    console.info('\n[Balanced Prompt (for 3 Docs, 5 Qs)]');
     console.log(generator.buildBalancedPromptText(docs, 5));
     
-    console.info("\n[Batch Prompt (for 3 Docs, 6 Qs, Batch 0)]");
+    console.info('\n[Batch Prompt (for 3 Docs, 6 Qs, Batch 0)]');
     console.log(generator.buildBatchPromptText(docs, 6, 0));
   }
 }

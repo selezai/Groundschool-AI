@@ -122,17 +122,17 @@ if (Platform.OS !== 'web' || isBrowser) {
         detectSessionInUrl: Platform.OS === 'web',
         debug: __DEV__,
       },
-  });
+    });
   
-  clientInitialized = true;
-  logger.info('supabaseClient', 'Supabase client initialized successfully');
-} catch (error) {
-  logger.error('supabaseClient', 'Failed to initialize Supabase client', {
-    errorMessage: error.message,
-    errorName: error.name,
-    errorStack: error.stack
-  });
-  initializationError = error;
+    clientInitialized = true;
+    logger.info('supabaseClient', 'Supabase client initialized successfully');
+  } catch (error) {
+    logger.error('supabaseClient', 'Failed to initialize Supabase client', {
+      errorMessage: error.message,
+      errorName: error.name,
+      errorStack: error.stack
+    });
+    initializationError = error;
   }
 }
 

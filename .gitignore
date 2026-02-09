@@ -108,3 +108,4 @@ out/
 /ios/Pods/
 /ios/build/
 .vercel
+.env*.local

@@ -47,9 +47,9 @@ const CaptainsClubScreen = () => {
       </View>
 
       <View style={styles.benefitsContainer}>
-        {renderBenefit("star-outline", "Unlimited Exam Generation", "Create as many practice exams as you need, whenever you need them.")}
-        {renderBenefit("archive-outline", "Full Exam History", "Access and review all your past exams to track your progress.")}
-        {renderBenefit("cloud-upload-outline", "Increased Storage (500MB)", "Store more documents and study materials without worry.")}
+        {renderBenefit('star-outline', 'Unlimited Exam Generation', 'Create as many practice exams as you need, whenever you need them.')}
+        {renderBenefit('archive-outline', 'Full Exam History', 'Access and review all your past exams to track your progress.')}
+        {renderBenefit('cloud-upload-outline', 'Increased Storage (500MB)', 'Store more documents and study materials without worry.')}
       </View>
 
       <TouchableOpacity 

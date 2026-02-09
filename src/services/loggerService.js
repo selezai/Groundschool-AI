@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /**
  * Production-Safe Logger Service
  * 

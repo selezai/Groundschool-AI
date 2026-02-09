@@ -106,9 +106,9 @@ export const getUserTotalStorageUsage = async (userId) => {
     // Sum up all file sizes with better error handling
     const totalBytes = Array.isArray(data) 
       ? data.reduce((sum, doc) => {
-          const fileSize = doc.file_size || 0;
-          return sum + (typeof fileSize === 'number' ? fileSize : 0);
-        }, 0)
+        const fileSize = doc.file_size || 0;
+        return sum + (typeof fileSize === 'number' ? fileSize : 0);
+      }, 0)
       : 0;
       
     logger.info('documentService:getUserTotalStorageUsage', `Total storage usage for user ${userId}: ${totalBytes} bytes`);
@@ -501,7 +501,7 @@ export const uploadDocument = async (fileAsset, title, onProgress) => {
 
     // --- NEW: Update storage usage ---
     if (dbData && dbData.file_size > 0) {
-        await updateUserStorageUsage(user.id, dbData.file_size);
+      await updateUserStorageUsage(user.id, dbData.file_size);
     }
     // Invalidate caches since document count and storage usage have changed
     cacheService.invalidateCaches([CACHE_KEYS.PROFILE_STATS, CACHE_KEYS.STORAGE_USAGE]);
@@ -776,15 +776,15 @@ export const deleteDocument = async (documentId, userId, skipCacheInvalidation =
     }
 
     if (!document) {
-        logger.warn('documentService:deleteDocument', `Document metadata not found for id: ${documentId} after fetch (PGRST116 should have caught this).`);
-        throw new Error('Document not found.');
+      logger.warn('documentService:deleteDocument', `Document metadata not found for id: ${documentId} after fetch (PGRST116 should have caught this).`);
+      throw new Error('Document not found.');
     }
-    logger.debug('documentService:deleteDocument', `Document metadata fetched:`, document);
+    logger.debug('documentService:deleteDocument', 'Document metadata fetched:', document);
 
     // This check is technically redundant if RLS is perfectly set up for select, but good for service-level assurance.
     if (document.user_id !== userId) {
-        logger.error('documentService:deleteDocument', `Ownership verification failed. Doc owner: ${document.user_id}, Requester: ${userId}. Denying deletion for documentId: ${documentId}`);
-        throw new Error('Access denied: You do not own this document.');
+      logger.error('documentService:deleteDocument', `Ownership verification failed. Doc owner: ${document.user_id}, Requester: ${userId}. Denying deletion for documentId: ${documentId}`);
+      throw new Error('Access denied: You do not own this document.');
     }
     logger.debug('documentService:deleteDocument', `Ownership verified for documentId: ${documentId}. Owner: ${document.user_id}`);
 
@@ -843,7 +843,7 @@ export const deleteDocument = async (documentId, userId, skipCacheInvalidation =
 
     // --- NEW: Update storage usage ---
     if (document && document.file_size > 0) {
-        await updateUserStorageUsage(userId, -document.file_size); // Negative to reduce usage
+      await updateUserStorageUsage(userId, -document.file_size); // Negative to reduce usage
     }
     
     // Invalidate caches since document count and storage usage have changed
@@ -882,7 +882,6 @@ const queueDocumentUpload = async (fileAsset, title) => {
     // Create a temporary document object
     const tempDocument = {
       id: tempId,
-      title: title.trim(),
       title: title.trim(),
       file_name: fileAsset.name,
       storage_path: localUri, // Temporarily, this will be the local URI until uploaded
@@ -1200,8 +1199,8 @@ export const createSignedUrl = async (filePath, expiresInSeconds = 3600) => {
     }
 
     if (!data?.signedUrl) {
-        logger.error('documentService:createSignedUrl', 'Signed URL creation returned no URL.', data);
-        throw new Error('Failed to generate signed URL.');
+      logger.error('documentService:createSignedUrl', 'Signed URL creation returned no URL.', data);
+      throw new Error('Failed to generate signed URL.');
     }
 
     logger.info('documentService:createSignedUrl', 'Signed URL generated successfully.');

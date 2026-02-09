@@ -3,7 +3,7 @@ import { View, Text, TextInput, ActivityIndicator, Platform, KeyboardAvoidingVie
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useAuth } from '../contexts/AuthContext';
 import { authService } from '../services/authService';
-import { darkColors, spacing, typography, createThemedStyles } from '../theme/theme';
+import { darkColors, createThemedStyles } from '../theme/theme';
 import logger from '../services/loggerService';
 import posthogService from '../services/posthogService';
 
@@ -21,7 +21,7 @@ export default function LoginScreen() {
 
   // 2. Context and Router hooks
   const { signIn, signUp, session, isProcessingAuth } = useAuth();
-  const router = useRouter();
+  const _router = useRouter();
   // Log component mount, unmount, and uiError updates
   useEffect(() => {
     logger.debug('login:useEffect', 'Component mounted or uiError updated', { uiError });
@@ -224,7 +224,7 @@ export default function LoginScreen() {
           if (Platform.OS === 'web') {
             // For web, set uiError to display inline
             setUiError(userFriendlyMessage);
-            console.log('[DEBUG] login.jsx (handleAuth login path): Called setUiError for web.');
+            logger.debug('LoginScreen', 'Called setUiError for web');
           } else {
             // For non-web, show a simplified Alert with guidance
             Alert.alert(

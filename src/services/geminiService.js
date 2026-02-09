@@ -204,7 +204,7 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
       throw new Error('Google Generative AI client is not initialized. Check your API key configuration.');
     }
     if (!GOOGLE_API_KEY) {
-        throw new Error('Google API key is not available for ProductionQuizGenerator.');
+      throw new Error('Google API key is not available for ProductionQuizGenerator.');
     }
 
     if (!document || !document.file_path) {
@@ -273,8 +273,8 @@ export const generateQuestionsFromDocument = async (document, questionCount = 10
     }
 
     const generator = new ProductionQuizGenerator(GOOGLE_API_KEY, genAI, {
-        enableLogging: true, // Or false, depending on your preference
-        model: 'gemini-1.5-flash-latest' // Or your preferred model
+      enableLogging: true, // Or false, depending on your preference
+      model: 'gemini-1.5-flash-latest' // Or your preferred model
     });
 
     const documentParts = [filePart]; // ProductionQuizGenerator expects an array of parts
@@ -437,7 +437,7 @@ export const generateQuestionsFromMultipleDocuments = async (documents, question
     }
     // Consider a more sophisticated title if multiple documents, e.g., from metadata
     if (result.metadata && result.metadata.suggestedTitle) {
-        generatedTitle = result.metadata.suggestedTitle;
+      generatedTitle = result.metadata.suggestedTitle;
     }
 
     logger.info('geminiService:generateQuestionsFromMultipleDocuments', 'Successfully generated quiz using ScalableQuizGenerator', { numQuestions: result.questions?.length, title: generatedTitle });

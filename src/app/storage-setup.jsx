@@ -63,7 +63,7 @@ export default function StorageSetupScreen() {
     }
   };
 
-  const setupBucketPolicies = async () => {
+  const _setupBucketPolicies = async () => {
     setLoading(true);
     setResult(null);
     setError(null);

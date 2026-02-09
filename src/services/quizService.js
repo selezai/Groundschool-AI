@@ -152,7 +152,7 @@ export const createQuizFromDocument = async (document, difficulty = 'medium') =>
       // This typically happens via a cron job or on login, not during quiz creation itself.
       if (userProfile.monthly_quizzes_remaining <= 0) {
         logger.warn('quizService:createQuizFromDocument', 'Basic user has no monthly exams remaining', { userId: user.id, remaining: userProfile.monthly_quizzes_remaining });
-        throw new Error("You have reached your monthly limit for exam generation. Upgrade to Captain\'s Club for unlimited exams.");
+        throw new Error("You have reached your monthly limit for exam generation. Upgrade to Captain's Club for unlimited exams.");
       }
       logger.info('quizService:createQuizFromDocument', 'Basic user has monthly exams remaining', { userId: user.id, remaining: userProfile.monthly_quizzes_remaining });
     }
@@ -254,9 +254,9 @@ export const createQuizFromDocument = async (document, difficulty = 'medium') =>
         // Previous validation ensures correct_answer_id is in options, so findIndex should not return -1.
         // However, an explicit check could be added for extreme defensiveness if desired.
         if (correctIndex === -1) {
-            // This should ideally not be reached due to prior validation of correct_answer_id against option IDs.
-            logger.error('quizService:createQuizFromDocument', 'Consistency error: correct_answer_id valid but not found in options for indexing.', { questionIndex: index, questionData: q });
-            throw new Error(`Consistency error processing correct answer for question index ${index}. correct_answer_id '${q.correct_answer_id}' not found in options.`);
+          // This should ideally not be reached due to prior validation of correct_answer_id against option IDs.
+          logger.error('quizService:createQuizFromDocument', 'Consistency error: correct_answer_id valid but not found in options for indexing.', { questionIndex: index, questionData: q });
+          throw new Error(`Consistency error processing correct answer for question index ${index}. correct_answer_id '${q.correct_answer_id}' not found in options.`);
         }
 
         return {
@@ -750,8 +750,8 @@ export const submitQuizAttempt = async (quizId, answers, score, completionTime) 
 
     // Critical: If no user for an online submission, we cannot satisfy NOT NULL for user_id
     if (!user && isConnected) { 
-        logger.error('quizService:submitQuizAttempt', 'User not authenticated for online submission. Quiz attempt cannot be saved.', userError);
-        throw new Error('User not authenticated. Cannot submit quiz online.');
+      logger.error('quizService:submitQuizAttempt', 'User not authenticated for online submission. Quiz attempt cannot be saved.', userError);
+      throw new Error('User not authenticated. Cannot submit quiz online.');
     }
     // If offline, or if user is null but we are offline, offlineService will handle user_id later
     // If online and user is null, the above throw would have triggered.
@@ -836,35 +836,35 @@ export const submitQuizAttempt = async (quizId, answers, score, completionTime) 
         logger.info('quizService:submitQuizAttempt', 'Quiz question responses submitted successfully online');
       }
     } else {
-        logger.error('quizService:submitQuizAttempt', 'No attempt ID returned after insert, cannot save responses online.');
+      logger.error('quizService:submitQuizAttempt', 'No attempt ID returned after insert, cannot save responses online.');
     }
     
     return dbAttempt;
 
   } catch (error) {
     logger.error('quizService:submitQuizAttempt', 'Failed to submit quiz attempt', { 
-        errorMessage: error.message,
-        errorStack: error.stack,
-        quizId, 
-        score 
+      errorMessage: error.message,
+      errorStack: error.stack,
+      quizId, 
+      score 
     });
     // Fallback: Try to save offline if any unhandled error occurs during online submission processing.
     // Construct attemptData for offline saving. User may or may not be available here.
     const fallbackAttemptData = {
-        quiz_id: quizId,
-        score,
-        completion_time: completionTime,
-        attempted_at: new Date().toISOString(),
-        metadata: {
-            appVersion: Constants.expoConfig.version,
-            platform: Platform.OS,
-            // If user was fetched earlier and is in scope, could add userIdForMetadata
-        }
+      quiz_id: quizId,
+      score,
+      completion_time: completionTime,
+      attempted_at: new Date().toISOString(),
+      metadata: {
+        appVersion: Constants.expoConfig.version,
+        platform: Platform.OS,
+        // If user was fetched earlier and is in scope, could add userIdForMetadata
+      }
     };
     try {
-        logger.info('quizService:submitQuizAttempt', 'Attempting to save offline due to unhandled error during submission process.');
-        const finalFallbackAttempt = await offlineService.saveQuizAttemptOffline(fallbackAttemptData, answers);
-        return finalFallbackAttempt;
+      logger.info('quizService:submitQuizAttempt', 'Attempting to save offline due to unhandled error during submission process.');
+      const finalFallbackAttempt = await offlineService.saveQuizAttemptOffline(fallbackAttemptData, answers);
+      return finalFallbackAttempt;
     } catch (offlineError) {
       logger.error('quizService:submitQuizAttempt', 'Failed to save attempt offline after all other attempts', offlineError);
       throw error;
@@ -1048,10 +1048,10 @@ export const generateQuizFromDocuments = async (documentIds, difficulty = 'mediu
     } catch (geminiError) {
       logger.error('quizService:generateQuizFromDocuments', 'Error in geminiService.generateQuestionsFromMultipleDocuments or subsequent quizTitle processing', geminiError);
       if (typeof quizTitle === 'undefined' || quizTitle === null || quizTitle.toString().trim() === '') {
-          const titles = documents.map(doc => doc.title); 
-          const firstDocTitle = titles.length > 0 ? titles[0] : 'Untitled Document';
-          quizTitle = titles.length > 1 ? `Quiz from ${firstDocTitle} and ${titles.length - 1} other(s)` : `Quiz from ${firstDocTitle}`;
-          logger.warn('quizService:generateQuizFromDocuments', 'quizTitle was undefined/empty after geminiError, set to default.', { quizTitleValue: quizTitle });
+        const titles = documents.map(doc => doc.title); 
+        const firstDocTitle = titles.length > 0 ? titles[0] : 'Untitled Document';
+        quizTitle = titles.length > 1 ? `Quiz from ${firstDocTitle} and ${titles.length - 1} other(s)` : `Quiz from ${firstDocTitle}`;
+        logger.warn('quizService:generateQuizFromDocuments', 'quizTitle was undefined/empty after geminiError, set to default.', { quizTitleValue: quizTitle });
       }
       throw new Error(`Failed to generate quiz content via AI: ${geminiError.message}`);
     }
@@ -1104,31 +1104,31 @@ export const generateQuizFromDocuments = async (documentIds, difficulty = 'mediu
         // Handle both 'text' and 'question_text' properties from AI response
         const questionText = q.text || q.question_text;
         if (!questionText) {
-            logger.error('quizService:generateQuizFromDocuments', `Question at index ${index} missing both 'text' and 'question_text' properties.`, { questionData: q });
-            throw new Error(`Data integrity issue: Question at index ${index} is missing question text.`);
+          logger.error('quizService:generateQuizFromDocuments', `Question at index ${index} missing both 'text' and 'question_text' properties.`, { questionData: q });
+          throw new Error(`Data integrity issue: Question at index ${index} is missing question text.`);
         }
 
         // Validate options array
         if (!q.options || !Array.isArray(q.options) || q.options.length === 0) {
-            logger.error('quizService:generateQuizFromDocuments', `Question at index ${index} missing or invalid options array.`, { questionData: q });
-            throw new Error(`Data integrity issue: Question at index ${index} has invalid options.`);
+          logger.error('quizService:generateQuizFromDocuments', `Question at index ${index} missing or invalid options array.`, { questionData: q });
+          throw new Error(`Data integrity issue: Question at index ${index} has invalid options.`);
         }
 
         const correctOption = q.options.find(opt => opt.id === q.correct_answer_id);
         if (!correctOption) {
-            logger.error('quizService:generateQuizFromDocuments', `Correct answer ID '${q.correct_answer_id}' not found in options for question (index ${index}).`, { questionData: q });
-            throw new Error(`Data integrity issue: Correct answer ID '${q.correct_answer_id}' not found for question: "${questionText.substring(0, 50)}..."`);
+          logger.error('quizService:generateQuizFromDocuments', `Correct answer ID '${q.correct_answer_id}' not found in options for question (index ${index}).`, { questionData: q });
+          throw new Error(`Data integrity issue: Correct answer ID '${q.correct_answer_id}' not found for question: "${questionText.substring(0, 50)}..."`);
         }
         const correctOptionIndex = q.options.indexOf(correctOption);
 
         return {
-            quiz_id: quiz.id,
-            text: questionText, // Use the resolved question text
-            options: q.options,
-            correct_answer: q.correct_answer_id,
-            correct_answer_index: correctOptionIndex,
-            explanation: q.explanation || null,
-            order_index: index
+          quiz_id: quiz.id,
+          text: questionText, // Use the resolved question text
+          options: q.options,
+          correct_answer: q.correct_answer_id,
+          correct_answer_index: correctOptionIndex,
+          explanation: q.explanation || null,
+          order_index: index
         };
       });
 

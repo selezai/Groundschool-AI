@@ -225,8 +225,8 @@ export const syncOfflineData = async () => {
     logger.error('offlineService:syncOfflineData', 'Unhandled error during main offline data sync process.', { error });
     const errorMessage = error.message ? error.message.toLowerCase() : '';
     if (errorMessage.includes('failed to fetch') || errorMessage.includes('err_internet_disconnected') || errorMessage.includes('network request failed')) {
-        logger.warn('offlineService:syncOfflineData', 'Sync failed due to a network error during data processing operations.', { error });
-        return { success: false, reason: 'sync_network_error', error };
+      logger.warn('offlineService:syncOfflineData', 'Sync failed due to a network error during data processing operations.', { error });
+      return { success: false, reason: 'sync_network_error', error };
     }
     return { success: false, reason: 'general_sync_error', error };
   }
@@ -259,20 +259,20 @@ const processOperationQueue = async (user) => {
         
         // Handle different operation types
         switch (operation.type) {
-          case 'document_upload':
-            await processDocumentUpload(operation, user);
-            success++;
-            break;
+        case 'document_upload':
+          await processDocumentUpload(operation, user);
+          success++;
+          break;
             
-          case 'quiz_attempt_submit':
-            await processQuizAttemptSubmit(operation, user);
-            success++;
-            break;
+        case 'quiz_attempt_submit':
+          await processQuizAttemptSubmit(operation, user);
+          success++;
+          break;
             
-          default:
-            logger.warn('offlineService:processOperationQueue', `Unknown operation type: ${operation.type}`);
-            remainingOperations.push(operation);
-            failed++;
+        default:
+          logger.warn('offlineService:processOperationQueue', `Unknown operation type: ${operation.type}`);
+          remainingOperations.push(operation);
+          failed++;
         }
       } catch (error) {
         logger.error('offlineService:processOperationQueue', `Error processing operation ${operation.id}`, error);
@@ -450,31 +450,31 @@ const processQuizAttemptSubmit = async (operation, user) => {
 
       // If 'isCorrect' (camelCase) exists in the local data,
       // map it to 'is_correct' (snake_case) for Supabase.
-      if (payload.hasOwnProperty('isCorrect')) {
+      if (Object.hasOwn(payload, 'isCorrect')) {
         payload.is_correct = payload.isCorrect;
         delete payload.isCorrect; // Remove the original camelCase key
       }
 
       // Map 'questionId' (camelCase) to 'question_id' (snake_case)
-      if (payload.hasOwnProperty('questionId')) {
+      if (Object.hasOwn(payload, 'questionId')) {
         payload.question_id = payload.questionId;
         delete payload.questionId;
       }
       
       // Map 'selectedAnswer' (camelCase) to 'selected_answer' (snake_case)
-      if (payload.hasOwnProperty('selectedAnswer')) {
+      if (Object.hasOwn(payload, 'selectedAnswer')) {
         payload.selected_answer = payload.selectedAnswer;
         delete payload.selectedAnswer;
       }
 
       // Map 'selectedAnswerIndex' (camelCase) to 'selected_answer_index' (snake_case)
-      if (payload.hasOwnProperty('selectedAnswerIndex')) {
+      if (Object.hasOwn(payload, 'selectedAnswerIndex')) {
         payload.selected_answer_index = payload.selectedAnswerIndex;
         delete payload.selectedAnswerIndex;
       }
 
       // Map 'responseTime' (camelCase) to 'response_time' (snake_case)
-      if (payload.hasOwnProperty('responseTime')) {
+      if (Object.hasOwn(payload, 'responseTime')) {
         payload.response_time = payload.responseTime;
         delete payload.responseTime;
       }
@@ -485,36 +485,36 @@ const processQuizAttemptSubmit = async (operation, user) => {
       // as the DB column is NOT NULL boolean.
       if (typeof payload.is_correct !== 'boolean') {
         logger.warn('offlineService:processQuizAttemptSubmit', 
-            `Response object has non-boolean or missing is_correct value after mapping. Original 'isCorrect': ${r.isCorrect}, Mapped 'is_correct': ${payload.is_correct}. This might cause an error.`, 
-            { originalResponse: r });
+          `Response object has non-boolean or missing is_correct value after mapping. Original 'isCorrect': ${r.isCorrect}, Mapped 'is_correct': ${payload.is_correct}. This might cause an error.`, 
+          { originalResponse: r });
       }
       
       // Add a warning if question_id is missing after mapping, as it's NOT NULL
       if (!payload.question_id) {
-          logger.warn('offlineService:processQuizAttemptSubmit',
-              `Response object is missing question_id after mapping. Original 'questionId': ${r.questionId}. This will likely cause an error.`,
-              { originalResponse: r });
+        logger.warn('offlineService:processQuizAttemptSubmit',
+          `Response object is missing question_id after mapping. Original 'questionId': ${r.questionId}. This will likely cause an error.`,
+          { originalResponse: r });
       }
 
       // Add a warning if response_time is not a number or is missing after mapping
       if (typeof payload.response_time !== 'number') {
         logger.warn('offlineService:processQuizAttemptSubmit',
-            `Response object has non-numeric or missing response_time after mapping. Original 'responseTime': ${r.responseTime}, Mapped 'response_time': ${payload.response_time}. This might cause an error if the column is numeric.`, 
-            { originalResponse: r });
+          `Response object has non-numeric or missing response_time after mapping. Original 'responseTime': ${r.responseTime}, Mapped 'response_time': ${payload.response_time}. This might cause an error if the column is numeric.`, 
+          { originalResponse: r });
       }
 
       // Add a warning if selected_answer is missing after mapping
       if (typeof payload.selected_answer === 'undefined' || payload.selected_answer === null) {
         logger.warn('offlineService:processQuizAttemptSubmit',
-            `Response object is missing selected_answer after mapping. Original 'selectedAnswer': ${r.selectedAnswer}. This will likely cause an error.`, 
-            { originalResponse: r });
+          `Response object is missing selected_answer after mapping. Original 'selectedAnswer': ${r.selectedAnswer}. This will likely cause an error.`, 
+          { originalResponse: r });
       }
 
       // Add a warning if selected_answer_index is not a number or is missing after mapping
       if (typeof payload.selected_answer_index !== 'number') {
         logger.warn('offlineService:processQuizAttemptSubmit',
-            `Response object has non-numeric or missing selected_answer_index after mapping. Original 'selectedAnswerIndex': ${r.selectedAnswerIndex}, Mapped 'selected_answer_index': ${payload.selected_answer_index}. This will likely cause an error.`, 
-            { originalResponse: r });
+          `Response object has non-numeric or missing selected_answer_index after mapping. Original 'selectedAnswerIndex': ${r.selectedAnswerIndex}, Mapped 'selected_answer_index': ${payload.selected_answer_index}. This will likely cause an error.`, 
+          { originalResponse: r });
       }
 
       return payload;

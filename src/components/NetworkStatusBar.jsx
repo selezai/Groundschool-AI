@@ -66,12 +66,12 @@ const NetworkStatusBar = () => {
       {isConnected && syncAttempted && !isSyncing && (
         <>
           <Ionicons 
-            name={syncSuccess ? "checkmark-circle" : "alert-circle"} 
+            name={syncSuccess ? 'checkmark-circle' : 'alert-circle'} 
             size={16} 
             color="#FFFFFF" 
           />
           <Text style={styles.statusText}>
-            {syncSuccess ? "Sync completed successfully!" : "Sync failed. Try again."}
+            {syncSuccess ? 'Sync completed successfully!' : 'Sync failed. Try again.'}
           </Text>
         </>
       )}

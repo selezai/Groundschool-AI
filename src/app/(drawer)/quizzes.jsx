@@ -361,11 +361,11 @@ const QuizzesScreen = () => {
         setTotalQuizzes(0);
       }
     } else if (isAuthReady && !session) {
-        // Handle logged out state
-        logger.info('QuizzesScreen:useEffect', 'Auth ready but no session. Clearing data.');
-        setIsLoadingInitial(false);
-        setQuizzes([]);
-        setTotalQuizzes(0);
+      // Handle logged out state
+      logger.info('QuizzesScreen:useEffect', 'Auth ready but no session. Clearing data.');
+      setIsLoadingInitial(false);
+      setQuizzes([]);
+      setTotalQuizzes(0);
     }
   }, [isAuthReady, profile, session, fetchQuizzes]);
 
