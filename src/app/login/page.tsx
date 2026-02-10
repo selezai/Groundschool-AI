@@ -74,21 +74,29 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background via-background to-primary/5">
-      <Card className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background via-background to-primary/10 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      
+      <Card className="w-full max-w-md relative bg-card/80 backdrop-blur-xl border-border/50 shadow-2xl">
         <CardHeader className="text-center space-y-2">
-          <div className="flex justify-center mb-4">
-            <Image
-              src="/assets/logo.png"
-              alt="Groundschool AI"
-              width={80}
-              height={80}
-              className="rounded-2xl"
-              priority
-            />
+          <div className="flex justify-center mb-6">
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/30 rounded-2xl blur-xl" />
+              <Image
+                src="/assets/logo.png"
+                alt="Groundschool AI"
+                width={80}
+                height={80}
+                className="relative rounded-2xl shadow-lg"
+                priority
+              />
+            </div>
           </div>
           <CardTitle className="text-2xl font-bold">Groundschool AI</CardTitle>
-          <CardDescription className="text-base">
+          <p className="text-xs text-primary font-medium tracking-wide uppercase mt-1">Aviation Exam Prep</p>
+          <CardDescription className="text-base mt-3">
             {isSignUp
               ? "Create your account to start studying"
               : "Welcome back, pilot"}
@@ -144,7 +152,7 @@ export default function LoginPage() {
                 />
               </div>
             )}
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg shadow-primary/20" disabled={isLoading}>
               {isLoading ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : isSignUp ? (
