@@ -200,44 +200,44 @@ export default function DashboardPage() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-2 sm:gap-4">
         {/* Storage Card */}
         <div className="stat-card">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-2.5 rounded-lg bg-primary/10">
-              <Upload className="h-5 w-5 text-primary" />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div className="p-2 sm:p-2.5 rounded-lg bg-primary/10 w-fit">
+              <Upload className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Storage Used</p>
-              <p className="text-xl font-semibold">{formatBytes(storageUsed)}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Storage Used</p>
+              <p className="text-lg sm:text-xl font-semibold">{formatBytes(storageUsed)}</p>
             </div>
           </div>
-          <Progress value={storagePercent} className="h-2" />
-          <p className="text-xs text-muted-foreground mt-2">{formatBytes(maxStorage - storageUsed)} remaining</p>
+          <Progress value={storagePercent} className="h-1.5 sm:h-2" />
+          <p className="text-[10px] sm:text-xs text-muted-foreground mt-1.5 sm:mt-2">{formatBytes(maxStorage - storageUsed)} remaining</p>
         </div>
 
         {/* Documents Card */}
         <div className="stat-card">
-          <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-lg bg-emerald-500/10">
-              <FileText className="h-5 w-5 text-emerald-500" />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+            <div className="p-2 sm:p-2.5 rounded-lg bg-emerald-500/10 w-fit">
+              <FileText className="h-4 w-4 sm:h-5 sm:w-5 text-emerald-500" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Documents</p>
-              <p className="text-xl font-semibold">{documents.length}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Documents</p>
+              <p className="text-lg sm:text-xl font-semibold">{documents.length}</p>
             </div>
           </div>
         </div>
 
         {/* Selected Card */}
         <div className="stat-card">
-          <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-lg bg-amber-500/10">
-              <CheckSquare className="h-5 w-5 text-amber-500" />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+            <div className="p-2 sm:p-2.5 rounded-lg bg-amber-500/10 w-fit">
+              <CheckSquare className="h-4 w-4 sm:h-5 sm:w-5 text-amber-500" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">Selected for Quiz</p>
-              <p className="text-xl font-semibold">{selectedDocIds.length}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Selected for Exam</p>
+              <p className="text-lg sm:text-xl font-semibold">{selectedDocIds.length}</p>
             </div>
           </div>
         </div>

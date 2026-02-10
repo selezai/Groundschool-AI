@@ -54,7 +54,6 @@ export default function QuizPage() {
         .single();
 
       if (quizError || !quizData) {
-        console.error("Quiz fetch error:", quizError);
         toast.error("Exam not found or access denied");
         router.push("/quizzes");
         return;
@@ -68,8 +67,7 @@ export default function QuizPage() {
         .order("order_index", { ascending: true });
 
       if (questionsError) {
-        console.error("Questions fetch error:", questionsError);
-        toast.error("Failed to load questions: " + questionsError.message);
+        toast.error("Failed to load questions. Please try again.");
         return;
       }
 
@@ -93,8 +91,7 @@ export default function QuizPage() {
       setQuestions(mappedQuestions);
       setIsLoading(false);
     } catch (err) {
-      console.error("Unexpected error:", err);
-      toast.error("An unexpected error occurred");
+      toast.error("Something went wrong. Please try again.");
       setIsLoading(false);
     }
   }, [id, user, supabase, router]);
@@ -332,7 +329,7 @@ export default function QuizPage() {
                   key={opt.id}
                   onClick={() => selectAnswer(opt.id)}
                   className={cn(
-                    "w-full text-left px-4 py-3 rounded-lg border transition-colors text-sm",
+                    "w-full text-left px-4 py-4 sm:py-3 rounded-xl border transition-colors text-sm min-h-[52px] active:scale-[0.98]",
                     isSelected
                       ? "border-primary bg-primary/10 text-foreground"
                       : "border-border hover:border-muted-foreground/50 hover:bg-muted/50 text-foreground"

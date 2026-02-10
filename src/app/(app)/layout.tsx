@@ -16,10 +16,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background safe-area-top">
       <Sidebar />
-      <main className="lg:ml-64 pt-14 lg:pt-0 min-h-screen">
-        <div className="p-4 md:p-6 lg:p-8 max-w-6xl mx-auto">
+      <main className="lg:ml-64 pt-16 lg:pt-0 min-h-screen safe-area-bottom">
+        <div className="px-4 py-6 md:p-6 lg:p-8 max-w-6xl mx-auto">
           {children}
         </div>
       </main>

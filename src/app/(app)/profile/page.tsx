@@ -121,7 +121,6 @@ export default function ProfilePage() {
       await signOut();
       router.push("/login");
     } catch (err) {
-      console.error("Delete account error:", err);
       toast.error("Failed to delete account. Please try again.");
     }
     setIsDeleting(false);

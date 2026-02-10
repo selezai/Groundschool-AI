@@ -36,7 +36,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         .single();
 
       if (error) {
-        console.error("Error fetching profile:", error.message);
         setProfile(null);
         return;
       }
@@ -113,7 +112,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (profileError) {
-        console.error("Error creating profile:", profileError.message);
+        // Profile creation failed silently
       }
     }
 

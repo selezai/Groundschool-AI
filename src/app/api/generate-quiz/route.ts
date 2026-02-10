@@ -193,17 +193,12 @@ export async function POST(request: Request) {
     // Try Groq first, fall back to Gemini
     let questions: QuizQuestion[];
     try {
-      console.log("Attempting quiz generation with Groq...");
       questions = await generateWithGroq(prompt);
-      console.log(`Groq generated ${questions.length} questions`);
     } catch (groqError) {
-      console.warn("Groq failed, falling back to Gemini:", groqError);
       try {
         questions = await generateWithGemini(prompt);
-        console.log(`Gemini generated ${questions.length} questions`);
       } catch (geminiError) {
-        console.error("Both AI providers failed:", geminiError);
-        return NextResponse.json(
+                return NextResponse.json(
           { error: "Failed to generate quiz. Please try again." },
           { status: 500 }
         );
@@ -245,7 +240,6 @@ export async function POST(request: Request) {
       .single();
 
     if (quizError || !quiz) {
-      console.error("Failed to create quiz:", quizError);
       return NextResponse.json(
         { error: "Failed to save quiz" },
         { status: 500 }
@@ -271,7 +265,6 @@ export async function POST(request: Request) {
       .insert(questionRows);
 
     if (questionsError) {
-      console.error("Failed to insert questions:", questionsError);
       // Clean up the quiz record
       await supabase.from("quizzes").delete().eq("id", quiz.id);
       return NextResponse.json(
@@ -282,7 +275,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ quizId: quiz.id, questionCount: questions.length });
   } catch (err) {
-    console.error("Quiz generation error:", err);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
