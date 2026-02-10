@@ -106,7 +106,7 @@ export default function DashboardPage() {
     });
 
     if (dbError) {
-      toast.error("Failed to save document record: " + dbError.message);
+      toast.error("Failed to save document record. Please try again.");
     } else {
       toast.success("Document uploaded successfully");
       fetchDocuments();

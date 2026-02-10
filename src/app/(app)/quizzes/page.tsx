@@ -62,6 +62,17 @@ export default function QuizzesPage() {
       return;
     }
 
+    // Delete attempt responses first (foreign key to quiz_attempts)
+    const { data: attempts } = await supabase
+      .from("quiz_attempts")
+      .select("id")
+      .eq("quiz_id", quizId);
+
+    if (attempts && attempts.length > 0) {
+      const attemptIds = attempts.map((a: { id: string }) => a.id);
+      await supabase.from("quiz_question_responses").delete().in("attempt_id", attemptIds);
+    }
+
     // Delete attempts
     await supabase.from("quiz_attempts").delete().eq("quiz_id", quizId);
 
