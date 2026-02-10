@@ -17,6 +17,8 @@ import {
   Trophy,
   RotateCcw,
   Home,
+  Star,
+  Target,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -160,21 +162,50 @@ export default function QuizPage() {
 
     return (
       <div className="max-w-2xl mx-auto space-y-6">
-        <Card>
-          <CardContent className="py-8 text-center">
-            <Trophy
-              className={cn(
-                "h-16 w-16 mx-auto mb-4",
-                passed ? "text-green-500" : "text-yellow-500"
+        <Card className={cn(
+          "overflow-hidden",
+          passed ? "border-green-500/30" : "border-yellow-500/30"
+        )}>
+          <div className={cn(
+            "h-2",
+            passed ? "bg-gradient-to-r from-green-500 to-emerald-400" : "bg-gradient-to-r from-yellow-500 to-orange-400"
+          )} />
+          <CardContent className="py-10 text-center">
+            <div className={cn(
+              "mx-auto w-20 h-20 rounded-full flex items-center justify-center mb-4",
+              passed ? "bg-green-500/10" : "bg-yellow-500/10"
+            )}>
+              {passed ? (
+                <Trophy className="h-10 w-10 text-green-500" />
+              ) : (
+                <Target className="h-10 w-10 text-yellow-500" />
               )}
-            />
-            <h2 className="text-2xl font-bold mb-2">
-              {passed ? "Well Done!" : "Keep Studying!"}
+            </div>
+            <h2 className="text-2xl font-bold mb-1">
+              {passed ? "Excellent Work!" : "Keep Practicing!"}
             </h2>
-            <p className="text-4xl font-bold text-primary mb-2">{score}%</p>
-            <p className="text-muted-foreground">
-              {correct} of {questions.length} correct
+            <p className="text-muted-foreground text-sm mb-4">
+              {passed ? "You're on track for success" : "Review the material and try again"}
             </p>
+            <div className={cn(
+              "inline-flex items-center gap-2 px-6 py-3 rounded-full mb-4",
+              passed ? "bg-green-500/10" : "bg-yellow-500/10"
+            )}>
+              <span className={cn(
+                "text-5xl font-bold",
+                passed ? "text-green-500" : "text-yellow-500"
+              )}>{score}%</span>
+            </div>
+            <p className="text-muted-foreground">
+              {correct} of {questions.length} questions correct
+            </p>
+            {passed && score >= 90 && (
+              <div className="flex items-center justify-center gap-1 mt-3 text-yellow-500">
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+              </div>
+            )}
           </CardContent>
         </Card>
 

@@ -18,7 +18,8 @@ import {
   Square,
   Loader2,
   Sparkles,
-  AlertCircle,
+  BookOpen,
+  FileUp,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -38,6 +39,15 @@ export default function DashboardPage() {
 
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
+
+  const getGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return "Good morning";
+    if (hour < 17) return "Good afternoon";
+    return "Good evening";
+  };
+
+  const firstName = profile?.full_name?.split(" ")[0] || "Pilot";
 
   const fetchDocuments = useCallback(async () => {
     if (!user) return;
@@ -177,9 +187,9 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="text-2xl font-bold">{getGreeting()}, {firstName}</h1>
         <p className="text-muted-foreground">
-          Upload study materials and generate practice exams
+          Upload study materials and generate AI-powered practice exams
         </p>
       </div>
 
@@ -257,13 +267,19 @@ export default function DashboardPage() {
           ))}
         </div>
       ) : documents.length === 0 ? (
-        <Card>
-          <CardContent className="py-12 text-center">
-            <FileText className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-            <h3 className="text-lg font-medium mb-1">No documents yet</h3>
-            <p className="text-muted-foreground text-sm">
-              Upload your study materials to get started
+        <Card className="border-dashed border-2">
+          <CardContent className="py-16 text-center">
+            <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <BookOpen className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">Ready to start studying?</h3>
+            <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
+              Upload your aviation study materials (PDFs, notes, images) and let AI generate practice exams for you.
             </p>
+            <Button onClick={() => fileInputRef.current?.click()} disabled={isUploading}>
+              <FileUp className="h-4 w-4 mr-2" />
+              Upload Your First Document
+            </Button>
           </CardContent>
         </Card>
       ) : (

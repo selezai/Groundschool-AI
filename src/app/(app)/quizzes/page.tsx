@@ -13,6 +13,7 @@ import {
   Trash2,
   Play,
   Loader2,
+  Sparkles,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -91,15 +92,18 @@ export default function QuizzesPage() {
           ))}
         </div>
       ) : quizzes.length === 0 ? (
-        <Card>
-          <CardContent className="py-12 text-center">
-            <ClipboardList className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-            <h3 className="text-lg font-medium mb-1">No quizzes yet</h3>
-            <p className="text-muted-foreground text-sm mb-4">
-              Generate your first quiz from the dashboard
+        <Card className="border-dashed border-2">
+          <CardContent className="py-16 text-center">
+            <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <ClipboardList className="h-8 w-8 text-primary" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">No quizzes yet</h3>
+            <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
+              Upload study materials and generate your first AI-powered practice exam.
             </p>
             <Button onClick={() => router.push("/dashboard")}>
-              Go to Dashboard
+              <Sparkles className="h-4 w-4 mr-2" />
+              Create Your First Quiz
             </Button>
           </CardContent>
         </Card>

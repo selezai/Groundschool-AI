@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Plane, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
+import Image from "next/image";
 import { toast } from "sonner";
 
 export default function LoginPage() {
@@ -73,19 +74,24 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-background">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background via-background to-primary/5">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center space-y-2">
-          <div className="flex justify-center mb-2">
-            <div className="rounded-full bg-primary/10 p-3">
-              <Plane className="h-8 w-8 text-primary" />
-            </div>
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/assets/logo.png"
+              alt="Groundschool AI"
+              width={80}
+              height={80}
+              className="rounded-2xl"
+              priority
+            />
           </div>
           <CardTitle className="text-2xl font-bold">Groundschool AI</CardTitle>
-          <CardDescription>
+          <CardDescription className="text-base">
             {isSignUp
-              ? "Create an account to start studying"
-              : "Sign in to your account"}
+              ? "Create your account to start studying"
+              : "Welcome back, pilot"}
           </CardDescription>
         </CardHeader>
         <CardContent>

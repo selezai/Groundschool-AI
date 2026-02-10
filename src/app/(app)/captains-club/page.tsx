@@ -11,8 +11,10 @@ import {
   HardDrive,
   Loader2,
   ShieldCheck,
+  Check,
   User,
 } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -129,45 +131,69 @@ export default function CaptainsClubPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6">
+    <div className="max-w-2xl mx-auto space-y-8">
+      {/* Hero Section */}
       <div className="text-center">
-        <Crown className="h-12 w-12 mx-auto text-primary mb-3" />
-        <h1 className="text-2xl font-bold">Upgrade to Captain&apos;s Club</h1>
-        <p className="text-muted-foreground mt-1">
-          Unlock exclusive features and elevate your study experience.
+        <div className="flex justify-center mb-4">
+          <Image
+            src="/assets/logo.png"
+            alt="Groundschool AI"
+            width={64}
+            height={64}
+            className="rounded-xl"
+          />
+        </div>
+        <h1 className="text-3xl font-bold">Captain&apos;s Club</h1>
+        <p className="text-muted-foreground mt-2 max-w-md mx-auto">
+          Unlock your full potential with unlimited access to all premium features.
         </p>
       </div>
 
-      <div className="space-y-4">
-        {benefits.map((benefit) => (
-          <Card key={benefit.title}>
-            <CardContent className="py-4 flex items-start gap-4">
-              <div className="rounded-lg bg-primary/10 p-2.5 flex-shrink-0">
-                <benefit.icon className="h-5 w-5 text-primary" />
+      {/* Pricing Card */}
+      <Card className="border-primary/50 bg-gradient-to-b from-primary/5 to-transparent">
+        <CardContent className="pt-8 pb-6 text-center">
+          <div className="inline-flex items-center gap-1 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-4">
+            <Crown className="h-3 w-3" />
+            MOST POPULAR
+          </div>
+          <div className="flex items-baseline justify-center gap-1 mb-2">
+            <span className="text-4xl font-bold">R99</span>
+            <span className="text-muted-foreground">/month</span>
+          </div>
+          <p className="text-sm text-muted-foreground mb-6">Cancel anytime</p>
+          
+          <div className="space-y-3 text-left max-w-xs mx-auto mb-6">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-medium">{benefit.title}</p>
+                  <p className="text-xs text-muted-foreground">{benefit.description}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-medium">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  {benefit.description}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+            ))}
+          </div>
 
-      <Button
-        className="w-full py-6 text-lg"
-        onClick={handleSubscribe}
-        disabled={isSubscribing}
-      >
-        {isSubscribing ? (
-          <Loader2 className="h-5 w-5 animate-spin mr-2" />
-        ) : (
-          <Crown className="h-5 w-5 mr-2" />
-        )}
-        Upgrade Now — R99/month
-      </Button>
+          <Button
+            className="w-full py-6 text-lg"
+            onClick={handleSubscribe}
+            disabled={isSubscribing}
+          >
+            {isSubscribing ? (
+              <Loader2 className="h-5 w-5 animate-spin mr-2" />
+            ) : (
+              <Crown className="h-5 w-5 mr-2" />
+            )}
+            Upgrade Now
+          </Button>
+        </CardContent>
+      </Card>
+
+      {/* Comparison */}
+      <div className="text-center text-sm text-muted-foreground">
+        <p>Currently on <span className="font-medium text-foreground">Basic Plan</span></p>
+        <p className="mt-1">5 quizzes/month • 100MB storage • Limited history</p>
+      </div>
     </div>
   );
 }

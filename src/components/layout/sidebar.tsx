@@ -6,15 +6,14 @@ import { useAuth } from "@/components/providers/auth-provider";
 import { cn } from "@/lib/utils";
 import {
   Home,
-  FileText,
   ClipboardList,
   User,
   Crown,
   LogOut,
-  Plane,
   Menu,
   X,
 } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -33,14 +32,25 @@ export function Sidebar() {
   const NavContent = () => (
     <div className="flex flex-col h-full">
       <div className="p-6 border-b border-border">
-        <Link href="/dashboard" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-          <Plane className="h-6 w-6 text-primary" />
+        <Link href="/dashboard" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
+          <Image
+            src="/assets/logo.png"
+            alt="Groundschool AI"
+            width={36}
+            height={36}
+            className="rounded-lg"
+          />
           <span className="text-lg font-bold">Groundschool AI</span>
         </Link>
         {profile && (
-          <p className="text-xs text-muted-foreground mt-2 truncate">
-            {profile.full_name || profile.email}
-          </p>
+          <div className="flex items-center gap-2 mt-4">
+            <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-semibold text-primary">
+              {(profile.full_name || profile.email || "U").charAt(0).toUpperCase()}
+            </div>
+            <p className="text-sm text-muted-foreground truncate">
+              {profile.full_name || profile.email}
+            </p>
+          </div>
         )}
       </div>
 
@@ -92,7 +102,13 @@ export function Sidebar() {
       {/* Mobile hamburger */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background border-b border-border px-4 py-3 flex items-center justify-between">
         <Link href="/dashboard" className="flex items-center gap-2">
-          <Plane className="h-5 w-5 text-primary" />
+          <Image
+            src="/assets/logo.png"
+            alt="Groundschool AI"
+            width={28}
+            height={28}
+            className="rounded-md"
+          />
           <span className="font-bold">Groundschool AI</span>
         </Link>
         <Button variant="ghost" size="icon" onClick={() => setMobileOpen(!mobileOpen)}>
