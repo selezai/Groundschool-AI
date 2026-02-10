@@ -7,7 +7,7 @@ import { createClient } from "@/lib/supabase/client";
 import { formatBytes, getMaxStorageForPlan } from "@/lib/constants";
 import type { Document } from "@/lib/types";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
@@ -185,29 +185,66 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">{getGreeting()}, {firstName}</h1>
-        <p className="text-muted-foreground">
-          Upload study materials and generate AI-powered practice exams
-        </p>
+    <div className="space-y-8">
+      {/* Hero Header */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent rounded-2xl" />
+        <div className="relative p-6 md:p-8">
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+            {getGreeting()}, {firstName}
+          </h1>
+          <p className="text-muted-foreground mt-2 text-lg">
+            Upload study materials and generate AI-powered practice exams
+          </p>
+        </div>
       </div>
 
-      {/* Storage Usage */}
-      <Card>
-        <CardContent className="pt-6">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium">Storage</span>
-            <span className="text-sm text-muted-foreground">
-              {formatBytes(storageUsed)} / {formatBytes(maxStorage)}
-            </span>
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Storage Card */}
+        <div className="stat-card">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2.5 rounded-lg bg-primary/10">
+              <Upload className="h-5 w-5 text-primary" />
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Storage Used</p>
+              <p className="text-xl font-semibold">{formatBytes(storageUsed)}</p>
+            </div>
           </div>
           <Progress value={storagePercent} className="h-2" />
-        </CardContent>
-      </Card>
+          <p className="text-xs text-muted-foreground mt-2">{formatBytes(maxStorage - storageUsed)} remaining</p>
+        </div>
 
-      {/* Upload + Generate */}
-      <div className="flex flex-wrap gap-3">
+        {/* Documents Card */}
+        <div className="stat-card">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-lg bg-emerald-500/10">
+              <FileText className="h-5 w-5 text-emerald-500" />
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Documents</p>
+              <p className="text-xl font-semibold">{documents.length}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Selected Card */}
+        <div className="stat-card">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-lg bg-amber-500/10">
+              <CheckSquare className="h-5 w-5 text-amber-500" />
+            </div>
+            <div>
+              <p className="text-sm text-muted-foreground">Selected for Quiz</p>
+              <p className="text-xl font-semibold">{selectedDocIds.length}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Action Bar */}
+      <div className="flex flex-col sm:flex-row gap-3 p-4 rounded-xl bg-card/50 border border-border/50">
         <input
           ref={fileInputRef}
           type="file"
@@ -218,29 +255,30 @@ export default function DashboardPage() {
         <Button
           onClick={() => fileInputRef.current?.click()}
           disabled={isUploading}
+          className="gap-2"
         >
           {isUploading ? (
-            <Loader2 className="h-4 w-4 animate-spin mr-2" />
+            <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
-            <Upload className="h-4 w-4 mr-2" />
+            <Upload className="h-4 w-4" />
           )}
           Upload Document
         </Button>
 
         <Button
-          variant="secondary"
           onClick={handleGenerateQuiz}
           disabled={isGenerating || selectedDocIds.length === 0}
+          className="gap-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70"
         >
           {isGenerating ? (
-            <Loader2 className="h-4 w-4 animate-spin mr-2" />
+            <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
-            <Sparkles className="h-4 w-4 mr-2" />
+            <Sparkles className="h-4 w-4" />
           )}
-          Generate Quiz ({selectedDocIds.length} selected)
+          Generate Quiz
         </Button>
 
-        <div className="flex items-center gap-2 ml-auto">
+        <div className="flex items-center gap-2 sm:ml-auto">
           <label htmlFor="numQuestions" className="text-sm text-muted-foreground whitespace-nowrap">
             Questions:
           </label>
@@ -248,7 +286,7 @@ export default function DashboardPage() {
             id="numQuestions"
             value={numberOfQuestions}
             onChange={(e) => setNumberOfQuestions(Number(e.target.value))}
-            className="bg-muted text-foreground text-sm rounded-md px-2 py-1.5 border border-border"
+            className="bg-secondary text-foreground text-sm rounded-lg px-3 py-2 border border-border/50 focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-all"
           >
             {[5, 10, 15, 20, 25, 30].map((n) => (
               <option key={n} value={n}>
@@ -259,6 +297,16 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      {/* Section Header */}
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg font-semibold">Your Documents</h2>
+        {documents.length > 0 && (
+          <span className="text-sm text-muted-foreground">
+            {selectedDocIds.length > 0 ? `${selectedDocIds.length} selected` : 'Select documents to generate quiz'}
+          </span>
+        )}
+      </div>
+
       {/* Documents List */}
       {isLoadingDocs ? (
         <div className="space-y-3">
@@ -267,63 +315,76 @@ export default function DashboardPage() {
           ))}
         </div>
       ) : documents.length === 0 ? (
-        <Card className="border-dashed border-2">
-          <CardContent className="py-16 text-center">
-            <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-              <BookOpen className="h-8 w-8 text-primary" />
+        <div className="relative rounded-2xl border-2 border-dashed border-border/50 bg-gradient-to-b from-card/50 to-transparent p-12 text-center">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+          <div className="relative">
+            <div className="mx-auto w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 shadow-lg shadow-primary/10">
+              <BookOpen className="h-10 w-10 text-primary" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Ready to start studying?</h3>
-            <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
+            <h3 className="text-xl font-semibold mb-3">Ready to start studying?</h3>
+            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
               Upload your aviation study materials (PDFs, notes, images) and let AI generate practice exams for you.
             </p>
-            <Button onClick={() => fileInputRef.current?.click()} disabled={isUploading}>
-              <FileUp className="h-4 w-4 mr-2" />
+            <Button 
+              onClick={() => fileInputRef.current?.click()} 
+              disabled={isUploading}
+              size="lg"
+              className="gap-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg shadow-primary/20"
+            >
+              <FileUp className="h-5 w-5" />
               Upload Your First Document
             </Button>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       ) : (
-        <div className="space-y-2">
+        <div className="grid gap-3">
           {documents.map((doc) => {
             const isSelected = selectedDocIds.includes(doc.id);
             return (
-              <Card
+              <div
                 key={doc.id}
-                className={`cursor-pointer transition-colors ${
-                  isSelected ? "border-primary bg-primary/5" : "hover:bg-muted/50"
-                }`}
                 onClick={() => toggleSelect(doc.id)}
+                className={`group relative cursor-pointer rounded-xl border p-4 transition-all duration-200 hover-lift ${
+                  isSelected 
+                    ? "border-primary/50 bg-primary/5 shadow-lg shadow-primary/5" 
+                    : "border-border/50 bg-card/50 hover:border-border hover:bg-card"
+                }`}
               >
-                <CardContent className="py-3 px-4 flex items-center gap-3">
+                <div className="flex items-center gap-4">
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
                       toggleSelect(doc.id);
                     }}
-                    className="text-muted-foreground hover:text-primary"
+                    className={`flex-shrink-0 rounded-lg p-2 transition-colors ${
+                      isSelected 
+                        ? "bg-primary text-primary-foreground" 
+                        : "bg-muted text-muted-foreground group-hover:bg-muted/80"
+                    }`}
                   >
                     {isSelected ? (
-                      <CheckSquare className="h-5 w-5 text-primary" />
+                      <CheckSquare className="h-4 w-4" />
                     ) : (
-                      <Square className="h-5 w-5" />
+                      <Square className="h-4 w-4" />
                     )}
                   </button>
 
-                  <FileText className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                  <div className="p-2 rounded-lg bg-muted/50">
+                    <FileText className="h-5 w-5 text-muted-foreground" />
+                  </div>
 
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium truncate">{doc.title}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {formatBytes(doc.file_size)} •{" "}
-                      {new Date(doc.created_at).toLocaleDateString()}
+                    <p className="font-medium truncate">{doc.title}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {formatBytes(doc.file_size)} • {new Date(doc.created_at).toLocaleDateString()}
                     </p>
                   </div>
 
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="text-muted-foreground hover:text-destructive flex-shrink-0"
+                    className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDelete(doc.id);
@@ -331,8 +392,8 @@ export default function DashboardPage() {
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             );
           })}
         </div>

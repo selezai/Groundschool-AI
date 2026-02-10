@@ -31,30 +31,44 @@ export function Sidebar() {
 
   const NavContent = () => (
     <div className="flex flex-col h-full">
-      <div className="p-6 border-b border-border">
+      <div className="p-5">
         <Link href="/dashboard" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-          <Image
-            src="/assets/logo.png"
-            alt="Groundschool AI"
-            width={36}
-            height={36}
-            className="rounded-lg"
-          />
-          <span className="text-lg font-bold">Groundschool AI</span>
-        </Link>
-        {profile && (
-          <div className="flex items-center gap-2 mt-4">
-            <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-semibold text-primary">
-              {(profile.full_name || profile.email || "U").charAt(0).toUpperCase()}
-            </div>
-            <p className="text-sm text-muted-foreground truncate">
-              {profile.full_name || profile.email}
-            </p>
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg" />
+            <Image
+              src="/assets/logo.png"
+              alt="Groundschool AI"
+              width={40}
+              height={40}
+              className="relative rounded-xl"
+            />
           </div>
-        )}
+          <div>
+            <span className="text-lg font-bold">Groundschool AI</span>
+            <p className="text-xs text-muted-foreground">Aviation Exam Prep</p>
+          </div>
+        </Link>
       </div>
 
-      <nav className="flex-1 p-4 space-y-1">
+      {profile && (
+        <div className="mx-4 mb-4 p-3 rounded-xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/10">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20">
+              {(profile.full_name || profile.email || "U").charAt(0).toUpperCase()}
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium truncate">
+                {profile.full_name || "Pilot"}
+              </p>
+              <p className="text-xs text-muted-foreground truncate">
+                {profile.plan === "captains_club" ? "Captain's Club" : "Basic Plan"}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <nav className="flex-1 px-3 space-y-1">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -63,17 +77,25 @@ export function Sidebar() {
               href={item.href}
               onClick={() => setMobileOpen(false)}
               className={cn(
-                "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
+                "group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200",
                 isActive
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
               )}
             >
-              <item.icon className="h-4 w-4" />
+              <div className={cn(
+                "p-1.5 rounded-lg transition-colors",
+                isActive ? "bg-white/20" : "bg-muted/50 group-hover:bg-muted"
+              )}>
+                <item.icon className="h-4 w-4" />
+              </div>
               {item.label}
               {item.label === "Captain's Club" && profile?.plan === "captains_club" && (
-                <span className="ml-auto text-xs bg-primary/20 text-primary px-1.5 py-0.5 rounded">
-                  Active
+                <span className={cn(
+                  "ml-auto text-[10px] font-semibold px-2 py-0.5 rounded-full",
+                  isActive ? "bg-white/20 text-white" : "bg-emerald-500/10 text-emerald-500"
+                )}>
+                  PRO
                 </span>
               )}
             </Link>
@@ -81,16 +103,18 @@ export function Sidebar() {
         })}
       </nav>
 
-      <div className="p-4 border-t border-border">
+      <div className="p-3">
         <Button
           variant="ghost"
-          className="w-full justify-start gap-3 text-muted-foreground hover:text-destructive"
+          className="w-full justify-start gap-3 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl"
           onClick={() => {
             signOut();
             setMobileOpen(false);
           }}
         >
-          <LogOut className="h-4 w-4" />
+          <div className="p-1.5 rounded-lg bg-muted/50">
+            <LogOut className="h-4 w-4" />
+          </div>
           Sign Out
         </Button>
       </div>
@@ -135,7 +159,7 @@ export function Sidebar() {
       </aside>
 
       {/* Desktop sidebar */}
-      <aside className="hidden lg:block fixed top-0 left-0 h-full w-64 bg-card border-r border-border">
+      <aside className="hidden lg:block fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-card to-background border-r border-border/50">
         <NavContent />
       </aside>
     </>
