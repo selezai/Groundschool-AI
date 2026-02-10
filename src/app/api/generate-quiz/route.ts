@@ -39,16 +39,28 @@ function getMimeType(contentType: string, filePath: string): string {
 
 async function extractTextFromPdf(buffer: Buffer): Promise<string> {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const pdfParse = require("pdf-parse");
-    const pdfData = await pdfParse(buffer);
-    return pdfData.text || "";
-  } catch {
-    try {
-      return buffer.toString("utf-8");
-    } catch {
-      return "";
+    // Use pdfjs-dist for serverless compatibility
+    const pdfjsLib = await import("pdfjs-dist/legacy/build/pdf.mjs");
+    
+    const loadingTask = pdfjsLib.getDocument({ data: buffer });
+    const pdf = await loadingTask.promise;
+    
+    const textParts: string[] = [];
+    
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const textContent = await page.getTextContent();
+      const pageText = textContent.items
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map((item: any) => item.str || "")
+        .join(" ");
+      textParts.push(pageText);
     }
+    
+    return textParts.join("\n\n");
+  } catch {
+    // If PDF parsing fails, return empty - the PDF might be scanned/image-based
+    return "";
   }
 }
 
