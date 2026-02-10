@@ -26,9 +26,9 @@ export interface Quiz {
   id: string;
   user_id: string;
   title: string;
-  document_id: string | null;
-  difficulty: string | null;
+  document_ids: string[];
   question_count: number;
+  status: string;
   created_at: string;
 }
 
@@ -46,8 +46,12 @@ export interface QuizAttempt {
   quiz_id: string;
   user_id: string;
   score: number;
-  total_questions: number;
   completion_time: number | null;
-  answers: Record<string, string>;
   attempted_at: string;
+  metadata: {
+    total_questions?: number;
+    answers?: Record<string, string>;
+    appVersion?: string;
+    platform?: string;
+  } | null;
 }

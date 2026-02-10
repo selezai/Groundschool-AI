@@ -236,8 +236,10 @@ export async function POST(request: Request) {
       .insert({
         user_id: userId,
         title: quizTitle,
-        document_id: documentIds[0],
+        document_ids: documentIds,
         question_count: questions.length,
+        status: "active",
+        created_at: new Date().toISOString(),
       })
       .select()
       .single();

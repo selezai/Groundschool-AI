@@ -150,16 +150,19 @@ export default function QuizPage() {
     const finalScore = Math.round((correct / questions.length) * 100);
     setScore(finalScore);
 
-    // Save attempt
+    // Save attempt with columns matching existing Supabase schema
     if (user) {
       const completionTime = Math.round((Date.now() - startTime) / 1000);
       await supabase.from("quiz_attempts").insert({
         quiz_id: id,
         user_id: user.id,
         score: finalScore,
-        total_questions: questions.length,
         completion_time: completionTime,
-        answers,
+        attempted_at: new Date().toISOString(),
+        metadata: {
+          total_questions: questions.length,
+          answers,
+        },
       });
     }
 
