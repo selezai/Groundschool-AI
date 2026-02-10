@@ -122,37 +122,6 @@ async function getDocumentContents(
   return contents;
 }
 
-function buildPrompt(documentText: string, numberOfQuestions: number): string {
-  return `You are an aviation exam question generator. Based on the following study material, generate exactly ${numberOfQuestions} multiple-choice questions.
-
-RULES:
-- Each question must have exactly 4 options labeled a, b, c, d
-- Only one option should be correct
-- Include a brief explanation for the correct answer
-- Questions should test understanding, not just memorization
-- Focus on key aviation concepts, regulations, and procedures
-
-STUDY MATERIAL:
-${documentText.substring(0, 30000)}
-
-Respond ONLY with valid JSON in this exact format:
-{
-  "questions": [
-    {
-      "question_text": "What is...",
-      "options": [
-        {"id": "a", "text": "Option A"},
-        {"id": "b", "text": "Option B"},
-        {"id": "c", "text": "Option C"},
-        {"id": "d", "text": "Option D"}
-      ],
-      "correct_answer_id": "a",
-      "explanation": "The correct answer is A because..."
-    }
-  ]
-}`;
-}
-
 function parseQuestions(raw: string): QuizQuestion[] {
   // Try to extract JSON from the response
   let jsonStr = raw;
@@ -177,8 +146,60 @@ function parseQuestions(raw: string): QuizQuestion[] {
   });
 }
 
-async function generateWithGroq(prompt: string): Promise<QuizQuestion[]> {
+// Groq multimodal with Llama 4 Scout - supports text and images
+async function generateWithGroqMultimodal(
+  contents: DocumentContent[],
+  numberOfQuestions: number
+): Promise<QuizQuestion[]> {
   if (!GROQ_API_KEY) throw new Error("GROQ_API_KEY not configured");
+
+  const promptText = `You are an aviation exam question generator. Based on the following study materials (text and/or images), generate exactly ${numberOfQuestions} multiple-choice questions.
+
+RULES:
+- Each question must have exactly 4 options labeled a, b, c, d
+- Only one option should be correct
+- Include a brief explanation for the correct answer
+- Questions should test understanding, not just memorization
+- Focus on key aviation concepts, regulations, and procedures
+- If images contain diagrams, charts, or text, use that information to create questions
+
+Respond ONLY with valid JSON in this exact format:
+{
+  "questions": [
+    {
+      "question_text": "What is...",
+      "options": [
+        {"id": "a", "text": "Option A"},
+        {"id": "b", "text": "Option B"},
+        {"id": "c", "text": "Option C"},
+        {"id": "d", "text": "Option D"}
+      ],
+      "correct_answer_id": "a",
+      "explanation": "The correct answer is A because..."
+    }
+  ]
+}`;
+
+  // Build message content array with text and images
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const messageContent: any[] = [{ type: "text", text: promptText }];
+
+  for (const doc of contents) {
+    if (doc.type === "text" && doc.text) {
+      messageContent.push({
+        type: "text",
+        text: `\n--- Document: ${doc.title} ---\n${doc.text.substring(0, 30000)}`,
+      });
+    } else if (doc.type === "image" && doc.imageBase64) {
+      messageContent.push({ type: "text", text: `\n--- Image: ${doc.title} ---` });
+      messageContent.push({
+        type: "image_url",
+        image_url: {
+          url: `data:${doc.mimeType || "image/jpeg"};base64,${doc.imageBase64}`,
+        },
+      });
+    }
+  }
 
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -187,11 +208,10 @@ async function generateWithGroq(prompt: string): Promise<QuizQuestion[]> {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
-      messages: [{ role: "user", content: prompt }],
+      model: "meta-llama/llama-4-scout-17b-16e-instruct",
+      messages: [{ role: "user", content: messageContent }],
       temperature: 0.7,
-      max_tokens: 8000,
-      response_format: { type: "json_object" },
+      max_completion_tokens: 8000,
     }),
   });
 
@@ -203,37 +223,6 @@ async function generateWithGroq(prompt: string): Promise<QuizQuestion[]> {
   const data = await res.json();
   const content = data.choices?.[0]?.message?.content;
   if (!content) throw new Error("Empty response from Groq");
-
-  return parseQuestions(content);
-}
-
-async function generateWithGemini(prompt: string): Promise<QuizQuestion[]> {
-  if (!GOOGLE_API_KEY) throw new Error("GOOGLE_API_KEY not configured");
-
-  const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE_API_KEY}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 8000,
-          responseMimeType: "application/json",
-        },
-      }),
-    }
-  );
-
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Gemini API error ${res.status}: ${errText}`);
-  }
-
-  const data = await res.json();
-  const content = data.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (!content) throw new Error("Empty response from Gemini");
 
   return parseQuestions(content);
 }
@@ -349,40 +338,21 @@ export async function POST(request: Request) {
       );
     }
 
-    // Check if we have any images - if so, use multimodal Gemini
-    const hasImages = contents.some((c) => c.type === "image");
+    // Use Groq (Llama 4 Scout) as primary, Gemini as fallback
+    // Both support multimodal (text + images)
     let questions: QuizQuestion[];
 
-    if (hasImages) {
-      // Use Gemini multimodal for images
+    try {
+      questions = await generateWithGroqMultimodal(contents, numberOfQuestions);
+    } catch {
+      // Fallback to Gemini multimodal
       try {
         questions = await generateWithGeminiMultimodal(contents, numberOfQuestions);
       } catch {
         return NextResponse.json(
-          { error: "Failed to generate quiz from images. Please try again." },
+          { error: "Failed to generate quiz. Please try again." },
           { status: 500 }
         );
-      }
-    } else {
-      // Text only - try Groq first, fall back to Gemini
-      const textContent = contents
-        .filter((c) => c.type === "text" && c.text)
-        .map((c) => `--- Document: ${c.title} ---\n${c.text}`)
-        .join("\n\n");
-
-      const prompt = buildPrompt(textContent, numberOfQuestions);
-
-      try {
-        questions = await generateWithGroq(prompt);
-      } catch {
-        try {
-          questions = await generateWithGemini(prompt);
-        } catch {
-          return NextResponse.json(
-            { error: "Failed to generate quiz. Please try again." },
-            { status: 500 }
-          );
-        }
       }
     }
 
