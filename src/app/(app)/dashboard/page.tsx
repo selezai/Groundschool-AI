@@ -278,22 +278,27 @@ export default function DashboardPage() {
           Generate Quiz
         </Button>
 
-        <div className="flex items-center gap-2 sm:ml-auto">
-          <label htmlFor="numQuestions" className="text-sm text-muted-foreground whitespace-nowrap">
-            Questions:
-          </label>
-          <select
-            id="numQuestions"
-            value={numberOfQuestions}
-            onChange={(e) => setNumberOfQuestions(Number(e.target.value))}
-            className="bg-secondary text-foreground text-sm rounded-lg px-3 py-2 border border-border/50 focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-all"
-          >
-            {[5, 10, 15, 20, 25, 30].map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
-            ))}
-          </select>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:ml-auto">
+          <div className="flex items-center gap-2">
+            <label htmlFor="numQuestions" className="text-sm text-muted-foreground whitespace-nowrap">
+              Questions:
+            </label>
+            <select
+              id="numQuestions"
+              value={numberOfQuestions}
+              onChange={(e) => setNumberOfQuestions(Number(e.target.value))}
+              className="bg-secondary text-foreground text-sm rounded-lg px-3 py-2 border border-border/50 focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-all"
+            >
+              {[5, 10, 15, 20, 25, 30, 40, 50, 75, 100].map((n) => (
+                <option key={n} value={n}>
+                  {n}
+                </option>
+              ))}
+            </select>
+          </div>
+          <p className="text-xs text-muted-foreground/70 italic">
+            Actual count depends on document content
+          </p>
         </div>
       </div>
 
