@@ -41,40 +41,59 @@ export default function QuizPage() {
   const [showExplanation, setShowExplanation] = useState(false);
 
   const fetchQuiz = useCallback(async () => {
-    if (!id) return;
+    if (!id || !user) return;
     setIsLoading(true);
 
-    const { data: quizData, error: quizError } = await supabase
-      .from("quizzes")
-      .select("*")
-      .eq("id", id)
-      .single();
+    try {
+      // Fetch quiz with user ownership check
+      const { data: quizData, error: quizError } = await supabase
+        .from("quizzes")
+        .select("*")
+        .eq("id", id)
+        .eq("user_id", user.id)
+        .single();
 
-    if (quizError || !quizData) {
-      toast.error("Quiz not found");
-      router.push("/quizzes");
-      return;
+      if (quizError || !quizData) {
+        console.error("Quiz fetch error:", quizError);
+        toast.error("Quiz not found or access denied");
+        router.push("/quizzes");
+        return;
+      }
+
+      // Fetch questions for this quiz
+      const { data: questionsData, error: questionsError } = await supabase
+        .from("quiz_questions")
+        .select("*")
+        .eq("quiz_id", id)
+        .order("id");
+
+      if (questionsError) {
+        console.error("Questions fetch error:", questionsError);
+        toast.error("Failed to load questions: " + questionsError.message);
+        return;
+      }
+
+      if (!questionsData || questionsData.length === 0) {
+        toast.error("No questions found for this quiz");
+        router.push("/quizzes");
+        return;
+      }
+
+      setQuiz(quizData);
+      setQuestions(questionsData);
+      setIsLoading(false);
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      toast.error("An unexpected error occurred");
+      setIsLoading(false);
     }
-
-    const { data: questionsData, error: questionsError } = await supabase
-      .from("quiz_questions")
-      .select("*")
-      .eq("quiz_id", id)
-      .order("id");
-
-    if (questionsError) {
-      toast.error("Failed to load questions");
-      return;
-    }
-
-    setQuiz(quizData);
-    setQuestions(questionsData ?? []);
-    setIsLoading(false);
-  }, [id, supabase, router]);
+  }, [id, user, supabase, router]);
 
   useEffect(() => {
-    fetchQuiz();
-  }, [fetchQuiz]);
+    if (user) {
+      fetchQuiz();
+    }
+  }, [fetchQuiz, user]);
 
   const currentQuestion = questions[currentIndex];
   const progressPercent = questions.length > 0 ? ((currentIndex + 1) / questions.length) * 100 : 0;
