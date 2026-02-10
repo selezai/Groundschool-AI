@@ -11,6 +11,52 @@ interface QuizQuestion {
   explanation: string;
 }
 
+async function extractTextFromFile(
+  fileData: Blob,
+  contentType: string,
+  filePath: string
+): Promise<string> {
+  const buffer = Buffer.from(await fileData.arrayBuffer());
+  
+  // Handle PDFs
+  if (contentType === "application/pdf" || filePath.toLowerCase().endsWith(".pdf")) {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const pdfParse = require("pdf-parse");
+      const pdfData = await pdfParse(buffer);
+      return pdfData.text || "";
+    } catch {
+      // If pdf-parse fails, try reading as text (some PDFs are text-based)
+      try {
+        return buffer.toString("utf-8");
+      } catch {
+        return "";
+      }
+    }
+  }
+  
+  // Handle plain text files
+  if (
+    contentType.startsWith("text/") ||
+    filePath.endsWith(".txt") ||
+    filePath.endsWith(".md")
+  ) {
+    return buffer.toString("utf-8");
+  }
+  
+  // Handle images - return empty for now (would need OCR)
+  if (contentType.startsWith("image/")) {
+    return "[Image file - text extraction not supported]";
+  }
+  
+  // Try to read as text for unknown types
+  try {
+    return buffer.toString("utf-8");
+  } catch {
+    return "";
+  }
+}
+
 async function getDocumentTexts(
   supabase: Awaited<ReturnType<typeof createClient>>,
   documentIds: string[],
@@ -34,8 +80,10 @@ async function getDocumentTexts(
 
     if (!fileData) continue;
 
-    const text = await fileData.text();
-    texts.push(`--- Document: ${doc.title} ---\n${text}`);
+    const text = await extractTextFromFile(fileData, doc.content_type || "", doc.file_path);
+    if (text && text.trim().length > 0) {
+      texts.push(`--- Document: ${doc.title} ---\n${text}`);
+    }
   }
 
   return texts.join("\n\n");
