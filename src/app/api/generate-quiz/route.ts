@@ -11,22 +11,63 @@ interface QuizQuestion {
   explanation: string;
 }
 
+async function extractTextFromImage(buffer: Buffer): Promise<string> {
+  if (!GOOGLE_API_KEY) {
+    return "";
+  }
+
+  try {
+    const base64Image = buffer.toString("base64");
+    
+    const response = await fetch(
+      `https://vision.googleapis.com/v1/images:annotate?key=${GOOGLE_API_KEY}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          requests: [
+            {
+              image: { content: base64Image },
+              features: [{ type: "TEXT_DETECTION", maxResults: 1 }],
+            },
+          ],
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      return "";
+    }
+
+    const data = await response.json();
+    const textAnnotations = data.responses?.[0]?.textAnnotations;
+    
+    if (textAnnotations && textAnnotations.length > 0) {
+      return textAnnotations[0].description || "";
+    }
+    
+    return "";
+  } catch {
+    return "";
+  }
+}
+
 async function extractTextFromFile(
   fileData: Blob,
   contentType: string,
   filePath: string
 ): Promise<string> {
   const buffer = Buffer.from(await fileData.arrayBuffer());
+  const lowerPath = filePath.toLowerCase();
   
   // Handle PDFs
-  if (contentType === "application/pdf" || filePath.toLowerCase().endsWith(".pdf")) {
+  if (contentType === "application/pdf" || lowerPath.endsWith(".pdf")) {
     try {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
       const pdfParse = require("pdf-parse");
       const pdfData = await pdfParse(buffer);
       return pdfData.text || "";
     } catch {
-      // If pdf-parse fails, try reading as text (some PDFs are text-based)
       try {
         return buffer.toString("utf-8");
       } catch {
@@ -35,18 +76,21 @@ async function extractTextFromFile(
     }
   }
   
+  // Handle images with OCR (PNG, JPG, JPEG, HEIC, WEBP)
+  const imageExtensions = [".png", ".jpg", ".jpeg", ".heic", ".heif", ".webp", ".gif", ".bmp"];
+  const isImage = contentType.startsWith("image/") || imageExtensions.some(ext => lowerPath.endsWith(ext));
+  
+  if (isImage) {
+    return await extractTextFromImage(buffer);
+  }
+  
   // Handle plain text files
   if (
     contentType.startsWith("text/") ||
-    filePath.endsWith(".txt") ||
-    filePath.endsWith(".md")
+    lowerPath.endsWith(".txt") ||
+    lowerPath.endsWith(".md")
   ) {
     return buffer.toString("utf-8");
-  }
-  
-  // Handle images - return empty for now (would need OCR)
-  if (contentType.startsWith("image/")) {
-    return "[Image file - text extraction not supported]";
   }
   
   // Try to read as text for unknown types
