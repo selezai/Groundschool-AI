@@ -83,37 +83,37 @@
 }
 
 .dark {
-  --background: 230 25% 5%;
-  --foreground: 210 40% 98%;
-  --card: 230 25% 8%;
-  --card-foreground: 210 40% 98%;
-  --popover: 230 25% 8%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 210 100% 60%;
-  --primary-foreground: 230 25% 5%;
-  --secondary: 230 20% 14%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 230 20% 14%;
-  --muted-foreground: 215 20% 55%;
-  --accent: 230 20% 14%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 72% 51%;
-  --border: 230 20% 14%;
-  --input: 230 20% 14%;
-  --ring: 210 100% 60%;
-  --chart-1: 210 100% 60%;
-  --chart-2: 160 84% 39%;
-  --chart-3: 38 92% 50%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
-  --sidebar: 230 25% 6%;
-  --sidebar-foreground: 210 40% 98%;
-  --sidebar-primary: 210 100% 60%;
-  --sidebar-primary-foreground: 230 25% 5%;
-  --sidebar-accent: 230 20% 12%;
-  --sidebar-accent-foreground: 210 40% 98%;
-  --sidebar-border: 230 20% 12%;
-  --sidebar-ring: 210 100% 60%;
+  --background: hsl(230 25% 5%);
+  --foreground: hsl(210 40% 98%);
+  --card: hsl(230 25% 8%);
+  --card-foreground: hsl(210 40% 98%);
+  --popover: hsl(230 25% 8%);
+  --popover-foreground: hsl(210 40% 98%);
+  --primary: hsl(210 100% 60%);
+  --primary-foreground: hsl(230 25% 5%);
+  --secondary: hsl(230 20% 14%);
+  --secondary-foreground: hsl(210 40% 98%);
+  --muted: hsl(230 20% 14%);
+  --muted-foreground: hsl(215 20% 55%);
+  --accent: hsl(230 20% 14%);
+  --accent-foreground: hsl(210 40% 98%);
+  --destructive: hsl(0 72% 51%);
+  --border: hsl(230 20% 18%);
+  --input: hsl(230 20% 14%);
+  --ring: hsl(210 100% 60%);
+  --chart-1: hsl(210 100% 60%);
+  --chart-2: hsl(160 84% 39%);
+  --chart-3: hsl(38 92% 50%);
+  --chart-4: hsl(280 65% 60%);
+  --chart-5: hsl(340 75% 55%);
+  --sidebar: hsl(230 25% 6%);
+  --sidebar-foreground: hsl(210 40% 98%);
+  --sidebar-primary: hsl(210 100% 60%);
+  --sidebar-primary-foreground: hsl(230 25% 5%);
+  --sidebar-accent: hsl(230 20% 12%);
+  --sidebar-accent-foreground: hsl(210 40% 98%);
+  --sidebar-border: hsl(230 20% 12%);
+  --sidebar-ring: hsl(210 100% 60%);
 }
 
 @layer base {
