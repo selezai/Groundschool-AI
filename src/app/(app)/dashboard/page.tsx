@@ -102,11 +102,12 @@ export default function DashboardPage() {
       title,
       file_path: filePath,
       file_size: file.size,
-      content_type: file.type,
+      mime_type: file.type,
+      created_at: new Date().toISOString(),
     });
 
     if (dbError) {
-      toast.error("Failed to save document record");
+      toast.error("Failed to save document record: " + dbError.message);
     } else {
       toast.success("Document uploaded successfully");
       fetchDocuments();

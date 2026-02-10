@@ -18,7 +18,7 @@ export interface Document {
   title: string;
   file_path: string;
   file_size: number;
-  content_type: string;
+  mime_type: string;
   created_at: string;
 }
 
