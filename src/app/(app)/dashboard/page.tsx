@@ -102,8 +102,7 @@ export default function DashboardPage() {
       title,
       file_path: filePath,
       file_size: file.size,
-      mime_type: file.type,
-      created_at: new Date().toISOString(),
+      document_type: file.type || "application/octet-stream",
     });
 
     if (dbError) {

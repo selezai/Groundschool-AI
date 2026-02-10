@@ -74,7 +74,7 @@ async function getDocumentContents(
   for (const docId of documentIds) {
     const { data: doc } = await supabase
       .from("documents")
-      .select("file_path, title, mime_type")
+      .select("file_path, title, document_type")
       .eq("id", docId)
       .eq("user_id", userId)
       .single();
@@ -89,7 +89,7 @@ async function getDocumentContents(
 
     const buffer = Buffer.from(await fileData.arrayBuffer());
     const lowerPath = doc.file_path.toLowerCase();
-    const contentType = doc.mime_type || "";
+    const contentType = doc.document_type || "";
 
     // Handle PDFs - extract text
     if (contentType === "application/pdf" || lowerPath.endsWith(".pdf")) {
