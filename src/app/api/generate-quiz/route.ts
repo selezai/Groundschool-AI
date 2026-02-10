@@ -11,102 +11,53 @@ interface QuizQuestion {
   explanation: string;
 }
 
-async function extractTextFromImage(buffer: Buffer): Promise<string> {
-  if (!GOOGLE_API_KEY) {
-    return "";
-  }
+interface DocumentContent {
+  title: string;
+  type: "text" | "image";
+  text?: string;
+  imageBase64?: string;
+  mimeType?: string;
+}
 
+const IMAGE_EXTENSIONS = [".png", ".jpg", ".jpeg", ".heic", ".heif", ".webp", ".gif", ".bmp"];
+
+function isImageFile(contentType: string, filePath: string): boolean {
+  const lowerPath = filePath.toLowerCase();
+  return contentType.startsWith("image/") || IMAGE_EXTENSIONS.some(ext => lowerPath.endsWith(ext));
+}
+
+function getMimeType(contentType: string, filePath: string): string {
+  if (contentType && contentType !== "application/octet-stream") return contentType;
+  const lowerPath = filePath.toLowerCase();
+  if (lowerPath.endsWith(".png")) return "image/png";
+  if (lowerPath.endsWith(".jpg") || lowerPath.endsWith(".jpeg")) return "image/jpeg";
+  if (lowerPath.endsWith(".webp")) return "image/webp";
+  if (lowerPath.endsWith(".gif")) return "image/gif";
+  if (lowerPath.endsWith(".heic") || lowerPath.endsWith(".heif")) return "image/heic";
+  return "image/jpeg";
+}
+
+async function extractTextFromPdf(buffer: Buffer): Promise<string> {
   try {
-    const base64Image = buffer.toString("base64");
-    
-    const response = await fetch(
-      `https://vision.googleapis.com/v1/images:annotate?key=${GOOGLE_API_KEY}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          requests: [
-            {
-              image: { content: base64Image },
-              features: [{ type: "TEXT_DETECTION", maxResults: 1 }],
-            },
-          ],
-        }),
-      }
-    );
-
-    if (!response.ok) {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const pdfParse = require("pdf-parse");
+    const pdfData = await pdfParse(buffer);
+    return pdfData.text || "";
+  } catch {
+    try {
+      return buffer.toString("utf-8");
+    } catch {
       return "";
     }
-
-    const data = await response.json();
-    const textAnnotations = data.responses?.[0]?.textAnnotations;
-    
-    if (textAnnotations && textAnnotations.length > 0) {
-      return textAnnotations[0].description || "";
-    }
-    
-    return "";
-  } catch {
-    return "";
   }
 }
 
-async function extractTextFromFile(
-  fileData: Blob,
-  contentType: string,
-  filePath: string
-): Promise<string> {
-  const buffer = Buffer.from(await fileData.arrayBuffer());
-  const lowerPath = filePath.toLowerCase();
-  
-  // Handle PDFs
-  if (contentType === "application/pdf" || lowerPath.endsWith(".pdf")) {
-    try {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const pdfParse = require("pdf-parse");
-      const pdfData = await pdfParse(buffer);
-      return pdfData.text || "";
-    } catch {
-      try {
-        return buffer.toString("utf-8");
-      } catch {
-        return "";
-      }
-    }
-  }
-  
-  // Handle images with OCR (PNG, JPG, JPEG, HEIC, WEBP)
-  const imageExtensions = [".png", ".jpg", ".jpeg", ".heic", ".heif", ".webp", ".gif", ".bmp"];
-  const isImage = contentType.startsWith("image/") || imageExtensions.some(ext => lowerPath.endsWith(ext));
-  
-  if (isImage) {
-    return await extractTextFromImage(buffer);
-  }
-  
-  // Handle plain text files
-  if (
-    contentType.startsWith("text/") ||
-    lowerPath.endsWith(".txt") ||
-    lowerPath.endsWith(".md")
-  ) {
-    return buffer.toString("utf-8");
-  }
-  
-  // Try to read as text for unknown types
-  try {
-    return buffer.toString("utf-8");
-  } catch {
-    return "";
-  }
-}
-
-async function getDocumentTexts(
+async function getDocumentContents(
   supabase: Awaited<ReturnType<typeof createClient>>,
   documentIds: string[],
   userId: string
-): Promise<string> {
-  const texts: string[] = [];
+): Promise<DocumentContent[]> {
+  const contents: DocumentContent[] = [];
 
   for (const docId of documentIds) {
     const { data: doc } = await supabase
@@ -124,13 +75,51 @@ async function getDocumentTexts(
 
     if (!fileData) continue;
 
-    const text = await extractTextFromFile(fileData, doc.content_type || "", doc.file_path);
-    if (text && text.trim().length > 0) {
-      texts.push(`--- Document: ${doc.title} ---\n${text}`);
+    const buffer = Buffer.from(await fileData.arrayBuffer());
+    const lowerPath = doc.file_path.toLowerCase();
+    const contentType = doc.content_type || "";
+
+    // Handle PDFs - extract text
+    if (contentType === "application/pdf" || lowerPath.endsWith(".pdf")) {
+      const text = await extractTextFromPdf(buffer);
+      if (text.trim()) {
+        contents.push({ title: doc.title, type: "text", text });
+      }
+      continue;
+    }
+
+    // Handle images - keep as base64 for multimodal AI
+    if (isImageFile(contentType, doc.file_path)) {
+      contents.push({
+        title: doc.title,
+        type: "image",
+        imageBase64: buffer.toString("base64"),
+        mimeType: getMimeType(contentType, doc.file_path),
+      });
+      continue;
+    }
+
+    // Handle text files
+    if (contentType.startsWith("text/") || lowerPath.endsWith(".txt") || lowerPath.endsWith(".md")) {
+      const text = buffer.toString("utf-8");
+      if (text.trim()) {
+        contents.push({ title: doc.title, type: "text", text });
+      }
+      continue;
+    }
+
+    // Try as text for unknown types
+    try {
+      const text = buffer.toString("utf-8");
+      if (text.trim()) {
+        contents.push({ title: doc.title, type: "text", text });
+      }
+    } catch {
+      // Skip if can't read
     }
   }
 
-  return texts.join("\n\n");
+  return contents;
 }
 
 function buildPrompt(documentText: string, numberOfQuestions: number): string {
@@ -249,6 +238,86 @@ async function generateWithGemini(prompt: string): Promise<QuizQuestion[]> {
   return parseQuestions(content);
 }
 
+// Multimodal Gemini - can process images directly
+async function generateWithGeminiMultimodal(
+  contents: DocumentContent[],
+  numberOfQuestions: number
+): Promise<QuizQuestion[]> {
+  if (!GOOGLE_API_KEY) throw new Error("GOOGLE_API_KEY not configured");
+
+  const promptText = `You are an aviation exam question generator. Based on the following study materials (text and/or images), generate exactly ${numberOfQuestions} multiple-choice questions.
+
+RULES:
+- Each question must have exactly 4 options labeled a, b, c, d
+- Only one option should be correct
+- Include a brief explanation for the correct answer
+- Questions should test understanding, not just memorization
+- Focus on key aviation concepts, regulations, and procedures
+- If images contain diagrams, charts, or text, use that information to create questions
+
+Respond ONLY with valid JSON in this exact format:
+{
+  "questions": [
+    {
+      "question_text": "What is...",
+      "options": [
+        {"id": "a", "text": "Option A"},
+        {"id": "b", "text": "Option B"},
+        {"id": "c", "text": "Option C"},
+        {"id": "d", "text": "Option D"}
+      ],
+      "correct_answer_id": "a",
+      "explanation": "The correct answer is A because..."
+    }
+  ]
+}`;
+
+  // Build parts array with text and images
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const parts: any[] = [{ text: promptText }];
+
+  for (const doc of contents) {
+    if (doc.type === "text" && doc.text) {
+      parts.push({ text: `\n--- Document: ${doc.title} ---\n${doc.text.substring(0, 30000)}` });
+    } else if (doc.type === "image" && doc.imageBase64) {
+      parts.push({ text: `\n--- Image: ${doc.title} ---` });
+      parts.push({
+        inlineData: {
+          mimeType: doc.mimeType || "image/jpeg",
+          data: doc.imageBase64,
+        },
+      });
+    }
+  }
+
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE_API_KEY}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ parts }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 8000,
+          responseMimeType: "application/json",
+        },
+      }),
+    }
+  );
+
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`Gemini API error ${res.status}: ${errText}`);
+  }
+
+  const data = await res.json();
+  const content = data.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (!content) throw new Error("Empty response from Gemini");
+
+  return parseQuestions(content);
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -271,29 +340,49 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Get document texts
-    const documentText = await getDocumentTexts(supabase, documentIds, userId);
-    if (!documentText.trim()) {
+    // Get document contents (text and images)
+    const contents = await getDocumentContents(supabase, documentIds, userId);
+    if (!contents.length) {
       return NextResponse.json(
-        { error: "Could not extract text from selected documents" },
+        { error: "Could not extract content from selected documents" },
         { status: 400 }
       );
     }
 
-    const prompt = buildPrompt(documentText, numberOfQuestions);
-
-    // Try Groq first, fall back to Gemini
+    // Check if we have any images - if so, use multimodal Gemini
+    const hasImages = contents.some((c) => c.type === "image");
     let questions: QuizQuestion[];
-    try {
-      questions = await generateWithGroq(prompt);
-    } catch (groqError) {
+
+    if (hasImages) {
+      // Use Gemini multimodal for images
       try {
-        questions = await generateWithGemini(prompt);
-      } catch (geminiError) {
-                return NextResponse.json(
-          { error: "Failed to generate quiz. Please try again." },
+        questions = await generateWithGeminiMultimodal(contents, numberOfQuestions);
+      } catch {
+        return NextResponse.json(
+          { error: "Failed to generate quiz from images. Please try again." },
           { status: 500 }
         );
+      }
+    } else {
+      // Text only - try Groq first, fall back to Gemini
+      const textContent = contents
+        .filter((c) => c.type === "text" && c.text)
+        .map((c) => `--- Document: ${c.title} ---\n${c.text}`)
+        .join("\n\n");
+
+      const prompt = buildPrompt(textContent, numberOfQuestions);
+
+      try {
+        questions = await generateWithGroq(prompt);
+      } catch {
+        try {
+          questions = await generateWithGemini(prompt);
+        } catch {
+          return NextResponse.json(
+            { error: "Failed to generate quiz. Please try again." },
+            { status: 500 }
+          );
+        }
       }
     }
 
