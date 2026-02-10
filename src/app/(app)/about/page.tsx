@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Shield, ChevronRight } from "lucide-react";
+import { FileText, Shield, ChevronRight, CreditCard } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -69,6 +69,16 @@ export default function AboutPage() {
                 <Shield className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
               </div>
               <span className="flex-1 font-medium">Privacy Policy</span>
+              <ChevronRight className="h-4 w-4 text-muted-foreground" />
+            </Link>
+            <Link
+              href="/refund"
+              className="flex items-center gap-3 p-3 rounded-xl hover:bg-muted/50 transition-colors group"
+            >
+              <div className="p-2 rounded-lg bg-muted group-hover:bg-primary/10">
+                <CreditCard className="h-4 w-4 text-muted-foreground group-hover:text-primary" />
+              </div>
+              <span className="flex-1 font-medium">Refund Policy</span>
               <ChevronRight className="h-4 w-4 text-muted-foreground" />
             </Link>
           </div>
