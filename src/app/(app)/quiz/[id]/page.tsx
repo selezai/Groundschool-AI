@@ -55,7 +55,7 @@ export default function QuizPage() {
 
       if (quizError || !quizData) {
         console.error("Quiz fetch error:", quizError);
-        toast.error("Quiz not found or access denied");
+        toast.error("Exam not found or access denied");
         router.push("/quizzes");
         return;
       }
@@ -74,7 +74,7 @@ export default function QuizPage() {
       }
 
       if (!questionsData || questionsData.length === 0) {
-        toast.error("No questions found for this quiz");
+        toast.error("No questions found for this exam");
         router.push("/quizzes");
         return;
       }

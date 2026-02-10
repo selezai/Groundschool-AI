@@ -6,14 +6,14 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "How do I create a new quiz?",
+    question: "How do I create a new exam?",
     answer:
-      "You can create a new quiz from your dashboard. Upload study documents, select the ones you want to use, choose the number of questions, and click 'Generate Quiz'. The AI will create relevant questions from your materials.",
+      "You can create a new exam from your dashboard. Upload study documents, select the ones you want to use, choose the number of questions, and click 'Generate Exam'. The AI will create relevant questions from your materials.",
   },
   {
-    question: "How are my quiz scores calculated?",
+    question: "How are my exam scores calculated?",
     answer:
-      "Quiz scores are calculated based on the number of correct answers out of the total number of questions. Your score is shown as a percentage after completing each quiz.",
+      "Exam scores are calculated based on the number of correct answers out of the total number of questions. Your score is shown as a percentage after completing each exam.",
   },
   {
     question: "Can I upload my own documents for studying?",

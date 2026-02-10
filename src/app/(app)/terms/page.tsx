@@ -19,7 +19,7 @@ export default function TermsPage() {
 
           <h2 className="text-lg font-semibold mb-3">2. Description of Service</h2>
           <p className="text-sm text-muted-foreground mb-4">
-            Groundschool AI provides an AI-powered study platform for aviation ground school preparation. Users can upload study documents and generate practice quizzes to test their knowledge.
+            Groundschool AI provides an AI-powered study platform for aviation ground school preparation. Users can upload study documents and generate practice exams to test their knowledge.
           </p>
 
           <h2 className="text-lg font-semibold mb-3">3. User Accounts</h2>
@@ -34,7 +34,7 @@ export default function TermsPage() {
 
           <h2 className="text-lg font-semibold mb-3">5. User Content</h2>
           <p className="text-sm text-muted-foreground mb-4">
-            You retain ownership of documents you upload. By uploading content, you grant us a license to process it for quiz generation. We do not share your documents with third parties.
+            You retain ownership of documents you upload. By uploading content, you grant us a license to process it for exam generation. We do not share your documents with third parties.
           </p>
 
           <h2 className="text-lg font-semibold mb-3">6. Acceptable Use</h2>

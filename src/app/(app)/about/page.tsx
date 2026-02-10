@@ -10,7 +10,7 @@ export default function AboutPage() {
   const companyName = "Groundschool AI";
   const currentYear = new Date().getFullYear();
   const appDescription =
-    "Groundschool AI is your intelligent partner for aviation ground school studies. Create quizzes from your documents, test your knowledge, and prepare effectively for your exams.";
+    "Groundschool AI is your intelligent partner for aviation ground school studies. Create practice exams from your documents, test your knowledge, and prepare effectively for your real exams.";
 
   return (
     <div className="space-y-6 max-w-2xl">

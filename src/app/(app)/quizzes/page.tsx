@@ -36,7 +36,7 @@ export default function QuizzesPage() {
       .order("created_at", { ascending: false });
 
     if (error) {
-      toast.error("Failed to load quizzes");
+      toast.error("Failed to load exams");
     } else {
       setQuizzes(data ?? []);
     }
@@ -57,7 +57,7 @@ export default function QuizzesPage() {
       .eq("quiz_id", quizId);
 
     if (qError) {
-      toast.error("Failed to delete quiz questions");
+      toast.error("Failed to delete exam questions");
       setDeletingId(null);
       return;
     }
@@ -68,9 +68,9 @@ export default function QuizzesPage() {
     const { error } = await supabase.from("quizzes").delete().eq("id", quizId);
 
     if (error) {
-      toast.error("Failed to delete quiz");
+      toast.error("Failed to delete exam");
     } else {
-      toast.success("Quiz deleted");
+      toast.success("Exam deleted");
       setQuizzes((prev) => prev.filter((q) => q.id !== quizId));
     }
     setDeletingId(null);
@@ -79,7 +79,7 @@ export default function QuizzesPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">My Quizzes</h1>
+        <h1 className="text-2xl font-bold">My Exams</h1>
         <p className="text-muted-foreground">
           Review and retake your practice exams
         </p>
@@ -97,13 +97,13 @@ export default function QuizzesPage() {
             <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <ClipboardList className="h-8 w-8 text-primary" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">No quizzes yet</h3>
+            <h3 className="text-lg font-semibold mb-2">No exams yet</h3>
             <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
               Upload study materials and generate your first AI-powered practice exam.
             </p>
             <Button onClick={() => router.push("/dashboard")}>
               <Sparkles className="h-4 w-4 mr-2" />
-              Create Your First Quiz
+              Create Your First Exam
             </Button>
           </CardContent>
         </Card>

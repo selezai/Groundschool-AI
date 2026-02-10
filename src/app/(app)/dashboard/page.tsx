@@ -152,7 +152,7 @@ export default function DashboardPage() {
 
   const handleGenerateQuiz = async () => {
     if (selectedDocIds.length === 0) {
-      toast.error("Select at least one document to generate a quiz");
+      toast.error("Select at least one document to generate an exam");
       return;
     }
 
@@ -171,13 +171,13 @@ export default function DashboardPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Failed to generate quiz");
+        throw new Error(data.error || "Failed to generate exam");
       }
 
-      toast.success("Quiz generated successfully!");
+      toast.success("Exam generated successfully!");
       router.push(`/quiz/${data.quizId}`);
     } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : "Failed to generate quiz";
+      const message = err instanceof Error ? err.message : "Failed to generate exam";
       toast.error(message);
     } finally {
       setIsGenerating(false);
@@ -275,7 +275,7 @@ export default function DashboardPage() {
           ) : (
             <Sparkles className="h-4 w-4" />
           )}
-          Generate Quiz
+          Generate Exam
         </Button>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:ml-auto">
@@ -307,7 +307,7 @@ export default function DashboardPage() {
         <h2 className="text-lg font-semibold">Your Documents</h2>
         {documents.length > 0 && (
           <span className="text-sm text-muted-foreground">
-            {selectedDocIds.length > 0 ? `${selectedDocIds.length} selected` : 'Select documents to generate quiz'}
+            {selectedDocIds.length > 0 ? `${selectedDocIds.length} selected` : 'Select documents to generate exam'}
           </span>
         )}
       </div>

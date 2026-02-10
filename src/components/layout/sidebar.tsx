@@ -19,7 +19,7 @@ import { useState } from "react";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: Home },
-  { href: "/quizzes", label: "My Quizzes", icon: ClipboardList },
+  { href: "/quizzes", label: "My Exams", icon: ClipboardList },
   { href: "/profile", label: "Profile", icon: User },
   { href: "/captains-club", label: "Captain's Club", icon: Crown },
 ];

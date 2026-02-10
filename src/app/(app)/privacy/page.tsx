@@ -19,12 +19,12 @@ export default function PrivacyPage() {
 
           <h2 className="text-lg font-semibold mb-3">2. How We Use Your Information</h2>
           <p className="text-sm text-muted-foreground mb-4">
-            Your information is used to provide the Groundschool AI service, generate quizzes from your documents, manage your account, and communicate with you about the service.
+            Your information is used to provide the Groundschool AI service, generate exams from your documents, manage your account, and communicate with you about the service.
           </p>
 
           <h2 className="text-lg font-semibold mb-3">3. Document Storage</h2>
           <p className="text-sm text-muted-foreground mb-4">
-            Documents you upload are stored securely and are only accessible to you. We process documents to generate quiz questions but do not share them with third parties.
+            Documents you upload are stored securely and are only accessible to you. We process documents to generate exam questions but do not share them with third parties.
           </p>
 
           <h2 className="text-lg font-semibold mb-3">4. Data Security</h2>
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
 
           <h2 className="text-lg font-semibold mb-3">5. Data Retention</h2>
           <p className="text-sm text-muted-foreground mb-4">
-            We retain your data for as long as your account is active. When you delete your account, all associated data including documents and quiz history is permanently deleted.
+            We retain your data for as long as your account is active. When you delete your account, all associated data including documents and exam history is permanently deleted.
           </p>
 
           <h2 className="text-lg font-semibold mb-3">6. Third-Party Services</h2>
