@@ -52,7 +52,7 @@ export default function QuizzesPage() {
 
     // Delete questions first, then quiz
     const { error: qError } = await supabase
-      .from("quiz_questions")
+      .from("questions")
       .delete()
       .eq("quiz_id", quizId);
 

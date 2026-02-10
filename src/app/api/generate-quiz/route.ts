@@ -250,17 +250,22 @@ export async function POST(request: Request) {
       );
     }
 
-    // Insert questions
-    const questionRows = questions.map((q) => ({
-      quiz_id: quiz.id,
-      question_text: q.question_text,
-      options: q.options,
-      correct_answer_id: q.correct_answer_id,
-      explanation: q.explanation,
-    }));
+    // Insert questions with correct column names for existing Supabase schema
+    const questionRows = questions.map((q, index) => {
+      const correctIndex = q.options.findIndex((opt: { id: string }) => opt.id === q.correct_answer_id);
+      return {
+        quiz_id: quiz.id,
+        text: q.question_text,
+        options: q.options,
+        correct_answer: q.correct_answer_id,
+        correct_answer_index: correctIndex >= 0 ? correctIndex : 0,
+        explanation: q.explanation || "",
+        order_index: index,
+      };
+    });
 
     const { error: questionsError } = await supabase
-      .from("quiz_questions")
+      .from("questions")
       .insert(questionRows);
 
     if (questionsError) {

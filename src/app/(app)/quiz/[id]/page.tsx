@@ -62,10 +62,10 @@ export default function QuizPage() {
 
       // Fetch questions for this quiz
       const { data: questionsData, error: questionsError } = await supabase
-        .from("quiz_questions")
+        .from("questions")
         .select("*")
         .eq("quiz_id", id)
-        .order("id");
+        .order("order_index", { ascending: true });
 
       if (questionsError) {
         console.error("Questions fetch error:", questionsError);
@@ -79,8 +79,18 @@ export default function QuizPage() {
         return;
       }
 
+      // Map database columns to expected interface
+      const mappedQuestions = questionsData.map((q: { id: string; quiz_id: string; text: string; options: { id: string; text: string }[]; correct_answer: string; explanation: string | null }) => ({
+        id: q.id,
+        quiz_id: q.quiz_id,
+        question_text: q.text,
+        options: q.options,
+        correct_answer_id: q.correct_answer,
+        explanation: q.explanation,
+      }));
+
       setQuiz(quizData);
-      setQuestions(questionsData);
+      setQuestions(mappedQuestions);
       setIsLoading(false);
     } catch (err) {
       console.error("Unexpected error:", err);
