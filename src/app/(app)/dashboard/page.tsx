@@ -250,6 +250,8 @@ export default function DashboardPage() {
     }
   };
 
+  if (!user) return null;
+
   return (
     <div className="space-y-8 overflow-x-hidden">
       {/* Hero Header */}
