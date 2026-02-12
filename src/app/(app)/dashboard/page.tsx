@@ -251,7 +251,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="space-y-8 overflow-hidden">
+    <div className="space-y-8 overflow-x-hidden">
       {/* Hero Header */}
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent rounded-2xl" />
