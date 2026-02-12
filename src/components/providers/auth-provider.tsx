@@ -108,6 +108,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         plan,
         plan_status: planStatus,
         plan_period_end: planPeriodEnd,
+        monthly_quizzes_remaining: autoUpgrade ? null : 5,
+        can_access_past_exams: autoUpgrade,
+        storage_used_mb: 0,
         updated_at: new Date().toISOString(),
       });
 
