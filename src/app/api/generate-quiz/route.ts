@@ -449,75 +449,80 @@ export async function POST(request: Request) {
       );
     }
 
-    // Batch generation: split large requests into chunks of up to 25 questions
-    // For each batch, use a different section of the document text
-    const BATCH_SIZE = 25;
-    const batches = Math.ceil(numberOfQuestions / BATCH_SIZE);
-    let questions: QuizQuestion[] = [];
-    let aiProvider = "groq";
-
-    // Combine all text content for chunking across batches
+    // Combine all text content for analysis and chunking
     const allText = contents
       .filter((c) => c.type === "text" && c.text)
       .map((c) => c.text!)
       .join("\n\n");
     const imageContents = contents.filter((c) => c.type === "image");
-    const chunkSize = allText.length > 0 ? Math.ceil(allText.length / batches) : 0;
+    const totalChars = allText.length;
 
-    for (let batch = 0; batch < batches; batch++) {
-      const questionsNeeded = Math.min(BATCH_SIZE, numberOfQuestions - questions.length);
-      if (questionsNeeded <= 0) break;
+    // Smart question cap based on content size — avoid wasting API calls on thin docs
+    // ~1 good question per 500 chars of content is a reasonable density
+    const contentBasedMax = Math.max(5, Math.ceil(totalChars / 500) + imageContents.length * 3);
+    const effectiveQuestions = Math.min(numberOfQuestions, contentBasedMax);
 
-      // Build content for this batch: use a different text chunk + all images
+    if (effectiveQuestions < numberOfQuestions) {
+      console.log(`[quiz-gen] CAPPED user=${userId} requested=${numberOfQuestions} effective=${effectiveQuestions} chars=${totalChars}`);
+    }
+
+    // Batch generation: split into chunks of up to 25 questions, run in PARALLEL
+    const BATCH_SIZE = 25;
+    const numBatches = Math.ceil(effectiveQuestions / BATCH_SIZE);
+    let questions: QuizQuestion[] = [];
+    let aiProvider = "groq";
+
+    const chunkSize = totalChars > 0 ? Math.ceil(totalChars / numBatches) : 0;
+
+    // Build all batch tasks upfront
+    const batchTasks = Array.from({ length: numBatches }, (_, batch) => {
+      const questionsNeeded = Math.min(BATCH_SIZE, effectiveQuestions - batch * BATCH_SIZE);
       const batchContents: DocumentContent[] = [];
-      if (allText.length > 0) {
+
+      if (totalChars > 0) {
         const start = batch * chunkSize;
-        const end = Math.min(start + chunkSize, allText.length);
+        const end = Math.min(start + chunkSize, totalChars);
         const textChunk = allText.substring(start, end);
         if (textChunk.trim()) {
           batchContents.push({
-            title: `Document section ${batch + 1}/${batches}`,
+            title: `Document section ${batch + 1}/${numBatches}`,
             type: "text",
             text: textChunk,
           });
         }
       }
-      // Include images only in the first batch to avoid duplication
       if (batch === 0) {
         batchContents.push(...imageContents);
       }
 
-      if (batchContents.length === 0) continue;
+      return { batch, questionsNeeded, batchContents };
+    }).filter((t) => t.batchContents.length > 0 && t.questionsNeeded > 0);
 
-      console.log(`[quiz-gen] BATCH ${batch + 1}/${batches} user=${userId} questionsNeeded=${questionsNeeded} textLen=${batchContents[0]?.text?.length ?? 0}`);
+    console.log(`[quiz-gen] PARALLEL_START user=${userId} batches=${batchTasks.length} effective=${effectiveQuestions}/${numberOfQuestions}`);
 
-      try {
-        const batchQuestions = await generateWithGroqMultimodal(batchContents, questionsNeeded);
-        aiProvider = "groq";
-        questions.push(...batchQuestions);
-      } catch (groqErr) {
-        console.log(`[quiz-gen] GROQ_FAILED batch=${batch + 1} user=${userId} error=${groqErr instanceof Error ? groqErr.message : "unknown"}`);
-        // Fallback to Gemini for this batch
+    // Run all batches in parallel — each with its own Groq→Gemini fallback
+    const results = await Promise.allSettled(
+      batchTasks.map(async ({ batch, questionsNeeded, batchContents }) => {
+        console.log(`[quiz-gen] BATCH ${batch + 1}/${numBatches} user=${userId} q=${questionsNeeded} textLen=${batchContents[0]?.text?.length ?? 0}`);
         try {
-          const batchQuestions = await generateWithGeminiMultimodal(batchContents, questionsNeeded);
+          return await generateWithGroqMultimodal(batchContents, questionsNeeded);
+        } catch (groqErr) {
+          console.log(`[quiz-gen] GROQ_FAILED batch=${batch + 1} error=${groqErr instanceof Error ? groqErr.message : "unknown"}`);
           aiProvider = "gemini";
-          questions.push(...batchQuestions);
-        } catch (geminiErr) {
-          console.log(`[quiz-gen] GEMINI_FAILED batch=${batch + 1} user=${userId} error=${geminiErr instanceof Error ? geminiErr.message : "unknown"}`);
-          // If first batch fails entirely, abort
-          if (batch === 0 && questions.length === 0) {
-            return NextResponse.json(
-              { error: "Failed to generate quiz. Please try again." },
-              { status: 500 }
-            );
-          }
-          // Otherwise continue with what we have
-          break;
+          return await generateWithGeminiMultimodal(batchContents, questionsNeeded);
         }
+      })
+    );
+
+    for (const result of results) {
+      if (result.status === "fulfilled") {
+        questions.push(...result.value);
+      } else {
+        console.log(`[quiz-gen] BATCH_FAILED error=${result.reason}`);
       }
     }
 
-    console.log(`[quiz-gen] BATCHES_DONE user=${userId} totalQuestions=${questions.length}/${numberOfQuestions}`);
+    console.log(`[quiz-gen] PARALLEL_DONE user=${userId} totalQuestions=${questions.length}/${numberOfQuestions}`);
 
     if (!questions.length) {
       return NextResponse.json(

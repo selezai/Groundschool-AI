@@ -240,7 +240,12 @@ export default function DashboardPage() {
         throw new Error(data.error || "Failed to generate exam");
       }
 
-      toast.success("Exam generated successfully!");
+      const generated = data.questionCount || 0;
+      if (generated < numberOfQuestions) {
+        toast.success(`Exam generated with ${generated} questions (document content supported ${generated} of ${numberOfQuestions} requested)`);
+      } else {
+        toast.success("Exam generated successfully!");
+      }
       router.push(`/quiz/${data.quizId}`);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Failed to generate exam";
