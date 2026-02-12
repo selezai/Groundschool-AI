@@ -327,7 +327,7 @@ export default function DashboardPage() {
         />
         <Button
           onClick={() => fileInputRef.current?.click()}
-          disabled={isUploading}
+          disabled={isUploading || isGenerating}
           className="gap-2"
         >
           {isUploading ? (
@@ -431,8 +431,12 @@ export default function DashboardPage() {
             return (
               <div
                 key={doc.id}
-                onClick={() => toggleSelect(doc.id)}
-                className={`group relative cursor-pointer rounded-xl border p-4 transition-all duration-200 hover-lift ${
+                onClick={() => !isGenerating && toggleSelect(doc.id)}
+                className={`group relative rounded-xl border p-4 transition-all duration-200 ${
+                  isGenerating
+                    ? "opacity-60 cursor-not-allowed"
+                    : "cursor-pointer hover-lift"
+                } ${
                   isSelected 
                     ? "border-primary/50 bg-primary/5 shadow-lg shadow-primary/5" 
                     : "border-border/50 bg-card/50 hover:border-border hover:bg-card"
@@ -443,7 +447,7 @@ export default function DashboardPage() {
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      toggleSelect(doc.id);
+                      if (!isGenerating) toggleSelect(doc.id);
                     }}
                     className={`flex-shrink-0 rounded-lg p-2 transition-colors ${
                       isSelected 
@@ -475,7 +479,7 @@ export default function DashboardPage() {
                     className="flex-shrink-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleDelete(doc.id);
+                      if (!isGenerating) handleDelete(doc.id);
                     }}
                   >
                     <Trash2 className="h-4 w-4" />
