@@ -112,7 +112,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (profileError) {
-        // Profile creation failed silently
+        return { error: "Account created but profile setup failed. Please sign out and sign in again, or contact support." };
       }
     }
 

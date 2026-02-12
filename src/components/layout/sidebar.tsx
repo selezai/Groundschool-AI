@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/components/providers/auth-provider";
 import { cn } from "@/lib/utils";
 import {
@@ -27,6 +27,7 @@ const navItems = [
 export function Sidebar() {
   const pathname = usePathname();
   const { signOut, profile } = useAuth();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const NavContent = () => (
@@ -107,9 +108,10 @@ export function Sidebar() {
         <Button
           variant="ghost"
           className="w-full justify-start gap-3 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl"
-          onClick={() => {
-            signOut();
+          onClick={async () => {
+            await signOut();
             setMobileOpen(false);
+            router.push("/login");
           }}
         >
           <div className="p-1.5 rounded-lg bg-muted/50">

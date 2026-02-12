@@ -56,17 +56,18 @@ export default function ProfilePage() {
     if (!user) return;
     setIsLoadingStats(true);
 
-    // Fetch all stats in parallel
+    // Fetch all stats in parallel — use minimal selects
     const [docsResult, quizzesResult, attemptsResult] = await Promise.all([
       supabase.from("documents").select("file_size").eq("user_id", user.id),
       supabase.from("quizzes").select("*", { count: "exact", head: true }).eq("user_id", user.id),
       supabase.from("quiz_attempts").select("score").eq("user_id", user.id),
     ]);
 
-    // Storage
-    const totalBytes = (docsResult.data ?? []).reduce((sum: number, d: { file_size: number }) => sum + (d.file_size || 0), 0);
+    // Storage — sum file sizes from the minimal query
+    const docs = docsResult.data ?? [];
+    const totalBytes = docs.reduce((sum: number, d: { file_size: number }) => sum + (d.file_size || 0), 0);
     setStorageUsed(totalBytes);
-    setDocCount(docsResult.data?.length ?? 0);
+    setDocCount(docs.length);
 
     // Quiz count
     setQuizCount(quizzesResult.count ?? 0);

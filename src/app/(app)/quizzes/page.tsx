@@ -25,6 +25,7 @@ export default function QuizzesPage() {
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(20);
 
   const fetchQuizzes = useCallback(async () => {
     if (!user) return;
@@ -33,6 +34,7 @@ export default function QuizzesPage() {
       .from("quizzes")
       .select("*")
       .eq("user_id", user.id)
+      .eq("status", "active")
       .order("created_at", { ascending: false });
 
     if (error) {
@@ -120,7 +122,7 @@ export default function QuizzesPage() {
         </Card>
       ) : (
         <div className="space-y-2">
-          {quizzes.map((quiz) => (
+          {quizzes.slice(0, visibleCount).map((quiz) => (
             <Card key={quiz.id} className="hover:bg-muted/50 transition-colors">
               <CardContent className="py-3 px-4 flex items-center gap-3">
                 <ClipboardList className="h-5 w-5 text-muted-foreground flex-shrink-0" />
@@ -158,6 +160,16 @@ export default function QuizzesPage() {
               </CardContent>
             </Card>
           ))}
+
+          {quizzes.length > visibleCount && (
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => setVisibleCount((prev) => prev + 20)}
+            >
+              Show More ({quizzes.length - visibleCount} remaining)
+            </Button>
+          )}
         </div>
       )}
     </div>

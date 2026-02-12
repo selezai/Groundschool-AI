@@ -32,10 +32,12 @@ export default function DashboardPage() {
   const [documents, setDocuments] = useState<Document[]>([]);
   const [isLoadingDocs, setIsLoadingDocs] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [storageUsed, setStorageUsed] = useState(0);
   const [selectedDocIds, setSelectedDocIds] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState(10);
+  const [visibleCount, setVisibleCount] = useState(20);
 
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
@@ -72,26 +74,91 @@ export default function DashboardPage() {
     fetchDocuments();
   }, [fetchDocuments]);
 
+  const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB per file
+  const UNSUPPORTED_EXTENSIONS = [".doc", ".docx"];
+
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file || !user) return;
 
+    const fileExt = "." + (file.name.split(".").pop()?.toLowerCase() || "");
+    if (UNSUPPORTED_EXTENSIONS.includes(fileExt)) {
+      toast.error("Word documents (.doc/.docx) are not supported. Please convert to PDF first.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
+    }
+
+    if (file.size > MAX_FILE_SIZE) {
+      toast.error("File too large. Maximum size is 25MB per file.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
+    }
+
     if (storageUsed + file.size > maxStorage) {
       toast.error("Storage limit exceeded. Upgrade to Captain's Club for more storage.");
+      if (fileInputRef.current) fileInputRef.current.value = "";
       return;
     }
 
     setIsUploading(true);
-    const fileExt = file.name.split(".").pop();
-    const filePath = `${user.id}/${Date.now()}.${fileExt}`;
+    setUploadProgress(0);
 
-    const { error: uploadError } = await supabase.storage
-      .from("documents")
-      .upload(filePath, file);
-
-    if (uploadError) {
-      toast.error("Upload failed: " + uploadError.message);
+    // Server-side validation before upload
+    try {
+      const validateRes = await fetch("/api/validate-upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fileSize: file.size, fileName: file.name }),
+      });
+      if (!validateRes.ok) {
+        const validateData = await validateRes.json();
+        toast.error(validateData.error || "Upload validation failed");
+        setIsUploading(false);
+        setUploadProgress(0);
+        if (fileInputRef.current) fileInputRef.current.value = "";
+        return;
+      }
+    } catch {
+      toast.error("Could not validate upload. Please try again.");
       setIsUploading(false);
+      setUploadProgress(0);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+      return;
+    }
+
+    const filePath = `${user.id}/${Date.now()}${fileExt}`;
+
+    // Upload with progress tracking via XMLHttpRequest
+    const uploadUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/documents/${filePath}`;
+    const { data: { session } } = await supabase.auth.getSession();
+    const token = session?.access_token;
+
+    const uploadResult = await new Promise<{ error: string | null }>((resolve) => {
+      const xhr = new XMLHttpRequest();
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          setUploadProgress(Math.round((e.loaded / e.total) * 100));
+        }
+      };
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          resolve({ error: null });
+        } else {
+          resolve({ error: `Upload failed (${xhr.status})` });
+        }
+      };
+      xhr.onerror = () => resolve({ error: "Upload failed. Check your connection." });
+      xhr.open("POST", uploadUrl);
+      xhr.setRequestHeader("Authorization", `Bearer ${token}`);
+      xhr.setRequestHeader("x-upsert", "false");
+      xhr.send(file);
+    });
+
+    if (uploadResult.error) {
+      toast.error(uploadResult.error);
+      setIsUploading(false);
+      setUploadProgress(0);
+      if (fileInputRef.current) fileInputRef.current.value = "";
       return;
     }
 
@@ -106,6 +173,8 @@ export default function DashboardPage() {
     });
 
     if (dbError) {
+      // Rollback: remove orphaned file from storage
+      await supabase.storage.from("documents").remove([filePath]);
       toast.error("Failed to save document record. Please try again.");
     } else {
       toast.success("Document uploaded successfully");
@@ -113,6 +182,7 @@ export default function DashboardPage() {
     }
 
     setIsUploading(false);
+    setUploadProgress(0);
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
@@ -120,15 +190,7 @@ export default function DashboardPage() {
     const doc = documents.find((d) => d.id === docId);
     if (!doc) return;
 
-    const { error: storageError } = await supabase.storage
-      .from("documents")
-      .remove([doc.file_path]);
-
-    if (storageError) {
-      toast.error("Failed to delete file from storage");
-      return;
-    }
-
+    // Delete DB record first to avoid ghost records pointing to deleted files
     const { error: dbError } = await supabase
       .from("documents")
       .delete()
@@ -136,12 +198,16 @@ export default function DashboardPage() {
 
     if (dbError) {
       toast.error("Failed to delete document record");
-    } else {
-      toast.success("Document deleted");
-      setDocuments((prev) => prev.filter((d) => d.id !== docId));
-      setSelectedDocIds((prev) => prev.filter((id) => id !== docId));
-      setStorageUsed((prev) => prev - (doc.file_size || 0));
+      return;
     }
+
+    // Then remove from storage (best-effort; orphaned file is less harmful than ghost record)
+    await supabase.storage.from("documents").remove([doc.file_path]);
+
+    toast.success("Document deleted");
+    setDocuments((prev) => prev.filter((d) => d.id !== docId));
+    setSelectedDocIds((prev) => prev.filter((id) => id !== docId));
+    setStorageUsed((prev) => prev - (doc.file_size || 0));
   };
 
   const toggleSelect = (docId: string) => {
@@ -248,7 +314,7 @@ export default function DashboardPage() {
         <input
           ref={fileInputRef}
           type="file"
-          accept=".pdf,.txt,.doc,.docx,.png,.jpg,.jpeg,.heic"
+          accept=".pdf,.txt,.png,.jpg,.jpeg,.heic"
           className="hidden"
           onChange={handleUpload}
         />
@@ -262,7 +328,7 @@ export default function DashboardPage() {
           ) : (
             <Upload className="h-4 w-4" />
           )}
-          Upload Document
+          {isUploading ? `Uploading ${uploadProgress}%` : "Upload Document"}
         </Button>
 
         <Button
@@ -301,6 +367,16 @@ export default function DashboardPage() {
           </p>
         </div>
       </div>
+
+      {/* Upload Progress Bar */}
+      {isUploading && (
+        <div className="w-full">
+          <Progress value={uploadProgress} className="h-2" />
+          <p className="text-xs text-muted-foreground mt-1">
+            Uploading... {uploadProgress}%
+          </p>
+        </div>
+      )}
 
       {/* Section Header */}
       <div className="flex items-center justify-between">
@@ -343,7 +419,7 @@ export default function DashboardPage() {
         </div>
       ) : (
         <div className="grid gap-3">
-          {documents.map((doc) => {
+          {documents.slice(0, visibleCount).map((doc) => {
             const isSelected = selectedDocIds.includes(doc.id);
             return (
               <div
@@ -355,7 +431,7 @@ export default function DashboardPage() {
                     : "border-border/50 bg-card/50 hover:border-border hover:bg-card"
                 }`}
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 overflow-hidden">
                   <button
                     type="button"
                     onClick={(e) => {
@@ -379,7 +455,7 @@ export default function DashboardPage() {
                     <FileText className="h-5 w-5 text-muted-foreground" />
                   </div>
 
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 overflow-hidden">
                     <p className="font-medium truncate">{doc.title}</p>
                     <p className="text-sm text-muted-foreground">
                       {formatBytes(doc.file_size)} • {new Date(doc.created_at).toLocaleDateString()}
@@ -401,6 +477,16 @@ export default function DashboardPage() {
               </div>
             );
           })}
+
+          {documents.length > visibleCount && (
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => setVisibleCount((prev) => prev + 20)}
+            >
+              Show More ({documents.length - visibleCount} remaining)
+            </Button>
+          )}
         </div>
       )}
     </div>

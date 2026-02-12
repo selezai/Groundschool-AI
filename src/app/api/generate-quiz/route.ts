@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import sharp from "sharp";
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
@@ -51,74 +52,107 @@ async function extractTextFromPdf(buffer: Buffer): Promise<string> {
   }
 }
 
+const MAX_IMAGE_SIZE = 4 * 1024 * 1024; // 4MB cap per image for AI processing
+const AI_IMAGE_MAX_DIMENSION = 1024; // Max width/height for images sent to AI
+
+async function resizeImageForAI(buffer: Buffer, mimeType: string): Promise<{ data: Buffer; mime: string }> {
+  try {
+    const resized = await sharp(buffer)
+      .resize(AI_IMAGE_MAX_DIMENSION, AI_IMAGE_MAX_DIMENSION, {
+        fit: "inside",
+        withoutEnlargement: true,
+      })
+      .jpeg({ quality: 80 })
+      .toBuffer();
+    return { data: resized, mime: "image/jpeg" };
+  } catch {
+    // If sharp fails (e.g. unsupported format like HEIC without plugin), return original if small enough
+    if (buffer.length <= MAX_IMAGE_SIZE) {
+      return { data: buffer, mime: mimeType };
+    }
+    throw new Error("Image could not be processed");
+  }
+}
+
+async function fetchSingleDocument(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  docId: string,
+  userId: string
+): Promise<DocumentContent | null> {
+  const { data: doc } = await supabase
+    .from("documents")
+    .select("file_path, title, document_type")
+    .eq("id", docId)
+    .eq("user_id", userId)
+    .single();
+
+  if (!doc) return null;
+
+  const { data: fileData } = await supabase.storage
+    .from("documents")
+    .download(doc.file_path);
+
+  if (!fileData) return null;
+
+  const buffer = Buffer.from(await fileData.arrayBuffer());
+  const lowerPath = doc.file_path.toLowerCase();
+  const contentType = doc.document_type || "";
+
+  // Handle PDFs - extract text
+  if (contentType === "application/pdf" || lowerPath.endsWith(".pdf")) {
+    const text = await extractTextFromPdf(buffer);
+    if (text.trim()) {
+      return { title: doc.title, type: "text", text };
+    }
+    return null;
+  }
+
+  // Handle images - resize for AI processing, then base64 encode
+  if (isImageFile(contentType, doc.file_path)) {
+    try {
+      const originalMime = getMimeType(contentType, doc.file_path);
+      const { data: resizedBuf, mime: finalMime } = await resizeImageForAI(buffer, originalMime);
+      return {
+        title: doc.title,
+        type: "image",
+        imageBase64: resizedBuf.toString("base64"),
+        mimeType: finalMime,
+      };
+    } catch {
+      return null; // Skip images that can't be processed
+    }
+  }
+
+  // Handle text files
+  if (contentType.startsWith("text/") || lowerPath.endsWith(".txt") || lowerPath.endsWith(".md")) {
+    const text = buffer.toString("utf-8");
+    if (text.trim()) {
+      return { title: doc.title, type: "text", text };
+    }
+    return null;
+  }
+
+  // Try as text for unknown types
+  try {
+    const text = buffer.toString("utf-8");
+    if (text.trim()) {
+      return { title: doc.title, type: "text", text };
+    }
+  } catch {
+    // Skip if can't read
+  }
+  return null;
+}
+
 async function getDocumentContents(
   supabase: Awaited<ReturnType<typeof createClient>>,
   documentIds: string[],
   userId: string
 ): Promise<DocumentContent[]> {
-  const contents: DocumentContent[] = [];
-
-  for (const docId of documentIds) {
-    const { data: doc } = await supabase
-      .from("documents")
-      .select("file_path, title, document_type")
-      .eq("id", docId)
-      .eq("user_id", userId)
-      .single();
-
-    if (!doc) continue;
-
-    const { data: fileData } = await supabase.storage
-      .from("documents")
-      .download(doc.file_path);
-
-    if (!fileData) continue;
-
-    const buffer = Buffer.from(await fileData.arrayBuffer());
-    const lowerPath = doc.file_path.toLowerCase();
-    const contentType = doc.document_type || "";
-
-    // Handle PDFs - extract text
-    if (contentType === "application/pdf" || lowerPath.endsWith(".pdf")) {
-      const text = await extractTextFromPdf(buffer);
-      if (text.trim()) {
-        contents.push({ title: doc.title, type: "text", text });
-      }
-      continue;
-    }
-
-    // Handle images - keep as base64 for multimodal AI
-    if (isImageFile(contentType, doc.file_path)) {
-      contents.push({
-        title: doc.title,
-        type: "image",
-        imageBase64: buffer.toString("base64"),
-        mimeType: getMimeType(contentType, doc.file_path),
-      });
-      continue;
-    }
-
-    // Handle text files
-    if (contentType.startsWith("text/") || lowerPath.endsWith(".txt") || lowerPath.endsWith(".md")) {
-      const text = buffer.toString("utf-8");
-      if (text.trim()) {
-        contents.push({ title: doc.title, type: "text", text });
-      }
-      continue;
-    }
-
-    // Try as text for unknown types
-    try {
-      const text = buffer.toString("utf-8");
-      if (text.trim()) {
-        contents.push({ title: doc.title, type: "text", text });
-      }
-    } catch {
-      // Skip if can't read
-    }
-  }
-
-  return contents;
+  const results = await Promise.all(
+    documentIds.map((docId) => fetchSingleDocument(supabase, docId, userId))
+  );
+  return results.filter((r): r is DocumentContent => r !== null);
 }
 
 function parseQuestions(raw: string): QuizQuestion[] {
@@ -200,6 +234,9 @@ Respond ONLY with valid JSON in this exact format:
     }
   }
 
+  const groqController = new AbortController();
+  const groqTimeout = setTimeout(() => groqController.abort(), 50000);
+
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -212,7 +249,10 @@ Respond ONLY with valid JSON in this exact format:
       temperature: 0.7,
       max_completion_tokens: 8000,
     }),
+    signal: groqController.signal,
   });
+
+  clearTimeout(groqTimeout);
 
   if (!res.ok) {
     const errText = await res.text();
@@ -278,6 +318,9 @@ Respond ONLY with valid JSON in this exact format:
     }
   }
 
+  const geminiController = new AbortController();
+  const geminiTimeout = setTimeout(() => geminiController.abort(), 50000);
+
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE_API_KEY}`,
     {
@@ -291,8 +334,11 @@ Respond ONLY with valid JSON in this exact format:
           responseMimeType: "application/json",
         },
       }),
+      signal: geminiController.signal,
     }
   );
+
+  clearTimeout(geminiTimeout);
 
   if (!res.ok) {
     const errText = await res.text();
@@ -306,30 +352,94 @@ Respond ONLY with valid JSON in this exact format:
   return parseQuestions(content);
 }
 
+// In-memory rate limiter (per serverless instance)
+const rateLimitMap = new Map<string, number>();
+const RATE_LIMIT_MS = 30_000; // 30 seconds between requests per user
+
 export async function POST(request: Request) {
+  const requestStart = Date.now();
   try {
     const body = await request.json();
-    const { documentIds, numberOfQuestions = 10, userId } = body;
+    const { documentIds, numberOfQuestions = 10 } = body;
 
-    if (!documentIds?.length || !userId) {
+    if (!documentIds?.length) {
       return NextResponse.json(
-        { error: "Missing documentIds or userId" },
+        { error: "Missing documentIds" },
         { status: 400 }
       );
     }
 
     const supabase = await createClient();
 
-    // Verify the user is authenticated
+    // Derive userId from session — never trust client-supplied userId
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    if (!user || user.id !== userId) {
+    if (!user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
+    const userId = user.id;
 
-    // Get document contents (text and images)
+    // Rate limiting: 1 request per 30 seconds per user
+    const lastRequest = rateLimitMap.get(userId);
+    const now = Date.now();
+    if (lastRequest && now - lastRequest < RATE_LIMIT_MS) {
+      const waitSec = Math.ceil((RATE_LIMIT_MS - (now - lastRequest)) / 1000);
+      console.log(`[quiz-gen] RATE_LIMITED user=${userId} waitSec=${waitSec}`);
+      return NextResponse.json(
+        { error: `Please wait ${waitSec} seconds before generating another exam.` },
+        { status: 429 }
+      );
+    }
+    rateLimitMap.set(userId, now);
+
+    console.log(`[quiz-gen] START user=${userId} docs=${documentIds.length} requestedQ=${numberOfQuestions}`);
+
+    // Enforce quiz quota from profile
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("plan, monthly_quizzes_remaining, last_quota_reset_date")
+      .eq("id", userId)
+      .single();
+
+    if (profile && profile.plan !== "captains_club") {
+      // Reset monthly quota if needed (first of month)
+      const now = new Date();
+      const lastReset = profile.last_quota_reset_date
+        ? new Date(profile.last_quota_reset_date)
+        : null;
+      const needsReset =
+        !lastReset ||
+        lastReset.getMonth() !== now.getMonth() ||
+        lastReset.getFullYear() !== now.getFullYear();
+
+      if (needsReset) {
+        await supabase
+          .from("profiles")
+          .update({
+            monthly_quizzes_remaining: 5,
+            last_quota_reset_date: now.toISOString(),
+          })
+          .eq("id", userId);
+        // Refresh the value after reset
+        profile.monthly_quizzes_remaining = 5;
+      }
+
+      if ((profile.monthly_quizzes_remaining ?? 0) <= 0) {
+        console.log(`[quiz-gen] QUOTA_BLOCKED user=${userId} plan=${profile.plan} remaining=0`);
+        return NextResponse.json(
+          { error: "Monthly exam limit reached. Upgrade to Captain's Club for unlimited exams." },
+          { status: 403 }
+        );
+      }
+    }
+
+    // Get document contents (text and images) — fetched in parallel
     const contents = await getDocumentContents(supabase, documentIds, userId);
+    const textCount = contents.filter((c) => c.type === "text").length;
+    const imageCount = contents.filter((c) => c.type === "image").length;
+    console.log(`[quiz-gen] CONTENT user=${userId} extracted=${contents.length}/${documentIds.length} text=${textCount} images=${imageCount}`);
+
     if (!contents.length) {
       return NextResponse.json(
         { error: "Could not extract content from selected documents" },
@@ -340,14 +450,18 @@ export async function POST(request: Request) {
     // Use Groq (Llama 4 Scout) as primary, Gemini as fallback
     // Both support multimodal (text + images)
     let questions: QuizQuestion[];
+    let aiProvider = "groq";
 
     try {
       questions = await generateWithGroqMultimodal(contents, numberOfQuestions);
-    } catch {
+    } catch (groqErr) {
+      console.log(`[quiz-gen] GROQ_FAILED user=${userId} error=${groqErr instanceof Error ? groqErr.message : "unknown"}`);
       // Fallback to Gemini multimodal
+      aiProvider = "gemini";
       try {
         questions = await generateWithGeminiMultimodal(contents, numberOfQuestions);
-      } catch {
+      } catch (geminiErr) {
+        console.log(`[quiz-gen] GEMINI_FAILED user=${userId} error=${geminiErr instanceof Error ? geminiErr.message : "unknown"}`);
         return NextResponse.json(
           { error: "Failed to generate quiz. Please try again." },
           { status: 500 }
@@ -362,20 +476,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create quiz record
-    const docTitles = await Promise.all(
-      documentIds.map(async (id: string) => {
-        const { data } = await supabase
-          .from("documents")
-          .select("title")
-          .eq("id", id)
-          .single();
-        return data?.title || "Unknown";
-      })
-    );
-
+    // Build quiz title from already-fetched document content titles (no extra queries)
+    const docTitles = contents.map((c) => c.title);
     const quizTitle = `Quiz: ${docTitles.join(", ")}`.substring(0, 200);
 
+    // Insert quiz with 'generating' status — only set 'active' after questions succeed
     const { data: quiz, error: quizError } = await supabase
       .from("quizzes")
       .insert({
@@ -383,7 +488,7 @@ export async function POST(request: Request) {
         title: quizTitle,
         document_ids: documentIds,
         question_count: questions.length,
-        status: "active",
+        status: "generating",
         created_at: new Date().toISOString(),
       })
       .select()
@@ -415,16 +520,38 @@ export async function POST(request: Request) {
       .insert(questionRows);
 
     if (questionsError) {
-      // Clean up the quiz record
-      await supabase.from("quizzes").delete().eq("id", quiz.id);
+      // Clean up: delete questions that may have partially inserted, then the quiz
+      await supabase.from("questions").delete().eq("quiz_id", quiz.id);
+      const { error: cleanupError } = await supabase.from("quizzes").delete().eq("id", quiz.id);
+      if (cleanupError) {
+        console.log(`[quiz-gen] CLEANUP_FAILED quizId=${quiz.id} error=${cleanupError.message}`);
+      }
       return NextResponse.json(
         { error: "Failed to save quiz questions" },
         { status: 500 }
       );
     }
 
+    // Mark quiz as active now that questions are saved
+    await supabase.from("quizzes").update({ status: "active" }).eq("id", quiz.id);
+
+    // Decrement monthly quiz quota for non-premium users
+    if (profile && profile.plan !== "captains_club") {
+      await supabase
+        .from("profiles")
+        .update({
+          monthly_quizzes_remaining: Math.max(0, (profile.monthly_quizzes_remaining ?? 1) - 1),
+        })
+        .eq("id", userId);
+    }
+
+    const durationMs = Date.now() - requestStart;
+    console.log(`[quiz-gen] SUCCESS user=${userId} quizId=${quiz.id} questions=${questions.length} provider=${aiProvider} duration=${durationMs}ms`);
+
     return NextResponse.json({ quizId: quiz.id, questionCount: questions.length });
   } catch (err) {
+    const durationMs = Date.now() - requestStart;
+    console.log(`[quiz-gen] ERROR duration=${durationMs}ms error=${err instanceof Error ? err.message : "unknown"}`);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

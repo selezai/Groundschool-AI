@@ -150,7 +150,7 @@ export default function QuizPage() {
     // Save attempt with columns matching existing Supabase schema
     if (user) {
       const completionTime = Math.round((Date.now() - startTime) / 1000);
-      await supabase.from("quiz_attempts").insert({
+      const { error: attemptError } = await supabase.from("quiz_attempts").insert({
         quiz_id: id,
         user_id: user.id,
         score: finalScore,
@@ -161,6 +161,10 @@ export default function QuizPage() {
           answers,
         },
       });
+
+      if (attemptError) {
+        toast.error("Score could not be saved. Your results are shown below but won't appear in history.");
+      }
     }
 
     setIsCompleted(true);
