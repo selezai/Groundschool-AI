@@ -433,7 +433,7 @@ export default function DashboardPage() {
                     : "border-border/50 bg-card/50 hover:border-border hover:bg-card"
                 }`}
               >
-                <div className="flex items-center gap-4 overflow-hidden">
+                <div className="flex items-center gap-4 w-full overflow-hidden">
                   <button
                     type="button"
                     onClick={(e) => {
@@ -457,7 +457,7 @@ export default function DashboardPage() {
                     <FileText className="h-5 w-5 text-muted-foreground" />
                   </div>
 
-                  <div className="flex-1 min-w-0 overflow-hidden">
+                  <div className="flex-1 min-w-0 w-0">
                     <p className="font-medium truncate">{doc.title}</p>
                     <p className="text-sm text-muted-foreground">
                       {formatBytes(doc.file_size)} • {new Date(doc.created_at).toLocaleDateString()}
@@ -467,7 +467,7 @@ export default function DashboardPage() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                    className="flex-shrink-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDelete(doc.id);
