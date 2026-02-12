@@ -221,7 +221,7 @@ Respond ONLY with valid JSON in this exact format:
     if (doc.type === "text" && doc.text) {
       messageContent.push({
         type: "text",
-        text: `\n--- Document: ${doc.title} ---\n${doc.text.substring(0, 30000)}`,
+        text: `\n--- Document: ${doc.title} ---\n${doc.text.substring(0, 100000)}`,
       });
     } else if (doc.type === "image" && doc.imageBase64) {
       messageContent.push({ type: "text", text: `\n--- Image: ${doc.title} ---` });
@@ -235,7 +235,8 @@ Respond ONLY with valid JSON in this exact format:
   }
 
   const groqController = new AbortController();
-  const groqTimeout = setTimeout(() => groqController.abort(), 50000);
+  const timeoutMs = Math.max(60000, numberOfQuestions * 2000);
+  const groqTimeout = setTimeout(() => groqController.abort(), timeoutMs);
 
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -247,7 +248,7 @@ Respond ONLY with valid JSON in this exact format:
       model: "meta-llama/llama-4-scout-17b-16e-instruct",
       messages: [{ role: "user", content: messageContent }],
       temperature: 0.7,
-      max_completion_tokens: 8000,
+      max_completion_tokens: Math.min(32000, Math.max(8000, numberOfQuestions * 500)),
     }),
     signal: groqController.signal,
   });
@@ -306,7 +307,7 @@ Respond ONLY with valid JSON in this exact format:
 
   for (const doc of contents) {
     if (doc.type === "text" && doc.text) {
-      parts.push({ text: `\n--- Document: ${doc.title} ---\n${doc.text.substring(0, 30000)}` });
+      parts.push({ text: `\n--- Document: ${doc.title} ---\n${doc.text.substring(0, 100000)}` });
     } else if (doc.type === "image" && doc.imageBase64) {
       parts.push({ text: `\n--- Image: ${doc.title} ---` });
       parts.push({
@@ -319,7 +320,8 @@ Respond ONLY with valid JSON in this exact format:
   }
 
   const geminiController = new AbortController();
-  const geminiTimeout = setTimeout(() => geminiController.abort(), 50000);
+  const geminiTimeoutMs = Math.max(60000, numberOfQuestions * 2000);
+  const geminiTimeout = setTimeout(() => geminiController.abort(), geminiTimeoutMs);
 
   const res = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE_API_KEY}`,
@@ -330,7 +332,7 @@ Respond ONLY with valid JSON in this exact format:
         contents: [{ parts }],
         generationConfig: {
           temperature: 0.7,
-          maxOutputTokens: 8000,
+          maxOutputTokens: Math.min(32000, Math.max(8000, numberOfQuestions * 500)),
           responseMimeType: "application/json",
         },
       }),
@@ -447,27 +449,75 @@ export async function POST(request: Request) {
       );
     }
 
-    // Use Groq (Llama 4 Scout) as primary, Gemini as fallback
-    // Both support multimodal (text + images)
-    let questions: QuizQuestion[];
+    // Batch generation: split large requests into chunks of up to 25 questions
+    // For each batch, use a different section of the document text
+    const BATCH_SIZE = 25;
+    const batches = Math.ceil(numberOfQuestions / BATCH_SIZE);
+    let questions: QuizQuestion[] = [];
     let aiProvider = "groq";
 
-    try {
-      questions = await generateWithGroqMultimodal(contents, numberOfQuestions);
-    } catch (groqErr) {
-      console.log(`[quiz-gen] GROQ_FAILED user=${userId} error=${groqErr instanceof Error ? groqErr.message : "unknown"}`);
-      // Fallback to Gemini multimodal
-      aiProvider = "gemini";
+    // Combine all text content for chunking across batches
+    const allText = contents
+      .filter((c) => c.type === "text" && c.text)
+      .map((c) => c.text!)
+      .join("\n\n");
+    const imageContents = contents.filter((c) => c.type === "image");
+    const chunkSize = allText.length > 0 ? Math.ceil(allText.length / batches) : 0;
+
+    for (let batch = 0; batch < batches; batch++) {
+      const questionsNeeded = Math.min(BATCH_SIZE, numberOfQuestions - questions.length);
+      if (questionsNeeded <= 0) break;
+
+      // Build content for this batch: use a different text chunk + all images
+      const batchContents: DocumentContent[] = [];
+      if (allText.length > 0) {
+        const start = batch * chunkSize;
+        const end = Math.min(start + chunkSize, allText.length);
+        const textChunk = allText.substring(start, end);
+        if (textChunk.trim()) {
+          batchContents.push({
+            title: `Document section ${batch + 1}/${batches}`,
+            type: "text",
+            text: textChunk,
+          });
+        }
+      }
+      // Include images only in the first batch to avoid duplication
+      if (batch === 0) {
+        batchContents.push(...imageContents);
+      }
+
+      if (batchContents.length === 0) continue;
+
+      console.log(`[quiz-gen] BATCH ${batch + 1}/${batches} user=${userId} questionsNeeded=${questionsNeeded} textLen=${batchContents[0]?.text?.length ?? 0}`);
+
       try {
-        questions = await generateWithGeminiMultimodal(contents, numberOfQuestions);
-      } catch (geminiErr) {
-        console.log(`[quiz-gen] GEMINI_FAILED user=${userId} error=${geminiErr instanceof Error ? geminiErr.message : "unknown"}`);
-        return NextResponse.json(
-          { error: "Failed to generate quiz. Please try again." },
-          { status: 500 }
-        );
+        const batchQuestions = await generateWithGroqMultimodal(batchContents, questionsNeeded);
+        aiProvider = "groq";
+        questions.push(...batchQuestions);
+      } catch (groqErr) {
+        console.log(`[quiz-gen] GROQ_FAILED batch=${batch + 1} user=${userId} error=${groqErr instanceof Error ? groqErr.message : "unknown"}`);
+        // Fallback to Gemini for this batch
+        try {
+          const batchQuestions = await generateWithGeminiMultimodal(batchContents, questionsNeeded);
+          aiProvider = "gemini";
+          questions.push(...batchQuestions);
+        } catch (geminiErr) {
+          console.log(`[quiz-gen] GEMINI_FAILED batch=${batch + 1} user=${userId} error=${geminiErr instanceof Error ? geminiErr.message : "unknown"}`);
+          // If first batch fails entirely, abort
+          if (batch === 0 && questions.length === 0) {
+            return NextResponse.json(
+              { error: "Failed to generate quiz. Please try again." },
+              { status: 500 }
+            );
+          }
+          // Otherwise continue with what we have
+          break;
+        }
       }
     }
+
+    console.log(`[quiz-gen] BATCHES_DONE user=${userId} totalQuestions=${questions.length}/${numberOfQuestions}`);
 
     if (!questions.length) {
       return NextResponse.json(
