@@ -25,6 +25,7 @@ export default function QuizzesPage() {
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(20);
 
   const fetchQuizzes = useCallback(async () => {
@@ -89,6 +90,8 @@ export default function QuizzesPage() {
     setDeletingId(null);
   };
 
+  if (!user) return null;
+
   return (
     <div className="space-y-6">
       <div>
@@ -127,7 +130,7 @@ export default function QuizzesPage() {
               <CardContent className="py-3 px-4 flex items-center gap-3">
                 <ClipboardList className="h-5 w-5 text-muted-foreground flex-shrink-0" />
 
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 w-0">
                   <p className="text-sm font-medium truncate">{quiz.title}</p>
                   <p className="text-xs text-muted-foreground">
                     {quiz.question_count} questions •{" "}
@@ -148,7 +151,7 @@ export default function QuizzesPage() {
                     size="icon"
                     className="text-muted-foreground hover:text-destructive"
                     disabled={deletingId === quiz.id}
-                    onClick={() => handleDelete(quiz.id)}
+                    onClick={() => setDeleteConfirmId(quiz.id)}
                   >
                     {deletingId === quiz.id ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
@@ -170,6 +173,37 @@ export default function QuizzesPage() {
               Show More ({quizzes.length - visibleCount} remaining)
             </Button>
           )}
+        </div>
+      )}
+
+      {/* Delete Confirmation Modal */}
+      {deleteConfirmId && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          <div className="bg-card border border-border rounded-xl p-6 max-w-sm w-full shadow-xl space-y-4">
+            <h3 className="text-lg font-semibold">Delete Exam</h3>
+            <p className="text-sm text-muted-foreground">
+              This will permanently delete this exam, all questions, and attempt history. This cannot be undone.
+            </p>
+            <div className="flex gap-3 justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setDeleteConfirmId(null)}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={() => {
+                  handleDelete(deleteConfirmId);
+                  setDeleteConfirmId(null);
+                }}
+              >
+                Delete
+              </Button>
+            </div>
+          </div>
         </div>
       )}
     </div>

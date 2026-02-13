@@ -128,6 +128,8 @@ export default function ProfilePage() {
     setShowDeleteConfirm(false);
   };
 
+  if (!user) return null;
+
   const isCaptainsClub = profile?.plan === "captains_club";
 
   const benefits = [

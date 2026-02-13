@@ -45,7 +45,7 @@ export default function LoginPage() {
       if (error) {
         toast.error(error);
       } else {
-        toast.success("Account created! Please check your email to verify.");
+        toast.success("Welcome aboard! Your account is ready.");
         router.push("/dashboard");
       }
     } else {

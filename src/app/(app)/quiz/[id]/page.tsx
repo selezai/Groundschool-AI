@@ -39,6 +39,7 @@ export default function QuizPage() {
   const [score, setScore] = useState(0);
   const [startTime] = useState(Date.now());
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
 
   const fetchQuiz = useCallback(async () => {
     if (!id || !user) return;
@@ -126,14 +127,16 @@ export default function QuizPage() {
     }
   };
 
-  const handleSubmit = async () => {
+  const confirmSubmit = () => {
     if (answeredCount < questions.length) {
-      const unanswered = questions.length - answeredCount;
-      if (!confirm(`You have ${unanswered} unanswered question(s). Submit anyway?`)) {
-        return;
-      }
+      setShowSubmitConfirm(true);
+      return;
     }
+    handleSubmit();
+  };
 
+  const handleSubmit = async () => {
+    setShowSubmitConfirm(false);
     setIsSubmitting(true);
 
     // Calculate score
@@ -179,6 +182,8 @@ export default function QuizPage() {
     setScore(0);
     setShowExplanation(false);
   };
+
+  if (!user) return null;
 
   if (isLoading) {
     return (
@@ -358,6 +363,30 @@ export default function QuizPage() {
         </Card>
       )}
 
+      {/* Question Navigator */}
+      <div className="flex flex-wrap gap-1.5 justify-center">
+        {questions.map((q, idx) => {
+          const isAnswered = !!answers[q.id];
+          const isCurrent = idx === currentIndex;
+          return (
+            <button
+              key={q.id}
+              onClick={() => { setCurrentIndex(idx); setShowExplanation(false); }}
+              className={cn(
+                "w-8 h-8 rounded-lg text-xs font-medium transition-all",
+                isCurrent
+                  ? "bg-primary text-primary-foreground shadow-lg"
+                  : isAnswered
+                    ? "bg-primary/20 text-primary"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+              )}
+            >
+              {idx + 1}
+            </button>
+          );
+        })}
+      </div>
+
       <div className="flex items-center justify-between">
         <Button
           variant="outline"
@@ -373,19 +402,53 @@ export default function QuizPage() {
         </span>
 
         {currentIndex === questions.length - 1 ? (
-          <Button onClick={handleSubmit} disabled={isSubmitting}>
+          <Button onClick={confirmSubmit} disabled={isSubmitting}>
             {isSubmitting ? (
               <Loader2 className="h-4 w-4 animate-spin mr-2" />
             ) : null}
             Submit
           </Button>
         ) : (
-          <Button variant="outline" onClick={goNext}>
-            Next
-            <ChevronRight className="h-4 w-4 ml-1" />
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={goNext}>
+              Next
+              <ChevronRight className="h-4 w-4 ml-1" />
+            </Button>
+            {answeredCount === questions.length && (
+              <Button onClick={confirmSubmit} disabled={isSubmitting} size="sm">
+                Submit
+              </Button>
+            )}
+          </div>
         )}
       </div>
+
+      {/* Submit Confirmation Modal */}
+      {showSubmitConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          <div className="bg-card border border-border rounded-xl p-6 max-w-sm w-full shadow-xl space-y-4">
+            <h3 className="text-lg font-semibold">Submit Exam?</h3>
+            <p className="text-sm text-muted-foreground">
+              You have {questions.length - answeredCount} unanswered question{questions.length - answeredCount !== 1 ? "s" : ""}. Unanswered questions will be marked as incorrect.
+            </p>
+            <div className="flex gap-3 justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setShowSubmitConfirm(false)}
+              >
+                Keep Working
+              </Button>
+              <Button
+                size="sm"
+                onClick={handleSubmit}
+              >
+                Submit Anyway
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
