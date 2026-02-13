@@ -42,12 +42,21 @@ export default function DashboardPage() {
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
 
-  const getGreeting = () => {
+  const computeGreeting = () => {
     const hour = new Date().getHours();
     if (hour < 12) return "Good morning";
     if (hour < 17) return "Good afternoon";
     return "Good evening";
   };
+
+  const [greeting, setGreeting] = useState(computeGreeting);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGreeting(computeGreeting());
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   const firstName = profile?.full_name?.split(" ")[0] || "Pilot";
 
@@ -264,7 +273,7 @@ export default function DashboardPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent rounded-2xl" />
         <div className="relative p-6 md:p-8">
           <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
-            {getGreeting()}, {firstName}
+            {greeting}, {firstName}
           </h1>
           <p className="text-muted-foreground mt-2 text-lg">
             Upload study materials and generate AI-powered practice exams
