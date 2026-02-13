@@ -121,53 +121,55 @@ export default function SettingsPage() {
         </CardContent>
       </Card>
 
-      {/* Change Password Card */}
-      <Card>
-        <CardContent className="pt-6">
-          <h3 className="font-semibold mb-4 flex items-center gap-2">
-            <Lock className="h-4 w-4 text-primary" />
-            Change Password
-          </h3>
+      {/* Change Password Card — only for email/password users */}
+      {user?.app_metadata?.provider !== "google" && (
+        <Card>
+          <CardContent className="pt-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Lock className="h-4 w-4 text-primary" />
+              Change Password
+            </h3>
 
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="newPassword">New Password</Label>
-              <Input
-                id="newPassword"
-                type="password"
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-                placeholder="Enter new password"
-              />
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="newPassword">New Password</Label>
+                <Input
+                  id="newPassword"
+                  type="password"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  placeholder="Enter new password"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="confirmPassword">Confirm New Password</Label>
+                <Input
+                  id="confirmPassword"
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="Confirm new password"
+                />
+              </div>
+
+              <Button
+                onClick={handleChangePassword}
+                disabled={isChangingPassword}
+                variant="outline"
+                className="w-full"
+              >
+                {isChangingPassword ? (
+                  <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                ) : (
+                  <Lock className="h-4 w-4 mr-2" />
+                )}
+                Update Password
+              </Button>
             </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="confirmPassword">Confirm New Password</Label>
-              <Input
-                id="confirmPassword"
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="Confirm new password"
-              />
-            </div>
-
-            <Button
-              onClick={handleChangePassword}
-              disabled={isChangingPassword}
-              variant="outline"
-              className="w-full"
-            >
-              {isChangingPassword ? (
-                <Loader2 className="h-4 w-4 animate-spin mr-2" />
-              ) : (
-                <Lock className="h-4 w-4 mr-2" />
-              )}
-              Update Password
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

@@ -19,6 +19,7 @@ export default function LoginPage() {
   const [fullName, setFullName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [isResetLoading, setIsResetLoading] = useState(false);
   const { signIn, signUp, signInWithGoogle, resetPassword } = useAuth();
   const router = useRouter();
 
@@ -66,12 +67,14 @@ export default function LoginPage() {
       toast.error("Please enter your email address first");
       return;
     }
+    setIsResetLoading(true);
     const { error } = await resetPassword(email);
     if (error) {
       toast.error(error);
     } else {
       toast.success("Password reset email sent. Check your inbox.");
     }
+    setIsResetLoading(false);
   };
 
   return (
@@ -217,9 +220,10 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={handleForgotPassword}
-              className="mt-3 text-sm text-muted-foreground hover:text-primary transition-colors w-full text-center"
+              disabled={isResetLoading || isLoading}
+              className="mt-3 text-sm text-muted-foreground hover:text-primary transition-colors w-full text-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Forgot your password?
+              {isResetLoading ? "Sending reset link..." : "Forgot your password?"}
             </button>
           )}
 
@@ -231,6 +235,8 @@ export default function LoginPage() {
               type="button"
               onClick={() => {
                 setIsSignUp(!isSignUp);
+                setEmail("");
+                setPassword("");
                 setConfirmPassword("");
                 setFullName("");
               }}
