@@ -14,23 +14,25 @@ import {
   Play,
   Loader2,
   Sparkles,
+  Lock,
+  Crown,
 } from "lucide-react";
 import { toast } from "sonner";
 
 export default function QuizzesPage() {
-  const { user } = useAuth();
+  const { user, profile, isLoading } = useAuth();
   const router = useRouter();
   const supabase = createClient();
 
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingQuizzes, setIsLoadingQuizzes] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(20);
 
   const fetchQuizzes = useCallback(async () => {
     if (!user) return;
-    setIsLoading(true);
+    setIsLoadingQuizzes(true);
     const { data, error } = await supabase
       .from("quizzes")
       .select("*")
@@ -43,7 +45,7 @@ export default function QuizzesPage() {
     } else {
       setQuizzes(data ?? []);
     }
-    setIsLoading(false);
+    setIsLoadingQuizzes(false);
   }, [user, supabase]);
 
   useEffect(() => {
@@ -90,7 +92,39 @@ export default function QuizzesPage() {
     setDeletingId(null);
   };
 
-  if (!user) return null;
+  if (!user || isLoading || !profile) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  if (profile.plan !== "captains_club") {
+    return (
+      <div className="space-y-6">
+        <div>
+          <h1 className="text-2xl font-bold">My Exams</h1>
+          <p className="text-muted-foreground">Review and retake your practice exams</p>
+        </div>
+        <Card className="border-dashed border-2">
+          <CardContent className="py-16 text-center">
+            <div className="mx-auto w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center mb-4">
+              <Lock className="h-8 w-8 text-amber-500" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">Captain&apos;s Club Feature</h3>
+            <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
+              Upgrade to Captain&apos;s Club to access your full exam history. Review past exams, track your progress, and retake exams anytime.
+            </p>
+            <Button onClick={() => router.push("/captains-club")} className="gap-2">
+              <Crown className="h-4 w-4" />
+              Upgrade to Captain&apos;s Club
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -101,7 +135,7 @@ export default function QuizzesPage() {
         </p>
       </div>
 
-      {isLoading ? (
+      {isLoadingQuizzes ? (
         <div className="space-y-3">
           {[1, 2, 3].map((i) => (
             <Skeleton key={i} className="h-20 w-full rounded-lg" />
