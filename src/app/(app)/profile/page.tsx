@@ -35,7 +35,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function ProfilePage() {
-  const { user, profile, signOut, refreshProfile } = useAuth();
+  const { user, profile, isLoading, signOut, refreshProfile } = useAuth();
   const router = useRouter();
   const supabase = createClient();
 
@@ -128,7 +128,13 @@ export default function ProfilePage() {
     setShowDeleteConfirm(false);
   };
 
-  if (!user) return null;
+  if (!user || isLoading || !profile) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
 
   const isCaptainsClub = profile?.plan === "captains_club";
 

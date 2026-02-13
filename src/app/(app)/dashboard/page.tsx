@@ -26,7 +26,7 @@ import {
 import { toast } from "sonner";
 
 export default function DashboardPage() {
-  const { user, profile } = useAuth();
+  const { user, profile, isLoading } = useAuth();
   const router = useRouter();
   const supabase = createClient();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -275,7 +275,13 @@ export default function DashboardPage() {
     }
   };
 
-  if (!user) return null;
+  if (!user || isLoading || !profile) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8 overflow-x-hidden">

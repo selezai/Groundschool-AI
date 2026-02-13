@@ -11,7 +11,7 @@ import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
 
 export default function SettingsPage() {
-  const { user, profile, refreshProfile } = useAuth();
+  const { user, profile, isLoading, refreshProfile } = useAuth();
   const supabase = createClient();
 
   const [fullName, setFullName] = useState(profile?.full_name || "");
@@ -20,6 +20,14 @@ export default function SettingsPage() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isChangingPassword, setIsChangingPassword] = useState(false);
+
+  if (!user || isLoading || !profile) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
 
   const handleSaveName = async () => {
     if (!user || !fullName.trim()) return;
