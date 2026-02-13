@@ -20,6 +20,8 @@ import {
   Sparkles,
   BookOpen,
   FileUp,
+  HardDrive,
+  ListChecks,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -38,6 +40,7 @@ export default function DashboardPage() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState(10);
   const [visibleCount, setVisibleCount] = useState(20);
+  const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
 
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
@@ -225,6 +228,14 @@ export default function DashboardPage() {
     );
   };
 
+  const toggleSelectAll = () => {
+    if (selectedDocIds.length === documents.length) {
+      setSelectedDocIds([]);
+    } else {
+      setSelectedDocIds(documents.map((d) => d.id));
+    }
+  };
+
   const handleGenerateQuiz = async () => {
     if (selectedDocIds.length === 0) {
       toast.error("Select at least one document to generate an exam");
@@ -287,7 +298,7 @@ export default function DashboardPage() {
         <div className="stat-card">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="p-2 sm:p-2.5 rounded-lg bg-primary/10 w-fit">
-              <Upload className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+              <HardDrive className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
             </div>
             <div>
               <p className="text-xs sm:text-sm text-muted-foreground">Storage Used</p>
@@ -357,7 +368,7 @@ export default function DashboardPage() {
           ) : (
             <Sparkles className="h-4 w-4" />
           )}
-          Generate Exam
+          {isGenerating ? "Generating Exam..." : "Generate Exam"}
         </Button>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:ml-auto">
@@ -369,7 +380,8 @@ export default function DashboardPage() {
               id="numQuestions"
               value={numberOfQuestions}
               onChange={(e) => setNumberOfQuestions(Number(e.target.value))}
-              className="bg-secondary text-foreground text-sm rounded-lg px-3 py-2 border border-border/50 focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-all"
+              disabled={isGenerating}
+              className="bg-secondary text-foreground text-sm rounded-lg px-3 py-2 border border-border/50 focus:ring-2 focus:ring-primary/20 focus:border-primary/50 transition-all disabled:opacity-50"
             >
               {[5, 10, 15, 20, 25, 30, 40, 50, 75, 100].map((n) => (
                 <option key={n} value={n}>
@@ -384,6 +396,11 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      {/* Supported Formats */}
+      <p className="text-xs text-muted-foreground/60 -mt-4">
+        Supported: PDF, TXT, PNG, JPG, HEIC (max 25MB)
+      </p>
+
       {/* Upload Progress Bar */}
       {isUploading && (
         <div className="w-full">
@@ -397,11 +414,25 @@ export default function DashboardPage() {
       {/* Section Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">Your Documents</h2>
-        {documents.length > 0 && (
-          <span className="text-sm text-muted-foreground">
-            {selectedDocIds.length > 0 ? `${selectedDocIds.length} selected` : 'Select documents to generate exam'}
-          </span>
-        )}
+        <div className="flex items-center gap-3">
+          {documents.length > 0 && (
+            <span className="text-sm text-muted-foreground hidden sm:inline">
+              {selectedDocIds.length > 0 ? `${selectedDocIds.length} selected` : 'Select documents to generate exam'}
+            </span>
+          )}
+          {documents.length > 1 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleSelectAll}
+              disabled={isGenerating}
+              className="gap-1.5 text-xs"
+            >
+              <ListChecks className="h-3.5 w-3.5" />
+              {selectedDocIds.length === documents.length ? "Deselect All" : "Select All"}
+            </Button>
+          )}
+        </div>
       </div>
 
       {/* Documents List */}
@@ -488,7 +519,7 @@ export default function DashboardPage() {
                     className="flex-shrink-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                     onClick={(e) => {
                       e.stopPropagation();
-                      if (!isGenerating) handleDelete(doc.id);
+                      if (!isGenerating) setDeleteConfirmId(doc.id);
                     }}
                   >
                     <Trash2 className="h-4 w-4" />
@@ -507,6 +538,37 @@ export default function DashboardPage() {
               Show More ({documents.length - visibleCount} remaining)
             </Button>
           )}
+        </div>
+      )}
+
+      {/* Delete Confirmation Dialog */}
+      {deleteConfirmId && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+          <div className="bg-card border border-border rounded-xl p-6 max-w-sm w-full shadow-xl space-y-4">
+            <h3 className="text-lg font-semibold">Delete Document</h3>
+            <p className="text-sm text-muted-foreground">
+              Are you sure you want to delete this document? This action cannot be undone.
+            </p>
+            <div className="flex gap-3 justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setDeleteConfirmId(null)}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={() => {
+                  handleDelete(deleteConfirmId);
+                  setDeleteConfirmId(null);
+                }}
+              >
+                Delete
+              </Button>
+            </div>
+          </div>
         </div>
       )}
     </div>
