@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/providers/auth-provider";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,19 @@ export default function LoginPage() {
   const [isResetLoading, setIsResetLoading] = useState(false);
   const { signIn, signUp, signInWithGoogle, resetPassword } = useAuth();
   const router = useRouter();
+
+  // Reset loading states when page is restored from bfcache (e.g. user presses back from Google)
+  useEffect(() => {
+    const handlePageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) {
+        setIsGoogleLoading(false);
+        setIsLoading(false);
+        setIsResetLoading(false);
+      }
+    };
+    window.addEventListener("pageshow", handlePageShow);
+    return () => window.removeEventListener("pageshow", handlePageShow);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
