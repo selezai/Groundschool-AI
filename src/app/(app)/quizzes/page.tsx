@@ -126,22 +126,27 @@ export default function QuizzesPage() {
       ) : (
         <div className="space-y-2">
           {quizzes.slice(0, visibleCount).map((quiz) => (
-            <Card key={quiz.id} className="hover:bg-muted/50 transition-colors">
+            <Card key={quiz.id} className="hover:bg-muted/50 transition-colors active:scale-[0.99]">
               <CardContent className="py-3 px-4 flex items-center gap-3">
-                <ClipboardList className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-
-                <div className="flex-1 min-w-0 w-0">
-                  <p className="text-sm font-medium truncate">{quiz.title}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {quiz.question_count} questions •{" "}
-                    {new Date(quiz.created_at).toLocaleDateString()}
-                  </p>
-                </div>
+                <button
+                  onClick={() => router.push(`/quiz/${quiz.id}`)}
+                  className="flex items-center gap-3 flex-1 min-w-0 text-left"
+                >
+                  <ClipboardList className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                  <div className="flex-1 min-w-0 w-0">
+                    <p className="text-sm font-medium truncate">{quiz.title}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {quiz.question_count} questions •{" "}
+                      {new Date(quiz.created_at).toLocaleDateString()}
+                    </p>
+                  </div>
+                </button>
 
                 <div className="flex items-center gap-1 flex-shrink-0">
                   <Button
                     variant="ghost"
                     size="icon"
+                    className="h-10 w-10 text-primary"
                     onClick={() => router.push(`/quiz/${quiz.id}`)}
                   >
                     <Play className="h-4 w-4" />
@@ -149,7 +154,7 @@ export default function QuizzesPage() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="text-muted-foreground hover:text-destructive"
+                    className="h-10 w-10 text-muted-foreground hover:text-destructive"
                     disabled={deletingId === quiz.id}
                     onClick={() => setDeleteConfirmId(quiz.id)}
                   >

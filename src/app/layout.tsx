@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/components/providers/auth-provider";
@@ -8,6 +8,13 @@ const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: "Groundschool AI",
@@ -29,7 +36,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <AuthProvider>
           {children}
-          <Toaster richColors position="top-right" />
+          <Toaster richColors position="top-center" />
         </AuthProvider>
       </body>
     </html>

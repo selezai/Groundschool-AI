@@ -240,18 +240,18 @@ export default function ProfilePage() {
               <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
             </div>
           ) : (
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="p-4 rounded-xl bg-muted/50">
-                <p className="text-2xl font-bold">{quizCount}</p>
-                <p className="text-xs text-muted-foreground">Exams Taken</p>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
+              <div className="p-3 sm:p-4 rounded-xl bg-muted/50">
+                <p className="text-xl sm:text-2xl font-bold">{quizCount}</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Exams Taken</p>
               </div>
-              <div className="p-4 rounded-xl bg-muted/50">
-                <p className="text-2xl font-bold">{docCount}</p>
-                <p className="text-xs text-muted-foreground">Documents</p>
+              <div className="p-3 sm:p-4 rounded-xl bg-muted/50">
+                <p className="text-xl sm:text-2xl font-bold">{docCount}</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Documents</p>
               </div>
-              <div className="p-4 rounded-xl bg-muted/50">
-                <p className="text-2xl font-bold">{avgScore}%</p>
-                <p className="text-xs text-muted-foreground">Avg Score</p>
+              <div className="p-3 sm:p-4 rounded-xl bg-muted/50">
+                <p className="text-xl sm:text-2xl font-bold">{avgScore}%</p>
+                <p className="text-[10px] sm:text-xs text-muted-foreground">Avg Score</p>
               </div>
             </div>
           )}

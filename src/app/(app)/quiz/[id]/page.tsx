@@ -296,14 +296,14 @@ export default function QuizPage() {
           })}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
           <Button variant="outline" onClick={handleRetake} className="flex-1">
             <RotateCcw className="h-4 w-4 mr-2" />
-            Retake
+            Retake Exam
           </Button>
           <Button onClick={() => router.push("/dashboard")} className="flex-1">
             <Home className="h-4 w-4 mr-2" />
-            Dashboard
+            Back to Dashboard
           </Button>
         </div>
       </div>
@@ -315,7 +315,7 @@ export default function QuizPage() {
     <div className="max-w-2xl mx-auto space-y-6">
       <div>
         <div className="flex items-center justify-between mb-2">
-          <h1 className="text-lg font-bold truncate">{quiz?.title}</h1>
+          <h1 className="text-sm sm:text-lg font-bold truncate">{quiz?.title}</h1>
           <span className="text-sm text-muted-foreground whitespace-nowrap ml-2">
             {currentIndex + 1} / {questions.length}
           </span>
@@ -373,7 +373,7 @@ export default function QuizPage() {
               key={q.id}
               onClick={() => { setCurrentIndex(idx); setShowExplanation(false); }}
               className={cn(
-                "w-8 h-8 rounded-lg text-xs font-medium transition-all",
+                "w-9 h-9 sm:w-8 sm:h-8 rounded-lg text-xs font-medium transition-all",
                 isCurrent
                   ? "bg-primary text-primary-foreground shadow-lg"
                   : isAnswered
@@ -392,17 +392,18 @@ export default function QuizPage() {
           variant="outline"
           onClick={goPrev}
           disabled={currentIndex === 0}
+          size="sm"
         >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Previous
+          <ChevronLeft className="h-4 w-4 sm:mr-1" />
+          <span className="hidden sm:inline">Previous</span>
         </Button>
 
-        <span className="text-sm text-muted-foreground">
-          {answeredCount} / {questions.length} answered
+        <span className="text-xs sm:text-sm text-muted-foreground">
+          {answeredCount}/{questions.length} answered
         </span>
 
         {currentIndex === questions.length - 1 ? (
-          <Button onClick={confirmSubmit} disabled={isSubmitting}>
+          <Button onClick={confirmSubmit} disabled={isSubmitting} size="sm">
             {isSubmitting ? (
               <Loader2 className="h-4 w-4 animate-spin mr-2" />
             ) : null}
@@ -410,9 +411,9 @@ export default function QuizPage() {
           </Button>
         ) : (
           <div className="flex gap-2">
-            <Button variant="outline" onClick={goNext}>
-              Next
-              <ChevronRight className="h-4 w-4 ml-1" />
+            <Button variant="outline" onClick={goNext} size="sm">
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight className="h-4 w-4 sm:ml-1" />
             </Button>
             {answeredCount === questions.length && (
               <Button onClick={confirmSubmit} disabled={isSubmitting} size="sm">
