@@ -35,29 +35,16 @@ export async function GET(request: Request) {
             user.email?.split("@")[0] ||
             "Pilot";
 
-          const autoUpgrade =
-            process.env.NEXT_PUBLIC_AUTO_UPGRADE_NEW_USERS === "true";
-          const trialDays = process.env.NEXT_PUBLIC_CAPTAINS_CLUB_TRIAL_DAYS;
-
-          const plan = autoUpgrade ? "captains_club" : "basic";
-          const planStatus = autoUpgrade ? "active" : "basic";
-
-          let planPeriodEnd: string | null = null;
-          if (autoUpgrade && trialDays && trialDays !== "null") {
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + parseInt(trialDays));
-            planPeriodEnd = endDate.toISOString();
-          }
-
+          // All new users get Captain's Club
           await supabase.from("profiles").upsert({
             id: user.id,
             full_name: fullName,
             email: user.email,
-            plan,
-            plan_status: planStatus,
-            plan_period_end: planPeriodEnd,
-            monthly_quizzes_remaining: autoUpgrade ? -1 : 5,
-            can_access_past_exams: autoUpgrade,
+            plan: "captains_club",
+            plan_status: "active",
+            plan_period_end: null,
+            monthly_quizzes_remaining: -1,
+            can_access_past_exams: true,
             storage_used_mb: 0,
             updated_at: new Date().toISOString(),
           });
