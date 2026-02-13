@@ -22,6 +22,8 @@ import {
   FileUp,
   HardDrive,
   ListChecks,
+  AlertTriangle,
+  Crown,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -44,6 +46,10 @@ export default function DashboardPage() {
 
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
+  const isOverStorageLimit = storageUsed >= maxStorage;
+  const isCaptainsClub = profile?.plan === "captains_club";
+  const quizzesRemaining = profile?.monthly_quizzes_remaining ?? 0;
+  const hasQuizzesRemaining = isCaptainsClub || quizzesRemaining === -1 || quizzesRemaining > 0;
 
   const computeGreeting = () => {
     const hour = new Date().getHours();
@@ -242,6 +248,11 @@ export default function DashboardPage() {
       return;
     }
 
+    if (!hasQuizzesRemaining) {
+      toast.error("You've used all your monthly exams. Upgrade to Captain's Club for unlimited exams.");
+      return;
+    }
+
     setIsGenerating(true);
     try {
       const res = await fetch("/api/generate-quiz", {
@@ -298,6 +309,32 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      {/* Over-limit warnings */}
+      {!isCaptainsClub && isOverStorageLimit && (
+        <div className="flex items-center gap-3 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30">
+          <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0" />
+          <div className="flex-1">
+            <p className="text-sm font-medium">Storage limit reached</p>
+            <p className="text-xs text-muted-foreground">Delete files to free up space or upgrade for 500MB storage.</p>
+          </div>
+          <Button size="sm" variant="outline" className="flex-shrink-0 gap-1.5" onClick={() => router.push("/captains-club")}>
+            <Crown className="h-3.5 w-3.5" /> Upgrade
+          </Button>
+        </div>
+      )}
+      {!isCaptainsClub && !hasQuizzesRemaining && (
+        <div className="flex items-center gap-3 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30">
+          <AlertTriangle className="h-5 w-5 text-amber-500 flex-shrink-0" />
+          <div className="flex-1">
+            <p className="text-sm font-medium">Monthly exam limit reached</p>
+            <p className="text-xs text-muted-foreground">You&apos;ve used all 10 monthly exams. Resets next month.</p>
+          </div>
+          <Button size="sm" variant="outline" className="flex-shrink-0 gap-1.5" onClick={() => router.push("/captains-club")}>
+            <Crown className="h-3.5 w-3.5" /> Upgrade
+          </Button>
+        </div>
+      )}
+
       {/* Stats Grid */}
       <div className="grid grid-cols-3 gap-2 sm:gap-4">
         {/* Storage Card */}
@@ -352,8 +389,14 @@ export default function DashboardPage() {
           onChange={handleUpload}
         />
         <Button
-          onClick={() => fileInputRef.current?.click()}
-          disabled={isUploading || isGenerating}
+          onClick={() => {
+            if (isOverStorageLimit) {
+              toast.error("Storage limit reached. Delete files or upgrade to Captain's Club.");
+              return;
+            }
+            fileInputRef.current?.click();
+          }}
+          disabled={isUploading || isGenerating || isOverStorageLimit}
           className="gap-2"
         >
           {isUploading ? (
@@ -366,7 +409,7 @@ export default function DashboardPage() {
 
         <Button
           onClick={handleGenerateQuiz}
-          disabled={isGenerating || selectedDocIds.length === 0}
+          disabled={isGenerating || selectedDocIds.length === 0 || !hasQuizzesRemaining}
           className="gap-2 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70"
         >
           {isGenerating ? (

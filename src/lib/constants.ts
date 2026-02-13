@@ -1,8 +1,8 @@
 export const PLANS = {
   basic: {
     name: "Basic",
-    maxStorage: 100 * 1024 * 1024, // 100MB
-    maxQuizzesPerMonth: 5,
+    maxStorage: 50 * 1024 * 1024, // 50MB
+    maxQuizzesPerMonth: 10,
     canAccessPastExams: false,
   },
   captains_club: {

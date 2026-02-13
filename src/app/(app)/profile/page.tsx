@@ -284,7 +284,7 @@ export default function ProfilePage() {
             <div className="flex items-center justify-between">
               <span className="text-sm">Monthly Exams</span>
               <span className="text-sm font-medium">
-                {isCaptainsClub ? "Unlimited" : `${profile?.monthly_quizzes_remaining ?? 5} remaining`}
+                {isCaptainsClub ? "Unlimited" : `${profile?.monthly_quizzes_remaining ?? 10} remaining`}
               </span>
             </div>
           </div>

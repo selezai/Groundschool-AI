@@ -192,7 +192,7 @@ export default function CaptainsClubPage() {
       {/* Comparison */}
       <div className="text-center text-sm text-muted-foreground">
         <p>Currently on <span className="font-medium text-foreground">Basic Plan</span></p>
-        <p className="mt-1">5 quizzes/month • 100MB storage • Limited history</p>
+        <p className="mt-1">10 exams/month • 50MB storage • Limited history</p>
       </div>
     </div>
   );
