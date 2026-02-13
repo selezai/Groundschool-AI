@@ -196,7 +196,8 @@ export default function QuizPage() {
   // Results screen
   if (isCompleted) {
     const correct = questions.filter((q) => answers[q.id] === q.correct_answer_id).length;
-    const passed = score >= 70;
+    const PASS_THRESHOLD = 75;
+    const passed = score >= PASS_THRESHOLD;
 
     return (
       <div className="max-w-2xl mx-auto space-y-6">
@@ -223,7 +224,7 @@ export default function QuizPage() {
               {passed ? "Excellent Work!" : "Keep Practicing!"}
             </h2>
             <p className="text-muted-foreground text-sm mb-4">
-              {passed ? "You're on track for success" : "Review the material and try again"}
+              {passed ? "You're on track for success" : `You need ${PASS_THRESHOLD}% to pass. Review the material and try again.`}
             </p>
             <div className={cn(
               "inline-flex items-center gap-2 px-6 py-3 rounded-full mb-4",
