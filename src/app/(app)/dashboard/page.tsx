@@ -26,6 +26,7 @@ import {
   Crown,
 } from "lucide-react";
 import { toast } from "sonner";
+import { OnboardingModal, hasCompletedOnboarding, markOnboardingComplete } from "@/components/onboarding-modal";
 
 export default function DashboardPage() {
   const { user, profile, isLoading } = useAuth();
@@ -43,6 +44,7 @@ export default function DashboardPage() {
   const [numberOfQuestions, setNumberOfQuestions] = useState(10);
   const [visibleCount, setVisibleCount] = useState(20);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
@@ -91,6 +93,15 @@ export default function DashboardPage() {
   useEffect(() => {
     fetchDocuments();
   }, [fetchDocuments]);
+
+  // Show onboarding for new users (0 documents and haven't dismissed it before)
+  useEffect(() => {
+    if (isLoadingDocs || !user) return;
+    if (hasCompletedOnboarding(user.id)) return;
+    if (documents.length === 0) {
+      setShowOnboarding(true);
+    }
+  }, [isLoadingDocs, documents.length, user]);
 
   const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25MB per file
   const UNSUPPORTED_EXTENSIONS = [".doc", ".docx"];
@@ -196,6 +207,7 @@ export default function DashboardPage() {
       toast.error("Failed to save document record. Please try again.");
     } else {
       toast.success("Document uploaded successfully");
+      if (user) markOnboardingComplete(user.id);
       fetchDocuments();
     }
 
@@ -296,6 +308,10 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-8 overflow-x-hidden">
+      {showOnboarding && (
+        <OnboardingModal onComplete={() => setShowOnboarding(false)} firstName={firstName} userId={user.id} />
+      )}
+
       {/* Hero Header */}
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent rounded-2xl" />
