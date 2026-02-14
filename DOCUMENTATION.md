@@ -25,7 +25,9 @@ src/
 │   │   ├── profile/        # User profile, account management
 │   │   ├── captains-club/  # Subscription upgrade page
 │   │   └── settings/       # App settings
+│   │   └── admin/          # Admin dashboard (UUID-gated)
 │   ├── api/
+│   │   ├── admin/          # Admin analytics + actions API routes
 │   │   └── generate-quiz/  # Server-side AI quiz generation
 │   ├── auth/callback/      # Supabase auth callback
 │   ├── login/              # Login/register page
@@ -85,6 +87,8 @@ supabase/                   # Edge Functions (PayFast, account deletion)
 | GROQ_API_KEY | Server only | Groq AI API key |
 | GOOGLE_API_KEY | Server only | Gemini AI API key |
 | NEXT_PUBLIC_AUTO_UPGRADE_NEW_USERS | Client | Auto-upgrade new users to Captain's Club |
+| ADMIN_USER_ID | Server only | UUID of the admin user for dashboard access |
+| SUPABASE_SERVICE_ROLE_KEY | Server only | Supabase service role key for admin dashboard (bypasses RLS) |
 
 ## Plans
 | Plan | Storage | Quizzes/month | Past Exams |
@@ -93,6 +97,23 @@ supabase/                   # Edge Functions (PayFast, account deletion)
 | Captain's Club | 500MB | Unlimited | Yes |
 
 ## Decisions Log
+- **2025-02-14**: Admin Dashboard — single-user UUID-gated admin panel
+  - **Route**: `/admin` inside `(app)` layout, shares sidebar with rest of app
+  - **Security**: Triple-layer protection — (1) middleware redirects non-admin to `/dashboard`, (2) API routes check UUID server-side, (3) page-level client check. Admin UUID hardcoded + env var `ADMIN_USER_ID`
+  - **Sidebar**: "Admin" nav item with Shield icon only renders when `user.id === ADMIN_UUID`
+  - **Analytics**: Users (total, active 7d/30d, plan breakdown, signups chart, top users), Exams (total, active, failed, stuck, attempts, avg score, pass rate, generation chart), Documents (total, storage, type breakdown, uploads chart), Revenue (MRR, paying users, conversion rate, cancelled-but-active), System Health (API key status, service role status, stuck quizzes)
+  - **Actions**: Upgrade/downgrade users, reset quotas, fix stuck quizzes, delete quizzes
+  - **Auto-refresh**: 60-second polling interval with toggle + manual refresh button
+  - **API routes**: `/api/admin/analytics` (GET) and `/api/admin/actions` (POST), both UUID-gated server-side
+  - **Audit fixes (same day)**:
+    - **CRITICAL: RLS bypass** — Admin queries now use `SUPABASE_SERVICE_ROLE_KEY` via `src/lib/supabase/admin.ts` to bypass RLS and see ALL users' data. Without this, every stat only showed the admin's own data.
+    - **Signups chart** — Now uses `auth.admin.listUsers()` to get real `created_at` from `auth.users` table. Previously used `profiles.updated_at` which changes on every profile update.
+    - **>1000 row handling** — Added `fetchAll()` pagination helper that loops with `.range()` to fetch beyond Supabase's default 1000-row limit.
+    - **Active users broadened** — Now counts users who generated quizzes or uploaded documents, not just quiz attempts.
+    - **Revenue accuracy** — Active subscriptions now require `plan_status = 'active' OR 'trialing'`. Added `cancelled_but_active` count for users whose subscription was cancelled but period hasn't ended.
+    - **delete_quiz cascade fix** — `quiz_question_responses` are now deleted via `attempt_id` (correct FK), not `question_id`.
+    - **Graceful fallback** — If `SUPABASE_SERVICE_ROLE_KEY` is missing, dashboard falls back to regular client (shows only admin's data) with a prominent warning banner instead of crashing.
+
 - **2025-02-13**: Security & reliability audit — **all 20 items (P0–P3) resolved**
   - **Upload hardening**: 25MB per-file limit, .doc/.docx rejected, orphaned storage files cleaned up on DB failure
   - **Upload progress**: Real byte-level progress via XHR to Supabase Storage REST API

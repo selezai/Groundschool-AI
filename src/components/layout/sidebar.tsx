@@ -12,10 +12,13 @@ import {
   LogOut,
   Menu,
   X,
+  Shield,
 } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+
+const ADMIN_UUID = "c0023a5b-e4e9-4955-9ec7-2f9eed20db5a";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: Home },
@@ -26,7 +29,8 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { signOut, profile } = useAuth();
+  const { user, signOut, profile } = useAuth();
+  const isAdmin = user?.id === ADMIN_UUID;
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -70,7 +74,11 @@ export function Sidebar() {
       )}
 
       <nav className="flex-1 px-3 space-y-1">
-        {navItems.map((item) => {
+        {navItems.concat(
+          isAdmin
+            ? [{ href: "/admin", label: "Admin", icon: Shield }]
+            : []
+        ).map((item) => {
           const isActive = pathname === item.href;
           return (
             <Link

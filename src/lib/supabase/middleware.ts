@@ -34,7 +34,7 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   // Protected routes - redirect to login if not authenticated
-  const protectedPaths = ["/dashboard", "/quizzes", "/quiz", "/profile", "/settings", "/captains-club"];
+  const protectedPaths = ["/dashboard", "/quizzes", "/quiz", "/profile", "/settings", "/captains-club", "/admin"];
   const isProtected = protectedPaths.some((path) =>
     request.nextUrl.pathname.startsWith(path)
   );
@@ -43,6 +43,18 @@ export async function updateSession(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);
+  }
+
+  // Admin route protection — only the specific admin UUID can access
+  if (request.nextUrl.pathname.startsWith("/admin")) {
+    const ADMIN_UUID = "c0023a5b-e4e9-4955-9ec7-2f9eed20db5a";
+    const envAdminId = process.env.ADMIN_USER_ID;
+    const isAdmin = user?.id === ADMIN_UUID || user?.id === envAdminId;
+    if (!isAdmin) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/dashboard";
+      return NextResponse.redirect(url);
+    }
   }
 
   // Redirect authenticated users away from auth pages
