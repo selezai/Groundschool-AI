@@ -132,25 +132,30 @@ export default function QuestionBankPage() {
 
           {isSelected && (
             <div
-              className="mt-4 pt-3 border-t flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3"
+              className="mt-4 pt-3 border-t space-y-3"
               onClick={(e) => e.stopPropagation()}
             >
-              <select
-                value={questionCount}
-                onChange={(e) => setQuestionCount(Number(e.target.value))}
-                className="h-11 sm:h-9 flex-1 rounded-md border border-input bg-background px-3 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 appearance-none"
-              >
+              <p className="text-xs text-muted-foreground font-medium">Number of questions</p>
+              <div className="flex flex-wrap gap-2">
                 {availableOptions.map((count) => (
-                  <option key={count} value={count}>
-                    {count} questions
-                  </option>
+                  <button
+                    key={count}
+                    onClick={() => setQuestionCount(count)}
+                    className={`h-9 px-4 rounded-full text-sm font-medium transition-all ${
+                      questionCount === count
+                        ? "bg-primary text-primary-foreground shadow-sm"
+                        : "bg-muted/50 text-muted-foreground hover:bg-muted"
+                    }`}
+                  >
+                    {count}
+                  </button>
                 ))}
-              </select>
+              </div>
 
               <Button
                 onClick={handleStart}
                 disabled={isStarting}
-                className="h-11 sm:h-9 gap-2 whitespace-nowrap"
+                className="w-full h-11 sm:h-9 gap-2"
               >
                 {isStarting ? (
                   <Loader2 className="h-4 w-4 animate-spin" />
