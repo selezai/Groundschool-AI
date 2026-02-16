@@ -68,7 +68,9 @@ export function Sidebar() {
                 {profile.full_name || "Pilot"}
               </p>
               <p className="text-xs text-muted-foreground truncate">
-                {profile.plan === "captains_club" ? "Captain's Club" : "Basic Plan"}
+                {profile.plan === "captains_club"
+                  ? (profile.pf_payment_id ? "Captain's Club" : "Early Access")
+                  : "Basic Plan"}
               </p>
             </div>
           </div>
@@ -106,7 +108,7 @@ export function Sidebar() {
                   "ml-auto text-[10px] font-semibold px-2 py-0.5 rounded-full",
                   isActive ? "bg-white/20 text-white" : "bg-emerald-500/10 text-emerald-500"
                 )}>
-                  PRO
+                  {profile.pf_payment_id ? "PRO" : "FREE"}
                 </span>
               )}
             </Link>

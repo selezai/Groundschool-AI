@@ -114,22 +114,43 @@ export default function CaptainsClubPage() {
     }
   };
 
+  const hasPaidSubscription = profile?.pf_payment_id != null;
+
   if (isSubscribed) {
     return (
       <div className="max-w-2xl mx-auto space-y-6">
-        <Card>
+        <Card className="border-primary/30 bg-gradient-to-b from-primary/5 to-transparent">
           <CardContent className="py-12 text-center">
             <ShieldCheck className="h-16 w-16 mx-auto text-primary mb-4" />
             <h2 className="text-2xl font-bold mb-2">
-              You&apos;re a Captain&apos;s Club Member!
+              {hasPaidSubscription ? "You\u2019re a Captain\u2019s Club Member!" : "Early Access — All Features Unlocked"}
             </h2>
-            <p className="text-muted-foreground mb-6">
-              You have full access to all premium features. Thank you for your support!
+            <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+              {hasPaidSubscription
+                ? "You have full access to all premium features. Thank you for your support!"
+                : "You have full access to every feature during our early access period — the question bank, AI exam generation, full history, and more."}
             </p>
-            <Button variant="outline" onClick={() => router.push("/profile")}>
-              <User className="h-4 w-4 mr-2" />
-              Manage Subscription
-            </Button>
+            <div className="space-y-2 text-left max-w-xs mx-auto mb-6">
+              {benefits.map((benefit) => (
+                <div key={benefit.title} className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-medium">{benefit.title}</p>
+                    <p className="text-xs text-muted-foreground">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {hasPaidSubscription ? (
+              <Button variant="outline" onClick={() => router.push("/profile")}>
+                <User className="h-4 w-4 mr-2" />
+                Manage Subscription
+              </Button>
+            ) : (
+              <p className="text-xs text-muted-foreground/70 italic">
+                When early access ends, Captain&apos;s Club will be R99/month. We&apos;ll give you plenty of notice.
+              </p>
+            )}
           </CardContent>
         </Card>
       </div>

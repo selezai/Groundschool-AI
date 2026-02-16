@@ -36,6 +36,7 @@ export default function QuizzesPage() {
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(20);
+  const [quizScores, setQuizScores] = useState<Record<string, number>>({});
 
   const fetchQuizzes = useCallback(async () => {
     if (!user) return;
@@ -51,6 +52,28 @@ export default function QuizzesPage() {
       toast.error("Failed to load exams");
     } else {
       setAllQuizzes(data ?? []);
+
+      // Fetch scores for completed quizzes
+      const completedIds = (data ?? []).filter((q) => q.status === "completed").map((q) => q.id);
+      if (completedIds.length > 0) {
+        const { data: attempts } = await supabase
+          .from("quiz_attempts")
+          .select("quiz_id, score")
+          .eq("user_id", user.id)
+          .in("quiz_id", completedIds)
+          .gt("score", -1)
+          .order("attempted_at", { ascending: false });
+
+        if (attempts) {
+          const scores: Record<string, number> = {};
+          attempts.forEach((a) => {
+            if (!(a.quiz_id in scores)) {
+              scores[a.quiz_id] = a.score;
+            }
+          });
+          setQuizScores(scores);
+        }
+      }
     }
     setIsLoadingQuizzes(false);
   }, [user, supabase]);
@@ -235,6 +258,16 @@ export default function QuizzesPage() {
                       {new Date(quiz.created_at).toLocaleDateString()}
                     </p>
                   </div>
+                  {activeTab === "completed" && quizScores[quiz.id] !== undefined && (
+                    <span className={cn(
+                      "text-xs font-bold px-2 py-1 rounded-full flex-shrink-0",
+                      quizScores[quiz.id] >= 75
+                        ? "bg-green-500/10 text-green-500"
+                        : "bg-yellow-500/10 text-yellow-500"
+                    )}>
+                      {quizScores[quiz.id]}%
+                    </span>
+                  )}
                 </button>
 
                 <div className="flex items-center gap-1 flex-shrink-0">

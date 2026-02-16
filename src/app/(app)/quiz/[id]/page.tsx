@@ -20,6 +20,7 @@ import {
   Star,
   Target,
   Pause,
+  Lightbulb,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -458,12 +459,23 @@ export default function QuizPage() {
               );
             })}
 
-            {showExplanation && currentQuestion.explanation && (
-              <div className="mt-4 p-3 bg-muted rounded-lg">
-                <p className="text-xs text-muted-foreground">
-                  {currentQuestion.explanation}
-                </p>
-              </div>
+            {answers[currentQuestion.id] && currentQuestion.explanation && (
+              showExplanation ? (
+                <div className="mt-4 p-3 bg-muted rounded-lg border border-border/50">
+                  <p className="text-xs font-medium text-foreground mb-1">Explanation</p>
+                  <p className="text-xs text-muted-foreground">
+                    {currentQuestion.explanation}
+                  </p>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setShowExplanation(true)}
+                  className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Lightbulb className="h-3.5 w-3.5" />
+                  Show Explanation
+                </button>
+              )
             )}
           </CardContent>
         </Card>

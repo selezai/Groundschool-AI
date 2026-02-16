@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-  Upload,
   Sparkles,
   Target,
   ChevronRight,
@@ -13,7 +12,6 @@ import {
   Zap,
   TrendingUp,
   Clock,
-  Crown,
   BookOpen,
 } from "lucide-react";
 import Image from "next/image";
@@ -84,22 +82,22 @@ export function OnboardingModal({ onComplete, firstName, userId }: OnboardingMod
           </>
         )}
 
-        {/* Step 1: How it works — Simple 3-step */}
+        {/* Step 1: How it works — Two paths */}
         {currentStep === 1 && (
           <div className="px-8 pt-8 pb-2 text-center">
             <div className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-5">
               <Zap className="h-3 w-3" />
-              SIMPLE AS 1-2-3
+              TWO WAYS TO STUDY
             </div>
             <h2 className="text-xl font-bold mb-6">How It Works</h2>
             <div className="space-y-4 text-left">
               <div className="flex items-start gap-4 p-3 rounded-xl bg-muted/30 border border-border/50">
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Upload className="h-5 w-5 text-primary" />
+                  <BookOpen className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold">Upload Your Notes</p>
-                  <p className="text-xs text-muted-foreground">PDFs, images, text files — drop in your study material</p>
+                  <p className="text-sm font-semibold">SACAA Question Bank</p>
+                  <p className="text-xs text-muted-foreground">1,700+ exam questions across all 10 PPL subjects with explanations</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 rounded-xl bg-muted/30 border border-border/50">
@@ -107,8 +105,8 @@ export function OnboardingModal({ onComplete, firstName, userId }: OnboardingMod
                   <Sparkles className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold">AI Generates Your Exam</p>
-                  <p className="text-xs text-muted-foreground">Realistic questions tailored to your material in seconds</p>
+                  <p className="text-sm font-semibold">AI-Generated Exams</p>
+                  <p className="text-xs text-muted-foreground">Upload your own notes and get custom practice exams in seconds</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-3 rounded-xl bg-muted/30 border border-border/50">
@@ -159,24 +157,24 @@ export function OnboardingModal({ onComplete, firstName, userId }: OnboardingMod
           </div>
         )}
 
-        {/* Step 3: You're in — Exclusivity & urgency */}
+        {/* Step 3: You're in — Early access */}
         {currentStep === 3 && (
           <div className="px-8 pt-8 pb-2 text-center">
             <div className="relative mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-5 shadow-lg shadow-primary/30">
-              <Crown className="h-8 w-8 text-primary-foreground" />
+              <Rocket className="h-8 w-8 text-primary-foreground" />
             </div>
             <h2 className="text-xl font-bold mb-2">You&apos;re In! 🎉</h2>
             <p className="text-muted-foreground text-sm mb-5 max-w-xs mx-auto">
-              You have <span className="text-primary font-semibold">full premium access</span> to Groundschool AI — no limits, no restrictions.
+              You have <span className="text-primary font-semibold">full early access</span> to Groundschool AI — all features unlocked, on us.
             </p>
             <div className="p-4 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 mb-4">
-              <p className="text-sm font-semibold mb-2">Your Captain&apos;s Club includes:</p>
+              <p className="text-sm font-semibold mb-2">Your early access includes:</p>
               <div className="space-y-1.5 text-left">
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
                   <span className="text-emerald-500">✓</span> 1,700+ SACAA Question Bank questions
                 </p>
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
-                  <span className="text-emerald-500">✓</span> Unlimited exam generation
+                  <span className="text-emerald-500">✓</span> Unlimited AI exam generation
                 </p>
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
                   <span className="text-emerald-500">✓</span> Full exam history & retakes
@@ -187,7 +185,7 @@ export function OnboardingModal({ onComplete, firstName, userId }: OnboardingMod
               </div>
             </div>
             <p className="text-[11px] text-muted-foreground/70 italic">
-              Upload your first document and generate an exam — it takes 30 seconds.
+              Try the Question Bank or upload your notes — get started in 30 seconds.
             </p>
           </div>
         )}

@@ -97,6 +97,17 @@ supabase/                   # Edge Functions (PayFast, account deletion)
 | Captain's Club | 500MB | Unlimited | Yes |
 
 ## Decisions Log
+- **2025-02-16**: Content Strategy Alignment — Early Access Messaging + UX Improvements
+  - **Onboarding modal** (`onboarding-modal.tsx`): Step 1 now shows "Two Ways to Study" — SACAA Question Bank first, then AI-Generated Exams. Step 3 replaced "Captain's Club" language with "Early Access" framing — "full early access" instead of "full premium access", lists features as "Your early access includes" instead of "Your Captain's Club includes", CTA changed to "Try the Question Bank or upload your notes".
+  - **Dashboard subtitle** (`dashboard/page.tsx`): Changed from "Upload study materials and generate AI-powered practice exams" to "Practice SACAA exam questions or generate AI exams from your notes" — leads with question bank.
+  - **Quizzes list scores** (`quizzes/page.tsx`): Completed exams now show score badges (green ≥75%, yellow <75%). Scores fetched from `quiz_attempts` table, latest attempt per quiz displayed.
+  - **Show Explanation button** (`quiz/[id]/page.tsx`): Added Lightbulb "Show Explanation" button that appears after selecting an answer during quiz-taking. Previously explanations were only visible in the post-submission review screen.
+  - **Captain's Club page** (`captains-club/page.tsx`): Now distinguishes between paid subscribers (`pf_payment_id` present) and early access users. Early access users see "Early Access — All Features Unlocked" with a note about future R99/month pricing. Paid users see the original "You're a Captain's Club Member!" message.
+  - **Sidebar** (`sidebar.tsx`): Plan label shows "Early Access" instead of "Captain's Club" for users without `pf_payment_id`. Badge shows "FREE" instead of "PRO" for early access users.
+  - **Profile per-subject scores** (`profile/page.tsx`): New "Score by Subject" card shows average scores per question bank subject with progress bars and exam counts. Parses subject from quiz title pattern `"Subject - Practice Exam"`. Also fixed avg score calculation to exclude partial attempts (score = -1).
+  - **Decision**: Question bank remains a paid plan (Captain's Club) feature. During early access, all users get CC for free.
+  - **No DB migrations needed**: All changes are UI/frontend only, using existing data.
+
 - **2025-02-16**: Finish Later + My Exams Tabs + Question Bank UI Redesign
   - **Finish Later**: Added "Finish Later" button to quiz-taking screen. Saves current answers to `quiz_attempts` with `score = -1` as a sentinel for in-progress. On resume, answers are restored from the partial attempt. On final submit, partial attempt is deleted and replaced with the real score, and `quizzes.status` is set to `"completed"`.
   - **My Exams Tabs**: Redesigned `/quizzes` page with pill-style "In Progress" / "Completed" tabs. In Progress shows `status = "active"` quizzes with Resume (Play) button + amber Clock icon. Completed shows `status = "completed"` quizzes with Retake (RotateCcw) button + green CheckCircle icon. Each tab shows a count badge. Empty states are tab-aware.

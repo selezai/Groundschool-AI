@@ -321,7 +321,7 @@ export default function DashboardPage() {
             {greeting}, {firstName}
           </h1>
           <p className="text-muted-foreground mt-2 text-sm sm:text-lg">
-            Upload study materials and generate AI-powered practice exams
+            Practice SACAA exam questions or generate AI exams from your notes
           </p>
         </div>
       </div>

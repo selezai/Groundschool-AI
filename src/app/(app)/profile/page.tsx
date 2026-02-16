@@ -49,6 +49,7 @@ export default function ProfilePage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [docCount, setDocCount] = useState(0);
   const [avgScore, setAvgScore] = useState(0);
+  const [subjectScores, setSubjectScores] = useState<{ subject: string; avg: number; count: number }[]>([]);
 
   const maxStorage = getMaxStorageForPlan(profile?.plan ?? null);
   const storagePercent = maxStorage > 0 ? Math.min(100, Math.round((storageUsed / maxStorage) * 100)) : 0;
@@ -76,8 +77,37 @@ export default function ProfilePage() {
     // Average score
     const attempts = attemptsResult.data ?? [];
     if (attempts.length > 0) {
-      const totalScore = attempts.reduce((sum, a) => sum + (a.score || 0), 0);
-      setAvgScore(Math.round(totalScore / attempts.length));
+      const validAttempts = attempts.filter((a) => a.score >= 0);
+      if (validAttempts.length > 0) {
+        const totalScore = validAttempts.reduce((sum, a) => sum + a.score, 0);
+        setAvgScore(Math.round(totalScore / validAttempts.length));
+      }
+    }
+
+    // Per-subject breakdown — fetch attempts with quiz titles
+    const { data: subjectAttempts } = await supabase
+      .from("quiz_attempts")
+      .select("score, quizzes(title)")
+      .eq("user_id", user.id)
+      .gt("score", -1);
+
+    if (subjectAttempts && subjectAttempts.length > 0) {
+      const subjectMap: Record<string, { total: number; count: number }> = {};
+      subjectAttempts.forEach((a) => {
+        const quizData = a.quizzes as unknown as { title: string } | { title: string }[] | null;
+        const title = Array.isArray(quizData) ? quizData[0]?.title : quizData?.title || "";
+        const match = title?.match(/^(.+?)\s*-\s*Practice Exam$/);
+        if (match) {
+          const subject = match[1].trim();
+          if (!subjectMap[subject]) subjectMap[subject] = { total: 0, count: 0 };
+          subjectMap[subject].total += a.score;
+          subjectMap[subject].count += 1;
+        }
+      });
+      const sorted = Object.entries(subjectMap)
+        .map(([subject, { total, count }]) => ({ subject, avg: Math.round(total / count), count }))
+        .sort((a, b) => b.avg - a.avg);
+      setSubjectScores(sorted);
     }
 
     setIsLoadingStats(false);
@@ -138,6 +168,7 @@ export default function ProfilePage() {
   }
 
   const isCaptainsClub = profile?.plan === "captains_club";
+  const hasPaidSubscription = profile?.pf_payment_id != null;
 
   const benefits = [
     { icon: BookOpen, text: "1,700+ SACAA Question Bank" },
@@ -197,9 +228,9 @@ export default function ProfilePage() {
                 <Crown className={`h-6 w-6 ${isCaptainsClub ? "text-primary" : "text-muted-foreground"}`} />
               </div>
               <div>
-                <p className="font-semibold">{isCaptainsClub ? "Captain's Club" : "Basic Plan"}</p>
+                <p className="font-semibold">{isCaptainsClub ? (hasPaidSubscription ? "Captain's Club" : "Early Access") : "Basic Plan"}</p>
                 <p className="text-xs text-muted-foreground">
-                  {isCaptainsClub ? "Premium membership active" : "Upgrade for unlimited access"}
+                  {isCaptainsClub ? (hasPaidSubscription ? "Premium membership active" : "All features unlocked") : "Upgrade for unlimited access"}
                 </p>
               </div>
             </div>
@@ -231,7 +262,7 @@ export default function ProfilePage() {
             variant={isCaptainsClub ? "outline" : "default"}
             onClick={() => router.push("/captains-club")}
           >
-            {isCaptainsClub ? "Manage Subscription" : "Upgrade to Captain's Club"}
+            {isCaptainsClub ? (hasPaidSubscription ? "Manage Subscription" : "View Plan Details") : "Upgrade to Captain's Club"}
           </Button>
         </CardContent>
       </Card>
@@ -265,6 +296,38 @@ export default function ProfilePage() {
           )}
         </CardContent>
       </Card>
+
+      {/* Per-Subject Breakdown */}
+      {!isLoadingStats && subjectScores.length > 0 && (
+        <Card>
+          <CardContent className="pt-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-primary" />
+              Score by Subject
+            </h3>
+            <div className="space-y-3">
+              {subjectScores.map((s) => (
+                <div key={s.subject}>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm truncate flex-1">{s.subject}</span>
+                    <span className={`text-sm font-bold ml-2 ${
+                      s.avg >= 75 ? "text-green-500" : "text-yellow-500"
+                    }`}>
+                      {s.avg}%
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Progress value={s.avg} className="h-1.5 flex-1" />
+                    <span className="text-[10px] text-muted-foreground w-16 text-right">
+                      {s.count} exam{s.count !== 1 ? "s" : ""}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Usage & Quotas Card */}
       <Card>
