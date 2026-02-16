@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Check,
   User,
+  BookOpen,
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -20,6 +21,11 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
 const benefits = [
+  {
+    icon: BookOpen,
+    title: "SACAA Question Bank",
+    description: "Access 1,700+ exam questions across all 10 PPL subjects.",
+  },
   {
     icon: Infinity,
     title: "Unlimited Exam Generation",

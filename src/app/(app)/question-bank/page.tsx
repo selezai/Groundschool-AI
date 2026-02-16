@@ -20,6 +20,8 @@ import {
   Radio,
   RotateCw,
   Helicopter,
+  Lock,
+  Crown,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -52,7 +54,7 @@ const HELICOPTER_SUBJECTS: Subject[] = [
 const QUESTION_COUNT_OPTIONS = [20, 30, 40, 60, 80];
 
 export default function QuestionBankPage() {
-  const { user, isLoading } = useAuth();
+  const { user, profile, isLoading } = useAuth();
   const router = useRouter();
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [questionCount, setQuestionCount] = useState(40);
@@ -164,10 +166,41 @@ export default function QuestionBankPage() {
     );
   };
 
-  if (!user || isLoading) {
+  if (!user || isLoading || !profile) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  if (profile.plan !== "captains_club") {
+    return (
+      <div className="space-y-6">
+        <div>
+          <h1 className="text-xl sm:text-2xl font-bold flex items-center gap-2">
+            <BookOpen className="h-5 w-5 sm:h-6 sm:w-6" />
+            Question Bank
+          </h1>
+          <p className="text-muted-foreground mt-1">
+            Practice with SACAA PPL exam questions across all subjects
+          </p>
+        </div>
+        <Card className="border-dashed border-2">
+          <CardContent className="py-16 text-center">
+            <div className="mx-auto w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center mb-4">
+              <Lock className="h-8 w-8 text-amber-500" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">Captain&apos;s Club Feature</h3>
+            <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
+              Upgrade to Captain&apos;s Club to access 1,700+ SACAA exam questions across all 10 PPL subjects. Practice anytime, track your progress, and pass with confidence.
+            </p>
+            <Button onClick={() => router.push("/captains-club")} className="gap-2">
+              <Crown className="h-4 w-4" />
+              Upgrade to Captain&apos;s Club
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     );
   }

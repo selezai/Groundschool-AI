@@ -29,6 +29,7 @@ import {
   Check,
   Infinity,
   History,
+  BookOpen,
 } from "lucide-react";
 import { toast } from "sonner";
 import Link from "next/link";
@@ -139,6 +140,7 @@ export default function ProfilePage() {
   const isCaptainsClub = profile?.plan === "captains_club";
 
   const benefits = [
+    { icon: BookOpen, text: "1,700+ SACAA Question Bank" },
     { icon: Infinity, text: "Unlimited exam generation" },
     { icon: History, text: "Full exam history access" },
     { icon: HardDrive, text: "500MB storage" },

@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Clock,
   Crown,
+  BookOpen,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -172,6 +173,9 @@ export function OnboardingModal({ onComplete, firstName, userId }: OnboardingMod
               <p className="text-sm font-semibold mb-2">Your Captain&apos;s Club includes:</p>
               <div className="space-y-1.5 text-left">
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
+                  <span className="text-emerald-500">✓</span> 1,700+ SACAA Question Bank questions
+                </p>
+                <p className="text-xs text-muted-foreground flex items-center gap-2">
                   <span className="text-emerald-500">✓</span> Unlimited exam generation
                 </p>
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
@@ -179,9 +183,6 @@ export function OnboardingModal({ onComplete, firstName, userId }: OnboardingMod
                 </p>
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
                   <span className="text-emerald-500">✓</span> 500MB document storage
-                </p>
-                <p className="text-xs text-muted-foreground flex items-center gap-2">
-                  <span className="text-emerald-500">✓</span> AI-powered question explanations
                 </p>
               </div>
             </div>
