@@ -44,8 +44,8 @@
         {"id": "c", "text": "sixty months"},
         {"id": "d", "text": "six months"}
       ],
-      "correct_answer": "a",
-      "explanation": "A Class 2 medical certificate for a private pilot under 40 years of age is valid for 24 months (2 years). For pilots aged 40 and over, the validity period is reduced to 12 months. The medical must be renewed before expiry to continue exercising the privileges of the licence.",
+      "correct_answer": "c",
+      "explanation": "Per SACAA CAR Part 67, a Class 2 medical certificate for a private pilot under 40 years of age is valid for 60 months (5 years). For pilots aged 40 and over, the validity period is reduced to 24 months. The medical must be renewed before expiry to continue exercising the privileges of the licence.",
       "topic": "Medical",
       "difficulty": "easy",
       "source": "recalled",
@@ -1516,8 +1516,8 @@
         {"id": "c", "text": "six months"},
         {"id": "d", "text": "thirty six months"}
       ],
-      "correct_answer": "a",
-      "explanation": "For private pilots aged 40 and over, the Class 2 medical certificate is valid for 12 months (1 year), compared to 24 months for pilots under 40. The shorter validity period reflects the increased likelihood of medical conditions developing with age.",
+      "correct_answer": "b",
+      "explanation": "Per SACAA CAR Part 67, for private pilots aged 40 and over, the Class 2 medical certificate is valid for 24 months (2 years), compared to 60 months for pilots under 40. The shorter validity period reflects the increased likelihood of medical conditions developing with age.",
       "topic": "Medical",
       "difficulty": "easy",
       "source": "generated",
