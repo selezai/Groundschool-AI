@@ -19,6 +19,7 @@ import {
   Home,
   Star,
   Target,
+  Pause,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -35,6 +36,7 @@ export default function QuizPage() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [score, setScore] = useState(0);
   const [startTime] = useState(Date.now());
@@ -79,17 +81,32 @@ export default function QuizPage() {
       }
 
       // Map database columns to expected interface
-      const mappedQuestions = questionsData.map((q: { id: string; quiz_id: string; text: string; options: { id: string; text: string }[]; correct_answer: string; explanation: string | null }) => ({
+      const mappedQuestions = questionsData.map((q: { id: string; quiz_id: string; text: string; options: { id: string; text: string }[]; correct_answer: string; explanation: string | null; image_url?: string | null }) => ({
         id: q.id,
         quiz_id: q.quiz_id,
         question_text: q.text,
         options: q.options,
         correct_answer_id: q.correct_answer,
         explanation: q.explanation,
+        image_url: q.image_url || null,
       }));
 
       setQuiz(quizData);
       setQuestions(mappedQuestions);
+
+      // Restore saved answers from a partial attempt if one exists
+      const { data: partialAttempt } = await supabase
+        .from("quiz_attempts")
+        .select("*")
+        .eq("quiz_id", id)
+        .eq("user_id", user.id)
+        .eq("score", -1)
+        .maybeSingle();
+
+      if (partialAttempt?.metadata?.answers) {
+        setAnswers(partialAttempt.metadata.answers as Record<string, string>);
+      }
+
       setIsLoading(false);
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
@@ -150,8 +167,16 @@ export default function QuizPage() {
     const finalScore = Math.round((correct / questions.length) * 100);
     setScore(finalScore);
 
-    // Save attempt with columns matching existing Supabase schema
     if (user) {
+      // Delete any partial (in-progress) attempt first
+      await supabase
+        .from("quiz_attempts")
+        .delete()
+        .eq("quiz_id", id)
+        .eq("user_id", user.id)
+        .eq("score", -1);
+
+      // Save final attempt
       const completionTime = Math.round((Date.now() - startTime) / 1000);
       const { error: attemptError } = await supabase.from("quiz_attempts").insert({
         quiz_id: id,
@@ -168,11 +193,71 @@ export default function QuizPage() {
       if (attemptError) {
         toast.error("Score could not be saved. Your results are shown below but won't appear in history.");
       }
+
+      // Mark quiz as completed
+      await supabase
+        .from("quizzes")
+        .update({ status: "completed" })
+        .eq("id", id);
     }
 
     setIsCompleted(true);
     setCurrentIndex(0);
     setIsSubmitting(false);
+  };
+
+  const handleFinishLater = async () => {
+    if (!user) return;
+    setIsSaving(true);
+
+    try {
+      // Upsert a partial attempt (score = -1 means in-progress)
+      // First check if one already exists
+      const { data: existing } = await supabase
+        .from("quiz_attempts")
+        .select("id")
+        .eq("quiz_id", id)
+        .eq("user_id", user.id)
+        .eq("score", -1)
+        .maybeSingle();
+
+      if (existing) {
+        await supabase
+          .from("quiz_attempts")
+          .update({
+            metadata: {
+              total_questions: questions.length,
+              answers,
+              is_partial: true,
+              saved_at: new Date().toISOString(),
+              current_index: currentIndex,
+            },
+          })
+          .eq("id", existing.id);
+      } else {
+        await supabase.from("quiz_attempts").insert({
+          quiz_id: id,
+          user_id: user.id,
+          score: -1,
+          completion_time: Math.round((Date.now() - startTime) / 1000),
+          attempted_at: new Date().toISOString(),
+          metadata: {
+            total_questions: questions.length,
+            answers,
+            is_partial: true,
+            saved_at: new Date().toISOString(),
+            current_index: currentIndex,
+          },
+        });
+      }
+
+      toast.success("Progress saved");
+      router.push("/quizzes");
+    } catch {
+      toast.error("Failed to save progress");
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   const handleRetake = () => {
@@ -266,6 +351,16 @@ export default function QuizPage() {
                       {idx + 1}. {q.question_text}
                     </p>
                   </div>
+                  {q.image_url && (
+                    <div className="ml-7 mb-3 rounded-lg overflow-hidden border border-border bg-white">
+                      <img
+                        src={q.image_url}
+                        alt="Question reference image"
+                        className="w-full h-auto max-h-[400px] object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
                   <div className="ml-7 space-y-1">
                     {q.options.map((opt) => {
                       const isUserChoice = userAnswer === opt.id;
@@ -330,6 +425,16 @@ export default function QuizPage() {
             <CardTitle className="text-base leading-relaxed">
               {currentQuestion.question_text}
             </CardTitle>
+            {currentQuestion.image_url && (
+              <div className="mt-3 rounded-lg overflow-hidden border border-border bg-white">
+                <img
+                  src={currentQuestion.image_url}
+                  alt="Question reference image"
+                  className="w-full h-auto max-h-[500px] object-contain"
+                  loading="lazy"
+                />
+              </div>
+            )}
           </CardHeader>
           <CardContent className="space-y-2">
             {currentQuestion.options.map((opt) => {
@@ -423,6 +528,24 @@ export default function QuizPage() {
             )}
           </div>
         )}
+      </div>
+
+      {/* Finish Later */}
+      <div className="flex justify-center pt-2 pb-4">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="text-muted-foreground gap-2"
+          onClick={handleFinishLater}
+          disabled={isSaving}
+        >
+          {isSaving ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <Pause className="h-4 w-4" />
+          )}
+          Finish Later
+        </Button>
       </div>
 
       {/* Submit Confirmation Modal */}

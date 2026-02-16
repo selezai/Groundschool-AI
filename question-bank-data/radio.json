@@ -1,0 +1,2407 @@
+{
+  "subject": "Restricted Radio",
+  "description": "SACAA Restricted Radio Telephony question bank covering emergency procedures, radio phraseology, airspace classifications, ATC procedures, flight plans, and radio equipment.",
+  "total_questions": 150,
+  "questions": [
+    {
+      "id": "radio_001",
+      "question": "The distress signal is:-",
+      "options": [
+        {"id": "a", "text": "MAYDAY-MAYDAY-MAYDAY"},
+        {"id": "b", "text": "PAN-PAN-PAN"},
+        {"id": "c", "text": "HELP-HELP-HELP"},
+        {"id": "d", "text": "SOS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "MAYDAY (from French m'aidez - help me) is the international distress signal for life-threatening emergencies. Transmitted three times to distinguish from similar sounding words. Use MAYDAY when: engine failure, fire, structural failure, medical emergency threatening life. Once declared, you have priority over all other traffic. ATC will provide all possible assistance.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_002",
+      "question": "The urgency signal is:-",
+      "options": [
+        {"id": "a", "text": "PAN-PAN-PAN"},
+        {"id": "b", "text": "MAYDAY-MAYDAY-MAYDAY"},
+        {"id": "c", "text": "EMERGENCY"},
+        {"id": "d", "text": "URGENT"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PAN-PAN (from French panne - breakdown) indicates urgency but not immediate danger to life. Use PAN-PAN for: uncertain position, low fuel (not emergency yet), medical issue (not life-threatening), equipment malfunction affecting safety. PAN-PAN has priority over all traffic except MAYDAY. Transmitted three times.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_003",
+      "question": "A distress condition is:-",
+      "options": [
+        {"id": "a", "text": "being threatened by serious and/or imminent danger requiring immediate assistance"},
+        {"id": "b", "text": "any minor problem"},
+        {"id": "c", "text": "running late"},
+        {"id": "d", "text": "low on fuel with adequate reserves"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Distress: serious and imminent danger requiring immediate assistance. Examples: engine failure, fire, structural damage, pilot incapacitation, fuel exhaustion. Declare MAYDAY without hesitation if in distress - better to declare and not need it than need it and not declare. ATC will clear airspace, alert emergency services, and provide maximum assistance.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_004",
+      "question": "The transponder code for an emergency is:-",
+      "options": [
+        {"id": "a", "text": "7700"},
+        {"id": "b", "text": "7600"},
+        {"id": "c", "text": "7500"},
+        {"id": "d", "text": "1200"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Emergency transponder codes: 7700 = Emergency (any type), 7600 = Radio failure, 7500 = Unlawful interference (hijack). Squawking 7700 alerts all ATC facilities and triggers alarms. Always squawk 7700 in emergency even if you can communicate by radio. ATC will see your position and can provide assistance even without radio contact.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_005",
+      "question": "The transponder code for radio failure is:-",
+      "options": [
+        {"id": "a", "text": "7600"},
+        {"id": "b", "text": "7700"},
+        {"id": "c", "text": "7500"},
+        {"id": "d", "text": "1200"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Squawk 7600 for radio failure (lost communications). This alerts ATC that you cannot receive or transmit. ATC will: clear airspace around you, watch for light signals if you're approaching an airport, coordinate with other facilities. Continue flight according to radio failure procedures. If VFR, land at nearest suitable airport. If IFR, follow filed flight plan.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_006",
+      "question": "The transponder code for unlawful interference (hijack) is:-",
+      "options": [
+        {"id": "a", "text": "7500"},
+        {"id": "b", "text": "7700"},
+        {"id": "c", "text": "7600"},
+        {"id": "d", "text": "1200"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Squawk 7500 for unlawful interference (hijacking). This silent alert notifies ATC without alerting hijackers. ATC will: not question the code change, alert authorities, track aircraft, clear airspace. Only use 7500 for actual hijacking or unlawful interference. False squawk 7500 will trigger major security response.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_007",
+      "question": "The meaning of the phrase 'Acknowledge' is:-",
+      "options": [
+        {"id": "a", "text": "Let me know that you have received and understood this message"},
+        {"id": "b", "text": "Proceed with your message"},
+        {"id": "c", "text": "I have a message for you"},
+        {"id": "d", "text": "Repeat your message"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ACKNOWLEDGE = Confirm you received and understood. Response: Read back the instruction or say 'Acknowledged'. Example: ATC: 'ZS-ABC, acknowledge clearance to land runway 09.' Pilot: 'Cleared to land runway 09, ZS-ABC' or 'Acknowledged, ZS-ABC'. Always read back critical instructions: clearances, runway assignments, altimeter settings, transponder codes.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_008",
+      "question": "The meaning of the phrase 'Go Ahead' is:-",
+      "options": [
+        {"id": "a", "text": "Proceed with your message"},
+        {"id": "b", "text": "Taxi ahead"},
+        {"id": "c", "text": "Take off"},
+        {"id": "d", "text": "I acknowledge"}
+      ],
+      "correct_answer": "a",
+      "explanation": "GO AHEAD = I am ready to receive your message, proceed. Used when: station calls you and you're ready to receive, you interrupted their transmission and they can now continue. Example: Pilot: 'Johannesburg Tower, ZS-ABC.' Tower: 'ZS-ABC, go ahead.' Pilot then transmits full message.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_009",
+      "question": "The meaning of the phrase 'Confirm' is:-",
+      "options": [
+        {"id": "a", "text": "Have I correctly received the following, or did you correctly receive my message?"},
+        {"id": "b", "text": "Yes"},
+        {"id": "c", "text": "No"},
+        {"id": "d", "text": "Repeat"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CONFIRM = Verify accuracy of information. Used to check: you heard correctly, they received correctly. Example: Pilot: 'Confirm runway 27 for landing?' Tower: 'Affirm, runway 27.' Or Tower: 'Confirm you have information Delta?' Pilot: 'Affirm, information Delta, ZS-ABC.' Always confirm when uncertain.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_010",
+      "question": "The word 'AFFIRM' means:-",
+      "options": [
+        {"id": "a", "text": "Yes"},
+        {"id": "b", "text": "No"},
+        {"id": "c", "text": "Maybe"},
+        {"id": "d", "text": "I don't know"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AFFIRM = Yes (affirmative). NEGATIVE = No. Never use 'yes' or 'no' on radio - they sound similar and can be misunderstood. Example: Tower: 'ZS-ABC, confirm visual with traffic on final?' Pilot: 'Affirm, traffic in sight, ZS-ABC' or 'Negative, no visual, ZS-ABC'. Clear communication prevents misunderstandings.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_011",
+      "question": "The keyword used when you fix an error in a transmission is:-",
+      "options": [
+        {"id": "a", "text": "Correction"},
+        {"id": "b", "text": "Negative"},
+        {"id": "c", "text": "Cancel"},
+        {"id": "d", "text": "Disregard"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CORRECTION = I made an error, here is the correct version. Example: Pilot: 'Descending to flight level 070... CORRECTION, descending to flight level 080.' Say 'CORRECTION' clearly, then give correct information. If you realize error after completing transmission, call again with correction. Accurate communication is critical for safety.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_012",
+      "question": "A readability strength 5 transmission is:-",
+      "options": [
+        {"id": "a", "text": "Perfectly readable"},
+        {"id": "b", "text": "Readable with difficulty"},
+        {"id": "c", "text": "Unreadable"},
+        {"id": "d", "text": "Readable now and then"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Readability scale: 1 = Unreadable, 2 = Readable now and then, 3 = Readable with difficulty, 4 = Readable, 5 = Perfectly readable. Example: Tower: 'ZS-ABC, how do you read?' Pilot: 'ZS-ABC, reading you 5' (or 'loud and clear'). If readability is poor (1-2), consider alternative communication methods or frequencies.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_013",
+      "question": "A readability strength 3 transmission is:-",
+      "options": [
+        {"id": "a", "text": "Readable with difficulty"},
+        {"id": "b", "text": "Perfectly readable"},
+        {"id": "c", "text": "Unreadable"},
+        {"id": "d", "text": "Readable"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Readability 3 = Readable with difficulty. Communication is possible but requires repetition and careful listening. If reporting readability 3, ATC may: ask you to try different frequency, relay through another aircraft, use simplified phraseology. If readability deteriorates further, prepare for possible radio failure procedures.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_014",
+      "question": "If you lose radio communications, how many times must you transmit 'blind' transmissions?",
+      "options": [
+        {"id": "a", "text": "Twice"},
+        {"id": "b", "text": "Once"},
+        {"id": "c", "text": "Three times"},
+        {"id": "d", "text": "Never"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Transmit blind (when you cannot receive but hope they can hear you) twice on each frequency. Format: 'Johannesburg Tower, ZS-ABC transmitting blind, [your message], ZS-ABC transmitting blind, [repeat message].' Try multiple frequencies. Squawk 7600. If VFR, proceed to nearest suitable airport. Watch for light signals if approaching controlled airport.",
+      "topic": "Radio Failure",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_015",
+      "question": "The correct order of priority for message categories (highest to lowest) is:-",
+      "options": [
+        {"id": "a", "text": "Distress, Urgency, Direction finding, Flight safety, Meteorological, Flight regularity"},
+        {"id": "b", "text": "Flight regularity, Meteorological, Flight safety, Direction finding, Urgency, Distress"},
+        {"id": "c", "text": "All equal priority"},
+        {"id": "d", "text": "Urgency, Distress, Flight safety, Meteorological, Direction finding, Flight regularity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Message priority (highest first): 1. Distress (MAYDAY), 2. Urgency (PAN-PAN), 3. Direction finding (DF), 4. Flight safety, 5. Meteorological, 6. Flight regularity. All stations must give way to distress and urgency messages. If you hear MAYDAY or PAN-PAN, maintain radio silence unless you can assist. ATC will handle emergency traffic first.",
+      "topic": "Radio Procedures",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_016",
+      "question": "The VHF communication band is:-",
+      "options": [
+        {"id": "a", "text": "118.000 - 136.975 MHz"},
+        {"id": "b", "text": "108.000 - 117.975 MHz"},
+        {"id": "c", "text": "200 - 400 kHz"},
+        {"id": "d", "text": "1000 - 2000 MHz"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VHF COM: 118.000 - 136.975 MHz (25 kHz spacing, transitioning to 8.33 kHz). VHF NAV: 108.000 - 117.975 MHz. VHF = Very High Frequency. Characteristics: line-of-sight propagation, range increases with altitude, not affected by weather, subject to terrain blocking. Emergency frequency: 121.5 MHz (monitor if able).",
+      "topic": "Radio Equipment",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_017",
+      "question": "The term 'VHF' refers to:-",
+      "options": [
+        {"id": "a", "text": "Very High Frequency"},
+        {"id": "b", "text": "Variable High Frequency"},
+        {"id": "c", "text": "Vertical High Frequency"},
+        {"id": "d", "text": "Visual High Frequency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VHF = Very High Frequency (30-300 MHz). Aviation uses VHF for: voice communication (118-137 MHz), navigation (VOR 108-118 MHz). Advantages: clear communication, not affected by weather, widely available. Disadvantages: line-of-sight only, limited range at low altitude. HF (High Frequency) used for long-range oceanic communication.",
+      "topic": "Radio Equipment",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_018",
+      "question": "A factor affecting the range of VHF transmissions is:-",
+      "options": [
+        {"id": "a", "text": "Aircraft altitude"},
+        {"id": "b", "text": "Time of day"},
+        {"id": "c", "text": "Weather"},
+        {"id": "d", "text": "Aircraft color"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VHF range factors: (1) Altitude (primary factor - higher = greater range), (2) Terrain (mountains block signal), (3) Transmitter power, (4) Antenna condition. Approximate range: √(1.5 × altitude in feet) nautical miles. At 1000 ft AGL ≈ 39 nm, at 10,000 ft ≈ 122 nm. Weather and time of day don't significantly affect VHF.",
+      "topic": "Radio Equipment",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_019",
+      "question": "To correct a suspected radio failure, a pilot should check:-",
+      "options": [
+        {"id": "a", "text": "Volume control, selected frequency, and aircraft electrical system"},
+        {"id": "b", "text": "Only the volume"},
+        {"id": "c", "text": "Only the frequency"},
+        {"id": "d", "text": "Nothing - just squawk 7600"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Radio failure troubleshooting: (1) Check volume and squelch, (2) Verify correct frequency selected, (3) Check circuit breaker, (4) Check master switch and avionics switch, (5) Try different frequency, (6) Check headset/speaker connections, (7) Try transmitting on guard (121.5). If all fail, squawk 7600 and follow radio failure procedures.",
+      "topic": "Radio Equipment",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_020",
+      "question": "The callsign for Area Control Centre is:-",
+      "options": [
+        {"id": "a", "text": "Control"},
+        {"id": "b", "text": "Tower"},
+        {"id": "c", "text": "Radio"},
+        {"id": "d", "text": "Centre"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ATC unit callsigns: Area Control Centre = CONTROL, Aerodrome Control = TOWER, Approach Control = APPROACH, Aerodrome Flight Information Service = RADIO, Flight Information Service = INFORMATION. Example: 'Johannesburg Control', 'Cape Town Tower', 'Lanseria Radio'. Use correct callsign for the service you're contacting.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_021",
+      "question": "The callsign for Aerodrome Control is:-",
+      "options": [
+        {"id": "a", "text": "Tower"},
+        {"id": "b", "text": "Control"},
+        {"id": "c", "text": "Radio"},
+        {"id": "d", "text": "Ground"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aerodrome Control (Tower) is responsible for: runway operations, aircraft in the circuit, aircraft and vehicles on the maneuvering area. Tower provides: take-off and landing clearances, traffic information, wind and altimeter, light signals if needed. Contact Tower when: entering controlled airspace around airport, ready for departure, on final approach.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_022",
+      "question": "The callsign for Aerodrome Flight Information Service is:-",
+      "options": [
+        {"id": "a", "text": "Radio"},
+        {"id": "b", "text": "Tower"},
+        {"id": "c", "text": "Information"},
+        {"id": "d", "text": "AFIS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AFIS (Aerodrome Flight Information Service) uses callsign RADIO. AFIS provides: information and advice (not clearances or control), traffic information, weather, runway state. AFIS cannot: issue clearances, separate aircraft, control traffic. Pilot responsibility for separation. Example: 'Lanseria Radio, ZS-ABC'. Common at smaller controlled airports.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_023",
+      "question": "Aerodrome Control is responsible for achieving:-",
+      "options": [
+        {"id": "a", "text": "A safe, orderly and expeditious flow of traffic"},
+        {"id": "b", "text": "Maximum aircraft movements per hour"},
+        {"id": "c", "text": "Minimum delays only"},
+        {"id": "d", "text": "Pilot convenience"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ATC objectives: SAFE (first priority), ORDERLY (organized flow), EXPEDITIOUS (efficient, minimal delays). Safety is paramount - ATC will delay traffic if needed for safety. Pilots must: follow ATC instructions, maintain separation when instructed, report safety concerns. ATC and pilots work together for safe operations.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_024",
+      "question": "In Class C airspace:-",
+      "options": [
+        {"id": "a", "text": "IFR flights are separated from IFR and VFR; VFR is separated from IFR"},
+        {"id": "b", "text": "No separation is provided"},
+        {"id": "c", "text": "Only IFR flights are allowed"},
+        {"id": "d", "text": "VFR flights are separated from all traffic"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class C airspace: IFR separated from IFR and VFR, VFR separated from IFR (not from other VFR), VFR receives traffic information about other VFR. Requirements: ATC clearance required, two-way radio, transponder Mode C. Most South African controlled airspace below FL200 is Class C. Provides good level of service while allowing VFR operations.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_025",
+      "question": "Class A airspace:-",
+      "options": [
+        {"id": "a", "text": "only allows IFR flights"},
+        {"id": "b", "text": "allows both IFR and VFR"},
+        {"id": "c", "text": "only allows VFR flights"},
+        {"id": "d", "text": "requires no clearance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class A: IFR only, all aircraft separated from all other aircraft, ATC clearance required. In South Africa: FL200 and above. VFR flight is prohibited in Class A. If you need to fly above FL200, you must: be IFR rated, file IFR flight plan, have IFR-equipped aircraft, obtain ATC clearance.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_026",
+      "question": "Restricted airspace:-",
+      "options": [
+        {"id": "a", "text": "may only be entered with permission"},
+        {"id": "b", "text": "may never be entered"},
+        {"id": "c", "text": "may be entered freely"},
+        {"id": "d", "text": "is the same as prohibited airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Restricted airspace: entry requires prior permission from controlling authority. Reasons: military operations, aerial gunnery, unusual aircraft activity. Check NOTAMs for activation times. Permission obtained from: controlling authority listed in AIP, ATC if they coordinate. Entering without permission is illegal and dangerous. Prohibited airspace may NEVER be entered.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_027",
+      "question": "Prohibited airspace:-",
+      "options": [
+        {"id": "a", "text": "may never be entered"},
+        {"id": "b", "text": "may be entered with permission"},
+        {"id": "c", "text": "may be entered freely"},
+        {"id": "d", "text": "is the same as restricted airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Prohibited airspace: flight is prohibited for security or safety reasons. Examples: presidential residences, sensitive military installations, nuclear facilities. Marked on charts with 'P' designation. Entering prohibited airspace can result in: interception, prosecution, license suspension. Plan routes to avoid prohibited areas. No exceptions except national emergency.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_028",
+      "question": "In South Africa, Class A airspace is:-",
+      "options": [
+        {"id": "a", "text": "all controlled airspace FL200 and above"},
+        {"id": "b", "text": "all controlled airspace below FL200"},
+        {"id": "c", "text": "uncontrolled airspace"},
+        {"id": "d", "text": "only around major airports"}
+      ],
+      "correct_answer": "a",
+      "explanation": "South African airspace classification: Class A = FL200 and above (IFR only), Class C = controlled airspace below FL200 (IFR and VFR), Class G = uncontrolled airspace. Transition from Class C to Class A occurs at FL200. If VFR, you cannot fly above FL195 without IFR clearance.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_029",
+      "question": "In South Africa, Class C airspace is:-",
+      "options": [
+        {"id": "a", "text": "all controlled airspace below FL200"},
+        {"id": "b", "text": "all controlled airspace FL200 and above"},
+        {"id": "c", "text": "uncontrolled airspace"},
+        {"id": "d", "text": "prohibited airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class C airspace in South Africa: all controlled airspace below FL200 including CTRs, TMAs, CTAs. Requirements: ATC clearance, two-way radio, transponder with Mode C. VFR minima in Class C: 5 km visibility, clear of cloud, able to maintain VMC. Most busy airspace around major airports is Class C.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_030",
+      "question": "The abbreviation 'CTA' stands for:-",
+      "options": [
+        {"id": "a", "text": "Control Area"},
+        {"id": "b", "text": "Control Tower Area"},
+        {"id": "c", "text": "Controlled Traffic Area"},
+        {"id": "d", "text": "Central Traffic Area"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CTA = Control Area: controlled airspace extending upward from a specified limit above the earth. Usually established along airways or around major airports above the TMA. Requires: ATC clearance, two-way radio, transponder. Lower limit typically 1500-5500 ft AGL, upper limit FL195 or FL245. Check charts for specific limits.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_031",
+      "question": "The abbreviation 'CTR' stands for:-",
+      "options": [
+        {"id": "a", "text": "Control Zone"},
+        {"id": "b", "text": "Control Tower Region"},
+        {"id": "c", "text": "Central Traffic Region"},
+        {"id": "d", "text": "Controlled Terminal Region"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CTR = Control Zone: controlled airspace extending from surface to specified upper limit, established around an aerodrome for protection of IFR traffic. Typically: 5-10 nm radius, surface to 2000-3000 ft AAL. Requires: ATC clearance to enter, two-way radio, transponder. VFR minima: 5 km visibility, clear of cloud.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_032",
+      "question": "The abbreviation 'FIR' stands for:-",
+      "options": [
+        {"id": "a", "text": "Flight Information Region"},
+        {"id": "b", "text": "Flight Instruction Region"},
+        {"id": "c", "text": "Flight Intercept Region"},
+        {"id": "d", "text": "Flight Information Radio"}
+      ],
+      "correct_answer": "a",
+      "explanation": "FIR = Flight Information Region: airspace of defined dimensions within which flight information service and alerting service are provided. South African FIR covers South African airspace. FIR provides: flight information, alerting service, but not ATC separation (except in controlled airspace within FIR). Johannesburg FIR is one of the busiest in Africa.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_033",
+      "question": "The abbreviation 'TMA' stands for:-",
+      "options": [
+        {"id": "a", "text": "Terminal Maneuvering Area (Terminal Control Area)"},
+        {"id": "b", "text": "Traffic Management Area"},
+        {"id": "c", "text": "Transition Management Area"},
+        {"id": "d", "text": "Tower Management Area"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TMA = Terminal Maneuvering Area (or Terminal Control Area): controlled airspace established at the confluence of ATS routes in the vicinity of major aerodromes. Typically: extends from 1500-2000 ft AGL to FL195, covers approach/departure paths. Requires: ATC clearance, two-way radio, transponder. Provides separation for arriving/departing IFR traffic.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_034",
+      "question": "QNH refers to:-",
+      "options": [
+        {"id": "a", "text": "altimeter setting to indicate altitude (height above mean sea level)"},
+        {"id": "b", "text": "altimeter setting to indicate height above airfield"},
+        {"id": "c", "text": "altimeter setting to indicate flight level"},
+        {"id": "d", "text": "altimeter setting to indicate density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QNH = altimeter subscale setting to indicate altitude (height above mean sea level). When QNH is set: altimeter shows altitude AMSL, on ground at airfield shows field elevation. Use QNH: below transition altitude, for terrain clearance, for altitude reporting. Obtain QNH from: ATIS, Tower, AFIS, or calculate from field elevation.",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_035",
+      "question": "QFE refers to:-",
+      "options": [
+        {"id": "a", "text": "altimeter setting to indicate height above airfield elevation"},
+        {"id": "b", "text": "altimeter setting to indicate altitude above sea level"},
+        {"id": "c", "text": "altimeter setting to indicate flight level"},
+        {"id": "d", "text": "altimeter setting to indicate pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QFE = altimeter subscale setting to indicate height above airfield. When QFE is set: altimeter shows zero on ground at airfield, shows height AGL. Use QFE: for circuit work (if preferred), for airfield operations. Most operations use QNH. QFE is airfield-specific - different for each airport. Not used for cross-country flight.",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_036",
+      "question": "QNE refers to:-",
+      "options": [
+        {"id": "a", "text": "altimeter setting of 1013.25 hPa to indicate pressure altitude/flight level"},
+        {"id": "b", "text": "altimeter setting to indicate altitude"},
+        {"id": "c", "text": "altimeter setting to indicate height above airfield"},
+        {"id": "d", "text": "altimeter setting to indicate density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QNE = standard altimeter setting (1013.25 hPa or 29.92 inHg). When QNE is set: altimeter shows pressure altitude/flight level. Use QNE: at or above transition altitude (typically 3000-5000 ft), for flight levels. Flight level zero is at 1013.25 hPa pressure level. All aircraft above transition altitude use QNE for vertical separation.",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_037",
+      "question": "When QNH is set on the altimeter, it indicates:-",
+      "options": [
+        {"id": "a", "text": "Altitude (height above mean sea level)"},
+        {"id": "b", "text": "Height above airfield"},
+        {"id": "c", "text": "Flight level"},
+        {"id": "d", "text": "Pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QNH set → Altitude AMSL displayed. QFE set → Height above airfield displayed. QNE (1013) set → Pressure altitude/Flight level displayed. Use correct setting for phase of flight: QNH below transition altitude, QNE at/above transition altitude. Incorrect setting can cause: terrain collision, airspace infringement, loss of separation.",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_038",
+      "question": "When QNE (1013.25 hPa) is set on the altimeter, it indicates:-",
+      "options": [
+        {"id": "a", "text": "Pressure altitude / Flight level"},
+        {"id": "b", "text": "Altitude above sea level"},
+        {"id": "c", "text": "Height above airfield"},
+        {"id": "d", "text": "Density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard setting (1013.25 hPa) gives pressure altitude. Above transition altitude, this is called flight level. FL100 = 10,000 ft pressure altitude. Flight levels provide: common reference for all aircraft, vertical separation. Actual altitude varies with QNH - if QNH is low, actual altitude is lower than flight level indicates.",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_039",
+      "question": "Flight level zero is at:-",
+      "options": [
+        {"id": "a", "text": "the 1013.25 hPa pressure level"},
+        {"id": "b", "text": "mean sea level"},
+        {"id": "c", "text": "ground level"},
+        {"id": "d", "text": "transition altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight level zero (FL000) is the pressure level where atmospheric pressure is 1013.25 hPa. This level varies in actual altitude depending on weather. If QNH is 1013, FL000 is at MSL. If QNH is 1003, FL000 is approximately 300 ft above MSL. If QNH is 1023, FL000 is approximately 300 ft below MSL.",
+      "topic": "Flight Levels",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_040",
+      "question": "Below the transition altitude, you should fly with:-",
+      "options": [
+        {"id": "a", "text": "QNH set on the altimeter"},
+        {"id": "b", "text": "QNE (1013) set on the altimeter"},
+        {"id": "c", "text": "QFE set on the altimeter"},
+        {"id": "d", "text": "any setting"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Below transition altitude: use QNH (altitude AMSL). At/above transition altitude: use QNE/1013 (flight levels). Transition altitude varies by location: typically 3000-5000 ft AMSL in South Africa. When climbing through transition altitude, change from QNH to 1013. When descending, change from 1013 to QNH at transition level. This ensures terrain clearance and separation.",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_041",
+      "question": "When climbing, you should change from QNH to 1013.25 hPa:-",
+      "options": [
+        {"id": "a", "text": "passing through the transition altitude"},
+        {"id": "b", "text": "passing through the transition level"},
+        {"id": "c", "text": "at any time"},
+        {"id": "d", "text": "never"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Climbing: change QNH to 1013 passing through transition altitude. Descending: change 1013 to QNH passing through transition level. Transition altitude: altitude below which vertical position is controlled by altitude (QNH). Transition level: lowest flight level available for use above transition altitude. Layer between transition altitude and transition level is transition layer.",
+      "topic": "Altimeter Settings",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_042",
+      "question": "An aircraft with QNH set will have its vertical position indicated as:-",
+      "options": [
+        {"id": "a", "text": "Altitude"},
+        {"id": "b", "text": "Flight level"},
+        {"id": "c", "text": "Height"},
+        {"id": "d", "text": "Pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Terminology: Altitude = height above MSL (QNH set), Height = height above a specific datum like airfield (QFE set), Flight level = pressure altitude in hundreds of feet (1013 set). Report position using correct terminology: 'Altitude 3500 feet' (QNH), 'Flight level 095' (1013), 'Height 1500 feet' (QFE).",
+      "topic": "Altimeter Settings",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_043",
+      "question": "An aircraft with standard altimeter setting (1013.25 hPa) will have its vertical position indicated as:-",
+      "options": [
+        {"id": "a", "text": "Flight level"},
+        {"id": "b", "text": "Altitude"},
+        {"id": "c", "text": "Height"},
+        {"id": "d", "text": "Elevation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With 1013.25 hPa set, vertical position is expressed as flight level. Flight levels are stated in hundreds of feet: FL095 = 9500 ft pressure altitude, FL100 = 10,000 ft, FL195 = 19,500 ft. When reporting: say 'Flight level zero nine five' not 'nine thousand five hundred feet'. Flight levels provide standard reference for all aircraft.",
+      "topic": "Flight Levels",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_044",
+      "question": "On a flight plan for flights at 1500 ft or higher, you indicate intended height as:-",
+      "options": [
+        {"id": "a", "text": "Flight levels"},
+        {"id": "b", "text": "Altitude in feet"},
+        {"id": "c", "text": "Height in metres"},
+        {"id": "d", "text": "Pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight plan altitude reporting: Below 1500 ft = altitude in feet (e.g., A010 = 1000 ft), 1500 ft and above = flight levels (e.g., F015 = FL015 = 1500 ft, F095 = FL095). VFR cruising levels: odd thousands + 500 ft on magnetic tracks 000-179°, even thousands + 500 ft on tracks 180-359°. Example: track 090°, use FL055, FL075, FL095.",
+      "topic": "Flight Levels",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_045",
+      "question": "In VMC, flights intended to land beyond 25 nm from any aerodrome with published transition altitude must observe:-",
+      "options": [
+        {"id": "a", "text": "3000 ft AMSL as the transition level"},
+        {"id": "b", "text": "5000 ft as the transition level"},
+        {"id": "c", "text": "10000 ft as the transition level"},
+        {"id": "d", "text": "no transition level"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Remote area transition level: 3000 ft AMSL when more than 25 nm from aerodrome with published transition altitude. This provides: standard reference for aircraft in remote areas, terrain clearance. Change to QNH at 3000 ft when descending in remote areas. Ensures all aircraft use same altimeter setting for separation.",
+      "topic": "Altimeter Settings",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_046",
+      "question": "The correct priority order is:-",
+      "options": [
+        {"id": "a", "text": "Aviate - Navigate - Communicate"},
+        {"id": "b", "text": "Communicate - Navigate - Aviate"},
+        {"id": "c", "text": "Navigate - Aviate - Communicate"},
+        {"id": "d", "text": "All equal priority"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AVIATE - NAVIGATE - COMMUNICATE: (1) Aviate = fly the aircraft, maintain control, (2) Navigate = know where you are and where you're going, (3) Communicate = talk to ATC and others. In emergency, never sacrifice aircraft control to communicate. Fly the aircraft first, then navigate, then communicate when able. This priority saves lives.",
+      "topic": "Radio Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_047",
+      "question": "Regarding flight rules:-",
+      "options": [
+        {"id": "a", "text": "You can use IFR in both VMC and IMC"},
+        {"id": "b", "text": "You can only use IFR in IMC"},
+        {"id": "c", "text": "You can only use VFR in VMC"},
+        {"id": "d", "text": "IFR and VFR cannot be mixed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "IFR can be flown in VMC or IMC. VFR can only be flown in VMC. IFR in VMC is common for: training, currency, ATC requirements, pilot preference. IFR provides: ATC separation, navigation guidance, approach procedures. VFR requires: visual reference to ground, VMC weather minima. If VFR and weather deteriorates to IMC, you must: obtain IFR clearance (if rated) or land immediately.",
+      "topic": "Flight Rules",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_048",
+      "question": "The standard direction of a traffic circuit is:-",
+      "options": [
+        {"id": "a", "text": "Left"},
+        {"id": "b", "text": "Right"},
+        {"id": "c", "text": "Either"},
+        {"id": "d", "text": "No standard"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard circuit: left-hand pattern unless otherwise specified. Right-hand circuits used when: obstacles on left side, noise abatement, traffic flow. Check: airport charts, AIP, NOTAM, segmented circle. Circuit legs: upwind (takeoff), crosswind, downwind, base, final. Maintain circuit altitude (typically 1000 ft AGL) on downwind and base.",
+      "topic": "Circuit Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_049",
+      "question": "Mandatory reporting points in a circuit at a controlled airfield are:-",
+      "options": [
+        {"id": "a", "text": "Downwind and final approach"},
+        {"id": "b", "text": "All circuit legs"},
+        {"id": "c", "text": "Only final approach"},
+        {"id": "d", "text": "No reports required"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Controlled aerodrome circuit reports: Downwind (abeam touchdown point), Final (established on final approach). Additional reports: if instructed by Tower, if going around, if experiencing problems. Uncontrolled aerodrome: report all legs (upwind, crosswind, downwind, base, final, clear of runway). Always announce intentions clearly.",
+      "topic": "Circuit Procedures",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_050",
+      "question": "Wind direction given by Tower is referenced to:-",
+      "options": [
+        {"id": "a", "text": "Magnetic north"},
+        {"id": "b", "text": "True north"},
+        {"id": "c", "text": "Grid north"},
+        {"id": "d", "text": "Runway heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Tower wind: magnetic direction. ATIS/METAR wind: magnetic at most airports, true at some (check AIP). Runway numbers: magnetic direction (rounded to nearest 10°). Example: Tower reports 'Wind 090 at 15 knots' = wind from magnetic east at 15 kts. Calculate crosswind component using magnetic wind and magnetic runway heading.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_051",
+      "question": "The semicircular rule is based on:-",
+      "options": [
+        {"id": "a", "text": "Magnetic track"},
+        {"id": "b", "text": "True track"},
+        {"id": "c", "text": "Heading"},
+        {"id": "d", "text": "Course"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Semicircular rule uses magnetic track (not heading). Magnetic tracks 000-179° = odd thousands + 500 ft (FL015, FL035, FL055, etc.). Magnetic tracks 180-359° = even thousands + 500 ft (FL025, FL045, FL065, etc.). This provides vertical separation between opposite direction traffic. Apply at 1500 ft AGL and above.",
+      "topic": "Flight Levels",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_052",
+      "question": "The semicircular rule applies when flying at:-",
+      "options": [
+        {"id": "a", "text": "1500 ft AGL and above"},
+        {"id": "b", "text": "All altitudes"},
+        {"id": "c", "text": "Only above FL100"},
+        {"id": "d", "text": "Only in controlled airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Semicircular rule applies: 1500 ft AGL and above, in both controlled and uncontrolled airspace. Below 1500 ft AGL: any altitude may be used (but maintain safe altitude). Purpose: vertical separation between opposite direction traffic. ATC may assign different levels in controlled airspace. Always comply with ATC instructions over semicircular rule.",
+      "topic": "Flight Levels",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_053",
+      "question": "Altimeter setting procedures (AIC 20-2) are applicable to:-",
+      "options": [
+        {"id": "a", "text": "All flights 1500 ft AGL and above"},
+        {"id": "b", "text": "Only IFR flights"},
+        {"id": "c", "text": "Only flights in controlled airspace"},
+        {"id": "d", "text": "Only commercial flights"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Altimeter setting procedures apply to all flights 1500 ft AGL and above (VFR and IFR, controlled and uncontrolled). Below 1500 ft: use QNH for terrain clearance. At 1500 ft and above: use flight levels (1013.25 hPa) for vertical separation. Transition altitude varies by location - check AIP.",
+      "topic": "Altimeter Settings",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_054",
+      "question": "A VFR pilot on magnetic track 090° may fly at:-",
+      "options": [
+        {"id": "a", "text": "FL075 to conform to the semicircular rule"},
+        {"id": "b", "text": "FL080"},
+        {"id": "c", "text": "FL070"},
+        {"id": "d", "text": "Any flight level"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Track 090° (easterly, 000-179°) = odd thousands + 500 ft. Available levels: FL015, FL035, FL055, FL075, FL095, etc. Track 270° (westerly, 180-359°) = even thousands + 500 ft: FL025, FL045, FL065, FL085, etc. Choose appropriate level based on track and altitude requirements.",
+      "topic": "Flight Levels",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_055",
+      "question": "VFR visibility requirement in a CTR is:-",
+      "options": [
+        {"id": "a", "text": "5 km"},
+        {"id": "b", "text": "8 km"},
+        {"id": "c", "text": "10 km"},
+        {"id": "d", "text": "1 km"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR minima in Class C airspace (CTR/TMA/CTA): 5 km visibility, clear of cloud, able to maintain VMC. Outside controlled airspace below 10,000 ft AMSL: 5 km visibility, 1500 m horizontally from cloud, 1000 ft vertically from cloud. Above 10,000 ft AMSL: 8 km visibility, 1500 m horizontal, 1000 ft vertical from cloud.",
+      "topic": "VFR Requirements",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_056",
+      "question": "An ATS flight plan must be filed at least how long before departure when not in flight?",
+      "options": [
+        {"id": "a", "text": "30 minutes"},
+        {"id": "b", "text": "60 minutes"},
+        {"id": "c", "text": "15 minutes"},
+        {"id": "d", "text": "10 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "File flight plan: 30 minutes before departure (when on ground), 10 minutes before entering controlled/advisory airspace (when in flight). This allows ATC time to: process flight plan, coordinate with other facilities, prepare for your flight. Late filing may result in delays or denial of clearance.",
+      "topic": "Flight Plans",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_057",
+      "question": "When in flight, an ATS flight plan must be filed at least how long before entering controlled airspace?",
+      "options": [
+        {"id": "a", "text": "10 minutes"},
+        {"id": "b", "text": "30 minutes"},
+        {"id": "c", "text": "5 minutes"},
+        {"id": "d", "text": "60 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In-flight filing: 10 minutes before entering controlled/advisory airspace. Contact ATC on appropriate frequency, provide: callsign, aircraft type, position, altitude, destination, route, ETA. ATC will issue clearance or instructions. If unable to file 10 minutes ahead, file as soon as possible and explain situation.",
+      "topic": "Flight Plans",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_058",
+      "question": "A flight plan that has not been activated is valid for:-",
+      "options": [
+        {"id": "a", "text": "60 minutes after estimated time of departure"},
+        {"id": "b", "text": "30 minutes after ETD"},
+        {"id": "c", "text": "24 hours"},
+        {"id": "d", "text": "Indefinitely"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Unactivated flight plan expires 60 minutes after ETD. If you don't depart within 60 minutes, file new flight plan. Activate flight plan by: departing (automatically activated at controlled airport), calling ATC (uncontrolled airport), radio call after departure. Always activate and close flight plans - failure wastes SAR resources.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_059",
+      "question": "It is mandatory to file an ATS flight plan for:-",
+      "options": [
+        {"id": "a", "text": "A flight for which alerting action is required"},
+        {"id": "b", "text": "All VFR flights"},
+        {"id": "c", "text": "All flights over 50 nm"},
+        {"id": "d", "text": "Only IFR flights"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Mandatory flight plan filing: (1) Flights requiring alerting/SAR service, (2) IFR flights, (3) Flights in controlled airspace, (4) International flights, (5) Flights over water beyond gliding distance. Recommended for: all cross-country flights, flights over remote areas. Flight plan provides SAR information if overdue.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_060",
+      "question": "Official methods to file an ATS flight plan are:-",
+      "options": [
+        {"id": "a", "text": "Telephone, facsimile, or internet"},
+        {"id": "b", "text": "Only in person"},
+        {"id": "c", "text": "Only by radio"},
+        {"id": "d", "text": "Only by email"}
+      ],
+      "correct_answer": "a",
+      "explanation": "File flight plan via: (1) Internet (preferred - IFPS or ATC website), (2) Telephone to ATS unit, (3) Facsimile, (4) In person at ATS unit. In-flight filing by radio also possible. Internet filing is fastest and reduces errors. Keep confirmation/reference number. Verify flight plan was received and processed.",
+      "topic": "Flight Plans",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_061",
+      "question": "Equipment code 'S' in Item 10 of a flight plan represents:-",
+      "options": [
+        {"id": "a", "text": "VHF Radio, ILS, ADF, and VOR"},
+        {"id": "b", "text": "Only VHF radio"},
+        {"id": "c", "text": "Satellite navigation"},
+        {"id": "d", "text": "Standard transponder"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Equipment codes: S = Standard (VHF, VOR, ILS, ADF), C = Mode C transponder, G = GNSS (GPS), D = DME, R = RNP approved, Z = other (specify in Item 18). Example: S/C = standard equipment plus Mode C. List all applicable codes. Accurate equipment coding helps ATC plan routing and procedures.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_062",
+      "question": "If aircraft has VHF, ADF, VOR, ILS and Mode C transponder, the equipment code is:-",
+      "options": [
+        {"id": "a", "text": "S/C"},
+        {"id": "b", "text": "S"},
+        {"id": "c", "text": "C"},
+        {"id": "d", "text": "N"}
+      ],
+      "correct_answer": "a",
+      "explanation": "S = Standard equipment (VHF, VOR, ILS, ADF), C = Mode C transponder. Combine as S/C. If also have GPS: S/CG. If have DME: S/CD. Mode C transponder is required in most controlled airspace. Ensure transponder is serviceable and correctly coded before flight.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_063",
+      "question": "When number of passengers is unknown at flight plan filing, use designator:-",
+      "options": [
+        {"id": "a", "text": "TBN (To Be Notified)"},
+        {"id": "b", "text": "UNK (Unknown)"},
+        {"id": "c", "text": "TBA (To Be Advised)"},
+        {"id": "d", "text": "Leave blank"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Item 19 (Persons on Board): Enter number or TBN if unknown. Update ATC before departure with actual number. Accurate POB is critical for SAR - determines search effort and resources needed. Include: crew + passengers. Don't forget to count yourself as PIC.",
+      "topic": "Flight Plans",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_064",
+      "question": "You must notify ATC when your ETA changes by:-",
+      "options": [
+        {"id": "a", "text": "3 minutes or more"},
+        {"id": "b", "text": "5 minutes or more"},
+        {"id": "c", "text": "10 minutes or more"},
+        {"id": "d", "text": "Any change"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Notify ATC of ETA change: 3 minutes or more, or TAS change 5% or more. This allows ATC to: update flight plan, adjust traffic flow, coordinate with next facility. Failure to update ETA can trigger unnecessary SAR action if you're late. Report revised ETA as soon as known.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_065",
+      "question": "An ATS flight plan must be amended in flight when:-",
+      "options": [
+        {"id": "a", "text": "TAS changes by 5% or more, or ETA changes by 3 minutes or more"},
+        {"id": "b", "text": "Only if ETA changes by 10 minutes"},
+        {"id": "c", "text": "Only if route changes"},
+        {"id": "d", "text": "Never needs amendment"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Amend flight plan when: (1) TAS changes ±5% or more, (2) ETA changes ±3 minutes or more, (3) Route changes, (4) Altitude changes (if not as filed), (5) Destination changes. Contact ATC with amendments. Accurate flight plan data ensures proper traffic management and SAR coverage.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_066",
+      "question": "Position reports are required when:-",
+      "options": [
+        {"id": "a", "text": "Flying in controlled/advisory airspace or when alerting action is being provided"},
+        {"id": "b", "text": "All VFR flights"},
+        {"id": "c", "text": "Only IFR flights"},
+        {"id": "d", "text": "Never required"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Position reports required: (1) In controlled airspace (unless radar identified), (2) In advisory airspace, (3) When SAR/alerting service provided, (4) At compulsory reporting points. Report: callsign, position, time, altitude/FL, next position and ETA. ATC may waive reports if radar identified.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_067",
+      "question": "SAR/NORMAL may be filed for flights to:-",
+      "options": [
+        {"id": "a", "text": "Controlled airports only"},
+        {"id": "b", "text": "Any airport"},
+        {"id": "c", "text": "Uncontrolled airports only"},
+        {"id": "d", "text": "International airports only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SAR designators: SAR/NORMAL = destination is controlled airport (ATC will close flight plan on arrival), SAR/NIL = destination is uncontrolled (pilot must close flight plan). If SAR/NORMAL to uncontrolled airport, SAR will be activated when overdue. Always use correct SAR designator.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_068",
+      "question": "SAR/NIL is indicated when destination is:-",
+      "options": [
+        {"id": "a", "text": "An uncontrolled aerodrome"},
+        {"id": "b", "text": "A controlled aerodrome"},
+        {"id": "c", "text": "An international airport"},
+        {"id": "d", "text": "Any aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SAR/NIL = destination is uncontrolled, pilot responsible for closing flight plan. Close by: radio to nearest ATS unit, telephone immediately after landing. If you don't close, SAR will be activated (typically 30 minutes after ETA). Failure to close wastes resources and may result in penalties.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_069",
+      "question": "If SAR was requested to an uncontrolled aerodrome, SAR will be cancelled when:-",
+      "options": [
+        {"id": "a", "text": "The pilot notifies ATC of arrival"},
+        {"id": "b", "text": "Automatically on landing"},
+        {"id": "c", "text": "After 24 hours"},
+        {"id": "d", "text": "Never"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Uncontrolled destination with SAR: pilot must close flight plan by notifying ATC. Methods: radio call to ATS unit, telephone to ATS or FSS. Close as soon as possible after landing. If unable to close immediately, close within 30 minutes of ETA to prevent SAR activation. Keep ATS phone numbers handy.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_070",
+      "question": "Alerting services are provided to aircraft requiring:-",
+      "options": [
+        {"id": "a", "text": "Search and Rescue (SAR)"},
+        {"id": "b", "text": "Only emergency assistance"},
+        {"id": "c", "text": "Only medical assistance"},
+        {"id": "d", "text": "No services"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Alerting service: ATS monitors flight progress and initiates SAR if aircraft is overdue or in distress. Provided to: flights with SAR requested on flight plan, IFR flights, flights in controlled airspace. Three phases: Uncertainty (INCERFA), Alert (ALERFA), Distress (DETRESFA). Always file flight plan for SAR coverage on cross-country flights.",
+      "topic": "SAR",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_071",
+      "question": "The three official Search and Rescue phases are:-",
+      "options": [
+        {"id": "a", "text": "Uncertainty, Alert, and Distress phase"},
+        {"id": "b", "text": "Initial, Intermediate, and Final phase"},
+        {"id": "c", "text": "Search, Rescue, and Recovery phase"},
+        {"id": "d", "text": "Warning, Caution, and Emergency phase"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SAR phases: (1) INCERFA (Uncertainty) - no communication, 30 min overdue, (2) ALERFA (Alert) - communication lost, fuel exhaustion suspected, (3) DETRESFA (Distress) - distress declared, forced landing, fuel exhausted. Each phase triggers increasing SAR response. Prevent unnecessary SAR by: filing accurate flight plans, updating ETAs, closing flight plans promptly.",
+      "topic": "SAR",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_072",
+      "question": "If intercepted by another aircraft rocking its wings to your right, it means:-",
+      "options": [
+        {"id": "a", "text": "Follow me to a landing terrain"},
+        {"id": "b", "text": "You may proceed"},
+        {"id": "c", "text": "Land immediately"},
+        {"id": "d", "text": "Turn right"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Interception signals: Interceptor rocks wings and positions to your right = Follow me. Response: rock wings, follow. Interceptor rocks wings and positions to your left = You are in prohibited/restricted area, follow me away. Day signal: lower landing gear. Night signal: flash landing lights. Comply with interceptor instructions - you may have violated airspace.",
+      "topic": "Interception Procedures",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_073",
+      "question": "A horizontal white or orange T on the ground indicates:-",
+      "options": [
+        {"id": "a", "text": "Take-off and landing direction is along the bar towards the crossbar"},
+        {"id": "b", "text": "Airport is closed"},
+        {"id": "c", "text": "Taxiway direction"},
+        {"id": "d", "text": "Wind direction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Landing T: indicates landing direction - land parallel to stem, toward crossbar. Used at: uncontrolled airports, grass strips, emergency situations. White T = permanent, Orange T = temporary. Also check windsock for actual wind. T may not align with wind if runway direction is fixed. Always overfly to check before landing at unfamiliar field.",
+      "topic": "Ground Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_074",
+      "question": "A white dumbbell in the signal area means:-",
+      "options": [
+        {"id": "a", "text": "Aircraft may only use runways and taxiways"},
+        {"id": "b", "text": "Airport is closed"},
+        {"id": "c", "text": "Glider operations in progress"},
+        {"id": "d", "text": "Helicopter operations only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "White dumbbell: aircraft restricted to runways and taxiways (no operations on grass or apron areas). Red and yellow striped dumbbell: glider flying in progress. White cross on runway: runway unserviceable. Red square with yellow diagonal: special precautions necessary (check NOTAM). Learn ground signals - they provide critical information.",
+      "topic": "Ground Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_075",
+      "question": "The IDENT button on the transponder should be used:-",
+      "options": [
+        {"id": "a", "text": "When instructed by ATC"},
+        {"id": "b", "text": "Continuously"},
+        {"id": "c", "text": "Only in emergency"},
+        {"id": "d", "text": "Never"}
+      ],
+      "correct_answer": "a",
+      "explanation": "IDENT: press only when instructed by ATC. Causes your radar return to flash/highlight on ATC screen, helping identify your aircraft. Press once, don't hold. Don't press IDENT: on initial contact, without instruction, repeatedly. Transponder modes: OFF, STBY (standby), ON (Mode A), ALT (Mode C - altitude reporting). Use ALT in flight.",
+      "topic": "Transponder",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_076",
+      "question": "To convert South African local time to UTC:-",
+      "options": [
+        {"id": "a", "text": "Subtract 2 hours from local time"},
+        {"id": "b", "text": "Add 2 hours to local time"},
+        {"id": "c", "text": "Subtract 1 hour from local time"},
+        {"id": "d", "text": "No conversion needed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "South African Standard Time (SAST) = UTC + 2 hours. To convert to UTC: subtract 2 hours. Example: 14:00 SAST = 12:00 UTC. All aviation times are UTC (Zulu time). Flight plans, NOTAMs, weather reports use UTC. Always verify time zone when planning flights. South Africa does not observe daylight saving time.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_077",
+      "question": "A VFR pilot experiencing radio failure outside controlled airspace should:-",
+      "options": [
+        {"id": "a", "text": "Remain clear of controlled airspace and land at an uncontrolled aerodrome"},
+        {"id": "b", "text": "Continue to destination"},
+        {"id": "c", "text": "Enter controlled airspace anyway"},
+        {"id": "d", "text": "Return to departure airport"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR radio failure: (1) Squawk 7600, (2) Remain outside controlled airspace, (3) Land at nearest suitable uncontrolled aerodrome, (4) Notify ATC by telephone. Do not enter controlled airspace without radio - you cannot receive clearance or traffic information. If already in controlled airspace when radio fails, watch for light signals and land as soon as practicable.",
+      "topic": "Radio Failure",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_078",
+      "question": "Marshaller with arms above head in vertical position means:-",
+      "options": [
+        {"id": "a", "text": "Park in this bay"},
+        {"id": "b", "text": "Move forward"},
+        {"id": "c", "text": "Stop"},
+        {"id": "d", "text": "Start engines"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Marshalling signals: Arms above head (vertical) = Park here. Arms extended, bent at elbows, moving up/down = Move straight ahead. Arms crossed above head = Stop. Arms waving above head = Emergency stop. One arm up, one down, moving = Turn in direction of lower arm. Learn marshalling signals - essential for safe ground operations.",
+      "topic": "Marshalling",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_079",
+      "question": "Marshaller with arms extended, bent at elbows, moving up and down means:-",
+      "options": [
+        {"id": "a", "text": "Move straight ahead"},
+        {"id": "b", "text": "Stop"},
+        {"id": "c", "text": "Turn left"},
+        {"id": "d", "text": "Park here"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Arms bent at elbows, moving up/down from chest to head = Move straight ahead. Speed of movement indicates speed of taxi. Slow movement = taxi slowly. Fast movement = taxi faster. Always acknowledge marshaller signals and follow instructions carefully. If signal is unclear, stop and request clarification.",
+      "topic": "Marshalling",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_080",
+      "question": "The VHF emergency frequency is:-",
+      "options": [
+        {"id": "a", "text": "121.5 MHz"},
+        {"id": "b", "text": "243.0 MHz"},
+        {"id": "c", "text": "118.0 MHz"},
+        {"id": "d", "text": "136.975 MHz"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VHF emergency frequency: 121.5 MHz (civil). UHF emergency: 243.0 MHz (military, also monitored by civil). Guard frequency is monitored by: ATC, airlines, military, SAR. Use 121.5 for: MAYDAY, PAN-PAN, if unable to contact ATC on normal frequency. Monitor 121.5 if able - you may hear emergency traffic or be able to relay.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_081",
+      "question": "When making initial contact with ATC, you should transmit:-",
+      "options": [
+        {"id": "a", "text": "Facility name, your callsign, and message or 'request'"},
+        {"id": "b", "text": "Only your callsign"},
+        {"id": "c", "text": "Your full message immediately"},
+        {"id": "d", "text": "Nothing - wait for ATC to call you"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Initial contact format: '[Facility], [Callsign], [brief message or request]'. Example: 'Johannesburg Tower, ZS-ABC, request taxi'. If frequency is busy, just: 'Johannesburg Tower, ZS-ABC'. Wait for: 'ZS-ABC, go ahead' then give full message. Don't transmit full message on initial call if frequency is busy - ATC may not be ready to copy.",
+      "topic": "Radio Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_082",
+      "question": "The correct way to transmit the number 5500 is:-",
+      "options": [
+        {"id": "a", "text": "Five thousand five hundred"},
+        {"id": "b", "text": "Fifty-five hundred"},
+        {"id": "c", "text": "Five five zero zero"},
+        {"id": "d", "text": "Five point five"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Number transmission: Hundreds/thousands = say as whole numbers. Examples: 500 = 'five hundred', 2500 = 'two thousand five hundred', 10000 = 'one zero thousand'. Altitudes: 'five thousand five hundred feet'. Flight levels: 'flight level zero five five'. Headings: individual digits 'heading zero nine zero'. Frequencies: 'one two one decimal five'.",
+      "topic": "Radio Phraseology",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_083",
+      "question": "The phonetic alphabet letter for 'A' is:-",
+      "options": [
+        {"id": "a", "text": "Alpha"},
+        {"id": "b", "text": "Able"},
+        {"id": "c", "text": "Apple"},
+        {"id": "d", "text": "Alfa"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ICAO phonetic alphabet: Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliet, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu. Use for: callsigns, registration marks, unclear words. Example: ZS-ABC = 'Zulu Sierra Alpha Bravo Charlie'.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_084",
+      "question": "When reading back a clearance, you must include:-",
+      "options": [
+        {"id": "a", "text": "Runway assignment, altitude restrictions, and hold short instructions"},
+        {"id": "b", "text": "Only your callsign"},
+        {"id": "c", "text": "Nothing - readback not required"},
+        {"id": "d", "text": "Only the runway number"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Mandatory readback items: (1) Runway assignments, (2) Altitude/flight level clearances, (3) Heading instructions, (4) Speed restrictions, (5) Transponder codes, (6) Hold short instructions, (7) Altimeter settings, (8) Frequency changes. ATC will correct errors. If unsure, ask for clarification. Incorrect readback can prevent accidents.",
+      "topic": "Radio Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_085",
+      "question": "The phrase 'Roger' means:-",
+      "options": [
+        {"id": "a", "text": "I have received all of your last transmission"},
+        {"id": "b", "text": "Yes"},
+        {"id": "c", "text": "I understand and will comply"},
+        {"id": "d", "text": "Repeat your message"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ROGER = I have received all of your last transmission (acknowledgment only, not compliance). WILCO = I understand and will comply (includes roger). AFFIRM = Yes. NEGATIVE = No. Don't say 'Roger' for instructions requiring readback - read back the instruction instead. 'Roger' is appropriate for information that doesn't require action.",
+      "topic": "Radio Phraseology",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_086",
+      "question": "The phrase 'Wilco' means:-",
+      "options": [
+        {"id": "a", "text": "I understand and will comply"},
+        {"id": "b", "text": "I have received your message"},
+        {"id": "c", "text": "Yes"},
+        {"id": "d", "text": "Repeat"}
+      ],
+      "correct_answer": "a",
+      "explanation": "WILCO = Will comply (I understand your message and will comply with it). Includes acknowledgment (roger). Use when: you will comply with instruction, no readback required. Don't use WILCO for: clearances requiring readback, when you cannot comply. If you cannot comply, say 'Unable' and explain why.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_087",
+      "question": "The phrase 'Say Again' means:-",
+      "options": [
+        {"id": "a", "text": "Repeat your message"},
+        {"id": "b", "text": "I understand"},
+        {"id": "c", "text": "Go ahead"},
+        {"id": "d", "text": "Stand by"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SAY AGAIN = Repeat your message (or specified portion). Example: 'Say again runway assignment' or 'Say again after altitude'. Never use 'repeat' - in military, 'repeat' means repeat gunfire. If you didn't understand, always ask for repetition. Better to ask than act on misunderstood instruction.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_088",
+      "question": "The phrase 'Stand By' means:-",
+      "options": [
+        {"id": "a", "text": "Wait and I will call you"},
+        {"id": "b", "text": "Stop transmitting"},
+        {"id": "c", "text": "Repeat your message"},
+        {"id": "d", "text": "Proceed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "STAND BY = Wait, I will call you shortly. Used when: ATC is busy, need to check information, coordinating with other facilities. If you're told to stand by, wait for ATC to call you - don't call again unless urgent. If stand by is too long (>1 minute), you may query. In emergency, don't accept stand by - state 'Unable to stand by, [reason]'.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_089",
+      "question": "The phrase 'Negative' means:-",
+      "options": [
+        {"id": "a", "text": "No, or permission not granted, or that is not correct"},
+        {"id": "b", "text": "Yes"},
+        {"id": "c", "text": "Maybe"},
+        {"id": "d", "text": "Repeat"}
+      ],
+      "correct_answer": "a",
+      "explanation": "NEGATIVE = No, that is not correct, or permission not granted. AFFIRM = Yes, that is correct, or permission granted. Never use 'yes' or 'no' - they sound similar on radio. Example: Tower: 'Confirm visual with traffic?' Pilot: 'Negative, no visual' or 'Affirm, traffic in sight'.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_090",
+      "question": "The phrase 'Unable' means:-",
+      "options": [
+        {"id": "a", "text": "I cannot comply with your instruction"},
+        {"id": "b", "text": "I don't understand"},
+        {"id": "c", "text": "Repeat your message"},
+        {"id": "d", "text": "I will comply"}
+      ],
+      "correct_answer": "a",
+      "explanation": "UNABLE = I cannot comply with your instruction/request. Always state reason: 'Unable due to weather', 'Unable due to fuel', 'Unable due to aircraft performance'. ATC will provide alternative. Never accept clearance you cannot comply with - safety is paramount. Pilot-in-command has final authority to refuse unsafe instructions.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_091",
+      "question": "When departing controlled airspace, you should:-",
+      "options": [
+        {"id": "a", "text": "Request frequency change and report leaving controlled airspace"},
+        {"id": "b", "text": "Change frequency without notification"},
+        {"id": "c", "text": "Remain on frequency indefinitely"},
+        {"id": "d", "text": "Turn off radio"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Leaving controlled airspace: (1) Request frequency change: 'Request frequency change', (2) ATC will approve: 'Frequency change approved', (3) Acknowledge: 'Frequency change approved, ZS-ABC', (4) Report leaving: 'ZS-ABC leaving controlled airspace'. Don't change frequency without approval - ATC may have traffic information or instructions.",
+      "topic": "Radio Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_092",
+      "question": "ATIS (Automatic Terminal Information Service) provides:-",
+      "options": [
+        {"id": "a", "text": "Continuous broadcast of airport weather and operational information"},
+        {"id": "b", "text": "Air traffic control clearances"},
+        {"id": "c", "text": "Flight planning services"},
+        {"id": "d", "text": "Emergency services"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ATIS: continuous broadcast of: weather (wind, visibility, cloud, temperature, QNH), runway in use, NOTAMs, other operational info. Each ATIS has letter code (Alpha, Bravo, etc.). Listen to ATIS before contacting ATC. Report ATIS code on initial contact: 'ZS-ABC with information Charlie'. Saves radio time and ensures you have current information.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_093",
+      "question": "When reporting position, you should include:-",
+      "options": [
+        {"id": "a", "text": "Callsign, position, time, altitude, and next position with ETA"},
+        {"id": "b", "text": "Only your callsign"},
+        {"id": "c", "text": "Only your position"},
+        {"id": "d", "text": "Only your altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Position report format: Callsign, position, time (UTC), altitude/FL, next position and ETA. Example: 'Johannesburg Control, ZS-ABC, overhead ALPHA at time 25, flight level 095, estimating BRAVO at time 35'. ATC uses position reports for: traffic separation, flight progress monitoring, SAR information.",
+      "topic": "Radio Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_094",
+      "question": "The term 'Radar Contact' means:-",
+      "options": [
+        {"id": "a", "text": "Your aircraft has been identified on radar"},
+        {"id": "b", "text": "You should squawk IDENT"},
+        {"id": "c", "text": "Radar is not working"},
+        {"id": "d", "text": "Change frequency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "RADAR CONTACT = Your aircraft is identified on radar. ATC can now: provide radar vectors, traffic information, separation. When radar contact is established: position reports may be waived, ATC can see your position and altitude (if Mode C). If radar contact is lost, ATC will advise and may require position reports again.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_095",
+      "question": "The term 'Radar Service Terminated' means:-",
+      "options": [
+        {"id": "a", "text": "ATC is no longer providing radar services"},
+        {"id": "b", "text": "Your radar is broken"},
+        {"id": "c", "text": "Emergency declared"},
+        {"id": "d", "text": "Land immediately"}
+      ],
+      "correct_answer": "a",
+      "explanation": "RADAR SERVICE TERMINATED = ATC is no longer providing radar services (you're leaving radar coverage or ATC workload). Resume: normal position reporting, own navigation, see-and-avoid. You're still in contact with ATC but not radar identified. Squawk VFR code (1200 or as assigned). Maintain listening watch on assigned frequency.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_096",
+      "question": "The VFR transponder code is:-",
+      "options": [
+        {"id": "a", "text": "1200 (or as assigned by ATC)"},
+        {"id": "b", "text": "7700"},
+        {"id": "c", "text": "7600"},
+        {"id": "d", "text": "0000"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR squawk codes: 1200 = VFR (USA), 7000 = VFR (Europe/some countries), or as assigned by ATC. In South Africa: squawk as assigned by ATC or 1200 if no assignment. Always squawk Mode C (altitude reporting) unless instructed otherwise. Discrete codes (assigned by ATC) help identify your aircraft on radar.",
+      "topic": "Transponder",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_097",
+      "question": "When instructed to 'Squawk 4521', you should:-",
+      "options": [
+        {"id": "a", "text": "Set transponder code to 4521"},
+        {"id": "b", "text": "Press IDENT"},
+        {"id": "c", "text": "Turn off transponder"},
+        {"id": "d", "text": "Change frequency to 452.1"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SQUAWK [code] = Set transponder to specified code. Set code, verify correct, ensure Mode C is on. Read back: 'Squawking 4521, ZS-ABC'. SQUAWK IDENT = Set code and press IDENT. SQUAWK STANDBY = Set transponder to standby. SQUAWK ALTITUDE = Ensure Mode C is on. STOP SQUAWK = Turn transponder off or to standby.",
+      "topic": "Transponder",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_098",
+      "question": "Light gun signals - steady green light on ground means:-",
+      "options": [
+        {"id": "a", "text": "Cleared for takeoff"},
+        {"id": "b", "text": "Cleared to land"},
+        {"id": "c", "text": "Return for landing"},
+        {"id": "d", "text": "Stop"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Light signals (ground): Steady green = Cleared for takeoff, Flashing green = Cleared to taxi, Steady red = Stop, Flashing red = Taxi clear of runway, Flashing white = Return to starting point. Light signals (air): Steady green = Cleared to land, Flashing green = Return for landing, Steady red = Give way, continue circling, Flashing red = Airport unsafe, do not land.",
+      "topic": "Light Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_099",
+      "question": "Light gun signals - steady green light in flight means:-",
+      "options": [
+        {"id": "a", "text": "Cleared to land"},
+        {"id": "b", "text": "Cleared for takeoff"},
+        {"id": "c", "text": "Return for landing"},
+        {"id": "d", "text": "Airport unsafe"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Light signals in flight: Steady green = Cleared to land, Flashing green = Return for landing (sequence not available), Steady red = Give way to other aircraft, continue circling, Flashing red = Airport unsafe, do not land, Flashing white = (not used in flight). Acknowledge light signals by: rocking wings (day), flashing landing light (night).",
+      "topic": "Light Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_100",
+      "question": "To acknowledge light gun signals during day, you should:-",
+      "options": [
+        {"id": "a", "text": "Rock the wings"},
+        {"id": "b", "text": "Flash landing lights"},
+        {"id": "c", "text": "Circle the tower"},
+        {"id": "d", "text": "No acknowledgment needed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Acknowledge light signals: Day = rock wings, Night = flash landing light or navigation lights. This confirms you saw and understood the signal. If you don't understand signal, continue circling and watch for repeated signals. Light signals are backup for radio failure - know them thoroughly. Practice recognition with instructor.",
+      "topic": "Light Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_101",
+      "question": "The term 'Cleared to land' means:-",
+      "options": [
+        {"id": "a", "text": "You have permission to land on the specified runway"},
+        {"id": "b", "text": "You must land immediately"},
+        {"id": "c", "text": "The runway is clear of all traffic"},
+        {"id": "d", "text": "You may taxi"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CLEARED TO LAND = Permission to land on specified runway. Does NOT guarantee runway is clear - you must verify. Clearance can be cancelled: 'Go around'. Always verify runway is clear before landing. If you see traffic or obstruction on runway, execute go-around and notify tower. Landing clearance does not relieve pilot of responsibility to see and avoid.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_102",
+      "question": "The term 'Line up and wait' means:-",
+      "options": [
+        {"id": "a", "text": "Taxi onto the runway and wait for takeoff clearance"},
+        {"id": "b", "text": "Cleared for takeoff"},
+        {"id": "c", "text": "Hold short of runway"},
+        {"id": "d", "text": "Taxi to holding point"}
+      ],
+      "correct_answer": "a",
+      "explanation": "LINE UP AND WAIT (formerly 'position and hold') = Taxi onto runway and stop in takeoff position, wait for takeoff clearance. Used to: expedite traffic flow, allow time for spacing. Do NOT take off until you receive 'Cleared for takeoff'. If you wait >90 seconds, query tower. At night or low visibility, be extra vigilant for traffic on final.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_103",
+      "question": "The term 'Hold short' means:-",
+      "options": [
+        {"id": "a", "text": "Stop before the specified point and await further clearance"},
+        {"id": "b", "text": "Taxi quickly"},
+        {"id": "c", "text": "Take off immediately"},
+        {"id": "d", "text": "Land short of the threshold"}
+      ],
+      "correct_answer": "a",
+      "explanation": "HOLD SHORT = Stop before specified point (runway, taxiway, position). Example: 'Hold short runway 27' = stop before runway 27 holding point. NEVER cross holding point without clearance. Read back all hold short instructions. Crossing runway without clearance is a serious violation - can cause collision.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_104",
+      "question": "The term 'Taxi via' means:-",
+      "options": [
+        {"id": "a", "text": "Taxi using the specified route"},
+        {"id": "b", "text": "Taxi to parking"},
+        {"id": "c", "text": "Hold position"},
+        {"id": "d", "text": "Take off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TAXI VIA = Taxi using specified taxiways/route. Example: 'Taxi via Alpha, Bravo to runway 09'. Follow route exactly as cleared. If unsure of route, ask for progressive taxi instructions or request 'Follow me' vehicle. Wrong taxiway can lead to: runway incursion, collision, getting lost. Always have airport diagram available.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_105",
+      "question": "When instructed to 'Extend downwind', you should:-",
+      "options": [
+        {"id": "a", "text": "Continue on downwind leg beyond normal base turn point"},
+        {"id": "b", "text": "Turn base immediately"},
+        {"id": "c", "text": "Land immediately"},
+        {"id": "d", "text": "Go around"}
+      ],
+      "correct_answer": "a",
+      "explanation": "EXTEND DOWNWIND = Continue downwind past normal base turn point for spacing. Tower will call your base turn: 'Turn base' or 'Number 2, follow the Cessna on base'. Extending provides: separation from preceding traffic, time for runway to clear. Maintain circuit altitude and watch for traffic. Don't turn base until instructed or you have adequate spacing.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_106",
+      "question": "Traffic information from ATC includes:-",
+      "options": [
+        {"id": "a", "text": "Position, direction, altitude, and type of traffic"},
+        {"id": "b", "text": "Only position"},
+        {"id": "c", "text": "Only altitude"},
+        {"id": "d", "text": "No information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Traffic information format: 'Traffic, [position], [direction], [altitude], [type]'. Example: 'Traffic, 12 o'clock, 3 miles, opposite direction, 2000 feet, Cessna 172'. Position is clock position (12 o'clock = straight ahead). Report: 'Traffic in sight' or 'Negative contact'. Traffic information helps you see and avoid - maintain vigilant lookout.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_107",
+      "question": "When ATC issues traffic information, you should respond:-",
+      "options": [
+        {"id": "a", "text": "'Traffic in sight' or 'Looking' or 'Negative contact'"},
+        {"id": "b", "text": "Nothing"},
+        {"id": "c", "text": "Only 'Roger'"},
+        {"id": "d", "text": "Only if you see the traffic"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Traffic advisory responses: 'Traffic in sight' (you see it), 'Looking' or 'Searching' (you're looking but haven't seen it yet), 'Negative contact' (you don't see it). Reporting traffic in sight helps ATC know you're aware. If you don't see traffic, maintain extra vigilance. ATC may provide updates or vectors to avoid.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_108",
+      "question": "The term 'Report base' means:-",
+      "options": [
+        {"id": "a", "text": "Call ATC when turning onto base leg"},
+        {"id": "b", "text": "Report to base operations"},
+        {"id": "c", "text": "Land at the base"},
+        {"id": "d", "text": "Turn base immediately"}
+      ],
+      "correct_answer": "a",
+      "explanation": "REPORT [position] = Call ATC when reaching specified position. Common: 'Report base', 'Report final', 'Report downwind'. Make call when turning onto that leg. Example: 'ZS-ABC, turning base' or 'ZS-ABC, base'. This helps ATC: sequence traffic, issue landing clearance, provide traffic information. Always report as requested.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_109",
+      "question": "The term 'Make straight-in approach' means:-",
+      "options": [
+        {"id": "a", "text": "Proceed directly to final approach without flying the circuit"},
+        {"id": "b", "text": "Fly a normal circuit"},
+        {"id": "c", "text": "Land immediately"},
+        {"id": "d", "text": "Go around"}
+      ],
+      "correct_answer": "a",
+      "explanation": "STRAIGHT-IN APPROACH = Proceed directly to final approach, bypassing circuit. Used when: arriving from direction of final approach, expediting traffic, IFR approach. Ensure: adequate spacing from circuit traffic, stabilized approach, runway in sight. Report: 'Straight-in final' or as instructed. Give way to aircraft already in circuit if required.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_110",
+      "question": "The term 'Orbit' means:-",
+      "options": [
+        {"id": "a", "text": "Make a 360° turn"},
+        {"id": "b", "text": "Land"},
+        {"id": "c", "text": "Climb"},
+        {"id": "d", "text": "Descend"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ORBIT = Make a 360° turn (usually to the left unless specified). Used for: spacing/sequencing, delaying arrival, avoiding traffic. Example: 'Make one orbit to the left' or 'Orbit for spacing'. Maintain altitude and watch for traffic during orbit. Complete orbit then continue as cleared or report complete.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_111",
+      "question": "When told 'Report runway in sight', you should:-",
+      "options": [
+        {"id": "a", "text": "Call ATC when you can see the runway"},
+        {"id": "b", "text": "Land immediately"},
+        {"id": "c", "text": "Turn to final"},
+        {"id": "d", "text": "Say nothing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "REPORT RUNWAY IN SIGHT = Call when you can visually identify the runway. Response: 'Runway in sight' or 'Runway not in sight'. ATC may then: issue landing clearance, provide vectors, give further instructions. If you don't see runway when expected, report 'Runway not in sight' - ATC will assist. Never report runway in sight if you're not certain.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_112",
+      "question": "The term 'Caution wake turbulence' means:-",
+      "options": [
+        {"id": "a", "text": "Be aware of possible wake turbulence from preceding aircraft"},
+        {"id": "b", "text": "Land immediately"},
+        {"id": "c", "text": "Go around"},
+        {"id": "d", "text": "Increase speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CAUTION WAKE TURBULENCE = Advisory that wake turbulence may be present from preceding aircraft (usually larger aircraft). Actions: (1) Increase spacing, (2) Plan to land beyond preceding aircraft's touchdown point, (3) Be prepared for turbulence, (4) Consider go-around if too close. Wake turbulence can cause loss of control - take seriously, especially in light aircraft.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_113",
+      "question": "When ATC says 'At your discretion', it means:-",
+      "options": [
+        {"id": "a", "text": "You may comply with the instruction when you choose"},
+        {"id": "b", "text": "You must comply immediately"},
+        {"id": "c", "text": "The instruction is optional"},
+        {"id": "d", "text": "Ignore the instruction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AT YOUR DISCRETION = Comply with instruction at time of your choosing. Example: 'Descend at your discretion to 3000 feet' = descend when you want, but must reach 3000 ft. Gives pilot flexibility for: passenger comfort, weather avoidance, fuel efficiency. Still must comply with instruction, just timing is flexible. If you cannot comply, advise ATC.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_114",
+      "question": "The term 'Expedite' means:-",
+      "options": [
+        {"id": "a", "text": "Perform the action as quickly as possible"},
+        {"id": "b", "text": "Take your time"},
+        {"id": "c", "text": "Cancel the instruction"},
+        {"id": "d", "text": "Wait"}
+      ],
+      "correct_answer": "a",
+      "explanation": "EXPEDITE = Do it quickly/without delay. Example: 'Expedite climb to 5000 feet' = climb as fast as safely possible. 'Expedite taxi' = taxi quickly (but safely). Used when: traffic separation requires it, ATC needs quick action. If you cannot expedite safely, advise: 'Unable to expedite'. Never compromise safety to expedite.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_115",
+      "question": "The term 'Immediately' in an ATC instruction means:-",
+      "options": [
+        {"id": "a", "text": "Comply without delay - urgent situation"},
+        {"id": "b", "text": "When convenient"},
+        {"id": "c", "text": "Optional"},
+        {"id": "d", "text": "Ignore"}
+      ],
+      "correct_answer": "a",
+      "explanation": "IMMEDIATELY = Urgent - comply without any delay. Example: 'Turn left immediately' indicates traffic conflict or other urgent situation. Drop everything else and comply. Used only when: immediate action needed for safety, traffic conflict imminent. If you hear 'immediately', act first, ask questions later. Safety-critical instruction.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_116",
+      "question": "When you hear 'Break break', it indicates:-",
+      "options": [
+        {"id": "a", "text": "Urgent message follows, all other stations stop transmitting"},
+        {"id": "b", "text": "Take a break"},
+        {"id": "c", "text": "Frequency change"},
+        {"id": "d", "text": "End of transmission"}
+      ],
+      "correct_answer": "a",
+      "explanation": "BREAK BREAK = Urgent message follows, all stations maintain radio silence. Used to: interrupt ongoing transmissions for urgent traffic, separate messages to different aircraft on busy frequency. When you hear 'break break', stop transmitting and listen. Usually followed by urgent instruction or emergency traffic. Respect the urgency.",
+      "topic": "Radio Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_117",
+      "question": "The correct way to pronounce the number '9' is:-",
+      "options": [
+        {"id": "a", "text": "Niner"},
+        {"id": "b", "text": "Nine"},
+        {"id": "c", "text": "Nin"},
+        {"id": "d", "text": "Novem"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Number pronunciation: 0=Zero, 1=Wun, 2=Too, 3=Tree, 4=Fower, 5=Fife, 6=Six, 7=Seven, 8=Ait, 9=Niner. Decimal=Dayseemal. Special pronunciations prevent confusion (9 sounds like 5, etc.). Example: 129.7 = 'Wun too niner dayseemal seven'. Altitudes: 'Niner thousand feet'. Headings: 'Heading zero niner zero'.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_118",
+      "question": "When transmitting altitudes, you should say:-",
+      "options": [
+        {"id": "a", "text": "The altitude in hundreds or thousands of feet"},
+        {"id": "b", "text": "Only the numbers"},
+        {"id": "c", "text": "The altitude in metres"},
+        {"id": "d", "text": "Nothing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Altitude transmission: Below 10,000 ft = thousands and hundreds: 'Three thousand five hundred feet'. Above 10,000 ft = thousands: 'One zero thousand feet' or 'Flight level one zero zero'. Always include 'feet' or 'flight level'. Example: 'Climbing to five thousand feet' or 'Maintaining flight level zero nine five'.",
+      "topic": "Radio Phraseology",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_119",
+      "question": "When transmitting headings, you should:-",
+      "options": [
+        {"id": "a", "text": "Say each digit individually"},
+        {"id": "b", "text": "Say the number as a whole"},
+        {"id": "c", "text": "Only say the first two digits"},
+        {"id": "d", "text": "Use compass directions only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Heading transmission: say each digit individually. Examples: 090 = 'Zero niner zero', 270 = 'Two seven zero', 005 = 'Zero zero fife'. Always use 3 digits. This prevents confusion. ATC: 'Turn left heading two seven zero'. Pilot: 'Left two seven zero, ZS-ABC'. Read back headings to confirm.",
+      "topic": "Radio Phraseology",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_120",
+      "question": "When transmitting time, you should use:-",
+      "options": [
+        {"id": "a", "text": "UTC (Coordinated Universal Time) in 24-hour format"},
+        {"id": "b", "text": "Local time"},
+        {"id": "c", "text": "12-hour format"},
+        {"id": "d", "text": "Any time zone"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aviation time: always UTC (Zulu time), 24-hour format. Transmit: hours and minutes as 4 digits. Examples: 0830Z = 'Zero eight three zero', 1545Z = 'One fife four fife', 2359Z = 'Two tree fife niner'. For South Africa: UTC = Local time - 2 hours. All flight plans, NOTAMs, weather use UTC. Prevents time zone confusion.",
+      "topic": "Radio Phraseology",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_121",
+      "question": "The term 'Maintain VFR' means:-",
+      "options": [
+        {"id": "a", "text": "Remain in visual meteorological conditions"},
+        {"id": "b", "text": "Fly IFR"},
+        {"id": "c", "text": "Land immediately"},
+        {"id": "d", "text": "Climb"}
+      ],
+      "correct_answer": "a",
+      "explanation": "MAINTAIN VFR = Remain in VMC (visual meteorological conditions). You are responsible for: maintaining VFR weather minima, terrain clearance, see-and-avoid. If you cannot maintain VFR, advise ATC immediately: 'Unable to maintain VFR'. Options: request IFR clearance (if rated), request vectors around weather, land immediately. Never continue VFR into IMC.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_122",
+      "question": "When ATC says 'Remain this frequency', you should:-",
+      "options": [
+        {"id": "a", "text": "Stay on the current frequency and do not change without permission"},
+        {"id": "b", "text": "Change frequency immediately"},
+        {"id": "c", "text": "Turn off radio"},
+        {"id": "d", "text": "Monitor guard frequency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "REMAIN THIS FREQUENCY = Stay on current frequency, don't change. Used when: ATC expects to call you soon, coordination needed, traffic information pending. Don't request frequency change until: ATC releases you, you're leaving their airspace, or you have urgent need. Acknowledge: 'Remaining this frequency, ZS-ABC'.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_123",
+      "question": "The term 'Contact [facility]' means:-",
+      "options": [
+        {"id": "a", "text": "Change to the specified facility's frequency and make initial contact"},
+        {"id": "b", "text": "Remain on current frequency"},
+        {"id": "c", "text": "Land"},
+        {"id": "d", "text": "Stop transmitting"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CONTACT [facility] [frequency] = Change to specified frequency and call them. Example: 'Contact Johannesburg Approach 124.7'. Read back: 'Contact Approach 124.7, ZS-ABC'. Then: (1) Change frequency, (2) Make initial call: 'Johannesburg Approach, ZS-ABC, [altitude], [request]'. Don't change frequency until instructed - ATC may have more information.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_124",
+      "question": "The term 'Monitor [frequency]' means:-",
+      "options": [
+        {"id": "a", "text": "Change to the frequency and listen, but do not call unless called"},
+        {"id": "b", "text": "Call on the frequency"},
+        {"id": "c", "text": "Ignore the frequency"},
+        {"id": "d", "text": "Turn off radio"}
+      ],
+      "correct_answer": "a",
+      "explanation": "MONITOR [frequency] = Change to frequency and listen, but don't call unless called. Used when: ATC wants you to listen for possible instructions, transitioning between facilities, monitoring emergency frequency. Different from 'Contact' which requires you to call. If monitoring and need to transmit, wait for appropriate time or emergency.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_125",
+      "question": "When you cannot comply with an ATC instruction, you should:-",
+      "options": [
+        {"id": "a", "text": "Immediately advise ATC 'Unable' and state the reason"},
+        {"id": "b", "text": "Comply anyway"},
+        {"id": "c", "text": "Say nothing"},
+        {"id": "d", "text": "Change frequency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If unable to comply: (1) Immediately say 'Unable', (2) State reason: 'Unable due to weather/fuel/aircraft performance', (3) Request alternative. Pilot-in-command has final authority - never accept unsafe clearance. ATC will provide alternative. Examples: 'Unable higher due to aircraft performance', 'Unable direct due to weather'. Safety always comes first.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_126",
+      "question": "When requesting assistance for a ground signal 'V', you need:-",
+      "options": [
+        {"id": "a", "text": "Assistance"},
+        {"id": "b", "text": "Medical help"},
+        {"id": "c", "text": "Food and water"},
+        {"id": "d", "text": "Nothing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ground-to-air signals: V = Require assistance, X = Require medical assistance, F = Require food and water, → = Proceeding in this direction, LL = All well. Use contrasting materials (rocks, logs, clothing) to make signals at least 3m high. Signals should be visible from air. International distress signals save lives.",
+      "topic": "Emergency Procedures",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_127",
+      "question": "The route designator 'R987D' indicates:-",
+      "options": [
+        {"id": "a", "text": "An advisory route"},
+        {"id": "b", "text": "A controlled route"},
+        {"id": "c", "text": "A prohibited route"},
+        {"id": "d", "text": "A restricted route"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Route designators: R = Advisory route (uncontrolled), A = ATS route (controlled). Advisory routes: flight information service available, no ATC separation, pilot responsible for navigation and separation. Controlled routes: ATC clearance required, ATC provides separation. Check AIP for route details, frequencies, reporting points.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "radio_128",
+      "question": "When making a MAYDAY call, the format should be:-",
+      "options": [
+        {"id": "a", "text": "MAYDAY MAYDAY MAYDAY, callsign, nature of emergency, intentions, position, altitude, persons on board"},
+        {"id": "b", "text": "Only say MAYDAY once"},
+        {"id": "c", "text": "No specific format"},
+        {"id": "d", "text": "Just state the problem"}
+      ],
+      "correct_answer": "a",
+      "explanation": "MAYDAY format: (1) MAYDAY MAYDAY MAYDAY, (2) Station called (or 'All stations'), (3) Aircraft callsign (3 times), (4) Nature of emergency, (5) Intentions, (6) Position, (7) Altitude, (8) Heading, (9) Persons on board, (10) Any other useful information. Speak clearly and slowly. ATC will respond and provide assistance. Squawk 7700.",
+      "topic": "Emergency Procedures",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_129",
+      "question": "When making a PAN-PAN call, the format should be:-",
+      "options": [
+        {"id": "a", "text": "PAN-PAN PAN-PAN PAN-PAN, callsign, nature of urgency, assistance required, position, altitude"},
+        {"id": "b", "text": "Only say PAN-PAN once"},
+        {"id": "c", "text": "Same as MAYDAY"},
+        {"id": "d", "text": "No specific format"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PAN-PAN format: (1) PAN-PAN PAN-PAN PAN-PAN, (2) Station called, (3) Aircraft callsign (3 times), (4) Nature of urgency, (5) Assistance required, (6) Position, (7) Altitude, (8) Intentions. Similar to MAYDAY but for urgent (not distress) situations. Examples: uncertain position, low fuel (not emergency yet), equipment malfunction.",
+      "topic": "Emergency Procedures",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_130",
+      "question": "After declaring an emergency, you should:-",
+      "options": [
+        {"id": "a", "text": "Follow ATC instructions unless they conflict with safety, and provide updates as able"},
+        {"id": "b", "text": "Ignore all ATC instructions"},
+        {"id": "c", "text": "Land immediately without communication"},
+        {"id": "d", "text": "Change frequency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "After emergency declaration: (1) Aviate - fly the aircraft, (2) Navigate - head toward safe landing area, (3) Communicate - update ATC as able. ATC will: clear airspace, alert emergency services, provide assistance. Follow ATC suggestions unless they conflict with safety. Pilot-in-command has final authority in emergency. Cancel emergency when situation resolved.",
+      "topic": "Emergency Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_131",
+      "question": "Class G airspace is:-",
+      "options": [
+        {"id": "a", "text": "Uncontrolled airspace"},
+        {"id": "b", "text": "Controlled airspace"},
+        {"id": "c", "text": "Prohibited airspace"},
+        {"id": "d", "text": "Restricted airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class G = Uncontrolled airspace. No ATC clearance required, no ATC separation provided, flight information service available if requested. VFR minima apply. Pilot responsible for: navigation, separation, terrain clearance. Most airspace outside controlled areas is Class G. File flight plan for SAR coverage even in Class G.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_132",
+      "question": "When entering controlled airspace, you must:-",
+      "options": [
+        {"id": "a", "text": "Obtain ATC clearance before entry"},
+        {"id": "b", "text": "Enter without clearance"},
+        {"id": "c", "text": "Only notify ATC after entry"},
+        {"id": "d", "text": "Avoid all controlled airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Controlled airspace entry: (1) File flight plan or call ATC at least 10 minutes before entry, (2) Obtain clearance: 'Cleared to enter', (3) Comply with clearance and instructions. Entering without clearance is illegal and dangerous. If clearance denied, remain outside or request alternative. Always plan route considering controlled airspace.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_133",
+      "question": "The term 'Squawk VFR' means:-",
+      "options": [
+        {"id": "a", "text": "Set transponder to VFR code (typically 1200)"},
+        {"id": "b", "text": "Turn off transponder"},
+        {"id": "c", "text": "Squawk 7700"},
+        {"id": "d", "text": "Press IDENT"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SQUAWK VFR = Set transponder to VFR code. In South Africa/USA: 1200. In Europe: 7000. Indicates VFR flight not under positive ATC control. Always squawk Mode C (altitude reporting). When leaving controlled airspace, ATC may say 'Squawk VFR, frequency change approved'. Set code and ensure Mode C is on.",
+      "topic": "Transponder",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_134",
+      "question": "Mode C on a transponder provides:-",
+      "options": [
+        {"id": "a", "text": "Automatic altitude reporting to ATC"},
+        {"id": "b", "text": "Only aircraft identification"},
+        {"id": "c", "text": "Speed information"},
+        {"id": "d", "text": "Heading information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Transponder modes: Mode A = 4-digit code only, Mode C = code + altitude (from encoding altimeter), Mode S = code + altitude + aircraft ID + other data. Always use Mode C in flight unless instructed otherwise. ATC sees your altitude on radar - helps with separation and traffic advisories. Required in most controlled airspace.",
+      "topic": "Transponder",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_135",
+      "question": "When taxiing at a controlled airport, you should:-",
+      "options": [
+        {"id": "a", "text": "Follow taxi clearance exactly and read back all hold short instructions"},
+        {"id": "b", "text": "Taxi anywhere you want"},
+        {"id": "c", "text": "Not use the radio"},
+        {"id": "d", "text": "Taxi at maximum speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Taxi procedures: (1) Request taxi clearance, (2) Read back clearance including hold short instructions, (3) Follow cleared route exactly, (4) Stop at all hold short lines, (5) Report any confusion immediately, (6) Maintain listening watch. Runway incursions are serious - never cross runway without explicit clearance. If lost, stop and ask for progressive taxi.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_136",
+      "question": "Progressive taxi instructions are:-",
+      "options": [
+        {"id": "a", "text": "Step-by-step taxi guidance from ATC"},
+        {"id": "b", "text": "Taxi at your own discretion"},
+        {"id": "c", "text": "Follow other aircraft"},
+        {"id": "d", "text": "No instructions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PROGRESSIVE TAXI = ATC provides step-by-step taxi instructions. Request when: unfamiliar with airport, lost, complex taxi route, low visibility. ATC will guide: 'Taxi straight ahead', 'Turn left next intersection', 'Hold position'. Acknowledge each instruction. Progressive taxi prevents runway incursions and getting lost. Don't be afraid to request it.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_137",
+      "question": "When departing a controlled airport, you should:-",
+      "options": [
+        {"id": "a", "text": "Request taxi, obtain takeoff clearance, and follow departure instructions"},
+        {"id": "b", "text": "Take off without clearance"},
+        {"id": "c", "text": "Only call when airborne"},
+        {"id": "d", "text": "Ignore ATC"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Departure sequence: (1) Listen to ATIS, (2) Request taxi with ATIS code, (3) Taxi to holding point, (4) Complete run-up, (5) Contact Tower when ready, (6) Receive takeoff clearance, (7) Read back clearance, (8) Take off, (9) Follow departure instructions, (10) Contact next facility as instructed. Never take off without clearance.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_138",
+      "question": "When arriving at a controlled airport, you should:-",
+      "options": [
+        {"id": "a", "text": "Listen to ATIS, contact ATC before entering airspace, follow instructions, and obtain landing clearance"},
+        {"id": "b", "text": "Land without contacting ATC"},
+        {"id": "c", "text": "Only call on final"},
+        {"id": "d", "text": "Enter the circuit without clearance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Arrival sequence: (1) Listen to ATIS, (2) Contact ATC 10-15 nm out with ATIS code, (3) Receive joining instructions, (4) Enter as cleared, (5) Report positions as requested, (6) Receive landing clearance, (7) Land, (8) Vacate runway, (9) Contact Ground, (10) Taxi to parking. Always obtain clearance before entering controlled airspace.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_139",
+      "question": "After landing, you should:-",
+      "options": [
+        {"id": "a", "text": "Vacate the runway without delay and contact Ground when clear"},
+        {"id": "b", "text": "Stop on the runway"},
+        {"id": "c", "text": "Taxi to parking without calling"},
+        {"id": "d", "text": "Turn off radio"}
+      ],
+      "correct_answer": "a",
+      "explanation": "After landing: (1) Vacate runway at first available taxiway (unless instructed otherwise), (2) Clear of runway (all parts of aircraft past hold line), (3) Stop, (4) Contact Ground: 'Ground, ZS-ABC, clear of runway 27', (5) Receive taxi clearance, (6) Taxi to parking, (7) Shut down. Don't change frequency until clear of runway unless instructed.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_140",
+      "question": "The term 'Cleared for the option' means:-",
+      "options": [
+        {"id": "a", "text": "Cleared to land, touch-and-go, stop-and-go, or low approach"},
+        {"id": "b", "text": "Only cleared to land"},
+        {"id": "c", "text": "Must go around"},
+        {"id": "d", "text": "Taxi clearance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CLEARED FOR THE OPTION = Pilot's choice of: full stop landing, touch-and-go, stop-and-go, low approach, or go-around. Used for: training, pilot's discretion. Inform tower of your choice: 'Full stop' or 'Touch and go'. Provides flexibility without requesting new clearance for each option. Commonly used in training.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_141",
+      "question": "A 'touch-and-go' is:-",
+      "options": [
+        {"id": "a", "text": "Landing and taking off again without stopping"},
+        {"id": "b", "text": "Full stop landing"},
+        {"id": "c", "text": "Go around"},
+        {"id": "d", "text": "Low approach"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TOUCH-AND-GO = Land, then immediately take off without stopping. Used for: training, practicing landings. Procedure: (1) Land normally, (2) As soon as nosewheel down, apply full power, (3) Retract flaps to takeoff setting, (4) Accelerate and take off. Must have clearance: 'Cleared touch and go' or 'Cleared for the option'. Announce: 'Touch and go, ZS-ABC'.",
+      "topic": "ATC Clearances",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_142",
+      "question": "A 'stop-and-go' is:-",
+      "options": [
+        {"id": "a", "text": "Landing, stopping, then taking off from the runway"},
+        {"id": "b", "text": "Touch-and-go"},
+        {"id": "c", "text": "Full stop landing"},
+        {"id": "d", "text": "Taxi back for takeoff"}
+      ],
+      "correct_answer": "a",
+      "explanation": "STOP-AND-GO = Land, come to complete stop, then take off from that position without taxiing back. Used for: short field practice, when runway is long enough. Requires clearance. Procedure: (1) Land, (2) Stop, (3) Complete pre-takeoff checks, (4) Take off. Different from touch-and-go (no stop) and full stop (taxi back).",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_143",
+      "question": "A 'low approach' is:-",
+      "options": [
+        {"id": "a", "text": "Flying the approach to landing minimums then going around without landing"},
+        {"id": "b", "text": "Landing"},
+        {"id": "c", "text": "Touch-and-go"},
+        {"id": "d", "text": "Taxiing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "LOW APPROACH = Fly approach to runway, descend to low altitude (typically 50-100 ft), then go around without landing. Used for: practice approaches, checking runway condition, airshow. Requires clearance: 'Cleared low approach'. After low approach, follow ATC instructions for next pattern or departure. Maintain safe altitude.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_144",
+      "question": "When told to 'Go around', you should:-",
+      "options": [
+        {"id": "a", "text": "Immediately apply full power, establish climb, and follow ATC instructions"},
+        {"id": "b", "text": "Land anyway"},
+        {"id": "c", "text": "Continue approach"},
+        {"id": "d", "text": "Ignore the instruction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "GO AROUND procedure: (1) Immediately apply full power, (2) Establish positive rate of climb, (3) Retract flaps gradually, (4) Acknowledge: 'Going around, ZS-ABC', (5) Follow ATC instructions for next pattern. Reasons for go-around: traffic on runway, unstabilized approach, wind shear, ATC instruction. Never hesitate to go around - it's always the safe option.",
+      "topic": "ATC Clearances",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_145",
+      "question": "When experiencing radio interference, you should:-",
+      "options": [
+        {"id": "a", "text": "Check squelch setting, verify correct frequency, and try different headset/speaker"},
+        {"id": "b", "text": "Ignore it"},
+        {"id": "c", "text": "Turn off radio"},
+        {"id": "d", "text": "Squawk 7700"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Radio interference troubleshooting: (1) Check squelch (may be too low), (2) Verify correct frequency, (3) Check volume, (4) Try different headset/speaker, (5) Check for electrical interference (strobes, alternator), (6) Try different radio if available, (7) Move away from interference source. If interference persists, advise ATC and consider alternate communication methods.",
+      "topic": "Radio Equipment",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_146",
+      "question": "The term 'Readability 5' means:-",
+      "options": [
+        {"id": "a", "text": "Perfectly readable"},
+        {"id": "b", "text": "Unreadable"},
+        {"id": "c", "text": "Readable with difficulty"},
+        {"id": "d", "text": "Readable now and then"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Readability scale 1-5: 1=Unreadable, 2=Readable now and then, 3=Readable with difficulty, 4=Readable, 5=Perfectly readable. Report readability when asked: 'How do you read?' Response: 'Reading you 5' or 'Reading you 3'. If readability is poor, try: different frequency, different altitude, relay through another aircraft.",
+      "topic": "Radio Phraseology",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_147",
+      "question": "When another aircraft reports 'Traffic in sight', it means:-",
+      "options": [
+        {"id": "a", "text": "They have visually acquired the traffic you called out"},
+        {"id": "b", "text": "They are landing"},
+        {"id": "c", "text": "They are taking off"},
+        {"id": "d", "text": "They have an emergency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TRAFFIC IN SIGHT = I have visually acquired the traffic. Pilot is now responsible for maintaining visual separation from that traffic. ATC may still provide traffic information but visual separation is pilot's responsibility. If you lose sight of traffic, immediately advise ATC: 'Lost sight of traffic'. Maintain vigilant lookout even after reporting traffic in sight.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_148",
+      "question": "The term 'Minimum fuel' indicates:-",
+      "options": [
+        {"id": "a", "text": "Fuel state where any delay may result in emergency fuel situation"},
+        {"id": "b", "text": "Emergency declared"},
+        {"id": "c", "text": "Plenty of fuel"},
+        {"id": "d", "text": "No fuel"}
+      ],
+      "correct_answer": "a",
+      "explanation": "MINIMUM FUEL = Advisory that fuel state is such that any delay may result in declaring emergency fuel. Not an emergency (yet) but ATC will expedite. If situation worsens, declare: 'MAYDAY MAYDAY MAYDAY, fuel emergency'. Don't wait too long to declare emergency. Better to declare early than run out of fuel. ATC will prioritize your landing.",
+      "topic": "Emergency Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_149",
+      "question": "When ATC says 'Radar service terminated', you should:-",
+      "options": [
+        {"id": "a", "text": "Resume normal navigation and position reporting, squawk VFR"},
+        {"id": "b", "text": "Land immediately"},
+        {"id": "c", "text": "Declare emergency"},
+        {"id": "d", "text": "Turn off transponder"}
+      ],
+      "correct_answer": "a",
+      "explanation": "RADAR SERVICE TERMINATED = No longer receiving radar services. Actions: (1) Acknowledge, (2) Resume own navigation, (3) Resume position reporting if required, (4) Squawk VFR or as assigned, (5) Maintain listening watch. You may still be in contact with ATC but not radar identified. Maintain see-and-avoid responsibility.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "radio_150",
+      "question": "The most important principle of radio communication is:-",
+      "options": [
+        {"id": "a", "text": "Clear, concise, and accurate communication to ensure safety"},
+        {"id": "b", "text": "Using complex terminology"},
+        {"id": "c", "text": "Talking as much as possible"},
+        {"id": "d", "text": "Showing off knowledge"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Radio communication principles: (1) CLEAR - speak clearly, use standard phraseology, (2) CONCISE - brief but complete, don't tie up frequency, (3) ACCURATE - correct information, read back critical items, (4) LISTEN - before transmitting, understand before responding. Purpose: SAFETY. Good communication prevents misunderstandings and accidents. Think before you transmit.",
+      "topic": "Radio Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

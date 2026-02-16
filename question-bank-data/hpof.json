@@ -1,0 +1,1609 @@
+{
+  "subject": "Helicopter Principles of Flight",
+  "subject_code": "HPOF",
+  "licence": "PPL(H)",
+  "total_questions": 100,
+  "last_updated": "2026-02-16",
+  "questions": [
+    {
+      "id": "hpof_001",
+      "question": "The angle of attack of an aerofoil is defined as the angle:-",
+      "options": [
+        {"id": "a", "text": "between the chord line and the relative airflow"},
+        {"id": "b", "text": "between the chord line and the horizontal"},
+        {"id": "c", "text": "between the blade pitch angle and the rotor disc plane"},
+        {"id": "d", "text": "between the leading edge and the trailing edge"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The angle of attack is the angle between the chord line of the aerofoil and the direction of the relative airflow (RAF). It is not the same as the pitch angle, which is measured relative to the rotor disc plane.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_002",
+      "question": "As the angle of attack of an aerofoil is increased, the centre of pressure will:-",
+      "options": [
+        {"id": "a", "text": "move forward"},
+        {"id": "b", "text": "move rearward"},
+        {"id": "c", "text": "remain stationary"},
+        {"id": "d", "text": "move forward then rearward at the stall"}
+      ],
+      "correct_answer": "a",
+      "explanation": "As angle of attack increases (up to the stalling angle), the centre of pressure moves forward along the chord line. At the stall, the CP moves rapidly rearward as the lift distribution changes dramatically.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_003",
+      "question": "With reference to the lift formula, if the speed is doubled whilst the angle of attack remains constant, the lift will:-",
+      "options": [
+        {"id": "a", "text": "be four times greater"},
+        {"id": "b", "text": "be doubled"},
+        {"id": "c", "text": "be halved"},
+        {"id": "d", "text": "remain the same"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Lift = CL × ½ρV² × S. Since lift is proportional to V² (velocity squared), doubling the speed results in 2² = 4 times the lift, assuming all other factors remain constant.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_004",
+      "question": "A design feature which is used to reduce induced drag is:-",
+      "options": [
+        {"id": "a", "text": "washout"},
+        {"id": "b", "text": "a symmetrical aerofoil section"},
+        {"id": "c", "text": "increased blade chord"},
+        {"id": "d", "text": "a higher rotor RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Washout (blade twist) reduces the angle of attack progressively towards the blade tip, which reduces the strength of the tip vortices and therefore reduces induced drag. It also helps distribute lift more evenly along the blade span.",
+      "topic": "Drag",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_005",
+      "question": "Washout is incorporated in some blade designs in order to:-",
+      "options": [
+        {"id": "a", "text": "reduce induced drag"},
+        {"id": "b", "text": "increase the stalling speed"},
+        {"id": "c", "text": "reduce profile drag"},
+        {"id": "d", "text": "increase the blade pitch angle at the tip"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Washout (blade twist) progressively reduces the pitch angle from root to tip. This reduces the angle of attack at the tips, weakening tip vortices and reducing induced drag. It also helps prevent tip stalling and provides a more even lift distribution.",
+      "topic": "Drag",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_006",
+      "question": "The effect of blow-back (flap-back) is to:-",
+      "options": [
+        {"id": "a", "text": "reduce the helicopter's forward speed"},
+        {"id": "b", "text": "increase the helicopter's forward speed"},
+        {"id": "c", "text": "cause the helicopter to yaw"},
+        {"id": "d", "text": "increase the coning angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flap-back occurs in forward flight because the advancing blade experiences a higher relative airspeed and flaps up, while the retreating blade flaps down. The net effect tilts the rotor disc aft, which reduces forward speed unless corrected with forward cyclic.",
+      "topic": "Forward Flight",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_007",
+      "question": "The coning angle is determined:-",
+      "options": [
+        {"id": "a", "text": "by the combined effect of rotor thrust and centrifugal force"},
+        {"id": "b", "text": "solely by the rotor RPM"},
+        {"id": "c", "text": "by the tail rotor thrust"},
+        {"id": "d", "text": "by the weight of the helicopter only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The coning angle is the result of two opposing forces: rotor thrust (lift) acts upward on each blade causing it to rise, while centrifugal force acts outward tending to keep the blades in the plane of rotation. The balance between these two forces determines the coning angle.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_008",
+      "question": "In a turn, rotor thrust needs to overcome:-",
+      "options": [
+        {"id": "a", "text": "the vertical component of weight and provide centripetal force"},
+        {"id": "b", "text": "only the weight of the helicopter"},
+        {"id": "c", "text": "only the centrifugal force"},
+        {"id": "d", "text": "the tail rotor thrust and weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a banked turn, the rotor thrust must be increased to provide two components: a vertical component to support the weight of the helicopter, and a horizontal component to provide the centripetal force needed to turn. This is why more power is needed in a turn.",
+      "topic": "Turning Flight",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_009",
+      "question": "Rotor drag (rotor torque) is that force which acts:-",
+      "options": [
+        {"id": "a", "text": "in the plane of rotation and opposite to the direction of blade travel"},
+        {"id": "b", "text": "perpendicular to the relative airflow"},
+        {"id": "c", "text": "vertically downward on the rotor disc"},
+        {"id": "d", "text": "along the blade span towards the tip"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Rotor drag (torque) acts in the plane of rotation, opposing the direction of blade travel. It is the aerodynamic drag on the blades that the engine must overcome to maintain rotor RPM. This torque reaction causes the fuselage to want to rotate in the opposite direction to the rotor.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_010",
+      "question": "When a helicopter, maintaining a constant height above ground whilst hovering, is subjected to translational lift:-",
+      "options": [
+        {"id": "a", "text": "the collective lever must be lowered to maintain height"},
+        {"id": "b", "text": "the collective lever must be raised to maintain height"},
+        {"id": "c", "text": "no change in collective is required"},
+        {"id": "d", "text": "the cyclic must be moved aft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Translational lift occurs as the helicopter moves into clean, undisturbed air. The rotor becomes more efficient, producing more lift for the same blade angle. To maintain the same height, the pilot must lower the collective to reduce blade angle and prevent the helicopter from climbing.",
+      "topic": "Translational Lift",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_011",
+      "question": "The correct method of recovering from retreating blade stall is to:-",
+      "options": [
+        {"id": "a", "text": "lower the collective"},
+        {"id": "b", "text": "raise the collective"},
+        {"id": "c", "text": "apply full forward cyclic"},
+        {"id": "d", "text": "increase rotor RPM by raising the throttle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Retreating blade stall occurs when the retreating blade's angle of attack exceeds the critical angle. Recovery requires reducing the blade angle of attack by lowering the collective (reducing pitch), reducing airspeed, and reducing the severity of any manoeuvre.",
+      "topic": "Retreating Blade Stall",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_012",
+      "question": "Translating tendency in a helicopter with anti-clockwise rotating rotor blades is corrected by:-",
+      "options": [
+        {"id": "a", "text": "tilting the mast or rotor disc slightly to the left"},
+        {"id": "b", "text": "applying the left anti-torque pedal"},
+        {"id": "c", "text": "applying right cyclic"},
+        {"id": "d", "text": "increasing the tail rotor pitch"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Translating tendency (tail rotor drift) is caused by the tail rotor producing a lateral thrust that pushes the helicopter sideways. In a helicopter with anti-clockwise rotating blades (viewed from above), the tail rotor pushes the aircraft to the right. This is corrected by a built-in left tilt of the mast or rotor disc.",
+      "topic": "Tail Rotor Effects",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_013",
+      "question": "When power is applied, a helicopter with an anti-clockwise rotating main rotor will tend to:-",
+      "options": [
+        {"id": "a", "text": "yaw to the right which must be corrected with the left pedal"},
+        {"id": "b", "text": "yaw to the left which must be corrected with the right pedal"},
+        {"id": "c", "text": "pitch nose up"},
+        {"id": "d", "text": "roll to the left"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Newton's third law: the torque reaction to an anti-clockwise rotating main rotor (viewed from above) causes the fuselage to yaw clockwise (to the right). The pilot must apply left anti-torque pedal to increase tail rotor thrust and counteract this yaw.",
+      "topic": "Tail Rotor Effects",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_014",
+      "question": "Lowering the collective lever will:-",
+      "options": [
+        {"id": "a", "text": "simultaneously decrease the blade angle of all the rotor blades by the same amount"},
+        {"id": "b", "text": "decrease the blade angle of only the advancing blade"},
+        {"id": "c", "text": "increase the blade angle of all rotor blades"},
+        {"id": "d", "text": "have no effect on blade angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The collective control changes the pitch angle of all rotor blades simultaneously and by the same amount. Lowering the collective reduces the pitch angle of all blades equally, decreasing total rotor thrust. Raising it increases the pitch of all blades equally.",
+      "topic": "Flight Controls",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_015",
+      "question": "Lead-lagging (dragging) is:-",
+      "options": [
+        {"id": "a", "text": "the forward or aft movement of a blade in the plane of rotation"},
+        {"id": "b", "text": "the up and down movement of a blade"},
+        {"id": "c", "text": "the twisting of a blade about its span axis"},
+        {"id": "d", "text": "the vibration of the blade at high speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Lead-lag (dragging) is the movement of a rotor blade forward or aft in the plane of rotation. It occurs due to conservation of angular momentum — as a blade flaps up, its centre of mass moves closer to the axis of rotation, causing it to lead (speed up). When it flaps down, it lags (slows down). A drag hinge or elastomeric bearing accommodates this movement.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_016",
+      "question": "Lateral stability in a helicopter refers to stability in the:-",
+      "options": [
+        {"id": "a", "text": "rolling plane"},
+        {"id": "b", "text": "pitching plane"},
+        {"id": "c", "text": "yawing plane"},
+        {"id": "d", "text": "vertical plane"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Lateral stability is stability about the longitudinal axis, which is the rolling plane. It is the helicopter's tendency to return to a wings-level attitude after being disturbed by a gust or control input that causes a roll.",
+      "topic": "Stability",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_017",
+      "question": "During autorotation:-",
+      "options": [
+        {"id": "a", "text": "collective is used to control rotor RPM"},
+        {"id": "b", "text": "cyclic is used to control rotor RPM"},
+        {"id": "c", "text": "the throttle is used to control rotor RPM"},
+        {"id": "d", "text": "the anti-torque pedals are used to control rotor RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During autorotation, the engine is no longer driving the rotor. Rotor RPM is maintained by the upward flow of air through the rotor disc. The collective controls the blade pitch angle, which directly affects rotor RPM — raising collective increases drag on the blades and reduces RPM, lowering it reduces drag and increases RPM.",
+      "topic": "Autorotation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_018",
+      "question": "If high rotor RPM is experienced during autorotation from high altitude:-",
+      "options": [
+        {"id": "a", "text": "the collective pitch lever should be raised to reduce it"},
+        {"id": "b", "text": "the collective pitch lever should be lowered"},
+        {"id": "c", "text": "the cyclic should be moved forward"},
+        {"id": "d", "text": "the anti-torque pedals should be applied"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If rotor RPM becomes too high during autorotation, raising the collective increases the blade pitch angle, which increases drag on the blades and reduces rotor RPM. This is the primary method of controlling rotor RPM during autorotation.",
+      "topic": "Autorotation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_019",
+      "question": "Directional stability in a helicopter refers to stability in the:-",
+      "options": [
+        {"id": "a", "text": "yawing plane"},
+        {"id": "b", "text": "rolling plane"},
+        {"id": "c", "text": "pitching plane"},
+        {"id": "d", "text": "vertical plane"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Directional stability is stability about the normal (vertical) axis, which is the yawing plane. It is the helicopter's tendency to maintain or return to its heading after a yaw disturbance. The tail rotor, vertical fin, and fuselage shape all contribute to directional stability.",
+      "topic": "Stability",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_020",
+      "question": "The effect of the driven, or propeller region during autorotation is to:-",
+      "options": [
+        {"id": "a", "text": "produce rotor drag which opposes the rotor RPM"},
+        {"id": "b", "text": "provide a good rotational force"},
+        {"id": "c", "text": "produce the majority of the lift"},
+        {"id": "d", "text": "have no significant effect on autorotation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During autorotation, the driven (propeller) region is the outer portion of the blade near the tips. In this region, the total aerodynamic force is tilted behind the axis of rotation, producing a drag component that opposes rotor RPM. The driving region (mid-span) provides the force that maintains RPM.",
+      "topic": "Autorotation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_021",
+      "question": "The effect on a helicopter's performance of an increase in humidity is:-",
+      "options": [
+        {"id": "a", "text": "to decrease the lift"},
+        {"id": "b", "text": "to increase the lift"},
+        {"id": "c", "text": "to have no effect on performance"},
+        {"id": "d", "text": "to increase engine power output"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Humid air is less dense than dry air because water vapour molecules (H₂O, molecular weight 18) replace heavier nitrogen (N₂, molecular weight 28) and oxygen (O₂, molecular weight 32) molecules. Lower air density reduces both rotor lift and engine performance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_022",
+      "question": "As the angle of bank during a level turn is increased, additional engine power must be applied in order to:-",
+      "options": [
+        {"id": "a", "text": "compensate for the increased induced drag because of greater blade angles"},
+        {"id": "b", "text": "counter the increased centrifugal force"},
+        {"id": "c", "text": "maintain tail rotor effectiveness"},
+        {"id": "d", "text": "prevent the rotor RPM from increasing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a level turn, the rotor must produce more total thrust to support the weight and provide centripetal force. This requires higher blade angles (more collective), which increases induced drag. Additional engine power is needed to overcome this increased drag and maintain rotor RPM.",
+      "topic": "Turning Flight",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_023",
+      "question": "Rectified airspeed (RAS) or Calibrated airspeed (CAS) is:-",
+      "options": [
+        {"id": "a", "text": "IAS corrected for instrument and position errors"},
+        {"id": "b", "text": "TAS corrected for instrument and position errors"},
+        {"id": "c", "text": "IAS corrected for density altitude"},
+        {"id": "d", "text": "TAS corrected for compressibility"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Calibrated Airspeed (CAS), also known as Rectified Airspeed (RAS), is the Indicated Airspeed (IAS) corrected for instrument errors (in the ASI itself) and position errors (caused by the location of the pitot tube and static ports on the aircraft).",
+      "topic": "Airspeed",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_024",
+      "question": "If you need to descend quickly (another aircraft coming toward you), the best method is to:-",
+      "options": [
+        {"id": "a", "text": "lower the collective, reduce engine power, and move cyclic forward"},
+        {"id": "b", "text": "raise the collective and apply full forward cyclic"},
+        {"id": "c", "text": "enter autorotation immediately"},
+        {"id": "d", "text": "apply full aft cyclic and increase power"}
+      ],
+      "correct_answer": "a",
+      "explanation": "To descend quickly and safely: lower the collective to reduce rotor thrust, reduce engine power, and move the cyclic forward to increase the rate of descent. This combination provides a rapid controlled descent while maintaining rotor RPM and aircraft control.",
+      "topic": "Manoeuvres",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_025",
+      "question": "In comparison to a straight climb, during a climbing turn:-",
+      "options": [
+        {"id": "a", "text": "the rate of climb will reduce"},
+        {"id": "b", "text": "the rate of climb will remain the same"},
+        {"id": "c", "text": "the rate of climb will increase"},
+        {"id": "d", "text": "the airspeed will increase"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During a climbing turn, some of the available rotor thrust is used to provide the centripetal force for the turn. This means less thrust is available for climbing, so the rate of climb reduces compared to a straight climb at the same power setting.",
+      "topic": "Climbing Flight",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_026",
+      "question": "During a straight climb at a constant speed:-",
+      "options": [
+        {"id": "a", "text": "lift is less than weight"},
+        {"id": "b", "text": "lift is greater than weight"},
+        {"id": "c", "text": "lift equals weight"},
+        {"id": "d", "text": "thrust equals drag"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a steady (constant speed) climb, the flight path is inclined upward. The weight acts vertically downward, but lift acts perpendicular to the flight path (not vertically). A component of thrust supports part of the weight along the flight path, so lift only needs to balance the component of weight perpendicular to the flight path — which is less than the total weight.",
+      "topic": "Climbing Flight",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hpof_027",
+      "question": "Dissymmetry of lift is caused by:-",
+      "options": [
+        {"id": "a", "text": "the difference in relative airspeed between the advancing and retreating blades in forward flight"},
+        {"id": "b", "text": "the difference in blade pitch angle between the advancing and retreating blades"},
+        {"id": "c", "text": "the coning angle of the rotor blades"},
+        {"id": "d", "text": "the tail rotor thrust"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In forward flight, the advancing blade has a relative airspeed of rotational speed plus forward speed, while the retreating blade has rotational speed minus forward speed. This difference in airspeed creates unequal lift — dissymmetry of lift — which is compensated for by blade flapping.",
+      "topic": "Forward Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_028",
+      "question": "The purpose of the flapping hinge on a fully articulated rotor head is to:-",
+      "options": [
+        {"id": "a", "text": "allow the blades to move up and down to compensate for dissymmetry of lift"},
+        {"id": "b", "text": "allow the blades to change pitch angle"},
+        {"id": "c", "text": "allow the blades to lead and lag"},
+        {"id": "d", "text": "reduce the coning angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The flapping hinge allows each blade to move up and down independently. In forward flight, the advancing blade flaps up (reducing its angle of attack and lift) and the retreating blade flaps down (increasing its angle of attack and lift), thereby equalising lift across the disc and compensating for dissymmetry of lift.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_029",
+      "question": "The feathering hinge (or bearing) on a rotor head allows:-",
+      "options": [
+        {"id": "a", "text": "each blade to change its pitch angle about its spanwise axis"},
+        {"id": "b", "text": "each blade to flap up and down"},
+        {"id": "c", "text": "each blade to lead and lag in the plane of rotation"},
+        {"id": "d", "text": "the rotor disc to tilt"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The feathering hinge (or feathering bearing) allows each blade to rotate about its spanwise (longitudinal) axis, changing its pitch angle. This is how the pilot's collective and cyclic inputs are transmitted to the blades to control thrust and disc tilt.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_030",
+      "question": "Ground effect in a helicopter is most effective when hovering at a height of:-",
+      "options": [
+        {"id": "a", "text": "approximately half the rotor diameter or less above the surface"},
+        {"id": "b", "text": "one full rotor diameter above the surface"},
+        {"id": "c", "text": "two rotor diameters above the surface"},
+        {"id": "d", "text": "any height below 500 ft AGL"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ground effect is most pronounced when the helicopter is hovering at a skid/wheel height of approximately half the rotor diameter or less. At this height, the ground restricts the downward flow of air, reducing induced drag and the power required to hover. The effect diminishes rapidly above this height.",
+      "topic": "Ground Effect",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_031",
+      "question": "Hovering in ground effect (IGE) compared to hovering out of ground effect (OGE) requires:-",
+      "options": [
+        {"id": "a", "text": "less power"},
+        {"id": "b", "text": "more power"},
+        {"id": "c", "text": "the same power"},
+        {"id": "d", "text": "less power only at high altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hovering IGE requires less power than OGE because the ground surface restricts the rotor downwash, reducing the induced velocity and therefore the induced drag. This means the rotor is more efficient and less power is needed to produce the same amount of thrust.",
+      "topic": "Ground Effect",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_032",
+      "question": "Effective translational lift (ETL) typically occurs at an airspeed of approximately:-",
+      "options": [
+        {"id": "a", "text": "16 to 24 knots"},
+        {"id": "b", "text": "5 to 10 knots"},
+        {"id": "c", "text": "30 to 40 knots"},
+        {"id": "d", "text": "50 to 60 knots"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Effective Translational Lift (ETL) is noticeable at approximately 16 to 24 knots. At this speed, the rotor moves into relatively undisturbed air, the induced flow is reduced, and the rotor becomes significantly more efficient. The pilot will feel a noticeable vibration and the helicopter will tend to climb.",
+      "topic": "Translational Lift",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_033",
+      "question": "The region of a rotor blade that produces the driving force during autorotation is the:-",
+      "options": [
+        {"id": "a", "text": "mid-span section (driving region)"},
+        {"id": "b", "text": "blade tip section"},
+        {"id": "c", "text": "blade root section"},
+        {"id": "d", "text": "entire blade equally"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During autorotation, the blade is divided into three regions: the stall region (near the root), the driving region (mid-span), and the driven/propeller region (near the tips). The driving region is where the total aerodynamic force is tilted forward of the axis of rotation, providing the force that maintains rotor RPM.",
+      "topic": "Autorotation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_034",
+      "question": "During autorotation, the stall region of the blade is located:-",
+      "options": [
+        {"id": "a", "text": "near the blade root"},
+        {"id": "b", "text": "at the blade tips"},
+        {"id": "c", "text": "at the mid-span of the blade"},
+        {"id": "d", "text": "evenly distributed along the blade"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The stall region is near the blade root where the rotational velocity is lowest. The angle of attack in this region exceeds the critical angle, causing the airflow to separate. This region produces drag that opposes rotation but contributes little useful lift or driving force.",
+      "topic": "Autorotation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_035",
+      "question": "Gyroscopic precession in a rotor system means that:-",
+      "options": [
+        {"id": "a", "text": "an applied force takes effect approximately 90° later in the direction of rotation"},
+        {"id": "b", "text": "the rotor disc always remains level"},
+        {"id": "c", "text": "the blades resist any change in pitch angle"},
+        {"id": "d", "text": "an applied force takes effect 180° later"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Gyroscopic precession is a property of rotating bodies. When a force is applied to a spinning rotor disc, the effect of that force is felt approximately 90° later in the direction of rotation. This is why cyclic pitch changes are applied 90° before the point where the disc tilt is desired.",
+      "topic": "Rotor Systems",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_036",
+      "question": "The cyclic pitch control on a helicopter is used to:-",
+      "options": [
+        {"id": "a", "text": "tilt the rotor disc in the desired direction of flight"},
+        {"id": "b", "text": "change the pitch of all blades simultaneously"},
+        {"id": "c", "text": "control the rotor RPM"},
+        {"id": "d", "text": "control the yaw of the helicopter"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The cyclic control changes the pitch angle of each blade cyclically — once per revolution — so that the blade pitch varies as it travels around the disc. This causes the disc to tilt in the desired direction, directing the thrust vector and controlling the helicopter's direction of flight.",
+      "topic": "Flight Controls",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_037",
+      "question": "The anti-torque pedals on a helicopter are used to:-",
+      "options": [
+        {"id": "a", "text": "control the heading by changing the pitch of the tail rotor blades"},
+        {"id": "b", "text": "control the rate of climb"},
+        {"id": "c", "text": "tilt the main rotor disc"},
+        {"id": "d", "text": "change the pitch of the main rotor blades"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The anti-torque pedals change the pitch angle of the tail rotor blades, which varies the amount of thrust the tail rotor produces. This controls the yaw (heading) of the helicopter by balancing or overcoming the torque reaction from the main rotor.",
+      "topic": "Flight Controls",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_038",
+      "question": "The purpose of the tail rotor on a single main rotor helicopter is to:-",
+      "options": [
+        {"id": "a", "text": "counteract the torque reaction of the main rotor"},
+        {"id": "b", "text": "provide forward thrust"},
+        {"id": "c", "text": "provide additional lift"},
+        {"id": "d", "text": "reduce the coning angle of the main rotor"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The main rotor torque causes the fuselage to rotate in the opposite direction to the rotor. The tail rotor produces a lateral thrust that counteracts this torque reaction, maintaining directional control. The pilot adjusts tail rotor thrust via the anti-torque pedals.",
+      "topic": "Tail Rotor Effects",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_039",
+      "question": "Vortex ring state (settling with power) is most likely to occur when:-",
+      "options": [
+        {"id": "a", "text": "descending vertically or near-vertically at low airspeed with power applied"},
+        {"id": "b", "text": "climbing at high airspeed"},
+        {"id": "c", "text": "hovering in ground effect"},
+        {"id": "d", "text": "in fast forward flight at cruise speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vortex ring state occurs when the helicopter descends into its own downwash. The conditions are: a rate of descent greater than about 300 ft/min, low forward airspeed (below ETL), and power applied. The recirculating air through the rotor disc causes a loss of effective lift and an increasing rate of descent.",
+      "topic": "Vortex Ring State",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_040",
+      "question": "The recommended recovery from vortex ring state is to:-",
+      "options": [
+        {"id": "a", "text": "lower the collective and move the cyclic forward to gain airspeed"},
+        {"id": "b", "text": "raise the collective to maximum power"},
+        {"id": "c", "text": "apply full aft cyclic"},
+        {"id": "d", "text": "enter autorotation and maintain zero airspeed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Recovery from vortex ring state requires moving the rotor disc into clean, undisturbed air. The standard recovery is to lower the collective to reduce power demand and move the cyclic forward to gain forward airspeed. Once airspeed increases above ETL, the rotor moves into clean air and normal flight can be resumed.",
+      "topic": "Vortex Ring State",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_041",
+      "question": "Longitudinal stability in a helicopter refers to stability in the:-",
+      "options": [
+        {"id": "a", "text": "pitching plane"},
+        {"id": "b", "text": "rolling plane"},
+        {"id": "c", "text": "yawing plane"},
+        {"id": "d", "text": "vertical plane"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Longitudinal stability is stability about the lateral axis, which is the pitching plane. It is the helicopter's tendency to return to its trimmed pitch attitude after a disturbance. The position of the CG relative to the main rotor mast is a key factor in longitudinal stability.",
+      "topic": "Stability",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_042",
+      "question": "A helicopter with its centre of gravity forward of the allowable range will tend to:-",
+      "options": [
+        {"id": "a", "text": "be nose heavy and may not be able to flare for landing"},
+        {"id": "b", "text": "be tail heavy and difficult to control in forward flight"},
+        {"id": "c", "text": "have no noticeable effect on handling"},
+        {"id": "d", "text": "yaw uncontrollably to the right"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A forward CG makes the helicopter nose heavy. The pilot must apply aft cyclic to compensate, reducing the available cyclic range. In extreme cases, there may not be enough aft cyclic available to flare for landing, which is extremely dangerous.",
+      "topic": "Weight & Balance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_043",
+      "question": "A helicopter with its centre of gravity aft of the allowable range will tend to:-",
+      "options": [
+        {"id": "a", "text": "be tail heavy and may become uncontrollable in flight"},
+        {"id": "b", "text": "be nose heavy and difficult to hover"},
+        {"id": "c", "text": "have improved forward flight performance"},
+        {"id": "d", "text": "have no effect on handling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aft CG makes the helicopter tail heavy. The pilot must apply forward cyclic to compensate. In extreme cases, there may not be enough forward cyclic to maintain control, and the helicopter can enter an uncontrollable nose-high attitude. An aft CG is generally more dangerous than a forward CG.",
+      "topic": "Weight & Balance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_044",
+      "question": "The swash plate assembly consists of:-",
+      "options": [
+        {"id": "a", "text": "a rotating plate connected to the blades and a non-rotating plate connected to the flight controls"},
+        {"id": "b", "text": "two rotating plates both connected to the blades"},
+        {"id": "c", "text": "a single plate that tilts with the cyclic input"},
+        {"id": "d", "text": "a plate connected only to the collective control"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The swash plate has two parts: a stationary (non-rotating) lower plate connected to the flight controls, and a rotating upper plate connected to the rotor blades via pitch links. The lower plate tilts and rises/lowers based on cyclic and collective inputs, and the upper plate transmits these movements to the blades.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_045",
+      "question": "The critical azimuth position for retreating blade stall is approximately:-",
+      "options": [
+        {"id": "a", "text": "270° (the 9 o'clock position)"},
+        {"id": "b", "text": "90° (the 3 o'clock position)"},
+        {"id": "c", "text": "180° (the 6 o'clock position)"},
+        {"id": "d", "text": "360° (the 12 o'clock position)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The retreating blade has its lowest relative airspeed at the 270° position (9 o'clock), where the blade is moving directly opposite to the direction of flight. At this point, the blade must have the highest angle of attack to produce its share of lift, making it most susceptible to stalling.",
+      "topic": "Retreating Blade Stall",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_046",
+      "question": "Factors that increase the likelihood of retreating blade stall include:-",
+      "options": [
+        {"id": "a", "text": "high forward speed, high gross weight, high density altitude, and turbulence"},
+        {"id": "b", "text": "low forward speed and low gross weight"},
+        {"id": "c", "text": "hovering in ground effect"},
+        {"id": "d", "text": "low density altitude and smooth air"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Retreating blade stall is more likely with: high forward speed (greater difference between advancing and retreating blade speeds), high gross weight (higher blade angles needed), high density altitude (less dense air requires higher angles of attack), steep or abrupt manoeuvres, and turbulence.",
+      "topic": "Retreating Blade Stall",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_047",
+      "question": "The phenomenon known as 'transverse flow effect' occurs because:-",
+      "options": [
+        {"id": "a", "text": "the air flowing through the rear of the rotor disc has a greater induced velocity than at the front"},
+        {"id": "b", "text": "the advancing blade produces more lift than the retreating blade"},
+        {"id": "c", "text": "the tail rotor interferes with the main rotor airflow"},
+        {"id": "d", "text": "the engine exhaust deflects the rotor downwash"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In forward flight, air entering the rear of the rotor disc has been accelerated downward more than air at the front (which is meeting relatively undisturbed air). This difference in induced velocity across the disc causes the rear of the disc to have a lower angle of attack than the front, resulting in a lateral vibration typically felt as the helicopter transitions through ETL.",
+      "topic": "Forward Flight",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_048",
+      "question": "Density altitude increases with:-",
+      "options": [
+        {"id": "a", "text": "an increase in temperature, altitude, or humidity"},
+        {"id": "b", "text": "a decrease in temperature only"},
+        {"id": "c", "text": "an increase in atmospheric pressure"},
+        {"id": "d", "text": "a decrease in humidity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude is pressure altitude corrected for non-standard temperature. It increases with higher temperature (hot air is less dense), higher altitude (less atmospheric pressure), and higher humidity (water vapour is lighter than dry air). All three reduce air density, degrading helicopter performance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_049",
+      "question": "The main effect of operating a helicopter at a weight above the maximum allowable is:-",
+      "options": [
+        {"id": "a", "text": "reduced performance margins and possible structural damage"},
+        {"id": "b", "text": "improved stability due to the lower CG"},
+        {"id": "c", "text": "increased range due to higher momentum"},
+        {"id": "d", "text": "no significant effect if the CG is within limits"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Operating above maximum allowable weight reduces all performance margins: hover ceiling is lower, rate of climb is reduced, range is decreased, and structural limits may be exceeded. The rotor blades must operate at higher angles of attack, closer to the stall, and the airframe may be overstressed.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_050",
+      "question": "In a semi-rigid (teetering) rotor system, the blades are:-",
+      "options": [
+        {"id": "a", "text": "rigidly attached to each other and flap as a unit about a central hinge"},
+        {"id": "b", "text": "independently hinged with separate flapping, feathering, and drag hinges"},
+        {"id": "c", "text": "rigidly attached to the mast with no hinges"},
+        {"id": "d", "text": "free to move independently in all three axes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a semi-rigid (teetering) rotor system, the two blades are rigidly connected to each other and mounted on a single teetering (flapping) hinge at the rotor head. When one blade flaps up, the other flaps down. There are no individual flapping or drag hinges, though feathering bearings allow pitch changes.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_051",
+      "question": "In a fully articulated rotor system, the three hinges provided for each blade are:-",
+      "options": [
+        {"id": "a", "text": "flapping, feathering, and drag (lead-lag)"},
+        {"id": "b", "text": "flapping, teetering, and pitch"},
+        {"id": "c", "text": "feathering, teetering, and coning"},
+        {"id": "d", "text": "pitch, roll, and yaw"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A fully articulated rotor head provides three hinges per blade: the flapping hinge (allows up/down movement), the feathering hinge/bearing (allows pitch changes), and the drag hinge (allows lead-lag movement in the plane of rotation). This design accommodates all blade movements independently.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_052",
+      "question": "A rigid (hingeless) rotor system compensates for dissymmetry of lift by:-",
+      "options": [
+        {"id": "a", "text": "blade flexing rather than mechanical flapping hinges"},
+        {"id": "b", "text": "changing the rotor RPM"},
+        {"id": "c", "text": "varying the tail rotor thrust"},
+        {"id": "d", "text": "using a teetering hinge"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a rigid (hingeless) rotor system, there are no mechanical flapping or drag hinges. Instead, the blades are designed to flex at their root, allowing them to flap and lead-lag through controlled bending. This blade flexing compensates for dissymmetry of lift in the same way as mechanical hinges.",
+      "topic": "Rotor Systems",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_053",
+      "question": "The induced flow through a helicopter rotor disc in the hover is:-",
+      "options": [
+        {"id": "a", "text": "a downward flow of air accelerated by the rotor blades"},
+        {"id": "b", "text": "an upward flow of air through the disc"},
+        {"id": "c", "text": "a horizontal flow of air across the disc"},
+        {"id": "d", "text": "zero in a stable hover"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the hover, the rotor blades accelerate air downward through the disc. This downward flow is called the induced flow (or induced velocity). It reduces the effective angle of attack of the blades and is the source of induced drag. The induced flow is relatively uniform across the disc in a stable hover.",
+      "topic": "Hovering Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_054",
+      "question": "Induced drag on a helicopter rotor blade is caused by:-",
+      "options": [
+        {"id": "a", "text": "the tilting of the total aerodynamic force rearward due to the induced flow"},
+        {"id": "b", "text": "the friction of air flowing over the blade surface"},
+        {"id": "c", "text": "the shape of the blade cross-section"},
+        {"id": "d", "text": "the interference between the fuselage and the rotor disc"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Induced drag results from the production of lift. The induced flow (downwash) through the rotor disc tilts the relative airflow downward, which tilts the total aerodynamic force rearward. The rearward component of this force is induced drag. It is greatest in the hover and decreases with forward speed.",
+      "topic": "Drag",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_055",
+      "question": "Profile drag on a rotor blade is the sum of:-",
+      "options": [
+        {"id": "a", "text": "form drag and skin friction drag"},
+        {"id": "b", "text": "induced drag and parasite drag"},
+        {"id": "c", "text": "wave drag and interference drag"},
+        {"id": "d", "text": "form drag and induced drag"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Profile drag is the drag on the blade due to its passage through the air, regardless of whether it is producing lift. It consists of form drag (due to the shape of the blade cross-section and pressure distribution) and skin friction drag (due to the viscosity of air flowing over the blade surface).",
+      "topic": "Drag",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_056",
+      "question": "The tail rotor is most effective when the helicopter is:-",
+      "options": [
+        {"id": "a", "text": "hovering with a crosswind from the side that opposes torque"},
+        {"id": "b", "text": "hovering with a tailwind"},
+        {"id": "c", "text": "in fast forward flight"},
+        {"id": "d", "text": "hovering with a crosswind from the tail rotor side"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The tail rotor is most effective when a crosswind blows from the side that assists the tail rotor thrust in opposing torque. This effectively increases the relative airflow through the tail rotor, improving its efficiency. A crosswind from the opposite side can reduce tail rotor effectiveness.",
+      "topic": "Tail Rotor Effects",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_057",
+      "question": "Loss of tail rotor effectiveness (LTE) is most likely to occur during:-",
+      "options": [
+        {"id": "a", "text": "low speed flight with certain relative wind directions"},
+        {"id": "b", "text": "high speed cruise flight"},
+        {"id": "c", "text": "autorotation at high altitude"},
+        {"id": "d", "text": "hovering in strong headwinds"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Loss of tail rotor effectiveness (LTE) is most likely during low speed flight (below 30 knots) when certain relative wind directions can interfere with the tail rotor's ability to produce thrust. Main rotor disc vortex interference, tail rotor vortex ring state, and weathercock instability are the three aerodynamic phenomena that can cause LTE.",
+      "topic": "Tail Rotor Effects",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_058",
+      "question": "The power required to hover a helicopter is greatest when:-",
+      "options": [
+        {"id": "a", "text": "hovering out of ground effect at high gross weight and high density altitude"},
+        {"id": "b", "text": "hovering in ground effect at low gross weight"},
+        {"id": "c", "text": "hovering in ground effect at sea level"},
+        {"id": "d", "text": "hovering out of ground effect at low gross weight and low density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hover power required increases with: higher gross weight (more thrust needed), higher density altitude (less dense air means higher blade angles and more induced drag), and out of ground effect (no beneficial ground cushion). The combination of all three represents the worst case for hover power.",
+      "topic": "Hovering Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_059",
+      "question": "The minimum power speed (bucket speed) in a helicopter is the speed at which:-",
+      "options": [
+        {"id": "a", "text": "total power required is at its minimum"},
+        {"id": "b", "text": "the helicopter achieves maximum range"},
+        {"id": "c", "text": "induced drag equals zero"},
+        {"id": "d", "text": "the helicopter achieves maximum altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The minimum power speed (also called the bucket speed due to the shape of the power required curve) is the airspeed at which total power required is at its minimum. This is the speed for maximum endurance. It occurs where the sum of induced power (decreasing with speed) and parasite power (increasing with speed) is lowest.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_060",
+      "question": "The best rate of climb speed (Vy) in a helicopter is the speed at which:-",
+      "options": [
+        {"id": "a", "text": "the greatest excess of power available over power required exists"},
+        {"id": "b", "text": "the drag is at its minimum"},
+        {"id": "c", "text": "the fuel consumption is lowest"},
+        {"id": "d", "text": "the rotor RPM is highest"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The best rate of climb speed (Vy) is the speed at which the difference between power available and power required is greatest. This maximum excess power can be converted into the greatest rate of climb. It is typically faster than the minimum power speed.",
+      "topic": "Climbing Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_061",
+      "question": "The never exceed speed (Vne) of a helicopter is limited primarily by:-",
+      "options": [
+        {"id": "a", "text": "retreating blade stall and advancing blade compressibility effects"},
+        {"id": "b", "text": "engine power limitations only"},
+        {"id": "c", "text": "tail rotor RPM limits"},
+        {"id": "d", "text": "fuel consumption rate"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vne is limited by aerodynamic factors: at high forward speeds, the retreating blade must operate at very high angles of attack (risking stall), while the advancing blade tip approaches the speed of sound (risking compressibility effects and shock waves). Both conditions cause severe vibration and loss of control.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_062",
+      "question": "During a power-off autorotative descent, the rate of descent is controlled by:-",
+      "options": [
+        {"id": "a", "text": "the airspeed (cyclic control)"},
+        {"id": "b", "text": "the collective lever position only"},
+        {"id": "c", "text": "the anti-torque pedals"},
+        {"id": "d", "text": "the throttle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During autorotation, the rate of descent is primarily controlled by airspeed, which is controlled by the cyclic. Flying faster or slower than the best autorotation speed increases the rate of descent. The collective is used to control rotor RPM, not the rate of descent (except during the flare and cushion).",
+      "topic": "Autorotation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_063",
+      "question": "The height-velocity diagram (dead man's curve) shows combinations of:-",
+      "options": [
+        {"id": "a", "text": "height and airspeed from which a safe autorotative landing may not be possible"},
+        {"id": "b", "text": "altitude and temperature for safe operations"},
+        {"id": "c", "text": "weight and CG limits"},
+        {"id": "d", "text": "power required and power available"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The height-velocity diagram (H-V diagram or dead man's curve) defines combinations of height above ground and airspeed from which a safe autorotative landing cannot be guaranteed following an engine failure. Pilots should avoid operating in the shaded areas of this diagram whenever possible.",
+      "topic": "Autorotation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_064",
+      "question": "The flare during an autorotative landing is used to:-",
+      "options": [
+        {"id": "a", "text": "reduce the rate of descent and forward speed while increasing rotor RPM"},
+        {"id": "b", "text": "increase the rate of descent"},
+        {"id": "c", "text": "reduce rotor RPM before touchdown"},
+        {"id": "d", "text": "increase forward speed for a running landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The flare (aft cyclic application) near the ground during autorotation serves three purposes: it reduces the rate of descent, reduces forward groundspeed, and increases rotor RPM (by converting forward speed energy into rotor energy). The stored rotor energy is then used for the collective cushion just before touchdown.",
+      "topic": "Autorotation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_065",
+      "question": "Blade sailing is most likely to occur:-",
+      "options": [
+        {"id": "a", "text": "during rotor start-up or shutdown in strong or gusty winds"},
+        {"id": "b", "text": "during high-speed forward flight"},
+        {"id": "c", "text": "during autorotation at high altitude"},
+        {"id": "d", "text": "during hovering in calm conditions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Blade sailing occurs when the rotor RPM is low (during start-up or shutdown) and the blades do not have sufficient centrifugal force to maintain their position. Strong or gusty winds can cause the blades to flap excessively, potentially striking the tail boom or fuselage. Pilots should position the cyclic into the wind during start-up and shutdown.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_066",
+      "question": "Dynamic rollover is most likely to occur when:-",
+      "options": [
+        {"id": "a", "text": "one skid or wheel is fixed on the ground and lateral cyclic is applied"},
+        {"id": "b", "text": "the helicopter is in fast forward flight"},
+        {"id": "c", "text": "the helicopter is at high altitude"},
+        {"id": "d", "text": "the helicopter is in a stable hover"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dynamic rollover occurs when the helicopter pivots about one skid or wheel that is in contact with the ground. If the roll rate exceeds the critical angle (typically about 5-8°), the pilot may not have enough lateral cyclic authority to stop the roll. It can happen during slope operations, crosswind takeoffs, or if a skid catches on an obstruction.",
+      "topic": "Hazards",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_067",
+      "question": "The best way to prevent dynamic rollover is to:-",
+      "options": [
+        {"id": "a", "text": "ensure smooth, gradual control inputs during takeoff and landing, especially on slopes"},
+        {"id": "b", "text": "always take off and land at maximum power"},
+        {"id": "c", "text": "maintain high rotor RPM at all times"},
+        {"id": "d", "text": "avoid hovering in ground effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Preventing dynamic rollover requires smooth, gradual collective and cyclic inputs during takeoff and landing. On slopes, the pilot should lift off smoothly and avoid allowing one skid to remain on the ground while applying lateral cyclic. If a roll starts, the immediate action is to lower the collective.",
+      "topic": "Hazards",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_068",
+      "question": "Mast bumping is a hazard associated with:-",
+      "options": [
+        {"id": "a", "text": "semi-rigid (teetering) rotor systems during low-G or negative-G conditions"},
+        {"id": "b", "text": "fully articulated rotor systems in high-speed flight"},
+        {"id": "c", "text": "rigid rotor systems during autorotation"},
+        {"id": "d", "text": "all rotor types during normal hovering"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Mast bumping occurs in semi-rigid (teetering) rotor systems when the rotor disc tilts excessively relative to the mast. During low-G or negative-G conditions (such as a pushover), the rotor disc can tilt beyond its stop limits, causing the rotor hub to contact (bump) the mast, potentially severing it. This is catastrophic.",
+      "topic": "Hazards",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_069",
+      "question": "The primary purpose of the correlator (or governor) in a helicopter engine is to:-",
+      "options": [
+        {"id": "a", "text": "automatically adjust engine power to maintain rotor RPM when the collective is moved"},
+        {"id": "b", "text": "control the tail rotor pitch"},
+        {"id": "c", "text": "adjust the cyclic trim"},
+        {"id": "d", "text": "prevent overspeeding of the rotor in autorotation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The correlator (or governor) automatically adjusts engine power (throttle) to maintain a constant rotor RPM when the pilot changes the collective position. When the collective is raised (increasing blade pitch and drag), the correlator increases engine power to prevent RPM from drooping, and vice versa.",
+      "topic": "Engine & Power",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_070",
+      "question": "The freewheeling unit (overrunning clutch) in a helicopter allows:-",
+      "options": [
+        {"id": "a", "text": "the rotor to continue turning when the engine stops or slows below rotor RPM"},
+        {"id": "b", "text": "the engine to run at a different RPM from the rotor during normal flight"},
+        {"id": "c", "text": "the tail rotor to disconnect from the main rotor"},
+        {"id": "d", "text": "the pilot to adjust the gear ratio between engine and rotor"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The freewheeling unit (overrunning clutch) automatically disconnects the engine from the rotor transmission when the engine RPM drops below the rotor RPM. This is essential for autorotation — it allows the rotor to continue turning freely after an engine failure without being dragged down by the stopped or decelerating engine.",
+      "topic": "Engine & Power",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_071",
+      "question": "Coriolis effect in a rotor system causes a blade to:-",
+      "options": [
+        {"id": "a", "text": "lead when it flaps up and lag when it flaps down"},
+        {"id": "b", "text": "lag when it flaps up and lead when it flaps down"},
+        {"id": "c", "text": "increase its pitch angle when flapping up"},
+        {"id": "d", "text": "decrease its RPM when flapping down"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Due to conservation of angular momentum, when a blade flaps up, its centre of mass moves closer to the axis of rotation, causing it to accelerate (lead) in the plane of rotation — like a spinning ice skater pulling in their arms. When the blade flaps down, the centre of mass moves outward, causing it to decelerate (lag).",
+      "topic": "Rotor Systems",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_072",
+      "question": "The advancing blade in forward flight is the blade that:-",
+      "options": [
+        {"id": "a", "text": "moves in the same direction as the helicopter's forward movement"},
+        {"id": "b", "text": "moves opposite to the helicopter's forward movement"},
+        {"id": "c", "text": "is at the 12 o'clock position"},
+        {"id": "d", "text": "has the highest pitch angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The advancing blade is the blade that moves in the same direction as the helicopter's forward flight. Its relative airspeed is the sum of rotational speed plus the helicopter's forward speed. In a helicopter with anti-clockwise rotating blades (viewed from above), the advancing blade is on the right side.",
+      "topic": "Forward Flight",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_073",
+      "question": "The retreating blade in forward flight compensates for its lower airspeed by:-",
+      "options": [
+        {"id": "a", "text": "flapping down, which increases its angle of attack"},
+        {"id": "b", "text": "flapping up, which decreases its angle of attack"},
+        {"id": "c", "text": "increasing its rotational speed"},
+        {"id": "d", "text": "reducing its chord length"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The retreating blade has a lower relative airspeed (rotational speed minus forward speed). To maintain equal lift across the disc, it flaps down, which increases the angle of attack by changing the direction of the relative airflow. This automatic compensation through blade flapping is how dissymmetry of lift is resolved.",
+      "topic": "Forward Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_074",
+      "question": "The phase lag in a rotor system means that the maximum blade flapping occurs:-",
+      "options": [
+        {"id": "a", "text": "approximately 90° after the point of maximum pitch change input"},
+        {"id": "b", "text": "at the same point as the pitch change input"},
+        {"id": "c", "text": "180° after the pitch change input"},
+        {"id": "d", "text": "at a random position depending on wind conditions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Due to gyroscopic precession, the maximum blade displacement (flapping) occurs approximately 90° after the point where the maximum aerodynamic force is applied. This is why cyclic pitch changes are input 90° before the desired disc tilt position. This 90° phase lag is a fundamental property of gyroscopic systems.",
+      "topic": "Rotor Systems",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_075",
+      "question": "Pendular action (pendulosity) in a helicopter refers to:-",
+      "options": [
+        {"id": "a", "text": "the tendency of the fuselage to swing like a pendulum beneath the rotor disc"},
+        {"id": "b", "text": "the oscillation of the rotor blades"},
+        {"id": "c", "text": "the swinging of the tail boom"},
+        {"id": "d", "text": "the vibration of the engine at certain RPMs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pendular action is the tendency of the helicopter fuselage to swing like a pendulum beneath the rotor disc. Since the fuselage is suspended below the rotor by the mast, any abrupt control input or gust can cause the fuselage to oscillate. Smooth control inputs help minimise this effect.",
+      "topic": "Stability",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_076",
+      "question": "A helicopter in forward flight requires less power than in the hover because:-",
+      "options": [
+        {"id": "a", "text": "the rotor operates more efficiently in forward flight due to reduced induced drag"},
+        {"id": "b", "text": "the engine produces more power at higher airspeeds"},
+        {"id": "c", "text": "parasite drag decreases in forward flight"},
+        {"id": "d", "text": "the tail rotor requires less power in forward flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In forward flight, the rotor encounters relatively undisturbed air, which reduces the induced velocity (downwash) through the disc. This significantly reduces induced drag, which is the dominant drag component in the hover. Although parasite drag increases with speed, the reduction in induced drag more than compensates at moderate speeds.",
+      "topic": "Forward Flight",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_077",
+      "question": "The maximum range speed of a helicopter is the speed at which:-",
+      "options": [
+        {"id": "a", "text": "the ratio of speed to fuel flow is greatest"},
+        {"id": "b", "text": "the power required is at its minimum"},
+        {"id": "c", "text": "the rate of climb is greatest"},
+        {"id": "d", "text": "the rotor RPM is highest"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum range speed is the speed that gives the greatest distance per unit of fuel. On the power required curve, it is found by drawing a tangent line from the origin to the curve. This speed is faster than the minimum power speed (maximum endurance speed) because it optimises the speed-to-fuel-flow ratio.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_078",
+      "question": "The maximum endurance speed of a helicopter is:-",
+      "options": [
+        {"id": "a", "text": "the speed at which fuel consumption per unit of time is lowest (minimum power speed)"},
+        {"id": "b", "text": "the speed at which fuel consumption per nautical mile is lowest"},
+        {"id": "c", "text": "the never exceed speed"},
+        {"id": "d", "text": "the speed for best rate of climb"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum endurance speed is the speed at which the helicopter can remain airborne for the longest time on a given amount of fuel. This corresponds to the minimum power speed — the bottom of the power required curve — where fuel consumption per hour is at its lowest.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_079",
+      "question": "Ground resonance is a hazard that can occur in helicopters with:-",
+      "options": [
+        {"id": "a", "text": "fully articulated rotor systems equipped with drag hinges"},
+        {"id": "b", "text": "semi-rigid teetering rotor systems only"},
+        {"id": "c", "text": "rigid rotor systems only"},
+        {"id": "d", "text": "any rotor system type equally"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ground resonance is a self-exciting vibration that can occur in helicopters with fully articulated rotor systems (which have drag hinges). If the blades become unevenly spaced in the plane of rotation (due to a hard landing or uneven ground), the resulting vibration can couple with the helicopter's natural frequency on its landing gear, causing a destructive oscillation.",
+      "topic": "Hazards",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_080",
+      "question": "The immediate action to recover from ground resonance is to:-",
+      "options": [
+        {"id": "a", "text": "lift off immediately if RPM is sufficient, or shut down the engine if RPM is insufficient"},
+        {"id": "b", "text": "apply the rotor brake immediately"},
+        {"id": "c", "text": "increase collective slowly"},
+        {"id": "d", "text": "apply full forward cyclic"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If ground resonance occurs and rotor RPM is in the normal operating range, the pilot should lift off immediately to break the coupling between the rotor and the landing gear. If RPM is too low to lift off (during start-up or shutdown), the engine should be shut down immediately and the rotor brake applied to stop the rotor as quickly as possible.",
+      "topic": "Hazards",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_081",
+      "question": "The tip path plane of a rotor is:-",
+      "options": [
+        {"id": "a", "text": "the imaginary plane described by the tips of the rotor blades as they rotate"},
+        {"id": "b", "text": "the plane of the swash plate"},
+        {"id": "c", "text": "the horizontal plane through the rotor mast"},
+        {"id": "d", "text": "the plane perpendicular to the rotor shaft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The tip path plane (TPP) is the imaginary flat plane described by the tips of the rotor blades as they rotate. The total rotor thrust acts perpendicular to this plane. When the cyclic is moved, the tip path plane tilts, directing the thrust vector in the desired direction.",
+      "topic": "Rotor Systems",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_082",
+      "question": "Total rotor thrust acts:-",
+      "options": [
+        {"id": "a", "text": "perpendicular to the tip path plane"},
+        {"id": "b", "text": "parallel to the tip path plane"},
+        {"id": "c", "text": "always vertically upward"},
+        {"id": "d", "text": "always along the rotor mast axis"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Total rotor thrust is the resultant of all the aerodynamic forces produced by the rotor blades. It acts perpendicular to the tip path plane (the plane traced by the blade tips). By tilting the tip path plane with cyclic input, the pilot directs the thrust vector to control the helicopter's movement.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_083",
+      "question": "When hovering, if the pilot moves the cyclic forward, the rotor disc will tilt forward because:-",
+      "options": [
+        {"id": "a", "text": "the cyclic changes blade pitch cyclically, and gyroscopic precession causes the disc to tilt 90° later"},
+        {"id": "b", "text": "the cyclic directly pushes the rotor mast forward"},
+        {"id": "c", "text": "the collective automatically adjusts"},
+        {"id": "d", "text": "the tail rotor thrust changes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Moving the cyclic forward changes the blade pitch angle cyclically — increasing pitch on one side and decreasing it on the other. Due to gyroscopic precession, the resulting aerodynamic force takes effect 90° later in the direction of rotation, causing the disc to tilt in the direction the cyclic was moved.",
+      "topic": "Flight Controls",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_084",
+      "question": "The effect of a headwind on a helicopter's hovering performance is:-",
+      "options": [
+        {"id": "a", "text": "improved performance due to translational lift"},
+        {"id": "b", "text": "degraded performance due to increased drag"},
+        {"id": "c", "text": "no effect on hovering performance"},
+        {"id": "d", "text": "degraded performance due to reduced rotor RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A headwind provides a component of translational lift even while the helicopter is stationary over the ground. The wind flowing through the rotor disc reduces the induced velocity, making the rotor more efficient and reducing the power required to hover. This is why helicopters hover more easily into wind.",
+      "topic": "Hovering Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_085",
+      "question": "The stalling angle of a rotor blade is typically:-",
+      "options": [
+        {"id": "a", "text": "approximately 14° to 16° angle of attack"},
+        {"id": "b", "text": "approximately 2° to 4° angle of attack"},
+        {"id": "c", "text": "approximately 30° to 35° angle of attack"},
+        {"id": "d", "text": "approximately 45° angle of attack"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Most rotor blade aerofoil sections stall at approximately 14° to 16° angle of attack. Beyond this critical angle, the airflow separates from the upper surface of the blade, causing a sudden loss of lift and a large increase in drag. The exact stalling angle depends on the specific aerofoil section used.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_086",
+      "question": "Blade pitch angle and angle of attack are:-",
+      "options": [
+        {"id": "a", "text": "different — pitch angle is measured from the rotor disc plane, angle of attack from the relative airflow"},
+        {"id": "b", "text": "the same thing measured differently"},
+        {"id": "c", "text": "both measured from the horizontal"},
+        {"id": "d", "text": "both controlled by the cyclic only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Blade pitch angle (theta) is the angle between the blade chord line and the plane of rotation (rotor disc plane) — it is set by the pilot via collective and cyclic. Angle of attack (alpha) is the angle between the chord line and the relative airflow. They differ because the induced flow (downwash) changes the direction of the relative airflow.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_087",
+      "question": "Increasing the rotor RPM while maintaining the same blade pitch angle will:-",
+      "options": [
+        {"id": "a", "text": "increase rotor thrust because the blade tip speed and dynamic pressure increase"},
+        {"id": "b", "text": "decrease rotor thrust"},
+        {"id": "c", "text": "have no effect on rotor thrust"},
+        {"id": "d", "text": "cause the blades to stall"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Increasing rotor RPM increases the rotational velocity of the blades, which increases the dynamic pressure (½ρV²) acting on each blade section. Since lift is proportional to dynamic pressure, the total rotor thrust increases. However, rotor RPM is normally kept constant in flight by the governor/correlator.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_088",
+      "question": "The reverse flow region on a rotor disc in forward flight is:-",
+      "options": [
+        {"id": "a", "text": "the area near the root of the retreating blade where the airflow moves from trailing edge to leading edge"},
+        {"id": "b", "text": "the area at the tip of the advancing blade"},
+        {"id": "c", "text": "the entire retreating blade"},
+        {"id": "d", "text": "the area behind the rotor disc"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The reverse flow region exists near the root of the retreating blade where the helicopter's forward speed exceeds the blade's rotational speed. In this region, the air actually flows from the trailing edge to the leading edge of the blade. This area produces no useful lift and increases in size with forward speed.",
+      "topic": "Forward Flight",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_089",
+      "question": "The effect of increasing altitude on helicopter performance is:-",
+      "options": [
+        {"id": "a", "text": "reduced performance due to decreased air density and reduced engine power"},
+        {"id": "b", "text": "improved performance due to reduced drag"},
+        {"id": "c", "text": "no change in performance"},
+        {"id": "d", "text": "improved performance due to cooler temperatures"}
+      ],
+      "correct_answer": "a",
+      "explanation": "As altitude increases, air density decreases. This reduces the lift produced by the rotor blades (requiring higher blade angles) and reduces engine power output (less air for combustion). Both effects combine to reduce overall helicopter performance — lower hover ceiling, reduced rate of climb, and reduced payload capacity.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_090",
+      "question": "The weathercock stability of a helicopter is provided primarily by:-",
+      "options": [
+        {"id": "a", "text": "the vertical fin and the tail boom acting as a weathervane"},
+        {"id": "b", "text": "the main rotor disc"},
+        {"id": "c", "text": "the landing gear"},
+        {"id": "d", "text": "the engine cowling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weathercock stability (directional stability) is the tendency of the helicopter to align itself with the relative airflow, like a weathervane. The vertical fin and tail boom provide a large side area behind the CG, which creates a restoring yaw moment when the helicopter is displaced from its heading.",
+      "topic": "Stability",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_091",
+      "question": "Static stability refers to:-",
+      "options": [
+        {"id": "a", "text": "the initial tendency of the helicopter to return towards its original position after a disturbance"},
+        {"id": "b", "text": "the helicopter's ability to maintain a constant altitude"},
+        {"id": "c", "text": "the helicopter's resistance to control inputs"},
+        {"id": "d", "text": "the long-term oscillation of the helicopter after a disturbance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Static stability is the initial tendency of the helicopter after being disturbed from its trimmed condition. Positive static stability means the helicopter initially tends to return towards its original position. Negative static stability means it tends to diverge further. Neutral means it stays in the new position.",
+      "topic": "Stability",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_092",
+      "question": "Dynamic stability refers to:-",
+      "options": [
+        {"id": "a", "text": "the helicopter's behaviour over time after a disturbance — whether oscillations increase, decrease, or remain constant"},
+        {"id": "b", "text": "the initial reaction to a control input"},
+        {"id": "c", "text": "the stability of the engine RPM"},
+        {"id": "d", "text": "the strength of the airframe structure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dynamic stability describes the helicopter's motion over time after a disturbance. Positive dynamic stability means oscillations decrease in amplitude over time (convergent). Negative dynamic stability means oscillations increase (divergent). An aircraft can be statically stable but dynamically unstable if oscillations grow over time.",
+      "topic": "Stability",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_093",
+      "question": "The power required to drive the tail rotor is typically:-",
+      "options": [
+        {"id": "a", "text": "approximately 10% to 15% of the total engine power"},
+        {"id": "b", "text": "approximately 50% of the total engine power"},
+        {"id": "c", "text": "less than 1% of the total engine power"},
+        {"id": "d", "text": "approximately 30% of the total engine power"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The tail rotor typically consumes approximately 10% to 15% of the total engine power available. This is a significant power drain, which is why some helicopter designs use alternative anti-torque systems such as NOTAR (No Tail Rotor) or fenestron (shrouded tail rotor) to improve efficiency.",
+      "topic": "Tail Rotor Effects",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_094",
+      "question": "Compressibility effects on the advancing blade tip are most likely at:-",
+      "options": [
+        {"id": "a", "text": "high forward speeds and high rotor RPM"},
+        {"id": "b", "text": "low forward speeds in the hover"},
+        {"id": "c", "text": "during autorotation at low altitude"},
+        {"id": "d", "text": "during slow flight in ground effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The advancing blade tip speed is the sum of rotational speed and forward speed. At high forward speeds, the tip of the advancing blade can approach the speed of sound, causing compressibility effects (shock waves, increased drag, vibration, and loss of lift). This is one of the factors limiting the helicopter's Vne.",
+      "topic": "Forward Flight",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_095",
+      "question": "The coefficient of lift (CL) of a rotor blade depends primarily on:-",
+      "options": [
+        {"id": "a", "text": "the angle of attack and the blade's aerofoil shape"},
+        {"id": "b", "text": "the weight of the helicopter only"},
+        {"id": "c", "text": "the rotor RPM only"},
+        {"id": "d", "text": "the outside air temperature only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The coefficient of lift (CL) is determined by the angle of attack and the shape of the aerofoil section. For a given aerofoil, CL increases approximately linearly with angle of attack up to the stalling angle. The aerofoil shape (camber, thickness, etc.) determines the CL at any given angle of attack.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_096",
+      "question": "A symmetrical aerofoil section produces zero lift when:-",
+      "options": [
+        {"id": "a", "text": "the angle of attack is zero"},
+        {"id": "b", "text": "the angle of attack is 4°"},
+        {"id": "c", "text": "the airspeed is zero"},
+        {"id": "d", "text": "the blade is at the stalling angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A symmetrical aerofoil has identical upper and lower surfaces. At zero angle of attack, the airflow is identical over both surfaces, producing equal pressure distributions and therefore zero net lift. Lift is only produced when the angle of attack is increased from zero. Many helicopter rotor blades use symmetrical or near-symmetrical aerofoil sections.",
+      "topic": "Aerofoil Theory",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_097",
+      "question": "The downwash from a helicopter rotor in the hover creates a hazard for:-",
+      "options": [
+        {"id": "a", "text": "loose objects, people, and other aircraft on the ground nearby"},
+        {"id": "b", "text": "only the helicopter itself"},
+        {"id": "c", "text": "aircraft flying above the helicopter"},
+        {"id": "d", "text": "only fixed-wing aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The rotor downwash in a hover can reach speeds of 60-100 km/h depending on the helicopter size. This can blow loose objects, create a brownout/whiteout in dusty or snowy conditions, be dangerous to people on the ground, and affect other aircraft operating nearby. Pilots must always be aware of the downwash effect.",
+      "topic": "Hazards",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_098",
+      "question": "Recirculation of rotor downwash during hovering in confined areas can cause:-",
+      "options": [
+        {"id": "a", "text": "a loss of lift effectiveness and unpredictable control responses"},
+        {"id": "b", "text": "an increase in lift due to ground effect"},
+        {"id": "c", "text": "improved directional stability"},
+        {"id": "d", "text": "no significant effect on helicopter performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When hovering in confined areas (near buildings, trees, or walls), the rotor downwash can recirculate back up through the rotor disc. This disturbed, turbulent air reduces the rotor's efficiency, causes unpredictable control responses, and can lead to a loss of lift. Pilots must exercise extreme caution in confined areas.",
+      "topic": "Hovering Flight",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_099",
+      "question": "The relationship between indicated airspeed (IAS) and true airspeed (TAS) at altitude is:-",
+      "options": [
+        {"id": "a", "text": "TAS is higher than IAS at altitude because air density is lower"},
+        {"id": "b", "text": "TAS is lower than IAS at altitude"},
+        {"id": "c", "text": "TAS and IAS are always equal"},
+        {"id": "d", "text": "TAS is only higher than IAS in a descent"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The airspeed indicator measures dynamic pressure, which depends on air density. At altitude, the air is less dense, so the helicopter must fly faster (higher TAS) to produce the same dynamic pressure reading (IAS). The rule of thumb is TAS increases by approximately 2% per 1000 ft above sea level.",
+      "topic": "Airspeed",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hpof_100",
+      "question": "The primary advantage of a NOTAR (No Tail Rotor) anti-torque system is:-",
+      "options": [
+        {"id": "a", "text": "improved safety by eliminating the exposed tail rotor blades"},
+        {"id": "b", "text": "increased maximum forward speed"},
+        {"id": "c", "text": "reduced fuel consumption in cruise flight"},
+        {"id": "d", "text": "improved autorotation performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The NOTAR system uses a fan-driven air jet through the tail boom and a direct jet thruster at the tail to provide anti-torque. Its primary advantage is improved safety — there are no exposed tail rotor blades that can strike objects, people, or the ground. It also produces less noise than a conventional tail rotor.",
+      "topic": "Rotor Systems",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

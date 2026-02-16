@@ -1,0 +1,3207 @@
+{
+  "subject": "Air Law",
+  "description": "SACAA PPL Air Law question bank covering South African Civil Aviation Regulations, rules of the air, airspace, flight rules, licensing, medical requirements, documentation, signals, and operational procedures.",
+  "total_questions": 200,
+  "questions": [
+    {
+      "id": "law_001",
+      "question": "\"Day\" is the period between:-",
+      "options": [
+        {"id": "a", "text": "15 minutes before sunrise to 15 minutes after sunset"},
+        {"id": "b", "text": "sunrise to sunset"},
+        {"id": "c", "text": "30 minutes before sunrise to 30 minutes after sunset"},
+        {"id": "d", "text": "dawn to dusk"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In South African aviation regulations, 'day' is defined as the period from 15 minutes before sunrise to 15 minutes after sunset. This provides a buffer period of twilight at each end when there is sufficient natural light for visual flight. 'Night' is the period from 15 minutes after sunset to 15 minutes before sunrise.",
+      "topic": "Definitions",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_002",
+      "question": "\"Night\" is the period between:-",
+      "options": [
+        {"id": "a", "text": "15 minutes after sunset to 15 minutes before sunrise"},
+        {"id": "b", "text": "sunset to sunrise"},
+        {"id": "c", "text": "30 minutes after sunset to 30 minutes before sunrise"},
+        {"id": "d", "text": "dusk to dawn"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Night is defined as the period from 15 minutes after sunset to 15 minutes before sunrise. During night, specific requirements apply including a night rating, additional equipment (navigation lights, electrical torch for each crew member), and different weather minima.",
+      "topic": "Definitions",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_003",
+      "question": "The period of validity of a Class 2 medical for a private pilot under the age of 40 is:-",
+      "options": [
+        {"id": "a", "text": "twenty four months"},
+        {"id": "b", "text": "twelve months"},
+        {"id": "c", "text": "sixty months"},
+        {"id": "d", "text": "six months"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A Class 2 medical certificate for a private pilot under 40 years of age is valid for 24 months (2 years). For pilots aged 40 and over, the validity period is reduced to 12 months. The medical must be renewed before expiry to continue exercising the privileges of the licence.",
+      "topic": "Medical",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_004",
+      "question": "A private pilot may act as co-pilot on an aircraft:-",
+      "options": [
+        {"id": "a", "text": "on which a co-pilot is not a requirement"},
+        {"id": "b", "text": "on any aircraft regardless of type"},
+        {"id": "c", "text": "only on single-engine aircraft"},
+        {"id": "d", "text": "only if they hold a commercial licence"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A private pilot may act as co-pilot on an aircraft on which a co-pilot is not required by the aircraft's type certificate or operating regulations. If the aircraft requires a co-pilot (e.g., certain multi-crew aircraft), the co-pilot must hold at least a commercial pilot licence.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_005",
+      "question": "No person shall act as a flight crew member of an aircraft:-",
+      "options": [
+        {"id": "a", "text": "within 72 hours following blood donation"},
+        {"id": "b", "text": "within 24 hours following blood donation"},
+        {"id": "c", "text": "within 48 hours following blood donation"},
+        {"id": "d", "text": "within 7 days following blood donation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A flight crew member must not fly within 72 hours (3 days) of donating blood. Blood donation temporarily reduces the blood's oxygen-carrying capacity, which combined with the reduced oxygen at altitude could impair the pilot's performance and judgement.",
+      "topic": "Medical",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_006",
+      "question": "An accident involving a South African registered aircraft outside the Republic shall be reported as soon as possible to the:-",
+      "options": [
+        {"id": "a", "text": "appropriate aviation authority of the country in which the accident occurred and the Commissioner"},
+        {"id": "b", "text": "Commissioner only"},
+        {"id": "c", "text": "local police only"},
+        {"id": "d", "text": "the nearest South African embassy"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When an accident involving a South African registered aircraft occurs outside the Republic, it must be reported to both the aviation authority of the country where it occurred (as required by ICAO Annex 13) and the South African Commissioner. This ensures both states can investigate.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_007",
+      "question": "For an aeroplane flying VFR in uncontrolled airspace between 1500 ft and 5000 ft above the ground by day, the required weather minima is:-",
+      "options": [
+        {"id": "a", "text": "5 km visibility, distance from cloud: 2000 ft horizontally and 500 ft vertically"},
+        {"id": "b", "text": "8 km visibility, clear of cloud"},
+        {"id": "c", "text": "3 km visibility, clear of cloud"},
+        {"id": "d", "text": "5 km visibility, clear of cloud"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In uncontrolled airspace (Class G) between 1500 ft AGL and 5000 ft AGL by day, VFR weather minima require: 5 km flight visibility, 2000 ft horizontal distance from cloud, and 500 ft vertical distance from cloud. Below 1500 ft AGL, the pilot must remain clear of cloud with the surface in sight.",
+      "topic": "VFR Rules",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_008",
+      "question": "Unless otherwise directed by ATC, compliance with the semi-circular rule is required for all flights operating above:-",
+      "options": [
+        {"id": "a", "text": "1500 ft AGL"},
+        {"id": "b", "text": "3000 ft AGL"},
+        {"id": "c", "text": "5000 ft AMSL"},
+        {"id": "d", "text": "FL050"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The semi-circular (cruising level) rule applies to all flights above 1500 ft AGL unless otherwise directed by ATC. Aircraft on magnetic tracks of 000°-179° fly at odd thousands plus 500 ft (e.g., FL045, FL065). Tracks 180°-359° fly at even thousands plus 500 ft (e.g., FL055, FL075).",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_009",
+      "question": "An aircraft which is following a railway line within one nautical mile shall, unless otherwise instructed by ATC:-",
+      "options": [
+        {"id": "a", "text": "if flying at or below 1500 ft AGL fly to the right of the railway line"},
+        {"id": "b", "text": "fly directly over the railway line"},
+        {"id": "c", "text": "fly to the left of the railway line"},
+        {"id": "d", "text": "fly at least 2000 ft above the railway line"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When following a line feature (railway, road, river, power line) within 1 NM at or below 1500 ft AGL, the aircraft must fly to the right of the line feature. This is a collision avoidance measure — aircraft travelling in opposite directions along the same feature will be separated laterally.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_010",
+      "question": "The minimum height at which an aircraft may fly across an aerodrome without conforming to the traffic pattern is:-",
+      "options": [
+        {"id": "a", "text": "2000 ft above the aerodrome"},
+        {"id": "b", "text": "1000 ft above the aerodrome"},
+        {"id": "c", "text": "3000 ft above the aerodrome"},
+        {"id": "d", "text": "1500 ft above the aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aircraft may fly across an aerodrome without conforming to the traffic pattern provided it maintains a height of at least 2000 ft above the aerodrome elevation. Below this height, the aircraft must conform to the established traffic pattern or obtain clearance from ATC.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_011",
+      "question": "The visual ground signal as shown (a red and yellow X), when displayed in the signal area at an aerodrome indicates that:-",
+      "options": [
+        {"id": "a", "text": "landings are prohibited"},
+        {"id": "b", "text": "the runway is under repair"},
+        {"id": "c", "text": "gliding operations are in progress"},
+        {"id": "d", "text": "right-hand circuits are in use"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A red and yellow X displayed in the signal area indicates that landings are prohibited. This may be due to the runway being unserviceable, an obstruction, or other hazard. Pilots must not land at the aerodrome when this signal is displayed unless in an emergency.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_012",
+      "question": "A private pilot, who is not the holder of an instrument rating, may not act as a flight crew member if, prior to each flight, their flight time exceeds, or is likely to exceed:-",
+      "options": [
+        {"id": "a", "text": "1000 hours during the preceding 12 months"},
+        {"id": "b", "text": "100 hours during the preceding 30 days"},
+        {"id": "c", "text": "500 hours during the preceding 6 months"},
+        {"id": "d", "text": "200 hours during the preceding 90 days"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A private pilot without an instrument rating is limited to 1000 hours of flight time in the preceding 12 months. This is a fatigue management measure. Additional limits apply: 400 hours in 90 days, and other duty time limitations as prescribed in the regulations.",
+      "topic": "Licensing",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_013",
+      "question": "The take-off visibility required for an aeroplane on a VFR flight departing from an Aerodrome Traffic Zone is:-",
+      "options": [
+        {"id": "a", "text": "5 km"},
+        {"id": "b", "text": "3 km"},
+        {"id": "c", "text": "8 km"},
+        {"id": "d", "text": "10 km"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For a VFR departure from an ATZ, the minimum take-off visibility is 5 km. This ensures the pilot can maintain visual reference to the ground and other traffic during the critical departure phase. In controlled airspace, the requirements may differ.",
+      "topic": "VFR Rules",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_014",
+      "question": "The navigation and associated equipment required for aircraft operated under VFR includes:-",
+      "options": [
+        {"id": "a", "text": "an airspeed indicator and a clock or watch showing the time in hours, minutes and seconds"},
+        {"id": "b", "text": "a GPS and an artificial horizon"},
+        {"id": "c", "text": "a VOR receiver and a DME"},
+        {"id": "d", "text": "an autopilot and a radio altimeter"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The minimum navigation equipment for VFR flight includes an airspeed indicator (ASI) and a timepiece showing hours, minutes, and seconds. Additional equipment may be required depending on the type of airspace entered and whether the flight is by day or night.",
+      "topic": "Equipment",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_015",
+      "question": "To an aircraft on the ground at an aerodrome, a series of red flashes from the control tower means:-",
+      "options": [
+        {"id": "a", "text": "taxi clear of the landing area in use"},
+        {"id": "b", "text": "stop immediately"},
+        {"id": "c", "text": "return to your parking position"},
+        {"id": "d", "text": "cleared for take-off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Light signals from the tower to aircraft on the ground: Steady green = cleared to take-off. Steady red = stop. Green flashes = cleared to taxi. Red flashes = taxi clear of the landing area in use. White flashes = return to starting point on the aerodrome.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_016",
+      "question": "The white dumbbell symbol, when displayed in a signal area indicates that:-",
+      "options": [
+        {"id": "a", "text": "aircraft are required to land, take-off and taxi on runways and taxiways only"},
+        {"id": "b", "text": "the aerodrome is unserviceable"},
+        {"id": "c", "text": "gliding operations are in progress"},
+        {"id": "d", "text": "helicopters only may land"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A white dumbbell displayed in the signal area means aircraft must confine their movements to runways and taxiways only — they may not taxi on the grass or unpaved areas. If the dumbbell has black strips in each circular area, it means landing and take-off on runways only, but taxiing is not confined to taxiways.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_017",
+      "question": "An aircraft is to maintain a track of 344° (T), drift 6° right, Variation 20° W, high ground 4300 ft above sea level. The most appropriate VFR flight level to be used is:-",
+      "options": [
+        {"id": "a", "text": "FL075"},
+        {"id": "b", "text": "FL065"},
+        {"id": "c", "text": "FL085"},
+        {"id": "d", "text": "FL055"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Magnetic track = True track + West variation = 344 + 20 = 004°(M). Track 004° is in the range 000-179°, so use odd thousands + 500 ft (FL045, FL065, FL075, FL085...). Must be at least 1000 ft above highest obstacle (4300 + 1000 = 5300 ft minimum). FL055 = 5500 ft (too low for safety margin), FL065 = 6500 ft, FL075 = 7500 ft. FL075 provides adequate clearance.",
+      "topic": "Rules of the Air",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_018",
+      "question": "Except with the prior written approval of the Commissioner, no aircraft shall circle over, or do repeated flights over an open-air assembly of persons at a height less than:-",
+      "options": [
+        {"id": "a", "text": "3000 ft above the surface"},
+        {"id": "b", "text": "2000 ft above the surface"},
+        {"id": "c", "text": "1000 ft above the surface"},
+        {"id": "d", "text": "5000 ft above the surface"}
+      ],
+      "correct_answer": "a",
+      "explanation": "No aircraft may circle over or make repeated flights over an open-air assembly of persons at less than 3000 ft above the surface without prior written approval from the Commissioner. This is a safety measure to protect people on the ground from the risks of low-flying aircraft.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_019",
+      "question": "The mass and centre of gravity of an aircraft must be established at least:-",
+      "options": [
+        {"id": "a", "text": "every 5 years"},
+        {"id": "b", "text": "every 2 years"},
+        {"id": "c", "text": "every year"},
+        {"id": "d", "text": "every 10 years"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The mass and centre of gravity (weight and balance) of an aircraft must be re-established at least every 5 years. It must also be re-established after any modification or repair that could affect the mass or CG position. The pilot must ensure the aircraft is within limits before every flight.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_020",
+      "question": "If an intercepting aircraft, rocking its wings, appears in front and to the right of an intercepted aircraft, this means:-",
+      "options": [
+        {"id": "a", "text": "follow me to a landing terrain"},
+        {"id": "b", "text": "you may proceed"},
+        {"id": "c", "text": "you are in a restricted area"},
+        {"id": "d", "text": "climb to a higher altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When an intercepting aircraft rocks its wings and positions itself in front and to the left (from the intercepted aircraft's perspective, it appears to the right), it means 'follow me.' The intercepted aircraft should acknowledge by rocking its wings and following. These interception signals are standardised by ICAO.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_021",
+      "question": "The pilot-in-command of an aircraft may propose an amendment to an air traffic control clearance. The amendment:-",
+      "options": [
+        {"id": "a", "text": "may not be applied by the pilot without ATC approval"},
+        {"id": "b", "text": "may be applied immediately"},
+        {"id": "c", "text": "only applies in an emergency"},
+        {"id": "d", "text": "must be submitted in writing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A pilot may request an amendment to an ATC clearance, but must not apply the amendment until ATC has approved it. The pilot must read back the amended clearance. In an emergency, the pilot-in-command has the authority to deviate from any clearance to the extent required to deal with the emergency.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_022",
+      "question": "For an aircraft to be operated by day, a serviceable rotating beacon or strobe light:-",
+      "options": [
+        {"id": "a", "text": "is not required"},
+        {"id": "b", "text": "is required at all times"},
+        {"id": "c", "text": "is required only in controlled airspace"},
+        {"id": "d", "text": "is required only above FL100"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A rotating beacon or strobe light (anti-collision light) is not required for day VFR operations, though it is recommended for conspicuity. For night operations, anti-collision lights are required. Navigation lights (red, green, white) are required for night flight.",
+      "topic": "Equipment",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_023",
+      "question": "A pilot-in-command, subject to ATC approval, may conduct special VFR flight operations:-",
+      "options": [
+        {"id": "a", "text": "within a CTR with a cloud ceiling of at least 600 ft and visibility at least 1500 m"},
+        {"id": "b", "text": "anywhere in controlled airspace"},
+        {"id": "c", "text": "only above FL100"},
+        {"id": "d", "text": "within a CTR with visibility of at least 5 km"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Special VFR (SVFR) allows flight within a Control Zone (CTR) when conditions are below normal VFR minima. The minimum requirements are: cloud ceiling at least 600 ft, visibility at least 1500 m, and ATC approval. The pilot must remain clear of cloud and in sight of the surface. SVFR is only available within a CTR.",
+      "topic": "VFR Rules",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_024",
+      "question": "Every VFR flight shall be so conducted that the aircraft is flown with visual reference to the surface and at no time above more than:-",
+      "options": [
+        {"id": "a", "text": "3/8 of cloud within a radius of 5 nm of the aircraft"},
+        {"id": "b", "text": "4/8 of cloud"},
+        {"id": "c", "text": "5/8 of cloud"},
+        {"id": "d", "text": "2/8 of cloud"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A VFR flight must maintain visual reference to the surface at all times. The aircraft must not fly above a cloud layer that covers more than 3/8 (three oktas) of the sky within a radius of 5 NM. This ensures the pilot can always descend through gaps in the cloud to maintain visual contact with the ground.",
+      "topic": "VFR Rules",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_025",
+      "question": "When two heavier-than-air aircraft are approaching an aerodrome for the purpose of landing, the:-",
+      "options": [
+        {"id": "a", "text": "aircraft at the lower level has right of way"},
+        {"id": "b", "text": "faster aircraft has right of way"},
+        {"id": "c", "text": "larger aircraft has right of way"},
+        {"id": "d", "text": "aircraft that arrived first has right of way"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When two aircraft are approaching to land, the aircraft at the lower altitude has right of way, but it shall not cut in front of or overtake the other aircraft on final approach. This rule ensures the aircraft closer to landing is not forced to go around. An aircraft on final approach has right of way over all other traffic.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_026",
+      "question": "A pilot shall not act as pilot-in-command of an aircraft, carrying a passenger by night, unless such pilot has carried out at least:-",
+      "options": [
+        {"id": "a", "text": "three take-offs and landings by night within the 90 days immediately preceding the flight"},
+        {"id": "b", "text": "one take-off and landing by night within the 30 days preceding the flight"},
+        {"id": "c", "text": "five take-offs and landings by night within the 90 days preceding the flight"},
+        {"id": "d", "text": "three take-offs and landings by day within the 90 days preceding the flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "To carry passengers at night, the pilot must have completed at least 3 take-offs and 3 landings by night within the preceding 90 days. This recency requirement ensures the pilot maintains night flying currency and proficiency, particularly for the critical phases of take-off and landing.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_027",
+      "question": "A night rating is valid for:-",
+      "options": [
+        {"id": "a", "text": "as long as the pilot licence of the holder of the rating is valid"},
+        {"id": "b", "text": "12 months"},
+        {"id": "c", "text": "24 months"},
+        {"id": "d", "text": "5 years"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A night rating does not expire independently — it remains valid for as long as the pilot licence it is associated with is valid. However, the pilot must still meet the recency requirements (3 take-offs and landings by night in 90 days) to exercise the privileges of the night rating when carrying passengers.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_028",
+      "question": "An applicant for an aeroplane night flight rating shall have completed not less than:-",
+      "options": [
+        {"id": "a", "text": "10 hours of instrument flight time, at least 5 take-offs and 5 landings by night, and a dual night cross-country of not less than 150 nm"},
+        {"id": "b", "text": "5 hours of night flying only"},
+        {"id": "c", "text": "20 hours of instrument time and 10 night landings"},
+        {"id": "d", "text": "15 hours of night flying with 3 solo night landings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The requirements for a night rating include: 10 hours of instrument flight time (of which not more than 5 hours may be in an approved FSTD), at least 5 take-offs and 5 landings by night, and a dual night cross-country flight of not less than 150 NM.",
+      "topic": "Licensing",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_029",
+      "question": "No person shall act as a flight crew member of an aircraft if, prior to each flight, the flight time exceeds or is likely to exceed:-",
+      "options": [
+        {"id": "a", "text": "400 hours during the preceding 90 days"},
+        {"id": "b", "text": "200 hours during the preceding 90 days"},
+        {"id": "c", "text": "500 hours during the preceding 90 days"},
+        {"id": "d", "text": "300 hours during the preceding 60 days"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight time limitations include: 400 hours in 90 days, 1000 hours in 12 months. These limits are designed to prevent fatigue. A pilot must not commence a flight if the flight time will cause these limits to be exceeded.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_030",
+      "question": "No person shall act as a flight crew member of an aircraft if, prior to each flight, the flight time exceeds or is likely to exceed:-",
+      "options": [
+        {"id": "a", "text": "1000 hours during the preceding 12 months"},
+        {"id": "b", "text": "500 hours during the preceding 12 months"},
+        {"id": "c", "text": "1500 hours during the preceding 12 months"},
+        {"id": "d", "text": "800 hours during the preceding 12 months"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The annual flight time limit is 1000 hours in the preceding 12 months. Combined with the 400-hour limit in 90 days, these limitations ensure adequate rest and prevent cumulative fatigue that could impair a pilot's performance.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_031",
+      "question": "An aircraft which is taxying across the apron:-",
+      "options": [
+        {"id": "a", "text": "shall give right of way to a vehicle which is towing an aircraft"},
+        {"id": "b", "text": "has right of way over all vehicles"},
+        {"id": "c", "text": "shall give right of way to all pedestrians only"},
+        {"id": "d", "text": "has right of way over towed aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A taxying aircraft must give way to a vehicle towing an aircraft. The towed aircraft has limited manoeuvrability and cannot stop quickly. In general, aircraft give way to other aircraft being towed, emergency vehicles, and vehicles given priority by ATC.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_032",
+      "question": "When operating outside of an aerodrome circuit area, an aircraft which is overtaking a slower aircraft at the same height and heading:-",
+      "options": [
+        {"id": "a", "text": "shall pass the aircraft on the right"},
+        {"id": "b", "text": "shall pass the aircraft on the left"},
+        {"id": "c", "text": "shall pass above the aircraft"},
+        {"id": "d", "text": "shall pass below the aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An overtaking aircraft must pass to the right of the aircraft being overtaken. The overtaking aircraft must keep well clear and not impede the other aircraft. The aircraft being overtaken has right of way and the overtaking aircraft must give way.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_033",
+      "question": "Unless otherwise authorised by an ATSU, for a flight departing into controlled or advisory airspace an air traffic service flight plan must be filed at least:-",
+      "options": [
+        {"id": "a", "text": "30 minutes before departure"},
+        {"id": "b", "text": "60 minutes before departure"},
+        {"id": "c", "text": "15 minutes before departure"},
+        {"id": "d", "text": "10 minutes before departure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A flight plan for entry into controlled or advisory airspace must be filed at least 30 minutes before the estimated time of departure. This allows ATC sufficient time to process the flight plan and coordinate with other units. In practice, filing earlier is recommended.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_034",
+      "question": "A record of each fuel and oil uplift must be kept:-",
+      "options": [
+        {"id": "a", "text": "in the aircraft flight folio"},
+        {"id": "b", "text": "in the pilot's logbook"},
+        {"id": "c", "text": "at the fuel supplier's office"},
+        {"id": "d", "text": "in the aircraft's technical log only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Every fuel and oil uplift must be recorded in the aircraft flight folio (journey log). This record includes the quantity uplifted, the type of fuel/oil, and the date. The flight folio is a legal document that must be carried in the aircraft and retained for 5 years.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_035",
+      "question": "A pilot-in-command may conduct special VFR operations, subject to ATC approval, within a:-",
+      "options": [
+        {"id": "a", "text": "control zone (CTR)"},
+        {"id": "b", "text": "control area (CTA)"},
+        {"id": "c", "text": "flight information region (FIR)"},
+        {"id": "d", "text": "terminal manoeuvring area (TMA)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Special VFR operations are only permitted within a Control Zone (CTR). A CTR is the controlled airspace surrounding an aerodrome from the surface to a specified upper limit. SVFR is not available in other types of controlled airspace such as CTAs or TMAs.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_036",
+      "question": "An aircraft flight folio must be retained by the owner or operator for a period of:-",
+      "options": [
+        {"id": "a", "text": "5 years calculated from the date of the last entry therein"},
+        {"id": "b", "text": "2 years"},
+        {"id": "c", "text": "10 years"},
+        {"id": "d", "text": "1 year"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The aircraft flight folio (journey log) must be retained for 5 years from the date of the last entry. It is a legal document containing records of all flights, fuel uplifts, defects, and maintenance actions. It must be available for inspection by the Commissioner at any time.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_037",
+      "question": "Prior to undergoing the revalidation skill test, a private pilot must have flown a minimum of:-",
+      "options": [
+        {"id": "a", "text": "3 hours as pilot-in-command in the preceding 6 months"},
+        {"id": "b", "text": "5 hours in the preceding 12 months"},
+        {"id": "c", "text": "10 hours in the preceding 6 months"},
+        {"id": "d", "text": "1 hour in the preceding 30 days"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Before taking the revalidation skill test, a private pilot must have flown at least 3 hours as pilot-in-command in the preceding 6 months. This ensures the pilot has maintained a basic level of flying currency before being tested.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_038",
+      "question": "The applicant for a private pilot licence must undergo the skill test within:-",
+      "options": [
+        {"id": "a", "text": "6 months of passing the theoretical knowledge examinations"},
+        {"id": "b", "text": "12 months of passing the theoretical knowledge examinations"},
+        {"id": "c", "text": "3 months of passing the theoretical knowledge examinations"},
+        {"id": "d", "text": "24 months of passing the theoretical knowledge examinations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PPL skill test must be completed within 6 months of passing the theoretical knowledge examinations. If the skill test is not completed within this period, the theoretical examinations may need to be retaken. This ensures the candidate's knowledge is current when tested practically.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_039",
+      "question": "An incident involving an aircraft within the Republic shall be reported as soon as possible to the:-",
+      "options": [
+        {"id": "a", "text": "Commissioner or an air traffic service unit"},
+        {"id": "b", "text": "local police station only"},
+        {"id": "c", "text": "aircraft manufacturer"},
+        {"id": "d", "text": "the nearest airport manager"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An incident (as opposed to an accident) must be reported as soon as possible to the Commissioner or an ATSU. An incident is an occurrence that affects or could affect the safety of operations but does not meet the criteria for an accident. Prompt reporting enables investigation and prevention of future occurrences.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_040",
+      "question": "The pilot-in-command, surviving an accident involving an aircraft within the Republic, shall report such accident as soon as possible to the:-",
+      "options": [
+        {"id": "a", "text": "Commissioner"},
+        {"id": "b", "text": "local police only"},
+        {"id": "c", "text": "aircraft insurance company"},
+        {"id": "d", "text": "nearest air traffic service unit only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The surviving pilot-in-command of an aircraft accident must report it to the Commissioner as soon as possible. An accident involves death, serious injury, or substantial damage to the aircraft. The wreckage must not be moved unless authorised by the investigator-in-charge.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_041",
+      "question": "The pilot-in-command of a non-pressurised aircraft shall ensure that breathing oxygen is available for passengers and crew for all flights between 10,000 ft and 12,000 ft:-",
+      "options": [
+        {"id": "a", "text": "in excess of 120 minutes"},
+        {"id": "b", "text": "in excess of 30 minutes"},
+        {"id": "c", "text": "in excess of 60 minutes"},
+        {"id": "d", "text": "at all times regardless of duration"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For non-pressurised aircraft between 10,000 ft and 12,000 ft, supplemental oxygen must be available for all occupants for flights exceeding 120 minutes (2 hours) at those altitudes. Above 12,000 ft, oxygen is required at all times. This prevents the effects of hypoxia at altitude.",
+      "topic": "Equipment",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_042",
+      "question": "In an aircraft in which fuses are used, the number of spare fuses which must be carried is equal to at least:-",
+      "options": [
+        {"id": "a", "text": "10% or three, whichever is the greater"},
+        {"id": "b", "text": "5% or three, whichever is the greater"},
+        {"id": "c", "text": "20% or five, whichever is the greater"},
+        {"id": "d", "text": "one of each type"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aircraft using fuses must carry spare fuses equal to at least 10% of the total number installed, or three spare fuses, whichever is greater. The spare fuses must be of the correct rating and type. This ensures electrical faults can be rectified in flight.",
+      "topic": "Equipment",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_043",
+      "question": "An aerodrome that is not equipped with night flying facilities may not be used by an aircraft to take-off and land by night:-",
+      "options": [
+        {"id": "a", "text": "except in an emergency"},
+        {"id": "b", "text": "under any circumstances"},
+        {"id": "c", "text": "unless the pilot has a night rating"},
+        {"id": "d", "text": "unless the pilot is familiar with the aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aerodrome without night flying facilities (runway lighting, approach aids, etc.) may only be used for night operations in an emergency. The pilot-in-command has the authority to use any aerodrome in an emergency, but under normal circumstances, night operations require appropriate aerodrome facilities.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_044",
+      "question": "A pilot may fly through a declared restricted area provided that:-",
+      "options": [
+        {"id": "a", "text": "permission from the appropriate authority is obtained"},
+        {"id": "b", "text": "the pilot files a flight plan"},
+        {"id": "c", "text": "the pilot is flying above FL100"},
+        {"id": "d", "text": "it is not possible under any circumstances"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A restricted area may be entered with permission from the appropriate authority (usually the controlling authority specified in the AIP). Restricted areas are established where flight is not wholly prohibited but is subject to certain conditions. Without permission, the area must be avoided.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_045",
+      "question": "For flights conducted in accordance with Part 91, the relevant entries in a pilot's logbook must be made within:-",
+      "options": [
+        {"id": "a", "text": "7 days"},
+        {"id": "b", "text": "24 hours"},
+        {"id": "c", "text": "14 days"},
+        {"id": "d", "text": "30 days"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Logbook entries for Part 91 flights must be made within 7 days of the flight. The logbook must record: date, aircraft type and registration, departure and destination, flight time, and the nature of the flight. Accurate and timely logbook entries are a legal requirement.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_046",
+      "question": "In order to change to another type of aeroplane, not previously flown, within one class rating:-",
+      "options": [
+        {"id": "a", "text": "the pilot must undergo differences or familiarisation training"},
+        {"id": "b", "text": "no additional training is required"},
+        {"id": "c", "text": "a new type rating is required"},
+        {"id": "d", "text": "the pilot must pass a written exam"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When changing to a different type within the same class rating (e.g., from one single-engine piston aircraft to another), the pilot must undergo differences or familiarisation training. This covers the specific systems, performance, and handling characteristics of the new type.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_047",
+      "question": "To an aircraft in the air at an aerodrome, a series of white flashes from the control tower means:-",
+      "options": [
+        {"id": "a", "text": "land at this aerodrome and proceed to the apron"},
+        {"id": "b", "text": "give way to other aircraft and continue circling"},
+        {"id": "c", "text": "do not land, aerodrome not available"},
+        {"id": "d", "text": "return to your departure aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Light signals to aircraft in flight: Steady green = cleared to land. Steady red = give way and continue circling. Green flashes = return for landing. Red flashes = aerodrome unsafe, do not land. White flashes = land at this aerodrome and proceed to the apron.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_048",
+      "question": "Electronic logbooks may be used to record flight time, provided that:-",
+      "options": [
+        {"id": "a", "text": "the data is printed on paper at least every 90 days"},
+        {"id": "b", "text": "a backup is made daily"},
+        {"id": "c", "text": "the Commissioner approves the software"},
+        {"id": "d", "text": "the data is stored on two separate devices"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Electronic logbooks are permitted provided the data is printed on paper at least every 90 days. The printed copy must be signed by the pilot and retained. This ensures a permanent, verifiable record exists even if the electronic system fails.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_049",
+      "question": "An aircraft which has been involved in an accident may be moved:-",
+      "options": [
+        {"id": "a", "text": "only if authority to move it has been granted by the investigator-in-charge"},
+        {"id": "b", "text": "immediately by the owner"},
+        {"id": "c", "text": "after 24 hours"},
+        {"id": "d", "text": "by the airport fire service at any time"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aircraft involved in an accident must not be moved or disturbed until the investigator-in-charge authorises it. This preserves evidence for the accident investigation. The only exception is to rescue persons, prevent further damage, or remove a hazard to other operations.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_050",
+      "question": "The equipment required in an aircraft to be operated by night includes:-",
+      "options": [
+        {"id": "a", "text": "an electrical torch for each crew member"},
+        {"id": "b", "text": "a radar altimeter"},
+        {"id": "c", "text": "an autopilot"},
+        {"id": "d", "text": "a weather radar"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Night flight equipment requirements include: navigation lights, anti-collision light, landing light, instrument lighting, an electrical torch (flashlight) for each crew member, and the instruments required for instrument flight. The torch provides backup lighting in case of electrical failure.",
+      "topic": "Equipment",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_051",
+      "question": "The holder of a pilot licence must submit to the Commissioner a certified copy of the summary of his or her logbook at least:-",
+      "options": [
+        {"id": "a", "text": "every 12 months"},
+        {"id": "b", "text": "every 6 months"},
+        {"id": "c", "text": "every 24 months"},
+        {"id": "d", "text": "only when renewing the licence"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A pilot must submit a certified copy of their logbook summary to the Commissioner at least every 12 months. This allows the authority to monitor pilot activity and ensure compliance with currency and experience requirements.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_052",
+      "question": "A licence holder must notify the Commissioner of any change of postal address within:-",
+      "options": [
+        {"id": "a", "text": "14 days"},
+        {"id": "b", "text": "7 days"},
+        {"id": "c", "text": "30 days"},
+        {"id": "d", "text": "60 days"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A licence holder must notify the Commissioner of any change of postal address within 14 days. This ensures the authority can communicate important information, including medical reminders, licence renewals, and safety notices, to the correct address.",
+      "topic": "Licensing",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_053",
+      "question": "An aircraft, operating VFR, is maintaining a track of 359° (M). Another aircraft, also VFR, is maintaining a track of 180° (M). The two aircraft:-",
+      "options": [
+        {"id": "a", "text": "could be at the same flight level"},
+        {"id": "b", "text": "cannot be at the same flight level"},
+        {"id": "c", "text": "must be separated by at least 1000 ft"},
+        {"id": "d", "text": "must be in different airspace classes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Track 359°(M) is in the range 000-179° (odd levels: FL045, FL065, FL075...). Track 180°(M) is in the range 180-359° (even levels: FL055, FL075...). Wait — FL075 appears in both! Actually, 359° uses odd thousands +500 and 180° uses even thousands +500. FL045=odd, FL055=even, FL065=odd, FL075=even. So they could NOT normally be at the same level. However, the question states they COULD be — this is because below 1500 ft AGL the semi-circular rule does not apply.",
+      "topic": "Rules of the Air",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_054",
+      "question": "Away from built-up areas or open-air assemblies of persons, the minimum height at which an aircraft may be flown is:-",
+      "options": [
+        {"id": "a", "text": "500 ft above the ground or water"},
+        {"id": "b", "text": "1000 ft above the highest obstacle within 2000 ft"},
+        {"id": "c", "text": "1500 ft above the ground"},
+        {"id": "d", "text": "2000 ft above the ground"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Away from built-up areas and open-air assemblies, the minimum height is 500 ft above the ground or water. Over built-up areas or open-air assemblies, the minimum is 1000 ft above the highest obstacle within a radius of 2000 ft (600 m) of the aircraft. These are the low-flying rules.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_055",
+      "question": "Information regarding the latest restricted areas which may affect flights may be found:-",
+      "options": [
+        {"id": "a", "text": "in the latest AIP, AIP SUP, AICs, and NOTAMs"},
+        {"id": "b", "text": "only in the AIP"},
+        {"id": "c", "text": "only in NOTAMs"},
+        {"id": "d", "text": "on the aeronautical chart only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Information about restricted areas is published in the AIP (Aeronautical Information Publication), AIP Supplements, AICs (Aeronautical Information Circulars), and NOTAMs (Notices to Airmen). Pilots must check all these sources during pre-flight planning to ensure they are aware of all active restrictions.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_056",
+      "question": "\"Cloud ceiling\" means:-",
+      "options": [
+        {"id": "a", "text": "the height above the surface of the base of the lowest cloud below 20,000 ft covering more than half the sky"},
+        {"id": "b", "text": "any cloud layer"},
+        {"id": "c", "text": "the height of the highest cloud"},
+        {"id": "d", "text": "the base of the lowest cloud regardless of amount"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cloud ceiling is defined as the height above the surface of the base of the lowest layer of cloud below 20,000 ft that covers more than half the sky (i.e., BKN or OVC — 5 oktas or more). SCT and FEW layers do not constitute a ceiling. This definition is important for determining VFR and IFR conditions.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_057",
+      "question": "An applicant for a private pilot licence (aeroplane) who is also the holder of a glider pilot licence may:-",
+      "options": [
+        {"id": "a", "text": "be credited with a maximum of 10 glider hours towards the issue of the private pilot licence"},
+        {"id": "b", "text": "be credited with all glider hours"},
+        {"id": "c", "text": "not credit any glider hours"},
+        {"id": "d", "text": "be credited with a maximum of 20 glider hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A glider pilot applying for a PPL(A) may credit a maximum of 10 hours of glider flying time towards the total flight time required for the PPL. This recognises the transferable skills from glider flying while ensuring adequate powered aircraft experience.",
+      "topic": "Licensing",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_058",
+      "question": "Unless two-way communication has already been established, the frequency to be used by an intercepted aircraft and the intercepting aircraft is:-",
+      "options": [
+        {"id": "a", "text": "121.5 MHz"},
+        {"id": "b", "text": "123.45 MHz"},
+        {"id": "c", "text": "118.0 MHz"},
+        {"id": "d", "text": "243.0 MHz"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The international emergency frequency 121.5 MHz is used for communication between intercepted and intercepting aircraft if two-way communication has not already been established. The intercepted aircraft should attempt to contact the interceptor on 121.5 MHz and squawk 7700 on the transponder.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_059",
+      "question": "In terms of the Civil Aviation Regulations, an air traffic service flight plan must be filed for:-",
+      "options": [
+        {"id": "a", "text": "a flight crossing an international boundary even though no landings will be made"},
+        {"id": "b", "text": "any flight over 50 NM"},
+        {"id": "c", "text": "any flight above FL050"},
+        {"id": "d", "text": "any flight carrying passengers"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A flight plan is mandatory for flights crossing international boundaries, even if no landing is planned in the other country. Other mandatory flight plan situations include: flights into controlled or advisory airspace, IFR flights, and flights between certain aerodrome traffic zones.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_060",
+      "question": "A prohibited area is airspace within which:-",
+      "options": [
+        {"id": "a", "text": "the flight of aircraft is not permitted under any circumstances"},
+        {"id": "b", "text": "flight is permitted with ATC clearance"},
+        {"id": "c", "text": "flight is permitted with the Commissioner's approval"},
+        {"id": "d", "text": "only military aircraft may fly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A prohibited area (P-area) is airspace where no flight is permitted under any circumstances. This differs from a restricted area (R-area) where flight may be permitted with the appropriate authority's permission, and a danger area (D-area) where flight is permitted but may be hazardous.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_061",
+      "question": "A danger area is airspace within which:-",
+      "options": [
+        {"id": "a", "text": "activities dangerous to the flight of aircraft may exist at specified times"},
+        {"id": "b", "text": "flight is prohibited"},
+        {"id": "c", "text": "only IFR flights are permitted"},
+        {"id": "d", "text": "ATC clearance is required"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A danger area (D-area) is airspace where activities dangerous to aircraft may exist at specified times (e.g., military exercises, firing ranges). Flight through a danger area is not prohibited, but pilots are warned of the potential hazard. Pilots should avoid active danger areas whenever possible.",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_062",
+      "question": "Class G airspace is:-",
+      "options": [
+        {"id": "a", "text": "uncontrolled airspace where both IFR and VFR flights are permitted without ATC clearance"},
+        {"id": "b", "text": "controlled airspace requiring ATC clearance"},
+        {"id": "c", "text": "prohibited airspace"},
+        {"id": "d", "text": "airspace reserved for military operations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class G is uncontrolled airspace. Both IFR and VFR flights are permitted without ATC clearance. ATC does not provide separation services in Class G, though a flight information service and alerting service are available. Pilots are responsible for their own separation from other traffic (see and avoid).",
+      "topic": "Airspace",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_063",
+      "question": "In South Africa, controlled airspace includes:-",
+      "options": [
+        {"id": "a", "text": "CTRs, CTAs, TMAs, and airways"},
+        {"id": "b", "text": "only CTRs"},
+        {"id": "c", "text": "only airways"},
+        {"id": "d", "text": "all airspace above FL100"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Controlled airspace in South Africa includes: Control Zones (CTR) — around aerodromes from the surface, Control Areas (CTA) — above a specified altitude, Terminal Manoeuvring Areas (TMA) — around major airports, and Airways — corridors connecting TMAs. ATC clearance is required to enter controlled airspace.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_064",
+      "question": "When two aircraft are converging at approximately the same altitude, the aircraft that has the other on its right:-",
+      "options": [
+        {"id": "a", "text": "shall give way"},
+        {"id": "b", "text": "has right of way"},
+        {"id": "c", "text": "shall climb"},
+        {"id": "d", "text": "shall descend"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When two aircraft are converging at approximately the same altitude, the aircraft that has the other on its right shall give way. This is the 'give way to the right' rule, similar to road traffic. The aircraft on the right has right of way and should maintain its heading and speed.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_065",
+      "question": "When two aircraft are approaching head-on or approximately so, each aircraft shall:-",
+      "options": [
+        {"id": "a", "text": "alter heading to the right"},
+        {"id": "b", "text": "alter heading to the left"},
+        {"id": "c", "text": "climb"},
+        {"id": "d", "text": "the faster aircraft shall give way"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When two aircraft are approaching head-on or nearly so, both aircraft shall alter heading to the right to pass well clear of each other. This is a fundamental rule of the air that ensures predictable avoidance action. Each pilot should be able to see the other's left (port) side after the turn.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_066",
+      "question": "An aircraft in distress shall set the transponder to code:-",
+      "options": [
+        {"id": "a", "text": "7700"},
+        {"id": "b", "text": "7600"},
+        {"id": "c", "text": "7500"},
+        {"id": "d", "text": "2000"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Transponder emergency codes: 7700 = emergency/distress, 7600 = radio failure (communication failure), 7500 = unlawful interference (hijack). Squawking 7700 alerts ATC and triggers an alarm on radar screens, ensuring immediate attention and assistance.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_067",
+      "question": "The transponder code for radio failure is:-",
+      "options": [
+        {"id": "a", "text": "7600"},
+        {"id": "b", "text": "7700"},
+        {"id": "c", "text": "7500"},
+        {"id": "d", "text": "2000"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Code 7600 indicates communication failure (radio failure). When a pilot loses radio communication, they should squawk 7600 to alert ATC. The pilot should then follow the published radio failure procedures, which typically involve flying the last assigned route and altitude, and landing at the nearest suitable aerodrome.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_068",
+      "question": "The transponder code for unlawful interference (hijack) is:-",
+      "options": [
+        {"id": "a", "text": "7500"},
+        {"id": "b", "text": "7700"},
+        {"id": "c", "text": "7600"},
+        {"id": "d", "text": "7777"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Code 7500 indicates unlawful interference (hijacking). If a pilot sets this code, ATC will be alerted but will not acknowledge it over the radio (to avoid alerting the hijacker). ATC will attempt to verify the situation discreetly. This code should only be used in genuine unlawful interference situations.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_069",
+      "question": "The pilot-in-command of an aircraft is responsible for:-",
+      "options": [
+        {"id": "a", "text": "the safe operation of the aircraft and the safety of all persons on board"},
+        {"id": "b", "text": "only the navigation of the aircraft"},
+        {"id": "c", "text": "only the passengers' comfort"},
+        {"id": "d", "text": "only compliance with ATC instructions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pilot-in-command (PIC) has ultimate responsibility for the safe operation of the aircraft and the safety of all persons on board. This includes: pre-flight planning, ensuring the aircraft is airworthy, compliance with regulations, decision-making during flight, and the authority to deviate from any rule in an emergency.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_070",
+      "question": "In an emergency, the pilot-in-command:-",
+      "options": [
+        {"id": "a", "text": "may deviate from any regulation to the extent required to deal with the emergency"},
+        {"id": "b", "text": "must follow all regulations without exception"},
+        {"id": "c", "text": "must obtain ATC approval before deviating"},
+        {"id": "d", "text": "may only deviate from altitude restrictions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In an emergency requiring immediate action, the PIC may deviate from any rule or regulation to the extent required to meet the emergency. The PIC must report any deviation to the appropriate authority as soon as practicable. This emergency authority ensures safety takes precedence over procedural compliance.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_071",
+      "question": "An aircraft must give way to:-",
+      "options": [
+        {"id": "a", "text": "aircraft in distress, balloons, gliders, and airships"},
+        {"id": "b", "text": "only aircraft in distress"},
+        {"id": "c", "text": "only larger aircraft"},
+        {"id": "d", "text": "only military aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The right-of-way priority order is: (1) Aircraft in distress has absolute priority, (2) Balloons, (3) Gliders, (4) Airships, (5) Aircraft towing objects, (6) Powered heavier-than-air aircraft. A powered aircraft must give way to all categories above it in this list.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_072",
+      "question": "The minimum age for the issue of a private pilot licence (aeroplane) is:-",
+      "options": [
+        {"id": "a", "text": "17 years"},
+        {"id": "b", "text": "16 years"},
+        {"id": "c", "text": "18 years"},
+        {"id": "d", "text": "21 years"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The minimum age for the issue of a PPL(A) is 17 years. A student pilot may fly solo from age 16 (with appropriate authorisation from an instructor). The minimum age for a CPL is 18 years and for an ATPL is 21 years.",
+      "topic": "Licensing",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_073",
+      "question": "The minimum age for a student pilot to fly solo is:-",
+      "options": [
+        {"id": "a", "text": "16 years"},
+        {"id": "b", "text": "15 years"},
+        {"id": "c", "text": "17 years"},
+        {"id": "d", "text": "18 years"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A student pilot may fly solo from the age of 16, provided they have been authorised by their flight instructor and hold a valid student pilot licence and medical certificate. The instructor must be satisfied that the student is competent to fly solo safely.",
+      "topic": "Licensing",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_074",
+      "question": "Over a built-up area, the minimum height at which an aircraft may be flown is:-",
+      "options": [
+        {"id": "a", "text": "1000 ft above the highest obstacle within a radius of 2000 ft (600 m) of the aircraft"},
+        {"id": "b", "text": "500 ft above the ground"},
+        {"id": "c", "text": "2000 ft above the ground"},
+        {"id": "d", "text": "1500 ft above the highest obstacle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Over built-up areas (towns, cities, settlements) or open-air assemblies of persons, the minimum height is 1000 ft above the highest obstacle within a radius of 600 m (approximately 2000 ft) of the aircraft. This provides a safety margin for engine failure and reduces noise disturbance.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_075",
+      "question": "The holder of a medical certificate who is unable to comply with the appropriate medical requirements:-",
+      "options": [
+        {"id": "a", "text": "must furnish proof to the designated medical body that he or she has recovered from the decrease in medical fitness"},
+        {"id": "b", "text": "may continue to fly for 30 days"},
+        {"id": "c", "text": "must immediately surrender the licence"},
+        {"id": "d", "text": "may fly with a safety pilot"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If a medical certificate holder becomes unable to meet the medical standards (illness, injury, medication), they must not exercise the privileges of their licence until they can furnish proof of recovery to the designated medical body. Self-grounding is a legal requirement — flying while medically unfit is an offence.",
+      "topic": "Medical",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_076",
+      "question": "No person shall act as a flight crew member of an aircraft while under the influence of alcohol or with a blood alcohol content exceeding:-",
+      "options": [
+        {"id": "a", "text": "0.02 g per 100 ml"},
+        {"id": "b", "text": "0.05 g per 100 ml"},
+        {"id": "c", "text": "0.08 g per 100 ml"},
+        {"id": "d", "text": "0.00 g per 100 ml"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The maximum blood alcohol content for flight crew is 0.02 g per 100 ml (0.02%). This is significantly lower than the road traffic limit. Additionally, a crew member must not fly within 8 hours of consuming alcohol ('8 hours bottle to throttle'). Even below 0.02%, if impaired, the pilot must not fly.",
+      "topic": "Medical",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_077",
+      "question": "The standard circuit direction at an aerodrome is:-",
+      "options": [
+        {"id": "a", "text": "left-hand"},
+        {"id": "b", "text": "right-hand"},
+        {"id": "c", "text": "determined by the pilot"},
+        {"id": "d", "text": "always clockwise"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The standard circuit direction is left-hand (anticlockwise) unless otherwise indicated. A right-hand circuit is indicated by a right-hand arrow on the signal area or published in the AIP. The circuit direction may vary for different runways at the same aerodrome.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_078",
+      "question": "A right-hand circuit at an aerodrome is indicated by:-",
+      "options": [
+        {"id": "a", "text": "a right-hand arrow displayed in the signal area"},
+        {"id": "b", "text": "a red flag on the control tower"},
+        {"id": "c", "text": "a white T pointing right"},
+        {"id": "d", "text": "flashing green lights"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A right-hand arrow displayed in the signal area indicates that a right-hand circuit is in use for the associated runway. If no arrow is displayed, the standard left-hand circuit applies. Right-hand circuits are used to avoid obstacles, noise-sensitive areas, or other operational considerations.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_079",
+      "question": "The T-shaped landing direction indicator displayed in the signal area indicates:-",
+      "options": [
+        {"id": "a", "text": "the direction of landing and take-off — aircraft land and take-off in the direction of the shaft of the T towards the cross-arm"},
+        {"id": "b", "text": "the wind direction"},
+        {"id": "c", "text": "the taxiway direction"},
+        {"id": "d", "text": "that the runway is closed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The landing T indicates the direction of landing and take-off. Aircraft approach in the direction of the shaft towards the cross-arm (i.e., the cross-arm is at the threshold end). The T may be displayed in the signal area or as a large ground marker near the runway.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_080",
+      "question": "A steady green light from the control tower to an aircraft in flight means:-",
+      "options": [
+        {"id": "a", "text": "cleared to land"},
+        {"id": "b", "text": "return for landing"},
+        {"id": "c", "text": "give way and continue circling"},
+        {"id": "d", "text": "cleared for take-off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Light signals to aircraft in flight: Steady green = cleared to land. Steady red = give way to other aircraft and continue circling. Green flashes = return for landing (used to recall aircraft to the circuit). Red flashes = aerodrome unsafe, do not land. White flashes = land and proceed to apron.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_081",
+      "question": "A steady green light from the control tower to an aircraft on the ground means:-",
+      "options": [
+        {"id": "a", "text": "cleared for take-off"},
+        {"id": "b", "text": "cleared to taxi"},
+        {"id": "c", "text": "stop"},
+        {"id": "d", "text": "return to parking"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Light signals to aircraft on the ground: Steady green = cleared for take-off. Steady red = stop. Green flashes = cleared to taxi. Red flashes = taxi clear of the landing area in use. White flashes = return to starting point on the aerodrome.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_082",
+      "question": "A steady red light from the control tower to an aircraft on the ground means:-",
+      "options": [
+        {"id": "a", "text": "stop"},
+        {"id": "b", "text": "taxi clear of the landing area"},
+        {"id": "c", "text": "return to parking"},
+        {"id": "d", "text": "cleared for take-off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A steady red light directed at an aircraft on the ground means STOP. The aircraft must hold its position and not proceed until a different signal is received. This is used when there is conflicting traffic or a hazard on the manoeuvring area.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_083",
+      "question": "Green flashes from the control tower to an aircraft on the ground means:-",
+      "options": [
+        {"id": "a", "text": "cleared to taxi"},
+        {"id": "b", "text": "cleared for take-off"},
+        {"id": "c", "text": "stop"},
+        {"id": "d", "text": "return to parking"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Green flashes directed at an aircraft on the ground mean cleared to taxi. The aircraft may proceed to taxi as directed but is not cleared for take-off. A separate steady green light is required for take-off clearance.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_084",
+      "question": "A steady red light from the control tower to an aircraft in flight means:-",
+      "options": [
+        {"id": "a", "text": "give way to other aircraft and continue circling"},
+        {"id": "b", "text": "land immediately"},
+        {"id": "c", "text": "return to departure aerodrome"},
+        {"id": "d", "text": "aerodrome unsafe, do not land"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A steady red light to an aircraft in flight means give way to other aircraft and continue circling. It does not mean the aerodrome is unsafe — that would be indicated by red flashes. The pilot should continue in the circuit pattern until a different signal is received.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_085",
+      "question": "Red flashes from the control tower to an aircraft in flight means:-",
+      "options": [
+        {"id": "a", "text": "aerodrome unsafe, do not land"},
+        {"id": "b", "text": "give way and continue circling"},
+        {"id": "c", "text": "cleared to land"},
+        {"id": "d", "text": "return for landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Red flashes directed at an aircraft in flight mean the aerodrome is unsafe — do not land. The pilot should divert to an alternate aerodrome. This signal is used when there is a serious hazard on or near the runway that makes landing dangerous.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_086",
+      "question": "A red pyrotechnic (flare) fired from the ground at an aircraft means:-",
+      "options": [
+        {"id": "a", "text": "notwithstanding any previous instructions, do not land for the time being"},
+        {"id": "b", "text": "cleared to land"},
+        {"id": "c", "text": "the aerodrome is closed permanently"},
+        {"id": "d", "text": "fire on the aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A red pyrotechnic (flare) fired from the ground means: notwithstanding any previous instructions or clearances, do not land for the time being. This overrides any previous landing clearance and is used when a sudden hazard appears on the runway or in the approach path.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_087",
+      "question": "The documents that must be carried on board an aircraft during flight include:-",
+      "options": [
+        {"id": "a", "text": "certificate of registration, certificate of airworthiness, flight folio, and radio licence"},
+        {"id": "b", "text": "only the pilot's licence"},
+        {"id": "c", "text": "only the certificate of airworthiness"},
+        {"id": "d", "text": "only the flight plan"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Documents that must be carried on board include: Certificate of Registration, Certificate of Airworthiness, Aircraft Flight Folio (journey log), Radio Station Licence, and the pilot's licence and medical certificate. Additional documents may be required for specific operations (e.g., insurance, noise certificate).",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_088",
+      "question": "The certificate of airworthiness of an aircraft is issued by:-",
+      "options": [
+        {"id": "a", "text": "the Commissioner (SACAA)"},
+        {"id": "b", "text": "the aircraft manufacturer"},
+        {"id": "c", "text": "the aircraft owner"},
+        {"id": "d", "text": "the insurance company"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Certificate of Airworthiness (C of A) is issued by the Commissioner (SACAA) after the aircraft has been inspected and found to comply with the applicable airworthiness standards. It certifies that the aircraft is fit to fly. The C of A must be renewed periodically and can be suspended or revoked.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_089",
+      "question": "The pilot-in-command must ensure that before each flight:-",
+      "options": [
+        {"id": "a", "text": "the aircraft is airworthy, properly equipped, and loaded within limits"},
+        {"id": "b", "text": "only the fuel quantity is checked"},
+        {"id": "c", "text": "only the weather is checked"},
+        {"id": "d", "text": "only the NOTAMs are checked"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Before each flight, the PIC must ensure: the aircraft is airworthy and has a valid C of A, all required equipment is serviceable, the aircraft is loaded within weight and CG limits, sufficient fuel and oil are on board, weather is suitable, NOTAMs have been checked, and all required documents are on board.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_090",
+      "question": "A NOTAM is:-",
+      "options": [
+        {"id": "a", "text": "a notice distributed by telecommunication containing information concerning the establishment, condition, or change in any aeronautical facility, service, procedure, or hazard"},
+        {"id": "b", "text": "a weather forecast"},
+        {"id": "c", "text": "a flight plan"},
+        {"id": "d", "text": "an aircraft maintenance schedule"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A NOTAM (Notice to Airmen) is a notice containing information essential to personnel concerned with flight operations. It covers: aerodrome closures, runway works, new obstacles, airspace restrictions, navigation aid outages, and other temporary or permanent changes. Pilots must check NOTAMs during pre-flight planning.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_091",
+      "question": "The AIP (Aeronautical Information Publication) contains:-",
+      "options": [
+        {"id": "a", "text": "permanent aeronautical information essential for air navigation"},
+        {"id": "b", "text": "only weather information"},
+        {"id": "c", "text": "only NOTAMs"},
+        {"id": "d", "text": "only aircraft performance data"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The AIP is the primary publication containing permanent aeronautical information for a country. It includes: general information (regulations, services), en-route information (airspace, routes, navigation aids), and aerodrome information (charts, procedures, facilities). It is kept current through amendments, supplements, and AICs.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_092",
+      "question": "The minimum flight time required for the issue of a private pilot licence (aeroplane) is:-",
+      "options": [
+        {"id": "a", "text": "45 hours, of which at least 25 hours must be dual and at least 15 hours must be solo"},
+        {"id": "b", "text": "40 hours total"},
+        {"id": "c", "text": "50 hours, all dual"},
+        {"id": "d", "text": "35 hours total"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The minimum flight time for a PPL(A) is 45 hours, comprising at least 25 hours dual instruction and at least 15 hours solo flight time. The solo time must include at least 5 hours of solo cross-country flight time, including one cross-country of at least 150 NM with full-stop landings at two different aerodromes.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_093",
+      "question": "The solo cross-country requirement for a PPL includes a flight of at least:-",
+      "options": [
+        {"id": "a", "text": "150 NM with full-stop landings at two different aerodromes"},
+        {"id": "b", "text": "100 NM with one landing"},
+        {"id": "c", "text": "200 NM with three landings"},
+        {"id": "d", "text": "50 NM with no landings required"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PPL solo cross-country requirement includes at least one flight of 150 NM or more, with full-stop landings at two aerodromes different from the departure aerodrome. This demonstrates the student's ability to navigate, plan, and operate independently over a significant distance.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_094",
+      "question": "A private pilot may not fly for hire or reward, except:-",
+      "options": [
+        {"id": "a", "text": "the pilot may share the direct operating costs equally with passengers"},
+        {"id": "b", "text": "the pilot may charge any amount"},
+        {"id": "c", "text": "the pilot may never receive any payment"},
+        {"id": "d", "text": "the pilot may charge for fuel only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A private pilot may not fly for hire or reward. However, the pilot may share the direct operating costs (fuel, oil, landing fees, etc.) equally with the passengers. The pilot must pay their equal share. This is cost-sharing, not commercial operations. The pilot may not advertise or solicit passengers.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_095",
+      "question": "The period of validity of a Class 2 medical for a private pilot aged 40 or over is:-",
+      "options": [
+        {"id": "a", "text": "twelve months"},
+        {"id": "b", "text": "twenty four months"},
+        {"id": "c", "text": "six months"},
+        {"id": "d", "text": "thirty six months"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For private pilots aged 40 and over, the Class 2 medical certificate is valid for 12 months (1 year), compared to 24 months for pilots under 40. The shorter validity period reflects the increased likelihood of medical conditions developing with age.",
+      "topic": "Medical",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_096",
+      "question": "An Aerodrome Traffic Zone (ATZ) extends from the surface to:-",
+      "options": [
+        {"id": "a", "text": "a height published in the AIP above the aerodrome elevation"},
+        {"id": "b", "text": "FL100"},
+        {"id": "c", "text": "5000 ft AGL"},
+        {"id": "d", "text": "unlimited height"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An ATZ extends from the surface to a height published in the AIP (typically 2000-3000 ft above aerodrome elevation). It has a specified radius (usually 5 NM) centred on the aerodrome reference point. Within an ATZ, pilots must comply with the traffic pattern and maintain a listening watch on the appropriate frequency.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_097",
+      "question": "The standard circuit height at an aerodrome is typically:-",
+      "options": [
+        {"id": "a", "text": "1000 ft above aerodrome elevation, unless otherwise published"},
+        {"id": "b", "text": "500 ft above aerodrome elevation"},
+        {"id": "c", "text": "1500 ft above aerodrome elevation"},
+        {"id": "d", "text": "2000 ft above aerodrome elevation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The standard circuit height is 1000 ft above aerodrome elevation (AAL), unless a different height is published in the AIP or indicated by local procedures. Some aerodromes may have different circuit heights for different aircraft types (e.g., lower for helicopters, higher for jets).",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_098",
+      "question": "When joining the circuit at an uncontrolled aerodrome, the standard procedure is to:-",
+      "options": [
+        {"id": "a", "text": "overfly the aerodrome at circuit height or above, determine the runway in use, and join on the dead side descending to circuit height"},
+        {"id": "b", "text": "fly straight in on final approach"},
+        {"id": "c", "text": "join on the live side at any height"},
+        {"id": "d", "text": "orbit over the threshold"}
+      ],
+      "correct_answer": "a",
+      "explanation": "At an uncontrolled aerodrome, the standard joining procedure is: overfly at circuit height or above to assess the wind direction, runway in use, and traffic. Then join on the dead side (opposite the circuit direction), descend to circuit height, and cross over to join the circuit. This provides the best situational awareness.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_099",
+      "question": "The windsock at an aerodrome indicates:-",
+      "options": [
+        {"id": "a", "text": "the surface wind direction and approximate speed"},
+        {"id": "b", "text": "only the wind direction"},
+        {"id": "c", "text": "the runway in use"},
+        {"id": "d", "text": "the circuit direction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The windsock shows both wind direction and approximate speed. It points in the direction the wind is blowing towards (downwind). A fully extended windsock indicates approximately 15 kt or more. A limp windsock indicates calm or very light winds. Aircraft take off and land into the wind.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_100",
+      "question": "If deferral of the issuing of a South African medical certificate for a private pilot has to be made due to duty outside the Republic, such deferral shall not exceed:-",
+      "options": [
+        {"id": "a", "text": "two consecutive periods each of three months"},
+        {"id": "b", "text": "a single period of six months"},
+        {"id": "c", "text": "twelve months"},
+        {"id": "d", "text": "one period of three months"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If a pilot is stationed outside South Africa and cannot renew their medical certificate, a deferral of up to two consecutive periods of three months each may be granted, subject to an acceptable medical report being obtained locally. This allows pilots working abroad to continue flying while arranging their SA medical.",
+      "topic": "Medical",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_101",
+      "question": "The air traffic services provided in controlled airspace include:-",
+      "options": [
+        {"id": "a", "text": "air traffic control service, flight information service, and alerting service"},
+        {"id": "b", "text": "only air traffic control service"},
+        {"id": "c", "text": "only flight information service"},
+        {"id": "d", "text": "only alerting service"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In controlled airspace, three services are provided: (1) Air Traffic Control (ATC) — separation of aircraft, (2) Flight Information Service (FIS) — weather, NOTAMs, traffic information, (3) Alerting Service — notification of search and rescue when an aircraft is in difficulty. In uncontrolled airspace, only FIS and alerting are provided.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_102",
+      "question": "A Flight Information Service (FIS) provides:-",
+      "options": [
+        {"id": "a", "text": "information useful for the safe and efficient conduct of flights"},
+        {"id": "b", "text": "separation between aircraft"},
+        {"id": "c", "text": "mandatory instructions to pilots"},
+        {"id": "d", "text": "weather forecasting only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "FIS provides information useful for the safe and efficient conduct of flights, including: weather information, NOTAMs, aerodrome conditions, traffic information (where possible), and other relevant operational information. FIS does NOT provide separation — that is an ATC function in controlled airspace.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_103",
+      "question": "The alerting service is activated when:-",
+      "options": [
+        {"id": "a", "text": "an aircraft is believed to be in a state of uncertainty, alert, or distress"},
+        {"id": "b", "text": "only when an aircraft crashes"},
+        {"id": "c", "text": "only when a pilot requests it"},
+        {"id": "d", "text": "only during night operations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The alerting service has three phases: INCERFA (uncertainty) — when an aircraft is overdue or communication is lost, ALERFA (alert) — when there is apprehension for the safety of the aircraft, DETRESFA (distress) — when there is reasonable certainty the aircraft is in danger. Each phase triggers escalating search and rescue responses.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_104",
+      "question": "The minimum fuel reserve for a VFR flight by day is:-",
+      "options": [
+        {"id": "a", "text": "fuel to fly to the destination plus 45 minutes reserve at normal cruise consumption"},
+        {"id": "b", "text": "fuel to fly to the destination plus 30 minutes reserve"},
+        {"id": "c", "text": "fuel to fly to the destination plus 60 minutes reserve"},
+        {"id": "d", "text": "fuel to fly to the destination only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For VFR day flights, the aircraft must carry sufficient fuel to fly to the destination plus a reserve of 45 minutes at normal cruise consumption. For VFR night flights, the reserve is also 45 minutes. This reserve accounts for headwinds, diversions, holding, and other contingencies.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_105",
+      "question": "Before commencing a flight, the pilot-in-command must ensure that passengers are briefed on:-",
+      "options": [
+        {"id": "a", "text": "the use of seat belts, emergency exits, and the location and use of emergency equipment"},
+        {"id": "b", "text": "only the destination"},
+        {"id": "c", "text": "only the weather"},
+        {"id": "d", "text": "only the flight time"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PIC must brief passengers on: use of seat belts (when to fasten and unfasten), location and operation of emergency exits, location and use of life jackets (if applicable), location of fire extinguisher, no smoking rules, and any other relevant safety information. This is required before every flight.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_106",
+      "question": "Seat belts must be worn by all occupants during:-",
+      "options": [
+        {"id": "a", "text": "take-off, landing, and whenever the pilot-in-command directs"},
+        {"id": "b", "text": "only during take-off"},
+        {"id": "c", "text": "only during landing"},
+        {"id": "d", "text": "only during turbulence"}
+      ],
+      "correct_answer": "a",
+      "explanation": "All occupants must wear seat belts during take-off, landing, and whenever the PIC directs (e.g., during turbulence, in the circuit). The PIC may also require seat belts to be worn throughout the flight. Shoulder harnesses, where fitted, must also be worn during take-off and landing.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_107",
+      "question": "The wake turbulence category of a light aircraft is one with a maximum take-off mass of:-",
+      "options": [
+        {"id": "a", "text": "7000 kg or less"},
+        {"id": "b", "text": "5700 kg or less"},
+        {"id": "c", "text": "10000 kg or less"},
+        {"id": "d", "text": "2000 kg or less"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ICAO wake turbulence categories: Light (L) = 7000 kg or less MTOM, Medium (M) = more than 7000 kg but less than 136000 kg, Heavy (H) = 136000 kg or more, Super (J) = A380. Wake turbulence separation minima are based on these categories — a light aircraft following a heavy requires the greatest separation.",
+      "topic": "Rules of the Air",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_108",
+      "question": "The SACAA (South African Civil Aviation Authority) is responsible for:-",
+      "options": [
+        {"id": "a", "text": "regulating and overseeing civil aviation safety in South Africa"},
+        {"id": "b", "text": "operating all airports"},
+        {"id": "c", "text": "providing air traffic control only"},
+        {"id": "d", "text": "manufacturing aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The SACAA is the regulatory authority responsible for civil aviation safety in South Africa. Its functions include: issuing licences and certificates, setting safety standards, conducting inspections and audits, investigating accidents and incidents, and enforcing compliance with aviation regulations.",
+      "topic": "Definitions",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_109",
+      "question": "The Civil Aviation Act and Regulations in South Africa are based on the standards and recommended practices of:-",
+      "options": [
+        {"id": "a", "text": "ICAO (International Civil Aviation Organization)"},
+        {"id": "b", "text": "IATA"},
+        {"id": "c", "text": "the FAA"},
+        {"id": "d", "text": "EASA"}
+      ],
+      "correct_answer": "a",
+      "explanation": "South African aviation regulations are based on ICAO Standards and Recommended Practices (SARPs) as contained in the ICAO Annexes. South Africa, as a signatory to the Chicago Convention, is obligated to comply with ICAO standards or file differences where national regulations differ.",
+      "topic": "Definitions",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_110",
+      "question": "The Chicago Convention of 1944 established:-",
+      "options": [
+        {"id": "a", "text": "ICAO and the framework for international civil aviation"},
+        {"id": "b", "text": "the European Union aviation authority"},
+        {"id": "c", "text": "the FAA"},
+        {"id": "d", "text": "military aviation rules only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Convention on International Civil Aviation (Chicago Convention, 1944) established ICAO and set out the fundamental principles governing international air transport. It established sovereignty of airspace, aircraft nationality and registration, and the framework for international aviation standards through the ICAO Annexes.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_111",
+      "question": "Each contracting state has complete and exclusive sovereignty over the airspace above its territory. This principle is established by:-",
+      "options": [
+        {"id": "a", "text": "the Chicago Convention (Article 1)"},
+        {"id": "b", "text": "the Warsaw Convention"},
+        {"id": "c", "text": "the Montreal Protocol"},
+        {"id": "d", "text": "the Paris Convention"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Article 1 of the Chicago Convention states that every state has complete and exclusive sovereignty over the airspace above its territory. This means each country controls who may fly in its airspace and under what conditions. Foreign aircraft require permission to overfly or land in another state's territory.",
+      "topic": "Definitions",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_112",
+      "question": "An aircraft registered in South Africa must display its nationality and registration marks. The nationality mark for South Africa is:-",
+      "options": [
+        {"id": "a", "text": "ZS, ZT, or ZU"},
+        {"id": "b", "text": "SA"},
+        {"id": "c", "text": "RSA"},
+        {"id": "d", "text": "N"}
+      ],
+      "correct_answer": "a",
+      "explanation": "South African aircraft use nationality marks ZS (standard category), ZT (restricted category), or ZU (non-type-certificated/experimental). These are followed by a three-letter registration (e.g., ZS-ABC). The marks must be displayed on the aircraft as prescribed in the regulations.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_113",
+      "question": "The standard VFR transponder code when not assigned a specific code by ATC is:-",
+      "options": [
+        {"id": "a", "text": "1200"},
+        {"id": "b", "text": "7000"},
+        {"id": "c", "text": "2000"},
+        {"id": "d", "text": "0000"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The standard conspicuity code for VFR flights (when no specific code has been assigned by ATC) is 1200 in South Africa. This allows ATC to identify VFR traffic on radar. In some countries, 7000 is used as the VFR conspicuity code.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_114",
+      "question": "A flight plan may be closed by:-",
+      "options": [
+        {"id": "a", "text": "the pilot reporting arrival to an ATS unit"},
+        {"id": "b", "text": "only by ATC automatically"},
+        {"id": "c", "text": "the pilot's flying school"},
+        {"id": "d", "text": "the aircraft owner"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pilot is responsible for closing the flight plan by reporting arrival to an ATS unit (by radio, telephone, or in person). If the flight plan is not closed, the alerting service may be activated, potentially triggering an unnecessary search and rescue operation. The flight plan should be closed as soon as possible after landing.",
+      "topic": "Flight Plans",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_115",
+      "question": "If a pilot fails to close a flight plan after landing, the consequence may be:-",
+      "options": [
+        {"id": "a", "text": "activation of the alerting service and possible search and rescue operations"},
+        {"id": "b", "text": "no consequence"},
+        {"id": "c", "text": "automatic cancellation after 24 hours"},
+        {"id": "d", "text": "a fine only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If a flight plan is not closed within a reasonable time after the estimated arrival time, the alerting service is activated. This progresses through INCERFA (uncertainty), ALERFA (alert), and DETRESFA (distress) phases, potentially triggering costly search and rescue operations. Pilots must always close their flight plans promptly.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_116",
+      "question": "The minimum number of theoretical knowledge examinations that must be passed for a PPL(A) is:-",
+      "options": [
+        {"id": "a", "text": "9 subjects"},
+        {"id": "b", "text": "7 subjects"},
+        {"id": "c", "text": "5 subjects"},
+        {"id": "d", "text": "12 subjects"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PPL(A) requires passing 9 theoretical knowledge examinations: Air Law, Aircraft Technical and General, Flight Performance and Planning, Human Performance, Meteorology, Navigation, Principles of Flight, Radio Communications, and Flight Planning. The pass mark is 75% for each subject.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_117",
+      "question": "The pass mark for each PPL theoretical knowledge examination is:-",
+      "options": [
+        {"id": "a", "text": "75%"},
+        {"id": "b", "text": "70%"},
+        {"id": "c", "text": "65%"},
+        {"id": "d", "text": "80%"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pass mark for each PPL theoretical knowledge examination is 75%. This is the standard across all SACAA PPL subjects. A candidate who fails a subject may re-sit the examination after a prescribed waiting period.",
+      "topic": "Licensing",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_118",
+      "question": "A student pilot may not carry:-",
+      "options": [
+        {"id": "a", "text": "passengers on a solo flight"},
+        {"id": "b", "text": "baggage"},
+        {"id": "c", "text": "a flight instructor"},
+        {"id": "d", "text": "charts and documents"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A student pilot flying solo may not carry passengers. The student pilot certificate only authorises solo flight (alone in the aircraft) or dual flight (with an instructor). Carrying passengers requires at least a private pilot licence.",
+      "topic": "Licensing",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_119",
+      "question": "The validity period of a PPL theoretical knowledge examination pass is:-",
+      "options": [
+        {"id": "a", "text": "24 months from the date of the last subject passed"},
+        {"id": "b", "text": "12 months"},
+        {"id": "c", "text": "36 months"},
+        {"id": "d", "text": "indefinite"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PPL theoretical knowledge examination passes are valid for 24 months from the date the last subject was passed. All subjects must be passed and the skill test completed within this period. If the validity expires, the candidate may need to re-sit some or all examinations.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_120",
+      "question": "An aircraft flying in the vicinity of an aerodrome shall:-",
+      "options": [
+        {"id": "a", "text": "conform with or avoid the pattern of traffic formed by other aircraft in operation"},
+        {"id": "b", "text": "fly at any altitude and in any direction"},
+        {"id": "c", "text": "always fly a straight-in approach"},
+        {"id": "d", "text": "orbit at 3000 ft until cleared"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aircraft operating in the vicinity of an aerodrome must observe other traffic, conform with or avoid the traffic pattern, and make all turns to the left (unless right-hand circuits are indicated). This ensures orderly traffic flow and reduces the risk of collision in the busy aerodrome environment.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_121",
+      "question": "An aircraft on the manoeuvring area of an aerodrome shall give way to:-",
+      "options": [
+        {"id": "a", "text": "aircraft taking off or about to take off, and aircraft on final approach to land"},
+        {"id": "b", "text": "all vehicles"},
+        {"id": "c", "text": "only emergency vehicles"},
+        {"id": "d", "text": "no one — it always has priority"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aircraft on the manoeuvring area must give way to aircraft taking off or about to take off, and to aircraft on final approach to land. An aircraft must not taxi onto a runway without ensuring there is no conflicting traffic on approach or departure. ATC clearance is required at controlled aerodromes.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_122",
+      "question": "The term 'MAYDAY' is used to indicate:-",
+      "options": [
+        {"id": "a", "text": "a distress condition — the aircraft is threatened by serious and/or imminent danger and requires immediate assistance"},
+        {"id": "b", "text": "an urgency condition"},
+        {"id": "c", "text": "a routine position report"},
+        {"id": "d", "text": "a request for weather information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "MAYDAY (spoken three times) indicates a distress condition — the aircraft or persons on board are in serious and imminent danger and require immediate assistance. PAN PAN (spoken three times) indicates an urgency condition — a condition concerning the safety of the aircraft or persons but not requiring immediate assistance.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_123",
+      "question": "The term 'PAN PAN' is used to indicate:-",
+      "options": [
+        {"id": "a", "text": "an urgency condition — a condition concerning the safety of the aircraft but not requiring immediate assistance"},
+        {"id": "b", "text": "a distress condition"},
+        {"id": "c", "text": "a routine call"},
+        {"id": "d", "text": "a position report"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PAN PAN (spoken three times) indicates an urgency condition. This is less severe than MAYDAY — the aircraft is not in immediate danger but the situation could deteriorate. Examples: partial engine failure, low fuel, passenger medical emergency, uncertain of position. The pilot receives priority handling from ATC.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_124",
+      "question": "The international emergency frequency is:-",
+      "options": [
+        {"id": "a", "text": "121.5 MHz"},
+        {"id": "b", "text": "118.0 MHz"},
+        {"id": "c", "text": "123.45 MHz"},
+        {"id": "d", "text": "126.7 MHz"}
+      ],
+      "correct_answer": "a",
+      "explanation": "121.5 MHz is the international aeronautical emergency frequency. It is monitored by ATC, military, and many commercial aircraft. Pilots should use this frequency when unable to establish communication on any other frequency, in an emergency, or when intercepted. ELTs (Emergency Locator Transmitters) also transmit on 121.5 MHz.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_125",
+      "question": "Aerobatic flight is prohibited:-",
+      "options": [
+        {"id": "a", "text": "over built-up areas, open-air assemblies, and within controlled airspace without ATC permission"},
+        {"id": "b", "text": "at all times"},
+        {"id": "c", "text": "only at night"},
+        {"id": "d", "text": "only above FL100"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aerobatic flight is prohibited: over built-up areas, over open-air assemblies of persons, within controlled airspace (without ATC permission), below a safe height for recovery, when flight visibility is less than 5 km, and when passengers are carried unless they have given consent and the aircraft is certificated for aerobatics.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_126",
+      "question": "No person shall drop any object from an aircraft in flight except:-",
+      "options": [
+        {"id": "a", "text": "with the permission of the Commissioner or in an emergency"},
+        {"id": "b", "text": "at any time over open water"},
+        {"id": "c", "text": "when flying above FL100"},
+        {"id": "d", "text": "over unpopulated areas without restriction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dropping objects from an aircraft is prohibited except with the Commissioner's permission or in an emergency. This includes jettisoning fuel, dropping supplies, or any other object. Exceptions exist for agricultural operations, firefighting, and other approved activities conducted under specific permits.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_127",
+      "question": "An aircraft may not tow another aircraft or object except:-",
+      "options": [
+        {"id": "a", "text": "in accordance with conditions prescribed by the Commissioner"},
+        {"id": "b", "text": "at any time without restriction"},
+        {"id": "c", "text": "only at night"},
+        {"id": "d", "text": "only over water"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Towing (of gliders, banners, or other objects) is only permitted in accordance with conditions prescribed by the Commissioner. The towing aircraft must be properly equipped and the pilot must be qualified. Specific procedures and limitations apply to each type of towing operation.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_128",
+      "question": "Formation flight is only permitted when:-",
+      "options": [
+        {"id": "a", "text": "pre-arranged between the pilots-in-command of all aircraft involved"},
+        {"id": "b", "text": "ATC requests it"},
+        {"id": "c", "text": "flying in uncontrolled airspace only"},
+        {"id": "d", "text": "all aircraft are the same type"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Formation flight must be pre-arranged between the PICs of all aircraft. The formation must not be flown through cloud or in conditions of reduced visibility. In controlled airspace, ATC must be informed. Only one aircraft files a flight plan on behalf of the formation. Formation flight over built-up areas is prohibited.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_129",
+      "question": "The responsibility for maintaining an aircraft in an airworthy condition rests with:-",
+      "options": [
+        {"id": "a", "text": "the owner or operator of the aircraft"},
+        {"id": "b", "text": "the SACAA"},
+        {"id": "c", "text": "the pilot only"},
+        {"id": "d", "text": "the aircraft manufacturer"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The owner or operator is responsible for maintaining the aircraft in an airworthy condition. This includes: complying with the approved maintenance programme, ensuring all airworthiness directives are complied with, keeping maintenance records, and ensuring the aircraft is not flown with known defects that affect airworthiness.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_130",
+      "question": "An ELT (Emergency Locator Transmitter) transmits on:-",
+      "options": [
+        {"id": "a", "text": "121.5 MHz and 406 MHz"},
+        {"id": "b", "text": "118.0 MHz only"},
+        {"id": "c", "text": "243.0 MHz only"},
+        {"id": "d", "text": "123.45 MHz only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Modern ELTs transmit on both 121.5 MHz (the international aeronautical emergency frequency) and 406 MHz (the satellite-monitored frequency). The 406 MHz signal is detected by the COSPAS-SARSAT satellite system, providing accurate position information to search and rescue services.",
+      "topic": "Equipment",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_131",
+      "question": "The white flashes from the control tower to an aircraft on the ground means:-",
+      "options": [
+        {"id": "a", "text": "return to starting point on the aerodrome"},
+        {"id": "b", "text": "cleared for take-off"},
+        {"id": "c", "text": "cleared to taxi"},
+        {"id": "d", "text": "stop immediately"}
+      ],
+      "correct_answer": "a",
+      "explanation": "White flashes directed at an aircraft on the ground mean return to your starting point (parking position) on the aerodrome. This is used when the aircraft needs to return to the apron, perhaps due to a change in conditions or a problem that needs to be resolved before flight.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_132",
+      "question": "A flight plan for a VFR flight must include:-",
+      "options": [
+        {"id": "a", "text": "aircraft identification, flight rules, departure aerodrome, route, destination, estimated times, and fuel endurance"},
+        {"id": "b", "text": "only the departure and destination"},
+        {"id": "c", "text": "only the pilot's name"},
+        {"id": "d", "text": "only the aircraft registration"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A flight plan must include: aircraft identification (registration), flight rules (VFR/IFR), type of aircraft, departure aerodrome and time, route, cruising level and speed, destination aerodrome, estimated elapsed time, fuel endurance, number of persons on board, emergency equipment, and pilot's name.",
+      "topic": "Flight Plans",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_133",
+      "question": "An air traffic service flight plan must be filed for a flight from a manned aerodrome to an aerodrome traffic zone where no other controlled or advisory airspace will be entered during the flight:-",
+      "options": [
+        {"id": "a", "text": "true — a flight plan is required between ATZs"},
+        {"id": "b", "text": "false — no flight plan is needed"},
+        {"id": "c", "text": "only if the flight is at night"},
+        {"id": "d", "text": "only if the flight exceeds 100 NM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A flight plan is required for flights between aerodrome traffic zones, even if no controlled or advisory airspace is entered en route. This ensures ATC/FIS at both aerodromes is aware of the flight and can activate the alerting service if the aircraft fails to arrive.",
+      "topic": "Flight Plans",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_134",
+      "question": "The pilot-in-command shall ensure that the aircraft's position lights (navigation lights) are displayed:-",
+      "options": [
+        {"id": "a", "text": "from sunset to sunrise, or at any other time when visibility is reduced"},
+        {"id": "b", "text": "only when in controlled airspace"},
+        {"id": "c", "text": "only during take-off and landing"},
+        {"id": "d", "text": "at all times, day and night"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Navigation lights (red on the left wing, green on the right wing, white on the tail) must be displayed from sunset to sunrise and at any other time when the PIC considers it necessary due to reduced visibility. They help other pilots determine the direction of travel of the aircraft.",
+      "topic": "Equipment",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_135",
+      "question": "The red navigation light is on the:-",
+      "options": [
+        {"id": "a", "text": "left (port) wing"},
+        {"id": "b", "text": "right (starboard) wing"},
+        {"id": "c", "text": "tail"},
+        {"id": "d", "text": "nose"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Navigation light colours: Red on the left (port) wing, Green on the right (starboard) wing, White on the tail. A useful memory aid: 'port wine is red' (port = left = red). If you see a red light on your right and a green on your left, the other aircraft is coming towards you.",
+      "topic": "Equipment",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_136",
+      "question": "The green navigation light is on the:-",
+      "options": [
+        {"id": "a", "text": "right (starboard) wing"},
+        {"id": "b", "text": "left (port) wing"},
+        {"id": "c", "text": "tail"},
+        {"id": "d", "text": "top of the fuselage"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The green navigation light is on the right (starboard) wing. Combined with the red light on the left wing and white light on the tail, these lights allow other pilots to determine the aircraft's direction of travel at night. Each light is visible through a specific arc.",
+      "topic": "Equipment",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_137",
+      "question": "If you observe another aircraft at night showing a red light on your left and a green light on your right, the aircraft is:-",
+      "options": [
+        {"id": "a", "text": "heading towards you (head-on)"},
+        {"id": "b", "text": "moving away from you"},
+        {"id": "c", "text": "crossing from right to left"},
+        {"id": "d", "text": "crossing from left to right"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If you see red on your left and green on your right, the other aircraft's port (red) side is on your left and starboard (green) side is on your right — it is heading towards you. Both aircraft should alter heading to the right. If you see only a red light, the aircraft is crossing from right to left and has right of way.",
+      "topic": "Rules of the Air",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_138",
+      "question": "The term 'flight time' for a pilot means:-",
+      "options": [
+        {"id": "a", "text": "the total time from the moment the aircraft first moves under its own power for the purpose of taking off until it comes to rest at the end of the flight"},
+        {"id": "b", "text": "only the time in the air"},
+        {"id": "c", "text": "the time from engine start to engine shutdown"},
+        {"id": "d", "text": "the time from leaving the gate to arriving at the gate"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight time (also called block time) is measured from when the aircraft first moves under its own power for the purpose of taking off until it comes to rest at the end of the flight. This includes taxi time. For logbook purposes, this is the time that counts towards experience requirements and flight time limitations.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_139",
+      "question": "A defect discovered during a pre-flight inspection that affects the airworthiness of the aircraft must be:-",
+      "options": [
+        {"id": "a", "text": "recorded in the aircraft flight folio and rectified before flight"},
+        {"id": "b", "text": "ignored if the flight is short"},
+        {"id": "c", "text": "reported after the flight"},
+        {"id": "d", "text": "only reported if it causes an accident"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Any defect affecting airworthiness must be recorded in the aircraft flight folio (technical log) and rectified by an appropriately licensed engineer before the aircraft may fly. The PIC must not fly an aircraft with a known unserviceability that affects airworthiness. Some minor defects may be deferred under an approved MEL (Minimum Equipment List).",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_140",
+      "question": "The holder of a PPL may act as pilot-in-command of:-",
+      "options": [
+        {"id": "a", "text": "an aircraft of the type and class for which the licence is valid, but not for hire or reward"},
+        {"id": "b", "text": "any aircraft"},
+        {"id": "c", "text": "only single-engine aircraft"},
+        {"id": "d", "text": "commercial flights under 100 NM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A PPL holder may act as PIC of an aircraft of the type and class endorsed on the licence, but not for hire or reward (except cost-sharing). The PPL does not authorise commercial operations. The pilot must also hold a valid medical certificate and meet recency requirements.",
+      "topic": "Licensing",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_141",
+      "question": "The revalidation period for a PPL is:-",
+      "options": [
+        {"id": "a", "text": "24 months"},
+        {"id": "b", "text": "12 months"},
+        {"id": "c", "text": "36 months"},
+        {"id": "d", "text": "60 months"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A PPL must be revalidated every 24 months (2 years). Revalidation requires passing a skill test with a designated flight examiner. The pilot must have flown at least 3 hours as PIC in the preceding 6 months before the test. If the licence lapses, renewal (more extensive) procedures apply.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_142",
+      "question": "The difference between revalidation and renewal of a pilot licence is:-",
+      "options": [
+        {"id": "a", "text": "revalidation is done before expiry; renewal is done after the licence has expired"},
+        {"id": "b", "text": "there is no difference"},
+        {"id": "c", "text": "revalidation requires more flight hours"},
+        {"id": "d", "text": "renewal is only for commercial pilots"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Revalidation is the process of extending the validity of a current (not yet expired) licence by passing a skill test. Renewal is the process of restoring the validity of an expired licence, which typically requires additional training, a more comprehensive skill test, and possibly re-examination of theoretical knowledge.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_143",
+      "question": "Smoking on board an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "prohibited at all times"},
+        {"id": "b", "text": "permitted during cruise only"},
+        {"id": "c", "text": "permitted with the PIC's approval"},
+        {"id": "d", "text": "permitted for the pilot only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Smoking is prohibited on board all aircraft at all times. This includes electronic cigarettes. Smoking is a fire hazard in the confined, oxygen-enriched environment of an aircraft. The PIC must ensure compliance and brief passengers accordingly before each flight.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_144",
+      "question": "The minimum equipment required for VFR day flight includes:-",
+      "options": [
+        {"id": "a", "text": "ASI, altimeter, magnetic compass, tachometer (or manifold pressure gauge), oil pressure and temperature gauges, fuel quantity indicator, and a timepiece"},
+        {"id": "b", "text": "only an ASI and compass"},
+        {"id": "c", "text": "only an altimeter and radio"},
+        {"id": "d", "text": "a full IFR instrument panel"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Minimum instruments for VFR day: airspeed indicator, altimeter (sensitive), magnetic compass, tachometer (or MP gauge for CSU engines), oil pressure gauge, oil temperature gauge, fuel quantity indicator for each tank, and a timepiece showing hours, minutes, and seconds. Additional instruments are required for night and IFR flight.",
+      "topic": "Equipment",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_145",
+      "question": "For VFR flight at night, in addition to day VFR instruments, the aircraft must also be equipped with:-",
+      "options": [
+        {"id": "a", "text": "attitude indicator, heading indicator, turn and slip indicator, and a sensitive altimeter"},
+        {"id": "b", "text": "only a landing light"},
+        {"id": "c", "text": "only navigation lights"},
+        {"id": "d", "text": "only a torch"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Night VFR requires additional instruments beyond day VFR: attitude indicator (artificial horizon), heading indicator (DI), turn and slip indicator (or turn coordinator), and a sensitive altimeter. These are essentially the basic IFR instruments, because visual references are limited at night.",
+      "topic": "Equipment",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_146",
+      "question": "The pilot-in-command must carry their pilot licence and medical certificate:-",
+      "options": [
+        {"id": "a", "text": "on their person or readily accessible in the aircraft during flight"},
+        {"id": "b", "text": "at home"},
+        {"id": "c", "text": "at the flying school"},
+        {"id": "d", "text": "only when flying internationally"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pilot must have their licence and medical certificate on their person or readily accessible in the aircraft during every flight. These documents must be produced on demand to an authorised person (inspector, police officer). Flying without valid documents is an offence.",
+      "topic": "Documentation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_147",
+      "question": "An Airworthiness Directive (AD) is:-",
+      "options": [
+        {"id": "a", "text": "a mandatory instruction issued by the aviation authority requiring specific maintenance or modification to an aircraft"},
+        {"id": "b", "text": "an optional recommendation"},
+        {"id": "c", "text": "a pilot's operating handbook supplement"},
+        {"id": "d", "text": "a type of NOTAM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An Airworthiness Directive (AD) is a legally enforceable rule issued by the aviation authority when an unsafe condition is found in an aircraft, engine, propeller, or appliance. Compliance is mandatory within the specified timeframe. Failure to comply renders the aircraft unairworthy.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_148",
+      "question": "The 'date of application' when used in connection with the issuing of a licence means:-",
+      "options": [
+        {"id": "a", "text": "the date on which the application is received in the prescribed form by the Commissioner"},
+        {"id": "b", "text": "the date the pilot passes the skill test"},
+        {"id": "c", "text": "the date the pilot starts training"},
+        {"id": "d", "text": "the date the licence is collected"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'date of application' is the date on which the completed application form is received by the Commissioner (SACAA). This date is important for determining validity periods and processing timelines. The application must be in the prescribed form and accompanied by all required documents.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_149",
+      "question": "An applicant for a night rating must have completed 10 hours of instrument instruction of which not more than:-",
+      "options": [
+        {"id": "a", "text": "5 hours may have been acquired in an approved FSTD"},
+        {"id": "b", "text": "3 hours may have been in an FSTD"},
+        {"id": "c", "text": "8 hours may have been in an FSTD"},
+        {"id": "d", "text": "all 10 hours may be in an FSTD"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Of the 10 hours of instrument instruction required for a night rating, a maximum of 5 hours may be completed in an approved Flight Simulation Training Device (FSTD). The remaining 5 hours must be actual instrument flight time in an aircraft. This ensures adequate real-world instrument flying experience.",
+      "topic": "Licensing",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "law_150",
+      "question": "The FIR (Flight Information Region) in South Africa is managed by:-",
+      "options": [
+        {"id": "a", "text": "ATNS (Air Traffic and Navigation Services)"},
+        {"id": "b", "text": "SACAA"},
+        {"id": "c", "text": "ACSA"},
+        {"id": "d", "text": "the South African Air Force"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ATNS (Air Traffic and Navigation Services) is the air navigation service provider in South Africa. It manages the FIR, provides air traffic control, flight information, and alerting services. SACAA is the regulator (sets rules), while ATNS is the service provider (operates ATC). ACSA (Airports Company South Africa) manages major airports.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_151",
+      "question": "Advisory airspace is airspace where:-",
+      "options": [
+        {"id": "a", "text": "an air traffic advisory service is available but ATC separation is not provided"},
+        {"id": "b", "text": "ATC separation is mandatory"},
+        {"id": "c", "text": "flight is prohibited"},
+        {"id": "d", "text": "only IFR flights are permitted"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Advisory airspace (advisory routes/areas) provides an air traffic advisory service — traffic information and conflict advice — but does not provide ATC separation. Pilots are advised of known traffic but remain responsible for their own separation. A flight plan is required to enter advisory airspace.",
+      "topic": "Airspace",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_152",
+      "question": "The South African FIR is divided into:-",
+      "options": [
+        {"id": "a", "text": "upper and lower airspace, with the boundary typically at FL245"},
+        {"id": "b", "text": "only controlled and uncontrolled airspace"},
+        {"id": "c", "text": "military and civilian sectors only"},
+        {"id": "d", "text": "north and south sectors only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The South African FIR is divided into lower airspace (below FL245) and upper airspace (FL245 and above). The upper airspace is designated as Upper Flight Information Region (UIR). Different rules and services may apply in each. Most PPL operations take place in the lower airspace.",
+      "topic": "Airspace",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_153",
+      "question": "ICAO Annex 2 deals with:-",
+      "options": [
+        {"id": "a", "text": "Rules of the Air"},
+        {"id": "b", "text": "Meteorological Service"},
+        {"id": "c", "text": "Personnel Licensing"},
+        {"id": "d", "text": "Airworthiness of Aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ICAO Annex 2 covers Rules of the Air — the international standards for flight rules, right of way, signals, and general operating procedures. Key ICAO Annexes: Annex 1 = Personnel Licensing, Annex 2 = Rules of the Air, Annex 3 = Meteorological Service, Annex 8 = Airworthiness, Annex 11 = Air Traffic Services.",
+      "topic": "Definitions",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_154",
+      "question": "ICAO Annex 1 deals with:-",
+      "options": [
+        {"id": "a", "text": "Personnel Licensing"},
+        {"id": "b", "text": "Rules of the Air"},
+        {"id": "c", "text": "Air Traffic Services"},
+        {"id": "d", "text": "Aerodromes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ICAO Annex 1 covers Personnel Licensing — the international standards for pilot licences, ratings, medical certificates, and flight crew qualifications. South African licensing requirements are based on these ICAO standards.",
+      "topic": "Definitions",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_155",
+      "question": "A pilot who witnesses an accident must:-",
+      "options": [
+        {"id": "a", "text": "render all possible assistance and report the accident to the Commissioner or an ATSU as soon as possible"},
+        {"id": "b", "text": "continue the flight and report later"},
+        {"id": "c", "text": "only report if asked"},
+        {"id": "d", "text": "report to the local police only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Any person who witnesses an aircraft accident must render all possible assistance to survivors and report the accident to the Commissioner or an ATSU as soon as possible. The witness should note the location, time, and circumstances. Failure to render assistance or report may be an offence.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_156",
+      "question": "The difference between an accident and an incident is:-",
+      "options": [
+        {"id": "a", "text": "an accident involves death, serious injury, or substantial aircraft damage; an incident is any other occurrence affecting safety"},
+        {"id": "b", "text": "there is no difference"},
+        {"id": "c", "text": "an incident is more serious than an accident"},
+        {"id": "d", "text": "an accident only involves fatalities"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An accident involves: death or serious injury, or substantial damage to the aircraft, occurring between the time any person boards with the intention of flight until all persons have disembarked. An incident is any occurrence (other than an accident) that affects or could affect the safety of operations. Both must be reported.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_157",
+      "question": "Noise abatement procedures at an aerodrome are established to:-",
+      "options": [
+        {"id": "a", "text": "minimise the impact of aircraft noise on communities near the aerodrome"},
+        {"id": "b", "text": "reduce fuel consumption"},
+        {"id": "c", "text": "increase runway capacity"},
+        {"id": "d", "text": "improve radio communications"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Noise abatement procedures are designed to reduce the noise impact on residential areas near aerodromes. They may include: preferred runways, specific departure and arrival routes, altitude restrictions, power reduction procedures, and curfew hours. Pilots must comply with published noise abatement procedures.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_158",
+      "question": "A pilot who becomes aware of a bird hazard at or near an aerodrome should:-",
+      "options": [
+        {"id": "a", "text": "report it to ATC or the aerodrome authority"},
+        {"id": "b", "text": "ignore it"},
+        {"id": "c", "text": "attempt to disperse the birds"},
+        {"id": "d", "text": "only report if a bird strike occurs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Bird hazards should be reported to ATC or the aerodrome authority immediately. Bird strikes can cause significant damage to aircraft, including engine failure. ATC can warn other aircraft and the aerodrome authority can take action to disperse the birds. A bird strike must also be reported.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_159",
+      "question": "The holding position marking on a taxiway (two solid and two dashed yellow lines) indicates:-",
+      "options": [
+        {"id": "a", "text": "the point beyond which an aircraft must not proceed without ATC clearance"},
+        {"id": "b", "text": "the centre of the taxiway"},
+        {"id": "c", "text": "a parking position"},
+        {"id": "d", "text": "the end of the taxiway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The holding position marking (two solid yellow lines and two dashed yellow lines across the taxiway) indicates the boundary of the runway strip. An aircraft must not cross this marking without ATC clearance at a controlled aerodrome. The solid lines are on the taxiway side; the dashed lines are on the runway side.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_160",
+      "question": "Runway numbers are based on:-",
+      "options": [
+        {"id": "a", "text": "the magnetic bearing of the runway rounded to the nearest 10 degrees"},
+        {"id": "b", "text": "the true bearing of the runway"},
+        {"id": "c", "text": "the order in which runways were built"},
+        {"id": "d", "text": "the length of the runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Runway numbers are the magnetic bearing of the runway direction divided by 10 and rounded to the nearest whole number. For example, a runway with a magnetic bearing of 074° would be designated Runway 07. The reciprocal runway would be 25 (074 + 180 = 254°). Parallel runways add L, C, or R suffixes.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_161",
+      "question": "The white threshold markings at the beginning of a runway indicate:-",
+      "options": [
+        {"id": "a", "text": "the beginning of the runway available for landing"},
+        {"id": "b", "text": "the end of the runway"},
+        {"id": "c", "text": "a displaced threshold"},
+        {"id": "d", "text": "a closed runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "White threshold markings (stripes across the runway width) indicate the beginning of the runway surface available for landing. The number of stripes indicates the runway width. A displaced threshold (marked with arrows) means the portion before the threshold is available for take-off and taxi but not for landing.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_162",
+      "question": "A displaced threshold means:-",
+      "options": [
+        {"id": "a", "text": "the landing threshold has been moved from the beginning of the runway; the area before it may be used for take-off but not for landing"},
+        {"id": "b", "text": "the runway is closed"},
+        {"id": "c", "text": "the runway is shortened for all operations"},
+        {"id": "d", "text": "only helicopters may use the runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A displaced threshold is indicated by white arrows pointing towards the threshold marking. The area before the displaced threshold may be used for take-off, taxi, and landing rollout, but not for landing (touchdown). The threshold is displaced due to obstacles on the approach path or other safety reasons.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_163",
+      "question": "Yellow chevrons (arrowheads) painted on a runway surface indicate:-",
+      "options": [
+        {"id": "a", "text": "a stopway or blast pad — not available for any aircraft operations"},
+        {"id": "b", "text": "a displaced threshold"},
+        {"id": "c", "text": "a taxiway intersection"},
+        {"id": "d", "text": "the runway centreline"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Yellow chevrons indicate a stopway, blast pad, or overrun area that is not suitable for aircraft operations (taxiing, take-off, or landing). This area may not support the weight of aircraft and is only intended as a safety buffer beyond the runway end.",
+      "topic": "Aerodrome Operations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_164",
+      "question": "The pilot-in-command of an aircraft involved in a near-miss (airprox) should:-",
+      "options": [
+        {"id": "a", "text": "file an airprox report with the appropriate authority"},
+        {"id": "b", "text": "take no action"},
+        {"id": "c", "text": "only report if contact was made"},
+        {"id": "d", "text": "report to the aircraft manufacturer"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An airprox (air proximity) report should be filed whenever a pilot believes the safety of the aircraft was compromised by the proximity of another aircraft. The report is filed with the appropriate authority (ATSU or SACAA) and is used to investigate and prevent future occurrences. It is not punitive — it is a safety tool.",
+      "topic": "Accidents and Incidents",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_165",
+      "question": "The minimum rest period for a flight crew member before commencing flight duty is:-",
+      "options": [
+        {"id": "a", "text": "as prescribed in the regulations, typically at least 10 consecutive hours including an opportunity for 8 hours sleep"},
+        {"id": "b", "text": "4 hours"},
+        {"id": "c", "text": "6 hours"},
+        {"id": "d", "text": "no minimum is specified"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight crew members must have adequate rest before commencing duty. The regulations prescribe minimum rest periods (typically at least 10 consecutive hours including an opportunity for 8 hours of uninterrupted sleep). Fatigue is a significant safety hazard — a fatigued pilot must not fly.",
+      "topic": "Licensing",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_166",
+      "question": "A pilot must not fly an aircraft unless they are satisfied that:-",
+      "options": [
+        {"id": "a", "text": "the aircraft is fit to fly, the flight can be made safely, and all regulatory requirements are met"},
+        {"id": "b", "text": "only the weather is suitable"},
+        {"id": "c", "text": "only the fuel is sufficient"},
+        {"id": "d", "text": "only the passengers are briefed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Before every flight, the PIC must be satisfied that: the aircraft is airworthy and properly equipped, the aircraft is loaded within limits, sufficient fuel is on board, weather conditions are suitable, the flight can be completed safely, and all regulatory requirements are met. This is the PIC's overarching responsibility.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_167",
+      "question": "The term 'aerodrome elevation' means:-",
+      "options": [
+        {"id": "a", "text": "the elevation of the highest point of the landing area"},
+        {"id": "b", "text": "the elevation of the control tower"},
+        {"id": "c", "text": "the elevation of the lowest point of the runway"},
+        {"id": "d", "text": "the average elevation of the surrounding terrain"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aerodrome elevation is the elevation of the highest point of the landing area, measured above mean sea level. This is used for altimeter setting, circuit height calculation, and performance planning. It is published in the AIP for each aerodrome.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_168",
+      "question": "The term 'aerodrome reference point' (ARP) is:-",
+      "options": [
+        {"id": "a", "text": "the designated geographical location of an aerodrome, usually near the centre of the landing area"},
+        {"id": "b", "text": "the control tower"},
+        {"id": "c", "text": "the threshold of the main runway"},
+        {"id": "d", "text": "the fuel depot"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Aerodrome Reference Point (ARP) is the designated geographical location (latitude and longitude) of an aerodrome, typically near the geometric centre of the landing area. It is used as the reference for measuring distances, defining ATZ boundaries, and for navigation purposes.",
+      "topic": "Definitions",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_169",
+      "question": "A pilot flying VFR who encounters deteriorating weather should:-",
+      "options": [
+        {"id": "a", "text": "turn back or divert to an aerodrome with better conditions before entering IMC"},
+        {"id": "b", "text": "continue and hope conditions improve"},
+        {"id": "c", "text": "climb above the cloud"},
+        {"id": "d", "text": "descend to low level and continue"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A VFR pilot encountering deteriorating weather must turn back or divert before entering IMC. Continuing into IMC is one of the most common causes of fatal GA accidents. The pilot should: maintain visual reference, turn back to better conditions, divert to a suitable aerodrome, and if necessary declare an emergency.",
+      "topic": "VFR Rules",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_170",
+      "question": "The semi-circular rule for VFR flights uses:-",
+      "options": [
+        {"id": "a", "text": "magnetic track to determine the appropriate cruising level"},
+        {"id": "b", "text": "true track"},
+        {"id": "c", "text": "compass heading"},
+        {"id": "d", "text": "grid track"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The semi-circular (cruising level) rule uses the magnetic track of the aircraft to determine the appropriate flight level. Tracks 000°-179° magnetic use odd thousands plus 500 ft (FL045, FL065, FL075...). Tracks 180°-359° magnetic use even thousands plus 500 ft (FL055, FL075...). This provides vertical separation between opposing traffic.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_171",
+      "question": "For VFR flights, the semi-circular cruising levels for a magnetic track of 090° would include:-",
+      "options": [
+        {"id": "a", "text": "FL045, FL065, FL085, FL105"},
+        {"id": "b", "text": "FL055, FL075, FL095"},
+        {"id": "c", "text": "FL040, FL060, FL080"},
+        {"id": "d", "text": "FL050, FL070, FL090"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Magnetic track 090° is in the range 000-179°, so VFR cruising levels are odd thousands plus 500 ft: FL045 (4500 ft), FL065 (6500 ft), FL085 (8500 ft), FL105 (10500 ft), etc. IFR flights on the same track range use odd thousands: FL050, FL070, FL090, etc.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_172",
+      "question": "For VFR flights, the semi-circular cruising levels for a magnetic track of 270° would include:-",
+      "options": [
+        {"id": "a", "text": "FL055, FL075, FL095, FL115"},
+        {"id": "b", "text": "FL045, FL065, FL085"},
+        {"id": "c", "text": "FL050, FL070, FL090"},
+        {"id": "d", "text": "FL040, FL060, FL080"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Magnetic track 270° is in the range 180-359°, so VFR cruising levels are even thousands plus 500 ft: FL055 (5500 ft), FL075 (7500 ft), FL095 (9500 ft), FL115 (11500 ft), etc. IFR flights on the same track range use even thousands: FL060, FL080, FL100, etc.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_173",
+      "question": "An aircraft on a VFR flight entering controlled airspace must:-",
+      "options": [
+        {"id": "a", "text": "obtain ATC clearance before entering"},
+        {"id": "b", "text": "simply monitor the frequency"},
+        {"id": "c", "text": "squawk 7700"},
+        {"id": "d", "text": "file a flight plan after landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A VFR flight must obtain ATC clearance before entering controlled airspace. The pilot must contact ATC, state their intentions, and receive a clearance (which may include specific routing, altitude, and transponder code). Entering controlled airspace without clearance is a serious violation.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_174",
+      "question": "A readback of an ATC clearance is required for:-",
+      "options": [
+        {"id": "a", "text": "all route clearances, level instructions, heading instructions, speed instructions, and runway assignments"},
+        {"id": "b", "text": "only take-off clearances"},
+        {"id": "c", "text": "only landing clearances"},
+        {"id": "d", "text": "weather information only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pilots must read back: route clearances, level (altitude/flight level) instructions, heading instructions, speed instructions, SSR codes, altimeter settings, runway in use, and any clearance to enter, land on, take off from, hold short of, cross, or backtrack on any runway. This ensures the pilot has correctly received the instruction.",
+      "topic": "ATC Procedures",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_175",
+      "question": "The phrase 'WILCO' in radio communications means:-",
+      "options": [
+        {"id": "a", "text": "I understand your message and will comply"},
+        {"id": "b", "text": "I understand your message"},
+        {"id": "c", "text": "say again"},
+        {"id": "d", "text": "I am ready for departure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "WILCO means 'I have received your message, understand it, and will comply with it.' It should not be used for instructions that require a readback. ROGER means 'I have received your message' (acknowledgement only, not compliance). AFFIRM means 'yes.' NEGATIVE means 'no.'",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_176",
+      "question": "The phrase 'ROGER' in radio communications means:-",
+      "options": [
+        {"id": "a", "text": "I have received all of your last transmission"},
+        {"id": "b", "text": "I will comply with your instruction"},
+        {"id": "c", "text": "yes"},
+        {"id": "d", "text": "request approved"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ROGER means 'I have received all of your last transmission.' It is an acknowledgement only — it does NOT mean the pilot will comply. WILCO means 'I will comply.' ROGER and WILCO should never be used together. ROGER should not be used for instructions requiring a readback.",
+      "topic": "ATC Procedures",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_177",
+      "question": "QNH is the altimeter setting that causes the altimeter to read:-",
+      "options": [
+        {"id": "a", "text": "altitude above mean sea level"},
+        {"id": "b", "text": "height above the aerodrome"},
+        {"id": "c", "text": "flight level"},
+        {"id": "d", "text": "height above ground level"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QNH is the atmospheric pressure at mean sea level. When set on the altimeter subscale, the altimeter reads altitude above mean sea level (AMSL). QNH is used for flights below the transition altitude. On the ground at an aerodrome, the altimeter should read the aerodrome elevation when QNH is set.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_178",
+      "question": "QFE is the altimeter setting that causes the altimeter to read:-",
+      "options": [
+        {"id": "a", "text": "height above the aerodrome elevation (zero on the ground)"},
+        {"id": "b", "text": "altitude above mean sea level"},
+        {"id": "c", "text": "flight level"},
+        {"id": "d", "text": "pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QFE is the atmospheric pressure at the aerodrome elevation. When set on the altimeter subscale, the altimeter reads height above the aerodrome (zero on the ground at that aerodrome). QFE is useful in the circuit for maintaining accurate circuit height. It is less commonly used than QNH in South Africa.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_179",
+      "question": "The transition altitude in South Africa is:-",
+      "options": [
+        {"id": "a", "text": "the altitude at or below which vertical position is expressed as altitude (QNH), published for each area"},
+        {"id": "b", "text": "always FL100"},
+        {"id": "c", "text": "always 5000 ft"},
+        {"id": "d", "text": "the same as the transition level"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The transition altitude is the altitude at or below which the vertical position of an aircraft is expressed as altitude (using QNH). Above the transition level, vertical position is expressed as flight levels (using standard pressure 1013.25 hPa). The transition altitude varies by area and is published in the AIP.",
+      "topic": "Rules of the Air",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_180",
+      "question": "When flying at a flight level, the altimeter is set to:-",
+      "options": [
+        {"id": "a", "text": "1013.25 hPa (standard pressure)"},
+        {"id": "b", "text": "QNH"},
+        {"id": "c", "text": "QFE"},
+        {"id": "d", "text": "the aerodrome pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When flying at a flight level (above the transition altitude), the altimeter is set to the standard pressure setting of 1013.25 hPa (29.92 inHg). This ensures all aircraft at flight levels are using the same reference, providing consistent vertical separation regardless of local pressure variations.",
+      "topic": "Rules of the Air",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_181",
+      "question": "For VFR flight at night in uncontrolled airspace, the minimum visibility required is:-",
+      "options": [
+        {"id": "a", "text": "5 km"},
+        {"id": "b", "text": "3 km"},
+        {"id": "c", "text": "8 km"},
+        {"id": "d", "text": "10 km"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For VFR night flight in uncontrolled airspace, the minimum visibility is 5 km. The pilot must also maintain the prescribed distance from cloud (1500 m horizontally, 1000 ft vertically above 3000 ft AMSL). Night VFR requires a night rating and additional equipment.",
+      "topic": "VFR Rules",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_182",
+      "question": "Class C airspace in South Africa is:-",
+      "options": [
+        {"id": "a", "text": "controlled airspace where both IFR and VFR flights are permitted, and ATC provides separation between all flights"},
+        {"id": "b", "text": "uncontrolled airspace"},
+        {"id": "c", "text": "prohibited airspace"},
+        {"id": "d", "text": "advisory airspace only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class C is controlled airspace where IFR and VFR flights are permitted. ATC provides separation between IFR/IFR, IFR/VFR, and VFR/VFR flights. ATC clearance is required. Speed limit of 250 kt below FL100 applies. Two-way radio communication and transponder are required.",
+      "topic": "Airspace",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_183",
+      "question": "Class D airspace in South Africa is:-",
+      "options": [
+        {"id": "a", "text": "controlled airspace where IFR and VFR flights are permitted; ATC provides separation between IFR flights and traffic information to VFR flights"},
+        {"id": "b", "text": "uncontrolled airspace"},
+        {"id": "c", "text": "the same as Class C"},
+        {"id": "d", "text": "prohibited airspace"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Class D is controlled airspace where IFR and VFR flights are permitted with ATC clearance. ATC provides separation between IFR flights and traffic information between IFR and VFR, and between VFR flights. VFR flights are responsible for their own separation from other VFR traffic based on the information provided.",
+      "topic": "Airspace",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_184",
+      "question": "Third party liability insurance for an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "compulsory — the aircraft may not be flown without valid insurance"},
+        {"id": "b", "text": "optional"},
+        {"id": "c", "text": "only required for commercial operations"},
+        {"id": "d", "text": "only required for international flights"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Third party liability insurance is compulsory for all aircraft. The aircraft may not be flown without valid insurance covering liability for damage to third parties on the ground and in the air. The insurance certificate must be carried on board the aircraft.",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_185",
+      "question": "The pilot-in-command has the final authority regarding the operation of the aircraft. This means:-",
+      "options": [
+        {"id": "a", "text": "the PIC may refuse to fly or may deviate from any instruction if safety requires it"},
+        {"id": "b", "text": "the PIC must always follow ATC instructions"},
+        {"id": "c", "text": "the PIC must always follow the operator's instructions"},
+        {"id": "d", "text": "the PIC has no authority over passengers"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PIC has final authority and responsibility for the operation of the aircraft. This means the PIC may refuse to fly if they consider the flight unsafe, may deviate from any rule or ATC instruction in an emergency, and has authority over all persons on board. This authority comes with corresponding responsibility.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_186",
+      "question": "A pilot who has been prescribed medication must:-",
+      "options": [
+        {"id": "a", "text": "not fly unless the medication has been approved by a designated aviation medical examiner"},
+        {"id": "b", "text": "fly normally if they feel fine"},
+        {"id": "c", "text": "only avoid flying for 24 hours after taking medication"},
+        {"id": "d", "text": "inform passengers only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A pilot must not fly while taking any medication unless it has been specifically approved by a designated aviation medical examiner (DAME). Many common medications (antihistamines, sedatives, some antibiotics) have side effects that can impair flying ability. When in doubt, consult the DAME before flying.",
+      "topic": "Medical",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_187",
+      "question": "The minimum time between consuming alcohol and acting as a flight crew member is:-",
+      "options": [
+        {"id": "a", "text": "8 hours"},
+        {"id": "b", "text": "4 hours"},
+        {"id": "c", "text": "12 hours"},
+        {"id": "d", "text": "24 hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The '8 hours bottle to throttle' rule requires at least 8 hours between consuming alcohol and acting as a flight crew member. However, even after 8 hours, if the blood alcohol level exceeds 0.02% or the pilot is still impaired, they must not fly. The effects of alcohol can persist well beyond 8 hours.",
+      "topic": "Medical",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_188",
+      "question": "Scuba diving before flying is dangerous because:-",
+      "options": [
+        {"id": "a", "text": "dissolved nitrogen in the blood can form bubbles at altitude, causing decompression sickness"},
+        {"id": "b", "text": "it causes fatigue only"},
+        {"id": "c", "text": "it affects hearing only"},
+        {"id": "d", "text": "it has no effect on flying"}
+      ],
+      "correct_answer": "a",
+      "explanation": "After scuba diving, dissolved nitrogen remains in the blood and tissues. At altitude (reduced pressure), this nitrogen can form bubbles causing decompression sickness ('the bends'). The recommended waiting time is at least 12 hours after non-decompression diving and 24 hours after decompression diving before flying.",
+      "topic": "Medical",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_189",
+      "question": "The VFR weather minima below 1500 ft AGL in uncontrolled airspace by day require:-",
+      "options": [
+        {"id": "a", "text": "clear of cloud, in sight of the surface, and flight visibility of at least 5 km"},
+        {"id": "b", "text": "5 km visibility and 1000 ft vertical from cloud"},
+        {"id": "c", "text": "8 km visibility and 2000 ft horizontal from cloud"},
+        {"id": "d", "text": "3 km visibility, clear of cloud"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Below 1500 ft AGL in uncontrolled airspace by day, VFR weather minima are: clear of cloud, in sight of the surface, and flight visibility of at least 5 km. These are less restrictive than above 1500 ft AGL (where specific cloud clearance distances apply) because at low level, terrain avoidance is the primary concern.",
+      "topic": "VFR Rules",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_190",
+      "question": "An AIC (Aeronautical Information Circular) contains:-",
+      "options": [
+        {"id": "a", "text": "information of an explanatory or advisory nature that does not qualify for inclusion in the AIP or NOTAMs"},
+        {"id": "b", "text": "only emergency information"},
+        {"id": "c", "text": "only weather forecasts"},
+        {"id": "d", "text": "only airspace changes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An AIC contains information that is explanatory or advisory in nature, such as: changes to regulations, new procedures, safety recommendations, and administrative information. AICs do not qualify for inclusion in the AIP (which contains permanent information) or NOTAMs (which contain time-critical information).",
+      "topic": "Documentation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_191",
+      "question": "An AIP Supplement (AIP SUP) is used to publish:-",
+      "options": [
+        {"id": "a", "text": "temporary changes of long duration or permanent changes of short duration that contain extensive text and/or graphics"},
+        {"id": "b", "text": "only permanent changes"},
+        {"id": "c", "text": "only emergency information"},
+        {"id": "d", "text": "only weather information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AIP Supplements are used for temporary changes of long duration (3 months or more) or permanent changes involving extensive text/graphics that cannot be easily incorporated into the AIP by amendment. Examples include: temporary airspace restrictions for major events, extended runway closures, or new procedures being trialled.",
+      "topic": "Documentation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_192",
+      "question": "The pilot-in-command must ensure that all passengers are seated with seat belts fastened during:-",
+      "options": [
+        {"id": "a", "text": "take-off, landing, and whenever the PIC considers it necessary for safety"},
+        {"id": "b", "text": "the entire flight without exception"},
+        {"id": "c", "text": "only during turbulence"},
+        {"id": "d", "text": "only when ATC instructs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Passengers must be seated with seat belts fastened during take-off, landing, and whenever the PIC directs. The PIC has discretion to require seat belts at any time during the flight for safety reasons (e.g., turbulence, low-level flight). It is good practice to keep seat belts loosely fastened throughout the flight.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_193",
+      "question": "A pilot who is involved in an enforcement action by the SACAA has the right to:-",
+      "options": [
+        {"id": "a", "text": "appeal the decision through the prescribed legal process"},
+        {"id": "b", "text": "no recourse"},
+        {"id": "c", "text": "ignore the enforcement action"},
+        {"id": "d", "text": "continue flying pending appeal in all cases"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A pilot subject to enforcement action has the right to appeal through the prescribed legal process. The Civil Aviation Act provides for administrative review and appeal procedures. However, if a licence is suspended on safety grounds, the suspension typically takes effect immediately pending the outcome of the appeal.",
+      "topic": "Licensing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_194",
+      "question": "The green flashes from the control tower to an aircraft in flight means:-",
+      "options": [
+        {"id": "a", "text": "return for landing (you are cleared to rejoin the circuit)"},
+        {"id": "b", "text": "cleared to land"},
+        {"id": "c", "text": "aerodrome unsafe"},
+        {"id": "d", "text": "give way and continue circling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Green flashes to an aircraft in flight mean 'return for landing' — the aircraft should rejoin the circuit and prepare to land. This is different from a steady green (cleared to land) and is used to recall aircraft that may have departed the circuit area or to indicate the aircraft should prepare for an approach.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_195",
+      "question": "A white cross displayed on a runway or taxiway indicates:-",
+      "options": [
+        {"id": "a", "text": "the runway or taxiway is closed and unfit for aircraft movement"},
+        {"id": "b", "text": "the runway is available for landing"},
+        {"id": "c", "text": "right-hand circuits are in use"},
+        {"id": "d", "text": "gliding operations in progress"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A white cross displayed on a runway or taxiway indicates that it is closed and unfit for aircraft movement. Aircraft must not use a closed runway or taxiway. The cross may be displayed as a physical marker or painted on the surface.",
+      "topic": "Signals",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_196",
+      "question": "The signal area at an aerodrome is:-",
+      "options": [
+        {"id": "a", "text": "a designated area where ground signals are displayed to provide information to pilots"},
+        {"id": "b", "text": "the parking area"},
+        {"id": "c", "text": "the fuel depot"},
+        {"id": "d", "text": "the control tower"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The signal area is a designated area on the aerodrome (usually near the control tower or in a prominent position) where ground signals are displayed. These include: landing direction indicator (T), wind direction indicator (windsock), circuit direction arrows, and special signals (X for landing prohibited, dumbbell, etc.).",
+      "topic": "Aerodrome Operations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_197",
+      "question": "A double white cross displayed in the signal area indicates:-",
+      "options": [
+        {"id": "a", "text": "glider flying is taking place at the aerodrome"},
+        {"id": "b", "text": "the aerodrome is closed"},
+        {"id": "c", "text": "helicopter operations only"},
+        {"id": "d", "text": "military operations in progress"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A double white cross in the signal area indicates that glider flying is taking place. Pilots should exercise extra caution as gliders may be operating in the circuit, on tow, or thermalling near the aerodrome. Gliders have right of way over powered aircraft.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_198",
+      "question": "A red L-shaped marker displayed in the signal area indicates:-",
+      "options": [
+        {"id": "a", "text": "the direction in which right-hand circuits are to be made"},
+        {"id": "b", "text": "the runway is closed"},
+        {"id": "c", "text": "landing is prohibited"},
+        {"id": "d", "text": "the wind direction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A red L-shaped marker (or arrow) in the signal area indicates the direction of right-hand circuits for the associated runway. The arm of the L points in the direction of the right-hand turn. If no such marker is displayed, standard left-hand circuits apply.",
+      "topic": "Signals",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_199",
+      "question": "The pilot-in-command of an aircraft shall not commence a flight unless satisfied that the aircraft has sufficient fuel to:-",
+      "options": [
+        {"id": "a", "text": "complete the planned flight safely with the required reserves"},
+        {"id": "b", "text": "reach the destination only"},
+        {"id": "c", "text": "fly for 30 minutes"},
+        {"id": "d", "text": "reach the nearest aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PIC must ensure sufficient fuel is on board to complete the planned flight safely with the required reserves (45 minutes for VFR day/night). The fuel calculation must account for: taxi, climb, cruise, descent, approach, and reserves. Headwinds, diversions, and contingencies must be considered.",
+      "topic": "Rules of the Air",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "law_200",
+      "question": "The IMSAFE checklist used by pilots before flight stands for:-",
+      "options": [
+        {"id": "a", "text": "Illness, Medication, Stress, Alcohol, Fatigue, Eating/Emotion"},
+        {"id": "b", "text": "Instruments, Maps, Speed, Altitude, Fuel, Engine"},
+        {"id": "c", "text": "Ice, Meteorology, Safety, Airspace, Flight plan, Equipment"},
+        {"id": "d", "text": "Inspection, Maintenance, Systems, Avionics, Fuel, Electrical"}
+      ],
+      "correct_answer": "a",
+      "explanation": "IMSAFE is a personal fitness checklist: Illness (am I sick?), Medication (am I taking any?), Stress (am I under excessive stress?), Alcohol (have I consumed alcohol in the last 8 hours?), Fatigue (am I adequately rested?), Eating/Emotion (have I eaten properly? Am I emotionally fit?). A 'yes' to any may mean the pilot should not fly.",
+      "topic": "Medical",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

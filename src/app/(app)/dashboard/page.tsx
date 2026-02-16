@@ -24,6 +24,7 @@ import {
   ListChecks,
   AlertTriangle,
   Crown,
+  ChevronRight,
 } from "lucide-react";
 import { toast } from "sonner";
 import { OnboardingModal, hasCompletedOnboarding, markOnboardingComplete } from "@/components/onboarding-modal";
@@ -324,6 +325,21 @@ export default function DashboardPage() {
           </p>
         </div>
       </div>
+
+      {/* Question Bank Link */}
+      <button
+        onClick={() => router.push("/question-bank")}
+        className="w-full group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 border border-primary/10 hover:border-primary/25 transition-all active:scale-[0.99]"
+      >
+        <div className="p-2.5 rounded-lg bg-primary/10 group-hover:bg-primary/15 transition-colors">
+          <BookOpen className="h-5 w-5 text-primary" />
+        </div>
+        <div className="flex-1 text-left">
+          <p className="text-sm font-semibold">SACAA Question Bank</p>
+          <p className="text-xs text-muted-foreground">Practice with 1,700+ exam questions across all PPL subjects</p>
+        </div>
+        <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
+      </button>
 
       {/* Over-limit warnings */}
       {!isCaptainsClub && isOverStorageLimit && (

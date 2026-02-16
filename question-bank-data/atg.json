@@ -1,0 +1,3209 @@
+{
+  "subject": "Aircraft Technical & General",
+  "subject_code": "ATG",
+  "licence": "PPL(A)",
+  "total_questions": 200,
+  "last_updated": "2026-02-15",
+  "questions": [
+    {
+      "id": "atg_001",
+      "question": "The primary purpose of cowl flaps is to:-",
+      "options": [
+        {"id": "a", "text": "control the flow of air over the engine cylinders to maintain the correct operating temperature"},
+        {"id": "b", "text": "increase the engine power output"},
+        {"id": "c", "text": "reduce drag during cruise flight"},
+        {"id": "d", "text": "direct air into the carburettor intake"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cowl flaps are adjustable panels on the engine cowling that control the amount of cooling air flowing over the engine cylinders. Opening them increases airflow for cooling (used during climb); closing them reduces cooling airflow and drag (used during cruise).",
+      "topic": "Engine Cooling",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_002",
+      "question": "The cylinder head temperature gauge usually obtains its reading from:-",
+      "options": [
+        {"id": "a", "text": "a cylinder which tests show runs the hottest"},
+        {"id": "b", "text": "an average of all cylinders"},
+        {"id": "c", "text": "the cylinder closest to the exhaust"},
+        {"id": "d", "text": "the cylinder closest to the carburettor"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The CHT gauge sensor is placed on the cylinder that testing has shown runs the hottest during normal operation. This ensures the pilot is monitoring the worst-case temperature. If this cylinder is within limits, all others should be as well.",
+      "topic": "Engine Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_003",
+      "question": "Engine cylinder barrels and heads are usually fitted with fins in order to:-",
+      "options": [
+        {"id": "a", "text": "improve engine cooling"},
+        {"id": "b", "text": "increase engine power"},
+        {"id": "c", "text": "reduce engine weight"},
+        {"id": "d", "text": "improve fuel efficiency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cooling fins increase the surface area of the cylinder barrels and heads, allowing more heat to be transferred to the cooling air flowing over them. This is essential for air-cooled engines used in most light aircraft.",
+      "topic": "Engine Cooling",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_004",
+      "question": "The most likely cause of the over-extension of an oleo in an undercarriage leg is:-",
+      "options": [
+        {"id": "a", "text": "high air pressure"},
+        {"id": "b", "text": "excessive hydraulic fluid and low air pressure"},
+        {"id": "c", "text": "low hydraulic fluid"},
+        {"id": "d", "text": "worn seals"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An oleo strut uses compressed air (or nitrogen) and hydraulic fluid to absorb landing loads. Over-extension occurs when the air pressure is too high, pushing the strut further out than normal. Excessive fluid with low air pressure would cause under-extension.",
+      "topic": "Undercarriage",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_005",
+      "question": "An over-inflated tyre may result in:-",
+      "options": [
+        {"id": "a", "text": "excessive tread wear in the centre of the tyre"},
+        {"id": "b", "text": "excessive tread wear on the edges of the tyre"},
+        {"id": "c", "text": "improved braking performance"},
+        {"id": "d", "text": "reduced landing distance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An over-inflated tyre bulges in the centre, causing the centre of the tread to bear most of the load and wear faster. An under-inflated tyre sags, causing the edges to wear faster. Correct inflation ensures even tread wear across the full width.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_006",
+      "question": "The purpose of a torque link on a nosewheel shock strut assembly is to:-",
+      "options": [
+        {"id": "a", "text": "keep the nosewheel correctly aligned with the airframe"},
+        {"id": "b", "text": "absorb landing loads"},
+        {"id": "c", "text": "prevent shimmy"},
+        {"id": "d", "text": "limit the extension of the oleo strut"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Torque links (also called scissors links) connect the upper and lower parts of the oleo strut. They allow the strut to compress and extend while preventing the lower part (and wheel) from rotating relative to the upper part, keeping the nosewheel aligned with the aircraft.",
+      "topic": "Undercarriage",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_007",
+      "question": "A semi-monocoque fuselage design is one in which:-",
+      "options": [
+        {"id": "a", "text": "the shape and rigidity is provided by formers and stringers whilst the stressed skin carries part of the load"},
+        {"id": "b", "text": "aluminium tubing creates the shape whilst the stressed skin carries all the load"},
+        {"id": "c", "text": "the skin carries all structural loads without internal framework"},
+        {"id": "d", "text": "a truss framework carries all loads and the skin is non-structural"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A semi-monocoque structure uses formers (frames) to give the fuselage its shape, stringers (longitudinal members) for stiffness, and a stressed skin that carries a significant portion of the structural loads. This is the most common fuselage construction in modern light aircraft.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_008",
+      "question": "The most important structural component of a wing:-",
+      "options": [
+        {"id": "a", "text": "is the main spar"},
+        {"id": "b", "text": "are the ribs"},
+        {"id": "c", "text": "is the skin"},
+        {"id": "d", "text": "are the stringers"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The main spar is the primary load-bearing member of the wing. It runs spanwise and carries the bending loads created by lift. Ribs give the wing its aerofoil shape, and the skin (in stressed-skin construction) carries some torsional and shear loads.",
+      "topic": "Airframe Structure",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_009",
+      "question": "The part of a wing to which the ailerons and flaps are usually attached is the:-",
+      "options": [
+        {"id": "a", "text": "rear or auxiliary spar"},
+        {"id": "b", "text": "main spar"},
+        {"id": "c", "text": "leading edge"},
+        {"id": "d", "text": "wing root fitting"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ailerons and flaps are hinged to the rear (auxiliary) spar of the wing. The rear spar provides the structural attachment point for these trailing edge control surfaces and carries the hinge loads.",
+      "topic": "Airframe Structure",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_010",
+      "question": "Tyre creep may cause:-",
+      "options": [
+        {"id": "a", "text": "the inflation valve to break away from the inner tube"},
+        {"id": "b", "text": "increased tyre pressure"},
+        {"id": "c", "text": "improved braking"},
+        {"id": "d", "text": "reduced tyre wear"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Tyre creep is the movement of the tyre on the wheel rim, usually caused by braking forces during landing. If the tyre slips on the rim, it can pull the inflation valve stem, potentially tearing it from the inner tube and causing rapid deflation. Creep marks on the tyre and rim are checked during pre-flight.",
+      "topic": "Undercarriage",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_011",
+      "question": "A shimmy in the nosewheel whilst taxying indicates that:-",
+      "options": [
+        {"id": "a", "text": "the torque links are worn or have failed"},
+        {"id": "b", "text": "the nosewheel tyre pressure is too low"},
+        {"id": "c", "text": "the nosewheel wheel is out of balance"},
+        {"id": "d", "text": "the brakes are binding"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Nosewheel shimmy (rapid side-to-side oscillation) is most commonly caused by worn or failed torque links, which normally prevent the wheel from oscillating. Other causes include worn shimmy damper, incorrect tyre pressure, or wheel imbalance, but worn torque links are the primary cause.",
+      "topic": "Undercarriage",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_012",
+      "question": "A fuselage which is constructed to allow the skin to take some of the load is:-",
+      "options": [
+        {"id": "a", "text": "a semi-monocoque structure"},
+        {"id": "b", "text": "a truss structure"},
+        {"id": "c", "text": "a geodetic structure"},
+        {"id": "d", "text": "a composite structure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a semi-monocoque structure, the skin is 'stressed' — it carries a portion of the structural loads (particularly torsion and shear) in addition to the internal framework of formers and stringers. In a pure truss structure, the skin is non-structural.",
+      "topic": "Airframe Structure",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_013",
+      "question": "The most likely cause of the under-extension of an oleo in an undercarriage leg is:-",
+      "options": [
+        {"id": "a", "text": "low air pressure"},
+        {"id": "b", "text": "high air pressure"},
+        {"id": "c", "text": "excessive hydraulic fluid"},
+        {"id": "d", "text": "worn seals allowing air to escape"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Under-extension of an oleo strut occurs when the air (or nitrogen) pressure is too low. The compressed gas is what extends the strut; insufficient pressure means the strut cannot fully extend. This is checked during pre-flight by observing the visible chrome portion of the strut.",
+      "topic": "Undercarriage",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_014",
+      "question": "Tyre creep may be expected to occur:-",
+      "options": [
+        {"id": "a", "text": "during the normal landing"},
+        {"id": "b", "text": "during taxying only"},
+        {"id": "c", "text": "during take-off only"},
+        {"id": "d", "text": "only when brakes are applied harshly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Tyre creep occurs during normal landing when the stationary tyre contacts the runway and is suddenly spun up to ground speed. The friction force between the tyre and runway can cause the tyre to slip on the rim. Heavy braking can also contribute.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_015",
+      "question": "In a Truss, or Girder-type fuselage the main structural component is a:-",
+      "options": [
+        {"id": "a", "text": "longeron"},
+        {"id": "b", "text": "former"},
+        {"id": "c", "text": "stringer"},
+        {"id": "d", "text": "bulkhead"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a truss (girder) fuselage, longerons are the main longitudinal members that carry the primary loads. They run the length of the fuselage and are connected by cross-bracing (struts and wires) to form a rigid framework. The skin in a truss structure is typically non-structural fabric or light sheet metal.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_016",
+      "question": "The timing of the ignition of the fuel and air mixture in an internal combustion engine is arranged to occur:-",
+      "options": [
+        {"id": "a", "text": "between 20° and 25° before TDC during the compression stroke"},
+        {"id": "b", "text": "at TDC during the compression stroke"},
+        {"id": "c", "text": "after TDC during the power stroke"},
+        {"id": "d", "text": "at BDC during the induction stroke"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ignition occurs before TDC (top dead centre) to allow time for the flame front to develop and reach maximum pressure just after TDC, when the piston begins the power stroke. This advance timing (20-25° BTDC) ensures maximum power is extracted from the combustion event.",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_017",
+      "question": "A condition which may occur in only one cylinder of an engine as a result of too lean a mixture is:-",
+      "options": [
+        {"id": "a", "text": "pre-ignition"},
+        {"id": "b", "text": "detonation"},
+        {"id": "c", "text": "backfiring"},
+        {"id": "d", "text": "hydraulic lock"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pre-ignition is the ignition of the fuel/air mixture by a hot spot (such as an overheated exhaust valve or carbon deposit) before the spark plug fires. A lean mixture burns hotter, creating hot spots. It can occur in individual cylinders because mixture distribution is not perfectly even across all cylinders.",
+      "topic": "Engine Operation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_018",
+      "question": "Valve overlap in the four stroke engine will occur between the:-",
+      "options": [
+        {"id": "a", "text": "exhaust and induction strokes"},
+        {"id": "b", "text": "compression and power strokes"},
+        {"id": "c", "text": "power and exhaust strokes"},
+        {"id": "d", "text": "induction and compression strokes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Valve overlap is the brief period when both the exhaust valve (closing) and the inlet valve (opening) are open simultaneously. This occurs at the transition between the exhaust and induction strokes (near TDC). It helps scavenge remaining exhaust gases and improves cylinder filling.",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_019",
+      "question": "In a piston engine, the piston will have passed BDC and be moving towards TDC during:-",
+      "options": [
+        {"id": "a", "text": "the compression and exhaust strokes"},
+        {"id": "b", "text": "the compression and power strokes"},
+        {"id": "c", "text": "the induction and compression strokes"},
+        {"id": "d", "text": "the power and exhaust strokes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The four strokes are: Induction (TDC→BDC), Compression (BDC→TDC), Power (TDC→BDC), Exhaust (BDC→TDC). The piston moves from BDC toward TDC during the compression stroke (compressing the mixture) and the exhaust stroke (expelling burnt gases).",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_020",
+      "question": "The type of pump utilised in a piston engine to provide high pressure oil lubrication is a:-",
+      "options": [
+        {"id": "a", "text": "gear type pump"},
+        {"id": "b", "text": "centrifugal pump"},
+        {"id": "c", "text": "diaphragm pump"},
+        {"id": "d", "text": "piston pump"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A gear-type pump uses two meshing gears to trap and pressurize oil. It is the standard type used in aircraft piston engines for the pressure lubrication system because it provides a reliable, consistent flow of oil at the required pressure.",
+      "topic": "Lubrication System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_021",
+      "question": "Lubrication of the main bearings and crankshaft of the engine is provided:-",
+      "options": [
+        {"id": "a", "text": "by both high pressure oil and splash lubrication"},
+        {"id": "b", "text": "by splash lubrication only"},
+        {"id": "c", "text": "by high pressure oil only"},
+        {"id": "d", "text": "by grease packing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Main bearings and the crankshaft receive oil under pressure from the gear pump through drilled passages. Additionally, splash lubrication occurs as the crankshaft and connecting rods dip into or throw oil around the crankcase, lubricating cylinder walls and other components.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_022",
+      "question": "Dry sump piston engine lubrication systems make use of a scavenge pump to:-",
+      "options": [
+        {"id": "a", "text": "pump oil from the sump back to the oil tank"},
+        {"id": "b", "text": "pump oil from the tank to the engine"},
+        {"id": "c", "text": "maintain oil pressure"},
+        {"id": "d", "text": "filter the oil before it reaches the engine"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a dry sump system, oil is stored in a separate tank rather than in the engine sump. The scavenge pump (which has a greater capacity than the pressure pump) continuously removes oil from the sump and returns it to the external tank, keeping the sump 'dry'.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_023",
+      "question": "In a wet sump piston engine lubrication system:-",
+      "options": [
+        {"id": "a", "text": "oil is stored in the engine sump and distributed by a pressure pump"},
+        {"id": "b", "text": "oil is stored in an external tank"},
+        {"id": "c", "text": "oil is distributed by gravity only"},
+        {"id": "d", "text": "a scavenge pump returns oil to an external reservoir"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a wet sump system, the oil reservoir is the engine sump (bottom of the crankcase). A gear-type pressure pump draws oil from the sump and distributes it under pressure to the engine components. This is simpler and lighter than a dry sump system.",
+      "topic": "Lubrication System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_024",
+      "question": "A high oil temperature coupled with low oil pressure:-",
+      "options": [
+        {"id": "a", "text": "are an indication of low oil supply"},
+        {"id": "b", "text": "is normal during cruise flight"},
+        {"id": "c", "text": "indicates the oil cooler is blocked"},
+        {"id": "d", "text": "indicates the oil is too thick"}
+      ],
+      "correct_answer": "a",
+      "explanation": "High oil temperature with low oil pressure is a serious warning indicating insufficient oil in the system. Low oil quantity means less oil to absorb and dissipate heat (temperature rises) and less oil for the pump to pressurize (pressure drops). This requires immediate action — reduce power and land as soon as practicable.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_025",
+      "question": "The purpose of the pressure relief valve in a lubrication system is to:-",
+      "options": [
+        {"id": "a", "text": "maintain a constant oil pressure over a range of engine power changes"},
+        {"id": "b", "text": "control the pressure of oil between the pump and filter"},
+        {"id": "c", "text": "prevent oil from flowing backwards"},
+        {"id": "d", "text": "regulate oil temperature"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pressure relief valve opens when oil pressure exceeds a set value, bypassing excess oil back to the sump or inlet side of the pump. This maintains a relatively constant oil pressure regardless of engine RPM changes, protecting the system from excessive pressure.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_026",
+      "question": "The temperature of the oil in a wet sump lubrication system is usually measured:-",
+      "options": [
+        {"id": "a", "text": "after leaving the oil cooler"},
+        {"id": "b", "text": "before entering the oil cooler"},
+        {"id": "c", "text": "in the sump"},
+        {"id": "d", "text": "at the pressure pump outlet"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Oil temperature is measured after the oil cooler so the pilot can monitor the temperature of the oil actually being delivered to the engine components. This gives the most useful indication of the oil's ability to provide adequate lubrication.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_027",
+      "question": "The function of the distributor in a magneto is to:-",
+      "options": [
+        {"id": "a", "text": "provide high voltage to the spark plugs in the correct firing order"},
+        {"id": "b", "text": "generate the initial electrical current"},
+        {"id": "c", "text": "time the ignition spark"},
+        {"id": "d", "text": "regulate the voltage output"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The distributor in a magneto directs the high voltage pulse from the secondary winding to the correct spark plug in the proper firing sequence. It is a rotating contact that connects to each spark plug lead in turn as the engine rotates.",
+      "topic": "Ignition System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_028",
+      "question": "The purpose of baffles in an aircraft's fuel tank is to:-",
+      "options": [
+        {"id": "a", "text": "prevent the fuel from surging about during flight"},
+        {"id": "b", "text": "filter impurities from the fuel"},
+        {"id": "c", "text": "separate water from the fuel"},
+        {"id": "d", "text": "increase the fuel capacity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Baffles are internal partitions within the fuel tank that restrict the movement of fuel during manoeuvres, turbulence, and attitude changes. Without baffles, fuel surging could cause sudden CG shifts, unporting of the fuel pickup, and structural loads on the tank walls.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_029",
+      "question": "The purpose of an impulse coupling in a magneto is to:-",
+      "options": [
+        {"id": "a", "text": "produce a strong retarded spark for easier engine starting"},
+        {"id": "b", "text": "increase the magneto output during cruise"},
+        {"id": "c", "text": "prevent the engine from running backwards"},
+        {"id": "d", "text": "synchronise the two magnetos"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An impulse coupling is a spring-loaded mechanism fitted to one magneto (usually the left). During starting, it momentarily holds and then releases the magneto, spinning it rapidly to produce a strong spark. It also retards the timing to prevent kickback during hand-propping or starter engagement.",
+      "topic": "Ignition System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_030",
+      "question": "The electrical current produced by a magneto:-",
+      "options": [
+        {"id": "a", "text": "is created by a rotating magnet"},
+        {"id": "b", "text": "is supplied by the aircraft battery"},
+        {"id": "c", "text": "requires an external power source"},
+        {"id": "d", "text": "is generated by a commutator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A magneto is a self-contained ignition system that generates its own electrical current using a rotating permanent magnet. This is why the engine can continue to run even with the battery and master switch off — the magneto is independent of the aircraft electrical system.",
+      "topic": "Ignition System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_031",
+      "question": "If the earth wire from a magneto to the aircraft structure is broken:-",
+      "options": [
+        {"id": "a", "text": "the engine will continue to run with the magneto switch in the off position"},
+        {"id": "b", "text": "the engine will stop immediately"},
+        {"id": "c", "text": "the magneto will produce a weaker spark"},
+        {"id": "d", "text": "only one cylinder will fire"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The magneto switch works by grounding (earthing) the magneto to stop it. If the earth wire is broken, the magneto cannot be grounded and will continue to produce sparks regardless of switch position. This is a serious safety hazard — the propeller should always be treated as live.",
+      "topic": "Ignition System",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_032",
+      "question": "The fuel supply line from the fuel tank to the engine normally:-",
+      "options": [
+        {"id": "a", "text": "draws fuel from a position higher than the sump drain to allow impurities to settle"},
+        {"id": "b", "text": "draws fuel from the very bottom of the tank"},
+        {"id": "c", "text": "draws fuel from the top of the tank"},
+        {"id": "d", "text": "draws fuel from the centre of the tank"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The fuel pickup is positioned slightly above the lowest point (sump) of the tank. Water and other contaminants, being heavier than fuel, settle to the bottom of the sump below the pickup. This prevents contaminated fuel from reaching the engine. The sump drain allows these contaminants to be drained during pre-flight.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_033",
+      "question": "The presence of carburettor icing would be indicated by:-",
+      "options": [
+        {"id": "a", "text": "the engine starting to run rough and a decrease in RPM"},
+        {"id": "b", "text": "an increase in RPM"},
+        {"id": "c", "text": "an increase in oil temperature"},
+        {"id": "d", "text": "a decrease in fuel flow only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Carburettor ice restricts the airflow through the venturi, leaning the mixture and reducing power. In a fixed-pitch propeller aircraft, this shows as a decrease in RPM and rough running. In a CSU-equipped aircraft, it shows as a decrease in manifold pressure with RPM maintained by the CSU.",
+      "topic": "Carburettor",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_034",
+      "question": "When the throttle is opened quickly, the throttle accelerator pump will:-",
+      "options": [
+        {"id": "a", "text": "discharge additional fuel into the venturi"},
+        {"id": "b", "text": "increase the air flow through the carburettor"},
+        {"id": "c", "text": "lean the mixture temporarily"},
+        {"id": "d", "text": "close the mixture control"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The accelerator pump is a mechanical pump linked to the throttle. When the throttle is opened rapidly, it squirts extra fuel into the venturi to prevent a momentary lean condition. Without it, the sudden increase in airflow would temporarily lean the mixture, causing hesitation or backfiring.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_035",
+      "question": "An accelerator pump is often incorporated in a carburettor in order to:-",
+      "options": [
+        {"id": "a", "text": "provide extra fuel when the throttle is opened rapidly"},
+        {"id": "b", "text": "increase the fuel supply during high power operation"},
+        {"id": "c", "text": "maintain a constant mixture ratio"},
+        {"id": "d", "text": "prevent carburettor icing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The accelerator pump provides a brief burst of extra fuel when the throttle is opened quickly. This compensates for the lag in fuel metering — air responds to throttle changes faster than fuel, so without the pump, a rapid throttle opening would cause a momentary lean condition.",
+      "topic": "Carburettor",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_036",
+      "question": "An engine which starts to run rough and then slowly loses power is probably suffering from:-",
+      "options": [
+        {"id": "a", "text": "carburettor icing"},
+        {"id": "b", "text": "a blocked fuel filter"},
+        {"id": "c", "text": "magneto failure"},
+        {"id": "d", "text": "oil starvation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Carburettor icing causes a gradual restriction of airflow. The engine first runs rough as the mixture becomes progressively leaner, then slowly loses power as ice builds up further. Applying carburettor heat should restore power (after an initial further roughness as the ice melts).",
+      "topic": "Carburettor",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_037",
+      "question": "When leaning the fuel/air mixture:-",
+      "options": [
+        {"id": "a", "text": "the ratio of fuel to air is reduced"},
+        {"id": "b", "text": "the ratio of fuel to air is increased"},
+        {"id": "c", "text": "only the air flow is changed"},
+        {"id": "d", "text": "the fuel flow increases"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Leaning reduces the amount of fuel relative to air in the mixture. This is done at altitude where the air is less dense — the carburettor delivers the same amount of fuel but less air mass, making the mixture too rich. Leaning restores the correct fuel-to-air ratio for efficient combustion.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_038",
+      "question": "The application of carburettor heat:-",
+      "options": [
+        {"id": "a", "text": "will richen the mixture because of the higher air temperature"},
+        {"id": "b", "text": "will lean the mixture"},
+        {"id": "c", "text": "has no effect on the mixture"},
+        {"id": "d", "text": "will increase engine power"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Carburettor heat directs warm air (heated by the exhaust manifold) into the carburettor. Warm air is less dense, so less air mass enters the engine while the same amount of fuel is metered. This richens the mixture and causes a slight drop in RPM/power. It also reduces the risk of icing.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_039",
+      "question": "Carburettor icing is most likely to occur:-",
+      "options": [
+        {"id": "a", "text": "at the venturi and butterfly valve"},
+        {"id": "b", "text": "in the fuel lines"},
+        {"id": "c", "text": "at the exhaust manifold"},
+        {"id": "d", "text": "in the combustion chamber"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ice forms at the venturi (where air accelerates and temperature drops due to the Venturi effect) and at the butterfly valve (throttle valve) where fuel evaporation causes further cooling. These two areas can experience temperature drops of 20-30°C, causing ice to form even in ambient temperatures up to +25°C.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_040",
+      "question": "The blade angle of a propeller varies from hub to tip in order to:-",
+      "options": [
+        {"id": "a", "text": "ensure that the thrust produced is approximately constant along the blade"},
+        {"id": "b", "text": "reduce the weight of the propeller"},
+        {"id": "c", "text": "increase the propeller RPM"},
+        {"id": "d", "text": "reduce noise"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The tip of the propeller moves faster than the hub. To maintain a constant angle of attack (and therefore constant thrust) along the blade, the blade angle must be greater at the hub and decrease toward the tip. This twist ensures efficient thrust production across the entire blade.",
+      "topic": "Propeller",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_041",
+      "question": "The correct sequence for increasing power in an aeroplane with a Constant Speed Unit (CSU) is:-",
+      "options": [
+        {"id": "a", "text": "richen the mixture, increase the RPM, then increase the manifold pressure"},
+        {"id": "b", "text": "increase the manifold pressure, increase the RPM, then richen the mixture"},
+        {"id": "c", "text": "increase the RPM, increase the manifold pressure, then richen the mixture"},
+        {"id": "d", "text": "increase the manifold pressure, richen the mixture, then increase the RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When increasing power with a CSU: (1) Richen mixture first to ensure adequate fuel for higher power, (2) Increase RPM (prop lever forward) to handle the increased manifold pressure, (3) Increase manifold pressure (throttle forward). This sequence prevents overboosting. When reducing power, reverse the order.",
+      "topic": "Propeller",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_042",
+      "question": "During take-off in an aeroplane equipped with a Constant Speed Unit (CSU), it would be most beneficial to have:-",
+      "options": [
+        {"id": "a", "text": "a small blade angle"},
+        {"id": "b", "text": "a large blade angle"},
+        {"id": "c", "text": "the blade angle at cruise setting"},
+        {"id": "d", "text": "the propeller feathered"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A small (fine) blade angle allows the engine to develop high RPM and maximum power at low forward speed — ideal for take-off. A large (coarse) blade angle is more efficient at cruise speed. Think of it like low gear in a car for starting, high gear for cruising.",
+      "topic": "Propeller",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_043",
+      "question": "If an aeroplane with a fixed pitch propeller is placed in a shallow dive so that forward speed increases with no change in power setting, the RPM will:-",
+      "options": [
+        {"id": "a", "text": "increase"},
+        {"id": "b", "text": "remain constant"},
+        {"id": "c", "text": "decrease"},
+        {"id": "d", "text": "fluctuate"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With a fixed-pitch propeller, the blade angle cannot change. As forward speed increases in a dive, the angle of attack of the propeller blade decreases, reducing the aerodynamic load on the blade. The engine can spin faster with less resistance, so RPM increases.",
+      "topic": "Propeller",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_044",
+      "question": "After starting an engine, black smoke is seen coming from the exhaust. This indicates:-",
+      "options": [
+        {"id": "a", "text": "that the mixture is too rich"},
+        {"id": "b", "text": "that the mixture is too lean"},
+        {"id": "c", "text": "that the engine is overheating"},
+        {"id": "d", "text": "that the oil is burning"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Black smoke from the exhaust indicates incomplete combustion due to an excessively rich mixture — there is too much fuel for the available air. This is common immediately after starting (due to priming) and should clear as the engine warms up and the mixture is leaned.",
+      "topic": "Engine Operation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_045",
+      "question": "An operational advantage of the alternator is that it:-",
+      "options": [
+        {"id": "a", "text": "will still produce electrical power at low RPM"},
+        {"id": "b", "text": "will generate a DC supply without using a rectifier"},
+        {"id": "c", "text": "does not require a voltage regulator"},
+        {"id": "d", "text": "is lighter than a generator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An alternator produces useful electrical output at lower RPM than a generator. This is important because it means the electrical system can charge the battery and power equipment even at idle RPM. A generator requires higher RPM to produce adequate output.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_046",
+      "question": "The correct level of electrolyte in a lead acid battery should be maintained by the addition of:-",
+      "options": [
+        {"id": "a", "text": "distilled water"},
+        {"id": "b", "text": "hydrochloric acid"},
+        {"id": "c", "text": "sulphuric acid"},
+        {"id": "d", "text": "tap water"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Only distilled water should be added to a lead-acid battery. During charging, water evaporates but the acid does not. Adding acid would increase the acid concentration and damage the battery. Tap water contains minerals that would contaminate the electrolyte.",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_047",
+      "question": "One of the advantages of refuelling an aeroplane with full tanks after flight is that:-",
+      "options": [
+        {"id": "a", "text": "full tanks will minimise condensation forming overnight"},
+        {"id": "b", "text": "the stain from fuel leaks will be more easily noticed"},
+        {"id": "c", "text": "it reduces the risk of fuel contamination"},
+        {"id": "d", "text": "it is easier to check the fuel quantity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Filling tanks after flight minimises the air space above the fuel. Overnight temperature drops cause moisture in this air to condense as water droplets, which contaminate the fuel. Full tanks leave minimal air space, greatly reducing condensation and water contamination.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_048",
+      "question": "One of the benefits of the DC generator is that it:-",
+      "options": [
+        {"id": "a", "text": "does not rely on battery power to bring it on line"},
+        {"id": "b", "text": "will continue to produce power at low speeds"},
+        {"id": "c", "text": "produces AC current directly"},
+        {"id": "d", "text": "is more efficient than an alternator at all speeds"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A DC generator is self-exciting — it uses residual magnetism in its field windings to start generating. It does not need battery power to initiate output. An alternator, by contrast, requires battery power to energise its field coils before it can produce output.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_049",
+      "question": "Control of the voltage output from a DC generator is achieved through a:-",
+      "options": [
+        {"id": "a", "text": "voltage regulator"},
+        {"id": "b", "text": "rectifier"},
+        {"id": "c", "text": "transformer"},
+        {"id": "d", "text": "circuit breaker"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A voltage regulator controls the generator's output voltage by varying the current flowing through the field windings. As engine RPM changes, the regulator adjusts the field current to maintain a constant voltage output (typically 14V for a 12V system or 28V for a 24V system).",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_050",
+      "question": "The use of fuel with a lower octane rating than that recommended by the aircraft manufacturer may lead to:-",
+      "options": [
+        {"id": "a", "text": "detonation"},
+        {"id": "b", "text": "pre-ignition"},
+        {"id": "c", "text": "carburettor icing"},
+        {"id": "d", "text": "increased fuel consumption only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Octane rating measures a fuel's resistance to detonation (spontaneous, uncontrolled combustion). Lower octane fuel detonates more easily under the high compression and temperatures in the engine. Detonation causes severe engine damage including piston and cylinder damage, and must be avoided.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_051",
+      "question": "The storage capacity of a battery is usually expressed in:-",
+      "options": [
+        {"id": "a", "text": "ampere-hours"},
+        {"id": "b", "text": "volts"},
+        {"id": "c", "text": "watts"},
+        {"id": "d", "text": "ohms"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Battery capacity is measured in ampere-hours (Ah). A 35Ah battery can theoretically deliver 35 amps for one hour, or 1 amp for 35 hours. This tells the pilot how long the battery can power the electrical system without the alternator/generator running.",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_052",
+      "question": "A rectifier is required in an alternator in order to:-",
+      "options": [
+        {"id": "a", "text": "convert the AC output into DC"},
+        {"id": "b", "text": "regulate the voltage"},
+        {"id": "c", "text": "increase the current output"},
+        {"id": "d", "text": "protect the battery from overcharging"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An alternator inherently produces alternating current (AC). Aircraft electrical systems use direct current (DC), so a rectifier (typically a diode bridge) is built into the alternator to convert the AC output to DC before it enters the aircraft electrical bus.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_053",
+      "question": "A reverse current cut-out relay in a generator-supplied electrical system is used to:-",
+      "options": [
+        {"id": "a", "text": "prevent the flow of current from the battery to the generator"},
+        {"id": "b", "text": "protect the circuit from being overloaded"},
+        {"id": "c", "text": "regulate the voltage output"},
+        {"id": "d", "text": "convert AC to DC"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When the generator output drops below battery voltage (e.g., at low RPM), current would flow from the battery into the generator, potentially damaging it and draining the battery. The reverse current cut-out relay disconnects the generator from the bus when this condition is detected.",
+      "topic": "Electrical System",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_054",
+      "question": "The purpose of the engine driven vacuum pump used in an aircraft's gyroscopic instrument system is to:-",
+      "options": [
+        {"id": "a", "text": "decrease the pressure within the instrument case"},
+        {"id": "b", "text": "pump high pressure air onto the gyro rotor"},
+        {"id": "c", "text": "provide electrical power to the gyros"},
+        {"id": "d", "text": "lubricate the gyro bearings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The vacuum pump creates a low pressure (suction) inside the instrument case. Filtered air is drawn in through jets directed at the gyro rotor buckets, spinning the rotor at high speed (typically 10,000-15,000 RPM). The air then exits through the vacuum pump.",
+      "topic": "Vacuum System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_055",
+      "question": "Over-speeding of vacuum driven gyro rotors is prevented by:-",
+      "options": [
+        {"id": "a", "text": "a pressure relief valve located just before the vacuum pump"},
+        {"id": "b", "text": "a governor on the gyro rotor"},
+        {"id": "c", "text": "a speed limiter in the vacuum pump"},
+        {"id": "d", "text": "reducing engine RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A suction relief valve (pressure relief valve) is installed in the vacuum line before the pump. It allows ambient air to enter the system if the suction becomes too great, limiting the maximum vacuum and preventing the gyro rotors from spinning too fast, which could damage the instruments.",
+      "topic": "Vacuum System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_056",
+      "question": "The suction required to operate vacuum driven gyroscopes is usually between:-",
+      "options": [
+        {"id": "a", "text": "3 to 5 inches of mercury"},
+        {"id": "b", "text": "1 to 2 inches of mercury"},
+        {"id": "c", "text": "8 to 10 inches of mercury"},
+        {"id": "d", "text": "15 to 20 inches of mercury"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vacuum-driven gyroscopic instruments (attitude indicator and heading indicator) require a suction of approximately 3-5 inches of mercury (inHg) to spin the gyro rotors at the correct speed. This is monitored by a suction gauge on the instrument panel.",
+      "topic": "Vacuum System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_057",
+      "question": "A left-zero ammeter is incorporated in an electrical system to:-",
+      "options": [
+        {"id": "a", "text": "indicate the flow of current from the alternator"},
+        {"id": "b", "text": "indicate the flow of current into and out of the battery"},
+        {"id": "c", "text": "measure the voltage in the system"},
+        {"id": "d", "text": "protect against overloading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A left-zero (loadmeter) ammeter shows the total current output from the alternator/generator. Zero is at the left, and the needle deflects right to show current being produced. If the alternator fails, the needle drops to zero. This differs from a centre-zero ammeter which shows battery charge/discharge.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_058",
+      "question": "The instruments that would be affected by a static vent blockage are:-",
+      "options": [
+        {"id": "a", "text": "the altimeter, airspeed indicator, and vertical speed indicator"},
+        {"id": "b", "text": "the altimeter and vertical speed indicator only"},
+        {"id": "c", "text": "the airspeed indicator only"},
+        {"id": "d", "text": "the attitude indicator and heading indicator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "All three pitot-static instruments use static pressure: the altimeter (static only), the VSI (static only), and the ASI (pitot minus static). A blocked static vent will cause errors in all three instruments. Gyroscopic instruments are not affected as they use the vacuum system.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_059",
+      "question": "If the alternate static vent, located in the cockpit, is opened in flight, the altimeter will:-",
+      "options": [
+        {"id": "a", "text": "over-read because the cockpit pressure is usually lower than outside pressure"},
+        {"id": "b", "text": "under-read"},
+        {"id": "c", "text": "remain unaffected"},
+        {"id": "d", "text": "fluctuate erratically"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cockpit pressure is slightly lower than outside static pressure due to aerodynamic suction effects on the fuselage. When the alternate static source draws from the cockpit, the altimeter senses a lower pressure than actual, causing it to indicate a higher altitude than the aircraft is actually at.",
+      "topic": "Pitot-Static System",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_060",
+      "question": "A blockage of the static vent during a descent would cause the ASI to:-",
+      "options": [
+        {"id": "a", "text": "over-read"},
+        {"id": "b", "text": "under-read"},
+        {"id": "c", "text": "read correctly"},
+        {"id": "d", "text": "read zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ASI measures the difference between pitot and static pressure. If the static vent is blocked during a descent, the trapped static pressure remains at the higher altitude (lower pressure). As the aircraft descends into higher actual static pressure, the pitot pressure increases but the reference static doesn't — so the indicated difference is too large, causing the ASI to over-read.",
+      "topic": "Pitot-Static System",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_061",
+      "question": "If, during a descent, the static vent becomes blocked the altimeter will:-",
+      "options": [
+        {"id": "a", "text": "continue to indicate the altitude at which the blockage occurred"},
+        {"id": "b", "text": "show a decreasing altitude"},
+        {"id": "c", "text": "show an increasing altitude"},
+        {"id": "d", "text": "read zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The altimeter measures static pressure only. If the static vent is blocked, the pressure inside the instrument case remains at the value when the blockage occurred. The altimeter will continue to show that altitude regardless of actual altitude changes — it effectively becomes a fixed reading.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_062",
+      "question": "If, during level flight, the static vent becomes blocked the ASI reading will:-",
+      "options": [
+        {"id": "a", "text": "remain constant as long as the aircraft remains at the same altitude and speed"},
+        {"id": "b", "text": "gradually increase"},
+        {"id": "c", "text": "gradually decrease"},
+        {"id": "d", "text": "drop to zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In level flight at constant speed, both pitot pressure and static pressure remain constant. If the static vent blocks, the trapped static pressure is the same as the actual static pressure (since altitude hasn't changed). The ASI will read correctly as long as speed and altitude don't change.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_063",
+      "question": "In a simple airspeed indicator, pitot pressure is fed to:-",
+      "options": [
+        {"id": "a", "text": "the capsule (diaphragm)"},
+        {"id": "b", "text": "the instrument case"},
+        {"id": "c", "text": "both the capsule and the case"},
+        {"id": "d", "text": "neither — it uses static pressure only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In an ASI, pitot (total) pressure is fed to the inside of the capsule, and static pressure fills the instrument case. The capsule expands or contracts based on the difference between pitot and static pressure (dynamic pressure = ½ρV²), which is proportional to airspeed.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_064",
+      "question": "The basic principle of operation of an airspeed indicator is to measure the differential between:-",
+      "options": [
+        {"id": "a", "text": "pitot pressure and static pressure"},
+        {"id": "b", "text": "two static pressures"},
+        {"id": "c", "text": "atmospheric pressure and vacuum"},
+        {"id": "d", "text": "pitot pressure and atmospheric pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ASI works by measuring the difference between pitot (total) pressure and static pressure. This difference is dynamic pressure (q = ½ρV²), which is directly related to airspeed. Pitot pressure = static pressure + dynamic pressure, so dynamic pressure = pitot - static.",
+      "topic": "Pitot-Static System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_065",
+      "question": "As altitude is increased the capsule inside an altimeter will:-",
+      "options": [
+        {"id": "a", "text": "expand, causing the instrument to show an increase in altitude"},
+        {"id": "b", "text": "contract, causing the instrument to show an increase in altitude"},
+        {"id": "c", "text": "remain the same size"},
+        {"id": "d", "text": "expand, causing the instrument to show a decrease in altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The altimeter contains an evacuated (aneroid) capsule inside a sealed case connected to the static port. As altitude increases, static pressure decreases. The capsule expands because the internal reference pressure is now greater than the surrounding static pressure. This expansion is mechanically linked to the altitude display.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_066",
+      "question": "The two properties associated with a spinning gyroscope are:-",
+      "options": [
+        {"id": "a", "text": "rigidity and precession"},
+        {"id": "b", "text": "stability and damping"},
+        {"id": "c", "text": "inertia and momentum"},
+        {"id": "d", "text": "rotation and oscillation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Rigidity in space means the gyro maintains its orientation regardless of how the aircraft moves around it. Precession means that when a force is applied to a spinning gyro, the effect is felt 90° later in the direction of rotation. Both properties are essential for gyroscopic instruments.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_067",
+      "question": "With reference to the Attitude Indicator, as an aircraft changes its pitch attitude or bank:-",
+      "options": [
+        {"id": "a", "text": "the gyro remains in the vertical relative to the earth"},
+        {"id": "b", "text": "the gyro remains at right angles to the aircraft's longitudinal axis"},
+        {"id": "c", "text": "the gyro tilts with the aircraft"},
+        {"id": "d", "text": "the gyro precesses to a new position"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The attitude indicator uses an earth gyro (vertical axis, spinning in the horizontal plane). Due to rigidity in space, the gyro remains aligned with the earth's vertical regardless of aircraft attitude changes. The aircraft moves around the gyro, and this relative movement is displayed as pitch and bank indications.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_068",
+      "question": "The gyroscope used in a direction indicator is a:-",
+      "options": [
+        {"id": "a", "text": "horizontal axis gyro"},
+        {"id": "b", "text": "vertical axis gyro"},
+        {"id": "c", "text": "rate gyro"},
+        {"id": "d", "text": "free gyro with no axis preference"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The direction indicator (DI/heading indicator) uses a horizontal axis gyro — the rotor spins about a horizontal axis. Due to rigidity in space, it maintains its orientation and provides a stable heading reference. It must be periodically aligned with the magnetic compass because it has no magnetic sensing capability.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_069",
+      "question": "Apparent wander in a Direction Indicator is caused by:-",
+      "options": [
+        {"id": "a", "text": "the rotation of the earth"},
+        {"id": "b", "text": "friction in the gyro bearings"},
+        {"id": "c", "text": "air turbulence"},
+        {"id": "d", "text": "magnetic interference"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Apparent wander (drift) occurs because the DI gyro maintains its orientation in space while the earth rotates beneath it. The rate of apparent wander depends on latitude — maximum at the poles (15°/hour) and zero at the equator. This is why the DI must be realigned with the compass every 15-20 minutes.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_070",
+      "question": "Wear in the bearings and gimbals as well as air turbulence will have the effect of:-",
+      "options": [
+        {"id": "a", "text": "causing real wander of a gyro"},
+        {"id": "b", "text": "causing apparent wander"},
+        {"id": "c", "text": "increasing the gyro's rigidity"},
+        {"id": "d", "text": "improving the instrument's accuracy"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Real wander is the actual physical displacement of the gyro axis caused by mechanical imperfections — bearing friction, gimbal friction, and external forces like air turbulence. Unlike apparent wander (caused by earth rotation), real wander is random and unpredictable. It contributes to the need for regular DI realignment.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_071",
+      "question": "The indications on a turn indicator during a turn to the right whilst taxying are:-",
+      "options": [
+        {"id": "a", "text": "the ball moves to the left and the needle shows a right turn"},
+        {"id": "b", "text": "the ball moves to the right and the needle shows a right turn"},
+        {"id": "c", "text": "the ball stays centred and the needle shows a right turn"},
+        {"id": "d", "text": "the ball moves to the left and the needle shows a left turn"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During a ground turn (taxying), there is no bank angle — the aircraft is flat. The turn needle correctly shows the direction of turn (right). The ball, however, is thrown outward by centrifugal force (to the left in a right turn) because there is no bank to counteract it. This is normal during ground operations.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_072",
+      "question": "The turn indicator makes use of a:-",
+      "options": [
+        {"id": "a", "text": "rate gyro"},
+        {"id": "b", "text": "earth gyro"},
+        {"id": "c", "text": "free gyro"},
+        {"id": "d", "text": "directional gyro"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The turn indicator uses a rate gyro — a gyro that is restrained by a spring so that it measures the rate of turn rather than maintaining a fixed position in space. The gyro precesses proportionally to the rate of yaw, and the spring returns it to centre when the turn stops.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_073",
+      "question": "Control of the precession of the gyro in a turn indicator is achieved by:-",
+      "options": [
+        {"id": "a", "text": "the tension of a spring mounted between the gimbal and the case"},
+        {"id": "b", "text": "having a high rotor speed"},
+        {"id": "c", "text": "the weight of the gyro rotor"},
+        {"id": "d", "text": "friction in the bearings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A calibrated spring connects the gyro gimbal to the instrument case. When the aircraft yaws, the gyro precesses against the spring. The spring tension controls the amount of precession for a given rate of turn, ensuring the needle deflection is proportional to the turn rate. When the turn stops, the spring returns the gyro to its neutral position.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_074",
+      "question": "The needle of a turn co-ordinator shows:-",
+      "options": [
+        {"id": "a", "text": "the rate of turn"},
+        {"id": "b", "text": "the angle of bank"},
+        {"id": "c", "text": "the heading"},
+        {"id": "d", "text": "the rate of roll only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Despite the miniature aircraft symbol suggesting bank angle, the turn coordinator actually shows the rate of turn (and initially the rate of roll). The gyro is canted at approximately 30° so it senses both yaw and roll rates. A standard rate turn (Rate 1) is indicated when the wing tip aligns with the index mark.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_075",
+      "question": "The type of gyro used in an attitude indicator is:-",
+      "options": [
+        {"id": "a", "text": "an earth gyro"},
+        {"id": "b", "text": "a rate gyro"},
+        {"id": "c", "text": "a space gyro"},
+        {"id": "d", "text": "a directional gyro"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The attitude indicator uses an earth gyro (also called a vertical gyro). The rotor spins about a vertical axis and is maintained in the vertical by an erection mechanism. This provides a stable reference to the earth's horizon, allowing the instrument to display pitch and bank attitude.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_076",
+      "question": "During take-off the error which may be expected from an air-driven Attitude Indicator is:-",
+      "options": [
+        {"id": "a", "text": "a temporary error in both pitch and roll"},
+        {"id": "b", "text": "erection error only"},
+        {"id": "c", "text": "no error at all"},
+        {"id": "d", "text": "a permanent error in pitch"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During the acceleration of take-off, the pendulous vanes of the erection mechanism are displaced by the acceleration force. This causes the gyro to precess, resulting in temporary errors in both pitch (showing a slight climb) and roll indications. The errors correct themselves once acceleration stops.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_077",
+      "question": "During flight the gyro in a Direction Indicator aligns itself with:-",
+      "options": [
+        {"id": "a", "text": "a fixed point in space"},
+        {"id": "b", "text": "magnetic north"},
+        {"id": "c", "text": "true north"},
+        {"id": "d", "text": "the aircraft's longitudinal axis"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The DI gyro maintains its orientation relative to a fixed point in space due to gyroscopic rigidity. It has no magnetic sensing capability, so it does not align with magnetic or true north. The pilot must manually align it with the magnetic compass and periodically re-check the alignment.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_078",
+      "question": "An aircraft engine is designed to operate on a specific octane rating. Using fuel of a higher octane than recommended may result in:-",
+      "options": [
+        {"id": "a", "text": "lead fouling of the spark plugs"},
+        {"id": "b", "text": "pre-ignition"},
+        {"id": "c", "text": "detonation"},
+        {"id": "d", "text": "improved engine performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Higher octane aviation fuel contains more tetraethyl lead (TEL) as an anti-knock additive. Using fuel with a higher octane rating than required means excess lead, which can deposit on spark plugs (lead fouling), reducing their effectiveness and causing misfiring.",
+      "topic": "Fuel System",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_079",
+      "question": "When attempting to start an engine which has been over-primed or flooded:-",
+      "options": [
+        {"id": "a", "text": "the mixture should be in the full lean position until the engine fires, then richened slowly"},
+        {"id": "b", "text": "continue cranking with full rich mixture"},
+        {"id": "c", "text": "add more primer fuel"},
+        {"id": "d", "text": "wait 30 minutes before attempting to start again"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A flooded engine has too much fuel in the cylinders. Setting the mixture to idle cut-off (full lean) while cranking allows the excess fuel to be drawn through and burned off without adding more fuel. Once the engine fires, the mixture is slowly moved to rich to keep it running.",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_080",
+      "question": "In the southern hemisphere, an aircraft maintaining a constant heading of 090° (M) on a magnetic compass — if speed is increased, the compass would:-",
+      "options": [
+        {"id": "a", "text": "show an apparent turn to the south"},
+        {"id": "b", "text": "show an apparent turn to the north"},
+        {"id": "c", "text": "remain unaffected"},
+        {"id": "d", "text": "show an apparent turn to the east"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the Southern Hemisphere, acceleration on an easterly or westerly heading causes the compass to show an apparent turn toward the nearer pole (south). This is because the acceleration displaces the compass magnet assembly, causing a false indication. The memory aid is SAND (South, Accelerate, North, Decelerate) — reversed for the Southern Hemisphere.",
+      "topic": "Magnetic Compass",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_081",
+      "question": "The deviation error found in a magnetic compass:-",
+      "options": [
+        {"id": "a", "text": "is caused by local magnetic fields within the aircraft"},
+        {"id": "b", "text": "is caused by the rotation of the earth"},
+        {"id": "c", "text": "is caused by the difference between true and magnetic north"},
+        {"id": "d", "text": "cannot be corrected"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Deviation is caused by magnetic fields within the aircraft — from electrical equipment, metal structures, and wiring. These local fields deflect the compass from magnetic north. Deviation varies with heading and is minimised by a compass swing (adjustment) and recorded on a deviation card in the cockpit.",
+      "topic": "Magnetic Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_082",
+      "question": "Compass deviation in a particular aircraft:-",
+      "options": [
+        {"id": "a", "text": "varies with each heading"},
+        {"id": "b", "text": "is a fixed value for all headings"},
+        {"id": "c", "text": "is the same as variation"},
+        {"id": "d", "text": "only occurs on northerly headings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Deviation changes with heading because the aircraft's magnetic fields interact differently with the earth's magnetic field depending on the aircraft's orientation. The deviation card in the cockpit lists the deviation for various headings (typically every 30°) so the pilot can apply the correct correction.",
+      "topic": "Magnetic Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_083",
+      "question": "During a descent the pressure in the capsule of a vertical speed indicator (VSI) will:-",
+      "options": [
+        {"id": "a", "text": "increase"},
+        {"id": "b", "text": "decrease"},
+        {"id": "c", "text": "remain constant"},
+        {"id": "d", "text": "fluctuate rapidly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The VSI capsule is connected directly to the static port. During a descent, static pressure increases (higher pressure at lower altitude). This increased pressure is immediately felt inside the capsule. The case pressure changes more slowly through the calibrated leak, creating the differential that indicates rate of descent.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_084",
+      "question": "During a climb the pressure inside the case of a vertical speed indicator (VSI) will:-",
+      "options": [
+        {"id": "a", "text": "decrease at a slower rate than that inside the capsule"},
+        {"id": "b", "text": "decrease at the same rate as the pressure within the capsule"},
+        {"id": "c", "text": "increase"},
+        {"id": "d", "text": "remain constant"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During a climb, static pressure decreases. The capsule pressure drops immediately (direct static connection), but the case pressure decreases more slowly because air must leak out through the calibrated restrictor (metering unit). This pressure differential between capsule and case indicates the rate of climb.",
+      "topic": "Instruments",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_085",
+      "question": "Application of 'alternate air' in a fuel injection system:-",
+      "options": [
+        {"id": "a", "text": "feeds air from within the engine cowling to the induction system"},
+        {"id": "b", "text": "routes filtered air to the exhaust pipes for heating"},
+        {"id": "c", "text": "increases the air pressure in the induction system"},
+        {"id": "d", "text": "bypasses the fuel injectors"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel-injected engines use 'alternate air' instead of carburettor heat. When selected, it draws unfiltered air from inside the engine cowling (which is warmed by engine heat) rather than through the normal filtered air intake. This is used if the normal intake becomes blocked by ice or debris.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_086",
+      "question": "An aircraft's pitot tube is usually mounted:-",
+      "options": [
+        {"id": "a", "text": "directly into the airflow"},
+        {"id": "b", "text": "flush with the fuselage skin"},
+        {"id": "c", "text": "inside the engine cowling"},
+        {"id": "d", "text": "on top of the vertical fin"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pitot tube must face directly into the undisturbed relative airflow to accurately measure total (pitot) pressure. It is typically mounted on the wing leading edge or on a mast projecting forward from the fuselage, away from areas of disturbed airflow.",
+      "topic": "Pitot-Static System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_087",
+      "question": "Normal static pressure is taken from:-",
+      "options": [
+        {"id": "a", "text": "a port located in an area of undisturbed air"},
+        {"id": "b", "text": "a tube mounted facing into the relative airflow"},
+        {"id": "c", "text": "the pitot tube"},
+        {"id": "d", "text": "inside the cockpit"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Static ports are flush-mounted openings on the fuselage skin, positioned in an area where the air pressure is as close to undisturbed atmospheric pressure as possible. Many aircraft have two static ports (one on each side) to cancel out any position error caused by sideslip.",
+      "topic": "Pitot-Static System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_088",
+      "question": "The effect of having two static vents located one on either side of an aircraft's fuselage is that:-",
+      "options": [
+        {"id": "a", "text": "position error will be reduced"},
+        {"id": "b", "text": "the instruments will be more sensitive"},
+        {"id": "c", "text": "the system will work at higher altitudes"},
+        {"id": "d", "text": "only one vent is used at a time"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During sideslip or in crosswinds, one side of the fuselage experiences higher pressure and the other lower pressure. Having static ports on both sides averages these pressures, significantly reducing position error and providing a more accurate static pressure reading.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_089",
+      "question": "The alternate static valve draws air from:-",
+      "options": [
+        {"id": "a", "text": "within the aircraft cockpit"},
+        {"id": "b", "text": "the engine cowling"},
+        {"id": "c", "text": "the pitot tube"},
+        {"id": "d", "text": "an external port on the tail"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The alternate static source is located inside the cockpit. If the external static ports become blocked (by ice, insects, etc.), the pilot can open the alternate static valve to use cockpit pressure as a substitute. Cockpit pressure is slightly lower than outside, causing small instrument errors.",
+      "topic": "Pitot-Static System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_090",
+      "question": "If the speed of an aeroplane fitted with a fixed pitch propeller decreases, but the throttle setting remains constant, the RPM will:-",
+      "options": [
+        {"id": "a", "text": "decrease"},
+        {"id": "b", "text": "remain the same"},
+        {"id": "c", "text": "increase"},
+        {"id": "d", "text": "fluctuate"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With a fixed-pitch propeller, as forward speed decreases, the angle of attack of the propeller blades increases. This increases the aerodynamic load (drag) on the blades, and the engine cannot maintain the same RPM against the increased load, so RPM decreases.",
+      "topic": "Propeller",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_091",
+      "question": "The component of a hydraulic system which stores hydraulic fluid under pressure is called:-",
+      "options": [
+        {"id": "a", "text": "an accumulator"},
+        {"id": "b", "text": "a reservoir"},
+        {"id": "c", "text": "a pump"},
+        {"id": "d", "text": "an actuator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An accumulator stores hydraulic fluid under pressure (using compressed gas or a spring). It provides an emergency reserve of pressurised fluid, dampens pressure surges, and supplements the pump during peak demand periods (e.g., gear retraction).",
+      "topic": "Hydraulic System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_092",
+      "question": "Loss of pressure in a hydraulic system is indicated to the pilot by:-",
+      "options": [
+        {"id": "a", "text": "a warning light, usually red"},
+        {"id": "b", "text": "a decrease in airspeed"},
+        {"id": "c", "text": "a change in engine RPM"},
+        {"id": "d", "text": "a hydraulic pressure gauge only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A red warning light on the instrument panel alerts the pilot to low hydraulic pressure. This is critical because hydraulic systems operate landing gear, brakes, and sometimes flaps. Some aircraft also have a hydraulic pressure gauge for monitoring.",
+      "topic": "Hydraulic System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_093",
+      "question": "In the event that a fuse in an electrical circuit has blown:-",
+      "options": [
+        {"id": "a", "text": "it should be replaced only once with a fuse of the same rating"},
+        {"id": "b", "text": "it should be replaced with a fuse of a higher rating"},
+        {"id": "c", "text": "the circuit should be left open"},
+        {"id": "d", "text": "any available fuse can be used as a temporary replacement"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A blown fuse indicates an overcurrent condition. Replace it once with a fuse of the same rating. If it blows again, there is a fault in the circuit that must be investigated — do not replace it again or use a higher-rated fuse, as this could cause a fire or damage equipment.",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_094",
+      "question": "In the event that a circuit breaker in an electrical circuit has tripped:-",
+      "options": [
+        {"id": "a", "text": "it should be pushed back in only once after allowing a cooling off period"},
+        {"id": "b", "text": "it should be reset immediately"},
+        {"id": "c", "text": "it should be held in with tape"},
+        {"id": "d", "text": "the master switch should be turned off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A tripped circuit breaker indicates an overcurrent. Allow a brief cooling period, then reset it once. If it trips again, leave it out — there is a fault in the circuit. Never hold a circuit breaker in or bypass it, as this removes the overcurrent protection and could cause a fire.",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_095",
+      "question": "A hydraulic system operates on the basic principle that:-",
+      "options": [
+        {"id": "a", "text": "pressure applied to a confined fluid is transmitted equally in all directions"},
+        {"id": "b", "text": "fluid flows from high pressure to low pressure"},
+        {"id": "c", "text": "fluid can be compressed to store energy"},
+        {"id": "d", "text": "fluid expands when heated"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pascal's Law states that pressure applied to a confined fluid is transmitted equally and undiminished in all directions. This allows a small force applied at a pump to create a large force at an actuator by using different piston areas, enabling the operation of heavy components like landing gear.",
+      "topic": "Hydraulic System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_096",
+      "question": "The pilot of an aircraft equipped with a manifold pressure gauge would identify carburettor icing by:-",
+      "options": [
+        {"id": "a", "text": "a decrease in manifold pressure"},
+        {"id": "b", "text": "a decrease in RPM"},
+        {"id": "c", "text": "an increase in manifold pressure"},
+        {"id": "d", "text": "an increase in RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a CSU-equipped aircraft, the constant speed unit maintains RPM by adjusting blade angle. Carburettor ice restricts airflow, reducing the power the engine can produce. This shows as a decrease in manifold pressure while RPM remains constant (maintained by the CSU). In a fixed-pitch aircraft, RPM would decrease instead.",
+      "topic": "Carburettor",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_097",
+      "question": "The effect of slats is to:-",
+      "options": [
+        {"id": "a", "text": "allow the aeroplane to fly at a higher angle of attack and a lower airspeed"},
+        {"id": "b", "text": "increase the maximum speed"},
+        {"id": "c", "text": "reduce drag at cruise speed"},
+        {"id": "d", "text": "improve directional stability"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Leading edge slats create a slot between the slat and the main wing. At high AoA, high-energy air flows through this slot over the upper surface, energising the boundary layer and delaying separation. This increases the critical AoA, allowing the aircraft to fly slower without stalling.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_098",
+      "question": "When executing a turn from 160° through south to 210° in the southern hemisphere using only a magnetic compass, the most appropriate heading to roll out on would be:-",
+      "options": [
+        {"id": "a", "text": "190°"},
+        {"id": "b", "text": "210°"},
+        {"id": "c", "text": "230°"},
+        {"id": "d", "text": "180°"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the Southern Hemisphere, the compass leads (reads ahead) when turning through south. The pilot must roll out before the compass shows the desired heading. For a turn through south to 210°, rolling out at approximately 190° on the compass will result in the aircraft actually being on 210° when the compass settles.",
+      "topic": "Magnetic Compass",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_099",
+      "question": "In comparison to a generator, the power output of an alternator will be:-",
+      "options": [
+        {"id": "a", "text": "greater at a lower RPM"},
+        {"id": "b", "text": "less at all RPM ranges"},
+        {"id": "c", "text": "the same at all RPM ranges"},
+        {"id": "d", "text": "greater only at high RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An alternator produces useful output at lower RPM than a generator because it uses a rotating field (electromagnet) rather than a rotating armature. The alternator's output increases more rapidly with RPM and reaches useful levels at engine idle speed, unlike a generator which needs higher RPM.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_100",
+      "question": "The presence of black oily deposits in the firing end cavity of a spark plug would probably indicate:-",
+      "options": [
+        {"id": "a", "text": "that oil is slipping past the piston rings and being burnt in the combustion chamber"},
+        {"id": "b", "text": "that the engine has been operated with too rich a mixture"},
+        {"id": "c", "text": "detonation damage"},
+        {"id": "d", "text": "normal wear and tear"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Black oily deposits on spark plugs indicate oil contamination in the combustion chamber. This is typically caused by worn piston rings or valve guides allowing oil to enter the cylinder. The oil burns incompletely, leaving black oily residue. This requires maintenance attention.",
+      "topic": "Engine Operation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_101",
+      "question": "The four strokes of a piston engine in the correct order are:-",
+      "options": [
+        {"id": "a", "text": "induction, compression, power, exhaust"},
+        {"id": "b", "text": "compression, induction, power, exhaust"},
+        {"id": "c", "text": "induction, power, compression, exhaust"},
+        {"id": "d", "text": "power, exhaust, induction, compression"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The four-stroke cycle (Otto cycle) is: (1) Induction — piston moves down, drawing in fuel/air mixture, (2) Compression — piston moves up, compressing the mixture, (3) Power — spark ignites mixture, expanding gases push piston down, (4) Exhaust — piston moves up, expelling burnt gases. Two crankshaft revolutions per cycle.",
+      "topic": "Engine Operation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_102",
+      "question": "The purpose of having two independent magneto ignition systems on an aircraft engine is to:-",
+      "options": [
+        {"id": "a", "text": "provide redundancy and improve combustion efficiency"},
+        {"id": "b", "text": "increase the engine RPM"},
+        {"id": "c", "text": "reduce fuel consumption"},
+        {"id": "d", "text": "allow the engine to run on one magneto during cruise"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dual magnetos provide safety redundancy — if one fails, the engine continues to run on the other. Additionally, two spark plugs per cylinder (one from each magneto) ignite the mixture from two points, giving more complete and efficient combustion. Running on one magneto causes a slight RPM drop (typically 50-75 RPM).",
+      "topic": "Ignition System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_103",
+      "question": "During the magneto check before take-off, an excessive RPM drop on one magneto indicates:-",
+      "options": [
+        {"id": "a", "text": "a fault in that magneto or its associated spark plugs"},
+        {"id": "b", "text": "normal operation"},
+        {"id": "c", "text": "the mixture is too rich"},
+        {"id": "d", "text": "the propeller pitch is incorrect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During the magneto check, switching from BOTH to a single magneto should cause a small RPM drop (typically 50-175 RPM depending on aircraft type). An excessive drop indicates a problem with the other magneto system — faulty magneto, fouled spark plugs, or broken ignition leads. The aircraft should not be flown until the fault is rectified.",
+      "topic": "Ignition System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_104",
+      "question": "During the magneto check, if there is NO RPM drop when switching from BOTH to a single magneto, this indicates:-",
+      "options": [
+        {"id": "a", "text": "a possible fault — the other magneto may not be firing or the P-lead may be broken"},
+        {"id": "b", "text": "both magnetos are working perfectly"},
+        {"id": "c", "text": "the engine is in excellent condition"},
+        {"id": "d", "text": "the propeller is at the correct pitch"}
+      ],
+      "correct_answer": "a",
+      "explanation": "No RPM drop is abnormal and potentially dangerous. It could mean the other magneto was already not firing (so switching it off makes no difference), or the P-lead (earth wire) is broken, meaning that magneto cannot be switched off. This is a serious safety concern and must be investigated before flight.",
+      "topic": "Ignition System",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_105",
+      "question": "Detonation in an aircraft engine differs from pre-ignition in that:-",
+      "options": [
+        {"id": "a", "text": "detonation is the spontaneous explosion of the unburnt mixture ahead of the flame front"},
+        {"id": "b", "text": "detonation occurs before the spark plug fires"},
+        {"id": "c", "text": "pre-ignition is caused by low octane fuel"},
+        {"id": "d", "text": "detonation only occurs at low power settings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Detonation occurs after normal ignition — the remaining unburnt mixture spontaneously explodes rather than burning progressively. Pre-ignition occurs before the spark — a hot spot ignites the mixture prematurely. Both are destructive, but they are different phenomena. Detonation is caused by low octane fuel, high manifold pressure, or lean mixture at high power.",
+      "topic": "Engine Operation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_106",
+      "question": "The colour coding for 100LL aviation gasoline is:-",
+      "options": [
+        {"id": "a", "text": "blue"},
+        {"id": "b", "text": "green"},
+        {"id": "c", "text": "red"},
+        {"id": "d", "text": "clear"}
+      ],
+      "correct_answer": "a",
+      "explanation": "100LL (100 octane Low Lead) aviation gasoline is dyed blue. The colour coding helps prevent misfuelling: 100LL = blue, 100/130 = green, 80/87 = red, Jet A-1 = clear/straw. Using the wrong fuel type can cause engine damage or failure.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_107",
+      "question": "The purpose of draining fuel from the fuel tank sumps during pre-flight is to:-",
+      "options": [
+        {"id": "a", "text": "check for water contamination and sediment"},
+        {"id": "b", "text": "reduce the fuel load for take-off"},
+        {"id": "c", "text": "check the fuel octane rating"},
+        {"id": "d", "text": "prime the engine"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Water is heavier than aviation fuel and settles to the bottom of the tank sump. Draining a sample from each sump allows the pilot to visually check for water (clear bubbles at the bottom of the blue fuel), sediment, or incorrect fuel type. This is a critical pre-flight check.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_108",
+      "question": "The fuel/air mixture ratio for best power is approximately:-",
+      "options": [
+        {"id": "a", "text": "1:12 (fuel to air by weight)"},
+        {"id": "b", "text": "1:15 (fuel to air by weight)"},
+        {"id": "c", "text": "1:8 (fuel to air by weight)"},
+        {"id": "d", "text": "1:20 (fuel to air by weight)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The chemically correct (stoichiometric) ratio is approximately 1:15 by weight. Best power mixture is slightly richer at about 1:12. Best economy mixture is slightly leaner at about 1:16. The mixture must be within the flammability range of approximately 1:8 (rich limit) to 1:20 (lean limit).",
+      "topic": "Fuel System",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_109",
+      "question": "The master switch in an aircraft controls:-",
+      "options": [
+        {"id": "a", "text": "the connection of the battery and alternator/generator to the electrical bus"},
+        {"id": "b", "text": "the magneto ignition system"},
+        {"id": "c", "text": "the fuel supply to the engine"},
+        {"id": "d", "text": "the vacuum system"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The master switch connects the battery and alternator/generator to the aircraft electrical bus. It typically has two halves — a battery switch and an alternator switch. Turning off the master switch disconnects all electrical power except the magneto ignition system, which is self-powered.",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_110",
+      "question": "If the alternator fails in flight, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "reduce the electrical load to essential items and plan to land as soon as practicable"},
+        {"id": "b", "text": "immediately shut down the engine"},
+        {"id": "c", "text": "continue the flight normally"},
+        {"id": "d", "text": "switch off the battery to conserve power"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With the alternator failed, the battery is the sole source of electrical power and has limited capacity. The pilot should shed non-essential electrical loads (lights, radios not needed, etc.) to extend battery life, and plan to land as soon as practicable. The engine will continue to run normally as the magnetos are independent.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_111",
+      "question": "A centre-zero ammeter indicates:-",
+      "options": [
+        {"id": "a", "text": "the rate of charge or discharge of the battery"},
+        {"id": "b", "text": "the total current output of the alternator"},
+        {"id": "c", "text": "the voltage of the electrical system"},
+        {"id": "d", "text": "the current flowing to the starter motor"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A centre-zero ammeter shows the current flowing into or out of the battery. A positive (right) deflection means the battery is being charged by the alternator. A negative (left) deflection means the battery is discharging — more current is being used than the alternator is producing.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_112",
+      "question": "The pitot tube measures:-",
+      "options": [
+        {"id": "a", "text": "total pressure (static pressure plus dynamic pressure)"},
+        {"id": "b", "text": "static pressure only"},
+        {"id": "c", "text": "dynamic pressure only"},
+        {"id": "d", "text": "atmospheric pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The pitot tube, facing into the airflow, brings the air to rest at its opening. This captures total (pitot) pressure, which is the sum of static pressure and dynamic pressure. The ASI then subtracts static pressure (from the static port) to determine dynamic pressure, which indicates airspeed.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_113",
+      "question": "If the pitot tube becomes blocked during flight but the static port remains clear, the ASI will:-",
+      "options": [
+        {"id": "a", "text": "act like an altimeter — reading increases in a climb and decreases in a descent"},
+        {"id": "b", "text": "read zero"},
+        {"id": "c", "text": "over-read at all altitudes"},
+        {"id": "d", "text": "continue to read correctly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With the pitot tube blocked (and drain hole also blocked), the trapped pitot pressure remains constant. As the aircraft climbs, static pressure decreases — the ASI senses a greater difference (pitot minus static) and over-reads. In a descent, static pressure increases, reducing the difference, and the ASI under-reads. It effectively behaves like an altimeter.",
+      "topic": "Pitot-Static System",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_114",
+      "question": "Pitot heat is used to:-",
+      "options": [
+        {"id": "a", "text": "prevent ice from blocking the pitot tube"},
+        {"id": "b", "text": "heat the air entering the carburettor"},
+        {"id": "c", "text": "warm the cockpit"},
+        {"id": "d", "text": "prevent ice on the windscreen"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pitot heat is an electrical heating element in the pitot tube that prevents ice from forming over or inside the tube opening. Ice blockage would cause erroneous ASI readings. Pitot heat should be switched on when flying in conditions where icing is possible (visible moisture and temperatures near or below freezing).",
+      "topic": "Pitot-Static System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_115",
+      "question": "The altimeter sub-scale (Kollsman window) is used to:-",
+      "options": [
+        {"id": "a", "text": "set the reference pressure so the altimeter reads the correct altitude"},
+        {"id": "b", "text": "adjust for temperature errors"},
+        {"id": "c", "text": "set the altitude bug"},
+        {"id": "d", "text": "calibrate the instrument for position error"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The sub-scale allows the pilot to set the reference pressure datum. Setting QNH gives altitude above mean sea level. Setting QFE gives height above the aerodrome. Setting 1013.25 hPa gives pressure altitude (flight levels). The correct setting is essential for accurate altitude indication and terrain clearance.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_116",
+      "question": "When QNH is set on the altimeter sub-scale, the altimeter will indicate:-",
+      "options": [
+        {"id": "a", "text": "altitude above mean sea level"},
+        {"id": "b", "text": "height above the aerodrome"},
+        {"id": "c", "text": "pressure altitude"},
+        {"id": "d", "text": "density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QNH is the atmospheric pressure at mean sea level for a given location. When set on the altimeter, it reads altitude above mean sea level (AMSL). On the ground at the aerodrome, the altimeter should read the aerodrome elevation. QNH is the standard setting for flight below the transition altitude.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_117",
+      "question": "When QFE is set on the altimeter sub-scale, the altimeter will indicate:-",
+      "options": [
+        {"id": "a", "text": "height above the aerodrome"},
+        {"id": "b", "text": "altitude above mean sea level"},
+        {"id": "c", "text": "pressure altitude"},
+        {"id": "d", "text": "true altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QFE is the atmospheric pressure at the aerodrome elevation. When set on the altimeter, it reads zero on the ground at that aerodrome and indicates height above the aerodrome during flight. QFE is useful for circuit flying but less common than QNH for general navigation.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_118",
+      "question": "When 1013.25 hPa is set on the altimeter sub-scale, the altimeter will indicate:-",
+      "options": [
+        {"id": "a", "text": "pressure altitude"},
+        {"id": "b", "text": "altitude above mean sea level"},
+        {"id": "c", "text": "height above the aerodrome"},
+        {"id": "d", "text": "true altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Setting 1013.25 hPa (standard pressure) gives pressure altitude — the altitude in the International Standard Atmosphere corresponding to the measured pressure. This is used for flight level assignments above the transition altitude, ensuring all aircraft use the same reference for vertical separation.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_119",
+      "question": "When flying from an area of high pressure to an area of low pressure without adjusting the altimeter sub-scale, the altimeter will:-",
+      "options": [
+        {"id": "a", "text": "over-read — the aircraft is lower than indicated"},
+        {"id": "b", "text": "under-read — the aircraft is higher than indicated"},
+        {"id": "c", "text": "read correctly"},
+        {"id": "d", "text": "fluctuate erratically"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flying from high to low pressure without updating QNH causes the altimeter to over-read (indicate higher than actual altitude). The memory aid is 'High to Low, look out below' — the aircraft is actually lower than the altimeter shows, which is dangerous for terrain clearance.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_120",
+      "question": "When flying from an area of warm air to an area of cold air without adjusting the altimeter, the altimeter will:-",
+      "options": [
+        {"id": "a", "text": "over-read — the aircraft is lower than indicated"},
+        {"id": "b", "text": "under-read — the aircraft is higher than indicated"},
+        {"id": "c", "text": "read correctly"},
+        {"id": "d", "text": "show an increase in altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cold air is denser and the pressure levels are compressed (closer together). The altimeter, calibrated for ISA conditions, will over-read in colder-than-standard conditions. The memory aid is 'Hot to Cold, don't be bold' — the aircraft is lower than indicated. Temperature corrections should be applied in very cold conditions.",
+      "topic": "Instruments",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_121",
+      "question": "The VSI operates by measuring:-",
+      "options": [
+        {"id": "a", "text": "the rate of change of static pressure"},
+        {"id": "b", "text": "the difference between pitot and static pressure"},
+        {"id": "c", "text": "the absolute value of static pressure"},
+        {"id": "d", "text": "the rate of change of pitot pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The VSI measures the rate of change of static pressure. Static pressure is fed directly to a capsule and also to the instrument case through a calibrated leak (metering unit). During a climb or descent, the capsule pressure changes immediately but the case pressure lags, creating a differential proportional to the rate of altitude change.",
+      "topic": "Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_122",
+      "question": "An Instantaneous VSI (IVSI) differs from a conventional VSI in that it:-",
+      "options": [
+        {"id": "a", "text": "uses accelerometers to provide an immediate response to changes in vertical speed"},
+        {"id": "b", "text": "uses pitot pressure instead of static pressure"},
+        {"id": "c", "text": "does not have a calibrated leak"},
+        {"id": "d", "text": "is electrically powered"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The IVSI incorporates small accelerometers (dashpots) that respond immediately to vertical acceleration. This eliminates the lag inherent in a conventional VSI, which must wait for a pressure differential to develop through the calibrated leak. The IVSI provides an almost instantaneous indication of climb or descent.",
+      "topic": "Instruments",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_123",
+      "question": "The oil cooler in an engine lubrication system is used to:-",
+      "options": [
+        {"id": "a", "text": "maintain the oil at the correct operating temperature"},
+        {"id": "b", "text": "filter impurities from the oil"},
+        {"id": "c", "text": "increase oil pressure"},
+        {"id": "d", "text": "store excess oil"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The oil cooler is a heat exchanger (similar to a small radiator) that removes excess heat from the engine oil. Cooling air flows over the cooler, transferring heat from the oil to the atmosphere. Some systems include a thermostat or bypass valve to ensure the oil reaches operating temperature quickly during warm-up.",
+      "topic": "Lubrication System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_124",
+      "question": "The oil pressure gauge in a wet sump system is usually located in the oil line:-",
+      "options": [
+        {"id": "a", "text": "between the pressure pump and the engine components"},
+        {"id": "b", "text": "in the sump"},
+        {"id": "c", "text": "after the scavenge pump"},
+        {"id": "d", "text": "before the pressure pump"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The oil pressure gauge measures the pressure of oil being delivered to the engine. It is located downstream of the pressure pump and pressure relief valve, in the line feeding oil to the engine bearings and components. This gives the pilot an accurate reading of the oil pressure available for lubrication.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_125",
+      "question": "A fuel injection system differs from a carburettor system in that:-",
+      "options": [
+        {"id": "a", "text": "fuel is injected directly into each cylinder intake port"},
+        {"id": "b", "text": "fuel is mixed with air in a venturi"},
+        {"id": "c", "text": "it uses a float chamber to regulate fuel flow"},
+        {"id": "d", "text": "it is more susceptible to icing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a fuel injection system, fuel is metered and sprayed directly into each cylinder's intake port (or into the intake manifold near each cylinder). This provides more even fuel distribution, better fuel economy, and reduced susceptibility to icing compared to a carburettor. However, it can be harder to start when hot (vapour lock).",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_126",
+      "question": "The green arc on an airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "the normal operating speed range"},
+        {"id": "b", "text": "the caution range"},
+        {"id": "c", "text": "the flap operating range"},
+        {"id": "d", "text": "the never exceed speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The green arc represents the normal operating speed range. The bottom of the green arc is VS1 (stalling speed in clean configuration) and the top is VNO (maximum structural cruising speed). Flight within the green arc is safe in all conditions including turbulence.",
+      "topic": "Instruments",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_127",
+      "question": "The white arc on an airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "the flap operating range"},
+        {"id": "b", "text": "the normal operating range"},
+        {"id": "c", "text": "the caution range"},
+        {"id": "d", "text": "the manoeuvring speed range"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The white arc represents the flap operating range. The bottom is VS0 (stalling speed in landing configuration — full flaps) and the top is VFE (maximum flap extended speed). Flaps should only be extended when the airspeed is within the white arc.",
+      "topic": "Instruments",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_128",
+      "question": "The yellow arc on an airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "the caution range — smooth air only"},
+        {"id": "b", "text": "the normal operating range"},
+        {"id": "c", "text": "the flap operating range"},
+        {"id": "d", "text": "the best rate of climb speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The yellow arc is the caution range, between VNO and VNE. Flight in this range should only be conducted in smooth air and with caution. Turbulence or abrupt control inputs at these speeds could cause structural damage. The top of the yellow arc is the red line (VNE).",
+      "topic": "Instruments",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_129",
+      "question": "The red line on an airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "VNE — the never exceed speed"},
+        {"id": "b", "text": "VS0 — the stalling speed"},
+        {"id": "c", "text": "VNO — the maximum structural cruising speed"},
+        {"id": "d", "text": "VA — the manoeuvring speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The red line marks VNE (velocity never exceed). Flight at or above this speed risks structural failure. VNE is the absolute maximum speed and must never be exceeded under any circumstances. It is determined during flight testing and includes a safety margin.",
+      "topic": "Instruments",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_130",
+      "question": "A Constant Speed Unit (CSU) maintains a constant RPM by:-",
+      "options": [
+        {"id": "a", "text": "automatically adjusting the propeller blade angle"},
+        {"id": "b", "text": "adjusting the throttle setting"},
+        {"id": "c", "text": "varying the magneto timing"},
+        {"id": "d", "text": "changing the fuel mixture"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The CSU uses a governor with flyweights that sense RPM. If RPM increases above the set value, the governor increases blade angle (coarsens) to absorb more power. If RPM decreases, it decreases blade angle (fines) to reduce the load. This maintains the RPM selected by the pilot on the propeller control.",
+      "topic": "Propeller",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_131",
+      "question": "The correct sequence for reducing power in an aeroplane with a CSU is:-",
+      "options": [
+        {"id": "a", "text": "reduce manifold pressure, reduce RPM, then lean the mixture"},
+        {"id": "b", "text": "reduce RPM, reduce manifold pressure, then lean the mixture"},
+        {"id": "c", "text": "lean the mixture, reduce RPM, then reduce manifold pressure"},
+        {"id": "d", "text": "reduce manifold pressure, lean the mixture, then reduce RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When reducing power: (1) Reduce manifold pressure (throttle back) first to avoid overboosting, (2) Reduce RPM (prop lever back), (3) Lean the mixture as appropriate for the new power setting. This is the reverse of the power increase sequence (mixture, RPM, MP).",
+      "topic": "Propeller",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_132",
+      "question": "The compression ratio of a typical aircraft piston engine is approximately:-",
+      "options": [
+        {"id": "a", "text": "7:1 to 8.5:1"},
+        {"id": "b", "text": "3:1 to 4:1"},
+        {"id": "c", "text": "12:1 to 15:1"},
+        {"id": "d", "text": "20:1 to 25:1"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aircraft piston engines typically have compression ratios of 7:1 to 8.5:1. This is lower than many car engines because aviation fuel (100LL) has a specific octane rating, and higher compression would increase the risk of detonation. Diesel/jet fuel engines have much higher ratios (around 20:1).",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_133",
+      "question": "The purpose of the mixture control is to:-",
+      "options": [
+        {"id": "a", "text": "adjust the fuel-to-air ratio for different operating conditions"},
+        {"id": "b", "text": "control the engine RPM"},
+        {"id": "c", "text": "adjust the ignition timing"},
+        {"id": "d", "text": "control the propeller pitch"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The mixture control adjusts the ratio of fuel to air entering the engine. At altitude, air density decreases but the carburettor delivers the same fuel volume, making the mixture too rich. The pilot leans the mixture to restore the correct ratio. Full rich is used for take-off and landing; leaned for cruise at altitude.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_134",
+      "question": "The engine primer is used to:-",
+      "options": [
+        {"id": "a", "text": "inject fuel directly into the cylinders for cold engine starting"},
+        {"id": "b", "text": "increase fuel pressure during flight"},
+        {"id": "c", "text": "lean the mixture at altitude"},
+        {"id": "d", "text": "prevent carburettor icing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The primer is a small hand pump that draws fuel from the tank and injects it directly into one or more cylinder intake ports. This provides a combustible mixture for starting a cold engine, when the carburettor cannot vaporise fuel effectively. The primer must be locked after use to prevent it acting as an uncontrolled fuel source.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_135",
+      "question": "If the primer is left unlocked after engine start, it may cause:-",
+      "options": [
+        {"id": "a", "text": "an excessively rich mixture and rough running"},
+        {"id": "b", "text": "the engine to stop"},
+        {"id": "c", "text": "a lean mixture"},
+        {"id": "d", "text": "no effect on engine operation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An unlocked primer can allow fuel to be drawn through it by engine suction, bypassing the carburettor's metering system. This adds unmetered fuel to the mixture, making it excessively rich. The engine will run rough and may produce black smoke. Always ensure the primer is locked after starting.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_136",
+      "question": "The function of the oil filter in a lubrication system is to:-",
+      "options": [
+        {"id": "a", "text": "remove contaminants and metal particles from the oil"},
+        {"id": "b", "text": "regulate oil pressure"},
+        {"id": "c", "text": "cool the oil"},
+        {"id": "d", "text": "increase oil viscosity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The oil filter removes metal particles, carbon deposits, and other contaminants from the oil before it reaches the engine bearings. A bypass valve allows oil to flow around a blocked filter to prevent oil starvation, though unfiltered. Regular filter changes are part of scheduled maintenance.",
+      "topic": "Lubrication System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_137",
+      "question": "The brake system on most light aircraft uses:-",
+      "options": [
+        {"id": "a", "text": "hydraulic disc brakes on the main wheels"},
+        {"id": "b", "text": "pneumatic drum brakes on all wheels"},
+        {"id": "c", "text": "electric brakes on the nosewheel"},
+        {"id": "d", "text": "mechanical cable-operated brakes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Most light aircraft use hydraulic disc brakes on the main wheels only (not the nosewheel). The pilot operates them via toe pedals on the rudder pedals. Differential braking (applying more brake on one side) assists in ground steering. A parking brake holds the brakes in the applied position.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_138",
+      "question": "Differential braking is used to:-",
+      "options": [
+        {"id": "a", "text": "assist in steering the aircraft on the ground"},
+        {"id": "b", "text": "reduce the landing roll distance"},
+        {"id": "c", "text": "test the brakes before take-off"},
+        {"id": "d", "text": "prevent tyre creep"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Differential braking means applying more brake pressure on one main wheel than the other. This creates a yawing moment that helps steer the aircraft on the ground, particularly useful at low speeds where the rudder and nosewheel steering are less effective, or for tight turns during taxying.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_139",
+      "question": "An under-inflated tyre may result in:-",
+      "options": [
+        {"id": "a", "text": "excessive tread wear on the edges of the tyre"},
+        {"id": "b", "text": "excessive tread wear in the centre of the tyre"},
+        {"id": "c", "text": "improved braking"},
+        {"id": "d", "text": "reduced landing distance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An under-inflated tyre sags and the edges of the tread bear more of the load, causing them to wear faster than the centre. Under-inflation also increases the risk of tyre creep, generates more heat (risking blowout), and increases rolling resistance during take-off.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_140",
+      "question": "The purpose of a fuel strainer or gascolator is to:-",
+      "options": [
+        {"id": "a", "text": "filter contaminants and trap water before fuel reaches the carburettor or fuel injection system"},
+        {"id": "b", "text": "regulate fuel pressure"},
+        {"id": "c", "text": "measure fuel flow"},
+        {"id": "d", "text": "prevent fuel vapour lock"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The fuel strainer (gascolator) is located at the lowest point of the fuel system between the tanks and the engine. It contains a fine mesh screen that filters debris and a bowl that traps water (which is heavier than fuel and settles to the bottom). It has a drain valve for pre-flight sampling.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_141",
+      "question": "Vapour lock in a fuel system is most likely to occur:-",
+      "options": [
+        {"id": "a", "text": "in hot weather conditions, particularly with fuel-injected engines"},
+        {"id": "b", "text": "in cold weather only"},
+        {"id": "c", "text": "at high altitude only"},
+        {"id": "d", "text": "during take-off only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vapour lock occurs when fuel vaporises in the fuel lines due to high temperatures, forming gas bubbles that block fuel flow. Fuel-injected engines are more susceptible because fuel lines run close to the hot engine. It is most common during hot weather, after engine shutdown (heat soak), and at high altitude where lower pressure promotes vaporisation.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_142",
+      "question": "The function of the exhaust gas temperature (EGT) gauge is to:-",
+      "options": [
+        {"id": "a", "text": "assist the pilot in leaning the mixture for optimum engine efficiency"},
+        {"id": "b", "text": "measure the temperature of the engine cylinders"},
+        {"id": "c", "text": "indicate the oil temperature"},
+        {"id": "d", "text": "monitor the carburettor temperature"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The EGT gauge measures the temperature of exhaust gases leaving the cylinders. It is the primary instrument for precise mixture leaning. Peak EGT occurs at stoichiometric mixture. Leaning to peak EGT gives best economy; enrichening 50°F rich of peak gives best power. The EGT also helps detect abnormal combustion.",
+      "topic": "Engine Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_143",
+      "question": "The manifold pressure gauge measures:-",
+      "options": [
+        {"id": "a", "text": "the absolute pressure of the fuel/air mixture in the intake manifold"},
+        {"id": "b", "text": "the exhaust gas pressure"},
+        {"id": "c", "text": "the oil pressure"},
+        {"id": "d", "text": "the atmospheric pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The manifold pressure gauge (MAP) measures the absolute pressure in the engine intake manifold in inches of mercury (inHg). With the engine stopped, it reads atmospheric pressure. During operation, it indicates the power being developed. Higher MAP = more power. It is the primary power indicator on CSU-equipped aircraft.",
+      "topic": "Engine Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_144",
+      "question": "With the engine stopped, the manifold pressure gauge will read approximately:-",
+      "options": [
+        {"id": "a", "text": "the current atmospheric pressure (about 29.92 inHg at sea level)"},
+        {"id": "b", "text": "zero"},
+        {"id": "c", "text": "the maximum manifold pressure for the engine"},
+        {"id": "d", "text": "a negative value"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With the engine stopped, the intake manifold is open to the atmosphere through the air intake. The MAP gauge therefore reads atmospheric pressure — approximately 29.92 inHg at sea level in ISA conditions. When the engine is running, the throttle restricts airflow, and MAP drops below atmospheric pressure.",
+      "topic": "Engine Instruments",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_145",
+      "question": "A monocoque fuselage structure is one in which:-",
+      "options": [
+        {"id": "a", "text": "the skin carries all the structural loads"},
+        {"id": "b", "text": "the internal framework carries all loads and the skin is non-structural"},
+        {"id": "c", "text": "formers and stringers carry part of the load with the skin"},
+        {"id": "d", "text": "a truss framework provides all structural strength"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A true monocoque structure relies entirely on the skin to carry all structural loads — bending, torsion, and shear. It has no internal framework. This is strong but heavy (thick skin needed) and vulnerable to dents. Most aircraft use semi-monocoque construction instead, which adds internal formers and stringers to share the load.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_146",
+      "question": "The function of wing ribs is to:-",
+      "options": [
+        {"id": "a", "text": "give the wing its aerofoil shape and transfer loads to the spar"},
+        {"id": "b", "text": "carry the primary bending loads"},
+        {"id": "c", "text": "provide attachment points for the engine"},
+        {"id": "d", "text": "house the fuel tanks"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ribs are chordwise structural members that give the wing its aerofoil cross-section shape. They also transfer aerodynamic loads from the skin to the main spar and maintain the shape of the wing under load. They are not the primary load-bearing members — that role belongs to the spar.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_147",
+      "question": "The function of stringers in a semi-monocoque structure is to:-",
+      "options": [
+        {"id": "a", "text": "stiffen the skin and carry some of the longitudinal loads"},
+        {"id": "b", "text": "give the fuselage its cross-sectional shape"},
+        {"id": "c", "text": "carry all the bending loads"},
+        {"id": "d", "text": "attach the wings to the fuselage"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Stringers are longitudinal members that run along the length of the fuselage (or wing). They stiffen the skin panels, prevent buckling, and carry some of the longitudinal (bending and compression) loads. They work together with formers (which give the cross-sectional shape) and the stressed skin.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_148",
+      "question": "The function of formers (frames) in a semi-monocoque structure is to:-",
+      "options": [
+        {"id": "a", "text": "give the fuselage its cross-sectional shape"},
+        {"id": "b", "text": "carry the primary longitudinal loads"},
+        {"id": "c", "text": "stiffen the skin against buckling"},
+        {"id": "d", "text": "provide attachment for the landing gear"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Formers (also called frames or bulkheads) are transverse structural members that define the cross-sectional shape of the fuselage. They support the stringers and skin, distribute concentrated loads (such as from wing or landing gear attachments), and maintain the fuselage shape under load.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_149",
+      "question": "The ISA (International Standard Atmosphere) sea level temperature is:-",
+      "options": [
+        {"id": "a", "text": "15°C"},
+        {"id": "b", "text": "0°C"},
+        {"id": "c", "text": "20°C"},
+        {"id": "d", "text": "25°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ISA defines standard conditions at sea level: temperature 15°C, pressure 1013.25 hPa (29.92 inHg), density 1.225 kg/m³. Temperature decreases at approximately 1.98°C per 1000 ft (often rounded to 2°C/1000 ft) up to the tropopause at 36,090 ft (-56.5°C).",
+      "topic": "Atmosphere",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_150",
+      "question": "The ISA sea level pressure is:-",
+      "options": [
+        {"id": "a", "text": "1013.25 hPa"},
+        {"id": "b", "text": "1000 hPa"},
+        {"id": "c", "text": "1025 hPa"},
+        {"id": "d", "text": "29.00 inHg"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ISA standard sea level pressure is 1013.25 hPa (hectopascals), equivalent to 29.92 inches of mercury (inHg) or 14.7 psi. This is the reference pressure used for pressure altitude and flight level calculations. It is set on the altimeter sub-scale when flying at or above the transition altitude.",
+      "topic": "Atmosphere",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_151",
+      "question": "The ISA temperature lapse rate in the troposphere is approximately:-",
+      "options": [
+        {"id": "a", "text": "1.98°C per 1000 ft"},
+        {"id": "b", "text": "3°C per 1000 ft"},
+        {"id": "c", "text": "1°C per 1000 ft"},
+        {"id": "d", "text": "0.65°C per 1000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the ISA, temperature decreases at 1.98°C per 1000 ft (often rounded to 2°C/1000 ft) from sea level up to the tropopause at 36,090 ft. Above the tropopause, temperature remains constant at -56.5°C in the ISA model. This lapse rate is used for all standard atmosphere calculations.",
+      "topic": "Atmosphere",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_152",
+      "question": "The ISA density of air at sea level is:-",
+      "options": [
+        {"id": "a", "text": "1.225 kg/m³"},
+        {"id": "b", "text": "1.013 kg/m³"},
+        {"id": "c", "text": "0.900 kg/m³"},
+        {"id": "d", "text": "1.500 kg/m³"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ISA standard sea level air density is 1.225 kg/m³ (or 1225 g/m³). Air density decreases with altitude, increasing temperature, and increasing humidity. Density is critical because it directly affects lift, drag, engine power output, and propeller efficiency.",
+      "topic": "Atmosphere",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_153",
+      "question": "The tachometer on a piston-engine aircraft indicates:-",
+      "options": [
+        {"id": "a", "text": "the engine RPM"},
+        {"id": "b", "text": "the airspeed"},
+        {"id": "c", "text": "the manifold pressure"},
+        {"id": "d", "text": "the propeller blade angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The tachometer measures and displays engine revolutions per minute (RPM). On a fixed-pitch propeller aircraft, RPM is the primary power indicator. On a CSU-equipped aircraft, RPM is set by the propeller control and manifold pressure is the primary power indicator.",
+      "topic": "Engine Instruments",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_154",
+      "question": "The fuel selector valve on a typical light aircraft allows the pilot to:-",
+      "options": [
+        {"id": "a", "text": "select which fuel tank supplies fuel to the engine"},
+        {"id": "b", "text": "adjust the fuel mixture"},
+        {"id": "c", "text": "control the fuel injection pressure"},
+        {"id": "d", "text": "drain water from the fuel tanks"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The fuel selector valve allows the pilot to choose which tank feeds the engine — typically LEFT, RIGHT, BOTH, or OFF. Proper fuel management (switching tanks periodically) maintains lateral balance and ensures all available fuel is used. The OFF position is used for engine shutdown and emergencies.",
+      "topic": "Fuel System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_155",
+      "question": "An electric fuel pump is typically used:-",
+      "options": [
+        {"id": "a", "text": "as a backup to the engine-driven fuel pump and for engine starting"},
+        {"id": "b", "text": "as the primary fuel pump during cruise"},
+        {"id": "c", "text": "only during descent"},
+        {"id": "d", "text": "to transfer fuel between tanks"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The electric (auxiliary) fuel pump provides fuel pressure for engine starting (before the engine-driven pump is operating) and serves as a backup if the engine-driven pump fails. It is also used during take-off and landing as a precaution, and to purge vapour from fuel lines in hot conditions.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_156",
+      "question": "The electrical bus (busbar) in an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "a common distribution point for electrical power to all circuits"},
+        {"id": "b", "text": "a type of circuit breaker"},
+        {"id": "c", "text": "a voltage regulator"},
+        {"id": "d", "text": "a backup battery"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The electrical bus (busbar) is a central distribution bar or terminal strip to which the battery, alternator/generator, and all electrical circuits are connected. It provides a common point for distributing electrical power. Some aircraft have multiple buses (essential and non-essential) for load shedding in emergencies.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_157",
+      "question": "The purpose of an ELT (Emergency Locator Transmitter) is to:-",
+      "options": [
+        {"id": "a", "text": "transmit a distress signal on emergency frequencies to aid search and rescue"},
+        {"id": "b", "text": "communicate with air traffic control"},
+        {"id": "c", "text": "provide navigation information"},
+        {"id": "d", "text": "record flight data"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ELT automatically activates on impact (or can be manually activated) and transmits a distress signal on 121.5 MHz and 406 MHz. The 406 MHz signal is detected by COSPAS-SARSAT satellites, which relay the aircraft's position to rescue coordination centres. It is a critical survival aid.",
+      "topic": "Electrical System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_158",
+      "question": "A transponder in Mode C transmits:-",
+      "options": [
+        {"id": "a", "text": "the aircraft's identification code and pressure altitude"},
+        {"id": "b", "text": "the aircraft's position only"},
+        {"id": "c", "text": "the aircraft's identification code only"},
+        {"id": "d", "text": "voice communications"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Mode C transponder transmits the aircraft's squawk code (4-digit identification) and pressure altitude (from the encoding altimeter). This allows ATC radar to display both the aircraft's identity and altitude. Mode A transmits the squawk code only (no altitude). Mode S provides additional data capabilities.",
+      "topic": "Electrical System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_159",
+      "question": "Control cables in an aircraft are typically made of:-",
+      "options": [
+        {"id": "a", "text": "stainless steel wire rope"},
+        {"id": "b", "text": "aluminium wire"},
+        {"id": "c", "text": "nylon cord"},
+        {"id": "d", "text": "copper wire"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight control cables are made of stainless steel wire rope for strength, flexibility, and corrosion resistance. They are typically 7x7 or 7x19 construction (7 strands of 7 or 19 wires each). Cable tension must be checked regularly as it changes with temperature — cables tighten in cold weather and loosen in hot weather.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_160",
+      "question": "A split flap differs from a plain flap in that:-",
+      "options": [
+        {"id": "a", "text": "only the lower surface of the trailing edge deflects downward"},
+        {"id": "b", "text": "the entire trailing edge deflects downward"},
+        {"id": "c", "text": "it slides rearward and then deflects"},
+        {"id": "d", "text": "it has a slot between the flap and the wing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A split flap is hinged at the lower surface of the trailing edge — only the lower portion deflects downward while the upper surface remains in place. This produces more drag than a plain flap (where the entire trailing edge deflects) but a similar increase in lift. Split flaps are simple and effective speed brakes.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_161",
+      "question": "A Fowler flap increases lift more effectively than other flap types because:-",
+      "options": [
+        {"id": "a", "text": "it increases both the wing area and the camber"},
+        {"id": "b", "text": "it only increases drag"},
+        {"id": "c", "text": "it reduces the wing area"},
+        {"id": "d", "text": "it deflects further than other flap types"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A Fowler flap first slides rearward (increasing the effective wing area) and then deflects downward (increasing camber). This double action produces a greater increase in CL than plain or split flaps at the same deflection angle, making it the most aerodynamically efficient flap type for increasing lift.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_162",
+      "question": "A slotted flap improves performance over a plain flap because:-",
+      "options": [
+        {"id": "a", "text": "the slot directs high-energy air over the flap surface, delaying separation"},
+        {"id": "b", "text": "it is lighter than a plain flap"},
+        {"id": "c", "text": "it produces less drag"},
+        {"id": "d", "text": "it does not change the wing camber"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A slotted flap has a gap (slot) between the wing and the flap. When deflected, high-pressure air from below flows through the slot over the upper surface of the flap, energising the boundary layer and delaying flow separation. This allows greater flap deflection before the flow separates, producing more lift.",
+      "topic": "Airframe Structure",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_163",
+      "question": "The Hobbs meter in an aircraft records:-",
+      "options": [
+        {"id": "a", "text": "the total time the engine has been running or the aircraft has been in use"},
+        {"id": "b", "text": "the fuel consumed"},
+        {"id": "c", "text": "the distance flown"},
+        {"id": "d", "text": "the number of landings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Hobbs meter is a running-time recorder that typically activates when the master switch is on or when oil pressure is present (engine running). It records total operating time in hours and tenths. This time is used for maintenance scheduling, rental billing, and logbook entries.",
+      "topic": "Engine Instruments",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_164",
+      "question": "The purpose of a fuel vent on an aircraft fuel tank is to:-",
+      "options": [
+        {"id": "a", "text": "allow air to enter the tank as fuel is consumed, preventing a vacuum"},
+        {"id": "b", "text": "drain excess fuel during refuelling"},
+        {"id": "c", "text": "release fuel vapour to reduce fire risk"},
+        {"id": "d", "text": "measure the fuel level"}
+      ],
+      "correct_answer": "a",
+      "explanation": "As fuel is consumed, the volume in the tank must be replaced by air. Without a vent, a vacuum would form, eventually stopping fuel flow to the engine. The vent also allows air to escape during refuelling and allows for thermal expansion of fuel. A blocked vent can cause engine fuel starvation.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_165",
+      "question": "The gyro erection mechanism in an attitude indicator is designed to:-",
+      "options": [
+        {"id": "a", "text": "keep the gyro aligned with the earth's vertical"},
+        {"id": "b", "text": "increase the gyro's rotational speed"},
+        {"id": "c", "text": "prevent the gyro from precessing"},
+        {"id": "d", "text": "align the gyro with magnetic north"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The erection mechanism uses pendulous vanes (in vacuum-driven instruments) or torque motors (in electric instruments) to continuously correct the gyro back to the true vertical. Without it, friction and other forces would cause the gyro to drift from the vertical over time, giving incorrect attitude indications.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_166",
+      "question": "The magnetic compass is subject to turning errors because:-",
+      "options": [
+        {"id": "a", "text": "the compass magnet assembly is free to dip toward the nearer magnetic pole"},
+        {"id": "b", "text": "the compass fluid is affected by temperature"},
+        {"id": "c", "text": "the compass card is not perfectly balanced"},
+        {"id": "d", "text": "the earth's magnetic field is uniform"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The compass magnet assembly is suspended on a pivot and is free to dip toward the nearer magnetic pole (magnetic dip). During turns, the banking of the aircraft tilts the pivot, and the dipping magnet causes the compass to give erroneous readings. These errors are most pronounced on northerly and southerly headings.",
+      "topic": "Magnetic Compass",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_167",
+      "question": "In the Southern Hemisphere, when turning through north using only the magnetic compass:-",
+      "options": [
+        {"id": "a", "text": "the compass lags behind the actual heading"},
+        {"id": "b", "text": "the compass leads the actual heading"},
+        {"id": "c", "text": "the compass reads correctly"},
+        {"id": "d", "text": "the compass reverses direction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the Southern Hemisphere, the compass lags when turning through north and leads when turning through south. The memory aid for the Southern Hemisphere is: through North = lag (undershoot, roll out past the desired heading on the compass); through South = lead (overshoot, roll out before the desired heading).",
+      "topic": "Magnetic Compass",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_168",
+      "question": "The purpose of the compass correction card is to:-",
+      "options": [
+        {"id": "a", "text": "show the deviation on various headings so the pilot can steer the correct compass heading"},
+        {"id": "b", "text": "show the variation for the area"},
+        {"id": "c", "text": "indicate the compass serviceability date"},
+        {"id": "d", "text": "show the magnetic dip angle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The compass correction card (deviation card) is placed near the compass and lists the deviation for headings at regular intervals (typically every 30°). The pilot uses it to determine what compass heading to steer to achieve the desired magnetic heading. It is updated after each compass swing.",
+      "topic": "Magnetic Compass",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_169",
+      "question": "The purpose of the oil in a wet sump lubrication system includes:-",
+      "options": [
+        {"id": "a", "text": "lubrication, cooling, cleaning, and sealing"},
+        {"id": "b", "text": "lubrication only"},
+        {"id": "c", "text": "cooling only"},
+        {"id": "d", "text": "lubrication and cooling only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Engine oil serves four main functions: (1) Lubrication — reduces friction between moving parts, (2) Cooling — absorbs and carries away heat from engine components, (3) Cleaning — carries contaminants to the filter, (4) Sealing — helps seal the gap between piston rings and cylinder walls to maintain compression.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_170",
+      "question": "High oil pressure coupled with low oil temperature on engine start indicates:-",
+      "options": [
+        {"id": "a", "text": "normal operation — the oil is cold and viscous"},
+        {"id": "b", "text": "a blocked oil filter"},
+        {"id": "c", "text": "low oil quantity"},
+        {"id": "d", "text": "a faulty oil pressure gauge"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When the engine is first started, the oil is cold and thick (high viscosity). Cold, viscous oil resists flow, causing higher pressure readings. As the engine warms up, the oil thins, flows more easily, and the pressure drops to the normal operating range. This is normal and expected.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_171",
+      "question": "If the rotor speed of a turn indicator increases above normal, the pointer will:-",
+      "options": [
+        {"id": "a", "text": "show a lesser rate of turn than actual"},
+        {"id": "b", "text": "show a higher rate of turn than actual"},
+        {"id": "c", "text": "remain accurate"},
+        {"id": "d", "text": "oscillate erratically"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A faster-spinning gyro has greater rigidity in space and resists precession more strongly. For a given rate of turn, the gyro precesses less against the calibrated spring, resulting in less needle deflection. The instrument under-reads — it shows a lesser rate of turn than the aircraft is actually making.",
+      "topic": "Gyroscopic Instruments",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_172",
+      "question": "The spark plugs in an aircraft engine are typically:-",
+      "options": [
+        {"id": "a", "text": "two per cylinder — one fired by each magneto"},
+        {"id": "b", "text": "one per cylinder"},
+        {"id": "c", "text": "three per cylinder"},
+        {"id": "d", "text": "four per cylinder"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Each cylinder has two spark plugs, one connected to the left magneto and one to the right. This provides redundancy (engine runs on one magneto if the other fails) and more efficient combustion (two flame fronts burn the mixture faster and more completely than one).",
+      "topic": "Ignition System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_173",
+      "question": "The magneto ignition switch positions are typically:-",
+      "options": [
+        {"id": "a", "text": "OFF, RIGHT, LEFT, BOTH, START"},
+        {"id": "b", "text": "ON, OFF, START"},
+        {"id": "c", "text": "LEFT, RIGHT, START"},
+        {"id": "d", "text": "OFF, ON, BOTH"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The standard magneto switch has five positions: OFF (both magnetos grounded), RIGHT (right magneto only), LEFT (left magneto only), BOTH (both magnetos active — normal operation), and START (engages the starter motor while on BOTH). The switch grounds magnetos to stop them, rather than powering them.",
+      "topic": "Ignition System",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_174",
+      "question": "The engine-driven fuel pump in a carburettor-equipped aircraft is typically a:-",
+      "options": [
+        {"id": "a", "text": "diaphragm-type pump"},
+        {"id": "b", "text": "gear-type pump"},
+        {"id": "c", "text": "centrifugal pump"},
+        {"id": "d", "text": "piston pump"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The engine-driven fuel pump is typically a diaphragm type, operated by an eccentric cam on the engine accessory drive. It provides a steady, low-pressure fuel supply to the carburettor. The diaphragm design is simple, reliable, and self-regulating — it stops pumping when the carburettor float bowl is full.",
+      "topic": "Fuel System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_175",
+      "question": "The function of the throttle in a carburettor is to:-",
+      "options": [
+        {"id": "a", "text": "control the amount of fuel/air mixture entering the engine by varying the butterfly valve opening"},
+        {"id": "b", "text": "control the fuel-to-air ratio"},
+        {"id": "c", "text": "control the ignition timing"},
+        {"id": "d", "text": "control the propeller RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The throttle controls a butterfly valve in the carburettor venturi. Opening the throttle opens the butterfly valve, allowing more fuel/air mixture to flow into the engine, increasing power. Closing it restricts the flow, reducing power. The throttle controls the quantity of mixture, not the ratio (that is the mixture control's job).",
+      "topic": "Carburettor",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_176",
+      "question": "In a float-type carburettor, the float mechanism controls:-",
+      "options": [
+        {"id": "a", "text": "the fuel level in the float chamber by opening and closing the needle valve"},
+        {"id": "b", "text": "the air flow through the venturi"},
+        {"id": "c", "text": "the mixture ratio"},
+        {"id": "d", "text": "the throttle butterfly position"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The float rises and falls with the fuel level in the float chamber. When the fuel level drops, the float lowers and opens the needle valve, allowing fuel to flow in from the pump. When the level is correct, the float rises and closes the valve. This maintains a constant fuel level for consistent metering.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_177",
+      "question": "The venturi in a carburettor causes fuel to be drawn from the float chamber because:-",
+      "options": [
+        {"id": "a", "text": "the air accelerating through the venturi creates a low pressure area"},
+        {"id": "b", "text": "the fuel pump pushes fuel into the venturi"},
+        {"id": "c", "text": "gravity feeds fuel from the float chamber"},
+        {"id": "d", "text": "the throttle butterfly creates suction"}
+      ],
+      "correct_answer": "a",
+      "explanation": "As air flows through the narrowed venturi section, it accelerates and the static pressure drops (Bernoulli's principle). The fuel discharge nozzle is located at the throat of the venturi where pressure is lowest. The pressure difference between the float chamber (atmospheric) and the venturi throat draws fuel out and atomises it into the airstream.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_178",
+      "question": "Carburettor icing can occur at ambient temperatures as high as:-",
+      "options": [
+        {"id": "a", "text": "+25°C with high humidity"},
+        {"id": "b", "text": "+5°C only"},
+        {"id": "c", "text": "0°C only"},
+        {"id": "d", "text": "-10°C only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The temperature drop in the carburettor (from the venturi effect and fuel evaporation) can be 20-30°C. This means ice can form even when the outside air temperature is as high as +25°C, provided humidity is high enough. The most dangerous conditions are temperatures between -5°C and +20°C with visible moisture or high humidity.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_179",
+      "question": "When carburettor heat is applied and ice is present, the pilot should expect:-",
+      "options": [
+        {"id": "a", "text": "an initial further drop in RPM followed by a gradual increase as the ice melts"},
+        {"id": "b", "text": "an immediate increase in RPM"},
+        {"id": "c", "text": "no change in RPM"},
+        {"id": "d", "text": "the engine to stop momentarily"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Applying carburettor heat initially causes a further RPM drop because the warm air is less dense (richens the mixture, reduces power). As the heat melts the ice, the water passes through the engine causing temporary rough running. Then RPM gradually increases as the ice clears and normal airflow is restored.",
+      "topic": "Carburettor",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_180",
+      "question": "The advantage of a retractable undercarriage over a fixed undercarriage is:-",
+      "options": [
+        {"id": "a", "text": "reduced parasite drag in flight, resulting in higher cruise speed"},
+        {"id": "b", "text": "shorter take-off distance"},
+        {"id": "c", "text": "better ground handling"},
+        {"id": "d", "text": "lower maintenance costs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Retracting the landing gear removes it from the airflow, significantly reducing parasite (form) drag. This allows higher cruise speeds for the same power setting, or the same speed with less fuel burn. The disadvantage is added weight, complexity, cost, and the risk of a gear-up landing.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_181",
+      "question": "The green light in a landing gear indicator system indicates:-",
+      "options": [
+        {"id": "a", "text": "the gear is down and locked"},
+        {"id": "b", "text": "the gear is up and locked"},
+        {"id": "c", "text": "the gear is in transit"},
+        {"id": "d", "text": "a hydraulic system fault"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Landing gear indication typically uses: green = gear down and locked (safe to land), red = gear in transit or unsafe, no light = gear up and locked (in some systems). Three green lights (one per gear leg) confirm all gear are down and locked before landing.",
+      "topic": "Undercarriage",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_182",
+      "question": "The purpose of a squat switch (weight-on-wheels switch) is to:-",
+      "options": [
+        {"id": "a", "text": "prevent certain systems from operating when the aircraft is on the ground or in the air"},
+        {"id": "b", "text": "measure the aircraft's weight"},
+        {"id": "c", "text": "activate the brakes on landing"},
+        {"id": "d", "text": "retract the landing gear automatically"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The squat switch detects whether the aircraft is on the ground (weight on wheels) or airborne. It is used to prevent inadvertent gear retraction on the ground, enable ground-only systems (e.g., nosewheel steering), and activate air-only systems. It is typically mounted on the main gear oleo strut.",
+      "topic": "Undercarriage",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_183",
+      "question": "The trim tab on a control surface works by:-",
+      "options": [
+        {"id": "a", "text": "creating an aerodynamic force that holds the control surface in the desired position"},
+        {"id": "b", "text": "physically locking the control surface"},
+        {"id": "c", "text": "changing the shape of the wing"},
+        {"id": "d", "text": "adjusting the control cable tension"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A trim tab is a small hinged surface on the trailing edge of a primary control surface. When deflected, it creates an aerodynamic force on the control surface that holds it in the desired position without the pilot needing to maintain constant pressure on the controls. This reduces pilot workload during sustained flight conditions.",
+      "topic": "Controls",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_184",
+      "question": "To trim the aircraft nose-up, the elevator trim tab must be deflected:-",
+      "options": [
+        {"id": "a", "text": "downward (trailing edge down)"},
+        {"id": "b", "text": "upward (trailing edge up)"},
+        {"id": "c", "text": "to the left"},
+        {"id": "d", "text": "to the right"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The trim tab moves in the opposite direction to the desired control surface movement. To trim nose-up, the elevator must move up. The trim tab deflects down, which creates a downward aerodynamic force on the tab that pushes the elevator trailing edge up. This is why the trim wheel direction may seem counterintuitive.",
+      "topic": "Controls",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_185",
+      "question": "An anti-servo tab (anti-balance tab) on a stabilator:-",
+      "options": [
+        {"id": "a", "text": "moves in the same direction as the control surface to increase control forces"},
+        {"id": "b", "text": "moves in the opposite direction to reduce control forces"},
+        {"id": "c", "text": "does not move during flight"},
+        {"id": "d", "text": "only operates during landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An anti-servo tab moves in the same direction as the stabilator (all-moving tailplane). When the stabilator deflects trailing edge up, the tab also deflects up. This creates an opposing aerodynamic force that makes the controls feel heavier, preventing the stabilator from being too sensitive. It also serves as a trim tab.",
+      "topic": "Controls",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_186",
+      "question": "A balance tab (servo tab) on a control surface:-",
+      "options": [
+        {"id": "a", "text": "moves in the opposite direction to the control surface to reduce control forces"},
+        {"id": "b", "text": "moves in the same direction to increase control forces"},
+        {"id": "c", "text": "prevents flutter"},
+        {"id": "d", "text": "provides trim only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A balance (servo) tab moves in the opposite direction to the control surface. When the elevator deflects up, the balance tab deflects down. The aerodynamic force on the tab assists the pilot in moving the control surface, reducing the stick force required. This is particularly useful on larger aircraft.",
+      "topic": "Controls",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_187",
+      "question": "Mass balancing of control surfaces is used to:-",
+      "options": [
+        {"id": "a", "text": "prevent flutter by moving the centre of gravity of the surface forward of the hinge line"},
+        {"id": "b", "text": "reduce the weight of the control surface"},
+        {"id": "c", "text": "improve the aerodynamic efficiency"},
+        {"id": "d", "text": "increase the control force"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flutter is a dangerous oscillation that can destroy a control surface. It occurs when the CG of the surface is behind the hinge line. Mass balancing adds weight ahead of the hinge line (often as a lead weight in the leading edge or on a horn) to move the CG forward, preventing flutter.",
+      "topic": "Controls",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_188",
+      "question": "If both the pitot tube and its drain hole become blocked simultaneously during level flight, the ASI will:-",
+      "options": [
+        {"id": "a", "text": "freeze at the current reading and then behave like an altimeter"},
+        {"id": "b", "text": "read zero immediately"},
+        {"id": "c", "text": "over-read continuously"},
+        {"id": "d", "text": "continue to read correctly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "With both the pitot opening and drain hole blocked, the pitot pressure is trapped at its current value. In level flight at constant speed, the ASI initially reads correctly. But if altitude changes, the static pressure changes while pitot stays trapped — the ASI then acts like an altimeter (over-reads in a climb, under-reads in a descent).",
+      "topic": "Pitot-Static System",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_189",
+      "question": "If the pitot tube becomes blocked but the drain hole remains open, the ASI will:-",
+      "options": [
+        {"id": "a", "text": "gradually drop to zero as the trapped pressure equalises through the drain"},
+        {"id": "b", "text": "over-read"},
+        {"id": "c", "text": "act like an altimeter"},
+        {"id": "d", "text": "continue to read correctly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If only the pitot opening is blocked but the drain hole is open, the ram air pressure trapped in the pitot line will slowly leak out through the drain hole. The pitot pressure will equalise with static pressure, and since ASI reads the difference (pitot minus static), the reading will gradually drop to zero.",
+      "topic": "Pitot-Static System",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_190",
+      "question": "Calibrated airspeed (CAS) is obtained by correcting IAS for:-",
+      "options": [
+        {"id": "a", "text": "instrument error and position error"},
+        {"id": "b", "text": "temperature and density"},
+        {"id": "c", "text": "wind"},
+        {"id": "d", "text": "compressibility"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CAS = IAS corrected for instrument error (inaccuracies in the ASI mechanism) and position error (caused by the location of the pitot tube and static ports on the aircraft, which may not sense true undisturbed pressures in all flight conditions). CAS is then corrected for density to obtain TAS.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_191",
+      "question": "True airspeed (TAS) is obtained by correcting CAS for:-",
+      "options": [
+        {"id": "a", "text": "temperature and pressure (density)"},
+        {"id": "b", "text": "instrument and position error"},
+        {"id": "c", "text": "wind"},
+        {"id": "d", "text": "magnetic variation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TAS = CAS corrected for non-standard air density (temperature and pressure). At altitude, air is less dense, so the aircraft must fly faster (higher TAS) to produce the same dynamic pressure (same IAS/CAS). TAS is the actual speed of the aircraft through the air mass and is used for navigation calculations.",
+      "topic": "Pitot-Static System",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "atg_192",
+      "question": "The engine cooling system on most light aircraft is:-",
+      "options": [
+        {"id": "a", "text": "air-cooled, using ram air directed over finned cylinders by baffles"},
+        {"id": "b", "text": "liquid-cooled using a radiator"},
+        {"id": "c", "text": "oil-cooled only"},
+        {"id": "d", "text": "evaporative cooling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Most light aircraft piston engines are air-cooled. Ram air enters through the cowling inlet, is directed over the finned cylinder barrels and heads by baffles and deflectors, absorbs heat, and exits through the cowl flaps or rear of the cowling. This system is lighter and simpler than liquid cooling.",
+      "topic": "Engine Cooling",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_193",
+      "question": "Engine overheating is most likely to occur during:-",
+      "options": [
+        {"id": "a", "text": "a prolonged climb at high power with low airspeed"},
+        {"id": "b", "text": "cruise flight at altitude"},
+        {"id": "c", "text": "a descent at idle power"},
+        {"id": "d", "text": "taxying with cowl flaps open"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During a prolonged climb, the engine is producing high power (generating lots of heat) but the airspeed is relatively low (less cooling air flowing over the cylinders). This combination of high heat production and reduced cooling is the most common cause of engine overheating. Opening cowl flaps and enrichening the mixture helps.",
+      "topic": "Engine Cooling",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_194",
+      "question": "Shock cooling of an engine can occur when:-",
+      "options": [
+        {"id": "a", "text": "power is reduced rapidly and the aircraft descends quickly in cold air"},
+        {"id": "b", "text": "the engine is started in cold weather"},
+        {"id": "c", "text": "carburettor heat is applied"},
+        {"id": "d", "text": "the mixture is leaned at altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Shock cooling occurs when engine temperatures drop too rapidly — typically during a rapid descent at low power in cold air. The cylinders cool faster than the pistons (which retain heat longer), causing differential contraction that can crack cylinders. Avoid rapid power reductions and descend with partial power to prevent this.",
+      "topic": "Engine Cooling",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_195",
+      "question": "The purpose of the oil bypass valve (oil filter bypass) is to:-",
+      "options": [
+        {"id": "a", "text": "allow oil to bypass a blocked filter to prevent oil starvation"},
+        {"id": "b", "text": "regulate oil pressure"},
+        {"id": "c", "text": "cool the oil"},
+        {"id": "d", "text": "prevent oil from flowing backwards"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If the oil filter becomes blocked (by contaminants or cold, thick oil), the bypass valve opens to allow unfiltered oil to reach the engine components. While unfiltered oil is not ideal, it is far better than no oil at all. The bypass valve prevents engine seizure due to oil starvation from a blocked filter.",
+      "topic": "Lubrication System",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_196",
+      "question": "The advantage of a horizontally opposed engine layout used in most light aircraft is:-",
+      "options": [
+        {"id": "a", "text": "low frontal area, good balance, and smooth operation"},
+        {"id": "b", "text": "highest power-to-weight ratio"},
+        {"id": "c", "text": "simplest construction"},
+        {"id": "d", "text": "lowest fuel consumption"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Horizontally opposed (flat) engines have cylinders arranged in two banks on opposite sides of the crankcase. This gives a low frontal area (less drag), good natural balance (opposing pistons cancel vibrations), a flat profile that allows good forward visibility, and a low centre of gravity. Most Lycoming and Continental engines use this layout.",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_197",
+      "question": "The function of the crankshaft in a piston engine is to:-",
+      "options": [
+        {"id": "a", "text": "convert the reciprocating motion of the pistons into rotary motion"},
+        {"id": "b", "text": "open and close the valves"},
+        {"id": "c", "text": "drive the magnetos only"},
+        {"id": "d", "text": "compress the fuel/air mixture"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The crankshaft converts the linear (reciprocating) motion of the pistons into rotary motion to drive the propeller. The connecting rods link the pistons to the crankshaft throws (offset journals). The crankshaft also drives the camshaft, magnetos, oil pump, fuel pump, and other accessories through gears.",
+      "topic": "Engine Operation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_198",
+      "question": "The camshaft in a piston engine controls:-",
+      "options": [
+        {"id": "a", "text": "the opening and closing of the inlet and exhaust valves"},
+        {"id": "b", "text": "the ignition timing"},
+        {"id": "c", "text": "the fuel injection"},
+        {"id": "d", "text": "the propeller pitch"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The camshaft has lobes (cams) that push against the valve lifters (tappets), opening the inlet and exhaust valves at the correct time in the engine cycle. The camshaft is driven by the crankshaft at half crankshaft speed (one camshaft revolution per two crankshaft revolutions in a four-stroke engine).",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_199",
+      "question": "The function of piston rings is to:-",
+      "options": [
+        {"id": "a", "text": "seal the combustion chamber and control oil consumption"},
+        {"id": "b", "text": "connect the piston to the crankshaft"},
+        {"id": "c", "text": "cool the piston"},
+        {"id": "d", "text": "reduce the weight of the piston"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Piston rings serve two main purposes: compression rings seal the gap between the piston and cylinder wall to prevent combustion gases from escaping into the crankcase (blow-by), and oil control rings scrape excess oil from the cylinder wall and return it to the sump, preventing oil from entering the combustion chamber.",
+      "topic": "Engine Operation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "atg_200",
+      "question": "The connecting rod in a piston engine connects:-",
+      "options": [
+        {"id": "a", "text": "the piston to the crankshaft"},
+        {"id": "b", "text": "the crankshaft to the propeller"},
+        {"id": "c", "text": "the camshaft to the valves"},
+        {"id": "d", "text": "the magneto to the spark plugs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The connecting rod (con rod) links the piston to the crankshaft. The small end connects to the piston via the gudgeon (wrist) pin, and the big end connects to the crankshaft throw via a bearing. It transmits the force from the expanding gases acting on the piston to the crankshaft, converting linear motion to rotary motion.",
+      "topic": "Engine Operation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

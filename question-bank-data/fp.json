@@ -1,0 +1,2807 @@
+{
+  "subject": "Flight Planning",
+  "description": "SACAA PPL Flight Planning question bank covering weight and balance, performance calculations, fuel planning, density altitude, runway calculations, and flight planning procedures.",
+  "total_questions": 150,
+  "questions": [
+    {
+      "id": "fp_001",
+      "question": "A loaded aircraft's CG is 88.8 inches, weight 2300 lbs, MAUW 2500 lbs. The pilot decides to add an additional 22 USG of fuel, specific weight 6 lbs/USG, (arm 93.0 inches). The new CG is:-",
+      "options": [
+        {"id": "a", "text": "89.0 inches"},
+        {"id": "b", "text": "89.5 inches"},
+        {"id": "c", "text": "88.5 inches"},
+        {"id": "d", "text": "90.0 inches"}
+      ],
+      "correct_answer": "a",
+      "explanation": "New fuel weight = 22 × 6 = 132 lbs. New total weight = 2300 + 132 = 2432 lbs. Original moment = 2300 × 88.8 = 204,240. Fuel moment = 132 × 93.0 = 12,276. New total moment = 204,240 + 12,276 = 216,516. New CG = 216,516 ÷ 2432 = 89.0 inches.",
+      "topic": "Weight and Balance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_002",
+      "question": "A loaded aircraft's CG is 88.3 inches, weight 2450 lbs. During flight the aircraft will burn off 280 lbs of fuel (arm 93.0 inches). The landing CG is:-",
+      "options": [
+        {"id": "a", "text": "87.7 inches"},
+        {"id": "b", "text": "88.3 inches"},
+        {"id": "c", "text": "88.9 inches"},
+        {"id": "d", "text": "87.0 inches"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Original moment = 2450 × 88.3 = 216,335. Fuel moment removed = 280 × 93.0 = 26,040. New moment = 216,335 - 26,040 = 190,295. New weight = 2450 - 280 = 2170 lbs. New CG = 190,295 ÷ 2170 = 87.7 inches. When fuel (aft of CG) is burned, CG moves forward.",
+      "topic": "Weight and Balance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_003",
+      "question": "A loaded aircraft's CG is 89.2 inches, weight 2470 lbs. During flight the aircraft burns off 173 lbs of fuel (arm 93.0 inches). The landing CG will have:-",
+      "options": [
+        {"id": "a", "text": "moved forward"},
+        {"id": "b", "text": "moved aft"},
+        {"id": "c", "text": "remained the same"},
+        {"id": "d", "text": "moved to the datum"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The fuel arm (93.0 inches) is aft of the current CG (89.2 inches). When weight is removed from behind the CG, the CG moves forward toward the remaining weight. This is a fundamental principle: removing weight aft of CG moves CG forward; removing weight forward of CG moves CG aft.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_004",
+      "question": "Airfield elevation 1200 ft, QNH 1003 hPa. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "1500 ft"},
+        {"id": "b", "text": "1200 ft"},
+        {"id": "c", "text": "900 ft"},
+        {"id": "d", "text": "1800 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = Elevation + (1013 - QNH) × 30. Pressure altitude = 1200 + (1013 - 1003) × 30 = 1200 + (10 × 30) = 1200 + 300 = 1500 ft. When QNH is below 1013 hPa, pressure altitude is higher than elevation.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_005",
+      "question": "An increase in temperature at a particular airfield would have the effect of:-",
+      "options": [
+        {"id": "a", "text": "increasing the density altitude"},
+        {"id": "b", "text": "decreasing the density altitude"},
+        {"id": "c", "text": "no effect on density altitude"},
+        {"id": "d", "text": "decreasing pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude increases with temperature. Higher temperature causes air to expand and become less dense. Less dense air reduces aircraft performance: longer takeoff runs, reduced climb rate, and lower engine power. Density altitude = Pressure altitude + [120 × (OAT - ISA temp)].",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_006",
+      "question": "300 litres of fuel, specific gravity 0.72. The weight of the fuel in lbs is:-",
+      "options": [
+        {"id": "a", "text": "476 lbs"},
+        {"id": "b", "text": "216 lbs"},
+        {"id": "c", "text": "417 lbs"},
+        {"id": "d", "text": "300 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weight (kg) = Volume (litres) × SG. Weight = 300 × 0.72 = 216 kg. Convert to lbs: 216 × 2.205 = 476 lbs. Alternatively: 1 litre of water weighs 1 kg or 2.205 lbs, so 1 litre of fuel (SG 0.72) weighs 0.72 × 2.205 = 1.588 lbs. 300 × 1.588 = 476 lbs.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_007",
+      "question": "Specific gravity 0.73, fuel weight 108 kg. The volume of fuel in litres is:-",
+      "options": [
+        {"id": "a", "text": "148 litres"},
+        {"id": "b", "text": "79 litres"},
+        {"id": "c", "text": "108 litres"},
+        {"id": "d", "text": "200 litres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Volume (litres) = Weight (kg) ÷ SG. Volume = 108 ÷ 0.73 = 147.95 ≈ 148 litres. This is the reverse calculation: if you know the weight and specific gravity, divide to find volume.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_008",
+      "question": "The term 'utility category' means that an aircraft:-",
+      "options": [
+        {"id": "a", "text": "may not be used for intentional spins or aerobatics"},
+        {"id": "b", "text": "may be used for all aerobatic manoeuvres"},
+        {"id": "c", "text": "has no load factor limitations"},
+        {"id": "d", "text": "is only for cargo"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aircraft categories: Normal (no aerobatics, +3.8g to -1.52g), Utility (limited aerobatics excluding spins, +4.4g to -1.76g), Aerobatic (all manoeuvres including spins, +6.0g to -3.0g). Utility category allows steep turns, lazy eights, chandelles, but not intentional spins or full aerobatics.",
+      "topic": "Aircraft Categories",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_009",
+      "question": "The maximum zero fuel weight of an aircraft is the empty weight of the aircraft:-",
+      "options": [
+        {"id": "a", "text": "plus crew, passengers, baggage and any cargo"},
+        {"id": "b", "text": "plus only unusable fuel"},
+        {"id": "c", "text": "plus all fuel"},
+        {"id": "d", "text": "with no load"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum Zero Fuel Weight (MZFW) is the maximum weight excluding usable fuel. MZFW = Basic Empty Weight + Payload (crew, passengers, baggage, cargo). It exists because fuel in the wings provides structural support. Exceeding MZFW with payload can overstress the wing root even if total weight is within limits.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_010",
+      "question": "An aircraft flies from A to B with 27 USG of fuel on board. The trip fuel is 14 USG and alternate and reserve fuel is 9 USG. If the holding fuel flow is 6.5 USG/hr, the aircraft could hold overhead B, without using the reserve fuel, for:-",
+      "options": [
+        {"id": "a", "text": "37 minutes"},
+        {"id": "b", "text": "25 minutes"},
+        {"id": "c", "text": "45 minutes"},
+        {"id": "d", "text": "60 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel available for holding = Total fuel - Trip fuel - Alternate and reserve fuel. Holding fuel = 27 - 14 - 9 = 4 USG. Holding time = 4 USG ÷ 6.5 USG/hr = 0.615 hours = 37 minutes.",
+      "topic": "Fuel Planning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_011",
+      "question": "The maximum ramp weight of an aircraft:-",
+      "options": [
+        {"id": "a", "text": "is the maximum take-off weight plus taxi fuel"},
+        {"id": "b", "text": "is the same as maximum take-off weight"},
+        {"id": "c", "text": "is less than maximum take-off weight"},
+        {"id": "d", "text": "includes landing fuel"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum Ramp Weight (MRW) = Maximum Take-Off Weight (MTOW) + Taxi fuel. The aircraft may be heavier on the ramp than the MTOW because fuel will be burned during taxi and run-up before take-off. Typical taxi fuel allowance is 5-10 lbs or 1-2 USG.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_012",
+      "question": "A stopway:-",
+      "options": [
+        {"id": "a", "text": "is not part of a clearway"},
+        {"id": "b", "text": "is the same as a clearway"},
+        {"id": "c", "text": "is part of the runway"},
+        {"id": "d", "text": "can be used for landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Stopway: paved area beyond runway end, capable of supporting aircraft during aborted take-off, not suitable for normal operations. Clearway: obstacle-free area beyond runway, at least 150m wide, no stopway. TORA = runway length. TODA = TORA + clearway. ASDA = TORA + stopway. LDA = runway length - displaced threshold.",
+      "topic": "Runway Definitions",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_013",
+      "question": "A clearway:-",
+      "options": [
+        {"id": "a", "text": "does not include the stopway"},
+        {"id": "b", "text": "includes the stopway"},
+        {"id": "c", "text": "is the same as the runway"},
+        {"id": "d", "text": "is used for landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Clearway is an obstacle-free area beyond the runway end, extending from the end of the runway (or stopway if present). It does not include the stopway. Clearway allows the aircraft to climb to screen height (50 ft) after take-off. Maximum clearway length is typically 50% of TORA.",
+      "topic": "Runway Definitions",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_014",
+      "question": "Runway length 1550 metres, displaced threshold 30 metres. The take-off distance available (TODA) is:-",
+      "options": [
+        {"id": "a", "text": "1550 metres (assuming no clearway)"},
+        {"id": "b", "text": "1520 metres"},
+        {"id": "c", "text": "1580 metres"},
+        {"id": "d", "text": "1600 metres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TODA = TORA + clearway. TORA (Take-Off Run Available) = full runway length = 1550 m. Displaced threshold only affects landing distance available (LDA), not TODA. LDA = 1550 - 30 = 1520 m. If no clearway is stated, TODA = TORA = 1550 m.",
+      "topic": "Runway Definitions",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_015",
+      "question": "An aircraft in level flight covers a distance of 158 nm at a groundspeed of 95 kts, consuming 12.5 USG. The fuel flow is:-",
+      "options": [
+        {"id": "a", "text": "7.5 USG/hr"},
+        {"id": "b", "text": "8.0 USG/hr"},
+        {"id": "c", "text": "6.5 USG/hr"},
+        {"id": "d", "text": "9.0 USG/hr"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time = Distance ÷ Groundspeed = 158 ÷ 95 = 1.663 hours. Fuel flow = Fuel used ÷ Time = 12.5 ÷ 1.663 = 7.52 ≈ 7.5 USG/hr.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_016",
+      "question": "On final approach to land an aircraft encounters a sudden decrease in the headwind component. The aircraft:-",
+      "options": [
+        {"id": "a", "text": "will tend to sink below the glidepath"},
+        {"id": "b", "text": "will start to overshoot"},
+        {"id": "c", "text": "will maintain the glidepath"},
+        {"id": "d", "text": "will climb"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Decreasing headwind (or increasing tailwind) causes: (1) Temporary decrease in airspeed, (2) Loss of lift, (3) Aircraft sinks below glidepath. Pilot must add power and/or lower pitch to maintain glidepath. Wind shear on approach is dangerous — be prepared to go around.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_017",
+      "question": "In order to avoid wake turbulence when landing behind a heavy aircraft which has just landed, a lighter aircraft should:-",
+      "options": [
+        {"id": "a", "text": "attempt to land after the point at which the heavy aircraft landed"},
+        {"id": "b", "text": "land before the heavy aircraft's touchdown point"},
+        {"id": "c", "text": "land on the same spot"},
+        {"id": "d", "text": "land immediately behind"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wake vortices are generated from the moment the heavy aircraft rotates and cease when it touches down. Land beyond the heavy aircraft's touchdown point to avoid its wake. Also allow 2-3 minutes separation. Wake vortices sink and drift with wind — stay upwind and above the heavy aircraft's flight path.",
+      "topic": "Wake Turbulence",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_018",
+      "question": "Runway 09 threshold 2250 ft, Runway 27 threshold 2200 ft, length 4300 ft. The percentage slope of runway 27 is:-",
+      "options": [
+        {"id": "a", "text": "1.16% upslope"},
+        {"id": "b", "text": "1.16% downslope"},
+        {"id": "c", "text": "2.32% upslope"},
+        {"id": "d", "text": "0% (level)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Runway 27 goes from 2200 ft (threshold) to 2250 ft (opposite end). Elevation change = 2250 - 2200 = 50 ft (upslope). Slope % = (elevation change ÷ length) × 100 = (50 ÷ 4300) × 100 = 1.16% upslope. Upslope reduces take-off performance, improves landing performance.",
+      "topic": "Runway Calculations",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_019",
+      "question": "Aircraft empty weight 1500 lbs, crew, passengers and baggage 900 lbs, trip and reserve fuel 180 lbs, taxi fuel 5 lbs, maximum take-off weight 2580 lbs. The maximum ramp weight is:-",
+      "options": [
+        {"id": "a", "text": "2585 lbs"},
+        {"id": "b", "text": "2580 lbs"},
+        {"id": "c", "text": "2575 lbs"},
+        {"id": "d", "text": "2600 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum Ramp Weight = MTOW + Taxi fuel = 2580 + 5 = 2585 lbs. Actual ramp weight = 1500 + 900 + 180 + 5 = 2585 lbs (at the limit).",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_020",
+      "question": "Aeroplane empty weight 1490 lbs, CG 84.7 inches, pilot and front passenger 350 lbs located at 77.8 inches, fuel 210 lbs located at 93 inches, aft passenger 100 lbs located at 116.6 inches, no baggage. The loaded CG of the aeroplane is:-",
+      "options": [
+        {"id": "a", "text": "85.87 inches"},
+        {"id": "b", "text": "84.7 inches"},
+        {"id": "c", "text": "86.5 inches"},
+        {"id": "d", "text": "85.0 inches"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Empty moment = 1490 × 84.7 = 126,203. Front moment = 350 × 77.8 = 27,230. Fuel moment = 210 × 93 = 19,530. Aft moment = 100 × 116.6 = 11,660. Total moment = 126,203 + 27,230 + 19,530 + 11,660 = 184,623. Total weight = 1490 + 350 + 210 + 100 = 2150 lbs. CG = 184,623 ÷ 2150 = 85.87 inches.",
+      "topic": "Weight and Balance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_021",
+      "question": "Runway length 1020 metres, stopway 30 metres. The landing distance available is:-",
+      "options": [
+        {"id": "a", "text": "1020 metres"},
+        {"id": "b", "text": "1050 metres"},
+        {"id": "c", "text": "990 metres"},
+        {"id": "d", "text": "1000 metres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Landing Distance Available (LDA) = runway length - displaced threshold. Stopway is not used for landing, only for aborted take-off. LDA = 1020 m (assuming no displaced threshold).",
+      "topic": "Runway Definitions",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_022",
+      "question": "The presence of a permanently displaced threshold:-",
+      "options": [
+        {"id": "a", "text": "reduces the landing distance available"},
+        {"id": "b", "text": "increases the take-off distance available"},
+        {"id": "c", "text": "has no effect on any distances"},
+        {"id": "d", "text": "increases the landing distance available"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Displaced threshold: the beginning of the landing portion is displaced from the runway end. Effect: LDA is reduced (cannot land on displaced portion). TORA, TODA, and ASDA are unaffected (can use full runway for take-off). Displaced threshold is marked with arrows.",
+      "topic": "Runway Definitions",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_023",
+      "question": "The presence of a stopway:-",
+      "options": [
+        {"id": "a", "text": "will not affect the landing distance available"},
+        {"id": "b", "text": "will increase the landing distance available"},
+        {"id": "c", "text": "will reduce the take-off run available"},
+        {"id": "d", "text": "will reduce the landing distance available"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Stopway only affects ASDA (Accelerate-Stop Distance Available) = TORA + stopway. It does not affect LDA because stopway cannot be used for normal landing, only for aborted take-off. TORA and TODA are also unaffected by stopway.",
+      "topic": "Runway Definitions",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_024",
+      "question": "Runway 31 threshold 725 ft, Runway 13 threshold 800 ft, length 3400 ft. The percentage slope of runway 13 is:-",
+      "options": [
+        {"id": "a", "text": "2.2% downslope"},
+        {"id": "b", "text": "2.2% upslope"},
+        {"id": "c", "text": "1.1% downslope"},
+        {"id": "d", "text": "0% (level)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Runway 13 goes from 800 ft (threshold) to 725 ft (opposite end). Elevation change = 725 - 800 = -75 ft (downslope). Slope % = (75 ÷ 3400) × 100 = 2.2% downslope. Downslope improves take-off performance, reduces landing performance.",
+      "topic": "Runway Calculations",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_025",
+      "question": "Aquaplaning is more likely to occur on a wet runway at:-",
+      "options": [
+        {"id": "a", "text": "high groundspeeds"},
+        {"id": "b", "text": "low groundspeeds"},
+        {"id": "c", "text": "any groundspeed"},
+        {"id": "d", "text": "zero groundspeed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aquaplaning (hydroplaning) occurs when a layer of water builds up between the tyres and runway, causing loss of braking and directional control. Aquaplaning speed (kts) ≈ 9 × √tyre pressure (psi). Higher speeds increase aquaplaning risk. Prevention: reduce speed before landing on wet runways, use proper tyre pressure.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_026",
+      "question": "A factor which may increase the possibility of aquaplaning is:-",
+      "options": [
+        {"id": "a", "text": "under-inflated tyres"},
+        {"id": "b", "text": "over-inflated tyres"},
+        {"id": "c", "text": "new tyres"},
+        {"id": "d", "text": "dry runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Under-inflated tyres increase aquaplaning risk because they reduce the tyre footprint pressure, making it easier for water to build up between tyre and runway. Other factors increasing aquaplaning: worn tyres (reduced tread depth), standing water, high speed, smooth runway surface. Over-inflated tyres actually reduce aquaplaning risk but cause other problems.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_027",
+      "question": "The basic empty weight of an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "the empty weight of an aircraft including unusable fuel, full oil and fixed equipment"},
+        {"id": "b", "text": "the weight with no fuel or oil"},
+        {"id": "c", "text": "the weight including crew"},
+        {"id": "d", "text": "the maximum weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Basic Empty Weight (BEW) = airframe + engine + fixed equipment + unusable fuel + full oil + hydraulic fluid. It does NOT include: usable fuel, crew, passengers, baggage, cargo. BEW is the starting point for all weight and balance calculations.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_028",
+      "question": "An aircraft achieves a performance of 3.5 air nautical miles/litre, fuel flow is 8.5 USG/hr, tailwind component 7 kts. The groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "120 kts"},
+        {"id": "b", "text": "113 kts"},
+        {"id": "c", "text": "127 kts"},
+        {"id": "d", "text": "106 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel flow = 8.5 USG/hr = 8.5 × 3.785 = 32.17 litres/hr. Distance per hour (TAS) = 32.17 litres/hr × 3.5 nm/litre = 112.6 kts. Groundspeed = TAS + tailwind = 112.6 + 7 = 119.6 ≈ 120 kts.",
+      "topic": "Fuel Calculations",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_029",
+      "question": "An aircraft flies from A to B, distance 225 nm, groundspeed 100 kts, fuel flow 8.5 USG/hr. Taxi, take-off and climb fuel is 3.3 USG. If the total fuel on board is 35 USG, the reserve fuel is:-",
+      "options": [
+        {"id": "a", "text": "12.6 USG"},
+        {"id": "b", "text": "11.7 USG"},
+        {"id": "c", "text": "10.0 USG"},
+        {"id": "d", "text": "15.0 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time A to B = 225 ÷ 100 = 2.25 hours. Trip fuel = 2.25 × 8.5 = 19.125 USG. Total fuel used = taxi/climb fuel + trip fuel = 3.3 + 19.125 = 22.425 USG. Reserve = Total fuel - fuel used = 35 - 22.425 = 12.575 ≈ 12.6 USG.",
+      "topic": "Fuel Planning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_030",
+      "question": "Aeroplane empty weight 1380 lbs, CG 84.5 inches, pilot and front passenger 310 lbs located at 77.8 inches, fuel 275 lbs located at 94 inches, aft passenger 80 lbs located at 116.5 inches, no baggage. The loaded CG of the aeroplane is:-",
+      "options": [
+        {"id": "a", "text": "86.01 inches"},
+        {"id": "b", "text": "84.5 inches"},
+        {"id": "c", "text": "87.0 inches"},
+        {"id": "d", "text": "85.0 inches"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Empty moment = 1380 × 84.5 = 116,610. Front moment = 310 × 77.8 = 24,118. Fuel moment = 275 × 94 = 25,850. Aft moment = 80 × 116.5 = 9,320. Total moment = 116,610 + 24,118 + 25,850 + 9,320 = 175,898. Total weight = 1380 + 310 + 275 + 80 = 2045 lbs. CG = 175,898 ÷ 2045 = 86.01 inches.",
+      "topic": "Weight and Balance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "fp_031",
+      "question": "The density altitude at an airport is affected by:-",
+      "options": [
+        {"id": "a", "text": "temperature, pressure altitude, and humidity"},
+        {"id": "b", "text": "only temperature"},
+        {"id": "c", "text": "only pressure"},
+        {"id": "d", "text": "wind speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude is affected by: (1) Pressure altitude (higher = higher density altitude), (2) Temperature (higher = higher density altitude), (3) Humidity (higher = higher density altitude, though effect is smaller). High density altitude = poor aircraft performance. Calculate: DA = PA + [120 × (OAT - ISA temp)].",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_032",
+      "question": "The effect of high density altitude on aircraft performance is:-",
+      "options": [
+        {"id": "a", "text": "longer take-off run, reduced rate of climb, and reduced engine power"},
+        {"id": "b", "text": "shorter take-off run and improved climb"},
+        {"id": "c", "text": "no effect on performance"},
+        {"id": "d", "text": "only affects landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "High density altitude (thin air) causes: (1) Longer take-off run (less lift), (2) Reduced rate of climb (less thrust and lift), (3) Reduced engine power (less oxygen for combustion), (4) Higher true airspeed for same indicated airspeed, (5) Longer landing roll. High, hot, and humid conditions are most dangerous.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_033",
+      "question": "When calculating weight and balance, the datum is:-",
+      "options": [
+        {"id": "a", "text": "an imaginary vertical plane from which all horizontal distances are measured"},
+        {"id": "b", "text": "the centre of gravity"},
+        {"id": "c", "text": "the centre of the aircraft"},
+        {"id": "d", "text": "the nose of the aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The datum is an arbitrary reference point chosen by the manufacturer, usually forward of the aircraft (often the firewall or nose). All arms (horizontal distances) are measured from the datum. Moment = Weight × Arm. The datum location is specified in the aircraft's weight and balance documentation.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_034",
+      "question": "The arm in weight and balance calculations is:-",
+      "options": [
+        {"id": "a", "text": "the horizontal distance from the datum to the centre of gravity of an item"},
+        {"id": "b", "text": "the weight of an item"},
+        {"id": "c", "text": "the vertical distance from the ground"},
+        {"id": "d", "text": "the total moment"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Arm is the horizontal distance from the datum to the centre of gravity of an item, measured in inches or centimetres. Items forward of the datum may have negative arms (depending on convention). Moment = Weight × Arm. The arm determines how much leverage an item has on the CG position.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_035",
+      "question": "The moment in weight and balance calculations is:-",
+      "options": [
+        {"id": "a", "text": "the product of weight and arm (weight × distance from datum)"},
+        {"id": "b", "text": "the same as weight"},
+        {"id": "c", "text": "the distance from datum"},
+        {"id": "d", "text": "the centre of gravity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Moment = Weight × Arm. It represents the tendency of a weight to cause rotation about the datum. Moments are usually expressed in lb-inches or kg-cm. Total moment = sum of all individual moments. CG = Total moment ÷ Total weight.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_036",
+      "question": "If the CG is too far aft, the aircraft will:-",
+      "options": [
+        {"id": "a", "text": "be less stable and may be difficult to recover from a stall"},
+        {"id": "b", "text": "be more stable"},
+        {"id": "c", "text": "have better performance"},
+        {"id": "d", "text": "have no handling issues"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aft CG (near aft limit) causes: (1) Reduced longitudinal stability, (2) Lighter elevator forces (easier to over-control), (3) Difficulty recovering from stall or spin, (4) Reduced stall margin. Extreme aft CG can make the aircraft uncontrollable. Always check CG is within limits before flight.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_037",
+      "question": "If the CG is too far forward, the aircraft will:-",
+      "options": [
+        {"id": "a", "text": "require more elevator force to rotate on take-off and may have a higher stall speed"},
+        {"id": "b", "text": "be less stable"},
+        {"id": "c", "text": "be easier to control"},
+        {"id": "d", "text": "have better fuel economy"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Forward CG (near forward limit) causes: (1) Increased longitudinal stability (more stable but less manoeuvrable), (2) Heavier elevator forces, (3) Higher stall speed, (4) Difficulty rotating on take-off, (5) Reduced elevator effectiveness. Extreme forward CG can prevent rotation or flare.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_038",
+      "question": "VFR fuel requirements for a day flight are:-",
+      "options": [
+        {"id": "a", "text": "fuel to destination plus 30 minutes reserve at normal cruise"},
+        {"id": "b", "text": "fuel to destination only"},
+        {"id": "c", "text": "fuel to destination plus 45 minutes reserve"},
+        {"id": "d", "text": "fuel to destination plus 1 hour reserve"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR fuel requirements (SACAA): Day - fuel to destination + 30 minutes reserve. Night - fuel to destination + 45 minutes reserve. These are legal minimums. Good practice: add fuel for alternate airport, holding, and additional reserve. Always plan conservatively with fuel.",
+      "topic": "Fuel Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_039",
+      "question": "VFR fuel requirements for a night flight are:-",
+      "options": [
+        {"id": "a", "text": "fuel to destination plus 45 minutes reserve at normal cruise"},
+        {"id": "b", "text": "fuel to destination plus 30 minutes reserve"},
+        {"id": "c", "text": "fuel to destination only"},
+        {"id": "d", "text": "fuel to destination plus 1 hour reserve"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR night fuel requirements: fuel to destination + 45 minutes reserve (15 minutes more than day). Night operations have additional risks (reduced visibility, fewer landing options), hence the extra reserve. IFR requirements are typically higher (e.g., fuel to destination + alternate + 45 minutes).",
+      "topic": "Fuel Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_040",
+      "question": "The specific gravity of AVGAS is typically:-",
+      "options": [
+        {"id": "a", "text": "0.72"},
+        {"id": "b", "text": "1.0"},
+        {"id": "c", "text": "0.85"},
+        {"id": "d", "text": "0.50"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AVGAS (aviation gasoline) specific gravity is typically 0.72 (range 0.71-0.73). This means 1 litre weighs 0.72 kg or 1.59 lbs. 1 US gallon weighs approximately 6 lbs. Jet A-1 (turbine fuel) has SG of approximately 0.80. Always use actual SG for accurate fuel weight calculations.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_041",
+      "question": "One US gallon of AVGAS (SG 0.72) weighs approximately:-",
+      "options": [
+        {"id": "a", "text": "6 lbs"},
+        {"id": "b", "text": "8 lbs"},
+        {"id": "c", "text": "5 lbs"},
+        {"id": "d", "text": "10 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 US gallon = 3.785 litres. 1 litre of AVGAS (SG 0.72) weighs 0.72 kg = 1.59 lbs. 1 US gallon weighs 3.785 × 1.59 = 6.02 ≈ 6 lbs. For quick calculations, use 6 lbs/USG for AVGAS.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_042",
+      "question": "The take-off distance required increases with:-",
+      "options": [
+        {"id": "a", "text": "increased weight, increased density altitude, tailwind, and upslope runway"},
+        {"id": "b", "text": "decreased weight and headwind"},
+        {"id": "c", "text": "low density altitude"},
+        {"id": "d", "text": "downslope runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Take-off distance increases with: (1) Higher weight (more inertia, higher stall speed), (2) Higher density altitude (reduced thrust and lift), (3) Tailwind (higher groundspeed needed), (4) Upslope runway (gravity component opposing acceleration), (5) Wet/soft/grass runway, (6) Flaps up. Opposite conditions reduce take-off distance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_043",
+      "question": "The landing distance required increases with:-",
+      "options": [
+        {"id": "a", "text": "increased weight, increased density altitude, tailwind, and downslope runway"},
+        {"id": "b", "text": "decreased weight and headwind"},
+        {"id": "c", "text": "low density altitude"},
+        {"id": "d", "text": "upslope runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Landing distance increases with: (1) Higher weight (more kinetic energy to dissipate), (2) Higher density altitude (higher true airspeed), (3) Tailwind (higher groundspeed), (4) Downslope runway (gravity assists motion), (5) Wet/contaminated runway (reduced braking), (6) No flaps. Plan conservatively for landing performance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_044",
+      "question": "A 10-knot headwind will:-",
+      "options": [
+        {"id": "a", "text": "decrease take-off distance and decrease landing distance"},
+        {"id": "b", "text": "increase take-off distance and increase landing distance"},
+        {"id": "c", "text": "have no effect"},
+        {"id": "d", "text": "decrease take-off distance but increase landing distance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Headwind reduces groundspeed for a given airspeed, therefore: (1) Shorter take-off run (reach flying speed in less distance), (2) Shorter landing roll (touch down at lower groundspeed). Headwind is beneficial for take-off and landing. Tailwind has opposite (detrimental) effects.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_045",
+      "question": "The effect of a 2% upslope runway on take-off performance is:-",
+      "options": [
+        {"id": "a", "text": "increased take-off distance (approximately 10% increase per 1% slope)"},
+        {"id": "b", "text": "decreased take-off distance"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only affects landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Upslope runway increases take-off distance because gravity opposes acceleration. Rule of thumb: 10% increase in take-off distance per 1% upslope. 2% upslope ≈ 20% increase. Conversely, downslope reduces take-off distance but increases landing distance. Prefer to take off downhill and land uphill if wind permits.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_046",
+      "question": "The effect of wet grass runway on take-off performance is:-",
+      "options": [
+        {"id": "a", "text": "significantly increased take-off distance (up to 60% increase)"},
+        {"id": "b", "text": "slightly decreased take-off distance"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only affects landing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wet grass significantly increases take-off distance: (1) Increased rolling resistance, (2) Reduced acceleration, (3) Possible wheel drag. Typical increases: dry grass +20%, wet grass +25-60%. Long grass is even worse. Soft/muddy fields can make take-off impossible. Check POH for grass runway performance data.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_047",
+      "question": "When using take-off performance charts, the distances given are typically for:-",
+      "options": [
+        {"id": "a", "text": "a paved, level, dry runway with zero wind"},
+        {"id": "b", "text": "any runway condition"},
+        {"id": "c", "text": "grass runways only"},
+        {"id": "d", "text": "wet runways"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Performance charts typically assume: paved, level, dry runway, zero wind, standard atmospheric conditions, and proper technique. Real-world conditions usually degrade performance. Apply corrections for: wind, slope, surface (grass/wet), density altitude, and technique. Add safety margins (typically 1.5× for take-off, 1.43× for landing).",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_048",
+      "question": "The '50-foot obstacle' in take-off and landing performance refers to:-",
+      "options": [
+        {"id": "a", "text": "the distance required to clear a 50-foot obstacle at the end of the runway"},
+        {"id": "b", "text": "the runway length"},
+        {"id": "c", "text": "the aircraft height"},
+        {"id": "d", "text": "the cloud base"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Take-off distance over 50 ft obstacle: distance from brake release to clearing a 50 ft obstacle. Landing distance over 50 ft obstacle: distance from 50 ft height to full stop. Ground roll: distance without obstacle clearance. Always use obstacle clearance distance for safety unless runway is clear of obstacles.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_049",
+      "question": "The recommended safety factor for take-off distance calculations is:-",
+      "options": [
+        {"id": "a", "text": "multiply calculated distance by 1.5 (50% safety margin)"},
+        {"id": "b", "text": "use calculated distance exactly"},
+        {"id": "c", "text": "multiply by 2.0"},
+        {"id": "d", "text": "multiply by 1.1"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Recommended safety factors: Take-off distance × 1.5 (or use 1.25× for obstacle clearance distance). Landing distance × 1.43 (or 1.67× for wet/contaminated). These account for: pilot technique variations, aircraft condition, environmental factors, and chart inaccuracies. Conservative planning prevents accidents.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_050",
+      "question": "The term 'balanced field length' refers to:-",
+      "options": [
+        {"id": "a", "text": "the runway length where accelerate-stop distance equals accelerate-go distance"},
+        {"id": "b", "text": "a level runway"},
+        {"id": "c", "text": "equal headwind and tailwind"},
+        {"id": "d", "text": "symmetrical aircraft loading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Balanced field length: the runway length where the distance required to accelerate to V1, then stop, equals the distance to continue take-off after engine failure at V1. Below balanced field length, reject take-off if engine fails before V1. Above balanced field length, continue take-off. Mainly applies to multi-engine aircraft.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_051",
+      "question": "V1 (decision speed) is:-",
+      "options": [
+        {"id": "a", "text": "the speed at which the pilot must decide to continue or abort take-off"},
+        {"id": "b", "text": "rotation speed"},
+        {"id": "c", "text": "lift-off speed"},
+        {"id": "d", "text": "stall speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "V1 (decision speed or critical engine failure speed) is the maximum speed at which a rejected take-off can be initiated and the aircraft stopped within the remaining runway. Above V1, continue take-off even if an engine fails. Below V1, abort if critical failure occurs. V1 is mainly relevant to multi-engine and transport aircraft.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_052",
+      "question": "VR (rotation speed) is:-",
+      "options": [
+        {"id": "a", "text": "the speed at which the pilot initiates rotation to lift off"},
+        {"id": "b", "text": "decision speed"},
+        {"id": "c", "text": "best rate of climb speed"},
+        {"id": "d", "text": "stall speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VR is the speed at which the pilot applies back pressure to rotate the aircraft to the take-off attitude. It must be greater than V1 and sufficient to achieve VLOF (lift-off speed) shortly after rotation. Premature rotation can cause tail strike or prevent lift-off. Late rotation wastes runway.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_053",
+      "question": "VX is:-",
+      "options": [
+        {"id": "a", "text": "best angle of climb speed (maximum altitude gain per distance)"},
+        {"id": "b", "text": "best rate of climb speed"},
+        {"id": "c", "text": "cruise speed"},
+        {"id": "d", "text": "manoeuvring speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VX (best angle of climb) gives the steepest climb angle - maximum altitude gain per unit distance. Use VX to clear obstacles close to the runway. VX is slower than VY. VX increases slightly with altitude. After clearing obstacles, accelerate to VY for better rate of climb and engine cooling.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_054",
+      "question": "VY is:-",
+      "options": [
+        {"id": "a", "text": "best rate of climb speed (maximum altitude gain per time)"},
+        {"id": "b", "text": "best angle of climb speed"},
+        {"id": "c", "text": "cruise speed"},
+        {"id": "d", "text": "never exceed speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VY (best rate of climb) gives the fastest climb - maximum altitude gain per unit time. Use VY for normal climbs after clearing obstacles. VY provides better engine cooling than VX. VY decreases with altitude. At the absolute ceiling, VX = VY (no excess power available).",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_055",
+      "question": "The service ceiling of an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "the altitude at which the rate of climb decreases to 100 ft/min"},
+        {"id": "b", "text": "the maximum altitude the aircraft can reach"},
+        {"id": "c", "text": "the altitude where rate of climb is zero"},
+        {"id": "d", "text": "10,000 feet"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Service ceiling: altitude where maximum rate of climb decreases to 100 ft/min (50 ft/min for single-engine aircraft in some definitions). Absolute ceiling: altitude where rate of climb is zero (aircraft can no longer climb). Service ceiling is the practical operating limit. Both decrease with weight and temperature.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_056",
+      "question": "The absolute ceiling of an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "the altitude at which the rate of climb is zero"},
+        {"id": "b", "text": "the altitude where rate of climb is 100 ft/min"},
+        {"id": "c", "text": "the cruising altitude"},
+        {"id": "d", "text": "the service ceiling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Absolute ceiling is the maximum altitude the aircraft can reach - where rate of climb becomes zero. At absolute ceiling, all available power is required just to maintain level flight. VX = VY at absolute ceiling. The aircraft cannot climb above absolute ceiling. Service ceiling (100 ft/min climb) is more practical.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_057",
+      "question": "The range of an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "the maximum distance it can fly on a given amount of fuel"},
+        {"id": "b", "text": "the maximum altitude"},
+        {"id": "c", "text": "the maximum speed"},
+        {"id": "d", "text": "the maximum endurance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Range is the total distance an aircraft can fly on available fuel. Maximum range is achieved at the speed giving best fuel efficiency (nautical miles per gallon or per kg). This is typically at a specific power setting and altitude. Range decreases with: headwind, higher weight, lower altitude (for most aircraft).",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_058",
+      "question": "The endurance of an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "the maximum time it can remain airborne on a given amount of fuel"},
+        {"id": "b", "text": "the maximum distance"},
+        {"id": "c", "text": "the maximum speed"},
+        {"id": "d", "text": "the maximum altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Endurance is the maximum time an aircraft can remain airborne on available fuel. Maximum endurance is achieved at the speed giving minimum fuel flow (gallons per hour). This is slower than best range speed. Maximum endurance is useful for holding or loitering. Wind does not affect endurance (only range).",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_059",
+      "question": "To achieve maximum range, an aircraft should fly at:-",
+      "options": [
+        {"id": "a", "text": "the speed giving maximum nautical miles per gallon (best L/D ratio)"},
+        {"id": "b", "text": "maximum speed"},
+        {"id": "c", "text": "minimum speed"},
+        {"id": "d", "text": "VY"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum range speed corresponds to maximum lift-to-drag ratio (L/D max) - the most efficient flight condition. This is typically 1.3-1.4 × stall speed in clean configuration. Flying faster or slower than best range speed reduces range. Headwinds may require flying slightly faster than normal best range speed.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_060",
+      "question": "To achieve maximum endurance, an aircraft should fly at:-",
+      "options": [
+        {"id": "a", "text": "the speed giving minimum fuel flow (just above minimum drag speed)"},
+        {"id": "b", "text": "maximum speed"},
+        {"id": "c", "text": "best range speed"},
+        {"id": "d", "text": "VNE"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum endurance speed is slower than best range speed - typically near minimum power required speed. At this speed, fuel flow is minimized. For propeller aircraft, this is typically 1.1-1.2 × stall speed. Maximum endurance is used for holding or when time aloft is more important than distance covered.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_061",
+      "question": "The effect of a headwind on range is:-",
+      "options": [
+        {"id": "a", "text": "reduced range (more fuel consumed per nautical mile over ground)"},
+        {"id": "b", "text": "increased range"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only affects endurance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Headwind reduces groundspeed, increasing time to destination, thus more fuel consumed for the same distance. Range is reduced. To partially compensate, fly slightly faster than normal best range speed in headwinds. Tailwind increases range. Wind does not affect endurance (time aloft) but does affect range (distance covered).",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_062",
+      "question": "The effect of increased aircraft weight on range is:-",
+      "options": [
+        {"id": "a", "text": "reduced range (higher fuel consumption)"},
+        {"id": "b", "text": "increased range"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only affects take-off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Increased weight requires higher angle of attack to generate more lift, increasing induced drag and fuel consumption. Best range speed increases with weight. Range decreases with weight. As fuel is burned, weight decreases and range improves. This is why long-range flights are planned with step climbs as weight reduces.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_063",
+      "question": "The point of equal time (PET) or critical point is:-",
+      "options": [
+        {"id": "a", "text": "the point where time to continue equals time to return"},
+        {"id": "b", "text": "the halfway point"},
+        {"id": "c", "text": "the point of no return"},
+        {"id": "d", "text": "the destination"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Critical Point (CP) or Point of Equal Time (PET): the point where time to continue to destination equals time to return to departure. Before CP, return is quicker. After CP, continuing is quicker. CP is NOT the halfway point when winds are present. CP is used for emergency decision-making (e.g., medical emergency, weather deterioration).",
+      "topic": "Flight Planning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_064",
+      "question": "The point of no return (PNR) is:-",
+      "options": [
+        {"id": "a", "text": "the furthest point from which the aircraft can return to departure with remaining fuel"},
+        {"id": "b", "text": "the halfway point"},
+        {"id": "c", "text": "the critical point"},
+        {"id": "d", "text": "the destination"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Point of No Return (PNR): the furthest point you can fly and still have enough fuel to return to departure. Beyond PNR, you must continue to destination (or alternate) - insufficient fuel to return. PNR depends on: fuel available, outbound/return groundspeeds, and required reserves. Always calculate PNR for over-water or remote flights.",
+      "topic": "Flight Planning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_065",
+      "question": "When calculating point of no return (PNR), if there is a headwind outbound:-",
+      "options": [
+        {"id": "a", "text": "PNR will be closer to departure than the halfway point"},
+        {"id": "b", "text": "PNR will be at the halfway point"},
+        {"id": "c", "text": "PNR will be closer to destination"},
+        {"id": "d", "text": "wind has no effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Headwind outbound (tailwind return) means slower outbound groundspeed and faster return groundspeed. You can't fly as far out before needing to turn back. PNR is closer to departure. Conversely, tailwind outbound moves PNR closer to destination. Formula: PNR time = (Fuel available ÷ Fuel flow) × (GS return ÷ [GS out + GS return]).",
+      "topic": "Flight Planning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_066",
+      "question": "The term 'still air range' means:-",
+      "options": [
+        {"id": "a", "text": "the range with no wind"},
+        {"id": "b", "text": "the range with headwind"},
+        {"id": "c", "text": "the range with tailwind"},
+        {"id": "d", "text": "the endurance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Still air range is the range in zero wind conditions - the distance the aircraft can fly based solely on its fuel efficiency and fuel quantity. Actual range over ground is: still air range + (tailwind component × time) or still air range - (headwind component × time). Still air range is used as the basis for wind-corrected range calculations.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_067",
+      "question": "Fuel specific gravity is used to:-",
+      "options": [
+        {"id": "a", "text": "convert fuel volume to fuel weight"},
+        {"id": "b", "text": "measure fuel temperature"},
+        {"id": "c", "text": "determine fuel quality"},
+        {"id": "d", "text": "calculate airspeed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Specific gravity (SG) or relative density is the ratio of fuel density to water density. Weight = Volume × SG × density of water. For AVGAS (SG 0.72): 1 litre weighs 0.72 kg, 1 USG weighs 6 lbs. Aircraft performance depends on fuel weight, not volume, so SG is essential for accurate calculations.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_068",
+      "question": "If fuel temperature increases, the fuel volume:-",
+      "options": [
+        {"id": "a", "text": "increases (fuel expands)"},
+        {"id": "b", "text": "decreases"},
+        {"id": "c", "text": "remains constant"},
+        {"id": "d", "text": "doubles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel expands when heated and contracts when cooled. If you fuel in cold conditions and fly to hot conditions, fuel may expand and overflow from vents. If you fuel in hot conditions, fuel will contract when cooled at altitude, giving less usable fuel than expected. Always account for fuel expansion/contraction in hot climates.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_069",
+      "question": "Unusable fuel is:-",
+      "options": [
+        {"id": "a", "text": "fuel that cannot be safely used in flight"},
+        {"id": "b", "text": "contaminated fuel"},
+        {"id": "c", "text": "reserve fuel"},
+        {"id": "d", "text": "fuel in the tanks"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Unusable fuel is fuel remaining in the tanks and fuel system that cannot be safely used in flight due to system design (e.g., fuel below the pickup point, fuel in lines and filters). Unusable fuel is included in basic empty weight. Usable fuel is the fuel available for flight planning. Always use usable fuel for calculations.",
+      "topic": "Fuel Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_070",
+      "question": "The term 'zero fuel weight' refers to:-",
+      "options": [
+        {"id": "a", "text": "aircraft weight excluding usable fuel"},
+        {"id": "b", "text": "aircraft weight with no fuel at all"},
+        {"id": "c", "text": "empty weight"},
+        {"id": "d", "text": "maximum take-off weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Zero Fuel Weight (ZFW) = Basic Empty Weight + Payload (crew, passengers, baggage, cargo). It excludes usable fuel but includes unusable fuel (part of BEW). Maximum Zero Fuel Weight (MZFW) limits payload to prevent wing root overstress. ZFW + usable fuel = Ramp weight (minus taxi fuel = Take-off weight).",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_071",
+      "question": "The load factor in a 60° banked level turn is:-",
+      "options": [
+        {"id": "a", "text": "2.0g"},
+        {"id": "b", "text": "1.0g"},
+        {"id": "c", "text": "1.5g"},
+        {"id": "d", "text": "3.0g"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Load factor in level turn = 1 ÷ cos(bank angle). At 60° bank: load factor = 1 ÷ cos(60°) = 1 ÷ 0.5 = 2.0g. Stall speed increases by √load factor. At 2g, stall speed increases by √2 = 1.41 (41% increase). Steep turns require higher speed to avoid accelerated stall.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_072",
+      "question": "In a level turn, as bank angle increases, the stall speed:-",
+      "options": [
+        {"id": "a", "text": "increases"},
+        {"id": "b", "text": "decreases"},
+        {"id": "c", "text": "remains constant"},
+        {"id": "d", "text": "becomes zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In a turn, load factor increases, requiring more lift. To generate more lift at the same speed, angle of attack increases, bringing the aircraft closer to stall. Stall speed in turn = Stall speed level × √load factor. At 45° bank (1.41g), stall speed increases 19%. At 60° bank (2g), stall speed increases 41%.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_073",
+      "question": "The effect of flaps on take-off performance is:-",
+      "options": [
+        {"id": "a", "text": "shorter ground roll but reduced climb angle"},
+        {"id": "b", "text": "longer ground roll and better climb"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "always detrimental"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Take-off flaps (typically 10-15°): (1) Reduce take-off speed and ground roll (more lift at lower speed), (2) Reduce climb angle and rate (more drag). Use take-off flaps for: short runways, obstacle-free departure, soft fields. Use no flaps for: obstacle clearance, maximum climb performance. Check POH for recommended flap setting.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_074",
+      "question": "The effect of flaps on landing performance is:-",
+      "options": [
+        {"id": "a", "text": "reduced landing speed and shorter landing roll"},
+        {"id": "b", "text": "increased landing speed"},
+        {"id": "c", "text": "longer landing roll"},
+        {"id": "d", "text": "no effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Landing flaps (full or near-full): (1) Reduce stall speed and approach speed, (2) Increase drag (steeper approach, shorter landing roll), (3) Improve visibility over nose. Always use recommended landing flap setting. No-flap landings require higher approach speed and longer landing roll - use only if flaps are inoperative.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_075",
+      "question": "Contaminated runway (water, slush, snow) affects landing performance by:-",
+      "options": [
+        {"id": "a", "text": "significantly increasing landing distance (reduced braking effectiveness)"},
+        {"id": "b", "text": "reducing landing distance"},
+        {"id": "c", "text": "having no effect"},
+        {"id": "d", "text": "only affecting take-off"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Contaminated runway effects: (1) Reduced braking (friction coefficient decreases), (2) Aquaplaning risk, (3) Spray reducing visibility. Landing distance increases: wet +15%, slush/snow +40-100%, ice +200%+. Avoid landing on contaminated runways if possible. If unavoidable, use maximum braking, avoid aquaplaning speed, and plan for much longer roll.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_076",
+      "question": "Soft field take-off technique involves:-",
+      "options": [
+        {"id": "a", "text": "keeping the nosewheel light, using flaps, and lifting off at minimum speed"},
+        {"id": "b", "text": "normal take-off technique"},
+        {"id": "c", "text": "maximum braking"},
+        {"id": "d", "text": "no flaps"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Soft field take-off: (1) Use recommended flaps (10-15°), (2) Keep nosewheel light (full back pressure during taxi), (3) Minimize time on ground, (4) Lift off at minimum controllable airspeed, (5) Accelerate in ground effect, (6) Climb out when reaching VX/VY. Prevents nosewheel from digging in and reduces rolling resistance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_077",
+      "question": "Short field take-off technique involves:-",
+      "options": [
+        {"id": "a", "text": "using maximum available runway, holding brakes at full power, and rotating at VR"},
+        {"id": "b", "text": "rolling take-off"},
+        {"id": "c", "text": "lifting off early"},
+        {"id": "d", "text": "no flaps"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Short field take-off: (1) Use all available runway, (2) Recommended flaps (check POH), (3) Hold brakes, apply full power, check instruments, (4) Release brakes, (5) Rotate at VR, (6) Climb at VX until obstacles cleared, (7) Accelerate to VY. Achieves minimum take-off distance and maximum obstacle clearance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_078",
+      "question": "Short field landing technique involves:-",
+      "options": [
+        {"id": "a", "text": "precise airspeed control, full flaps, and maximum braking after touchdown"},
+        {"id": "b", "text": "high approach speed"},
+        {"id": "c", "text": "no flaps"},
+        {"id": "d", "text": "floating down the runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Short field landing: (1) Full flaps, (2) Precise airspeed (1.3 VSO), (3) Aim for touchdown point (typically 200 ft from threshold), (4) Minimum float, (5) Immediate maximum braking after nosewheel down, (6) Retract flaps after stopped. Achieves minimum landing distance. No margin for error - requires precision.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_079",
+      "question": "Soft field landing technique involves:-",
+      "options": [
+        {"id": "a", "text": "full flaps, minimum descent rate, and keeping nosewheel off as long as possible"},
+        {"id": "b", "text": "firm touchdown"},
+        {"id": "c", "text": "no flaps"},
+        {"id": "d", "text": "maximum braking"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Soft field landing: (1) Full flaps, (2) Minimum safe approach speed, (3) Minimum descent rate (power-on approach), (4) Touch down at minimum speed, (5) Hold nosewheel off as long as possible, (6) Minimize braking (may cause noseover), (7) Keep moving if possible. Prevents nosewheel from digging in.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_080",
+      "question": "The maximum demonstrated crosswind component for an aircraft is:-",
+      "options": [
+        {"id": "a", "text": "the maximum crosswind in which the aircraft has been tested, not a limitation"},
+        {"id": "b", "text": "the absolute maximum crosswind allowed"},
+        {"id": "c", "text": "always 20 knots"},
+        {"id": "d", "text": "the same for all aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum demonstrated crosswind is the highest crosswind velocity demonstrated during certification testing, not a limitation. The aircraft may be capable of higher crosswinds, but this hasn't been tested. Pilots should use personal minimums based on experience and proficiency. Factors: runway width, surface condition, gusts, pilot skill.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_081",
+      "question": "When landing in a crosswind, the wing-low (sideslip) method involves:-",
+      "options": [
+        {"id": "a", "text": "lowering the upwind wing with opposite rudder to maintain runway alignment"},
+        {"id": "b", "text": "crabbing into the wind"},
+        {"id": "c", "text": "landing with wings level"},
+        {"id": "d", "text": "using no rudder"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wing-low (sideslip) method: (1) Lower upwind wing (aileron into wind), (2) Apply opposite rudder to align fuselage with runway, (3) Touchdown on upwind main wheel first, (4) Maintain aileron into wind during rollout. Prevents drift and side loads on landing gear. Preferred method for most GA aircraft.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_082",
+      "question": "The crab method of crosswind landing involves:-",
+      "options": [
+        {"id": "a", "text": "maintaining a crab angle on approach, then kicking out the crab just before touchdown"},
+        {"id": "b", "text": "landing in a crab"},
+        {"id": "c", "text": "using no rudder"},
+        {"id": "d", "text": "wing-low technique"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Crab method: (1) Maintain crab angle (heading into wind) on approach to track runway centerline, (2) Just before touchdown, apply rudder to align fuselage with runway, (3) Simultaneously lower upwind wing to prevent drift. Timing is critical. Often combined with wing-low method (crab on approach, transition to wing-low for landing).",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_083",
+      "question": "When taking off in a crosswind, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "use aileron into the wind and apply rudder to maintain runway heading"},
+        {"id": "b", "text": "use no aileron"},
+        {"id": "c", "text": "allow drift"},
+        {"id": "d", "text": "use rudder only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Crosswind take-off: (1) Full aileron into wind at start of roll, (2) Gradually reduce aileron as speed increases, (3) Use rudder to maintain runway heading, (4) Lift off smoothly, (5) Establish crab to maintain ground track. Aileron prevents upwind wing from lifting prematurely. After lift-off, transition to crab or sideslip as needed.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_084",
+      "question": "The effect of a tailwind on take-off is:-",
+      "options": [
+        {"id": "a", "text": "significantly increased take-off distance and reduced climb angle"},
+        {"id": "b", "text": "reduced take-off distance"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "improved climb"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Tailwind take-off: (1) Higher groundspeed required to reach flying speed, (2) Much longer take-off run, (3) Reduced climb gradient over ground. Rule of thumb: 10% increase in take-off distance per 2 kts tailwind. Avoid tailwind take-offs if possible. Maximum tailwind is usually limited (e.g., 10 kts) by aircraft limitations.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_085",
+      "question": "Wind shear during approach is dangerous because it can cause:-",
+      "options": [
+        {"id": "a", "text": "sudden changes in airspeed and altitude, potentially leading to stall or terrain impact"},
+        {"id": "b", "text": "improved performance"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "smoother flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wind shear (rapid change in wind speed/direction): (1) Increasing headwind or decreasing tailwind → temporary airspeed increase, tendency to climb above glidepath, (2) Decreasing headwind or increasing tailwind → airspeed decrease, sink below glidepath, potential stall. Low-level wind shear is extremely dangerous. If encountered, add power immediately and go around if necessary.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_086",
+      "question": "Microburst wind shear is characterized by:-",
+      "options": [
+        {"id": "a", "text": "intense downdrafts spreading outward near the ground, creating severe wind shear"},
+        {"id": "b", "text": "gentle winds"},
+        {"id": "c", "text": "no wind"},
+        {"id": "d", "text": "constant wind"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Microburst: intense downdraft (up to 6000 ft/min) from a thunderstorm, spreading outward at ground level. Sequence on approach: (1) Headwind (performance increase), (2) Downdraft (sink), (3) Tailwind (performance decrease, severe sink). Can exceed aircraft climb capability. Avoid thunderstorms by at least 20 nm. If caught in microburst, maximum power, pitch for best climb speed.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_087",
+      "question": "The term 'ground effect' refers to:-",
+      "options": [
+        {"id": "a", "text": "improved lift and reduced drag when flying close to the ground"},
+        {"id": "b", "text": "reduced performance near the ground"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only affects helicopters"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Ground effect occurs within one wingspan of the surface. Effects: (1) Reduced induced drag (wingtip vortices disrupted), (2) Increased lift, (3) Reduced power required. Practical effects: aircraft may lift off prematurely (below safe climb speed), may float during landing. When leaving ground effect after lift-off, drag increases - ensure adequate speed before climbing out.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_088",
+      "question": "The danger of premature lift-off in ground effect is:-",
+      "options": [
+        {"id": "a", "text": "insufficient speed to climb when leaving ground effect"},
+        {"id": "b", "text": "improved climb performance"},
+        {"id": "c", "text": "no danger"},
+        {"id": "d", "text": "faster climb"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If aircraft lifts off below recommended speed (due to ground effect), it may be unable to climb when leaving ground effect because: (1) Drag increases significantly, (2) Insufficient speed for sustained flight. Aircraft may settle back to runway or be unable to clear obstacles. Always rotate at proper speed and accelerate to VX/VY before climbing out of ground effect.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_089",
+      "question": "The effect of frost on aircraft performance is:-",
+      "options": [
+        {"id": "a", "text": "disrupted airflow, increased drag, and reduced lift"},
+        {"id": "b", "text": "improved performance"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only cosmetic"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Even thin frost disrupts smooth airflow over wings: (1) Increases drag (up to 40%), (2) Reduces lift (up to 30%), (3) Increases stall speed, (4) Reduces controllability. Effects are severe and unpredictable. NEVER attempt take-off with frost, ice, or snow on wings. Remove all contamination before flight. 'Polished wing' theory is false and dangerous.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_090",
+      "question": "When planning a flight, the critical decision point (CDP) should be calculated for:-",
+      "options": [
+        {"id": "a", "text": "flights over water, remote areas, or when weather is marginal"},
+        {"id": "b", "text": "all flights"},
+        {"id": "c", "text": "never needed"},
+        {"id": "d", "text": "only IFR flights"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Calculate critical point (CP) for: (1) Over-water flights (beyond gliding distance from shore), (2) Remote areas with limited landing options, (3) Marginal weather (decision point for return vs continue). CP helps decision-making in emergencies. Also calculate point of no return (PNR) for fuel-critical flights. Good planning includes multiple decision points.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_091",
+      "question": "When filing a flight plan, the estimated time en route (ETE) should be based on:-",
+      "options": [
+        {"id": "a", "text": "forecast winds and planned cruise speed"},
+        {"id": "b", "text": "still air conditions"},
+        {"id": "c", "text": "maximum speed"},
+        {"id": "d", "text": "minimum speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ETE calculation: (1) Determine TAS at planned altitude and power, (2) Apply forecast winds to get groundspeed, (3) Distance ÷ groundspeed = time. Add time for climb and descent if significant. Be conservative - use slightly lower groundspeed to avoid being overdue. Update ETE in flight if actual winds differ from forecast.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_092",
+      "question": "The purpose of filing a flight plan is to:-",
+      "options": [
+        {"id": "a", "text": "provide information for search and rescue if the aircraft becomes overdue"},
+        {"id": "b", "text": "obtain ATC clearance"},
+        {"id": "c", "text": "reserve airspace"},
+        {"id": "d", "text": "get weather information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR flight plan purpose: initiate search and rescue if aircraft is overdue (usually 30 minutes after ETA). Flight plan is NOT an ATC clearance or airspace reservation. File flight plans for: over-water flights, remote areas, long cross-countries. Always close flight plan after landing - failure to close wastes SAR resources and may result in penalties.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_093",
+      "question": "If you are unable to close your flight plan after landing, you should:-",
+      "options": [
+        {"id": "a", "text": "close it by telephone or radio as soon as possible"},
+        {"id": "b", "text": "do nothing"},
+        {"id": "c", "text": "wait for SAR to find you"},
+        {"id": "d", "text": "file a new plan"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Close flight plan: (1) By radio to ATC or FSS before landing, (2) By telephone immediately after landing, (3) In person at tower or FSS. If unable to close on time, close as soon as possible to prevent unnecessary SAR activation. Failure to close wastes resources and may result in charges for SAR operations.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_094",
+      "question": "The term 'fuel endurance' on a flight plan refers to:-",
+      "options": [
+        {"id": "a", "text": "total time the aircraft can fly with fuel on board"},
+        {"id": "b", "text": "fuel quantity"},
+        {"id": "c", "text": "fuel weight"},
+        {"id": "d", "text": "fuel reserve only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel endurance is total flight time available with fuel on board (including reserves). Calculate: Total fuel ÷ fuel flow = endurance. This helps SAR determine search radius if aircraft is overdue. Always include reserves in endurance calculation. Example: 40 USG ÷ 8 USG/hr = 5 hours endurance.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_095",
+      "question": "The alternate airport on a flight plan should be:-",
+      "options": [
+        {"id": "a", "text": "an airport where you can land if the destination becomes unavailable"},
+        {"id": "b", "text": "the same as destination"},
+        {"id": "c", "text": "always the departure airport"},
+        {"id": "d", "text": "not needed for VFR"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Alternate airport: suitable airport where you can land if destination weather deteriorates, runway closes, or other problems arise. Choose alternate: (1) Within fuel range, (2) Forecast to be VFR when needed, (3) Adequate runway and facilities. Always plan fuel for destination + alternate + reserve. Even for VFR, having an alternate is good practice.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_096",
+      "question": "When planning fuel for a cross-country flight, you should:-",
+      "options": [
+        {"id": "a", "text": "calculate fuel for destination, alternate, and reserve, then add a safety margin"},
+        {"id": "b", "text": "fill the tanks completely"},
+        {"id": "c", "text": "use minimum fuel"},
+        {"id": "d", "text": "estimate without calculating"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel planning: (1) Calculate trip fuel (distance ÷ groundspeed × fuel flow), (2) Add taxi/climb fuel, (3) Add alternate fuel if applicable, (4) Add required reserve (30 min day, 45 min night VFR), (5) Add safety margin (10-20%). Check fuel is within aircraft capacity and weight limits. Never depart with less than calculated fuel. Fuel is safety.",
+      "topic": "Fuel Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_097",
+      "question": "The climb performance of an aircraft decreases with altitude because:-",
+      "options": [
+        {"id": "a", "text": "engine power decreases and propeller efficiency decreases in thinner air"},
+        {"id": "b", "text": "aircraft gets heavier"},
+        {"id": "c", "text": "drag decreases"},
+        {"id": "d", "text": "lift increases"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Climb performance decreases with altitude: (1) Engine power decreases (less oxygen for combustion), (2) Propeller efficiency decreases (thinner air), (3) TAS increases for same IAS (less excess power available). Rate of climb decreases until reaching service ceiling (100 ft/min) then absolute ceiling (0 ft/min). Turbocharged engines maintain power to higher altitudes.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_098",
+      "question": "The optimum altitude for maximum range is typically:-",
+      "options": [
+        {"id": "a", "text": "as high as practical (better TAS and fuel efficiency)"},
+        {"id": "b", "text": "as low as possible"},
+        {"id": "c", "text": "always sea level"},
+        {"id": "d", "text": "always at service ceiling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For most aircraft, range improves with altitude: (1) Higher TAS for same IAS (covers more distance per hour), (2) Better fuel efficiency (less drag in thinner air), (3) Smoother air, less turbulence. However, climb fuel must be considered. Optimum altitude balances climb fuel cost against cruise efficiency. Winds aloft also affect optimum altitude choice.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_099",
+      "question": "When calculating weight and balance for a flight, the pilot should ensure:-",
+      "options": [
+        {"id": "a", "text": "weight is within limits and CG is within the envelope for all phases of flight"},
+        {"id": "b", "text": "only check take-off weight"},
+        {"id": "c", "text": "only check CG at take-off"},
+        {"id": "d", "text": "estimates are sufficient"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Check weight and balance for: (1) Ramp/taxi (maximum ramp weight), (2) Take-off (MTOW), (3) Landing (maximum landing weight), (4) Zero fuel (MZFW). Check CG at all phases - fuel burn shifts CG. Ensure CG remains within envelope throughout flight. If CG will move out of limits, redistribute load or reduce fuel/payload. Never exceed limits.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_100",
+      "question": "The effect of loading baggage in the aft baggage compartment is to:-",
+      "options": [
+        {"id": "a", "text": "move the CG aft"},
+        {"id": "b", "text": "move the CG forward"},
+        {"id": "c", "text": "have no effect on CG"},
+        {"id": "d", "text": "reduce weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Loading weight aft of the current CG moves the CG aft. Loading weight forward of CG moves CG forward. The further the weight is from the current CG, the greater the CG shift. Always check baggage compartment weight limits - exceeding limits can damage structure even if total weight and CG are within limits.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_101",
+      "question": "The effect of moving a passenger from the front seat to the rear seat is to:-",
+      "options": [
+        {"id": "a", "text": "move the CG aft"},
+        {"id": "b", "text": "move the CG forward"},
+        {"id": "c", "text": "have no effect on CG"},
+        {"id": "d", "text": "reduce total weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Moving weight from forward to aft moves CG aft. The CG shift depends on: (1) Weight moved, (2) Distance between stations. Calculate: CG shift = (Weight × distance moved) ÷ total weight. Moving passengers is a common way to adjust CG if it's out of limits.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_102",
+      "question": "The standard weight for AVGAS for weight and balance purposes is:-",
+      "options": [
+        {"id": "a", "text": "6 lbs per US gallon"},
+        {"id": "b", "text": "8 lbs per US gallon"},
+        {"id": "c", "text": "5 lbs per US gallon"},
+        {"id": "d", "text": "10 lbs per US gallon"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard weights for weight and balance: AVGAS = 6 lbs/USG, Oil = 7.5 lbs/USG, Water = 8.35 lbs/USG. These are approximations - actual weight varies with temperature and specific gravity. For accurate calculations, use actual SG. Standard weights are used when actual SG is unknown.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_103",
+      "question": "The standard weight assumed for an adult passenger for weight and balance is:-",
+      "options": [
+        {"id": "a", "text": "170 lbs (77 kg) in summer, 175 lbs (79 kg) in winter"},
+        {"id": "b", "text": "200 lbs"},
+        {"id": "c", "text": "150 lbs"},
+        {"id": "d", "text": "100 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard passenger weights (SACAA/ICAO): Adults summer 170 lbs (77 kg), winter 175 lbs (79 kg) including hand baggage. Children 2-12 years: 77 lbs (35 kg). Infants under 2: 22 lbs (10 kg). Use actual weights if known and significantly different. For commercial operations, regulations may require actual weights.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_104",
+      "question": "If the aircraft weight exceeds the maximum take-off weight, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "remove fuel, passengers, or baggage until within limits"},
+        {"id": "b", "text": "take off anyway"},
+        {"id": "c", "text": "ignore the limitation"},
+        {"id": "d", "text": "fly faster"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Never exceed MTOW. Options: (1) Remove baggage, (2) Reduce fuel (if range permits), (3) Remove passengers, (4) Make multiple trips. Exceeding MTOW: reduces performance, increases stall speed, overstresses structure, invalidates insurance, and is illegal. Always plan weight and balance before loading aircraft.",
+      "topic": "Weight and Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_105",
+      "question": "The maximum landing weight is typically:-",
+      "options": [
+        {"id": "a", "text": "less than or equal to maximum take-off weight"},
+        {"id": "b", "text": "greater than maximum take-off weight"},
+        {"id": "c", "text": "the same as empty weight"},
+        {"id": "d", "text": "unlimited"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Maximum Landing Weight (MLW) is often less than MTOW because landing imposes higher structural loads than take-off. If MLW < MTOW, aircraft must burn fuel before landing at MTOW. For most light aircraft, MLW = MTOW. For larger aircraft, MLW may be significantly less. Emergency overweight landings may require structural inspection.",
+      "topic": "Weight and Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_106",
+      "question": "Density altitude can be calculated using:-",
+      "options": [
+        {"id": "a", "text": "pressure altitude and temperature"},
+        {"id": "b", "text": "only pressure"},
+        {"id": "c", "text": "only temperature"},
+        {"id": "d", "text": "only humidity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude = Pressure altitude + [120 × (OAT - ISA temp)]. ISA temp at altitude = 15°C - (2°C × altitude in thousands of feet). Example: At 5000 ft PA, ISA = 15 - 10 = 5°C. If OAT = 25°C, DA = 5000 + [120 × (25-5)] = 5000 + 2400 = 7400 ft. High DA = poor performance.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_107",
+      "question": "ISA (International Standard Atmosphere) sea level conditions are:-",
+      "options": [
+        {"id": "a", "text": "15°C and 1013.25 hPa"},
+        {"id": "b", "text": "0°C and 1013 hPa"},
+        {"id": "c", "text": "20°C and 1000 hPa"},
+        {"id": "d", "text": "10°C and 1020 hPa"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA sea level: Temperature 15°C (59°F), Pressure 1013.25 hPa (29.92 inHg), Density 1.225 kg/m³. ISA lapse rate: -2°C per 1000 ft (or -6.5°C per km) up to 36,089 ft. ISA is used as the standard for performance charts and altimeter calibration. Actual conditions usually differ from ISA.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_108",
+      "question": "The ISA temperature lapse rate is:-",
+      "options": [
+        {"id": "a", "text": "2°C decrease per 1000 ft altitude gain"},
+        {"id": "b", "text": "2°C increase per 1000 ft"},
+        {"id": "c", "text": "constant temperature"},
+        {"id": "d", "text": "5°C decrease per 1000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA lapse rate: -2°C per 1000 ft (or -1.98°C precisely). Temperature at altitude = 15°C - (2 × altitude in thousands of feet). Example: At 10,000 ft, ISA temp = 15 - 20 = -5°C. Actual lapse rate varies with weather conditions. Use ISA for performance calculations unless actual temperature is known.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_109",
+      "question": "If the temperature is higher than ISA, the density altitude is:-",
+      "options": [
+        {"id": "a", "text": "higher than pressure altitude"},
+        {"id": "b", "text": "lower than pressure altitude"},
+        {"id": "c", "text": "equal to pressure altitude"},
+        {"id": "d", "text": "zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Temperature above ISA → density altitude higher than pressure altitude (thinner air, worse performance). Temperature below ISA → density altitude lower than pressure altitude (denser air, better performance). Rule: For every 10°C above ISA, add approximately 1000 ft to pressure altitude to get density altitude.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_110",
+      "question": "The term 'pressure altitude' refers to:-",
+      "options": [
+        {"id": "a", "text": "altitude indicated when altimeter is set to 1013 hPa"},
+        {"id": "b", "text": "altitude above ground level"},
+        {"id": "c", "text": "altitude above sea level"},
+        {"id": "d", "text": "true altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude is the altitude in the standard atmosphere (1013 hPa). It's the altitude indicated when altimeter is set to 1013 hPa (or 29.92 inHg). Used for: (1) Performance calculations, (2) Flight levels above transition altitude. Calculate: Elevation + [(1013 - QNH) × 30 ft per hPa].",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_111",
+      "question": "True altitude is:-",
+      "options": [
+        {"id": "a", "text": "actual height above mean sea level"},
+        {"id": "b", "text": "indicated altitude"},
+        {"id": "c", "text": "pressure altitude"},
+        {"id": "d", "text": "density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "True altitude is actual height above mean sea level (MSL). It differs from indicated altitude due to: (1) Non-standard pressure (corrected by setting QNH), (2) Non-standard temperature (not corrected by altimeter). True altitude = Indicated altitude + temperature correction. For obstacle clearance and terrain avoidance, use indicated altitude with QNH set (close to true altitude).",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_112",
+      "question": "Absolute altitude is:-",
+      "options": [
+        {"id": "a", "text": "height above ground level (AGL)"},
+        {"id": "b", "text": "height above sea level"},
+        {"id": "c", "text": "pressure altitude"},
+        {"id": "d", "text": "density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Absolute altitude (also called radar altitude or height above ground) is actual height above the terrain directly below the aircraft. Measured by radar altimeter. Important for: low-level flight, landing, terrain clearance. Calculate: True altitude - terrain elevation = absolute altitude (AGL).",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_113",
+      "question": "When using performance charts, interpolation between values should be:-",
+      "options": [
+        {"id": "a", "text": "linear unless otherwise specified"},
+        {"id": "b", "text": "never done"},
+        {"id": "c", "text": "always rounded up"},
+        {"id": "d", "text": "always rounded down"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Interpolation: estimating values between chart entries. Use linear interpolation unless chart specifies otherwise. Example: If chart shows 1000 ft at 2000 lbs and 1200 ft at 2200 lbs, then at 2100 lbs (halfway), use 1100 ft. For safety, round unfavorable direction: take-off distance up, climb performance down.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_114",
+      "question": "When using performance charts, if conditions are outside the chart limits:-",
+      "options": [
+        {"id": "a", "text": "do not extrapolate - operation may be unsafe or prohibited"},
+        {"id": "b", "text": "extrapolate freely"},
+        {"id": "c", "text": "guess the values"},
+        {"id": "d", "text": "ignore the charts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Never extrapolate beyond chart limits. Charts are only valid within tested ranges. Operating outside limits may be: (1) Unsafe (performance unknown), (2) Prohibited by regulations or POH. If conditions exceed chart limits, don't fly or use more conservative assumptions. Example: If chart max temp is 40°C and actual is 45°C, operation may be unsafe.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_115",
+      "question": "The purpose of the Pilot's Operating Handbook (POH) is to:-",
+      "options": [
+        {"id": "a", "text": "provide operating procedures, limitations, and performance data for the specific aircraft"},
+        {"id": "b", "text": "provide general aviation information"},
+        {"id": "c", "text": "replace flight training"},
+        {"id": "d", "text": "provide weather information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "POH (or Aircraft Flight Manual) contains: (1) Limitations, (2) Emergency procedures, (3) Normal procedures, (4) Performance data, (5) Weight and balance, (6) Systems descriptions. POH is specific to the aircraft (by serial number). Always use the correct POH. POH limitations are regulatory - must be followed.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_116",
+      "question": "Aircraft performance charts are based on:-",
+      "options": [
+        {"id": "a", "text": "a new aircraft in good condition flown by a competent pilot using proper technique"},
+        {"id": "b", "text": "worst-case conditions"},
+        {"id": "c", "text": "any aircraft condition"},
+        {"id": "d", "text": "student pilot performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Performance charts assume: (1) New aircraft in good condition, (2) Proper maintenance, (3) Competent pilot, (4) Correct technique, (5) Specified conditions. Real-world performance is usually worse due to: aircraft age, wear, pilot technique, wind gusts, etc. Always add safety margins to chart values.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_117",
+      "question": "The effect of a 10-knot tailwind on landing distance is approximately:-",
+      "options": [
+        {"id": "a", "text": "20% increase in landing distance"},
+        {"id": "b", "text": "10% increase"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "decrease in landing distance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Rule of thumb: Landing distance increases approximately 20% for each 10 kts of tailwind. A 10-kt tailwind can double landing distance. Tailwind increases groundspeed at touchdown, requiring more distance to stop. Avoid tailwind landings when possible. Maximum tailwind is usually limited (e.g., 10 kts).",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_118",
+      "question": "The effect of a 10-knot headwind on take-off distance is approximately:-",
+      "options": [
+        {"id": "a", "text": "10-20% decrease in take-off distance"},
+        {"id": "b", "text": "increase in take-off distance"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "double the distance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Headwind reduces take-off distance: approximately 10% reduction per 10 kts headwind (varies with aircraft). Headwind reduces groundspeed needed to reach flying speed. However, don't rely on headwind - it may decrease or shift during take-off roll. Always ensure adequate runway even with zero wind.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_119",
+      "question": "When calculating take-off performance, wind should be:-",
+      "options": [
+        {"id": "a", "text": "reduced to 50% of reported value for safety"},
+        {"id": "b", "text": "used at full reported value"},
+        {"id": "c", "text": "ignored"},
+        {"id": "d", "text": "doubled"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Conservative wind correction: Use 50% of reported headwind, 150% of reported tailwind. This accounts for: wind variability, gusts, wind shift during take-off. Example: 20 kt headwind reported, use 10 kt for calculations. This ensures adequate performance even if wind decreases. Some POHs specify wind correction factors.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_120",
+      "question": "The effect of high humidity on aircraft performance is:-",
+      "options": [
+        {"id": "a", "text": "slight decrease in performance (water vapor is less dense than dry air)"},
+        {"id": "b", "text": "significant improvement"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "only affects jets"}
+      ],
+      "correct_answer": "a",
+      "explanation": "High humidity slightly decreases performance: (1) Water vapor (molecular weight 18) is lighter than dry air (molecular weight 29), (2) Humid air is less dense, (3) Reduced engine power and lift. Effect is small compared to temperature and pressure but adds to density altitude. High humidity + high temperature + high altitude = worst performance.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_121",
+      "question": "The term 'Koch chart' refers to:-",
+      "options": [
+        {"id": "a", "text": "a method for calculating takeoff and landing performance"},
+        {"id": "b", "text": "a weather chart"},
+        {"id": "c", "text": "a navigation chart"},
+        {"id": "d", "text": "a weight and balance chart"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Koch chart is a simplified method for calculating take-off and landing distances accounting for pressure altitude, temperature, weight, wind, and runway slope. It provides quick performance estimates without detailed charts. Useful for flight planning but always verify with POH charts for actual operations. Named after its developer.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_122",
+      "question": "When planning a flight over mountainous terrain, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "plan to cross ridges at least 2000 ft above terrain and consider downdrafts"},
+        {"id": "b", "text": "fly at minimum altitude"},
+        {"id": "c", "text": "ignore terrain"},
+        {"id": "d", "text": "fly only at night"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Mountain flying considerations: (1) Cross ridges at least 2000 ft AGL (preferably higher), (2) Approach ridges at 45° angle (easier escape), (3) Expect downdrafts on lee side, (4) Fly on upwind side of valleys, (5) Plan for reduced performance at altitude, (6) Have escape routes. Mountain weather changes rapidly - be prepared to turn back.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_123",
+      "question": "When flying over water beyond gliding distance from shore, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "carry life jackets, file a flight plan, and consider survival equipment"},
+        {"id": "b", "text": "take no special precautions"},
+        {"id": "c", "text": "fly at low altitude"},
+        {"id": "d", "text": "never file a flight plan"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Over-water flight requirements: (1) Life jackets for all occupants (worn or readily accessible), (2) File flight plan, (3) Calculate critical point and PNR, (4) Consider: life raft, ELT, survival kit, signaling devices, (5) Brief passengers on ditching procedures. Stay within gliding distance of shore when practical. Monitor weather and fuel closely.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_124",
+      "question": "The recommended procedure when flying in severe turbulence is to:-",
+      "options": [
+        {"id": "a", "text": "reduce to maneuvering speed (VA) and maintain attitude, not altitude"},
+        {"id": "b", "text": "increase speed"},
+        {"id": "c", "text": "maintain altitude precisely"},
+        {"id": "d", "text": "climb rapidly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Severe turbulence procedure: (1) Slow to VA or below (prevents structural damage), (2) Maintain wings level attitude, (3) Accept altitude deviations (don't chase altitude), (4) Reduce power if necessary, (5) Avoid large control inputs, (6) Secure loose items, (7) Tighten seat belts. Exit turbulent area as soon as safe. Inform ATC of altitude deviations.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_125",
+      "question": "Maneuvering speed (VA) is important because:-",
+      "options": [
+        {"id": "a", "text": "below VA, the aircraft will stall before exceeding structural limits in turbulence or abrupt control inputs"},
+        {"id": "b", "text": "it is the maximum speed"},
+        {"id": "c", "text": "it is the minimum speed"},
+        {"id": "d", "text": "it has no significance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VA (maneuvering speed): maximum speed for full control deflection or severe turbulence. Below VA, aircraft will stall before exceeding load limits (wing will stall before breaking). Above VA, structural damage possible from abrupt maneuvers or gusts. VA decreases with weight. Use VA or below in severe turbulence or when maneuvering abruptly.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_126",
+      "question": "VNE (never exceed speed) is indicated by:-",
+      "options": [
+        {"id": "a", "text": "a red radial line on the airspeed indicator"},
+        {"id": "b", "text": "a green arc"},
+        {"id": "c", "text": "a yellow arc"},
+        {"id": "d", "text": "a white arc"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Airspeed indicator markings: Red line = VNE (never exceed speed), Yellow arc = caution range (smooth air only), Green arc = normal operating range, White arc = flap operating range, Lower limit of green = VS1 (stall clean), Lower limit of white = VS0 (stall landing config). Never exceed VNE - structural failure may occur.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_127",
+      "question": "The white arc on the airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "flap operating range (VS0 to VFE)"},
+        {"id": "b", "text": "normal operating range"},
+        {"id": "c", "text": "caution range"},
+        {"id": "d", "text": "never exceed speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "White arc: flap operating range from VS0 (stall speed landing configuration) to VFE (maximum flap extended speed). Only extend flaps within white arc. Lower end = minimum speed with flaps, upper end = maximum speed with flaps. Exceeding VFE with flaps extended can damage flaps or structure.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_128",
+      "question": "The green arc on the airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "normal operating range (VS1 to VNO)"},
+        {"id": "b", "text": "flap operating range"},
+        {"id": "c", "text": "caution range"},
+        {"id": "d", "text": "never exceed range"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Green arc: normal operating range from VS1 (stall speed clean configuration) to VNO (maximum structural cruising speed). Safe to operate throughout green arc in all conditions. Lower end = minimum safe speed clean, upper end = maximum speed for normal operations. Most flying occurs in green arc.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_129",
+      "question": "The yellow arc on the airspeed indicator represents:-",
+      "options": [
+        {"id": "a", "text": "caution range - smooth air only (VNO to VNE)"},
+        {"id": "b", "text": "normal operating range"},
+        {"id": "c", "text": "flap operating range"},
+        {"id": "d", "text": "stall range"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Yellow arc: caution range from VNO (max structural cruising speed) to VNE (never exceed speed). Operate in yellow arc only in smooth air - turbulence or abrupt control movements may cause structural damage. Avoid yellow arc in turbulence. Many aircraft have limited time restrictions in yellow arc.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_130",
+      "question": "VNO (maximum structural cruising speed) is indicated by:-",
+      "options": [
+        {"id": "a", "text": "the upper limit of the green arc"},
+        {"id": "b", "text": "the red line"},
+        {"id": "c", "text": "the lower limit of the white arc"},
+        {"id": "d", "text": "the upper limit of the white arc"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VNO is the upper limit of the green arc (and lower limit of yellow arc). Maximum speed for normal operations. Above VNO (in yellow arc), operate only in smooth air. VNO is typically lower than VNE to provide safety margin. In turbulence, stay below VNO or reduce to VA.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_131",
+      "question": "The effect of weight on stall speed is:-",
+      "options": [
+        {"id": "a", "text": "stall speed increases with increased weight"},
+        {"id": "b", "text": "stall speed decreases with increased weight"},
+        {"id": "c", "text": "no effect"},
+        {"id": "d", "text": "stall speed becomes zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Stall speed increases with weight. Relationship: VS = VS₀ × √(W/W₀). Example: If weight increases from 2000 to 2500 lbs (25% increase), stall speed increases by √1.25 = 1.12 (12% increase). Heavier aircraft requires higher angle of attack and speed to generate required lift. Always use current weight for stall speed calculations.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_132",
+      "question": "The effect of altitude on indicated stall speed is:-",
+      "options": [
+        {"id": "a", "text": "indicated stall speed remains approximately constant"},
+        {"id": "b", "text": "indicated stall speed increases significantly"},
+        {"id": "c", "text": "indicated stall speed decreases"},
+        {"id": "d", "text": "indicated stall speed doubles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Indicated stall speed (IAS) remains approximately constant with altitude because both the speed required to generate lift and the airspeed indicator reading decrease proportionally with air density. True stall speed (TAS) increases with altitude. This is why we use IAS for flying - it directly relates to aerodynamic forces regardless of altitude.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_133",
+      "question": "The relationship between IAS and TAS is:-",
+      "options": [
+        {"id": "a", "text": "TAS increases approximately 2% per 1000 ft above sea level"},
+        {"id": "b", "text": "TAS = IAS at all altitudes"},
+        {"id": "c", "text": "TAS decreases with altitude"},
+        {"id": "d", "text": "no relationship"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TAS increases with altitude for a given IAS due to decreasing air density. Rule of thumb: TAS increases 2% per 1000 ft. Example: 100 KIAS at 10,000 ft = 100 + (100 × 0.02 × 10) = 120 KTAS. Precise calculation requires temperature correction. At sea level ISA, TAS = IAS. Use IAS for aircraft control, TAS for navigation.",
+      "topic": "Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_134",
+      "question": "Calibrated airspeed (CAS) differs from indicated airspeed (IAS) due to:-",
+      "options": [
+        {"id": "a", "text": "position and instrument errors"},
+        {"id": "b", "text": "altitude"},
+        {"id": "c", "text": "temperature"},
+        {"id": "d", "text": "weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CAS = IAS corrected for position error (pitot-static system location) and instrument error. Position error varies with airspeed, configuration, and angle of attack. Correction is usually small (few knots) and provided in POH. For most operations, IAS ≈ CAS. Precise performance calculations use CAS. TAS = CAS corrected for altitude and temperature.",
+      "topic": "Performance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_135",
+      "question": "Groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "actual speed over the ground (TAS corrected for wind)"},
+        {"id": "b", "text": "indicated airspeed"},
+        {"id": "c", "text": "calibrated airspeed"},
+        {"id": "d", "text": "true airspeed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Groundspeed (GS) = TAS + tailwind or TAS - headwind. GS is speed over ground, used for navigation and time calculations. GS = Distance ÷ Time. GPS provides direct GS measurement. Headwind reduces GS, tailwind increases GS. Wind has no effect on airspeed (IAS/TAS) but significantly affects GS and thus range and endurance over ground.",
+      "topic": "Performance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_136",
+      "question": "The purpose of a pre-flight inspection is to:-",
+      "options": [
+        {"id": "a", "text": "verify the aircraft is airworthy and safe for the intended flight"},
+        {"id": "b", "text": "clean the aircraft"},
+        {"id": "c", "text": "refuel the aircraft"},
+        {"id": "d", "text": "file the flight plan"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pre-flight inspection verifies: (1) Airworthiness (documents, maintenance status), (2) Aircraft condition (no damage, leaks, loose items), (3) Fuel quantity and quality, (4) Oil level, (5) Control freedom and correct movement, (6) Tire condition, (7) Lights and equipment. Follow POH checklist. Never skip pre-flight - it's the pilot's responsibility.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_137",
+      "question": "When checking fuel during pre-flight, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "visually verify quantity and drain sumps to check for water and contamination"},
+        {"id": "b", "text": "only check the fuel gauges"},
+        {"id": "c", "text": "assume fuel is clean"},
+        {"id": "d", "text": "never drain fuel"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel check procedure: (1) Visually verify quantity (don't rely solely on gauges), (2) Drain fuel from all sumps and drains, (3) Check for water (settles at bottom), (4) Check for contamination (dirt, rust), (5) Check correct fuel type and color, (6) Smell for contamination. Water in fuel can cause engine failure. Always drain until clear, uncontaminated fuel flows.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_138",
+      "question": "If water is found in the fuel during pre-flight inspection, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "continue draining until no water appears, then recheck all sumps"},
+        {"id": "b", "text": "ignore it"},
+        {"id": "c", "text": "take off immediately"},
+        {"id": "d", "text": "add more fuel"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Water in fuel procedure: (1) Drain all sumps until no water appears, (2) Recheck all sumps, (3) If water persists, investigate source (may be in tanks or fuel system), (4) Consider defueling and refueling, (5) If extensive water, have maintenance inspect. Never fly with water in fuel - can cause engine failure. Water is heavier than fuel and settles at low points.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_139",
+      "question": "The minimum fuel reserve for VFR day flight is:-",
+      "options": [
+        {"id": "a", "text": "30 minutes at normal cruise speed"},
+        {"id": "b", "text": "15 minutes"},
+        {"id": "c", "text": "1 hour"},
+        {"id": "d", "text": "no reserve required"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR fuel reserves (SACAA): Day - 30 minutes at normal cruise. Night - 45 minutes at normal cruise. These are legal minimums. Good practice: plan for destination + alternate + 45-60 minutes reserve. Running out of fuel is pilot error - always plan conservatively. Monitor fuel consumption in flight and recalculate if needed.",
+      "topic": "Fuel Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_140",
+      "question": "The pilot-in-command is responsible for:-",
+      "options": [
+        {"id": "a", "text": "all aspects of the flight including safety, compliance with regulations, and decision-making"},
+        {"id": "b", "text": "only flying the aircraft"},
+        {"id": "c", "text": "only navigation"},
+        {"id": "d", "text": "nothing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pilot-in-command (PIC) has final authority and responsibility for: (1) Safety of flight, (2) Compliance with regulations, (3) Airworthiness determination, (4) Weather assessment, (5) Fuel planning, (6) Weight and balance, (7) All decisions. PIC may deviate from regulations in emergency. PIC responsibility cannot be delegated. The buck stops with PIC.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_141",
+      "question": "Before each flight, the pilot-in-command must:-",
+      "options": [
+        {"id": "a", "text": "become familiar with all available information concerning the flight"},
+        {"id": "b", "text": "only check the weather"},
+        {"id": "c", "text": "only file a flight plan"},
+        {"id": "d", "text": "do nothing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pre-flight planning requirements: (1) Weather (current and forecast), (2) NOTAMs, (3) Runway lengths and conditions, (4) Fuel requirements, (5) Alternatives if flight cannot be completed, (6) Performance calculations, (7) Weight and balance, (8) Aircraft airworthiness. Thorough planning prevents problems. Poor planning is a major accident cause.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_142",
+      "question": "A NOTAM (Notice to Airmen) provides information about:-",
+      "options": [
+        {"id": "a", "text": "changes to aeronautical facilities, services, procedures, or hazards"},
+        {"id": "b", "text": "only weather"},
+        {"id": "c", "text": "only aircraft performance"},
+        {"id": "d", "text": "passenger information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "NOTAMs contain time-critical information: (1) Runway/taxiway closures, (2) Navigation aid outages, (3) Airspace restrictions, (4) Obstacles, (5) Airport lighting changes, (6) Hazards. Check NOTAMs before every flight. Failure to check NOTAMs can lead to: landing at closed runway, entering restricted airspace, or encountering unexpected hazards. NOTAMs are regulatory.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_143",
+      "question": "The term 'PAPI' refers to:-",
+      "options": [
+        {"id": "a", "text": "Precision Approach Path Indicator - visual glide slope guidance"},
+        {"id": "b", "text": "a type of aircraft"},
+        {"id": "c", "text": "a navigation aid"},
+        {"id": "d", "text": "a weather system"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PAPI (Precision Approach Path Indicator): 4-light system providing visual glide slope guidance. Indications: 4 white = too high, 3 white/1 red = slightly high, 2 white/2 red = on slope (correct), 1 white/3 red = slightly low, 4 red = too low. Similar system: VASI (2-bar or 3-bar). Use PAPI/VASI to maintain correct approach path.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_144",
+      "question": "The term 'VASI' refers to:-",
+      "options": [
+        {"id": "a", "text": "Visual Approach Slope Indicator - visual glide slope guidance"},
+        {"id": "b", "text": "a type of fuel"},
+        {"id": "c", "text": "a navigation chart"},
+        {"id": "d", "text": "a weather phenomenon"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VASI (Visual Approach Slope Indicator): 2-bar or 3-bar light system. 2-bar VASI: Both white = too high, Upper white/lower red = on slope (correct), Both red = too low. Provides 3° glide slope typically. Fly to keep upper bar white, lower bar red. VASI helps avoid obstacles and maintain stable approach. Similar to PAPI but different light arrangement.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_145",
+      "question": "When approaching to land, if both VASI bars are white, the aircraft is:-",
+      "options": [
+        {"id": "a", "text": "above the glide slope"},
+        {"id": "b", "text": "on the glide slope"},
+        {"id": "c", "text": "below the glide slope"},
+        {"id": "d", "text": "too fast"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VASI indications: Both white = above glide slope (too high), Upper white/lower red = on glide slope (correct - 'red over white, you're alright'), Both red = below glide slope (too low - 'red over red, you're dead'). If too high, reduce power or increase descent rate. If too low, add power immediately. VASI provides obstacle clearance when on slope.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_146",
+      "question": "The recommended entry procedure for the traffic pattern is:-",
+      "options": [
+        {"id": "a", "text": "enter at 45° to the downwind leg at pattern altitude"},
+        {"id": "b", "text": "enter directly onto base leg"},
+        {"id": "c", "text": "enter on final approach"},
+        {"id": "d", "text": "enter anywhere"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard pattern entry: (1) Overfly airport 500 ft above pattern altitude, (2) Position for 45° entry to downwind, (3) Descend to pattern altitude before entering, (4) Enter downwind at 45° midfield. This provides good visibility of traffic and predictable flow. Alternative: straight-in approach (if no traffic). Always announce position and intentions. Follow local procedures if different.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_147",
+      "question": "Standard traffic pattern altitude for light aircraft is typically:-",
+      "options": [
+        {"id": "a", "text": "1000 ft AGL"},
+        {"id": "b", "text": "500 ft AGL"},
+        {"id": "c", "text": "2000 ft AGL"},
+        {"id": "d", "text": "3000 ft AGL"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard pattern altitude: 1000 ft AGL for light aircraft (some airports use 800 ft or 1500 ft - check AIP/airport info). Turbine/large aircraft typically use 1500 ft AGL. Maintain pattern altitude on downwind and base. Begin descent on base or final. Consistent pattern altitude improves safety and traffic flow. Helicopters may use 500 ft AGL pattern.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_148",
+      "question": "The standard direction of traffic pattern turns is:-",
+      "options": [
+        {"id": "a", "text": "left-hand unless otherwise specified"},
+        {"id": "b", "text": "right-hand"},
+        {"id": "c", "text": "either direction"},
+        {"id": "d", "text": "no standard"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Standard pattern: left-hand turns (left traffic). Some runways have right-hand patterns due to obstacles, noise abatement, or traffic flow. Check airport information for pattern direction. Pattern direction may differ by runway. Segmented circle or airport diagram shows pattern direction. Always use correct pattern direction - opposite direction traffic is extremely dangerous.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_149",
+      "question": "When two aircraft are approaching to land, the aircraft at lower altitude:-",
+      "options": [
+        {"id": "a", "text": "has right of way"},
+        {"id": "b", "text": "must give way"},
+        {"id": "c", "text": "must go around"},
+        {"id": "d", "text": "altitude doesn't matter"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Right-of-way rules for landing: (1) Aircraft at lower altitude has right of way, (2) However, don't cut in front of another aircraft on final, (3) If both at same altitude, aircraft on right has right of way. These rules don't relieve pilots of responsibility to avoid collisions. If in doubt, go around. Never assume other aircraft will give way.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_150",
+      "question": "The most important rule regarding right-of-way is:-",
+      "options": [
+        {"id": "a", "text": "the pilot of each aircraft shall take all necessary action to avoid collision regardless of right-of-way rules"},
+        {"id": "b", "text": "always insist on your right of way"},
+        {"id": "c", "text": "right-of-way rules are absolute"},
+        {"id": "d", "text": "ignore other aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Overriding rule: See and avoid - take action to prevent collision regardless of right-of-way. Right-of-way rules provide order and predictability, but safety is paramount. If collision risk exists, take evasive action even if you have right of way. Better to be safe than 'right'. Maintain vigilant lookout at all times. Most mid-air collisions occur in VFR conditions.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "fp_151",
+      "question": "With reference to Figure 1-3: Flaps Up Take-off Ground Roll. OAT +20°C, pressure altitude 4000 ft, weight 2500 lbs. The take-off ground roll is approximately:-",
+      "options": [
+        {"id": "a", "text": "1450 ft"},
+        {"id": "b", "text": "1200 ft"},
+        {"id": "c", "text": "1700 ft"},
+        {"id": "d", "text": "1000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-3 (Flaps Up Take-off Ground Roll): Enter with OAT +20°C, move to pressure altitude 4000 ft, then to weight 2500 lbs. Read the ground roll distance of approximately 1450 ft. Always use the chart for the actual flap setting being used.",
+      "topic": "Take-off Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-3.png"
+    },
+    {
+      "id": "fp_152",
+      "question": "With reference to Figure 1-3: Flaps Up Take-off Ground Roll. OAT +30°C, pressure altitude 5000 ft, weight 2300 lbs. The take-off ground roll is approximately:-",
+      "options": [
+        {"id": "a", "text": "1500 ft"},
+        {"id": "b", "text": "1800 ft"},
+        {"id": "c", "text": "1200 ft"},
+        {"id": "d", "text": "2000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-3 (Flaps Up Take-off Ground Roll): Enter with OAT +30°C, move to pressure altitude 5000 ft, then to weight 2300 lbs. Read the ground roll distance of approximately 1500 ft. Higher temperature and altitude increase the ground roll due to reduced air density.",
+      "topic": "Take-off Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-3.png"
+    },
+    {
+      "id": "fp_153",
+      "question": "With reference to Figure 1-2: Stall Speeds. Gross Weight, 25° Flaps, 30° bank. The indicated stall speed is approximately:-",
+      "options": [
+        {"id": "a", "text": "62 KIAS"},
+        {"id": "b", "text": "55 KIAS"},
+        {"id": "c", "text": "70 KIAS"},
+        {"id": "d", "text": "48 KIAS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-2 (Stall Speeds): Enter with gross weight, select the 25° flaps curve, and read across to 30° bank angle. The indicated stall speed is approximately 62 KIAS. Stall speed increases with bank angle due to the increased load factor.",
+      "topic": "Stall Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-2.png"
+    },
+    {
+      "id": "fp_154",
+      "question": "With reference to Figure 1-2: Stall Speeds. Weight 2350 lbs, 40° Flaps. The indicated stall speed in level flight is approximately:-",
+      "options": [
+        {"id": "a", "text": "49 KIAS"},
+        {"id": "b", "text": "55 KIAS"},
+        {"id": "c", "text": "43 KIAS"},
+        {"id": "d", "text": "62 KIAS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-2 (Stall Speeds): Enter with weight 2350 lbs, select the 40° flaps curve at 0° bank (level flight). The indicated stall speed is approximately 49 KIAS. Full flaps produce the lowest stall speed due to increased lift coefficient.",
+      "topic": "Stall Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-2.png"
+    },
+    {
+      "id": "fp_155",
+      "question": "With reference to Figure 1-2: Stall Speeds. Weight 2250 lbs, 25° Flaps, 15° bank. The indicated stall speed is approximately:-",
+      "options": [
+        {"id": "a", "text": "56 KIAS"},
+        {"id": "b", "text": "50 KIAS"},
+        {"id": "c", "text": "62 KIAS"},
+        {"id": "d", "text": "45 KIAS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-2 (Stall Speeds): Enter with weight 2250 lbs, select the 25° flaps curve, and read across to 15° bank. The indicated stall speed is approximately 56 KIAS. Even a shallow bank angle increases the stall speed slightly due to the increased load factor.",
+      "topic": "Stall Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-2.png"
+    },
+    {
+      "id": "fp_156",
+      "question": "With reference to Figure 1-8: Time, Distance and Fuel to Climb. Departure airfield pressure altitude 2000 ft, cruising altitude 8500 ft, OAT at cruise +10°C. The time to climb is approximately:-",
+      "options": [
+        {"id": "a", "text": "10 minutes"},
+        {"id": "b", "text": "15 minutes"},
+        {"id": "c", "text": "7 minutes"},
+        {"id": "d", "text": "20 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-8 (Time, Distance and Fuel to Climb): Enter with OAT at cruise altitude, read to the pressure altitude of 8500 ft, then subtract the values for the departure altitude of 2000 ft. The net time to climb is approximately 10 minutes. Always subtract departure altitude values from cruise altitude values.",
+      "topic": "Climb Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-8.png"
+    },
+    {
+      "id": "fp_157",
+      "question": "With reference to Figure 1-9: Engine Performance. Pressure altitude 8500 ft, OAT +10°C. The maximum RPM for cruise is approximately:-",
+      "options": [
+        {"id": "a", "text": "2450 RPM"},
+        {"id": "b", "text": "2600 RPM"},
+        {"id": "c", "text": "2300 RPM"},
+        {"id": "d", "text": "2200 RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-9 (Engine Performance): Enter with OAT +10°C, move to pressure altitude 8500 ft. Read the maximum RPM for cruise of approximately 2450 RPM. Engine performance decreases with altitude due to reduced air density, limiting the maximum achievable RPM.",
+      "topic": "Cruise Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-9.png"
+    },
+    {
+      "id": "fp_158",
+      "question": "With reference to Figure 1-9: Engine Performance. Pressure altitude 6500 ft, OAT +15°C. The maximum RPM for cruise is approximately:-",
+      "options": [
+        {"id": "a", "text": "2500 RPM"},
+        {"id": "b", "text": "2350 RPM"},
+        {"id": "c", "text": "2600 RPM"},
+        {"id": "d", "text": "2200 RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-9 (Engine Performance): Enter with OAT +15°C, move to pressure altitude 6500 ft. Read the maximum RPM for cruise of approximately 2500 RPM. At lower altitudes, the engine can achieve higher RPM due to greater air density.",
+      "topic": "Cruise Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-9.png"
+    },
+    {
+      "id": "fp_159",
+      "question": "With reference to Figure 1-9: Engine Performance. Pressure altitude 4500 ft, temperature ISA +10°C. The maximum RPM for cruise is approximately:-",
+      "options": [
+        {"id": "a", "text": "2550 RPM"},
+        {"id": "b", "text": "2400 RPM"},
+        {"id": "c", "text": "2650 RPM"},
+        {"id": "d", "text": "2300 RPM"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-9 (Engine Performance): First calculate OAT from ISA +10°C at 4500 ft. ISA at 4500 ft = 15 - (4500 × 2/1000) = 6°C, so OAT = 16°C. Enter chart with this temperature and pressure altitude 4500 ft. Read approximately 2550 RPM.",
+      "topic": "Cruise Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-9.png"
+    },
+    {
+      "id": "fp_160",
+      "question": "With reference to Figure 1-10: Speed Power - Performance Cruise. Pressure altitude 8000 ft, OAT +5°C, 2400 RPM. The TAS is approximately:-",
+      "options": [
+        {"id": "a", "text": "128 kts"},
+        {"id": "b", "text": "115 kts"},
+        {"id": "c", "text": "140 kts"},
+        {"id": "d", "text": "105 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-10 (Speed Power - Performance Cruise): Enter with OAT +5°C, move to pressure altitude 8000 ft, then to 2400 RPM. Read the TAS of approximately 128 kts. Performance cruise uses higher power settings for greater speed at the expense of fuel economy.",
+      "topic": "Cruise Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-10.png"
+    },
+    {
+      "id": "fp_161",
+      "question": "With reference to Figure 1-11: Speed Power - Economy Cruise. Pressure altitude 10000 ft, OAT 0°C, 2300 RPM. The TAS is approximately:-",
+      "options": [
+        {"id": "a", "text": "120 kts"},
+        {"id": "b", "text": "130 kts"},
+        {"id": "c", "text": "110 kts"},
+        {"id": "d", "text": "140 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-11 (Speed Power - Economy Cruise): Enter with OAT 0°C, move to pressure altitude 10000 ft, then to 2300 RPM. Read the TAS of approximately 120 kts. Economy cruise uses lower power settings for better fuel efficiency at the expense of some speed.",
+      "topic": "Cruise Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-11.png"
+    },
+    {
+      "id": "fp_162",
+      "question": "With reference to Figure 1-13: Range - Economy Cruise. Pressure altitude 10500 ft, OAT -5°C, 45 USG fuel. The range is approximately:-",
+      "options": [
+        {"id": "a", "text": "680 nm"},
+        {"id": "b", "text": "580 nm"},
+        {"id": "c", "text": "780 nm"},
+        {"id": "d", "text": "480 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-13 (Range - Economy Cruise): Enter with OAT -5°C, move to pressure altitude 10500 ft, then to fuel quantity 45 USG. Read the range of approximately 680 nm. Economy cruise provides greater range than performance cruise for the same fuel quantity.",
+      "topic": "Range and Endurance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-13.png"
+    },
+    {
+      "id": "fp_163",
+      "question": "With reference to Figure 1-15: Time, Fuel and Distance to Descend. Cruising pressure altitude 10000 ft, destination pressure altitude 2000 ft. The distance to descend is approximately:-",
+      "options": [
+        {"id": "a", "text": "21 nm"},
+        {"id": "b", "text": "15 nm"},
+        {"id": "c", "text": "30 nm"},
+        {"id": "d", "text": "10 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-15 (Time, Fuel and Distance to Descend): Read the distance for 10000 ft and subtract the distance for 2000 ft. The net distance to descend is approximately 21 nm. This chart is used for flight planning to determine the top of descent point.",
+      "topic": "Descent Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-15.png"
+    },
+    {
+      "id": "fp_164",
+      "question": "With reference to Figure 1-6: 25° Flaps Take-off Performance. Pressure altitude 3000 ft, OAT +25°C, weight 2400 lbs. The total distance to clear a 50 ft obstacle is approximately:-",
+      "options": [
+        {"id": "a", "text": "2200 ft"},
+        {"id": "b", "text": "1800 ft"},
+        {"id": "c", "text": "2600 ft"},
+        {"id": "d", "text": "1500 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-6 (25° Flaps Take-off Performance): Enter with OAT +25°C, move to pressure altitude 3000 ft, then to weight 2400 lbs. Read the total distance to clear 50 ft of approximately 2200 ft. This includes ground roll plus the distance to climb to 50 ft.",
+      "topic": "Take-off Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-6.png"
+    },
+    {
+      "id": "fp_165",
+      "question": "With reference to Figure 2-2: Loading Graph. If the combined weight of the pilot and front passenger is 340 lbs, the moment is approximately:-",
+      "options": [
+        {"id": "a", "text": "13,000 lb-in"},
+        {"id": "b", "text": "10,000 lb-in"},
+        {"id": "c", "text": "16,000 lb-in"},
+        {"id": "d", "text": "8,000 lb-in"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 2-2 (Loading Graph): Enter with the combined pilot and front passenger weight of 340 lbs on the weight axis. Read across to the front seats line and down to the moment axis. The moment is approximately 13,000 lb-in. The loading graph simplifies CG calculations by converting weight directly to moment.",
+      "topic": "Mass and Balance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure2-2.png"
+    },
+    {
+      "id": "fp_166",
+      "question": "With reference to Figure 2-2: Loading Graph. If the total fuel loaded in the aircraft is 40 USG, the moment is approximately:-",
+      "options": [
+        {"id": "a", "text": "11,500 lb-in"},
+        {"id": "b", "text": "9,000 lb-in"},
+        {"id": "c", "text": "14,000 lb-in"},
+        {"id": "d", "text": "7,500 lb-in"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 2-2 (Loading Graph): Convert fuel to weight first (40 USG × 6 lbs/USG = 240 lbs), then enter the graph with 240 lbs on the weight axis. Read across to the fuel line and down to the moment axis. The moment is approximately 11,500 lb-in.",
+      "topic": "Mass and Balance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure2-2.png"
+    },
+    {
+      "id": "fp_167",
+      "question": "With reference to Figure 2-3: CG Range and Weight of the Aeroplane Manual. Empty weight 1500 lbs, loaded moment/1000 = 58. Is the aircraft within CG limits?",
+      "options": [
+        {"id": "a", "text": "Yes, the CG is within the envelope"},
+        {"id": "b", "text": "No, the CG is too far forward"},
+        {"id": "c", "text": "No, the CG is too far aft"},
+        {"id": "d", "text": "Cannot be determined from this information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 2-3 (CG Range and Weight): Plot the point at weight 1500 lbs and moment/1000 = 58. If the point falls within the CG envelope, the aircraft is within limits. The CG envelope defines the forward and aft CG limits for each weight. Always verify the loaded CG is within the envelope before flight.",
+      "topic": "Mass and Balance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure2-3.png"
+    },
+    {
+      "id": "fp_168",
+      "question": "With reference to Figure 1-17: Landing Performance. Airfield pressure altitude 5000 ft, OAT +25°C, weight 2300 lbs. The total landing distance over a 50 ft obstacle is approximately:-",
+      "options": [
+        {"id": "a", "text": "1600 ft"},
+        {"id": "b", "text": "1300 ft"},
+        {"id": "c", "text": "1900 ft"},
+        {"id": "d", "text": "1100 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-17 (Landing Performance): Enter with OAT +25°C, move to pressure altitude 5000 ft, then to weight 2300 lbs. Read the total landing distance over 50 ft of approximately 1600 ft. This includes the air distance from 50 ft to touchdown plus the ground roll.",
+      "topic": "Landing Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-17.png"
+    },
+    {
+      "id": "fp_169",
+      "question": "With reference to Figure 1-22: Take-off Distance. Pressure altitude 500 ft, weight 2500 lbs, OAT +20°C. The take-off distance to clear 50 ft is approximately:-",
+      "options": [
+        {"id": "a", "text": "1750 ft"},
+        {"id": "b", "text": "1500 ft"},
+        {"id": "c", "text": "2000 ft"},
+        {"id": "d", "text": "1300 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-22 (Take-off Performance Table): Find the row for pressure altitude 500 ft and weight 2500 lbs. Read across to the OAT +20°C column. The take-off distance to clear 50 ft is approximately 1750 ft.",
+      "topic": "Take-off Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-22.png"
+    },
+    {
+      "id": "fp_170",
+      "question": "With reference to Figure 1-22: Take-off Distance. Pressure altitude 4000 ft, weight 2400 lbs, OAT +30°C. The take-off distance to clear 50 ft is approximately:-",
+      "options": [
+        {"id": "a", "text": "2400 ft"},
+        {"id": "b", "text": "2000 ft"},
+        {"id": "c", "text": "2800 ft"},
+        {"id": "d", "text": "1700 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-22 (Take-off Performance Table): Find the row for pressure altitude 4000 ft and weight 2400 lbs. Read across to the OAT +30°C column. The take-off distance to clear 50 ft is approximately 2400 ft. Higher altitude and temperature significantly increase take-off distance.",
+      "topic": "Take-off Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-22.png"
+    },
+    {
+      "id": "fp_171",
+      "question": "With reference to Figure 1-24: Landing Distance. Weight 2400 lbs, airfield elevation 3000 ft, OAT +20°C. The total landing distance is approximately:-",
+      "options": [
+        {"id": "a", "text": "1450 ft"},
+        {"id": "b", "text": "1200 ft"},
+        {"id": "c", "text": "1700 ft"},
+        {"id": "d", "text": "1000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-24 (Landing Performance Table): Find the row for weight 2400 lbs and pressure altitude 3000 ft. Read across to the OAT +20°C column. The total landing distance is approximately 1450 ft.",
+      "topic": "Landing Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-24.png"
+    },
+    {
+      "id": "fp_172",
+      "question": "With reference to Figure 1-4: Flaps Up Take-off Performance. Airfield elevation 5000 ft, OAT +20°C, weight 2500 lbs. The total distance to clear a 50 ft obstacle is approximately:-",
+      "options": [
+        {"id": "a", "text": "3000 ft"},
+        {"id": "b", "text": "2500 ft"},
+        {"id": "c", "text": "3500 ft"},
+        {"id": "d", "text": "2000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-4 (Flaps Up Take-off Performance): Enter with OAT +20°C, move to pressure altitude 5000 ft, then to weight 2500 lbs. Read the total distance to clear 50 ft of approximately 3000 ft. Flaps up take-off requires more distance than with flaps due to lower lift coefficient at rotation.",
+      "topic": "Take-off Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-4.png"
+    },
+    {
+      "id": "fp_173",
+      "question": "With reference to Figure 1-12: Range - Performance Cruise. Pressure altitude 4000 ft, OAT +15°C, 45 USG fuel. The range is approximately:-",
+      "options": [
+        {"id": "a", "text": "550 nm"},
+        {"id": "b", "text": "450 nm"},
+        {"id": "c", "text": "650 nm"},
+        {"id": "d", "text": "350 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-12 (Range - Performance Cruise): Enter with OAT +15°C, move to pressure altitude 4000 ft, then to fuel quantity 45 USG. Read the range of approximately 550 nm. Performance cruise gives less range than economy cruise but at a higher speed.",
+      "topic": "Range and Endurance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-12.png"
+    },
+    {
+      "id": "fp_174",
+      "question": "With reference to Figure 1-23: Cruise Performance Table. Pressure altitude 3000 ft, 2400 RPM, best economy mixture. The TAS and fuel flow are approximately:-",
+      "options": [
+        {"id": "a", "text": "TAS 117 kts, fuel flow 8.4 GPH"},
+        {"id": "b", "text": "TAS 125 kts, fuel flow 9.5 GPH"},
+        {"id": "c", "text": "TAS 110 kts, fuel flow 7.5 GPH"},
+        {"id": "d", "text": "TAS 130 kts, fuel flow 10.2 GPH"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-23 (Cruise Performance Table): Find the row for pressure altitude 3000 ft and 2400 RPM with best economy mixture. Read the TAS of approximately 117 kts and fuel flow of approximately 8.4 GPH. The table provides performance data for various power settings and altitudes.",
+      "topic": "Cruise Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-23.png"
+    },
+    {
+      "id": "fp_175",
+      "question": "With reference to Figure 1-23: Cruise Performance Table. Pressure altitude 5000 ft, 2300 RPM, best economy mixture. The TAS is approximately:-",
+      "options": [
+        {"id": "a", "text": "113 kts"},
+        {"id": "b", "text": "120 kts"},
+        {"id": "c", "text": "105 kts"},
+        {"id": "d", "text": "128 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using Figure 1-23 (Cruise Performance Table): Find the row for pressure altitude 5000 ft and 2300 RPM with best economy mixture. Read the TAS of approximately 113 kts. Higher altitude increases TAS for the same IAS due to lower air density.",
+      "topic": "Cruise Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/FP_Figure1-23.png"
+    }
+  ]
+}

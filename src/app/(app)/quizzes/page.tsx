@@ -16,15 +16,22 @@ import {
   Sparkles,
   Lock,
   Crown,
+  Clock,
+  CheckCircle2,
+  RotateCcw,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+
+type Tab = "in_progress" | "completed";
 
 export default function QuizzesPage() {
   const { user, profile, isLoading } = useAuth();
   const router = useRouter();
   const supabase = createClient();
 
-  const [quizzes, setQuizzes] = useState<Quiz[]>([]);
+  const [activeTab, setActiveTab] = useState<Tab>("in_progress");
+  const [allQuizzes, setAllQuizzes] = useState<Quiz[]>([]);
   const [isLoadingQuizzes, setIsLoadingQuizzes] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
@@ -37,13 +44,13 @@ export default function QuizzesPage() {
       .from("quizzes")
       .select("*")
       .eq("user_id", user.id)
-      .eq("status", "active")
+      .in("status", ["active", "completed"])
       .order("created_at", { ascending: false });
 
     if (error) {
       toast.error("Failed to load exams");
     } else {
-      setQuizzes(data ?? []);
+      setAllQuizzes(data ?? []);
     }
     setIsLoadingQuizzes(false);
   }, [user, supabase]);
@@ -51,6 +58,10 @@ export default function QuizzesPage() {
   useEffect(() => {
     fetchQuizzes();
   }, [fetchQuizzes]);
+
+  const inProgressQuizzes = allQuizzes.filter((q) => q.status === "active");
+  const completedQuizzes = allQuizzes.filter((q) => q.status === "completed");
+  const displayedQuizzes = activeTab === "in_progress" ? inProgressQuizzes : completedQuizzes;
 
   const handleDelete = async (quizId: string) => {
     setDeletingId(quizId);
@@ -87,7 +98,7 @@ export default function QuizzesPage() {
       toast.error("Failed to delete exam");
     } else {
       toast.success("Exam deleted");
-      setQuizzes((prev) => prev.filter((q) => q.id !== quizId));
+      setAllQuizzes((prev) => prev.filter((q) => q.id !== quizId));
     }
     setDeletingId(null);
   };
@@ -135,38 +146,88 @@ export default function QuizzesPage() {
         </p>
       </div>
 
+      {/* Pill-style Tabs */}
+      <div className="inline-flex rounded-xl bg-muted p-1 gap-1">
+        <button
+          onClick={() => { setActiveTab("in_progress"); setVisibleCount(20); }}
+          className={cn(
+            "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all",
+            activeTab === "in_progress"
+              ? "bg-background text-foreground shadow-sm"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+        >
+          <Clock className="h-4 w-4" />
+          In Progress
+          {inProgressQuizzes.length > 0 && (
+            <span className="ml-1 text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
+              {inProgressQuizzes.length}
+            </span>
+          )}
+        </button>
+        <button
+          onClick={() => { setActiveTab("completed"); setVisibleCount(20); }}
+          className={cn(
+            "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all",
+            activeTab === "completed"
+              ? "bg-background text-foreground shadow-sm"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+        >
+          <CheckCircle2 className="h-4 w-4" />
+          Completed
+          {completedQuizzes.length > 0 && (
+            <span className="ml-1 text-xs bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
+              {completedQuizzes.length}
+            </span>
+          )}
+        </button>
+      </div>
+
       {isLoadingQuizzes ? (
         <div className="space-y-3">
           {[1, 2, 3].map((i) => (
             <Skeleton key={i} className="h-20 w-full rounded-lg" />
           ))}
         </div>
-      ) : quizzes.length === 0 ? (
+      ) : displayedQuizzes.length === 0 ? (
         <Card className="border-dashed border-2">
           <CardContent className="py-16 text-center">
             <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-              <ClipboardList className="h-8 w-8 text-primary" />
+              {activeTab === "in_progress" ? (
+                <Clock className="h-8 w-8 text-primary" />
+              ) : (
+                <ClipboardList className="h-8 w-8 text-primary" />
+              )}
             </div>
-            <h3 className="text-lg font-semibold mb-2">No exams yet</h3>
+            <h3 className="text-lg font-semibold mb-2">
+              {activeTab === "in_progress" ? "No exams in progress" : "No completed exams"}
+            </h3>
             <p className="text-muted-foreground text-sm mb-6 max-w-sm mx-auto">
-              Upload study materials and generate your first AI-powered practice exam.
+              {activeTab === "in_progress"
+                ? "Start a new exam from the Question Bank or upload study materials to generate one."
+                : "Complete an exam to see your results here."}
             </p>
-            <Button onClick={() => router.push("/dashboard")}>
+            <Button onClick={() => router.push(activeTab === "in_progress" ? "/question-bank" : "/dashboard")}>
               <Sparkles className="h-4 w-4 mr-2" />
-              Create Your First Exam
+              {activeTab === "in_progress" ? "Go to Question Bank" : "Create an Exam"}
             </Button>
           </CardContent>
         </Card>
       ) : (
         <div className="space-y-2">
-          {quizzes.slice(0, visibleCount).map((quiz) => (
+          {displayedQuizzes.slice(0, visibleCount).map((quiz) => (
             <Card key={quiz.id} className="hover:bg-muted/50 transition-colors active:scale-[0.99]">
               <CardContent className="py-3 px-4 flex items-center gap-3">
                 <button
                   onClick={() => router.push(`/quiz/${quiz.id}`)}
                   className="flex items-center gap-3 flex-1 min-w-0 text-left"
                 >
-                  <ClipboardList className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                  {activeTab === "in_progress" ? (
+                    <Clock className="h-5 w-5 text-amber-500 flex-shrink-0" />
+                  ) : (
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  )}
                   <div className="flex-1 min-w-0 w-0">
                     <p className="text-sm font-medium truncate">{quiz.title}</p>
                     <p className="text-xs text-muted-foreground">
@@ -183,7 +244,11 @@ export default function QuizzesPage() {
                     className="h-10 w-10 text-primary"
                     onClick={() => router.push(`/quiz/${quiz.id}`)}
                   >
-                    <Play className="h-4 w-4" />
+                    {activeTab === "in_progress" ? (
+                      <Play className="h-4 w-4" />
+                    ) : (
+                      <RotateCcw className="h-4 w-4" />
+                    )}
                   </Button>
                   <Button
                     variant="ghost"
@@ -203,13 +268,13 @@ export default function QuizzesPage() {
             </Card>
           ))}
 
-          {quizzes.length > visibleCount && (
+          {displayedQuizzes.length > visibleCount && (
             <Button
               variant="outline"
               className="w-full"
               onClick={() => setVisibleCount((prev) => prev + 20)}
             >
-              Show More ({quizzes.length - visibleCount} remaining)
+              Show More ({displayedQuizzes.length - visibleCount} remaining)
             </Button>
           )}
         </div>

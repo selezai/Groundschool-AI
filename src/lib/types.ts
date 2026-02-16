@@ -42,6 +42,7 @@ export interface QuizQuestion {
   options: { id: string; text: string }[];
   correct_answer_id: string;
   explanation: string | null;
+  image_url: string | null;
 }
 
 export interface QuizAttempt {

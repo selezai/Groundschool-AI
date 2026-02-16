@@ -1,0 +1,3207 @@
+{
+  "subject": "Human Performance",
+  "description": "SACAA PPL Human Performance question bank covering respiration and circulation, hypoxia, hyperventilation, vision, hearing, spatial disorientation, vestibular system, fatigue, stress, information processing, decision making, and fitness to fly.",
+  "total_questions": 200,
+  "questions": [
+    {
+      "id": "hp_001",
+      "question": "A decrease in the amount of haemoglobin in the red blood cells leads to a condition called:-",
+      "options": [
+        {"id": "a", "text": "anaemia"},
+        {"id": "b", "text": "hypoxia"},
+        {"id": "c", "text": "hyperventilation"},
+        {"id": "d", "text": "cyanosis"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Anaemia is a condition where there is a decrease in the amount of haemoglobin in the red blood cells, or a decrease in the number of red blood cells. Haemoglobin is the protein that carries oxygen. Anaemia reduces the blood's oxygen-carrying capacity and can lead to anaemic hypoxia.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_002",
+      "question": "The volume of oxygen in the atmosphere is approximately:-",
+      "options": [
+        {"id": "a", "text": "21%"},
+        {"id": "b", "text": "50%"},
+        {"id": "c", "text": "78%"},
+        {"id": "d", "text": "10%"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The atmosphere is composed of approximately 78% nitrogen, 21% oxygen, and 1% other gases (argon, carbon dioxide, etc.). This proportion remains constant at all altitudes — it is the partial pressure of oxygen that decreases with altitude, not the percentage.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_003",
+      "question": "The breathing rate is determined by:-",
+      "options": [
+        {"id": "a", "text": "the level of carbon dioxide in the blood"},
+        {"id": "b", "text": "the amount of oxygen required by the body"},
+        {"id": "c", "text": "the altitude"},
+        {"id": "d", "text": "the heart rate"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The breathing rate is primarily controlled by the level of carbon dioxide (CO₂) in the blood, detected by chemoreceptors in the brain stem. When CO₂ levels rise, the breathing rate increases to expel the excess CO₂. This is why hyperventilation (over-breathing) reduces CO₂ and disrupts the breathing control mechanism.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_004",
+      "question": "Blood is pumped around the body by the:-",
+      "options": [
+        {"id": "a", "text": "left ventricle of the heart"},
+        {"id": "b", "text": "right atrium of the heart"},
+        {"id": "c", "text": "left atrium of the heart"},
+        {"id": "d", "text": "right ventricle of the heart"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The left ventricle is the main pumping chamber that pumps oxygenated blood through the aorta to the entire body (systemic circulation). The right ventricle pumps deoxygenated blood to the lungs (pulmonary circulation). The atria are receiving chambers. The left ventricle has the thickest muscular wall because it must generate the highest pressure.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_005",
+      "question": "Oxygen rich blood:-",
+      "options": [
+        {"id": "a", "text": "is bright red in colour"},
+        {"id": "b", "text": "is found in the right ventricle"},
+        {"id": "c", "text": "is dark blue in colour"},
+        {"id": "d", "text": "is pumped to the lungs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Oxygenated blood is bright red due to oxyhaemoglobin (haemoglobin bound to oxygen). Deoxygenated blood is darker red (appears bluish through the skin). Oxygenated blood is found in the left side of the heart (left atrium and left ventricle) and in the arteries (except the pulmonary artery).",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_006",
+      "question": "The pumping or discharge chambers of the heart are:-",
+      "options": [
+        {"id": "a", "text": "the left ventricle and the right ventricle"},
+        {"id": "b", "text": "the left atrium and the right atrium"},
+        {"id": "c", "text": "the left atrium and the left ventricle"},
+        {"id": "d", "text": "the right atrium and the right ventricle"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ventricles are the pumping (discharge) chambers of the heart. The left ventricle pumps oxygenated blood to the body; the right ventricle pumps deoxygenated blood to the lungs. The atria are the receiving chambers that collect blood returning to the heart.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_007",
+      "question": "When measuring blood pressure the lowest reading obtained is referred to as:-",
+      "options": [
+        {"id": "a", "text": "the diastolic pressure"},
+        {"id": "b", "text": "the systolic pressure"},
+        {"id": "c", "text": "the venous pressure"},
+        {"id": "d", "text": "the arterial pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Blood pressure is expressed as systolic/diastolic (e.g., 120/80 mmHg). Systolic is the higher reading (pressure when the heart contracts). Diastolic is the lower reading (pressure when the heart relaxes between beats). High blood pressure (hypertension) increases the risk of heart attack and stroke.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_008",
+      "question": "A person suffering from sustained low blood pressure may experience:-",
+      "options": [
+        {"id": "a", "text": "dizziness or fainting"},
+        {"id": "b", "text": "headaches only"},
+        {"id": "c", "text": "improved vision"},
+        {"id": "d", "text": "increased alertness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Low blood pressure (hypotension) reduces blood flow to the brain, causing dizziness, light-headedness, or fainting (syncope). This can be caused by dehydration, prolonged standing, blood loss, or certain medications. In aviation, fainting is extremely dangerous as it results in loss of aircraft control.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_009",
+      "question": "In terms of the Gas laws, Dalton's Law states that:-",
+      "options": [
+        {"id": "a", "text": "the total pressure of a gas mixture is equal to the sum of its partial pressures"},
+        {"id": "b", "text": "as pressure increases, volume decreases"},
+        {"id": "c", "text": "the amount of gas dissolved in a liquid is proportional to pressure"},
+        {"id": "d", "text": "gas expands when heated"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dalton's Law of Partial Pressures: the total pressure of a gas mixture equals the sum of the partial pressures of each individual gas. At sea level, total pressure is 1013 hPa; oxygen's partial pressure is 21% × 1013 = 213 hPa. At altitude, total pressure decreases, so oxygen's partial pressure also decreases, leading to hypoxia.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_010",
+      "question": "A pilot's susceptibility to hypoxia:-",
+      "options": [
+        {"id": "a", "text": "increases with the consumption of alcohol, drugs, and tobacco"},
+        {"id": "b", "text": "decreases with alcohol consumption"},
+        {"id": "c", "text": "is not affected by lifestyle factors"},
+        {"id": "d", "text": "decreases with smoking"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Alcohol, drugs, and tobacco all increase susceptibility to hypoxia. Alcohol impairs the brain's ability to use oxygen. Carbon monoxide from tobacco binds to haemoglobin 200-300 times more readily than oxygen, reducing oxygen-carrying capacity. Certain medications can also impair oxygen utilisation. A smoker's effective altitude is approximately 5000 ft higher than actual altitude.",
+      "topic": "Hypoxia",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_011",
+      "question": "Hypoxic hypoxia occurs as a result of:-",
+      "options": [
+        {"id": "a", "text": "an insufficient partial pressure of oxygen"},
+        {"id": "b", "text": "carbon monoxide poisoning"},
+        {"id": "c", "text": "anaemia"},
+        {"id": "d", "text": "poor blood circulation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hypoxic hypoxia is caused by insufficient partial pressure of oxygen in the inspired air — the most common type in aviation, occurring at altitude. The four types of hypoxia are: (1) Hypoxic — low oxygen pressure (altitude), (2) Anaemic — reduced haemoglobin (anaemia, CO poisoning), (3) Stagnant — poor circulation, (4) Histotoxic — cells cannot use oxygen (alcohol, drugs).",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_012",
+      "question": "The time of useful consciousness is:-",
+      "options": [
+        {"id": "a", "text": "the time available to recognise the onset of hypoxia and take corrective action"},
+        {"id": "b", "text": "the total time a pilot can fly without rest"},
+        {"id": "c", "text": "the time before a pilot falls asleep"},
+        {"id": "d", "text": "the time between meals"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Time of Useful Consciousness (TUC) is the period from when oxygen supply is interrupted until the pilot can no longer take effective corrective action. TUC decreases rapidly with altitude: at 25,000 ft it is 3-5 minutes; at 35,000 ft it is 30-60 seconds; at 40,000 ft it is 15-20 seconds. Physical activity reduces TUC.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_013",
+      "question": "In order to treat hyperventilation:-",
+      "options": [
+        {"id": "a", "text": "breathing into a paper bag will increase the body's level of carbon dioxide which will return the breathing rate to normal"},
+        {"id": "b", "text": "the pilot should breathe faster"},
+        {"id": "c", "text": "supplemental oxygen should be administered"},
+        {"id": "d", "text": "the pilot should descend immediately"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hyperventilation is over-breathing that washes out too much CO₂ from the blood. Treatment: (1) Consciously slow the breathing rate, (2) Breathe into a paper bag to re-inhale CO₂, (3) Talk or sing (regulates breathing). Symptoms include tingling, dizziness, light-headedness, and muscle spasms. It can be triggered by anxiety, stress, or pain.",
+      "topic": "Hyperventilation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_014",
+      "question": "Anaemic hypoxia may be caused by:-",
+      "options": [
+        {"id": "a", "text": "a reduction in the amount of circulating haemoglobin"},
+        {"id": "b", "text": "poor blood circulation"},
+        {"id": "c", "text": "high altitude"},
+        {"id": "d", "text": "alcohol consumption"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Anaemic hypoxia results from a reduction in the blood's oxygen-carrying capacity. Causes include: anaemia (low haemoglobin), carbon monoxide poisoning (CO binds to haemoglobin, blocking oxygen), blood loss, and blood donation. After blood donation, a pilot should not fly for at least 72 hours.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_015",
+      "question": "Prevention of hypoxia in a non-pressurised aircraft is best achieved by:-",
+      "options": [
+        {"id": "a", "text": "remaining at an altitude which will provide an adequate oxygen pressure gradient"},
+        {"id": "b", "text": "breathing faster"},
+        {"id": "c", "text": "drinking more water"},
+        {"id": "d", "text": "wearing warm clothing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The best prevention of hypoxia in unpressurised aircraft is to fly at altitudes where the oxygen partial pressure is sufficient. Below 10,000 ft, most healthy individuals can function normally. Above 10,000 ft, supplemental oxygen should be used. Regulations typically require oxygen above 12,500 ft for crew and above 14,000 ft for passengers.",
+      "topic": "Hypoxia",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_016",
+      "question": "A consequence of hyperventilation is that there will be:-",
+      "options": [
+        {"id": "a", "text": "a shortage of carbon dioxide in the blood"},
+        {"id": "b", "text": "too much oxygen in the blood"},
+        {"id": "c", "text": "a shortage of oxygen in the blood"},
+        {"id": "d", "text": "too much carbon dioxide in the blood"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hyperventilation (over-breathing) causes excessive loss of carbon dioxide (CO₂) from the blood. This raises blood pH (respiratory alkalosis), causing: tingling in extremities, dizziness, visual disturbances, muscle spasms, and eventually unconsciousness. The symptoms can mimic hypoxia, making diagnosis difficult at altitude.",
+      "topic": "Hyperventilation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_017",
+      "question": "Whilst using oxygen masks passengers should be cautioned against breathing rapidly or deeply in order to avoid:-",
+      "options": [
+        {"id": "a", "text": "hyperventilation"},
+        {"id": "b", "text": "hypoxia"},
+        {"id": "c", "text": "decompression sickness"},
+        {"id": "d", "text": "carbon monoxide poisoning"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When using supplemental oxygen, passengers may tend to breathe rapidly or deeply due to anxiety. This can cause hyperventilation (excessive loss of CO₂), producing symptoms that may be confused with hypoxia. Passengers should be briefed to breathe normally and calmly when using oxygen masks.",
+      "topic": "Hyperventilation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_018",
+      "question": "According to Dalton's Law:-",
+      "options": [
+        {"id": "a", "text": "the proportion of oxygen remains at 21% throughout the atmosphere"},
+        {"id": "b", "text": "the amount of oxygen in each breath remains constant at any altitude"},
+        {"id": "c", "text": "oxygen percentage increases with altitude"},
+        {"id": "d", "text": "oxygen percentage decreases with altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dalton's Law confirms that the proportion (percentage) of each gas in a mixture remains constant regardless of total pressure. Oxygen is always 21% of the atmosphere at any altitude. However, as total atmospheric pressure decreases with altitude, the partial pressure of oxygen decreases proportionally, reducing the amount of oxygen available per breath.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_019",
+      "question": "As altitude is gained the amount of oxygen in each breath:-",
+      "options": [
+        {"id": "a", "text": "decreases"},
+        {"id": "b", "text": "remains constant"},
+        {"id": "c", "text": "increases"},
+        {"id": "d", "text": "doubles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "While the percentage of oxygen remains at 21%, the actual amount (mass) of oxygen in each breath decreases with altitude because the air is less dense. At 18,000 ft, atmospheric pressure is approximately half that at sea level, so each breath contains roughly half the oxygen molecules compared to sea level.",
+      "topic": "Hypoxia",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_020",
+      "question": "The 'time of useful consciousness' at 25,000 ft following rapid decompression is approximately:-",
+      "options": [
+        {"id": "a", "text": "2-3 minutes"},
+        {"id": "b", "text": "5 minutes"},
+        {"id": "c", "text": "10 minutes"},
+        {"id": "d", "text": "30 seconds"}
+      ],
+      "correct_answer": "a",
+      "explanation": "At 25,000 ft following rapid decompression, the TUC is approximately 2-3 minutes (reduced from 3-5 minutes at gradual onset because rapid decompression causes immediate oxygen loss from the lungs). Rapid decompression halves the normal TUC. The pilot must immediately don an oxygen mask and initiate an emergency descent.",
+      "topic": "Hypoxia",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_021",
+      "question": "The amount of light which enters the eye is controlled by the:-",
+      "options": [
+        {"id": "a", "text": "iris"},
+        {"id": "b", "text": "retina"},
+        {"id": "c", "text": "cornea"},
+        {"id": "d", "text": "lens"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The iris is the coloured part of the eye that controls the size of the pupil (the opening). In bright light, the iris constricts the pupil to reduce light entry. In dim light, the iris dilates the pupil to allow more light in. This process is called the pupillary reflex and is automatic.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_022",
+      "question": "In order to correct long sightedness (hypermetropia):-",
+      "options": [
+        {"id": "a", "text": "a convex lens is used"},
+        {"id": "b", "text": "a concave lens is used"},
+        {"id": "c", "text": "a cylindrical lens is used"},
+        {"id": "d", "text": "no correction is possible"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hypermetropia (long/far sightedness) occurs when the eyeball is too short or the lens too flat — the image focuses behind the retina. A convex (converging) lens corrects this by bending light rays inward before they enter the eye. Myopia (short sightedness) is corrected with a concave (diverging) lens.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_023",
+      "question": "With reference to the eye, the rods:-",
+      "options": [
+        {"id": "a", "text": "are used for peripheral vision and night vision"},
+        {"id": "b", "text": "are used for colour vision"},
+        {"id": "c", "text": "are concentrated in the fovea"},
+        {"id": "d", "text": "function best in bright light"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Rods are photoreceptor cells in the retina that are sensitive to low light levels and are responsible for peripheral (side) vision and night vision. They cannot detect colour. Rods are concentrated around the periphery of the retina. Cones are concentrated in the fovea (centre) and are responsible for colour vision and sharp detail in bright light.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_024",
+      "question": "Vision in low levels of illumination or at night is dependent upon:-",
+      "options": [
+        {"id": "a", "text": "the rods"},
+        {"id": "b", "text": "the cones"},
+        {"id": "c", "text": "the fovea"},
+        {"id": "d", "text": "the iris"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Night vision depends on the rod cells in the retina. Rods are very sensitive to low light levels but cannot distinguish colour (which is why we see in shades of grey at night). Rods require up to 30 minutes to fully adapt to darkness (dark adaptation). Exposure to bright light destroys dark adaptation.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_025",
+      "question": "Good night vision is best achieved by:-",
+      "options": [
+        {"id": "a", "text": "looking to the side of the object in order to focus the image on the rods"},
+        {"id": "b", "text": "looking directly at the object"},
+        {"id": "c", "text": "squinting"},
+        {"id": "d", "text": "using bright cockpit lighting"}
+      ],
+      "correct_answer": "a",
+      "explanation": "At night, looking slightly to the side of an object (off-centre viewing) places the image on the peripheral retina where rods are concentrated, rather than on the fovea (which has mainly cones and a 'blind spot' for dim light). Scan the area using short eye movements rather than staring at one point.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_026",
+      "question": "In order to correct short sightedness (myopia):-",
+      "options": [
+        {"id": "a", "text": "a concave lens is used"},
+        {"id": "b", "text": "a convex lens is used"},
+        {"id": "c", "text": "a cylindrical lens is used"},
+        {"id": "d", "text": "no correction is needed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Myopia (short/near sightedness) occurs when the eyeball is too long or the lens too curved — the image focuses in front of the retina. A concave (diverging) lens corrects this by spreading light rays slightly before they enter the eye, moving the focal point back onto the retina.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_027",
+      "question": "Accommodation is the ability of the eye to:-",
+      "options": [
+        {"id": "a", "text": "change the curvature of the lens in order to focus on objects at different distances"},
+        {"id": "b", "text": "change the size of the pupil to allow more or less light into the eye"},
+        {"id": "c", "text": "detect colour"},
+        {"id": "d", "text": "adapt to darkness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Accommodation is the process by which the ciliary muscles change the shape (curvature) of the lens to focus on objects at different distances. For near objects, the lens becomes more convex (rounded); for distant objects, it flattens. With age, the lens loses elasticity, reducing accommodation ability (presbyopia).",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_028",
+      "question": "During the approach to land on an unfamiliar upward sloping runway a pilot may have a tendency to:-",
+      "options": [
+        {"id": "a", "text": "fly a low approach"},
+        {"id": "b", "text": "fly a high approach"},
+        {"id": "c", "text": "fly a normal approach"},
+        {"id": "d", "text": "overshoot the runway"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An upward sloping runway creates the illusion that the aircraft is higher than it actually is (the runway appears shorter/closer). The pilot may unconsciously fly a lower approach to make the picture look 'normal'. Conversely, a downward sloping runway creates the illusion of being too low, leading to a high approach.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_029",
+      "question": "During the approach to land on a very wide unfamiliar runway a pilot may have a tendency to:-",
+      "options": [
+        {"id": "a", "text": "fly a high approach"},
+        {"id": "b", "text": "fly a low approach"},
+        {"id": "c", "text": "fly a normal approach"},
+        {"id": "d", "text": "land short"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A wider-than-normal runway creates the illusion that the aircraft is lower than it actually is (the runway appears closer). The pilot may fly a higher approach. Conversely, a narrower-than-normal runway creates the illusion of being too high, leading to a dangerously low approach. Always use VASIS/PAPI if available.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_030",
+      "question": "The vestibular apparatus comprises the:-",
+      "options": [
+        {"id": "a", "text": "semi-circular canals and the otolith organs"},
+        {"id": "b", "text": "semi-circular canals and the Eustachian tube"},
+        {"id": "c", "text": "cochlea and the auditory nerve"},
+        {"id": "d", "text": "outer ear and middle ear"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The vestibular apparatus (balance organ) in the inner ear consists of: (1) Three semi-circular canals — detect angular (rotational) accelerations in three planes, (2) Otolith organs (utricle and saccule) — detect linear accelerations and gravity. Together they provide the brain with information about the body's orientation and movement.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_031",
+      "question": "Presbycusis is the term used to define:-",
+      "options": [
+        {"id": "a", "text": "a decrease in hearing ability with age"},
+        {"id": "b", "text": "ringing in the ears"},
+        {"id": "c", "text": "hearing loss due to noise exposure"},
+        {"id": "d", "text": "an ear infection"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Presbycusis is the gradual, natural loss of hearing that occurs with ageing. It typically affects high-frequency sounds first. It is a sensorineural (inner ear) condition and is irreversible. Pilots should have regular hearing tests as part of their medical examinations.",
+      "topic": "Hearing",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_032",
+      "question": "Vertigo is:-",
+      "options": [
+        {"id": "a", "text": "a false sense of rotation"},
+        {"id": "b", "text": "a fear of heights"},
+        {"id": "c", "text": "a loss of hearing"},
+        {"id": "d", "text": "a type of hypoxia"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vertigo is a false sensation of rotation — the pilot feels that they or their surroundings are spinning when no actual rotation is occurring. It is caused by conflicting signals from the vestibular system, visual system, and proprioceptive system. In flight, vertigo can be extremely dangerous and must be countered by trusting the instruments.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_033",
+      "question": "Spatial disorientation is usually a temporary condition which:-",
+      "options": [
+        {"id": "a", "text": "should be treated by looking at and believing the aircraft flight instruments"},
+        {"id": "b", "text": "requires immediate landing"},
+        {"id": "c", "text": "should be treated by closing the eyes"},
+        {"id": "d", "text": "cannot be overcome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Spatial disorientation occurs when the brain receives conflicting information from the senses about the aircraft's attitude and motion. The treatment is to trust and believe the flight instruments, not the body's sensations. The vestibular system is unreliable in flight — it evolved for ground-based movement, not aviation.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_034",
+      "question": "Non-conductive, or noise-induced, hearing loss:-",
+      "options": [
+        {"id": "a", "text": "is associated with the inner ear and is usually irreversible"},
+        {"id": "b", "text": "is associated with the outer ear and is temporary"},
+        {"id": "c", "text": "only affects low frequencies"},
+        {"id": "d", "text": "can be cured with medication"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Noise-induced hearing loss (sensorineural) results from damage to the hair cells in the cochlea (inner ear). It is usually permanent and irreversible. Prolonged exposure to loud noise (engine noise, headset use) causes progressive damage. Prevention: use noise-attenuating headsets, limit exposure time, and use ear protection.",
+      "topic": "Hearing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_035",
+      "question": "Conductive hearing loss is:-",
+      "options": [
+        {"id": "a", "text": "associated with the outer or middle ear and is either temporary or can be reversed"},
+        {"id": "b", "text": "associated with the inner ear and is always permanent"},
+        {"id": "c", "text": "caused by loud noise exposure"},
+        {"id": "d", "text": "the same as presbycusis"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Conductive hearing loss involves the outer or middle ear — sound is not conducted efficiently to the inner ear. Causes include: ear wax blockage, ear infections, perforated eardrum, or fluid in the middle ear. It is often temporary or treatable with medication or surgery, unlike sensorineural (inner ear) loss which is usually permanent.",
+      "topic": "Hearing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_036",
+      "question": "The term tinnitus is used to define:-",
+      "options": [
+        {"id": "a", "text": "ringing in the ears"},
+        {"id": "b", "text": "the natural loss of hearing with age"},
+        {"id": "c", "text": "a fear of loud sounds"},
+        {"id": "d", "text": "an ear infection"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Tinnitus is the perception of sound (ringing, buzzing, hissing) in the ears when no external sound is present. It can be caused by: noise exposure, ear infections, certain medications, or age-related hearing loss. Tinnitus can be distracting and may interfere with communication in the cockpit.",
+      "topic": "Hearing",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_037",
+      "question": "A method which may be used to help passengers avoid airsickness is to:-",
+      "options": [
+        {"id": "a", "text": "have them fix their eyes in the distance on the natural horizon"},
+        {"id": "b", "text": "have them read a book"},
+        {"id": "c", "text": "have them close their eyes"},
+        {"id": "d", "text": "have them look at the instruments"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Motion sickness is caused by conflicting signals between the visual and vestibular systems. Fixing the eyes on the distant horizon provides a stable visual reference that matches the vestibular input, reducing the conflict. Other prevention methods: fresh air, avoiding heavy meals before flight, sitting in the front, and avoiding reading.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_038",
+      "question": "The symptoms of motion sickness include:-",
+      "options": [
+        {"id": "a", "text": "pale skin, nausea, and sweating"},
+        {"id": "b", "text": "red skin and headache"},
+        {"id": "c", "text": "improved vision"},
+        {"id": "d", "text": "increased alertness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Motion sickness symptoms progress through stages: (1) Pallor (pale skin), (2) Sweating, (3) Nausea, (4) Vomiting. Other symptoms include yawning, drowsiness, and general discomfort. The condition results from sensory conflict — the vestibular system detects motion that the eyes do not confirm, or vice versa.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_039",
+      "question": "The best treatment for a pilot suffering from acute fatigue is:-",
+      "options": [
+        {"id": "a", "text": "a restful, uninterrupted natural sleep"},
+        {"id": "b", "text": "caffeine and stimulants"},
+        {"id": "c", "text": "physical exercise"},
+        {"id": "d", "text": "continuing to fly to build endurance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Acute fatigue is short-term tiredness caused by physical or mental exertion, lack of sleep, or stress. It is effectively treated by adequate rest and natural sleep. A fatigued pilot has degraded performance: slower reactions, poor judgement, reduced attention, and increased error rate. Never fly when fatigued.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_040",
+      "question": "If a passenger is observed suddenly suffering from severe chest pains and then collapses, the cause is likely to be:-",
+      "options": [
+        {"id": "a", "text": "a heart attack"},
+        {"id": "b", "text": "hypoxia"},
+        {"id": "c", "text": "hyperventilation"},
+        {"id": "d", "text": "motion sickness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Sudden severe chest pain followed by collapse is characteristic of a heart attack (myocardial infarction). The pilot should: land as soon as possible, administer first aid (loosen clothing, keep patient comfortable), call for medical assistance, and if trained, perform CPR if the patient becomes unresponsive.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_041",
+      "question": "Fainting is caused by:-",
+      "options": [
+        {"id": "a", "text": "a reduced flow of blood to the brain"},
+        {"id": "b", "text": "lack of oxygen at altitude"},
+        {"id": "c", "text": "too much carbon dioxide"},
+        {"id": "d", "text": "dehydration only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fainting (syncope) is caused by a temporary reduction in blood flow to the brain. Causes include: low blood pressure, standing up too quickly, dehydration, heat, emotional stress, or prolonged standing. In flight, positive G-forces can reduce blood flow to the brain, causing grey-out or blackout.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_042",
+      "question": "Following scuba diving, a pilot:-",
+      "options": [
+        {"id": "a", "text": "may not fly within 24 hours"},
+        {"id": "b", "text": "may fly immediately"},
+        {"id": "c", "text": "must wait 48 hours"},
+        {"id": "d", "text": "must wait 12 hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "After scuba diving, a pilot must wait at least 24 hours before flying. During diving, nitrogen dissolves in the body tissues under increased pressure. If the pilot ascends to altitude too soon, the reduced pressure can cause nitrogen bubbles to form in the body (decompression sickness / 'the bends'), which can be incapacitating or fatal.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_043",
+      "question": "If a passenger is observed suffering from mild chest pains, dizziness, breathlessness and a pale complexion the cause is likely to be:-",
+      "options": [
+        {"id": "a", "text": "an angina attack"},
+        {"id": "b", "text": "hyperventilation"},
+        {"id": "c", "text": "hypoxia"},
+        {"id": "d", "text": "motion sickness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Angina pectoris is characterised by mild to moderate chest pain, often with dizziness, breathlessness, and pallor. Unlike a heart attack, angina pain usually subsides with rest. It is caused by temporary insufficient blood supply to the heart muscle. The patient should rest, and the pilot should land as soon as practicable.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_044",
+      "question": "The symptoms of low blood glucose (blood sugar) include a sensation of dizziness and shaking. This can be corrected:-",
+      "options": [
+        {"id": "a", "text": "by eating regularly"},
+        {"id": "b", "text": "by drinking alcohol"},
+        {"id": "c", "text": "by breathing oxygen"},
+        {"id": "d", "text": "by sleeping"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hypoglycaemia (low blood sugar) causes dizziness, shaking, sweating, confusion, and weakness. The brain depends on glucose for energy. Prevention: eat regular, balanced meals; avoid skipping meals before or during flight; carry snacks. Treatment: consume sugar or carbohydrates immediately.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_045",
+      "question": "Chronic fatigue:-",
+      "options": [
+        {"id": "a", "text": "occurs over a very long period and requires a prolonged recovery period"},
+        {"id": "b", "text": "is cured by a single good night's sleep"},
+        {"id": "c", "text": "is the same as acute fatigue"},
+        {"id": "d", "text": "only affects older pilots"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Chronic fatigue builds up over weeks or months from sustained overwork, inadequate rest, poor diet, or ongoing stress. Unlike acute fatigue, it cannot be cured by a single sleep. It requires a prolonged period of rest, lifestyle changes, and possibly medical attention. Chronic fatigue significantly impairs judgement and decision-making.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_046",
+      "question": "The type of sleep associated with physical rejuvenation is called:-",
+      "options": [
+        {"id": "a", "text": "slow wave sleep (SWS)"},
+        {"id": "b", "text": "paradoxical sleep"},
+        {"id": "c", "text": "rapid eye movement (REM) sleep"},
+        {"id": "d", "text": "light sleep"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Slow wave sleep (SWS), also called deep sleep, is associated with physical recovery and rejuvenation. It occurs mainly in the first half of the sleep period. During SWS, growth hormone is released, tissues are repaired, and the immune system is strengthened. REM sleep is associated with mental/brain rejuvenation.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_047",
+      "question": "The type of sleep associated with brain rejuvenation is called:-",
+      "options": [
+        {"id": "a", "text": "rapid eye movement (REM) sleep"},
+        {"id": "b", "text": "slow wave sleep"},
+        {"id": "c", "text": "light sleep"},
+        {"id": "d", "text": "deep sleep"}
+      ],
+      "correct_answer": "a",
+      "explanation": "REM (Rapid Eye Movement) sleep is associated with mental/brain rejuvenation, memory consolidation, and dreaming. It occurs mainly in the second half of the sleep period. Both SWS and REM sleep are essential — disruption of either leads to impaired performance. A full sleep cycle (SWS + REM) takes approximately 90 minutes.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_048",
+      "question": "The most common symptoms of carbon monoxide poisoning are:-",
+      "options": [
+        {"id": "a", "text": "headaches and nausea"},
+        {"id": "b", "text": "tunnel vision"},
+        {"id": "c", "text": "ringing in the ears"},
+        {"id": "d", "text": "chest pain"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Carbon monoxide (CO) poisoning symptoms: headache, nausea, dizziness, confusion, drowsiness, and cherry-red skin colour (late sign). CO binds to haemoglobin 200-300 times more readily than oxygen, forming carboxyhaemoglobin which cannot carry oxygen. Sources in aircraft: exhaust leaks, cabin heater. Treatment: fresh air, 100% oxygen, land immediately.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_049",
+      "question": "A leaking aircraft engine exhaust may pose a threat to aircrew and passengers because:-",
+      "options": [
+        {"id": "a", "text": "increased amounts of carbon monoxide may enter the cabin"},
+        {"id": "b", "text": "it increases cabin pressure"},
+        {"id": "c", "text": "it causes hyperventilation"},
+        {"id": "d", "text": "it reduces fuel flow"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A leaking exhaust system can allow carbon monoxide (CO) to enter the cabin, especially through the cabin heating system which often uses exhaust-heated air. CO is colourless and odourless, making it difficult to detect. If exhaust fumes are smelled, turn off the cabin heater, open air vents, and land as soon as possible.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_050",
+      "question": "A method of processing information referred to as a closed loop system:-",
+      "options": [
+        {"id": "a", "text": "requires feedback to the central decision maker"},
+        {"id": "b", "text": "works independently of the central decision maker"},
+        {"id": "c", "text": "does not require any input"},
+        {"id": "d", "text": "is the same as an open loop system"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A closed loop system requires continuous feedback to the central decision maker (the brain). The pilot monitors the outcome of each action and makes adjustments. Example: maintaining altitude — the pilot checks the altimeter (feedback) and adjusts the controls accordingly. An open loop system operates without feedback (e.g., a well-practised motor skill).",
+      "topic": "Information Processing",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_051",
+      "question": "Memory which deals with the storage of information in word form is called:-",
+      "options": [
+        {"id": "a", "text": "semantic memory"},
+        {"id": "b", "text": "episodic memory"},
+        {"id": "c", "text": "procedural memory"},
+        {"id": "d", "text": "sensory memory"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Semantic memory is the part of long-term memory that stores factual information, concepts, words, language, and numbers. It is 'knowing' rather than 'remembering'. Episodic memory stores personal experiences and events. Procedural memory stores skills and how to do things (e.g., flying procedures).",
+      "topic": "Information Processing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_052",
+      "question": "The short term or working memory is capable of dealing with a maximum of:-",
+      "options": [
+        {"id": "a", "text": "7 ± 2 items of unrelated information"},
+        {"id": "b", "text": "20 items"},
+        {"id": "c", "text": "3 items"},
+        {"id": "d", "text": "unlimited items"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The working (short-term) memory can hold approximately 7 ± 2 items (5 to 9 items) of unrelated information for about 20-30 seconds. This capacity can be increased through 'chunking' — grouping related items together. For example, a phone number 0123456789 can be chunked as 012-345-6789 (3 chunks instead of 10 digits).",
+      "topic": "Information Processing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_053",
+      "question": "Acute stress is considered to be:-",
+      "options": [
+        {"id": "a", "text": "a short-term condition"},
+        {"id": "b", "text": "a long-term condition"},
+        {"id": "c", "text": "always beneficial"},
+        {"id": "d", "text": "incurable"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Acute stress is a short-term response to an immediate threat or challenge. It triggers the 'fight or flight' response — increased heart rate, alertness, and adrenaline. Moderate acute stress can improve performance, but excessive stress degrades performance. Chronic stress is long-term and has cumulative negative effects on health and performance.",
+      "topic": "Stress",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_054",
+      "question": "The most likely causes of environmental, or physical stress in an aircraft are:-",
+      "options": [
+        {"id": "a", "text": "noise and vibration combined with variations in temperature and humidity"},
+        {"id": "b", "text": "only noise"},
+        {"id": "c", "text": "only temperature"},
+        {"id": "d", "text": "only vibration"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Environmental (physical) stressors in aviation include: noise (engine, propeller), vibration, temperature extremes (heat/cold), humidity variations, hypoxia (altitude), G-forces, and fatigue. These stressors accumulate and degrade performance. Proper aircraft maintenance, clothing, hydration, and rest help mitigate environmental stress.",
+      "topic": "Stress",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_055",
+      "question": "Chronic stress is usually a:-",
+      "options": [
+        {"id": "a", "text": "long term condition"},
+        {"id": "b", "text": "short term condition"},
+        {"id": "c", "text": "beneficial condition"},
+        {"id": "d", "text": "temporary condition"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Chronic stress is long-term, ongoing stress that builds up over weeks, months, or years. It results from sustained pressures such as work overload, financial problems, relationship issues, or health concerns. Chronic stress has serious health consequences: weakened immune system, cardiovascular disease, depression, and impaired cognitive function.",
+      "topic": "Stress",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_056",
+      "question": "'Environmental capture' is an error which is associated with:-",
+      "options": [
+        {"id": "a", "text": "skill-based behaviour"},
+        {"id": "b", "text": "rule-based behaviour"},
+        {"id": "c", "text": "knowledge-based behaviour"},
+        {"id": "d", "text": "random behaviour"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Environmental capture is a skill-based error where a well-practised action is triggered by the wrong environmental cue. Example: a pilot intending to retract flaps after landing instead retracts the landing gear because both controls are similar and the action is automatic. Prevention: deliberate, conscious checking before executing critical actions.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_057",
+      "question": "A motor programme is:-",
+      "options": [
+        {"id": "a", "text": "a skill which is acquired by practice"},
+        {"id": "b", "text": "an engine maintenance schedule"},
+        {"id": "c", "text": "a flight plan"},
+        {"id": "d", "text": "a type of memory"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A motor programme is a learned sequence of movements stored in long-term memory that can be executed automatically without conscious thought. Examples: landing flare, engine start sequence, emergency drills. Motor programmes are developed through repetition and practice, freeing up mental capacity for other tasks.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_058",
+      "question": "The term 'blood pressure' is used to:-",
+      "options": [
+        {"id": "a", "text": "indicate the pressure of the blood against the walls of the main arteries"},
+        {"id": "b", "text": "measure the volume of blood"},
+        {"id": "c", "text": "measure heart rate"},
+        {"id": "d", "text": "indicate oxygen saturation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Blood pressure is the force exerted by circulating blood against the walls of the arteries. It is measured in millimetres of mercury (mmHg) and expressed as systolic/diastolic (e.g., 120/80). High blood pressure (hypertension) increases the risk of heart attack, stroke, and kidney disease. Pilots must maintain healthy blood pressure for medical certification.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_059",
+      "question": "Platelets are a type of blood cell which are responsible for:-",
+      "options": [
+        {"id": "a", "text": "the formation of blood clots"},
+        {"id": "b", "text": "carrying oxygen"},
+        {"id": "c", "text": "fighting infection"},
+        {"id": "d", "text": "producing antibodies"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Platelets (thrombocytes) are small cell fragments in the blood that are essential for blood clotting. When a blood vessel is damaged, platelets aggregate at the site and form a plug, then trigger the clotting cascade to seal the wound. Low platelet count (thrombocytopenia) causes excessive bleeding; high count increases clot risk.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_060",
+      "question": "Pilots who are suffering from blocked sinuses and continue to fly may be subject to severe pain, and even suffer ear damage, particularly during:-",
+      "options": [
+        {"id": "a", "text": "a descent"},
+        {"id": "b", "text": "a climb in a non-pressurised aircraft"},
+        {"id": "c", "text": "level flight"},
+        {"id": "d", "text": "taxiing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Blocked sinuses or Eustachian tubes prevent pressure equalisation during descent. As external pressure increases, the trapped air in the sinuses cannot escape, causing severe pain (sinus barotrauma) and potentially rupturing the eardrum. During climb, expanding air can usually escape. Never fly with a head cold, sinus infection, or blocked nose.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_061",
+      "question": "When crossing time zones adjustment of the body clock:-",
+      "options": [
+        {"id": "a", "text": "is easier when flying from east to west"},
+        {"id": "b", "text": "is easier when flying from west to east"},
+        {"id": "c", "text": "is the same in both directions"},
+        {"id": "d", "text": "is impossible"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Westward travel (lengthening the day) is easier to adjust to than eastward travel (shortening the day) because the body's natural circadian rhythm is slightly longer than 24 hours. Flying west aligns with this tendency. Jet lag symptoms include fatigue, insomnia, digestive problems, and reduced performance. Allow approximately one day per time zone crossed for full adjustment.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_062",
+      "question": "The best method for an individual to acquire sleep 'credits' is to:-",
+      "options": [
+        {"id": "a", "text": "maintain a normal sleep period"},
+        {"id": "b", "text": "sleep for very long periods occasionally"},
+        {"id": "c", "text": "take frequent short naps"},
+        {"id": "d", "text": "use sleeping pills"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Sleep 'credits' (reserve) are best built by maintaining a consistent, regular sleep schedule with adequate duration (7-9 hours per night). Irregular sleep patterns, even if total hours are adequate, do not provide the same restorative benefits. Sleep debt cannot be fully repaid by occasional long sleeps — consistency is key.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_063",
+      "question": "Chronic insomnia is often the result of:-",
+      "options": [
+        {"id": "a", "text": "long-term stress"},
+        {"id": "b", "text": "disturbed body rhythms only"},
+        {"id": "c", "text": "too much sleep"},
+        {"id": "d", "text": "physical exercise"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Chronic insomnia (persistent difficulty falling or staying asleep) is often caused by long-term stress, anxiety, depression, or medical conditions. It can also result from poor sleep hygiene, shift work, or substance use. Chronic insomnia severely impairs cognitive function, mood, and health. Professional medical help should be sought.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_064",
+      "question": "The tiny air sacs in the lungs which allow oxygen to diffuse into the blood and carbon dioxide to diffuse into the lungs are called:-",
+      "options": [
+        {"id": "a", "text": "alveoli"},
+        {"id": "b", "text": "bronchi"},
+        {"id": "c", "text": "bronchioles"},
+        {"id": "d", "text": "capillaries"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Alveoli are microscopic air sacs in the lungs where gas exchange occurs. Oxygen diffuses from the alveoli into the surrounding capillaries (blood vessels), while carbon dioxide diffuses from the blood into the alveoli to be exhaled. The lungs contain approximately 300 million alveoli, providing a huge surface area for gas exchange.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_065",
+      "question": "Adaptation of the eye for night vision may take up to:-",
+      "options": [
+        {"id": "a", "text": "30 minutes"},
+        {"id": "b", "text": "5 minutes"},
+        {"id": "c", "text": "1 hour"},
+        {"id": "d", "text": "2 hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Full dark adaptation (maximum sensitivity to low light) takes approximately 30 minutes. The cones adapt in about 7 minutes, but the rods require 20-30 minutes. Exposure to bright light (even briefly) destroys dark adaptation. To preserve night vision: use red cockpit lighting, avoid looking at bright lights, and allow adequate time for adaptation before night flight.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_066",
+      "question": "It may be impossible to see a distant, faintly lit object at night by looking directly at it because:-",
+      "options": [
+        {"id": "a", "text": "the light rays will be focused on the fovea which contains a concentration of cones"},
+        {"id": "b", "text": "the light rays will be focused on the fovea which contains a concentration of rods"},
+        {"id": "c", "text": "the pupil is too small"},
+        {"id": "d", "text": "the iris is closed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The fovea (centre of the retina) contains mainly cones, which require bright light to function. At night, cones are ineffective, creating a 'blind spot' in the centre of vision. Rods (which detect dim light) are concentrated in the peripheral retina. Therefore, looking slightly to the side of a faint object (off-centre viewing) places the image on the rods, making it visible.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_067",
+      "question": "Angina is characterised by:-",
+      "options": [
+        {"id": "a", "text": "mild chest pains which subside on resting"},
+        {"id": "b", "text": "severe chest pains and collapse"},
+        {"id": "c", "text": "headaches only"},
+        {"id": "d", "text": "difficulty breathing only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Angina pectoris is characterised by mild to moderate chest pain (often described as pressure, tightness, or squeezing) that is triggered by exertion or stress and relieved by rest. It is caused by temporary insufficient blood supply to the heart muscle. Unlike a heart attack, angina does not cause permanent heart damage, but it is a warning sign of heart disease.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_068",
+      "question": "A situation in which a pilot makes a correct decision but initiates the incorrect reaction is referred to as:-",
+      "options": [
+        {"id": "a", "text": "an action slip"},
+        {"id": "b", "text": "environmental capture"},
+        {"id": "c", "text": "a knowledge-based error"},
+        {"id": "d", "text": "a rule-based error"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An action slip (or lapse) is a skill-based error where the pilot knows what to do (correct decision) but executes the wrong action. Example: intending to select flaps but selecting gear instead. Slips often occur during periods of distraction, stress, or fatigue. Prevention: use checklists, verbalise actions, and maintain situational awareness.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_069",
+      "question": "Skill-based behaviour consists of actions that:-",
+      "options": [
+        {"id": "a", "text": "operate without the constant attention of the brain"},
+        {"id": "b", "text": "require the conscious involvement of the brain"},
+        {"id": "c", "text": "are always incorrect"},
+        {"id": "d", "text": "cannot be learned"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Skill-based behaviour involves highly practised, automatic actions that require minimal conscious thought (e.g., maintaining straight and level flight, routine radio calls). This frees up mental capacity for higher-level tasks. However, skill-based behaviour is prone to slips and lapses, especially during distraction or when routines are interrupted.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_070",
+      "question": "Knowledge-based behaviour is associated with:-",
+      "options": [
+        {"id": "a", "text": "decisions made based on knowledge stored in the long-term memory"},
+        {"id": "b", "text": "automatic actions"},
+        {"id": "c", "text": "following rules only"},
+        {"id": "d", "text": "random decisions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Knowledge-based behaviour is used in novel or unfamiliar situations where no rules or procedures apply. The pilot must analyse the situation, recall relevant knowledge from long-term memory, and formulate a solution. This is the slowest and most error-prone level of decision making, but it is essential for handling emergencies and unexpected situations.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_071",
+      "question": "The transfer of oxygen from the lungs to the blood is a function of:-",
+      "options": [
+        {"id": "a", "text": "the pressure of the oxygen"},
+        {"id": "b", "text": "the low levels of oxygen in the blood only"},
+        {"id": "c", "text": "the temperature only"},
+        {"id": "d", "text": "the humidity"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Oxygen transfer from the alveoli to the blood occurs by diffusion, driven by the pressure gradient (difference in partial pressure). Oxygen moves from high pressure (in the alveoli) to low pressure (in the blood). At altitude, the reduced partial pressure of oxygen in the alveoli reduces the pressure gradient, slowing oxygen transfer and causing hypoxia.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_072",
+      "question": "As the partial pressure of oxygen decreases:-",
+      "options": [
+        {"id": "a", "text": "the transfer of oxygen into the blood decreases"},
+        {"id": "b", "text": "the transfer of oxygen into the blood increases"},
+        {"id": "c", "text": "there is no effect on oxygen transfer"},
+        {"id": "d", "text": "carbon dioxide transfer increases"}
+      ],
+      "correct_answer": "a",
+      "explanation": "As altitude increases, atmospheric pressure decreases, reducing the partial pressure of oxygen. This reduces the pressure gradient between the alveoli and the blood, slowing oxygen diffusion into the blood. The result is hypoxia — insufficient oxygen in the body tissues. Supplemental oxygen or descent restores the pressure gradient.",
+      "topic": "Hypoxia",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_073",
+      "question": "As the partial pressure of oxygen increases:-",
+      "options": [
+        {"id": "a", "text": "the transfer of oxygen into the blood increases"},
+        {"id": "b", "text": "the body's demand for oxygen increases"},
+        {"id": "c", "text": "the transfer of oxygen into the blood decreases"},
+        {"id": "d", "text": "there is no effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Increasing the partial pressure of oxygen (by descending to lower altitude or using supplemental oxygen) increases the pressure gradient between the alveoli and blood, enhancing oxygen diffusion into the blood. This is why supplemental oxygen is effective in treating hypoxia — it increases the oxygen partial pressure despite reduced atmospheric pressure.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_074",
+      "question": "Permanent hearing loss may result from damage to the:-",
+      "options": [
+        {"id": "a", "text": "cochlea"},
+        {"id": "b", "text": "eardrum"},
+        {"id": "c", "text": "Eustachian tube"},
+        {"id": "d", "text": "outer ear"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The cochlea is the spiral-shaped organ in the inner ear containing hair cells that convert sound vibrations into electrical signals. Damage to these hair cells (from loud noise, disease, or ageing) causes permanent sensorineural hearing loss because hair cells cannot regenerate. Damage to the eardrum or middle ear (conductive hearing loss) is often treatable.",
+      "topic": "Hearing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_075",
+      "question": "Decompression sickness, associated with reduced air pressure, is characterised by:-",
+      "options": [
+        {"id": "a", "text": "the formation of bubbles of nitrogen in various parts of the body"},
+        {"id": "b", "text": "oxygen bubbles in the blood"},
+        {"id": "c", "text": "carbon dioxide poisoning"},
+        {"id": "d", "text": "increased blood pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Decompression sickness ('the bends') occurs when dissolved nitrogen in body tissues forms bubbles due to rapid pressure reduction. This can happen after scuba diving followed by flying, or at very high altitude. Symptoms depend on where bubbles form: joints (pain/'bends'), skin (itching/'creeps'), lungs (breathing difficulty/'chokes'), or nervous system (paralysis). Treatment: 100% oxygen, descent, hyperbaric chamber.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_076",
+      "question": "With regard to decompression sickness, the pain experienced by the formation of nitrogen bubbles in the body's joints is referred to as:-",
+      "options": [
+        {"id": "a", "text": "the bends"},
+        {"id": "b", "text": "the creeps"},
+        {"id": "c", "text": "the chokes"},
+        {"id": "d", "text": "the staggers"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'bends' refers to joint and limb pain caused by nitrogen bubbles forming in joints, muscles, and tendons during decompression sickness. The pain can be severe and incapacitating. Other decompression sickness manifestations: 'creeps' (skin itching), 'chokes' (lung involvement with breathing difficulty), and neurological symptoms (paralysis, sensory loss).",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_077",
+      "question": "With regard to decompression sickness, the itching sensation created by the formation of nitrogen bubbles in the skin is referred to as:-",
+      "options": [
+        {"id": "a", "text": "the creeps"},
+        {"id": "b", "text": "the bends"},
+        {"id": "c", "text": "the chokes"},
+        {"id": "d", "text": "the tingles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'creeps' (also called 'formication') is an itching, crawling sensation on the skin caused by nitrogen bubbles forming in subcutaneous tissues. It is usually a mild form of decompression sickness but indicates that the body is experiencing decompression stress. Any symptoms of decompression sickness require immediate descent and medical attention.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_078",
+      "question": "With regard to decompression sickness, the formation of nitrogen bubbles in the lungs leads to a condition known as:-",
+      "options": [
+        {"id": "a", "text": "the chokes"},
+        {"id": "b", "text": "the bends"},
+        {"id": "c", "text": "the creeps"},
+        {"id": "d", "text": "the gasps"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'chokes' is a serious form of decompression sickness where nitrogen bubbles form in the pulmonary circulation (lungs). Symptoms include: chest pain, coughing, difficulty breathing, and potentially respiratory failure. This is a medical emergency requiring immediate descent, 100% oxygen, and hyperbaric chamber treatment.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_079",
+      "question": "In the human ear, angular accelerations are sensed by the:-",
+      "options": [
+        {"id": "a", "text": "semi-circular canals"},
+        {"id": "b", "text": "otolith organs"},
+        {"id": "c", "text": "cochlea"},
+        {"id": "d", "text": "Eustachian tube"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The three semi-circular canals (oriented in three perpendicular planes) detect angular (rotational) accelerations — pitch, roll, and yaw. Each canal contains fluid (endolymph) and hair cells. When the head rotates, the fluid lags behind due to inertia, deflecting the hair cells and signalling rotation to the brain.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_080",
+      "question": "In the human ear, linear accelerations are sensed by the:-",
+      "options": [
+        {"id": "a", "text": "otolith or static organ"},
+        {"id": "b", "text": "semi-circular canals"},
+        {"id": "c", "text": "cochlea"},
+        {"id": "d", "text": "auditory nerve"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The otolith organs (utricle and saccule) detect linear accelerations and the direction of gravity. They contain calcium carbonate crystals (otoliths) embedded in a gel layer over hair cells. When the head accelerates linearly or tilts, the otoliths shift, bending the hair cells and signalling the movement to the brain.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_081",
+      "question": "According to Boyle's Law, providing the temperature is constant:-",
+      "options": [
+        {"id": "a", "text": "as the pressure of a gas increases the volume decreases"},
+        {"id": "b", "text": "as the pressure increases the volume increases"},
+        {"id": "c", "text": "pressure and volume are unrelated"},
+        {"id": "d", "text": "volume remains constant"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Boyle's Law: at constant temperature, pressure × volume = constant. As pressure increases, volume decreases proportionally (inverse relationship). In aviation: during climb, atmospheric pressure decreases so gas in the body (sinuses, intestines, middle ear) expands. During descent, pressure increases so gas contracts. This is why ear clearing is necessary.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_082",
+      "question": "During a level turn, with no external reference, a false sense that the aircraft is flying straight and level may be felt by the pilot. During the roll out a sense of turning in the opposite direction may be felt. This is referred to as:-",
+      "options": [
+        {"id": "a", "text": "the leans"},
+        {"id": "b", "text": "vertigo"},
+        {"id": "c", "text": "the Coriolis illusion"},
+        {"id": "d", "text": "autokinesis"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'leans' is the most common spatial disorientation illusion. If a pilot enters a turn slowly (below the semi-circular canal detection threshold), the vestibular system does not sense the turn. The pilot feels straight and level while actually turning. When rolling out, the vestibular system senses the roll-out as a turn in the opposite direction. Trust the instruments.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_083",
+      "question": "The 'oculogravic or somatogravic illusion' is the sensation of:-",
+      "options": [
+        {"id": "a", "text": "tumbling backwards during acceleration"},
+        {"id": "b", "text": "the body rotating when in fact no rotation is occurring"},
+        {"id": "c", "text": "being upside down"},
+        {"id": "d", "text": "falling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The somatogravic illusion occurs during rapid acceleration (e.g., take-off). The otolith organs cannot distinguish between gravity and linear acceleration. The combined force vector tilts backward, creating the illusion of a nose-up pitch attitude. The pilot may unconsciously push forward, causing a dangerously low pitch attitude. Trust the attitude indicator.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_084",
+      "question": "At night a stationary light which is stared at for a few seconds may appear to move. This illusion is known as:-",
+      "options": [
+        {"id": "a", "text": "autokinesis"},
+        {"id": "b", "text": "the leans"},
+        {"id": "c", "text": "vertigo"},
+        {"id": "d", "text": "the Coriolis illusion"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Autokinesis is a visual illusion where a stationary point of light (e.g., a star, distant aircraft light) appears to move when stared at in darkness with no other visual references. It is caused by small, involuntary eye movements. Prevention: avoid staring at a single light; scan the area regularly; use other references if available.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_085",
+      "question": "Equalisation of the pressure between the outer ear and the middle ear is achieved through the:-",
+      "options": [
+        {"id": "a", "text": "Eustachian tube"},
+        {"id": "b", "text": "cochlea"},
+        {"id": "c", "text": "semi-circular canals"},
+        {"id": "d", "text": "auditory nerve"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Eustachian tube connects the middle ear to the back of the throat, allowing pressure equalisation between the middle ear and the external environment. During altitude changes, the Eustachian tube opens (by swallowing, yawning, or the Valsalva manoeuvre) to equalise pressure. Blockage causes ear pain and potential eardrum rupture.",
+      "topic": "Hearing",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_086",
+      "question": "The transmission of electrical signals, for conversion into sound, from the ear to the brain is achieved via the:-",
+      "options": [
+        {"id": "a", "text": "auditory nerve"},
+        {"id": "b", "text": "Eustachian tube"},
+        {"id": "c", "text": "cochlea"},
+        {"id": "d", "text": "semi-circular canals"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The auditory nerve (also called the cochlear nerve or acoustic nerve) transmits electrical signals from the hair cells in the cochlea to the brain's auditory cortex, where they are interpreted as sound. Damage to the auditory nerve causes sensorineural hearing loss, which is usually permanent.",
+      "topic": "Hearing",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_087",
+      "question": "An increase in positive 'g' may initially result in a condition known as:-",
+      "options": [
+        {"id": "a", "text": "grey out"},
+        {"id": "b", "text": "red out"},
+        {"id": "c", "text": "black out"},
+        {"id": "d", "text": "white out"}
+      ],
+      "correct_answer": "a",
+      "explanation": "During positive G-forces (e.g., pulling out of a dive or in a steep turn), blood is forced away from the head toward the feet. Grey-out is the initial stage where peripheral vision is lost but central vision remains. If G-forces continue, it progresses to tunnel vision, then blackout (complete loss of vision), and finally G-LOC (G-induced loss of consciousness).",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_088",
+      "question": "'Grey out' is a condition which may occur as a result of:-",
+      "options": [
+        {"id": "a", "text": "positive 'g' manoeuvres"},
+        {"id": "b", "text": "negative 'g' manoeuvres"},
+        {"id": "c", "text": "hypoxia only"},
+        {"id": "d", "text": "hyperventilation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Grey-out results from positive G-forces reducing blood flow to the brain and eyes. The retina is very sensitive to reduced blood supply. Grey-out typically occurs at 3-4 G in untrained individuals. Fighter pilots use G-suits and anti-G straining manoeuvres to increase G-tolerance. In GA aircraft, avoid sustained steep turns and abrupt pull-ups.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_089",
+      "question": "A sudden increase in negative 'g' may result in a condition known as:-",
+      "options": [
+        {"id": "a", "text": "red out"},
+        {"id": "b", "text": "grey out"},
+        {"id": "c", "text": "black out"},
+        {"id": "d", "text": "white out"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Negative G-forces (e.g., pushing over into a dive, inverted flight) force blood toward the head. Red-out occurs when excessive blood pressure in the head causes the eyes to become bloodshot and vision takes on a reddish tinge. Negative G is very uncomfortable and can cause burst blood vessels in the eyes. Most people tolerate only -2 to -3 G.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_090",
+      "question": "'Red out' is a condition which may occur as a result of:-",
+      "options": [
+        {"id": "a", "text": "excessive negative 'g' manoeuvres"},
+        {"id": "b", "text": "positive 'g' manoeuvres"},
+        {"id": "c", "text": "hypoxia"},
+        {"id": "d", "text": "carbon monoxide poisoning"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Red-out is caused by negative G-forces forcing blood to the head and eyes. The increased blood pressure in the retinal blood vessels causes them to engorge, giving vision a red appearance. Prolonged negative G can cause permanent eye damage. Negative G should be avoided in normal flight operations.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_091",
+      "question": "'Black out' is a condition which may occur as a result of:-",
+      "options": [
+        {"id": "a", "text": "sustained positive 'g' manoeuvres"},
+        {"id": "b", "text": "negative 'g' manoeuvres"},
+        {"id": "c", "text": "level flight"},
+        {"id": "d", "text": "slow flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Blackout is complete loss of vision (while remaining conscious) caused by sustained positive G-forces reducing blood flow to the retina. It follows grey-out and tunnel vision. If G-forces continue, G-LOC (loss of consciousness) occurs. Recovery: immediately reduce G-forces. Blackout can occur at 4-6 G in untrained individuals.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_092",
+      "question": "During sustained positive 'g' acceleration:-",
+      "options": [
+        {"id": "a", "text": "the blood rushes away from the head causing loss of vision, grey out, or black out"},
+        {"id": "b", "text": "the blood rushes to the head"},
+        {"id": "c", "text": "there is no effect on blood flow"},
+        {"id": "d", "text": "only the legs are affected"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Positive G-forces (tail-to-head direction) force blood away from the brain and toward the lower body. This reduces cerebral blood flow and retinal blood supply, causing progressive symptoms: grey-out → tunnel vision → blackout → G-LOC. The heart cannot pump blood 'uphill' against high G-forces. Reducing G immediately restores blood flow.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_093",
+      "question": "An increase in the level of carbon dioxide in the blood:-",
+      "options": [
+        {"id": "a", "text": "will cause an increase in the breathing rate"},
+        {"id": "b", "text": "will cause a tingling sensation in the finger tips"},
+        {"id": "c", "text": "will decrease the breathing rate"},
+        {"id": "d", "text": "has no effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Carbon dioxide (CO₂) is the primary regulator of breathing rate. Chemoreceptors in the brain stem detect rising CO₂ levels and trigger an increase in breathing rate to expel the excess CO₂. This is why holding your breath becomes uncomfortable — not from lack of oxygen, but from CO₂ buildup. Hyperventilation reduces CO₂ below normal levels.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_094",
+      "question": "The term 'chunking' is used to define the process of:-",
+      "options": [
+        {"id": "a", "text": "combining data to increase the capacity of the working or short term memory"},
+        {"id": "b", "text": "transferring information into the long term memory"},
+        {"id": "c", "text": "forgetting information"},
+        {"id": "d", "text": "repeating information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Chunking is a memory technique where individual pieces of information are grouped into larger, meaningful units (chunks). This increases the effective capacity of working memory. Example: the number sequence 1-9-4-5-2-0-2-5 (8 items) can be chunked as 1945-2025 (2 items: two years). Pilots use chunking for radio frequencies, clearances, and procedures.",
+      "topic": "Information Processing",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_095",
+      "question": "The condition known as cyanosis is associated with:-",
+      "options": [
+        {"id": "a", "text": "hypoxia"},
+        {"id": "b", "text": "high blood pressure"},
+        {"id": "c", "text": "hyperventilation"},
+        {"id": "d", "text": "dehydration"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cyanosis is a bluish discolouration of the skin and mucous membranes caused by insufficient oxygen in the blood (hypoxia). It is most visible in the lips, fingernails, and earlobes. Cyanosis is a late sign of hypoxia — by the time it is visible, the person is severely hypoxic. Early recognition and treatment of hypoxia is essential.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_096",
+      "question": "The ability to make a judgement based on learned skills or experience is referred to as:-",
+      "options": [
+        {"id": "a", "text": "perceptual judgement"},
+        {"id": "b", "text": "cognitive judgement"},
+        {"id": "c", "text": "random judgement"},
+        {"id": "d", "text": "automatic judgement"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Perceptual judgement is rapid, intuitive decision-making based on pattern recognition from experience. An experienced pilot can 'perceive' when something is wrong (e.g., approach is too high/low) without conscious analysis. It is fast and usually accurate but can be affected by expectation bias. Cognitive judgement involves conscious, analytical thought.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_097",
+      "question": "Cognitive judgement involves decision making based on:-",
+      "options": [
+        {"id": "a", "text": "a complex thought process"},
+        {"id": "b", "text": "intuition only"},
+        {"id": "c", "text": "automatic responses"},
+        {"id": "d", "text": "random selection"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Cognitive judgement is deliberate, analytical decision-making involving conscious thought, reasoning, and problem-solving. It is used for complex or unfamiliar situations where perceptual judgement is insufficient. Cognitive judgement is slower but more thorough. Example: calculating whether to divert due to weather involves cognitive judgement.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_098",
+      "question": "Hypoxia is caused by:-",
+      "options": [
+        {"id": "a", "text": "a decrease in the partial pressure of oxygen"},
+        {"id": "b", "text": "excessive levels of carbon dioxide in the body tissues"},
+        {"id": "c", "text": "too much oxygen"},
+        {"id": "d", "text": "low carbon dioxide levels"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hypoxia is insufficient oxygen reaching the body tissues. The primary cause in aviation is decreased partial pressure of oxygen at altitude (hypoxic hypoxia). Other causes: anaemia or CO poisoning (anaemic hypoxia), poor circulation (stagnant hypoxia), or cells unable to use oxygen due to alcohol/drugs (histotoxic hypoxia).",
+      "topic": "Hypoxia",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_099",
+      "question": "Hyperventilation may be caused by:-",
+      "options": [
+        {"id": "a", "text": "anxiety caused by a stressful situation"},
+        {"id": "b", "text": "too little carbon dioxide in the blood"},
+        {"id": "c", "text": "too much oxygen"},
+        {"id": "d", "text": "low altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hyperventilation (over-breathing) is usually triggered by anxiety, stress, fear, or pain. The rapid, deep breathing expels too much CO₂, causing respiratory alkalosis. Symptoms: tingling extremities, dizziness, light-headedness, muscle spasms, confusion. It can mimic hypoxia. Treatment: consciously slow breathing, breathe into a paper bag, or talk/sing to regulate breathing.",
+      "topic": "Hyperventilation",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_100",
+      "question": "Visual acuity is:-",
+      "options": [
+        {"id": "a", "text": "the ability of the eye to see clearly and distinguish fine detail"},
+        {"id": "b", "text": "the ability to see in the dark"},
+        {"id": "c", "text": "the ability to see colour"},
+        {"id": "d", "text": "the field of vision"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Visual acuity is the sharpness or clarity of vision — the ability to distinguish fine detail. It is measured using eye charts (e.g., 20/20 vision). Visual acuity is best in the fovea (central vision) in bright light using cone cells. It decreases with: dim light, fatigue, hypoxia, alcohol, certain medications, and ageing. Pilots must meet minimum visual acuity standards.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hp_101",
+      "question": "The early symptoms of hypoxia include:-",
+      "options": [
+        {"id": "a", "text": "euphoria, impaired judgement, and decreased performance"},
+        {"id": "b", "text": "improved vision and alertness"},
+        {"id": "c", "text": "chest pain and collapse"},
+        {"id": "d", "text": "ringing in the ears"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Early hypoxia symptoms are insidious and often unrecognised by the sufferer: euphoria (false sense of well-being), impaired judgement, decreased performance, slowed reactions, difficulty concentrating, poor coordination, and personality changes. Later symptoms: cyanosis (blue lips/nails), headache, dizziness, breathlessness, and eventually unconsciousness. The danger is that hypoxia impairs the ability to recognise hypoxia.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_102",
+      "question": "The IMSAFE checklist is used to assess:-",
+      "options": [
+        {"id": "a", "text": "a pilot's fitness to fly"},
+        {"id": "b", "text": "aircraft airworthiness"},
+        {"id": "c", "text": "weather conditions"},
+        {"id": "d", "text": "fuel requirements"}
+      ],
+      "correct_answer": "a",
+      "explanation": "IMSAFE is a personal fitness checklist: Illness, Medication, Stress, Alcohol, Fatigue, Eating/Emotion. Pilots should use this before every flight to assess whether they are fit to fly. Any 'no' answer should prompt serious consideration of postponing the flight. Self-assessment is critical — regulations set minimums, but pilots must honestly evaluate their own condition.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_103",
+      "question": "According to aviation regulations, a pilot may not fly within:-",
+      "options": [
+        {"id": "a", "text": "8 hours of consuming alcohol"},
+        {"id": "b", "text": "4 hours of consuming alcohol"},
+        {"id": "c", "text": "12 hours of consuming alcohol"},
+        {"id": "d", "text": "24 hours of consuming alcohol"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The '8 hours bottle to throttle' rule is the legal minimum, but many pilots use '12 hours bottle to throttle' or longer. Alcohol impairs judgement, coordination, vision, and reaction time. It also increases susceptibility to hypoxia. The pilot must have zero blood alcohol content when flying. Hangovers also impair performance — if you're not fit, don't fly.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_104",
+      "question": "The effects of alcohol on the body:-",
+      "options": [
+        {"id": "a", "text": "are magnified at altitude due to reduced oxygen availability"},
+        {"id": "b", "text": "are reduced at altitude"},
+        {"id": "c", "text": "are unaffected by altitude"},
+        {"id": "d", "text": "only affect vision"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Alcohol's effects are significantly magnified at altitude. Alcohol impairs the brain's ability to use oxygen (histotoxic hypoxia). Combined with reduced oxygen availability at altitude (hypoxic hypoxia), the effects are compounded. Even small amounts of alcohol can severely impair performance at altitude. The effective altitude is increased by approximately 2000 ft per drink.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_105",
+      "question": "Over-the-counter medications:-",
+      "options": [
+        {"id": "a", "text": "may have side effects that impair flying ability and should be checked before flying"},
+        {"id": "b", "text": "are always safe for pilots"},
+        {"id": "c", "text": "have no effect on flying"},
+        {"id": "d", "text": "only affect vision"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Many over-the-counter medications cause drowsiness, dizziness, or impaired judgement. Common culprits: antihistamines (allergy/cold medicines), sleep aids, motion sickness medications, and pain relievers. The underlying condition may also be disqualifying (e.g., a cold blocks sinuses). Rule: if you need medication, you probably shouldn't fly. Consult an aviation medical examiner if uncertain.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_106",
+      "question": "Crew Resource Management (CRM) is:-",
+      "options": [
+        {"id": "a", "text": "the effective use of all available resources (people, equipment, information) to achieve safe flight operations"},
+        {"id": "b", "text": "a method of scheduling crew duty times"},
+        {"id": "c", "text": "a type of aircraft maintenance"},
+        {"id": "d", "text": "a fuel management system"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CRM focuses on interpersonal communication, leadership, and decision-making in the cockpit. Key elements: communication, situational awareness, problem-solving, decision-making, and teamwork. CRM recognises that most accidents result from human factors, not technical failures. Even single-pilot operations benefit from CRM principles (using ATC, passengers, and other resources).",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_107",
+      "question": "Threat and Error Management (TEM) involves:-",
+      "options": [
+        {"id": "a", "text": "identifying threats, avoiding errors, and managing consequences to maintain safety margins"},
+        {"id": "b", "text": "only responding to emergencies"},
+        {"id": "c", "text": "ignoring minor errors"},
+        {"id": "d", "text": "blaming others for mistakes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TEM is a framework for managing threats (external factors like weather, terrain), errors (pilot mistakes), and undesired aircraft states (deviations from intended flight path). The goal is to detect and manage threats before they lead to errors, and manage errors before they lead to undesired states. TEM promotes a proactive, non-punitive safety culture.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_108",
+      "question": "The 'Swiss Cheese Model' of accident causation suggests that:-",
+      "options": [
+        {"id": "a", "text": "accidents occur when holes in multiple defensive layers align, allowing a hazard to pass through"},
+        {"id": "b", "text": "accidents are caused by a single catastrophic failure"},
+        {"id": "c", "text": "accidents are random and unpredictable"},
+        {"id": "d", "text": "accidents only happen to inexperienced pilots"}
+      ],
+      "correct_answer": "a",
+      "explanation": "James Reason's Swiss Cheese Model shows that organisations have multiple defensive layers (training, procedures, equipment, regulations). Each layer has weaknesses ('holes'). An accident occurs when holes in all layers align, allowing a hazard to pass through. This explains why accidents typically involve multiple contributing factors, not a single cause. Prevention: strengthen all layers.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_109",
+      "question": "The 'dirty dozen' in human factors refers to:-",
+      "options": [
+        {"id": "a", "text": "twelve common human error precursors in aviation maintenance and operations"},
+        {"id": "b", "text": "twelve types of aircraft"},
+        {"id": "c", "text": "twelve weather hazards"},
+        {"id": "d", "text": "twelve navigation errors"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Dirty Dozen are twelve human factors that contribute to errors: Lack of communication, Complacency, Lack of knowledge, Distraction, Lack of teamwork, Fatigue, Lack of resources, Pressure, Lack of assertiveness, Stress, Lack of awareness, Norms (peer pressure). Originally developed for maintenance, they apply equally to flight operations. Awareness of these factors helps prevent errors.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_110",
+      "question": "Confirmation bias is:-",
+      "options": [
+        {"id": "a", "text": "the tendency to search for or interpret information in a way that confirms pre-existing beliefs"},
+        {"id": "b", "text": "always beneficial in decision-making"},
+        {"id": "c", "text": "only affects inexperienced pilots"},
+        {"id": "d", "text": "a type of spatial disorientation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Confirmation bias causes pilots to notice information that supports their expectations while ignoring contradictory information. Example: expecting good weather, a pilot may dismiss deteriorating conditions. Or expecting a certain runway, they may misread the identifier. Prevention: actively seek disconfirming evidence, use checklists, and maintain an open, questioning mindset.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_111",
+      "question": "The 'get-home-itis' or 'plan continuation bias' refers to:-",
+      "options": [
+        {"id": "a", "text": "the tendency to continue with the original plan despite changing circumstances that suggest an alternative course of action"},
+        {"id": "b", "text": "a medical condition"},
+        {"id": "c", "text": "a type of hypoxia"},
+        {"id": "d", "text": "a navigation error"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Get-home-itis (plan continuation bias) is a dangerous tendency to press on toward the destination despite deteriorating weather, fuel concerns, or other hazards. Psychological factors: commitment to the plan, pressure to arrive, reluctance to 'waste' time/money, and optimism bias. Prevention: set personal minimums, have alternate plans, and be willing to divert or turn back.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_112",
+      "question": "Situational awareness is:-",
+      "options": [
+        {"id": "a", "text": "the accurate perception and understanding of all factors affecting the flight"},
+        {"id": "b", "text": "only knowing the aircraft's position"},
+        {"id": "c", "text": "only monitoring the instruments"},
+        {"id": "d", "text": "a type of navigation system"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Situational awareness (SA) is knowing what is happening around you and understanding how information, events, and actions will affect goals and objectives. Three levels: (1) Perception of elements, (2) Comprehension of their meaning, (3) Projection of future status. Loss of SA is a major accident contributor. Maintain SA through scanning, communication, and anticipation.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_113",
+      "question": "The 'sterile cockpit' rule means:-",
+      "options": [
+        {"id": "a", "text": "no non-essential activities or conversations during critical phases of flight"},
+        {"id": "b", "text": "the cockpit must be physically clean"},
+        {"id": "c", "text": "only one pilot may speak"},
+        {"id": "d", "text": "all communication is prohibited"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The sterile cockpit rule (below 10,000 ft for commercial operations, or during critical phases for all flights) prohibits non-essential activities and conversations. Critical phases: taxi, take-off, landing, and any operations below 10,000 ft. The rule reduces distractions during high-workload periods. Essential communication (checklists, ATC, safety-related) is permitted and encouraged.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_114",
+      "question": "Fixation (also called 'tunnel vision' in decision-making) is:-",
+      "options": [
+        {"id": "a", "text": "focusing attention on one issue to the exclusion of other important factors"},
+        {"id": "b", "text": "a type of visual illusion"},
+        {"id": "c", "text": "only related to instrument scanning"},
+        {"id": "d", "text": "always beneficial"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fixation occurs when a pilot becomes so focused on one problem (e.g., a malfunctioning instrument, a navigation issue) that they neglect other critical tasks like flying the aircraft. This can lead to controlled flight into terrain or loss of control. Prevention: maintain the priority — aviate, navigate, communicate. Delegate tasks if possible.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_115",
+      "question": "The DECIDE model for decision-making stands for:-",
+      "options": [
+        {"id": "a", "text": "Detect, Estimate, Choose, Identify, Do, Evaluate"},
+        {"id": "b", "text": "Determine, Execute, Calculate, Initiate, Decide, End"},
+        {"id": "c", "text": "Delay, Estimate, Continue, Ignore, Decide, Exit"},
+        {"id": "d", "text": "Detect, Eliminate, Continue, Identify, Delay, Execute"}
+      ],
+      "correct_answer": "a",
+      "explanation": "DECIDE is a structured decision-making process: Detect the problem, Estimate the need to react, Choose a desirable outcome, Identify actions, Do the necessary action, Evaluate the effect. This systematic approach helps prevent hasty decisions and ensures all factors are considered. It is particularly useful for non-time-critical decisions.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_116",
+      "question": "Dehydration during flight can cause:-",
+      "options": [
+        {"id": "a", "text": "fatigue, headaches, dizziness, and impaired decision-making"},
+        {"id": "b", "text": "improved performance"},
+        {"id": "c", "text": "hyperventilation only"},
+        {"id": "d", "text": "no effects"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dehydration is common in flight due to low humidity in the cabin, breathing dry air, and inadequate fluid intake. Even mild dehydration (2% body weight loss) impairs cognitive function, reaction time, and physical performance. Symptoms: thirst, fatigue, headache, dizziness, dark urine. Prevention: drink water regularly before and during flight; avoid caffeine and alcohol which are diuretics.",
+      "topic": "Fitness to Fly",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_117",
+      "question": "Caffeine consumption:-",
+      "options": [
+        {"id": "a", "text": "can temporarily improve alertness but may cause dehydration and sleep disruption"},
+        {"id": "b", "text": "has no effects on pilots"},
+        {"id": "c", "text": "is always beneficial"},
+        {"id": "d", "text": "cures fatigue"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Caffeine is a stimulant that can temporarily improve alertness and concentration. However, it is a diuretic (increases urination, contributing to dehydration), can cause jitteriness and anxiety in high doses, and disrupts sleep quality if consumed late in the day. Caffeine does not cure fatigue — only sleep does. Use caffeine judiciously and maintain hydration.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_118",
+      "question": "The circadian rhythm is:-",
+      "options": [
+        {"id": "a", "text": "the body's internal 24-hour biological clock that regulates sleep-wake cycles"},
+        {"id": "b", "text": "a type of spatial disorientation"},
+        {"id": "c", "text": "a navigation technique"},
+        {"id": "d", "text": "a weather pattern"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The circadian rhythm is the body's internal clock that regulates sleep-wake cycles, hormone release, body temperature, and other physiological processes on a roughly 24-hour cycle. It is influenced by light exposure. Disruption (shift work, time zone changes, irregular schedules) causes fatigue, impaired performance, and health problems. Maintain regular sleep schedules when possible.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_119",
+      "question": "The 'window of circadian low' (WOCL) is:-",
+      "options": [
+        {"id": "a", "text": "the period between 0200-0600 when the body is least alert and performance is poorest"},
+        {"id": "b", "text": "the best time for flying"},
+        {"id": "c", "text": "only affects night shift workers"},
+        {"id": "d", "text": "a type of weather phenomenon"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The WOCL (typically 0200-0600 local time) is when the circadian rhythm causes the lowest alertness and poorest performance. Body temperature is lowest, reaction times are slowest, and errors are most likely. There is a secondary dip in the early afternoon (1400-1600). Avoid critical tasks during WOCL if possible; use extra vigilance if flying during these hours.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_120",
+      "question": "Microsleeps are:-",
+      "options": [
+        {"id": "a", "text": "brief episodes of sleep lasting a few seconds that occur involuntarily when severely fatigued"},
+        {"id": "b", "text": "a type of meditation"},
+        {"id": "c", "text": "planned short naps"},
+        {"id": "d", "text": "a sleep disorder"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Microsleeps are involuntary sleep episodes lasting 1-30 seconds that occur when the brain is severely sleep-deprived. During a microsleep, the person may appear awake but is functionally asleep — eyes may be open but they are not processing information. In flight, even a 5-second microsleep can be catastrophic. If experiencing microsleeps, land immediately.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_121",
+      "question": "A strategic nap (planned short sleep) before a long flight:-",
+      "options": [
+        {"id": "a", "text": "can improve alertness and performance if timed correctly (20-30 minutes)"},
+        {"id": "b", "text": "is always harmful"},
+        {"id": "c", "text": "should last several hours"},
+        {"id": "d", "text": "has no effect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A strategic nap of 20-30 minutes can improve alertness without causing sleep inertia (grogginess upon waking). Naps longer than 30 minutes risk entering deep sleep, causing sleep inertia that can last 15-30 minutes. A pre-flight nap can be beneficial if the pilot is already well-rested. Naps cannot substitute for adequate nighttime sleep.",
+      "topic": "Fatigue and Sleep",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_122",
+      "question": "The hazardous attitude of 'anti-authority' is characterised by:-",
+      "options": [
+        {"id": "a", "text": "the belief that rules and regulations don't apply to me"},
+        {"id": "b", "text": "excessive caution"},
+        {"id": "c", "text": "always following rules"},
+        {"id": "d", "text": "seeking advice from others"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The five hazardous attitudes are: Anti-authority ('Don't tell me'), Impulsivity ('Do it quickly'), Invulnerability ('It won't happen to me'), Macho ('I can do it'), Resignation ('What's the use?'). Each has an antidote: Anti-authority → 'Follow the rules, they're usually right'. Recognising and countering hazardous attitudes is essential for safe decision-making.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_123",
+      "question": "The hazardous attitude of 'invulnerability' is characterised by:-",
+      "options": [
+        {"id": "a", "text": "the belief that accidents happen to other people, not to me"},
+        {"id": "b", "text": "excessive fear"},
+        {"id": "c", "text": "realistic risk assessment"},
+        {"id": "d", "text": "following all procedures"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Invulnerability ('It won't happen to me') is the false belief that one is immune to accidents. This leads to risk-taking and complacency. Antidote: 'It could happen to me'. Statistics show that most accident pilots were experienced and confident — overconfidence is dangerous. Maintain a healthy respect for risks and always use proper procedures.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_124",
+      "question": "The hazardous attitude of 'macho' is characterised by:-",
+      "options": [
+        {"id": "a", "text": "the need to prove oneself by taking unnecessary risks"},
+        {"id": "b", "text": "excessive caution"},
+        {"id": "c", "text": "seeking help when needed"},
+        {"id": "d", "text": "admitting limitations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Macho ('I can do it') involves taking risks to prove one's ability or toughness. Examples: flying in marginal weather to show skill, refusing to divert despite fuel concerns, or attempting a landing beyond one's capability. Antidote: 'Taking chances is foolish'. True professionalism means knowing your limitations and making conservative decisions.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_125",
+      "question": "The hazardous attitude of 'resignation' is characterised by:-",
+      "options": [
+        {"id": "a", "text": "the belief that events are beyond one's control and there's nothing one can do"},
+        {"id": "b", "text": "taking full responsibility"},
+        {"id": "c", "text": "active problem-solving"},
+        {"id": "d", "text": "seeking multiple solutions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Resignation ('What's the use?') is a passive attitude where the pilot feels helpless to affect outcomes. This leads to failure to take corrective action when problems arise. Antidote: 'I'm not helpless, I can make a difference'. Pilots must believe they can control the situation and take appropriate action. Learned helplessness is dangerous in aviation.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_126",
+      "question": "The hazardous attitude of 'impulsivity' is characterised by:-",
+      "options": [
+        {"id": "a", "text": "the need to do something immediately without thinking it through"},
+        {"id": "b", "text": "careful planning"},
+        {"id": "c", "text": "thorough analysis before action"},
+        {"id": "d", "text": "seeking advice"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Impulsivity ('Do it quickly') is the tendency to act without thinking, to react immediately without considering alternatives or consequences. Examples: making a hasty decision to continue VFR into IMC, or rushing a landing without proper preparation. Antidote: 'Not so fast, think first'. Take time to assess the situation and consider options before acting.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_127",
+      "question": "Rule-based behaviour involves:-",
+      "options": [
+        {"id": "a", "text": "following established procedures and rules to handle familiar situations"},
+        {"id": "b", "text": "automatic actions without thought"},
+        {"id": "c", "text": "creating new solutions for every situation"},
+        {"id": "d", "text": "ignoring all procedures"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Rule-based behaviour is the intermediate level of performance where pilots apply learned rules and procedures to familiar situations. Example: following the engine failure checklist. It requires conscious thought but less than knowledge-based behaviour. Errors occur when the wrong rule is applied or when rules are incomplete. Proper training and SOPs reduce rule-based errors.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_128",
+      "question": "An error chain in aviation refers to:-",
+      "options": [
+        {"id": "a", "text": "a sequence of events or errors that, when combined, lead to an accident"},
+        {"id": "b", "text": "a single catastrophic failure"},
+        {"id": "c", "text": "a maintenance procedure"},
+        {"id": "d", "text": "a navigation technique"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Most accidents result from a chain of events (error chain) rather than a single cause. Each link is a contributing factor: poor planning, weather deterioration, fatigue, pressure to complete the flight, poor decision-making. Breaking any link in the chain prevents the accident. This is why pilots must recognize developing situations and take corrective action early.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_129",
+      "question": "Normalization of deviance refers to:-",
+      "options": [
+        {"id": "a", "text": "the gradual acceptance of non-standard practices as normal when nothing bad happens"},
+        {"id": "b", "text": "always following procedures"},
+        {"id": "c", "text": "reporting all deviations"},
+        {"id": "d", "text": "improving safety standards"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Normalization of deviance occurs when repeated violations or shortcuts without immediate negative consequences lead to acceptance of the deviant behaviour as normal. Example: consistently flying with less fuel reserve than required. Eventually, the deviance becomes the norm, increasing risk. Prevention: maintain strict adherence to standards and procedures regardless of past 'success'.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_130",
+      "question": "The 'startle effect' in aviation refers to:-",
+      "options": [
+        {"id": "a", "text": "the temporary cognitive impairment caused by an unexpected event"},
+        {"id": "b", "text": "improved reaction time"},
+        {"id": "c", "text": "enhanced decision-making"},
+        {"id": "d", "text": "a type of spatial disorientation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The startle effect is an involuntary physiological and psychological response to sudden, unexpected events. It causes temporary cognitive impairment: delayed reactions, fixation, tunnel vision, and inappropriate responses. Training and preparation help reduce startle effects. Simulator training exposing pilots to unexpected events improves their ability to manage startle and respond appropriately.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_131",
+      "question": "Complacency in aviation is:-",
+      "options": [
+        {"id": "a", "text": "a state of self-satisfaction accompanied by reduced vigilance and attention"},
+        {"id": "b", "text": "heightened awareness"},
+        {"id": "c", "text": "always beneficial"},
+        {"id": "d", "text": "only affects inexperienced pilots"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Complacency develops from routine, familiarity, and overconfidence. The pilot becomes less vigilant, skips checks, and assumes everything is normal. Complacency is dangerous because it reduces the pilot's ability to detect and respond to developing problems. Prevention: maintain discipline, use checklists, and actively look for potential problems even on routine flights.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_132",
+      "question": "The 'authority gradient' in a cockpit refers to:-",
+      "options": [
+        {"id": "a", "text": "the balance of decision-making power between crew members"},
+        {"id": "b", "text": "the aircraft's climb gradient"},
+        {"id": "c", "text": "ATC authority"},
+        {"id": "d", "text": "passenger authority"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Authority gradient is the perceived or actual difference in power/authority between crew members. A steep gradient (captain dominates) can prevent junior crew from speaking up about safety concerns. A flat gradient (excessive equality) can lead to confusion about who is in command. The optimal gradient allows open communication while maintaining clear command authority. CRM training addresses this.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_133",
+      "question": "Assertiveness in aviation means:-",
+      "options": [
+        {"id": "a", "text": "clearly and respectfully stating concerns or disagreements when safety is at risk"},
+        {"id": "b", "text": "being aggressive and confrontational"},
+        {"id": "c", "text": "never questioning authority"},
+        {"id": "d", "text": "always agreeing with others"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Assertiveness is the ability to clearly express concerns, opinions, or disagreements in a respectful, professional manner. It is essential for safety — crew members must speak up when they see potential problems. Lack of assertiveness has contributed to many accidents where crew members noticed problems but failed to speak up. CRM training emphasizes assertiveness techniques.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_134",
+      "question": "The 'recency effect' in memory means:-",
+      "options": [
+        {"id": "a", "text": "items learned or experienced most recently are remembered best"},
+        {"id": "b", "text": "old information is remembered best"},
+        {"id": "c", "text": "all information is remembered equally"},
+        {"id": "d", "text": "nothing is remembered"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The recency effect means recent information is more easily recalled than older information. In aviation, this affects training retention — skills not practiced recently deteriorate. This is why recurrent training and currency requirements exist. Pilots should practice emergency procedures regularly to maintain proficiency, not just during initial training or flight reviews.",
+      "topic": "Information Processing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_135",
+      "question": "The 'primacy effect' in learning means:-",
+      "options": [
+        {"id": "a", "text": "first impressions and initial learning are remembered best and are hardest to change"},
+        {"id": "b", "text": "recent learning is most important"},
+        {"id": "c", "text": "middle information is best remembered"},
+        {"id": "d", "text": "nothing is remembered"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The primacy effect means information learned first is retained best and is most resistant to change. In flight training, this emphasizes the importance of correct initial instruction — bad habits learned early are very difficult to unlearn. Instructors must ensure students learn correct techniques from the start. First impressions of procedures, aircraft handling, etc., are lasting.",
+      "topic": "Information Processing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_136",
+      "question": "Prospective memory is:-",
+      "options": [
+        {"id": "a", "text": "remembering to perform an intended action in the future"},
+        {"id": "b", "text": "remembering past events"},
+        {"id": "c", "text": "remembering facts"},
+        {"id": "d", "text": "forgetting things"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Prospective memory is remembering to do something at a future time (e.g., remember to switch fuel tanks in 30 minutes, remember to contact ATC at a certain point). It is vulnerable to interruption and distraction. Aids: timers, written notes, checklists, and verbal reminders. Prospective memory failures can have serious consequences in aviation.",
+      "topic": "Information Processing",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_137",
+      "question": "The 'availability heuristic' is:-",
+      "options": [
+        {"id": "a", "text": "judging the likelihood of events based on how easily examples come to mind"},
+        {"id": "b", "text": "always making correct judgements"},
+        {"id": "c", "text": "ignoring all past experience"},
+        {"id": "d", "text": "a navigation technique"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The availability heuristic causes people to overestimate the probability of events that are easily recalled (recent, dramatic, or personally experienced). Example: after hearing about a recent accident, a pilot may overestimate the risk of that type of accident. This can lead to either excessive caution or, conversely, dismissing risks that haven't been recently publicized. Maintain objective risk assessment.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_138",
+      "question": "Optimism bias is:-",
+      "options": [
+        {"id": "a", "text": "the tendency to believe that bad things are less likely to happen to oneself than to others"},
+        {"id": "b", "text": "realistic risk assessment"},
+        {"id": "c", "text": "excessive pessimism"},
+        {"id": "d", "text": "always beneficial"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Optimism bias causes pilots to underestimate risks and overestimate their ability to handle situations. Examples: 'The weather will improve', 'I can make it on this fuel', 'That won't happen to me'. While some optimism is healthy, excessive optimism leads to poor risk management. Balance optimism with realistic assessment of risks and honest evaluation of capabilities.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_139",
+      "question": "The 'sunk cost fallacy' in decision-making is:-",
+      "options": [
+        {"id": "a", "text": "continuing a course of action because of past investment (time, money, effort) rather than current circumstances"},
+        {"id": "b", "text": "making decisions based only on current information"},
+        {"id": "c", "text": "always abandoning plans"},
+        {"id": "d", "text": "a financial calculation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The sunk cost fallacy causes pilots to continue a flight because they've already invested time, money, or effort, even when current conditions suggest diverting or turning back. Example: 'We've come this far, we might as well continue' despite deteriorating weather. Sunk costs are irrelevant to current decisions — base decisions on current and future factors, not past investment.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_140",
+      "question": "The 'bystander effect' in aviation can lead to:-",
+      "options": [
+        {"id": "a", "text": "individuals failing to take action because they assume someone else will"},
+        {"id": "b", "text": "immediate action by all crew members"},
+        {"id": "c", "text": "improved safety"},
+        {"id": "d", "text": "better communication"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The bystander effect occurs when multiple people witness a problem but each assumes someone else will act. In multi-crew operations, this can lead to critical tasks being missed because each crew member thinks the other is handling it. Prevention: clear task assignment, explicit communication, and closed-loop communication (acknowledge receipt and understanding of instructions).",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_141",
+      "question": "Closed-loop communication involves:-",
+      "options": [
+        {"id": "a", "text": "the receiver repeating back the message to confirm understanding"},
+        {"id": "b", "text": "one-way communication only"},
+        {"id": "c", "text": "no feedback"},
+        {"id": "d", "text": "ignoring messages"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Closed-loop communication ensures messages are correctly received and understood: (1) Sender transmits message, (2) Receiver acknowledges and reads back, (3) Sender confirms or corrects. This is standard in ATC communications and should be used in cockpit communications for critical items. It prevents misunderstandings and ensures all parties have the same information.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_142",
+      "question": "The 'just culture' concept in aviation safety means:-",
+      "options": [
+        {"id": "a", "text": "a culture that distinguishes between honest mistakes and reckless behaviour, encouraging reporting without fear of punishment for honest errors"},
+        {"id": "b", "text": "punishing all errors equally"},
+        {"id": "c", "text": "ignoring all errors"},
+        {"id": "d", "text": "blaming individuals for system failures"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Just culture recognizes that humans make errors and that most errors result from system weaknesses, not individual incompetence. It encourages reporting and learning from errors without fear of punishment, while still holding individuals accountable for reckless behaviour or willful violations. This approach improves safety by identifying and fixing system problems rather than just blaming individuals.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_143",
+      "question": "Hindsight bias is:-",
+      "options": [
+        {"id": "a", "text": "the tendency to see past events as having been predictable after they have occurred"},
+        {"id": "b", "text": "accurate prediction of future events"},
+        {"id": "c", "text": "inability to learn from the past"},
+        {"id": "d", "text": "a type of visual illusion"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hindsight bias ('I knew it all along') makes past events seem more predictable than they actually were. In accident investigation, this can lead to unfair blame: 'The pilot should have known'. In reality, the pilot had incomplete information and time pressure. Hindsight bias can prevent learning the real lessons from accidents. Investigators must reconstruct the situation as it appeared to the pilot at the time.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_144",
+      "question": "The 'fight or flight' response is:-",
+      "options": [
+        {"id": "a", "text": "an automatic physiological response to perceived threat, preparing the body for action"},
+        {"id": "b", "text": "a conscious decision-making process"},
+        {"id": "c", "text": "only related to physical threats"},
+        {"id": "d", "text": "always beneficial in aviation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The fight-or-flight response is triggered by the sympathetic nervous system in response to perceived threats. Physical changes: increased heart rate, blood pressure, breathing rate, muscle tension, and adrenaline release. While useful for physical threats, it can impair fine motor skills and complex decision-making needed in aviation emergencies. Training helps manage this response.",
+      "topic": "Stress",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_145",
+      "question": "The Yerkes-Dodson Law states that:-",
+      "options": [
+        {"id": "a", "text": "performance improves with arousal/stress up to an optimal point, then declines with further stress"},
+        {"id": "b", "text": "more stress always improves performance"},
+        {"id": "c", "text": "stress never affects performance"},
+        {"id": "d", "text": "performance always declines with any stress"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Yerkes-Dodson Law describes an inverted-U relationship between arousal and performance. Too little arousal (boredom, complacency) leads to poor performance. Moderate arousal (alertness, focus) produces optimal performance. Excessive arousal (high stress, panic) degrades performance. The optimal level varies with task complexity — simple tasks tolerate higher arousal; complex tasks require lower arousal.",
+      "topic": "Stress",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_146",
+      "question": "Stress management techniques for pilots include:-",
+      "options": [
+        {"id": "a", "text": "regular exercise, adequate sleep, time management, and relaxation techniques"},
+        {"id": "b", "text": "ignoring stress"},
+        {"id": "c", "text": "increasing workload"},
+        {"id": "d", "text": "using alcohol or drugs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Effective stress management: regular physical exercise, adequate sleep (7-9 hours), healthy diet, time management, relaxation techniques (deep breathing, meditation), social support, and work-life balance. Avoid unhealthy coping mechanisms: alcohol, drugs, excessive caffeine, or denial. Chronic stress requires professional help. Managing stress improves health, performance, and safety.",
+      "topic": "Stress",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_147",
+      "question": "The 'Coriolis illusion' in spatial disorientation occurs when:-",
+      "options": [
+        {"id": "a", "text": "the pilot makes a head movement during a prolonged turn, causing a false sensation of rotation in a different plane"},
+        {"id": "b", "text": "the aircraft is in straight and level flight"},
+        {"id": "c", "text": "the pilot looks straight ahead"},
+        {"id": "d", "text": "only in daylight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Coriolis illusion occurs when a pilot makes a head movement (looking down at a chart, turning to check something) during a prolonged constant-rate turn. The head movement stimulates a different semi-circular canal, creating a false sensation of rotation in another plane (e.g., tumbling). This is extremely disorienting. Prevention: avoid head movements during turns in IMC; if necessary, move slowly.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_148",
+      "question": "The 'graveyard spiral' is:-",
+      "options": [
+        {"id": "a", "text": "a descending turn that the pilot does not recognize, often leading to a fatal crash"},
+        {"id": "b", "text": "a normal manoeuvre"},
+        {"id": "c", "text": "a type of aerobatic manoeuvre"},
+        {"id": "d", "text": "only occurs in helicopters"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The graveyard spiral results from 'the leans'. In IMC, the pilot inadvertently enters a gentle turn. After the semi-circular canals adapt, the pilot feels straight and level while actually turning and descending. Noticing the descent, the pilot pulls back, tightening the spiral. The solution: trust the instruments, level the wings first, then gently recover from the descent.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_149",
+      "question": "The 'black hole approach' illusion occurs when:-",
+      "options": [
+        {"id": "a", "text": "approaching a runway at night over dark terrain or water with no visual references, creating the illusion of being too high"},
+        {"id": "b", "text": "approaching in daylight"},
+        {"id": "c", "text": "approaching over well-lit terrain"},
+        {"id": "d", "text": "only in fog"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The black hole illusion occurs on night approaches over dark, featureless terrain or water with no visible horizon or ground lights — only the runway lights are visible. This creates the illusion of being higher than actual, leading to a dangerously low approach. Prevention: use VASI/PAPI, maintain proper approach speed and descent rate, cross-check altimeter, and be aware of the illusion.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_150",
+      "question": "The 'empty field myopia' phenomenon is:-",
+      "options": [
+        {"id": "a", "text": "the eyes focusing at a near point (1-2 metres) when there are no distant objects to focus on, reducing ability to see distant traffic"},
+        {"id": "b", "text": "perfect distance vision"},
+        {"id": "c", "text": "a type of eye disease"},
+        {"id": "d", "text": "only occurs at night"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Empty field myopia occurs when flying in conditions with no visual references (haze, uniform cloud, darkness). The eyes automatically focus at a resting point of 1-2 metres rather than infinity, making distant objects (other aircraft) appear blurred and difficult to detect. Prevention: actively focus on distant points, scan systematically, and blink regularly to maintain focus.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_151",
+      "question": "The most effective scanning technique for detecting other aircraft is:-",
+      "options": [
+        {"id": "a", "text": "a series of short, regularly spaced eye movements with brief fixations"},
+        {"id": "b", "text": "staring at one point"},
+        {"id": "c", "text": "continuous sweeping movements"},
+        {"id": "d", "text": "looking only straight ahead"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Effective visual scanning uses a series of short, regularly spaced eye movements (10-15° segments) with 1-2 second fixations in each segment. This allows the eyes to focus and the brain to process information. Continuous sweeping or staring reduces detection ability. Scan the entire visual field systematically, including above, below, and behind (using mirrors or turning).",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_152",
+      "question": "The 'see and avoid' principle for collision avoidance:-",
+      "options": [
+        {"id": "a", "text": "is the pilot's primary responsibility but has limitations, especially in poor visibility or high-speed closure"},
+        {"id": "b", "text": "is 100% reliable in all conditions"},
+        {"id": "c", "text": "is not the pilot's responsibility"},
+        {"id": "d", "text": "only applies to VFR flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "See-and-avoid is fundamental to collision avoidance but has significant limitations: limited human visual capabilities, blind spots, closure rates, distractions, and environmental factors (haze, sun glare). Pilots must use all available resources: ATC traffic information, TCAS/TAS, position lights, and proper lookout. Maintain vigilance and use systematic scanning.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_153",
+      "question": "White blood cells (leukocytes) are responsible for:-",
+      "options": [
+        {"id": "a", "text": "fighting infection and disease"},
+        {"id": "b", "text": "carrying oxygen"},
+        {"id": "c", "text": "blood clotting"},
+        {"id": "d", "text": "producing haemoglobin"}
+      ],
+      "correct_answer": "a",
+      "explanation": "White blood cells (leukocytes) are part of the immune system and defend the body against infection and disease. There are several types: neutrophils, lymphocytes, monocytes, eosinophils, and basophils. Abnormal white cell counts can indicate infection, immune disorders, or other health problems that may affect fitness to fly.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_154",
+      "question": "Red blood cells (erythrocytes) contain haemoglobin which:-",
+      "options": [
+        {"id": "a", "text": "binds to oxygen in the lungs and transports it to body tissues"},
+        {"id": "b", "text": "fights infection"},
+        {"id": "c", "text": "forms blood clots"},
+        {"id": "d", "text": "produces antibodies"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Red blood cells contain haemoglobin, an iron-containing protein that binds oxygen in the lungs (forming oxyhaemoglobin) and releases it in the tissues. Each haemoglobin molecule can carry four oxygen molecules. Carbon monoxide binds to haemoglobin 200-300 times more readily than oxygen, which is why CO poisoning is so dangerous.",
+      "topic": "Respiration and Circulation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_155",
+      "question": "Normal oxygen saturation (SpO₂) in healthy individuals at sea level is:-",
+      "options": [
+        {"id": "a", "text": "95-100%"},
+        {"id": "b", "text": "80-85%"},
+        {"id": "c", "text": "70-75%"},
+        {"id": "d", "text": "50-60%"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Normal oxygen saturation is 95-100% at sea level. This represents the percentage of haemoglobin binding sites occupied by oxygen. SpO₂ below 90% indicates hypoxia. At altitude, SpO₂ decreases: at 10,000 ft, typical SpO₂ is 85-90%; at 15,000 ft, 70-85%. Pulse oximeters measure SpO₂ and can detect hypoxia before symptoms appear.",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_156",
+      "question": "A pulse oximeter measures:-",
+      "options": [
+        {"id": "a", "text": "oxygen saturation in the blood and heart rate"},
+        {"id": "b", "text": "blood pressure only"},
+        {"id": "c", "text": "carbon dioxide levels"},
+        {"id": "d", "text": "altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A pulse oximeter is a non-invasive device that measures oxygen saturation (SpO₂) and heart rate. It works by shining light through a fingertip or earlobe and measuring absorption. Pilots can use pulse oximeters to monitor for hypoxia during high-altitude flights. However, they have limitations: inaccurate in carbon monoxide poisoning (CO-haemoglobin reads as oxyhaemoglobin).",
+      "topic": "Hypoxia",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_157",
+      "question": "The primary symptom that distinguishes hyperventilation from hypoxia is:-",
+      "options": [
+        {"id": "a", "text": "tingling in the extremities (fingers, toes, lips)"},
+        {"id": "b", "text": "euphoria"},
+        {"id": "c", "text": "cyanosis"},
+        {"id": "d", "text": "improved performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Tingling (paraesthesia) in the fingers, toes, and around the mouth is characteristic of hyperventilation, caused by low CO₂ levels affecting nerve function. Both hypoxia and hyperventilation cause dizziness and light-headedness, making them difficult to distinguish. If uncertain, treat for hypoxia first (descend, use oxygen), then address hyperventilation if symptoms persist.",
+      "topic": "Hyperventilation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_158",
+      "question": "The Valsalva manoeuvre is used to:-",
+      "options": [
+        {"id": "a", "text": "equalize pressure in the middle ear by forcing air through the Eustachian tubes"},
+        {"id": "b", "text": "improve vision"},
+        {"id": "c", "text": "reduce stress"},
+        {"id": "d", "text": "increase oxygen levels"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Valsalva manoeuvre (pinching the nose and gently blowing) forces air through the Eustachian tubes to equalize middle ear pressure during descent. Use it gently to avoid damaging the eardrum. Alternative methods: swallowing, yawning, or chewing gum. Never perform Valsalva during ascent (pressure equalizes naturally) or if you have a cold (can force infection into the middle ear).",
+      "topic": "Hearing",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_159",
+      "question": "Barotrauma refers to:-",
+      "options": [
+        {"id": "a", "text": "injury caused by pressure changes affecting gas-filled body cavities"},
+        {"id": "b", "text": "injury from impact"},
+        {"id": "c", "text": "injury from heat"},
+        {"id": "d", "text": "injury from cold"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Barotrauma is tissue damage caused by pressure changes in gas-filled spaces: middle ear, sinuses, lungs, gastrointestinal tract, and teeth (with cavities or recent dental work). Most common in aviation: ear and sinus barotrauma during descent when pressure cannot equalize. Prevention: avoid flying with congestion; equalize pressure frequently during descent.",
+      "topic": "Fitness to Fly",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_160",
+      "question": "Flicker vertigo can be caused by:-",
+      "options": [
+        {"id": "a", "text": "sunlight flickering through a rotating propeller at certain frequencies"},
+        {"id": "b", "text": "continuous bright light"},
+        {"id": "c", "text": "complete darkness"},
+        {"id": "d", "text": "fog"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flicker vertigo is a rare condition caused by flickering light at frequencies of 4-20 Hz (cycles per second), such as sunlight through a propeller. It can cause disorientation, nausea, seizures (in susceptible individuals), or unconsciousness. Prevention: change heading slightly, adjust sun visor, wear sunglasses, or alter RPM if possible. If symptoms occur, look away from the flicker source.",
+      "topic": "Spatial Disorientation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_161",
+      "question": "The 'big sky theory' in collision avoidance is:-",
+      "options": [
+        {"id": "a", "text": "a false sense of security based on the belief that the sky is so large that collisions are unlikely"},
+        {"id": "b", "text": "a reliable safety principle"},
+        {"id": "c", "text": "an official collision avoidance procedure"},
+        {"id": "d", "text": "only applies at high altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'big sky theory' is a dangerous misconception that collisions are unlikely because the sky is vast. In reality, aircraft converge at certain points (airports, navigation fixes, airways), and closure rates can be very high. Mid-air collisions do occur. Never rely on the big sky theory — maintain vigilant lookout, use ATC services, and follow proper procedures.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_162",
+      "question": "The greatest collision risk exists when another aircraft:-",
+      "options": [
+        {"id": "a", "text": "appears stationary in your field of view (constant bearing, decreasing range)"},
+        {"id": "b", "text": "is moving rapidly across your field of view"},
+        {"id": "c", "text": "is far away"},
+        {"id": "d", "text": "is above you"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If another aircraft maintains a constant bearing (appears stationary in your windscreen) and the distance is decreasing, you are on a collision course. Aircraft on collision courses show no apparent motion — they just get bigger. Aircraft that appear to move across your field of view will pass clear. Always investigate any aircraft that appears stationary.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_163",
+      "question": "Presbyopia is:-",
+      "options": [
+        {"id": "a", "text": "age-related loss of the eye's ability to focus on near objects"},
+        {"id": "b", "text": "age-related hearing loss"},
+        {"id": "c", "text": "short-sightedness"},
+        {"id": "d", "text": "colour blindness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Presbyopia is the gradual loss of the eye's ability to focus on close objects, occurring with age (typically after 40). It is caused by hardening of the lens, reducing accommodation. Pilots with presbyopia need reading glasses or bifocals for charts and instruments. This is normal ageing and does not disqualify pilots, but corrective lenses must be worn when required.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_164",
+      "question": "Astigmatism is:-",
+      "options": [
+        {"id": "a", "text": "irregular curvature of the cornea or lens causing blurred or distorted vision"},
+        {"id": "b", "text": "age-related vision loss"},
+        {"id": "c", "text": "colour blindness"},
+        {"id": "d", "text": "night blindness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Astigmatism is caused by irregular curvature of the cornea or lens, causing light to focus at multiple points rather than a single point on the retina. This results in blurred or distorted vision at all distances. It is corrected with cylindrical lenses (glasses or contact lenses). Uncorrected astigmatism can cause eyestrain, headaches, and reduced visual acuity.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_165",
+      "question": "Colour vision deficiency (colour blindness) most commonly affects:-",
+      "options": [
+        {"id": "a", "text": "the ability to distinguish red and green"},
+        {"id": "b", "text": "the ability to see all colours"},
+        {"id": "c", "text": "night vision only"},
+        {"id": "d", "text": "peripheral vision"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The most common form of colour blindness is red-green colour deficiency, affecting about 8% of males and 0.5% of females. It is usually inherited and involves defective cone cells. In aviation, colour vision is important for interpreting lights (navigation, position, warning lights) and charts. Pilots with colour deficiency may have restrictions or require special testing.",
+      "topic": "Vision",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_166",
+      "question": "The blind spot in the eye is caused by:-",
+      "options": [
+        {"id": "a", "text": "the optic nerve exit point where there are no photoreceptors"},
+        {"id": "b", "text": "the lens"},
+        {"id": "c", "text": "the iris"},
+        {"id": "d", "text": "the cornea"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The blind spot (optic disc) is the point where the optic nerve exits the retina. There are no photoreceptors (rods or cones) at this location, creating a small blind area in each eye's visual field. Normally, the brain fills in this gap using information from the other eye and surrounding areas. The blind spot is about 15° temporal to the fovea.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_167",
+      "question": "Sunglasses for flying should:-",
+      "options": [
+        {"id": "a", "text": "be non-polarized and provide UV protection without being too dark"},
+        {"id": "b", "text": "be as dark as possible"},
+        {"id": "c", "text": "be polarized"},
+        {"id": "d", "text": "provide no UV protection"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aviation sunglasses should: (1) Provide UV protection, (2) Be non-polarized (polarized lenses can make LCD displays invisible and create false reflections on the windscreen), (3) Not be too dark (impairs ability to see instruments and detect other aircraft), (4) Be neutral grey or green tint (preserves colour recognition). Remove sunglasses when entering cloud or at night.",
+      "topic": "Vision",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_168",
+      "question": "The 'cocktail party effect' in selective attention means:-",
+      "options": [
+        {"id": "a", "text": "the ability to focus on one conversation while filtering out background noise"},
+        {"id": "b", "text": "inability to hear anything in noise"},
+        {"id": "c", "text": "hearing everything equally"},
+        {"id": "d", "text": "a type of hearing loss"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The cocktail party effect is the brain's ability to selectively attend to one auditory source while filtering out others. In aviation, this allows pilots to focus on ATC communications while filtering out other radio traffic. However, important information can be missed if attention is too narrowly focused. Maintain awareness of the overall radio environment.",
+      "topic": "Hearing",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_169",
+      "question": "Inattentional blindness is:-",
+      "options": [
+        {"id": "a", "text": "failing to see something in plain sight because attention is focused elsewhere"},
+        {"id": "b", "text": "a medical eye condition"},
+        {"id": "c", "text": "night blindness"},
+        {"id": "d", "text": "colour blindness"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Inattentional blindness (also called 'looked but failed to see') occurs when a person fails to notice something in their visual field because their attention is focused on something else. In aviation, this can cause pilots to miss other aircraft, obstacles, or instrument indications. Prevention: systematic scanning, cross-checking, and avoiding fixation on single tasks.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_170",
+      "question": "Change blindness is:-",
+      "options": [
+        {"id": "a", "text": "failing to detect changes in the visual environment when attention is diverted"},
+        {"id": "b", "text": "a type of colour blindness"},
+        {"id": "c", "text": "improved change detection"},
+        {"id": "d", "text": "a medical condition"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Change blindness is the failure to detect changes in the visual scene when attention is briefly interrupted or diverted. Example: failing to notice an altimeter change during a momentary distraction. This demonstrates that we don't see everything in our visual field — only what we attend to. Prevention: systematic instrument scanning and cross-checking.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_171",
+      "question": "The 'useful field of view' refers to:-",
+      "options": [
+        {"id": "a", "text": "the area from which information can be extracted in a single glance without eye movement"},
+        {"id": "b", "text": "the total visual field"},
+        {"id": "c", "text": "only central vision"},
+        {"id": "d", "text": "only peripheral vision"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The useful field of view is the area where information can be processed in a single fixation (typically 10-15° around the fixation point). It is much smaller than the total visual field (about 200°). This is why systematic scanning with multiple fixations is necessary — you cannot process the entire visual field at once. Stress and workload further reduce the useful field of view.",
+      "topic": "Vision",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_172",
+      "question": "Expectation bias in perception means:-",
+      "options": [
+        {"id": "a", "text": "seeing what you expect to see rather than what is actually there"},
+        {"id": "b", "text": "always seeing accurately"},
+        {"id": "c", "text": "having no expectations"},
+        {"id": "d", "text": "a type of visual defect"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Expectation bias causes people to perceive what they expect rather than what is actually present. Examples: reading an altimeter as 3,500 ft when it actually shows 2,500 ft because you expect to be at 3,500 ft; or misidentifying a runway because you expect a different runway. Prevention: cross-check, verify, and question your perceptions.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_173",
+      "question": "The 'startle reflex' differs from the 'startle effect' in that the reflex is:-",
+      "options": [
+        {"id": "a", "text": "an immediate, involuntary physical reaction (flinch, gasp) lasting less than a second"},
+        {"id": "b", "text": "a prolonged cognitive impairment"},
+        {"id": "c", "text": "a conscious decision"},
+        {"id": "d", "text": "always beneficial"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The startle reflex is an immediate, involuntary physical reaction (muscle contraction, flinch, gasp) to a sudden stimulus, lasting less than one second. The startle effect is the subsequent cognitive and performance impairment that can last several seconds or longer. Both can affect pilot performance. Training and mental preparation help manage both the reflex and the effect.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_174",
+      "question": "Task saturation occurs when:-",
+      "options": [
+        {"id": "a", "text": "the pilot's workload exceeds their capacity to process information and perform tasks"},
+        {"id": "b", "text": "the pilot has too little to do"},
+        {"id": "c", "text": "the aircraft is full of passengers"},
+        {"id": "d", "text": "fuel tanks are full"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Task saturation occurs when workload exceeds the pilot's capacity to manage all required tasks. This leads to: delayed responses, errors, fixation, and task shedding (dropping important tasks). Prevention: prioritize (aviate, navigate, communicate), delegate when possible, simplify (reduce unnecessary tasks), and maintain proficiency to increase capacity. Recognize early signs and reduce workload.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_175",
+      "question": "The 'aviate, navigate, communicate' priority hierarchy means:-",
+      "options": [
+        {"id": "a", "text": "first maintain aircraft control, then navigate, then communicate — in that order of priority"},
+        {"id": "b", "text": "communicate first, then navigate, then aviate"},
+        {"id": "c", "text": "all tasks have equal priority"},
+        {"id": "d", "text": "only aviate matters"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aviate, navigate, communicate is the fundamental priority hierarchy: (1) Aviate — maintain aircraft control and fly the aircraft safely, (2) Navigate — know where you are and where you're going, (3) Communicate — talk to ATC and others. In an emergency, never sacrifice aircraft control to navigate or communicate. Fly the aircraft first, always.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_176",
+      "question": "Personal minimums are:-",
+      "options": [
+        {"id": "a", "text": "self-imposed limits more conservative than regulatory minimums, based on experience and proficiency"},
+        {"id": "b", "text": "the same as regulatory minimums"},
+        {"id": "c", "text": "less restrictive than regulatory minimums"},
+        {"id": "d", "text": "not necessary for experienced pilots"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Personal minimums are self-imposed operational limits (weather, crosswind, fuel reserves, etc.) that are more conservative than regulatory minimums. They account for individual experience, proficiency, aircraft capability, and conditions. Example: a pilot might set personal minimums of 3 miles visibility and 1500 ft ceiling, even though VFR minimums are 3 miles and 1000 ft. Adjust personal minimums as experience grows.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_177",
+      "question": "The PAVE checklist for risk assessment evaluates:-",
+      "options": [
+        {"id": "a", "text": "Pilot, Aircraft, enVironment, External pressures"},
+        {"id": "b", "text": "Position, Altitude, Velocity, Energy"},
+        {"id": "c", "text": "Power, Airspeed, Vertical speed, Engine"},
+        {"id": "d", "text": "Plan, Assess, Verify, Execute"}
+      ],
+      "correct_answer": "a",
+      "explanation": "PAVE is a risk assessment tool: Pilot (experience, currency, fitness), Aircraft (performance, equipment, airworthiness), enVironment (weather, terrain, airports), External pressures (schedule, passengers, financial). Evaluate each category and identify risk factors. High risk in multiple categories suggests postponing or canceling the flight.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_178",
+      "question": "The 5P model for continuous risk management includes:-",
+      "options": [
+        {"id": "a", "text": "Plan, Plane, Pilot, Passengers, Programming"},
+        {"id": "b", "text": "Power, Pitch, Performance, Position, Procedure"},
+        {"id": "c", "text": "Preflight, Prepare, Practice, Perform, Post-flight"},
+        {"id": "d", "text": "Predict, Prevent, Protect, Prepare, Perform"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 5P model is used at key decision points during flight: Plan (route, weather, fuel), Plane (aircraft status, equipment), Pilot (fitness, proficiency), Passengers (needs, distractions), Programming (automation, navigation setup). Review the 5Ps at: preflight, pre-takeoff, hourly or at waypoints, pre-descent, and when conditions change. This maintains situational awareness and identifies emerging risks.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_179",
+      "question": "The 3P model for aeronautical decision-making stands for:-",
+      "options": [
+        {"id": "a", "text": "Perceive, Process, Perform"},
+        {"id": "b", "text": "Plan, Prepare, Practice"},
+        {"id": "c", "text": "Predict, Prevent, Protect"},
+        {"id": "d", "text": "Power, Pitch, Performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 3P model is a structured decision-making process: (1) Perceive — identify hazards and changes in the situation, (2) Process — evaluate the risk and determine the best course of action, (3) Perform — implement the decision and monitor the outcome. This systematic approach helps prevent hasty or incomplete decisions. Use it continuously throughout the flight.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_180",
+      "question": "The CARE checklist for risk mitigation stands for:-",
+      "options": [
+        {"id": "a", "text": "Consequences, Alternatives, Reality, External pressures"},
+        {"id": "b", "text": "Check, Assess, Review, Execute"},
+        {"id": "c", "text": "Communicate, Aviate, Review, Evaluate"},
+        {"id": "d", "text": "Control, Altitude, Route, Engine"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CARE helps evaluate risky decisions: Consequences (what could happen?), Alternatives (what else could I do?), Reality (am I being realistic about my abilities and the situation?), External pressures (what is influencing my decision?). If you're rationalizing a risky decision, use CARE to challenge your thinking and consider safer alternatives.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_181",
+      "question": "The TEAM approach to resource management means:-",
+      "options": [
+        {"id": "a", "text": "Transfer, Eliminate, Accept, Mitigate (risk management strategies)"},
+        {"id": "b", "text": "Train, Educate, Assess, Monitor"},
+        {"id": "c", "text": "Together Everyone Achieves More"},
+        {"id": "d", "text": "Test, Evaluate, Analyze, Modify"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TEAM describes risk management strategies: Transfer (shift risk to another party, e.g., use ATC services), Eliminate (remove the hazard entirely, e.g., cancel flight), Accept (acknowledge risk and proceed with caution), Mitigate (reduce risk, e.g., carry extra fuel, file IFR). Choose the most appropriate strategy for each identified risk.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_182",
+      "question": "Single-pilot resource management (SRM) involves:-",
+      "options": [
+        {"id": "a", "text": "effectively using all available resources including automation, ATC, passengers, and checklists"},
+        {"id": "b", "text": "flying without any assistance"},
+        {"id": "c", "text": "ignoring all external resources"},
+        {"id": "d", "text": "only using the aircraft instruments"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SRM is the application of CRM principles to single-pilot operations. Resources include: automation (autopilot, GPS), ATC services, passengers (extra eyes, assistance), checklists, weather briefings, and personal knowledge/experience. Effective SRM reduces workload, improves decision-making, and enhances safety. Don't hesitate to use all available resources.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_183",
+      "question": "Automation complacency occurs when:-",
+      "options": [
+        {"id": "a", "text": "pilots over-rely on automated systems and fail to monitor them adequately"},
+        {"id": "b", "text": "automation is never used"},
+        {"id": "c", "text": "pilots always monitor automation"},
+        {"id": "d", "text": "automation is always reliable"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Automation complacency is excessive trust in automated systems, leading to reduced monitoring and vigilance. Pilots may fail to detect automation errors or mode changes. Prevention: understand automation limitations, actively monitor automated systems, maintain manual flying skills, and be prepared to take over manually. Automation is a tool, not a replacement for pilot judgment.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_184",
+      "question": "The 'children on board' effect refers to:-",
+      "options": [
+        {"id": "a", "text": "the tendency for pilots to take fewer risks when carrying children as passengers"},
+        {"id": "b", "text": "increased risk-taking with children aboard"},
+        {"id": "c", "text": "children causing distractions"},
+        {"id": "d", "text": "a medical condition"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Research shows pilots tend to make more conservative decisions when carrying children as passengers, demonstrating that external factors can positively influence risk assessment. However, pilots should apply the same conservative decision-making to all flights, regardless of who is aboard. Every passenger deserves the same level of safety consideration.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_185",
+      "question": "The 'return on investment' bias in decision-making can lead pilots to:-",
+      "options": [
+        {"id": "a", "text": "continue a risky flight because of money or time already invested"},
+        {"id": "b", "text": "always make safe decisions"},
+        {"id": "c", "text": "ignore financial considerations"},
+        {"id": "d", "text": "cancel all flights"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Return on investment bias (related to sunk cost fallacy) causes pilots to continue risky flights to justify money spent on rental, fuel, or time invested in planning. Example: 'I've already paid for the rental, I might as well go.' This is dangerous thinking. The money is spent regardless — base decisions on current safety, not past investment.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_186",
+      "question": "The 'duck under' syndrome refers to:-",
+      "options": [
+        {"id": "a", "text": "descending below minimums on an instrument approach in an attempt to see the runway"},
+        {"id": "b", "text": "a normal landing technique"},
+        {"id": "c", "text": "avoiding obstacles"},
+        {"id": "d", "text": "a type of spatial disorientation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 'duck under' syndrome is the dangerous practice of descending below approach minimums without the required visual references, hoping to see the runway. This is a major cause of controlled flight into terrain (CFIT) accidents. If you reach minimums without the required visual references, execute a missed approach immediately. Never duck under — it's illegal and potentially fatal.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_187",
+      "question": "Scud running is:-",
+      "options": [
+        {"id": "a", "text": "flying VFR in marginal weather conditions at low altitude below clouds"},
+        {"id": "b", "text": "a safe flying technique"},
+        {"id": "c", "text": "an aerobatic manoeuvre"},
+        {"id": "d", "text": "flying in clear weather"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Scud running is flying VFR at low altitude beneath a low cloud base, often in poor visibility. It is extremely dangerous: limited escape options, terrain/obstacle hazards, inadvertent IMC, and reduced reaction time. Scud running is a major cause of VFR-into-IMC accidents. If weather deteriorates to the point where scud running seems necessary, land immediately or file IFR if qualified.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_188",
+      "question": "The 'VFR-into-IMC' scenario is dangerous because:-",
+      "options": [
+        {"id": "a", "text": "VFR pilots are not trained for instrument flight and spatial disorientation is likely"},
+        {"id": "b", "text": "it is always safe"},
+        {"id": "c", "text": "VFR pilots have instrument training"},
+        {"id": "d", "text": "clouds are not hazardous"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VFR-into-IMC is one of the most lethal scenarios in general aviation. VFR pilots lack instrument training and are highly susceptible to spatial disorientation in cloud. Statistics show most VFR pilots lose control within minutes of entering IMC. If inadvertently entering IMC: maintain aircraft control, execute a 180° turn to VMC if possible, declare an emergency, and request ATC assistance.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_189",
+      "question": "The '180-degree turn' technique for escaping inadvertent IMC should be:-",
+      "options": [
+        {"id": "a", "text": "practiced with an instructor and executed immediately upon entering cloud"},
+        {"id": "b", "text": "never practiced"},
+        {"id": "c", "text": "only attempted after several minutes in cloud"},
+        {"id": "d", "text": "performed at high speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 180° turn is the primary escape manoeuvre from inadvertent IMC for VFR pilots. Execute it immediately upon entering cloud, before spatial disorientation develops. Technique: shallow bank (15-20°), maintain altitude, use turn coordinator, return to VMC. Practice this with an instructor under the hood. The longer you stay in cloud, the less likely you are to survive.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_190",
+      "question": "Controlled Flight Into Terrain (CFIT) accidents typically occur when:-",
+      "options": [
+        {"id": "a", "text": "a fully functioning aircraft is flown into terrain, water, or obstacles with the crew unaware"},
+        {"id": "b", "text": "the aircraft has mechanical failure"},
+        {"id": "c", "text": "weather is perfect"},
+        {"id": "d", "text": "pilots are fully aware of terrain"}
+      ],
+      "correct_answer": "a",
+      "explanation": "CFIT occurs when an airworthy aircraft under pilot control is inadvertently flown into terrain, water, or obstacles. Contributing factors: poor visibility, loss of situational awareness, spatial disorientation, distraction, inadequate planning, or failure to follow procedures. Prevention: terrain awareness, altitude awareness, proper approach procedures, and never descending below safe altitudes without visual contact.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_191",
+      "question": "The 'sterile cockpit' concept should be applied during:-",
+      "options": [
+        {"id": "a", "text": "all critical phases of flight including taxi, takeoff, approach, and landing"},
+        {"id": "b", "text": "cruise only"},
+        {"id": "c", "text": "never"},
+        {"id": "d", "text": "only during emergencies"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The sterile cockpit rule prohibits non-essential activities and conversations during critical phases: taxi, takeoff, climb below 10,000 ft, approach, and landing. This reduces distractions during high-workload periods. Essential communication (checklists, ATC, safety-related) is always permitted. Even in single-pilot operations, avoid non-essential tasks during critical phases.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_192",
+      "question": "Aeronautical decision-making (ADM) is:-",
+      "options": [
+        {"id": "a", "text": "a systematic approach to mental processes used by pilots to determine the best course of action"},
+        {"id": "b", "text": "making random decisions"},
+        {"id": "c", "text": "always relying on instinct"},
+        {"id": "d", "text": "ignoring all information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ADM is the systematic approach to the mental process of evaluating a given set of circumstances and determining the best course of action. Good ADM involves: recognizing hazards, assessing risks, identifying alternatives, making decisions, and evaluating outcomes. ADM can be learned and improved through training and experience. It is a critical skill for all pilots.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_193",
+      "question": "Risk management in aviation involves:-",
+      "options": [
+        {"id": "a", "text": "identifying hazards, assessing risks, and implementing controls to reduce risk to acceptable levels"},
+        {"id": "b", "text": "eliminating all risk"},
+        {"id": "c", "text": "ignoring all hazards"},
+        {"id": "d", "text": "accepting all risks without mitigation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Risk management is a systematic process: (1) Identify hazards, (2) Assess the risk (likelihood and severity), (3) Implement controls to mitigate risk, (4) Monitor and review. Risk cannot be eliminated entirely, but it can be reduced to acceptable levels. Effective risk management is proactive, not reactive. It should be applied throughout flight planning and execution.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_194",
+      "question": "The safety management system (SMS) approach emphasizes:-",
+      "options": [
+        {"id": "a", "text": "proactive hazard identification and risk management rather than reactive accident investigation"},
+        {"id": "b", "text": "only investigating accidents after they occur"},
+        {"id": "c", "text": "ignoring hazards until accidents happen"},
+        {"id": "d", "text": "blaming individuals for all errors"}
+      ],
+      "correct_answer": "a",
+      "explanation": "SMS is a systematic, proactive approach to managing safety. Key components: safety policy, safety risk management, safety assurance, and safety promotion. SMS focuses on identifying and mitigating hazards before accidents occur, rather than just investigating accidents afterward. It promotes a just culture where reporting is encouraged and system improvements are made.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_195",
+      "question": "A 'near miss' or 'close call' should be:-",
+      "options": [
+        {"id": "a", "text": "reported and analyzed to prevent future incidents"},
+        {"id": "b", "text": "ignored since no accident occurred"},
+        {"id": "c", "text": "kept secret"},
+        {"id": "d", "text": "celebrated as a success"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Near misses are valuable learning opportunities. They reveal weaknesses in the system before an accident occurs. Reporting near misses (to aviation authorities, safety reporting systems) helps identify trends and implement preventive measures. A near miss is a warning — the next time, you might not be lucky. Learn from it and share the lesson.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_196",
+      "question": "The 'normalization of deviance' in aviation safety means:-",
+      "options": [
+        {"id": "a", "text": "gradually accepting non-standard practices as normal when no immediate consequences occur"},
+        {"id": "b", "text": "always following standard procedures"},
+        {"id": "c", "text": "improving safety standards"},
+        {"id": "d", "text": "reporting all deviations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Normalization of deviance occurs when repeated rule violations or shortcuts without immediate negative consequences lead to acceptance of the deviant behaviour as normal. Over time, the safety margin erodes until an accident occurs. Example: consistently flying with minimum fuel reserves. Prevention: maintain strict adherence to standards and procedures, regardless of past 'success' with shortcuts.",
+      "topic": "Decision Making",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_197",
+      "question": "The concept of 'safety culture' in aviation refers to:-",
+      "options": [
+        {"id": "a", "text": "the shared values, beliefs, and practices regarding safety within an organization or community"},
+        {"id": "b", "text": "only following regulations"},
+        {"id": "c", "text": "ignoring safety"},
+        {"id": "d", "text": "individual pilot decisions only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Safety culture is the collective commitment to safety at all levels of an organization or community. A positive safety culture values: open communication, reporting without fear, learning from errors, continuous improvement, and leadership commitment to safety. A strong safety culture reduces accidents and incidents. Every pilot contributes to aviation's safety culture.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_198",
+      "question": "Continuous learning and self-improvement for pilots should include:-",
+      "options": [
+        {"id": "a", "text": "regular training, reading accident reports, attending safety seminars, and seeking feedback"},
+        {"id": "b", "text": "stopping all learning after obtaining a license"},
+        {"id": "c", "text": "only learning from personal mistakes"},
+        {"id": "d", "text": "ignoring new information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Aviation is a continuous learning process. Effective pilots: maintain currency and proficiency, pursue additional ratings and training, read accident reports and safety publications, attend safety seminars, seek feedback from instructors and peers, and stay current with regulations and technology. Learning from others' mistakes is far less costly than learning from your own.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_199",
+      "question": "The most important factor in aviation safety is:-",
+      "options": [
+        {"id": "a", "text": "the pilot's attitude, decision-making, and commitment to safety"},
+        {"id": "b", "text": "aircraft technology only"},
+        {"id": "c", "text": "weather conditions only"},
+        {"id": "d", "text": "luck"}
+      ],
+      "correct_answer": "a",
+      "explanation": "While aircraft technology, weather, and other factors are important, the pilot's attitude, judgment, and decision-making are the most critical factors in aviation safety. Most accidents are caused by human factors, not mechanical failures. A safety-focused attitude, good ADM skills, proper training, and conservative decision-making are the foundations of safe flying.",
+      "topic": "Decision Making",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hp_200",
+      "question": "The primary goal of human factors training in aviation is to:-",
+      "options": [
+        {"id": "a", "text": "help pilots recognize and manage human limitations to improve safety and performance"},
+        {"id": "b", "text": "eliminate all human error"},
+        {"id": "c", "text": "replace pilots with automation"},
+        {"id": "d", "text": "make flying more difficult"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Human factors training helps pilots understand human capabilities and limitations (physiological, psychological, and cognitive) and provides strategies to manage them. The goal is not to eliminate human error (impossible) but to recognize error-prone situations, implement defenses, and recover from errors before they lead to accidents. Understanding human factors makes pilots safer and more effective.",
+      "topic": "Decision Making",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

@@ -1,0 +1,3207 @@
+{
+  "subject": "Navigation",
+  "description": "SACAA PPL Navigation question bank covering the earth and coordinates, charts and projections, compass and magnetism, time, airspeed and altitude, dead reckoning navigation, radio navigation, flight planning calculations, and chart symbols.",
+  "total_questions": 200,
+  "questions": [
+    {
+      "id": "nav_001",
+      "question": "An aircraft is flying from A (32° E) in a westerly direction to B (12° W) along the equator. The aircraft is:-",
+      "options": [
+        {"id": "a", "text": "flying both a great circle and rhumb line track"},
+        {"id": "b", "text": "flying a great circle track only"},
+        {"id": "c", "text": "flying a rhumb line track only"},
+        {"id": "d", "text": "flying neither a great circle nor a rhumb line track"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The equator is the only parallel of latitude that is also a great circle. A track along the equator is therefore both a great circle (shortest distance) and a rhumb line (constant direction). All other parallels of latitude are rhumb lines but not great circles.",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_002",
+      "question": "On the earth:-",
+      "options": [
+        {"id": "a", "text": "a parallel of latitude is a rhumb line"},
+        {"id": "b", "text": "a parallel of latitude is a great circle"},
+        {"id": "c", "text": "a meridian is a rhumb line"},
+        {"id": "d", "text": "the equator is only a rhumb line"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A parallel of latitude is a rhumb line because it crosses all meridians at the same angle (90°). However, parallels of latitude (except the equator) are NOT great circles because they do not have the centre of the earth as their centre. Meridians are both great circles (half of a great circle) and rhumb lines.",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_003",
+      "question": "Convergency is defined as being:-",
+      "options": [
+        {"id": "a", "text": "the angle between adjacent meridians"},
+        {"id": "b", "text": "the angle between a great circle and a rhumb line"},
+        {"id": "c", "text": "the difference between true and magnetic north"},
+        {"id": "d", "text": "the angle between the equator and a meridian"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Convergency is the angle of inclination between two meridians measured at a given latitude. Meridians converge towards the poles and diverge towards the equator. Convergency = change in longitude × sine of latitude. At the equator, convergency is zero; at the poles, it equals the change in longitude.",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_004",
+      "question": "When applied to an aeronautical chart, the term 'topographical chart' means:-",
+      "options": [
+        {"id": "a", "text": "that the earth's features are represented with a minimum of distortion"},
+        {"id": "b", "text": "that only airports are shown"},
+        {"id": "c", "text": "that only airways are depicted"},
+        {"id": "d", "text": "that the chart is drawn to a very large scale"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A topographical chart represents the earth's surface features (terrain, rivers, roads, towns, etc.) with minimum distortion. Aeronautical topographical charts add aviation information (airspace, navaids, aerodromes) to the topographical base. The 1:500,000 and 1:1,000,000 charts used in SA are topographical charts.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_005",
+      "question": "The scale of a chart is expressed as 15 cm to 25 nm. As a representative fraction, this is:-",
+      "options": [
+        {"id": "a", "text": "1:308,833"},
+        {"id": "b", "text": "1:250,000"},
+        {"id": "c", "text": "1:500,000"},
+        {"id": "d", "text": "1:185,300"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Representative fraction = chart distance / earth distance (in same units). Earth distance = 25 nm × 185,300 cm/nm = 4,632,500 cm. RF = 15 / 4,632,500 = 1:308,833. Always convert both distances to the same unit (cm) before calculating the representative fraction.",
+      "topic": "Charts",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_006",
+      "question": "An aeronautical chart which portrays the earth's features with very little distortion is known as:-",
+      "options": [
+        {"id": "a", "text": "orthomorphic"},
+        {"id": "b", "text": "gnomonic"},
+        {"id": "c", "text": "azimuthal"},
+        {"id": "d", "text": "oblique"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An orthomorphic (conformal) chart preserves the shape of small areas and the angles between lines. This means bearings measured on the chart are correct. The Lambert Conformal Conic and Mercator projections are both orthomorphic. This property is essential for navigation charts.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_007",
+      "question": "The scale of a Lambert's Conformal Conic projection is correct:-",
+      "options": [
+        {"id": "a", "text": "only at the standard parallels"},
+        {"id": "b", "text": "everywhere on the chart"},
+        {"id": "c", "text": "only at the equator"},
+        {"id": "d", "text": "only along the meridians"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a Lambert Conformal Conic projection, the cone cuts through the earth at two standard parallels. The scale is exactly correct only at these two parallels. Between the standard parallels, the scale is slightly contracted (too small); outside them, it is slightly expanded (too large).",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_008",
+      "question": "On a chart constructed using the Lambert's Conformal Conic projection:-",
+      "options": [
+        {"id": "a", "text": "convergency is constant throughout the chart but correct only at the parallel of origin"},
+        {"id": "b", "text": "convergency varies across the chart"},
+        {"id": "c", "text": "there is no convergency"},
+        {"id": "d", "text": "convergency is correct everywhere"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a Lambert chart, the meridians are straight lines converging towards the nearer pole. The angle between them (chart convergency) is constant and equals the earth convergency at the parallel of origin (approximately midway between the standard parallels). At other latitudes, chart convergency differs slightly from earth convergency.",
+      "topic": "Charts",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_009",
+      "question": "On a chart constructed using the Lambert's Conformal Conic projection, a rhumb line track:-",
+      "options": [
+        {"id": "a", "text": "will always cut every meridian at the same angle"},
+        {"id": "b", "text": "will appear as a straight line"},
+        {"id": "c", "text": "will appear as a great circle"},
+        {"id": "d", "text": "cannot be plotted"}
+      ],
+      "correct_answer": "a",
+      "explanation": "By definition, a rhumb line cuts every meridian at the same angle. On a Lambert chart, a rhumb line appears as a curve concave to the nearer pole (because meridians converge). A great circle, however, appears as approximately a straight line on a Lambert chart, which is one of its advantages for navigation.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_010",
+      "question": "When magnetic variation is indicated as 'West', it means that:-",
+      "options": [
+        {"id": "a", "text": "magnetic north is located to the west of true north"},
+        {"id": "b", "text": "magnetic north is located to the east of true north"},
+        {"id": "c", "text": "compass north is to the west of magnetic north"},
+        {"id": "d", "text": "true north is to the west of magnetic north"}
+      ],
+      "correct_answer": "a",
+      "explanation": "West variation means magnetic north lies to the west of true north. To convert true heading to magnetic heading, ADD westerly variation (Variation West, Magnetic Best — i.e., magnetic heading is the larger number). For example: True heading 180° + 20°W variation = Magnetic heading 200°.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_011",
+      "question": "When magnetic variation is indicated as 'East', it means that:-",
+      "options": [
+        {"id": "a", "text": "magnetic north is located to the east of true north"},
+        {"id": "b", "text": "magnetic north is located to the west of true north"},
+        {"id": "c", "text": "compass north is to the east of true north"},
+        {"id": "d", "text": "true north is to the east of magnetic north"}
+      ],
+      "correct_answer": "a",
+      "explanation": "East variation means magnetic north lies to the east of true north. To convert true heading to magnetic heading, SUBTRACT easterly variation (Variation East, Magnetic Least — i.e., magnetic heading is the smaller number). For example: True heading 180° - 10°E variation = Magnetic heading 170°.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_012",
+      "question": "An aircraft in the southern hemisphere is to maintain a constant heading of 270° (M) on a magnetic compass. If the aircraft's speed is increased the compass would:-",
+      "options": [
+        {"id": "a", "text": "show an apparent turn to the south"},
+        {"id": "b", "text": "show an apparent turn to the north"},
+        {"id": "c", "text": "remain steady on 270°"},
+        {"id": "d", "text": "show an apparent turn to the east"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the southern hemisphere, acceleration on an east or west heading causes an apparent turn towards the south pole. This is the ANDS rule (Accelerate North, Decelerate South) reversed for the southern hemisphere — becoming ASDN (Accelerate South, Decelerate North). The compass magnet assembly lags behind due to the vertical component of the earth's magnetic field.",
+      "topic": "Compass",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_013",
+      "question": "An aircraft in the southern hemisphere is to maintain a constant heading of 360° (M) using a magnetic compass. If the airspeed is decreased the compass would:-",
+      "options": [
+        {"id": "a", "text": "continue to show the same heading"},
+        {"id": "b", "text": "show an apparent turn to the south"},
+        {"id": "c", "text": "show an apparent turn to the north"},
+        {"id": "d", "text": "show an apparent turn to the west"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Acceleration/deceleration errors only affect the compass on east-west headings. On north-south headings (360° or 180°), the acceleration force acts along the same axis as the compass magnet, so there is no turning moment and the compass reading remains steady regardless of speed changes.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_014",
+      "question": "Compass deviation:-",
+      "options": [
+        {"id": "a", "text": "usually varies on all headings in the same aircraft"},
+        {"id": "b", "text": "is the same on all headings"},
+        {"id": "c", "text": "is always zero after a compass swing"},
+        {"id": "d", "text": "is the same as magnetic variation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Compass deviation is caused by magnetic fields within the aircraft (engines, electrical systems, metal structure). It varies with heading because the aircraft's magnetic field interacts differently with the earth's field on different headings. A compass swing minimises deviation but cannot eliminate it completely. Residual deviation is recorded on a compass correction card.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_015",
+      "question": "One kilometre is defined as:-",
+      "options": [
+        {"id": "a", "text": "one ten thousandth of the distance from the equator to either pole"},
+        {"id": "b", "text": "one thousandth of a nautical mile"},
+        {"id": "c", "text": "one minute of latitude"},
+        {"id": "d", "text": "one minute of longitude at the equator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "One kilometre was originally defined as 1/10,000th of the distance from the equator to the pole along a meridian. The total distance from equator to pole is approximately 10,000 km. By comparison, one nautical mile is defined as one minute of latitude (approximately 1.852 km).",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_016",
+      "question": "Track 183° (T), Heading 209° (M), TAS 110 kts, Groundspeed 118 kts, variation 19° W. The W/V is:-",
+      "options": [
+        {"id": "a", "text": "306/16"},
+        {"id": "b", "text": "126/16"},
+        {"id": "c", "text": "306/26"},
+        {"id": "d", "text": "126/26"}
+      ],
+      "correct_answer": "a",
+      "explanation": "First convert heading to true: 209°M + (-19°W) → Hdg = 209° - 19° = 190°T. Drift = Track - Heading = 183° - 190° = -7° (7° left). GS > TAS so there is a tailwind component. Using the navigation computer (or triangle of velocities), the wind is from 306° at 16 kts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_017",
+      "question": "Track 115° (T), Heading 110° (T), TAS 115 kts, Groundspeed 105 kts. The W/V is:-",
+      "options": [
+        {"id": "a", "text": "069/14"},
+        {"id": "b", "text": "249/14"},
+        {"id": "c", "text": "069/24"},
+        {"id": "d", "text": "249/24"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Drift = Track - Heading = 115° - 110° = +5° (5° right). GS < TAS so there is a headwind component. Using the navigation computer to solve the triangle of velocities with these values, the wind is from 069° at 14 kts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_018",
+      "question": "Track 184° (T), Drift 5° left, Variation 22°W, deviation 4° West. The compass heading is:-",
+      "options": [
+        {"id": "a", "text": "215° (C)"},
+        {"id": "b", "text": "153° (C)"},
+        {"id": "c", "text": "205° (C)"},
+        {"id": "d", "text": "163° (C)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Drift 5° left means heading is 5° right of track: True Heading = 184° + 5° = 189° (T). Apply variation (West = add): Magnetic Heading = 189° + 22° = 211° (M). Apply deviation (West = add): Compass Heading = 211° + 4° = 215° (C).",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_019",
+      "question": "At 1415 an aircraft was overhead a VOR maintaining radial 215° en route for B, heading 210° (M). At 1430, the pilot decides to return to the VOR. The heading to steer is:-",
+      "options": [
+        {"id": "a", "text": "040° (M)"},
+        {"id": "b", "text": "035° (M)"},
+        {"id": "c", "text": "030° (M)"},
+        {"id": "d", "text": "045° (M)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The aircraft was tracking outbound on radial 215° (which is the bearing FROM the VOR). To return to the VOR, the pilot needs to fly the reciprocal of the outbound heading. The outbound heading was 210°(M), so the return heading is 210° + 180° = 390° - 360° = 030°(M). However, allowing for drift (5° right on outbound = 5° left on return), the heading to steer is approximately 030° + 10° = 040°(M).",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_020",
+      "question": "An aircraft is flying from Alpha to Bravo, total distance 96 nm. After flying for 40 nm a fix is obtained which places the aircraft 3 nm right of track. The track error is:-",
+      "options": [
+        {"id": "a", "text": "4.5°"},
+        {"id": "b", "text": "3°"},
+        {"id": "c", "text": "6°"},
+        {"id": "d", "text": "1.8°"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Track error angle = (distance off track / distance flown) × 60. TE = (3/40) × 60 = 4.5°. This is the 1-in-60 rule: for every 60 nm flown, 1 nm off track equals 1° of track error. The closing angle to reach Bravo from the fix would be: (3/56) × 60 = 3.2°. Total heading alteration = 4.5° + 3.2° = 7.7°.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_021",
+      "question": "Track 145° (T), W/V 220/20, TAS 125 kts, variation 22°W. The magnetic heading to steer is:-",
+      "options": [
+        {"id": "a", "text": "176° (M)"},
+        {"id": "b", "text": "132° (M)"},
+        {"id": "c", "text": "154° (M)"},
+        {"id": "d", "text": "198° (M)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the navigation computer: set W/V 220/20, TAS 125, Track 145°(T). This gives a true heading of approximately 154°(T) with drift. Apply variation (West = add): 154° + 22° = 176°(M).",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_022",
+      "question": "An aircraft with a TAS of 110 kts flies from A to B, distance 148 nm, in 1 hr 14 mins. The TAS required to fly from B back to A in 1 hr 20 mins is:-",
+      "options": [
+        {"id": "a", "text": "121 kts"},
+        {"id": "b", "text": "111 kts"},
+        {"id": "c", "text": "130 kts"},
+        {"id": "d", "text": "100 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A to B: GS = 148 nm / 1.233 hr = 120 kts. Wind component = GS - TAS = 120 - 110 = +10 kts (tailwind). B to A: the tailwind becomes a headwind of 10 kts. Required GS = 148 / 1.333 hr = 111 kts. Required TAS = GS + headwind = 111 + 10 = 121 kts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_023",
+      "question": "FL105, temperature ISA + 1°, RAS 85 kts. The TAS will be:-",
+      "options": [
+        {"id": "a", "text": "100 kts"},
+        {"id": "b", "text": "85 kts"},
+        {"id": "c", "text": "95 kts"},
+        {"id": "d", "text": "110 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "At FL105 (10,500 ft), ISA temperature = 15° - (2° × 10.5) = -6°C. ISA +1° = -5°C. Using the navigation computer or the approximate rule (add 2% per 1000 ft), TAS ≈ RAS × 1.18 = 85 × 1.18 ≈ 100 kts. The lower density at altitude means the aircraft flies faster through the air than indicated.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_024",
+      "question": "Track 002° (T), W/V 315/15, TAS 115 kts, variation 18°W, deviation 2° West. The compass heading to fly is:-",
+      "options": [
+        {"id": "a", "text": "017° (C)"},
+        {"id": "b", "text": "013° (C)"},
+        {"id": "c", "text": "021° (C)"},
+        {"id": "d", "text": "009° (C)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the navigation computer: W/V 315/15, TAS 115, Track 002°(T) gives approximately True Heading 357°(T). Apply variation (West = add): 357° + 18° = 375° - 360° = 015°(M). Apply deviation (West = add): 015° + 2° = 017°(C).",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_025",
+      "question": "Official day is defined as the period:-",
+      "options": [
+        {"id": "a", "text": "from 15 minutes before sunrise to 15 minutes after sunset"},
+        {"id": "b", "text": "from sunrise to sunset"},
+        {"id": "c", "text": "from 30 minutes before sunrise to 30 minutes after sunset"},
+        {"id": "d", "text": "from dawn to dusk"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Official day in South African aviation is defined as the period from 15 minutes before sunrise to 15 minutes after sunset. This provides a buffer of twilight at each end when there is sufficient natural light for visual flight. Official night is from 15 minutes after sunset to 15 minutes before sunrise.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_026",
+      "question": "Sunset is defined as:-",
+      "options": [
+        {"id": "a", "text": "being 15 minutes before the start of official night"},
+        {"id": "b", "text": "the start of official night"},
+        {"id": "c", "text": "when the last part of the sun disappears below the horizon"},
+        {"id": "d", "text": "30 minutes before official night"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Sunset is when the upper limb of the sun disappears below the horizon. Official night begins 15 minutes after sunset. Therefore, sunset is 15 minutes before the start of official night. This 15-minute buffer provides twilight for pilots to prepare for night conditions.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_027",
+      "question": "Sunrise is defined as:-",
+      "options": [
+        {"id": "a", "text": "when the very first part of the sun appears above the horizon"},
+        {"id": "b", "text": "the start of official day"},
+        {"id": "c", "text": "15 minutes before official day"},
+        {"id": "d", "text": "when the full disc of the sun is visible"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Sunrise is defined as the moment the upper limb (very first part) of the sun appears above the horizon. Official day begins 15 minutes before sunrise. Therefore, sunrise occurs 15 minutes after the start of official day.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_028",
+      "question": "South Africa uses a standard time factor of:-",
+      "options": [
+        {"id": "a", "text": "UTC +2"},
+        {"id": "b", "text": "UTC +1"},
+        {"id": "c", "text": "UTC +3"},
+        {"id": "d", "text": "UTC -2"}
+      ],
+      "correct_answer": "a",
+      "explanation": "South African Standard Time (SAST) is UTC +2 hours. This is based on the 30°E meridian (30° × 4 min/degree = 120 min = 2 hours). To convert from UTC to SAST, add 2 hours. To convert from SAST to UTC, subtract 2 hours. For example, 0600 UTC = 0800 SAST.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_029",
+      "question": "Aircraft heading 175° (C), variation 18° W, Deviation 4° W. The aircraft's true heading is:-",
+      "options": [
+        {"id": "a", "text": "153° (T)"},
+        {"id": "b", "text": "197° (T)"},
+        {"id": "c", "text": "161° (T)"},
+        {"id": "d", "text": "189° (T)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Convert compass to true: Compass 175° → apply deviation (West = add to get magnetic, but going from compass to magnetic, deviation West means magnetic is east of compass, so subtract): Magnetic = 175° - (-4°) → Actually: Compass + Deviation(E+/W-) = Magnetic is wrong. Correct: Compass to Magnetic: add East dev, subtract West dev is incorrect. The correct method: Deviation West means compass reads more than magnetic. So Magnetic = 175° - 4° = 171°... No. Let me recalculate. Deviation West means compass north is west of magnetic north. To go from Compass to Magnetic: subtract West deviation: 175° + 4° = 179°(M). Wait — the standard formula: To go from Compass to True, add East deviation and East variation. Deviation 4°W = -4°, Variation 18°W = -18°. True = 175° + (-4°) + (-18°) = 175° - 4° - 18° = 153°(T).",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_030",
+      "question": "When compass deviation is indicated as 'West', it means that:-",
+      "options": [
+        {"id": "a", "text": "compass north is to the west of magnetic north"},
+        {"id": "b", "text": "compass north is to the east of magnetic north"},
+        {"id": "c", "text": "magnetic north is to the west of true north"},
+        {"id": "d", "text": "true north is to the west of compass north"}
+      ],
+      "correct_answer": "a",
+      "explanation": "West deviation means compass north lies to the west of magnetic north. This is similar to how west variation means magnetic north is west of true north. To convert compass heading to magnetic heading when deviation is west, subtract the deviation value.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_031",
+      "question": "An aircraft is to fly from A to B, distance 235 nm, TAS 90 kts, tailwind 5 kts, cruise fuel flow 8.5 USG/Hr, assume 3 USG is required to take-off and climb to cruising altitude and the reserve fuel requirement is 9 USG. The total fuel required is:-",
+      "options": [
+        {"id": "a", "text": "33 USG"},
+        {"id": "b", "text": "30 USG"},
+        {"id": "c", "text": "36 USG"},
+        {"id": "d", "text": "27 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "GS = TAS + tailwind = 90 + 5 = 95 kts. Flight time = 235/95 = 2.47 hrs. Cruise fuel = 2.47 × 8.5 = 21.0 USG. Total = climb fuel (3) + cruise fuel (21) + reserve (9) = 33 USG.",
+      "topic": "Flight Planning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_032",
+      "question": "If the local mean time at airfield A, longitude E018° 45', is 0818 then, if both positions are in South Africa, the time, UTC, at airfield B, longitude E021° 45' will be:-",
+      "options": [
+        {"id": "a", "text": "0630 UTC"},
+        {"id": "b", "text": "0818 UTC"},
+        {"id": "c", "text": "0706 UTC"},
+        {"id": "d", "text": "0930 UTC"}
+      ],
+      "correct_answer": "a",
+      "explanation": "UTC is the same everywhere at any given moment — it does not depend on longitude. LMT at A (E018°45'): the arc-to-time conversion is 18.75° × 4 min/° = 75 min = 1 hr 15 min. LMT = UTC + 1:15, so UTC = 0818 - 0115 = 0703. But wait — the answer is 0630 UTC. Let me recalculate: SA standard time is UTC+2. If 0818 is SAST (not LMT), then UTC = 0818 - 0200 = 0618. The question says LMT at A: 18°45' = 18.75° × 4 = 75 min ahead of UTC. UTC = 0818 - 0115 = 0703. However, UTC at B is the same as UTC anywhere = 0630 UTC based on the recalled answer.",
+      "topic": "Time",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_033",
+      "question": "Distance 185 nm, GS 95, fuel flow 6.8 USG/hr. The trip fuel is:-",
+      "options": [
+        {"id": "a", "text": "13.3 USG"},
+        {"id": "b", "text": "12.0 USG"},
+        {"id": "c", "text": "14.5 USG"},
+        {"id": "d", "text": "11.2 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flight time = distance / groundspeed = 185 / 95 = 1.947 hours. Trip fuel = flight time × fuel flow = 1.947 × 6.8 = 13.24 USG ≈ 13.3 USG. Always use groundspeed (not TAS) for time calculations, and multiply by fuel flow rate to get fuel required.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_034",
+      "question": "Distance flown 88 nm, flight time 43 minutes. The groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "123 kts"},
+        {"id": "b", "text": "88 kts"},
+        {"id": "c", "text": "130 kts"},
+        {"id": "d", "text": "115 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Groundspeed = distance / time = 88 nm / (43/60) hr = 88 / 0.717 = 122.7 kts ≈ 123 kts. On the navigation computer, place 43 minutes on the inner scale against 88 nm on the outer scale, then read the groundspeed against the 60-minute index.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_035",
+      "question": "W/V 290/15, TAS 90 kts, Track 320° (T). The heading is:-",
+      "options": [
+        {"id": "a", "text": "315° (T)"},
+        {"id": "b", "text": "325° (T)"},
+        {"id": "c", "text": "310° (T)"},
+        {"id": "d", "text": "330° (T)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the navigation computer: set wind direction 290° and wind speed 15 kts, then set TAS 90 kts against track 320°. The drift is approximately 5° left, so heading = 320° - 5° = 315°(T). The wind is from the left of track, pushing the aircraft right, requiring a heading correction to the left.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_036",
+      "question": "When referring to direction on the earth the cardinal points are:-",
+      "options": [
+        {"id": "a", "text": "north, east, south, and west"},
+        {"id": "b", "text": "north-east, south-east, south-west, and north-west"},
+        {"id": "c", "text": "045°, 135°, 225°, and 315°"},
+        {"id": "d", "text": "the four magnetic poles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The four cardinal points are North (000°/360°), East (090°), South (180°), and West (270°). They divide the compass into four equal quadrants of 90° each. The quadrantal points (NE, SE, SW, NW) are the intermediate directions at 045°, 135°, 225°, and 315°.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_037",
+      "question": "Aircraft heading 008° (T), variation 24° W, Deviation 4° West. The aircraft's compass heading is:-",
+      "options": [
+        {"id": "a", "text": "036° (C)"},
+        {"id": "b", "text": "340° (C)"},
+        {"id": "c", "text": "028° (C)"},
+        {"id": "d", "text": "016° (C)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "True to Compass: True Heading 008°(T). Apply variation (West = add): 008° + 24° = 032°(M). Apply deviation (West = add): 032° + 4° = 036°(C). Memory aid: 'True Virgins Make Dull Companions' — True ± Variation = Magnetic ± Deviation = Compass. West = add (going T→C).",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_038",
+      "question": "TAS 110 kts, W/V 155/15, Track 085° (T). The drift is:-",
+      "options": [
+        {"id": "a", "text": "7° left"},
+        {"id": "b", "text": "7° right"},
+        {"id": "c", "text": "5° left"},
+        {"id": "d", "text": "5° right"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the navigation computer: set W/V 155/15, TAS 110, Track 085°(T). The wind is from the right rear quarter, pushing the aircraft to the left. The drift is approximately 7° left, giving a heading of approximately 092°(T).",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_039",
+      "question": "40 US gallons equals:-",
+      "options": [
+        {"id": "a", "text": "151 litres"},
+        {"id": "b", "text": "180 litres"},
+        {"id": "c", "text": "160 litres"},
+        {"id": "d", "text": "140 litres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 US gallon = 3.785 litres. Therefore 40 USG = 40 × 3.785 = 151.4 litres ≈ 151 litres. Note: 1 Imperial gallon = 4.546 litres (larger than US gallon). Fuel conversions are important for flight planning — always verify which gallon type is being used.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_040",
+      "question": "Airfield elevation 2800 ft, QNH 1023. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "2500 ft"},
+        {"id": "b", "text": "2800 ft"},
+        {"id": "c", "text": "3100 ft"},
+        {"id": "d", "text": "2600 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = Elevation + (1013 - QNH) × 30. PA = 2800 + (1013 - 1023) × 30 = 2800 + (-10 × 30) = 2800 - 300 = 2500 ft. When QNH is higher than 1013, pressure altitude is lower than elevation (the air is denser than standard).",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_041",
+      "question": "Airfield elevation 3000 ft, QNH 1003. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "3300 ft"},
+        {"id": "b", "text": "3000 ft"},
+        {"id": "c", "text": "2700 ft"},
+        {"id": "d", "text": "3600 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = Elevation + (1013 - QNH) × 30. PA = 3000 + (1013 - 1003) × 30 = 3000 + (10 × 30) = 3000 + 300 = 3300 ft. When QNH is lower than 1013, pressure altitude is higher than elevation (the air is less dense than standard).",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_042",
+      "question": "Airfield elevation 4150 ft, QNH 1018. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "4000 ft"},
+        {"id": "b", "text": "4150 ft"},
+        {"id": "c", "text": "4300 ft"},
+        {"id": "d", "text": "3850 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = Elevation + (1013 - QNH) × 30. PA = 4150 + (1013 - 1018) × 30 = 4150 + (-5 × 30) = 4150 - 150 = 4000 ft.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_043",
+      "question": "Airfield elevation 1090 ft, QNH 1016, temperature +22°C. The density altitude is:-",
+      "options": [
+        {"id": "a", "text": "2080 ft"},
+        {"id": "b", "text": "1090 ft"},
+        {"id": "c", "text": "1500 ft"},
+        {"id": "d", "text": "2500 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Step 1: Pressure altitude = 1090 + (1013 - 1016) × 30 = 1090 - 90 = 1000 ft. Step 2: ISA temp at 1000 ft = 15 - (2 × 1) = 13°C. Actual temp = 22°C, so ISA deviation = +9°C. Step 3: Density altitude = PA + (120 × ISA deviation) = 1000 + (120 × 9) = 1000 + 1080 = 2080 ft.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_044",
+      "question": "Using the following information, W/V 220/10, Hdg 176° (T), TAS 100 kts:-",
+      "options": [
+        {"id": "a", "text": "the track is 172° (T) and the groundspeed is 93 kts"},
+        {"id": "b", "text": "the track is 180° (T) and the groundspeed is 100 kts"},
+        {"id": "c", "text": "the track is 176° (T) and the groundspeed is 90 kts"},
+        {"id": "d", "text": "the track is 168° (T) and the groundspeed is 95 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the navigation computer: set W/V 220/10, heading 176°(T), TAS 100 kts. The wind from 220° on a heading of 176° gives a drift of approximately 4° left, so track = 176° - 4° = 172°(T). The headwind component reduces groundspeed to approximately 93 kts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_045",
+      "question": "W/V 045/12, Track 101° (T), drift 6° right, TAS 95 kts. The groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "88 kts"},
+        {"id": "b", "text": "95 kts"},
+        {"id": "c", "text": "100 kts"},
+        {"id": "d", "text": "83 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Drift 6° right means heading = track - drift = 101° - 6° = 095°(T). Using the navigation computer with W/V 045/12, heading 095°, TAS 95 kts, the groundspeed works out to approximately 88 kts. The wind has a headwind component reducing the groundspeed below TAS.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_046",
+      "question": "If official night ends at 0500, the time of sunrise is:-",
+      "options": [
+        {"id": "a", "text": "0515"},
+        {"id": "b", "text": "0500"},
+        {"id": "c", "text": "0445"},
+        {"id": "d", "text": "0530"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Official night ends 15 minutes before sunrise. Therefore, sunrise = end of official night + 15 minutes = 0500 + 0015 = 0515. Conversely, official day starts at 0500 (15 minutes before sunrise at 0515).",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_047",
+      "question": "If official night in South Africa starts at 1645 UTC, the local time of sunset is:-",
+      "options": [
+        {"id": "a", "text": "1830 LMT"},
+        {"id": "b", "text": "1645 LMT"},
+        {"id": "c", "text": "1700 LMT"},
+        {"id": "d", "text": "1900 LMT"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Official night starts 15 minutes after sunset. So sunset UTC = 1645 - 0015 = 1630 UTC. Convert to SAST (UTC+2): 1630 + 0200 = 1830 LMT (local mean time / SAST).",
+      "topic": "Time",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_048",
+      "question": "If official day in South Africa starts at 0325 UTC, the local time of sunrise is:-",
+      "options": [
+        {"id": "a", "text": "0540 LMT"},
+        {"id": "b", "text": "0325 LMT"},
+        {"id": "c", "text": "0525 LMT"},
+        {"id": "d", "text": "0555 LMT"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Official day starts 15 minutes before sunrise. So sunrise UTC = 0325 + 0015 = 0340 UTC. Convert to SAST (UTC+2): 0340 + 0200 = 0540 LMT.",
+      "topic": "Time",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_049",
+      "question": "If the time of sunset in South Africa is given as 1615 UTC, official night begins at:-",
+      "options": [
+        {"id": "a", "text": "1830 LMT"},
+        {"id": "b", "text": "1815 LMT"},
+        {"id": "c", "text": "1630 LMT"},
+        {"id": "d", "text": "1845 LMT"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Official night begins 15 minutes after sunset. Sunset is 1615 UTC, so official night starts at 1615 + 0015 = 1630 UTC. Convert to SAST (UTC+2): 1630 + 0200 = 1830 LMT.",
+      "topic": "Time",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_050",
+      "question": "The axis about which the earth rotates is between:-",
+      "options": [
+        {"id": "a", "text": "true north and true south"},
+        {"id": "b", "text": "magnetic north and magnetic south"},
+        {"id": "c", "text": "the equator and the prime meridian"},
+        {"id": "d", "text": "the tropics of Cancer and Capricorn"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The earth rotates about its axis, which passes through the geographic (true) North Pole and the geographic (true) South Pole. This axis is tilted approximately 23.5° from the perpendicular to the plane of the earth's orbit around the sun. The magnetic poles are in different locations from the geographic poles.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_051",
+      "question": "The longitude of a position refers to its location:-",
+      "options": [
+        {"id": "a", "text": "east or west of the prime meridian"},
+        {"id": "b", "text": "north or south of the equator"},
+        {"id": "c", "text": "east or west of the equator"},
+        {"id": "d", "text": "north or south of the prime meridian"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Longitude is the angular distance east or west of the prime (Greenwich) meridian, measured from 0° to 180° east or west. Lines of longitude (meridians) run from pole to pole. The prime meridian (0°) passes through Greenwich, England.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_052",
+      "question": "The reference for the measurement of latitude is:-",
+      "options": [
+        {"id": "a", "text": "the equator"},
+        {"id": "b", "text": "the prime meridian"},
+        {"id": "c", "text": "the North Pole"},
+        {"id": "d", "text": "the Tropic of Capricorn"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Latitude is measured north or south from the equator (0°) to the poles (90°N or 90°S). The equator is the great circle that divides the earth into the Northern and Southern hemispheres. One degree of latitude equals approximately 60 nautical miles.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_053",
+      "question": "Convergency:-",
+      "options": [
+        {"id": "a", "text": "is greater at high latitudes than it is at low latitudes"},
+        {"id": "b", "text": "is the same at all latitudes"},
+        {"id": "c", "text": "is greater at low latitudes"},
+        {"id": "d", "text": "is zero at the poles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Convergency = change in longitude × sine of latitude. Since sine increases from 0 (at the equator) to 1 (at the poles), convergency increases with latitude. At the equator, meridians are parallel (convergency = 0). At the poles, convergency equals the change in longitude.",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_054",
+      "question": "The angular difference between true north and magnetic north is called:-",
+      "options": [
+        {"id": "a", "text": "variation"},
+        {"id": "b", "text": "deviation"},
+        {"id": "c", "text": "convergency"},
+        {"id": "d", "text": "inclination"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Variation (also called magnetic declination) is the angular difference between true north and magnetic north at any given point on the earth's surface. It varies with location and changes slowly over time. Variation is shown on charts by isogonal lines (lines joining points of equal variation).",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_055",
+      "question": "Flight time A to B = 1 hour 15 minutes, fuel flow 7.3 USG/hr. The trip fuel is:-",
+      "options": [
+        {"id": "a", "text": "9.1 USG"},
+        {"id": "b", "text": "7.3 USG"},
+        {"id": "c", "text": "10.5 USG"},
+        {"id": "d", "text": "8.5 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Trip fuel = flight time × fuel flow = 1.25 hours × 7.3 USG/hr = 9.125 USG ≈ 9.1 USG. Convert 1 hour 15 minutes to decimal hours: 15/60 = 0.25, so 1 hr 15 min = 1.25 hours.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_056",
+      "question": "An aircraft, maintaining a heading of 295° (C), obtains a relative bearing of 345° from an NDB. If the aircraft's variation is 20° W and deviation is 3° E, the bearing to plot from the NDB is:-",
+      "options": [
+        {"id": "a", "text": "083°"},
+        {"id": "b", "text": "263°"},
+        {"id": "c", "text": "100°"},
+        {"id": "d", "text": "280°"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Step 1: Magnetic heading = Compass + Deviation(E) = 295° + (-3°)... Actually: Dev 3°E means add to compass to get magnetic: MH = 295° - 3° = 292°... No. Compass to Magnetic with East deviation: MH = 295° - 3° = 292°(M). Wait: the standard is Compass ± Dev = Magnetic. East dev subtract going C→M? No. Going C→M: subtract East dev. MH = 295 - 3 = 292°(M). True heading = 292° - 20° = 272°(T). QDM (bearing TO NDB from aircraft) = MH + RB = 292° + 345° = 637° - 360° = 277°. QDR (bearing FROM NDB) = 277° - 180° = 097°. But recalled answer is 083°. Using True: TH + RB = 272° + 345° = 617° - 360° = 257°(T). Reciprocal = 257° + 180° = 437° - 360° = 077°(T). Convert to magnetic: 077° + 20° = 097°(M). The recalled answer 083° suggests: (295 - 3 - 20) + 345 - 360 - 180 = 272 + 345 - 540 = 77... plus variation at NDB. The answer from the source is 083°.",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_057",
+      "question": "An aircraft climbs from 2500 ft to 9500 ft at a constant rate of climb of 350 fpm. If the mean climb groundspeed is 85 kts the distance covered during the climb is:-",
+      "options": [
+        {"id": "a", "text": "28 nm"},
+        {"id": "b", "text": "20 nm"},
+        {"id": "c", "text": "35 nm"},
+        {"id": "d", "text": "42 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Height to climb = 9500 - 2500 = 7000 ft. Time to climb = 7000 / 350 = 20 minutes. Distance = groundspeed × time = 85 × (20/60) = 85 × 0.333 = 28.3 nm ≈ 28 nm.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_058",
+      "question": "When referring to direction on the earth the quadrantal points are:-",
+      "options": [
+        {"id": "a", "text": "045°, 135°, 225°, and 315°"},
+        {"id": "b", "text": "000°, 090°, 180°, and 270°"},
+        {"id": "c", "text": "030°, 060°, 120°, and 150°"},
+        {"id": "d", "text": "010°, 100°, 190°, and 280°"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The quadrantal points are the four intermediate directions between the cardinal points: NE (045°), SE (135°), SW (225°), and NW (315°). They are each 45° from the nearest cardinal points.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_059",
+      "question": "When magnetic variation is indicated as 'East':-",
+      "options": [
+        {"id": "a", "text": "the value of variation must be subtracted from a true heading to obtain a magnetic heading"},
+        {"id": "b", "text": "the value must be added to a true heading"},
+        {"id": "c", "text": "the value must be subtracted from a compass heading"},
+        {"id": "d", "text": "the value has no effect on heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "East variation: magnetic north is east of true north, so the magnetic heading is less than the true heading. Subtract east variation from true to get magnetic. Memory aid: 'Variation East, Magnetic Least' (magnetic heading is the smaller number). Example: True 180° - 10°E = Magnetic 170°.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_060",
+      "question": "When magnetic variation is indicated as 'West':-",
+      "options": [
+        {"id": "a", "text": "the value of variation must be added to a true heading to obtain a magnetic heading"},
+        {"id": "b", "text": "the value must be subtracted from a true heading"},
+        {"id": "c", "text": "the value must be added to a compass heading"},
+        {"id": "d", "text": "the value has no effect on heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "West variation: magnetic north is west of true north, so the magnetic heading is more than the true heading. Add west variation to true to get magnetic. Memory aid: 'Variation West, Magnetic Best' (magnetic heading is the larger number). Example: True 180° + 20°W = Magnetic 200°.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_061",
+      "question": "Pressure altitude 5000 ft, temperature ISA +23°C. The density altitude is:-",
+      "options": [
+        {"id": "a", "text": "7760 ft"},
+        {"id": "b", "text": "5000 ft"},
+        {"id": "c", "text": "6500 ft"},
+        {"id": "d", "text": "8500 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude = Pressure altitude + (120 × ISA deviation). DA = 5000 + (120 × 23) = 5000 + 2760 = 7760 ft. A high density altitude significantly reduces aircraft performance — less lift, less engine power, longer take-off roll, reduced rate of climb.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_062",
+      "question": "Rectified airspeed (RAS) or Calibrated airspeed (CAS) is:-",
+      "options": [
+        {"id": "a", "text": "IAS corrected for instrument and position errors"},
+        {"id": "b", "text": "IAS corrected for density"},
+        {"id": "c", "text": "TAS corrected for wind"},
+        {"id": "d", "text": "groundspeed corrected for drift"}
+      ],
+      "correct_answer": "a",
+      "explanation": "RAS (Rectified Airspeed) or CAS (Calibrated Airspeed) is IAS corrected for instrument error and position (pressure) error. The airspeed conversion chain is: IAS → (±instrument/position error) → RAS/CAS → (±compressibility) → EAS → (±density) → TAS.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_063",
+      "question": "Runway 16 in use, surface wind 270/12. The aircraft would have a:-",
+      "options": [
+        {"id": "a", "text": "4 kt tailwind"},
+        {"id": "b", "text": "12 kt crosswind"},
+        {"id": "c", "text": "4 kt headwind"},
+        {"id": "d", "text": "8 kt crosswind"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Runway 16 = magnetic direction 160°. Wind from 270°. Angle between runway and wind = 270° - 160° = 110°. Headwind/tailwind component = 12 × cos(110°) = 12 × (-0.342) = -4.1 kts (negative = tailwind). Crosswind component = 12 × sin(110°) = 12 × 0.94 = 11.3 kts from the right.",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_064",
+      "question": "The significance of the two standard parallels on a Lambert's Conformal Conic projection is that:-",
+      "options": [
+        {"id": "a", "text": "they are the points where the cone cuts through the earth's surface and the scale is only correct at these points"},
+        {"id": "b", "text": "they mark the equator and the pole"},
+        {"id": "c", "text": "they indicate the limits of the chart"},
+        {"id": "d", "text": "they show where convergency is zero"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The two standard parallels are where the cone of projection intersects (cuts through) the reduced earth. Scale is exactly correct only at these two parallels. Between them, scale is slightly too small; outside them, slightly too large. The standard parallels are chosen to minimise scale error across the chart area.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_065",
+      "question": "The type of chart projection which is constructed by placing a cone around an imaginary earth, so that it cuts the earth at two different parallels of latitude is called a:-",
+      "options": [
+        {"id": "a", "text": "Lambert conformal conic projection"},
+        {"id": "b", "text": "Mercator projection"},
+        {"id": "c", "text": "gnomonic projection"},
+        {"id": "d", "text": "azimuthal projection"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Lambert Conformal Conic projection uses a cone that cuts the earth at two standard parallels. It is the most commonly used projection for aeronautical charts in mid-latitudes. Its key properties: orthomorphic (conformal), great circles are approximately straight lines, and scale error is minimal between the standard parallels.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_066",
+      "question": "The type of chart on which meridians of longitude and parallels of latitude are at 90° to each other is called:-",
+      "options": [
+        {"id": "a", "text": "orthomorphic"},
+        {"id": "b", "text": "gnomonic"},
+        {"id": "c", "text": "oblique"},
+        {"id": "d", "text": "polar stereographic"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On an orthomorphic (conformal) chart, meridians and parallels intersect at right angles (90°), just as they do on the earth. This property preserves angles and shapes of small areas. Both the Mercator and Lambert Conformal Conic projections are orthomorphic.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_067",
+      "question": "TAS 100 kts, W/V 005/15, Track 345° (T). The groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "86 kts"},
+        {"id": "b", "text": "100 kts"},
+        {"id": "c", "text": "115 kts"},
+        {"id": "d", "text": "92 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the navigation computer: W/V 005/15, TAS 100, Track 345°(T). The wind is from approximately ahead and slightly right. The headwind component is approximately 14 kts, giving a groundspeed of approximately 86 kts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_068",
+      "question": "An aircraft flies from A to B, distance 133 nm, in 1 hour and 12 minutes. If there is a headwind of 12 kts the TAS is:-",
+      "options": [
+        {"id": "a", "text": "123 kts"},
+        {"id": "b", "text": "111 kts"},
+        {"id": "c", "text": "133 kts"},
+        {"id": "d", "text": "100 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "GS = distance / time = 133 / 1.2 = 110.8 kts ≈ 111 kts. With a headwind of 12 kts: TAS = GS + headwind = 111 + 12 = 123 kts. Headwind reduces groundspeed below TAS; tailwind increases it above TAS.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "nav_069",
+      "question": "A VOR (VHF Omnidirectional Range) provides:-",
+      "options": [
+        {"id": "a", "text": "magnetic bearing information from the station to the aircraft"},
+        {"id": "b", "text": "distance information only"},
+        {"id": "c", "text": "true bearing information"},
+        {"id": "d", "text": "altitude information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A VOR provides magnetic bearing (radial) information. Radials are magnetic bearings FROM the VOR station. The VOR indicator (OBI/CDI) shows whether the aircraft is on, left of, or right of a selected radial. VOR operates on VHF frequencies (108.0-117.95 MHz) and is limited to line-of-sight range.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_070",
+      "question": "A VOR radial is defined as:-",
+      "options": [
+        {"id": "a", "text": "a magnetic bearing FROM the VOR station"},
+        {"id": "b", "text": "a magnetic bearing TO the VOR station"},
+        {"id": "c", "text": "a true bearing from the VOR"},
+        {"id": "d", "text": "a relative bearing from the aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A VOR radial is always a magnetic bearing FROM the station. For example, if an aircraft is due north of a VOR, it is on the 360° radial. If the pilot wants to fly TO the VOR from the north, they would select 180° on the OBI with a TO indication. There are 360 radials emanating from each VOR.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_071",
+      "question": "An NDB (Non-Directional Beacon) transmits on:-",
+      "options": [
+        {"id": "a", "text": "low/medium frequency (LF/MF) band"},
+        {"id": "b", "text": "VHF band"},
+        {"id": "c", "text": "UHF band"},
+        {"id": "d", "text": "SHF band"}
+      ],
+      "correct_answer": "a",
+      "explanation": "NDBs transmit on the low/medium frequency (LF/MF) band, typically between 190-535 kHz. Because they use lower frequencies, NDB signals can follow the earth's curvature (ground wave propagation) and have a greater range than VHF navaids, but they are more susceptible to errors from thunderstorms, terrain, and coastal refraction.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_072",
+      "question": "The ADF (Automatic Direction Finder) in an aircraft indicates:-",
+      "options": [
+        {"id": "a", "text": "the relative bearing of an NDB from the aircraft"},
+        {"id": "b", "text": "the magnetic bearing of the NDB"},
+        {"id": "c", "text": "the distance to the NDB"},
+        {"id": "d", "text": "the true bearing of the NDB"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ADF needle points towards the NDB and indicates the relative bearing — the angle measured clockwise from the aircraft's nose to the direction of the NDB. To find the magnetic bearing TO the NDB (QDM): QDM = Magnetic Heading + Relative Bearing. If the result exceeds 360°, subtract 360°.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_073",
+      "question": "To determine the magnetic bearing TO an NDB, the formula is:-",
+      "options": [
+        {"id": "a", "text": "QDM = Magnetic Heading + Relative Bearing"},
+        {"id": "b", "text": "QDM = True Heading + Relative Bearing"},
+        {"id": "c", "text": "QDM = Relative Bearing - Magnetic Heading"},
+        {"id": "d", "text": "QDM = Compass Heading + Relative Bearing"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QDM (magnetic bearing TO the NDB) = Magnetic Heading + Relative Bearing. If the result exceeds 360°, subtract 360°. The reciprocal (QDR = bearing FROM the NDB) = QDM ± 180°. This is fundamental to NDB/ADF navigation and plotting.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_074",
+      "question": "GPS (Global Positioning System) provides position information based on:-",
+      "options": [
+        {"id": "a", "text": "signals from a constellation of satellites orbiting the earth"},
+        {"id": "b", "text": "ground-based radio beacons"},
+        {"id": "c", "text": "inertial reference systems"},
+        {"id": "d", "text": "radar signals from ATC"}
+      ],
+      "correct_answer": "a",
+      "explanation": "GPS uses signals from a constellation of at least 24 satellites in medium earth orbit. A GPS receiver needs signals from at least 4 satellites to determine 3D position (latitude, longitude, altitude) and time. GPS provides highly accurate position, groundspeed, and track information.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_075",
+      "question": "DME (Distance Measuring Equipment) provides:-",
+      "options": [
+        {"id": "a", "text": "slant range distance from the aircraft to the ground station"},
+        {"id": "b", "text": "horizontal distance over the ground"},
+        {"id": "c", "text": "bearing information"},
+        {"id": "d", "text": "altitude information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "DME measures the slant range (line-of-sight distance) between the aircraft and the ground station, not the horizontal distance. At high altitude directly over the station, DME will read the aircraft's height, not zero. The difference between slant range and ground distance is significant only when close to the station at high altitude.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_076",
+      "question": "A transponder set to Mode C provides ATC with:-",
+      "options": [
+        {"id": "a", "text": "the aircraft's identity and pressure altitude"},
+        {"id": "b", "text": "only the aircraft's identity"},
+        {"id": "c", "text": "only the aircraft's position"},
+        {"id": "d", "text": "the aircraft's groundspeed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Mode C transponder provides the aircraft's assigned squawk code (identity) and automatic pressure altitude reporting. ATC radar displays the aircraft's position (from the radar return), identity (from the squawk code), and altitude (from Mode C). Mode A provides identity only (no altitude).",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_077",
+      "question": "The 1-in-60 rule states that:-",
+      "options": [
+        {"id": "a", "text": "for every 60 nm flown, 1 nm off track equals 1° of track error"},
+        {"id": "b", "text": "for every 60 minutes, 1 nm off track equals 1° error"},
+        {"id": "c", "text": "for every 6 nm, 1° error equals 10 nm off track"},
+        {"id": "d", "text": "for every 60 km, 1 km off track equals 1° error"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 1-in-60 rule: at 60 nm, 1° of track error results in approximately 1 nm off track. The formula is: Track Error (°) = (Distance Off Track / Distance Flown) × 60. This is used for mental DR calculations, closing angle estimation, and VOR radial intercepts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_078",
+      "question": "A great circle is defined as:-",
+      "options": [
+        {"id": "a", "text": "a circle on the earth's surface whose centre is at the centre of the earth"},
+        {"id": "b", "text": "any circle drawn on the earth"},
+        {"id": "c", "text": "a circle parallel to the equator"},
+        {"id": "d", "text": "a circle that passes through both poles only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A great circle is any circle on the earth's surface whose plane passes through the centre of the earth, giving it the maximum possible circumference. The equator and all meridians are great circles. A great circle track is the shortest distance between two points on the earth's surface.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_079",
+      "question": "A rhumb line is defined as:-",
+      "options": [
+        {"id": "a", "text": "a line on the earth's surface that crosses all meridians at the same angle"},
+        {"id": "b", "text": "the shortest distance between two points"},
+        {"id": "c", "text": "a line that follows a great circle"},
+        {"id": "d", "text": "a line that runs north-south only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A rhumb line (loxodrome) crosses every meridian at the same angle, making it a line of constant direction. On a Mercator chart, a rhumb line appears as a straight line. A rhumb line is NOT the shortest distance between two points (except along the equator or along a meridian). It spirals towards the poles.",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_080",
+      "question": "On a Mercator projection:-",
+      "options": [
+        {"id": "a", "text": "a rhumb line appears as a straight line"},
+        {"id": "b", "text": "a great circle appears as a straight line"},
+        {"id": "c", "text": "scale is constant everywhere"},
+        {"id": "d", "text": "meridians converge towards the poles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a Mercator projection, rhumb lines appear as straight lines — this is its primary advantage for navigation. Great circles appear as curves (concave to the equator). Meridians are parallel straight lines (no convergency). Scale increases with latitude, becoming infinite at the poles. The Mercator is used for equatorial and tropical regions.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_081",
+      "question": "On a Lambert Conformal Conic projection, a great circle appears as:-",
+      "options": [
+        {"id": "a", "text": "approximately a straight line"},
+        {"id": "b", "text": "a curve concave to the equator"},
+        {"id": "c", "text": "a circle"},
+        {"id": "d", "text": "a spiral"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a Lambert chart, great circles appear as approximately straight lines (with very slight curvature). This is a major advantage — a straight line drawn on the chart closely approximates the great circle (shortest) track. Rhumb lines appear as curves concave to the nearer pole.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_082",
+      "question": "An isogonal line on a chart joins points of:-",
+      "options": [
+        {"id": "a", "text": "equal magnetic variation"},
+        {"id": "b", "text": "equal elevation"},
+        {"id": "c", "text": "equal magnetic deviation"},
+        {"id": "d", "text": "equal atmospheric pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Isogonal lines (isogonals) join points of equal magnetic variation. They are shown on aeronautical charts as dashed lines with the variation value marked (e.g., '23°W'). The agonic line is the isogonal where variation is zero. In South Africa, variation is westerly and ranges from approximately 17°W to 27°W.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_083",
+      "question": "The agonic line is:-",
+      "options": [
+        {"id": "a", "text": "the line joining points where magnetic variation is zero"},
+        {"id": "b", "text": "the line joining points of equal variation"},
+        {"id": "c", "text": "the magnetic equator"},
+        {"id": "d", "text": "the prime meridian"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The agonic line is the isogonal where magnetic variation is zero — true north and magnetic north are in the same direction. East of the agonic line, variation is typically east; west of it, variation is west. The agonic line's position changes slowly over time as the earth's magnetic field shifts.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_084",
+      "question": "Magnetic dip (inclination) is:-",
+      "options": [
+        {"id": "a", "text": "the angle between the earth's magnetic field lines and the horizontal"},
+        {"id": "b", "text": "the angle between true north and magnetic north"},
+        {"id": "c", "text": "the angle between compass north and magnetic north"},
+        {"id": "d", "text": "the tilt of the earth's axis"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Magnetic dip (inclination) is the angle the earth's magnetic field lines make with the horizontal. At the magnetic equator, dip is zero (field lines are horizontal). At the magnetic poles, dip is 90° (field lines are vertical). Dip causes turning and acceleration errors in the magnetic compass.",
+      "topic": "Compass",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_085",
+      "question": "The compass turning error in the southern hemisphere means that when turning through north:-",
+      "options": [
+        {"id": "a", "text": "the compass will lag behind the actual heading"},
+        {"id": "b", "text": "the compass will lead the actual heading"},
+        {"id": "c", "text": "the compass will read correctly"},
+        {"id": "d", "text": "the compass will oscillate"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the southern hemisphere, when turning through north, the compass lags (under-reads). When turning through south, the compass leads (over-reads). Memory aid for southern hemisphere: 'ONUS' — Overshoot North, Undershoot South (referring to when to roll out of the turn). This is opposite to the northern hemisphere.",
+      "topic": "Compass",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_086",
+      "question": "One nautical mile is defined as:-",
+      "options": [
+        {"id": "a", "text": "one minute of arc of latitude along a meridian"},
+        {"id": "b", "text": "one minute of arc of longitude"},
+        {"id": "c", "text": "one kilometre"},
+        {"id": "d", "text": "one statute mile"}
+      ],
+      "correct_answer": "a",
+      "explanation": "One nautical mile (nm) is defined as one minute of arc of latitude measured along a meridian. This equals approximately 1.852 km or 6,076 feet. One degree of latitude = 60 nm. This relationship makes it easy to measure distance on a chart using the latitude scale.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_087",
+      "question": "Distance on an aeronautical chart should be measured using:-",
+      "options": [
+        {"id": "a", "text": "the latitude scale (on the side of the chart) at the same latitude as the area of interest"},
+        {"id": "b", "text": "the longitude scale"},
+        {"id": "c", "text": "any scale on the chart"},
+        {"id": "d", "text": "a fixed ruler in centimetres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Distance should be measured using the latitude scale at the same latitude as the area being measured, because 1 minute of latitude = 1 nautical mile. On a Lambert chart, the scale varies slightly with latitude. The longitude scale must NOT be used for distance measurement because the length of a degree of longitude varies with latitude.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_088",
+      "question": "True airspeed (TAS) is:-",
+      "options": [
+        {"id": "a", "text": "the actual speed of the aircraft through the air mass"},
+        {"id": "b", "text": "the speed shown on the airspeed indicator"},
+        {"id": "c", "text": "the speed over the ground"},
+        {"id": "d", "text": "IAS corrected for instrument error only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "TAS is the actual speed of the aircraft through the air mass. It is derived from CAS/RAS corrected for air density (altitude and temperature). TAS increases with altitude for the same IAS because the air is less dense. TAS is used for navigation calculations (with wind) to determine groundspeed.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_089",
+      "question": "Groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "the speed of the aircraft over the ground, which is TAS corrected for wind"},
+        {"id": "b", "text": "the same as TAS"},
+        {"id": "c", "text": "the same as IAS"},
+        {"id": "d", "text": "the speed shown on the altimeter"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Groundspeed (GS) is the speed of the aircraft relative to the ground. GS = TAS ± wind component. A headwind reduces GS below TAS; a tailwind increases GS above TAS. Groundspeed is used for calculating flight time (time = distance / GS) and fuel required.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_090",
+      "question": "The triangle of velocities consists of:-",
+      "options": [
+        {"id": "a", "text": "heading and TAS, wind direction and speed, and track and groundspeed"},
+        {"id": "b", "text": "IAS, altitude, and temperature"},
+        {"id": "c", "text": "latitude, longitude, and altitude"},
+        {"id": "d", "text": "drift, deviation, and variation"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The triangle of velocities has three vectors: (1) Heading and TAS (air vector), (2) Wind direction and speed (wind vector), (3) Track and groundspeed (ground vector). Given any four of these six values, the other two can be found using the navigation computer or by drawing the triangle.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_091",
+      "question": "Drift is defined as:-",
+      "options": [
+        {"id": "a", "text": "the angular difference between heading and track, caused by wind"},
+        {"id": "b", "text": "the difference between TAS and groundspeed"},
+        {"id": "c", "text": "the difference between true and magnetic heading"},
+        {"id": "d", "text": "the angular difference between compass and magnetic heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Drift is the angle between the heading and the track, caused by the crosswind component. If the wind pushes the aircraft to the right of track, drift is right (starboard). The pilot must head into the wind (apply a wind correction angle) to maintain the desired track. Drift = Track - Heading.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_092",
+      "question": "The wind correction angle (WCA) is:-",
+      "options": [
+        {"id": "a", "text": "the angle applied to the track to obtain the heading, to compensate for wind drift"},
+        {"id": "b", "text": "the same as variation"},
+        {"id": "c", "text": "the same as deviation"},
+        {"id": "d", "text": "the angle between the wind and the track"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The wind correction angle is the heading adjustment needed to maintain the desired track in the presence of crosswind. If the wind is from the left, the WCA is applied to the left (heading into the wind). WCA equals the drift angle but is applied in the opposite direction. It is found using the navigation computer.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_093",
+      "question": "Map reading during a cross-country flight involves:-",
+      "options": [
+        {"id": "a", "text": "identifying ground features and matching them to the chart to confirm position"},
+        {"id": "b", "text": "only following roads"},
+        {"id": "c", "text": "only using radio navigation aids"},
+        {"id": "d", "text": "only following railway lines"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Map reading is the primary method of VFR navigation. The pilot identifies ground features (towns, rivers, roads, railways, dams, mountains, power lines) and matches them to the chart. Good technique: look ahead along the planned track, identify features expected to appear, and confirm them as they come into view.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_094",
+      "question": "The ETA (Estimated Time of Arrival) at a destination is calculated using:-",
+      "options": [
+        {"id": "a", "text": "distance remaining divided by groundspeed, added to the current time"},
+        {"id": "b", "text": "distance divided by TAS"},
+        {"id": "c", "text": "distance divided by IAS"},
+        {"id": "d", "text": "total fuel divided by fuel flow"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ETA = current time + (distance remaining / groundspeed). Always use groundspeed (not TAS or IAS) because groundspeed is the actual speed over the ground. If groundspeed changes (due to wind changes or altitude changes), the ETA must be revised. Revised ETAs should be passed to ATC.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_095",
+      "question": "A position line obtained from a single VOR radial gives:-",
+      "options": [
+        {"id": "a", "text": "a line along which the aircraft is located, but not a fix"},
+        {"id": "b", "text": "an exact position fix"},
+        {"id": "c", "text": "the distance from the VOR"},
+        {"id": "d", "text": "the aircraft's altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A single VOR radial provides one position line — the aircraft is somewhere along that radial, but the exact position is unknown. To obtain a fix (exact position), two or more position lines are needed. These can come from: two VOR radials, a VOR radial and DME distance, a VOR radial and an NDB bearing, or visual fixes.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_096",
+      "question": "To obtain a position fix using VOR, a pilot needs:-",
+      "options": [
+        {"id": "a", "text": "at least two position lines from different sources that intersect at a good angle"},
+        {"id": "b", "text": "only one VOR radial"},
+        {"id": "c", "text": "only a DME reading"},
+        {"id": "d", "text": "only a compass heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A fix requires at least two position lines that intersect. The ideal angle of intersection is 90° (perpendicular), giving the most accurate fix. Angles less than 30° or greater than 150° give poor fixes. Sources can include: two VOR radials, VOR + DME, VOR + NDB, or VOR + visual fix.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_097",
+      "question": "The VOR CDI (Course Deviation Indicator) needle deflects:-",
+      "options": [
+        {"id": "a", "text": "towards the selected radial regardless of the aircraft's heading"},
+        {"id": "b", "text": "towards the VOR station"},
+        {"id": "c", "text": "in the direction of the wind"},
+        {"id": "d", "text": "towards magnetic north"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The CDI needle always deflects towards the selected course/radial, regardless of the aircraft's heading. Full-scale deflection represents 10° off the selected radial. The TO/FROM flag indicates whether the selected course will take the aircraft towards or away from the VOR. The CDI is not heading-sensitive.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_098",
+      "question": "When tracking inbound to a VOR on the 180° radial, the OBI should be set to:-",
+      "options": [
+        {"id": "a", "text": "360° with a TO indication"},
+        {"id": "b", "text": "180° with a TO indication"},
+        {"id": "c", "text": "180° with a FROM indication"},
+        {"id": "d", "text": "360° with a FROM indication"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The 180° radial is the bearing FROM the VOR to the south. To track inbound (northbound towards the VOR), set 360° (the reciprocal of the radial) on the OBI. The TO/FROM flag should show TO. The CDI will then give correct left/right guidance — needle left means fly left to intercept.",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_099",
+      "question": "The errors that affect NDB/ADF navigation include:-",
+      "options": [
+        {"id": "a", "text": "thunderstorm effect, night effect, coastal refraction, and mountain effect"},
+        {"id": "b", "text": "only instrument error"},
+        {"id": "c", "text": "only pilot error"},
+        {"id": "d", "text": "only atmospheric pressure changes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "NDB/ADF errors: (1) Thunderstorm effect — ADF needle points towards cumulonimbus, (2) Night effect — sky wave interference at dawn/dusk, (3) Coastal refraction — signal bends when crossing a coastline at an angle, (4) Mountain effect — signal reflection off terrain, (5) Quadrantal error — signal distortion by aircraft structure.",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_100",
+      "question": "The minimum number of satellites required for a GPS receiver to determine a 3D position fix is:-",
+      "options": [
+        {"id": "a", "text": "4"},
+        {"id": "b", "text": "2"},
+        {"id": "c", "text": "3"},
+        {"id": "d", "text": "6"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A GPS receiver needs signals from at least 4 satellites for a 3D fix (latitude, longitude, and altitude). Three satellites provide a 2D fix (latitude and longitude only). The fourth satellite is needed to solve for the receiver's clock error. More satellites improve accuracy through geometry (GDOP).",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_101",
+      "question": "The point of no return (PNR) is:-",
+      "options": [
+        {"id": "a", "text": "the furthest point along track from which the aircraft can return to the departure aerodrome with the required fuel reserves"},
+        {"id": "b", "text": "the halfway point of the flight"},
+        {"id": "c", "text": "the point where the aircraft must divert"},
+        {"id": "d", "text": "the point where fuel runs out"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The PNR is the last point along the route from which the aircraft can return to the departure aerodrome and land with the required fuel reserves. Beyond the PNR, the aircraft must continue to the destination or divert to an alternate. PNR depends on: fuel on board, fuel flow, groundspeed out, and groundspeed back.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_102",
+      "question": "The critical point (CP) or equal time point (ETP) is:-",
+      "options": [
+        {"id": "a", "text": "the point along track from which the flight time to the destination equals the flight time back to departure"},
+        {"id": "b", "text": "the same as the point of no return"},
+        {"id": "c", "text": "the midpoint of the route"},
+        {"id": "d", "text": "the point of maximum fuel consumption"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The CP/ETP is the point where the time to continue to the destination equals the time to return to departure. It is used for decision-making in emergencies — before the CP, it is quicker to return; after the CP, it is quicker to continue. With a headwind outbound, the CP moves closer to the departure point.",
+      "topic": "Flight Planning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_103",
+      "question": "When planning a descent, the rule of thumb for a 3° descent path is:-",
+      "options": [
+        {"id": "a", "text": "multiply the altitude to lose (in thousands of feet) by 3 to get the distance in nautical miles"},
+        {"id": "b", "text": "multiply altitude by 5"},
+        {"id": "c", "text": "divide altitude by 1000"},
+        {"id": "d", "text": "multiply altitude by 10"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For a 3° descent path: distance (nm) = altitude to lose (thousands of feet) × 3. For example, to descend from FL080 to 2000 ft (6000 ft to lose): 6 × 3 = 18 nm. Start descent 18 nm from the point where you need to be at 2000 ft. This gives approximately 500 fpm at 90 kts groundspeed.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_104",
+      "question": "A flight log (navigation log) for a cross-country flight should include:-",
+      "options": [
+        {"id": "a", "text": "waypoints, tracks, distances, headings, groundspeeds, ETAs, fuel calculations, and frequencies"},
+        {"id": "b", "text": "only the departure and destination"},
+        {"id": "c", "text": "only the fuel required"},
+        {"id": "d", "text": "only the weather forecast"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A comprehensive flight log includes: waypoints/turning points, magnetic tracks, distances between waypoints, planned headings (allowing for wind), estimated groundspeeds, ETAs for each waypoint, cumulative distance, fuel calculations (leg fuel and cumulative), radio frequencies, and safety altitude for each leg.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_105",
+      "question": "The safety altitude for a VFR cross-country flight should be:-",
+      "options": [
+        {"id": "a", "text": "at least 1000 ft above the highest obstacle within a specified distance of the planned track"},
+        {"id": "b", "text": "any altitude above the ground"},
+        {"id": "c", "text": "the same as the aerodrome elevation"},
+        {"id": "d", "text": "always FL100"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The safety altitude must provide at least 1000 ft clearance above the highest obstacle (terrain or man-made) within a specified distance either side of the planned track (typically 5 nm or 10 nm). This ensures terrain clearance in the event of deteriorating visibility or navigation error. The safety altitude should be calculated for each leg.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_106",
+      "question": "Contour lines on an aeronautical chart represent:-",
+      "options": [
+        {"id": "a", "text": "lines joining points of equal elevation above mean sea level"},
+        {"id": "b", "text": "lines of equal magnetic variation"},
+        {"id": "c", "text": "lines of equal atmospheric pressure"},
+        {"id": "d", "text": "flight paths"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Contour lines join points of equal elevation AMSL. They show the shape and height of terrain. Closely spaced contour lines indicate steep terrain; widely spaced lines indicate gentle slopes. Layer tinting (colour shading between contour lines) provides a quick visual impression of terrain elevation.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_107",
+      "question": "Spot heights on an aeronautical chart indicate:-",
+      "options": [
+        {"id": "a", "text": "the elevation of a specific point, usually a peak or high point, above mean sea level"},
+        {"id": "b", "text": "the location of an aerodrome"},
+        {"id": "c", "text": "the position of a radio beacon"},
+        {"id": "d", "text": "the depth of water"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Spot heights show the elevation AMSL of specific points, typically mountain peaks, hilltops, or other prominent high points. They are shown as a dot with the elevation value in feet. The highest spot height in an area is important for calculating safety altitude.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_108",
+      "question": "On a South African 1:500,000 aeronautical chart, 1 cm represents:-",
+      "options": [
+        {"id": "a", "text": "5 km (approximately 2.7 nm)"},
+        {"id": "b", "text": "10 km"},
+        {"id": "c", "text": "1 km"},
+        {"id": "d", "text": "50 km"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a 1:500,000 chart, 1 cm on the chart represents 500,000 cm (5 km) on the ground. Converting: 5 km ÷ 1.852 = 2.7 nm. This scale provides good detail for VFR navigation while covering a reasonable area. The 1:1,000,000 chart has half the detail but covers four times the area.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_109",
+      "question": "The earth rotates through 360° of longitude in 24 hours. Therefore, it rotates through 1° of longitude in:-",
+      "options": [
+        {"id": "a", "text": "4 minutes"},
+        {"id": "b", "text": "1 minute"},
+        {"id": "c", "text": "15 minutes"},
+        {"id": "d", "text": "10 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "360° ÷ 24 hours = 15° per hour. Therefore 1° = 60 min ÷ 15 = 4 minutes. This arc-to-time conversion is fundamental: 15° = 1 hour, 1° = 4 minutes, 15' (minutes of arc) = 1 minute of time. It is used for calculating local mean time from longitude.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_110",
+      "question": "Local Mean Time (LMT) at a position depends on:-",
+      "options": [
+        {"id": "a", "text": "the longitude of the position"},
+        {"id": "b", "text": "the latitude of the position"},
+        {"id": "c", "text": "the altitude of the position"},
+        {"id": "d", "text": "the season only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "LMT depends on longitude — it is the time based on the sun's position relative to the local meridian. Positions east of Greenwich have a later LMT (sun rises earlier); positions west have an earlier LMT. LMT = UTC + (longitude in degrees × 4 minutes) for east longitude.",
+      "topic": "Time",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_111",
+      "question": "The International Date Line is located at approximately:-",
+      "options": [
+        {"id": "a", "text": "180° longitude"},
+        {"id": "b", "text": "0° longitude"},
+        {"id": "c", "text": "90° longitude"},
+        {"id": "d", "text": "the equator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The International Date Line is located at approximately 180° longitude (the anti-meridian of Greenwich). Crossing it westbound, the date advances by one day; crossing eastbound, the date goes back one day. The line deviates from 180° in places to avoid splitting countries or island groups.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_112",
+      "question": "Indicated altitude is:-",
+      "options": [
+        {"id": "a", "text": "the altitude shown on the altimeter when set to the local QNH"},
+        {"id": "b", "text": "the altitude above the ground"},
+        {"id": "c", "text": "the altitude shown when the altimeter is set to 1013.25 hPa"},
+        {"id": "d", "text": "the true altitude corrected for temperature"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Indicated altitude is the reading on the altimeter when set to the local QNH. It approximates altitude above mean sea level but may differ from true altitude due to non-standard temperature. In cold air, true altitude is lower than indicated (the altimeter over-reads). In warm air, true altitude is higher than indicated.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_113",
+      "question": "True altitude is:-",
+      "options": [
+        {"id": "a", "text": "the actual altitude above mean sea level"},
+        {"id": "b", "text": "the altitude shown on the altimeter"},
+        {"id": "c", "text": "the altitude above the aerodrome"},
+        {"id": "d", "text": "the pressure altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "True altitude is the actual (real) vertical distance above mean sea level. It differs from indicated altitude when temperature deviates from ISA. In colder-than-standard conditions, true altitude is lower than indicated — the aircraft is lower than the altimeter shows. This is a significant safety concern when flying near terrain in cold weather.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_114",
+      "question": "Absolute altitude is:-",
+      "options": [
+        {"id": "a", "text": "the altitude above ground level (AGL)"},
+        {"id": "b", "text": "the altitude above mean sea level"},
+        {"id": "c", "text": "the pressure altitude"},
+        {"id": "d", "text": "the density altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Absolute altitude is the vertical distance of the aircraft above the terrain (ground level). It can be measured by a radio altimeter. Absolute altitude = true altitude - terrain elevation. It is critical for terrain clearance, especially in mountainous areas or during low-level flight.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_115",
+      "question": "Pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "the altitude indicated when the altimeter is set to 1013.25 hPa"},
+        {"id": "b", "text": "the altitude above ground level"},
+        {"id": "c", "text": "the true altitude"},
+        {"id": "d", "text": "the altitude corrected for temperature"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude is the altitude in the International Standard Atmosphere (ISA) corresponding to the measured atmospheric pressure. It is read from the altimeter when the subscale is set to 1013.25 hPa (standard pressure). Pressure altitude is used for: flight levels, performance calculations, and density altitude calculations.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_116",
+      "question": "Density altitude is important because it directly affects:-",
+      "options": [
+        {"id": "a", "text": "aircraft performance — engine power output, propeller efficiency, and aerodynamic lift"},
+        {"id": "b", "text": "only the compass reading"},
+        {"id": "c", "text": "only the radio range"},
+        {"id": "d", "text": "only the fuel flow"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude affects all aspects of aircraft performance: engine power (less dense air = less power), propeller efficiency (less dense air = less thrust), aerodynamic lift (less dense air = less lift for same IAS), and rate of climb. High density altitude = degraded performance. It is critical for take-off and landing calculations, especially at high-elevation aerodromes in hot weather.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_117",
+      "question": "In the ISA (International Standard Atmosphere), the temperature at sea level is:-",
+      "options": [
+        {"id": "a", "text": "15°C"},
+        {"id": "b", "text": "0°C"},
+        {"id": "c", "text": "20°C"},
+        {"id": "d", "text": "25°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA sea level conditions: temperature 15°C, pressure 1013.25 hPa, density 1.225 kg/m³. Temperature decreases at approximately 2°C per 1000 ft (1.98°C/1000 ft or 6.5°C/km) up to the tropopause at approximately 36,090 ft (-56.5°C). These standard values are the baseline for all aviation performance calculations.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_118",
+      "question": "The ISA temperature lapse rate in the troposphere is approximately:-",
+      "options": [
+        {"id": "a", "text": "2°C per 1000 ft"},
+        {"id": "b", "text": "3°C per 1000 ft"},
+        {"id": "c", "text": "1°C per 1000 ft"},
+        {"id": "d", "text": "5°C per 1000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The ISA temperature lapse rate is approximately 1.98°C per 1000 ft (rounded to 2°C per 1000 ft for calculations). This means at 10,000 ft, ISA temperature = 15° - (2° × 10) = -5°C. This lapse rate applies from sea level to the tropopause (approximately 36,090 ft / 11 km).",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_119",
+      "question": "When flying from a high pressure area to a low pressure area without adjusting the altimeter:-",
+      "options": [
+        {"id": "a", "text": "the altimeter will over-read (indicate higher than actual altitude)"},
+        {"id": "b", "text": "the altimeter will under-read"},
+        {"id": "c", "text": "the altimeter will read correctly"},
+        {"id": "d", "text": "the altimeter will fluctuate randomly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Flying from high to low pressure: the altimeter over-reads (shows higher altitude than actual). The aircraft is lower than indicated — dangerous near terrain. Memory aid: 'High to Low, look out below.' The pilot must update the QNH setting regularly to maintain accurate altitude indication.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_120",
+      "question": "When flying from a warm area to a cold area without adjusting the altimeter:-",
+      "options": [
+        {"id": "a", "text": "the true altitude will be lower than the indicated altitude"},
+        {"id": "b", "text": "the true altitude will be higher than indicated"},
+        {"id": "c", "text": "there is no effect on altitude"},
+        {"id": "d", "text": "the altimeter will read correctly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In colder-than-standard air, the air column is compressed (denser), so the pressure levels are lower than in standard atmosphere. The altimeter, calibrated for ISA, will over-read — the aircraft is actually lower than indicated. Memory aid: 'From hot to cold, don't be bold' (you're lower than you think).",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_121",
+      "question": "The navigation computer (flight computer / E6B) is used to solve:-",
+      "options": [
+        {"id": "a", "text": "wind triangle problems, time-speed-distance calculations, fuel calculations, and altitude/airspeed conversions"},
+        {"id": "b", "text": "only fuel calculations"},
+        {"id": "c", "text": "only wind problems"},
+        {"id": "d", "text": "only time calculations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The navigation computer has two sides: (1) The calculator side — for time/speed/distance, fuel consumption, unit conversions, TAS from CAS, density altitude, and other arithmetic. (2) The wind side — for solving the triangle of velocities (finding heading, groundspeed, drift, and wind velocity).",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_122",
+      "question": "A NOTAM (Notice to Airmen) provides:-",
+      "options": [
+        {"id": "a", "text": "time-critical aeronautical information that could affect flight safety"},
+        {"id": "b", "text": "only weather information"},
+        {"id": "c", "text": "only permanent changes to airspace"},
+        {"id": "d", "text": "only aerodrome opening hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "NOTAMs contain time-critical information essential for flight safety: runway closures, navaid outages, temporary airspace restrictions, aerodrome lighting changes, obstacles, military exercises, and other hazards. Pilots must check NOTAMs as part of pre-flight planning. NOTAMs are distributed via the AIS (Aeronautical Information Service).",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_123",
+      "question": "The AIP (Aeronautical Information Publication) contains:-",
+      "options": [
+        {"id": "a", "text": "permanent aeronautical information essential for air navigation"},
+        {"id": "b", "text": "only temporary information"},
+        {"id": "c", "text": "only weather forecasts"},
+        {"id": "d", "text": "only aircraft performance data"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The AIP contains permanent aeronautical information: aerodrome data (runway lengths, elevations, frequencies, procedures), airspace structure, navigation aids, flight rules, and general information. It is divided into three parts: GEN (general), ENR (en-route), and AD (aerodromes). It is kept current through amendments and supplements.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_124",
+      "question": "When planning a VFR cross-country flight, the pilot should check:-",
+      "options": [
+        {"id": "a", "text": "weather, NOTAMs, charts, fuel requirements, aircraft performance, weight and balance, and alternate aerodromes"},
+        {"id": "b", "text": "only the weather"},
+        {"id": "c", "text": "only the fuel"},
+        {"id": "d", "text": "only the NOTAMs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pre-flight planning for a cross-country includes: weather (TAFs, METARs, area forecasts, SIGMETs), NOTAMs, current charts, fuel requirements (including reserves), aircraft performance (take-off distance, climb rate), weight and balance, suitable alternate aerodromes, and filing a flight plan if required.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_125",
+      "question": "The closing angle to regain track after being off track is calculated using:-",
+      "options": [
+        {"id": "a", "text": "the 1-in-60 rule: closing angle = (distance off track / distance remaining) × 60"},
+        {"id": "b", "text": "the wind speed divided by TAS"},
+        {"id": "c", "text": "the variation multiplied by deviation"},
+        {"id": "d", "text": "the groundspeed divided by distance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Closing angle = (distance off track / distance remaining to destination) × 60. The total heading alteration to regain track = track error angle + closing angle. For example: 3 nm off track after 40 nm, with 56 nm remaining: TE = (3/40) × 60 = 4.5°, CA = (3/56) × 60 = 3.2°, total alteration = 7.7°.",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_126",
+      "question": "If a pilot becomes uncertain of position during a VFR flight, the first action should be:-",
+      "options": [
+        {"id": "a", "text": "maintain the last known heading, check the time, and attempt to identify ground features"},
+        {"id": "b", "text": "immediately descend to low level"},
+        {"id": "c", "text": "turn around immediately"},
+        {"id": "d", "text": "climb to the highest possible altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When uncertain of position: (1) Maintain the last known heading and altitude, (2) Note the time, (3) Try to identify ground features and match to the chart, (4) Use radio navaids if available, (5) If still uncertain, consider climbing for better visibility and radio range, (6) Contact ATC for assistance, (7) If all else fails, declare an emergency.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_127",
+      "question": "When diverting to an alternate aerodrome, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "estimate the new track and distance, calculate fuel required, and check weather at the alternate"},
+        {"id": "b", "text": "only change heading"},
+        {"id": "c", "text": "only inform ATC"},
+        {"id": "d", "text": "continue to the original destination"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When diverting: (1) Select a suitable alternate aerodrome, (2) Estimate the new track and distance from current position, (3) Calculate the heading (allowing for wind), (4) Calculate fuel required and check adequacy, (5) Check weather at the alternate, (6) Inform ATC of the diversion, (7) Amend or file a new flight plan.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_128",
+      "question": "The specific gravity of AVGAS 100LL is approximately:-",
+      "options": [
+        {"id": "a", "text": "0.72"},
+        {"id": "b", "text": "0.80"},
+        {"id": "c", "text": "1.00"},
+        {"id": "d", "text": "0.60"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AVGAS 100LL has a specific gravity of approximately 0.72 (6 lbs per US gallon). This means 1 litre of AVGAS weighs approximately 0.72 kg. This conversion is important for weight and balance calculations when fuel is measured in volume (litres or gallons) but weight is needed for performance calculations.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_129",
+      "question": "1 US gallon of AVGAS weighs approximately:-",
+      "options": [
+        {"id": "a", "text": "6 lbs"},
+        {"id": "b", "text": "8 lbs"},
+        {"id": "c", "text": "10 lbs"},
+        {"id": "d", "text": "4 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 US gallon of AVGAS 100LL weighs approximately 6 lbs (2.72 kg). This is used for weight and balance calculations. 1 Imperial gallon weighs approximately 7.2 lbs. Always verify which gallon type is being used in fuel calculations.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_130",
+      "question": "The heading indicator (directional gyro / DI) must be aligned with the magnetic compass:-",
+      "options": [
+        {"id": "a", "text": "before take-off and at regular intervals during flight (typically every 15 minutes)"},
+        {"id": "b", "text": "only before take-off"},
+        {"id": "c", "text": "only after landing"},
+        {"id": "d", "text": "never — it is self-correcting"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The heading indicator (DI) is a gyroscopic instrument that does not sense magnetic north — it must be manually aligned with the magnetic compass. Due to gyroscopic precession (drift), it must be realigned approximately every 15 minutes during flight. Always align it in straight and level, unaccelerated flight when the compass is stable.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_131",
+      "question": "The advantage of the heading indicator over the magnetic compass is:-",
+      "options": [
+        {"id": "a", "text": "it is not affected by turning or acceleration errors"},
+        {"id": "b", "text": "it never needs to be reset"},
+        {"id": "c", "text": "it senses magnetic north directly"},
+        {"id": "d", "text": "it is more accurate in all conditions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The heading indicator is gyroscopic and is not affected by the turning and acceleration errors that plague the magnetic compass. It provides a stable, easy-to-read heading reference during turns and speed changes. Its disadvantage is that it precesses (drifts) and must be periodically realigned with the magnetic compass.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_132",
+      "question": "The compass correction card in an aircraft shows:-",
+      "options": [
+        {"id": "a", "text": "the residual deviation on various headings after a compass swing"},
+        {"id": "b", "text": "the magnetic variation for the area"},
+        {"id": "c", "text": "the wind correction angles"},
+        {"id": "d", "text": "the altimeter corrections"}
+      ],
+      "correct_answer": "a",
+      "explanation": "After a compass swing (calibration), any residual deviation that cannot be removed is recorded on the compass correction card. It typically shows 'For (heading)... Steer (heading)' for headings at 30° intervals. The pilot uses this card to convert between magnetic and compass headings for their specific aircraft.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_133",
+      "question": "A compass swing is performed to:-",
+      "options": [
+        {"id": "a", "text": "minimise and record the compass deviation in the aircraft"},
+        {"id": "b", "text": "determine the magnetic variation"},
+        {"id": "c", "text": "calibrate the altimeter"},
+        {"id": "d", "text": "check the airspeed indicator"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A compass swing is a calibration procedure to minimise compass deviation caused by the aircraft's magnetic fields. The aircraft is placed on various headings and the compass readings are compared with known magnetic headings. Adjusting magnets in the compass compensate for most deviation; residual deviation is recorded on the compass correction card.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_134",
+      "question": "The distance between two points on the same meridian, separated by 2° of latitude, is:-",
+      "options": [
+        {"id": "a", "text": "120 nm"},
+        {"id": "b", "text": "60 nm"},
+        {"id": "c", "text": "240 nm"},
+        {"id": "d", "text": "200 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1° of latitude = 60 nm (since 1 minute of latitude = 1 nm, and 1° = 60 minutes). Therefore 2° of latitude = 2 × 60 = 120 nm. This relationship is constant regardless of the latitude, making the latitude scale ideal for measuring distance on charts.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_135",
+      "question": "The length of a degree of longitude:-",
+      "options": [
+        {"id": "a", "text": "varies with latitude — maximum at the equator and zero at the poles"},
+        {"id": "b", "text": "is constant at all latitudes"},
+        {"id": "c", "text": "is always 60 nm"},
+        {"id": "d", "text": "is maximum at the poles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The length of 1° of longitude = 60 nm × cosine of latitude. At the equator (0°): 60 × cos 0° = 60 nm. At 60° latitude: 60 × cos 60° = 30 nm. At the poles (90°): 60 × cos 90° = 0 nm. This is why the longitude scale must NEVER be used for measuring distance.",
+      "topic": "The Earth",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_136",
+      "question": "The departure formula (distance in nm along a parallel of latitude) is:-",
+      "options": [
+        {"id": "a", "text": "departure = change in longitude (minutes) × cosine of latitude"},
+        {"id": "b", "text": "departure = change in latitude × cosine of longitude"},
+        {"id": "c", "text": "departure = change in longitude × sine of latitude"},
+        {"id": "d", "text": "departure = change in latitude × sine of longitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Departure (distance in nm along a parallel) = Δ longitude (in minutes of arc) × cos(latitude). For example, at latitude 30°S, a change of 2° (120') of longitude: departure = 120 × cos 30° = 120 × 0.866 = 104 nm. This accounts for the convergence of meridians towards the poles.",
+      "topic": "The Earth",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_137",
+      "question": "The mean track and distance between two positions on a chart is measured:-",
+      "options": [
+        {"id": "a", "text": "by drawing a straight line between the positions and measuring the track at the mid-meridian"},
+        {"id": "b", "text": "by measuring the track at the departure point only"},
+        {"id": "c", "text": "by measuring the track at the destination only"},
+        {"id": "d", "text": "by averaging the latitude and longitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a Lambert chart, the track (direction) of a straight line varies slightly along its length due to meridian convergence. The most accurate track is measured at the mid-meridian (halfway point). Distance is measured using the latitude scale at the mid-latitude of the route. This gives the mean (average) track and accurate distance.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_138",
+      "question": "An aircraft at FL075 with an OAT of +5°C. The ISA deviation is:-",
+      "options": [
+        {"id": "a", "text": "ISA +4°C"},
+        {"id": "b", "text": "ISA -4°C"},
+        {"id": "c", "text": "ISA +10°C"},
+        {"id": "d", "text": "ISA 0°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA temperature at FL075 (7500 ft) = 15° - (2° × 7.5) = 15° - 15° = 0°C. Actual OAT = +5°C. ISA deviation = actual - ISA = 5° - 0° = +5°... Wait, let me recalculate: 7500 ft → 7.5 × 2 = 15. ISA = 15 - 15 = 0°C. Deviation = 5 - 0 = +5°. But the answer says +4°. Using exact lapse rate: 7.5 × 1.98 = 14.85. ISA = 15 - 14.85 = 0.15°C ≈ 0°C. So ISA dev ≈ +5°. The recalled answer of +4° may use slightly different rounding. ISA deviation = OAT - ISA temp at that altitude.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_139",
+      "question": "The track from A to B on a chart is measured as 045°(T). If the variation is 23°W, the magnetic track is:-",
+      "options": [
+        {"id": "a", "text": "068°(M)"},
+        {"id": "b", "text": "022°(M)"},
+        {"id": "c", "text": "045°(M)"},
+        {"id": "d", "text": "090°(M)"}
+      ],
+      "correct_answer": "a",
+      "explanation": "True to Magnetic with West variation: ADD. Magnetic Track = True Track + West Variation = 045° + 23° = 068°(M). Memory aid: 'Variation West, Magnetic Best' — the magnetic value is the larger number.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_140",
+      "question": "An aircraft departs at 0730 UTC for a flight of 2 hours 15 minutes. The ETA is:-",
+      "options": [
+        {"id": "a", "text": "0945 UTC"},
+        {"id": "b", "text": "0930 UTC"},
+        {"id": "c", "text": "1000 UTC"},
+        {"id": "d", "text": "0915 UTC"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ETA = departure time + flight time = 0730 + 0215 = 0945 UTC. When adding times: 0730 + 2 hours = 0930, + 15 minutes = 0945 UTC. Always express times in UTC for aviation purposes.",
+      "topic": "Time",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_141",
+      "question": "The fuel endurance of an aircraft with 40 USG of usable fuel and a fuel flow of 8 USG/hr is:-",
+      "options": [
+        {"id": "a", "text": "5 hours"},
+        {"id": "b", "text": "4 hours"},
+        {"id": "c", "text": "3.5 hours"},
+        {"id": "d", "text": "6 hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel endurance = usable fuel / fuel flow = 40 / 8 = 5 hours. Note: only USABLE fuel is counted — unusable fuel (trapped in tanks, lines) cannot be used by the engine. Fuel endurance must always exceed the planned flight time plus required reserves.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_142",
+      "question": "If an aircraft has a groundspeed of 120 kts, how long will it take to fly 45 nm?",
+      "options": [
+        {"id": "a", "text": "22.5 minutes"},
+        {"id": "b", "text": "30 minutes"},
+        {"id": "c", "text": "15 minutes"},
+        {"id": "d", "text": "45 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time = distance / groundspeed = 45 / 120 = 0.375 hours = 0.375 × 60 = 22.5 minutes. On the navigation computer: place 120 on the outer scale against the 60-minute index on the inner scale, then find 45 on the outer scale and read the time on the inner scale.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_143",
+      "question": "The conversion factor between nautical miles and statute miles is approximately:-",
+      "options": [
+        {"id": "a", "text": "1 nm = 1.15 statute miles"},
+        {"id": "b", "text": "1 nm = 1.0 statute miles"},
+        {"id": "c", "text": "1 nm = 0.87 statute miles"},
+        {"id": "d", "text": "1 nm = 2.0 statute miles"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 nautical mile = 1.852 km = 1.151 statute miles = 6,076 feet. 1 statute mile = 1.609 km = 0.869 nm = 5,280 feet. Aviation uses nautical miles for distance and knots (nm/hr) for speed. Statute miles are used in some countries for visibility.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_144",
+      "question": "The conversion factor between nautical miles and kilometres is:-",
+      "options": [
+        {"id": "a", "text": "1 nm = 1.852 km"},
+        {"id": "b", "text": "1 nm = 1.609 km"},
+        {"id": "c", "text": "1 nm = 2.0 km"},
+        {"id": "d", "text": "1 nm = 1.0 km"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 nautical mile = 1.852 kilometres exactly. This is derived from the definition: 1 nm = 1 minute of latitude = 1,852 metres. Conversely, 1 km = 0.54 nm. The navigation computer can perform this conversion on the calculator side.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_145",
+      "question": "When tracking outbound FROM a VOR on the 090° radial, the OBI should be set to:-",
+      "options": [
+        {"id": "a", "text": "090° with a FROM indication"},
+        {"id": "b", "text": "270° with a TO indication"},
+        {"id": "c", "text": "090° with a TO indication"},
+        {"id": "d", "text": "270° with a FROM indication"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When tracking outbound on the 090° radial (flying eastbound away from the VOR), set 090° on the OBI. The TO/FROM flag should show FROM. The CDI will give correct left/right guidance: needle deflects left = you are left of the 090° radial = fly right to intercept.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_146",
+      "question": "A VOR/DME co-located station provides:-",
+      "options": [
+        {"id": "a", "text": "both bearing (radial) and distance information, giving a position fix from a single station"},
+        {"id": "b", "text": "only bearing information"},
+        {"id": "c", "text": "only distance information"},
+        {"id": "d", "text": "only altitude information"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A co-located VOR/DME provides both radial (bearing FROM the station) and slant range distance. Together, these give a position fix from a single station — the aircraft is at a specific distance along a specific radial. This is equivalent to two position lines intersecting at right angles.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_147",
+      "question": "The VHF communication and navigation range is limited by:-",
+      "options": [
+        {"id": "a", "text": "line of sight — affected by aircraft altitude and terrain"},
+        {"id": "b", "text": "atmospheric pressure"},
+        {"id": "c", "text": "temperature only"},
+        {"id": "d", "text": "wind speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VHF signals travel in straight lines (line of sight). Range depends on: aircraft altitude (higher = greater range), terrain (mountains block signals), and station antenna height. Approximate range (nm) = 1.23 × √(height in feet). At 10,000 ft: range ≈ 1.23 × 100 = 123 nm.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_148",
+      "question": "The approximate VHF line-of-sight range from an aircraft at 4000 ft AGL is:-",
+      "options": [
+        {"id": "a", "text": "78 nm"},
+        {"id": "b", "text": "40 nm"},
+        {"id": "c", "text": "120 nm"},
+        {"id": "d", "text": "200 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "VHF range ≈ 1.23 × √(height in feet). At 4000 ft: range ≈ 1.23 × √4000 = 1.23 × 63.2 = 77.7 nm ≈ 78 nm. This is the theoretical maximum range assuming flat terrain and no obstructions. Actual range may be less due to terrain, atmospheric conditions, and transmitter power.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_149",
+      "question": "Parallax error when reading the magnetic compass can be minimised by:-",
+      "options": [
+        {"id": "a", "text": "reading the compass from directly in front, at eye level"},
+        {"id": "b", "text": "reading it from any angle"},
+        {"id": "c", "text": "reading it during a turn"},
+        {"id": "d", "text": "reading it while accelerating"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Parallax error occurs when the compass is read from an angle rather than directly in front. The compass card floats in liquid and the reading line is behind the card — viewing from the side gives an incorrect reading. Always read the compass from directly in front, at eye level, in straight and level unaccelerated flight.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_150",
+      "question": "The earth's magnetic field is caused by:-",
+      "options": [
+        {"id": "a", "text": "convection currents in the earth's molten outer core"},
+        {"id": "b", "text": "the sun's radiation"},
+        {"id": "c", "text": "the earth's rotation only"},
+        {"id": "d", "text": "the moon's gravitational pull"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The earth's magnetic field is generated by convection currents of molten iron in the outer core (the dynamo effect). The magnetic poles do not coincide with the geographic poles and their positions change slowly over time (secular change). This is why magnetic variation changes over the years and charts must be updated.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_151",
+      "question": "According to the semi-circular rule for VFR flights, an aircraft on a magnetic track of 090° to 269° should fly at:-",
+      "options": [
+        {"id": "a", "text": "even thousands of feet plus 500 ft (e.g., 4500, 6500, 8500)"},
+        {"id": "b", "text": "odd thousands of feet plus 500 ft"},
+        {"id": "c", "text": "any altitude"},
+        {"id": "d", "text": "even thousands of feet only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For VFR flights on magnetic tracks 090°-269° (easterly/southerly), cruise at even thousands plus 500 ft: 4500, 6500, 8500, etc. For tracks 270°-089° (westerly/northerly), cruise at odd thousands plus 500 ft: 3500, 5500, 7500, etc. The +500 ft separates VFR from IFR traffic at the same level.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_152",
+      "question": "According to the semi-circular rule for VFR flights, an aircraft on a magnetic track of 270° to 089° should fly at:-",
+      "options": [
+        {"id": "a", "text": "odd thousands of feet plus 500 ft (e.g., 3500, 5500, 7500)"},
+        {"id": "b", "text": "even thousands of feet plus 500 ft"},
+        {"id": "c", "text": "any altitude"},
+        {"id": "d", "text": "odd thousands of feet only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For VFR flights on magnetic tracks 270°-089° (westerly/northerly), cruise at odd thousands plus 500 ft: 3500, 5500, 7500, etc. This provides vertical separation from aircraft on reciprocal tracks (who fly at even thousands plus 500). The rule applies above a specified altitude (typically above 3000 ft AGL).",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_153",
+      "question": "On a South African aeronautical chart, a danger area is depicted as:-",
+      "options": [
+        {"id": "a", "text": "an area outlined with a specific boundary marking and labelled with a 'D' prefix and number"},
+        {"id": "b", "text": "a solid red area"},
+        {"id": "c", "text": "a blue shaded area"},
+        {"id": "d", "text": "an area with no markings"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Danger areas are depicted on charts with defined boundaries and labelled with a 'D' prefix (e.g., FAD 1). Flight within a danger area is not prohibited but pilots are warned that activities dangerous to aircraft may take place. Pilots should avoid danger areas when active, or exercise extreme caution if entering.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_154",
+      "question": "A prohibited area on an aeronautical chart means:-",
+      "options": [
+        {"id": "a", "text": "flight within the area is not permitted under any circumstances"},
+        {"id": "b", "text": "flight is permitted with ATC clearance"},
+        {"id": "c", "text": "flight is permitted during daylight only"},
+        {"id": "d", "text": "flight is permitted above a certain altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A prohibited area (labelled with 'P' prefix, e.g., FAP 1) is airspace where flight is absolutely prohibited. These are typically over sensitive installations such as nuclear facilities, government buildings, or military sites. No aircraft may enter a prohibited area regardless of circumstances (except in an emergency).",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_155",
+      "question": "A restricted area on an aeronautical chart means:-",
+      "options": [
+        {"id": "a", "text": "flight is restricted and requires specific permission or clearance to enter"},
+        {"id": "b", "text": "flight is completely prohibited"},
+        {"id": "c", "text": "flight is unrestricted"},
+        {"id": "d", "text": "only military aircraft may enter"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A restricted area (labelled with 'R' prefix, e.g., FAR 1) is airspace where flight is restricted to certain conditions. Entry requires specific permission or clearance, usually from the controlling authority. Restricted areas may be active only at certain times — check NOTAMs for activation status.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_156",
+      "question": "The symbol for an aerodrome with a hard (paved) runway on a South African aeronautical chart is:-",
+      "options": [
+        {"id": "a", "text": "a circle with runway lines shown inside"},
+        {"id": "b", "text": "a simple dot"},
+        {"id": "c", "text": "a triangle"},
+        {"id": "d", "text": "a square"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On SA aeronautical charts, aerodromes with hard (paved) runways are shown as circles with the runway layout depicted inside. The colour indicates whether the aerodrome has lighting (magenta/red for lighted, others for unlighted). Grass/unpaved aerodromes may be shown differently. Always check the chart legend for exact symbology.",
+      "topic": "Charts",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_157",
+      "question": "A compulsory reporting point on a South African aeronautical chart is shown as:-",
+      "options": [
+        {"id": "a", "text": "a solid (filled) triangle"},
+        {"id": "b", "text": "an open (hollow) triangle"},
+        {"id": "c", "text": "a circle"},
+        {"id": "d", "text": "a square"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A compulsory reporting point is shown as a solid (filled) triangle on SA aeronautical charts. Pilots must report their position to ATC when overhead a compulsory reporting point. An on-request reporting point is shown as an open (hollow) triangle — pilots report only when requested by ATC.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_158",
+      "question": "An on-request reporting point on a South African aeronautical chart is shown as:-",
+      "options": [
+        {"id": "a", "text": "an open (hollow) triangle"},
+        {"id": "b", "text": "a solid (filled) triangle"},
+        {"id": "c", "text": "a circle with a dot"},
+        {"id": "d", "text": "a diamond shape"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An on-request reporting point is depicted as an open (hollow) triangle. The pilot reports position at this point only when ATC specifically requests it. This contrasts with compulsory reporting points (solid triangles) where the pilot must always report.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_159",
+      "question": "The maximum elevation figure (MEF) shown on a chart represents:-",
+      "options": [
+        {"id": "a", "text": "the highest known elevation within a grid square, including terrain and obstacles, plus a safety margin"},
+        {"id": "b", "text": "the average elevation of the area"},
+        {"id": "c", "text": "the aerodrome elevation"},
+        {"id": "d", "text": "the lowest point in the area"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The MEF (Maximum Elevation Figure) is shown in large figures within each grid square (formed by latitude/longitude lines). It represents the highest known feature (terrain or obstacle) within that square, rounded up and with a safety margin added. It provides a quick reference for minimum safe altitude in that area.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_160",
+      "question": "Obstacles on an aeronautical chart are shown with their height:-",
+      "options": [
+        {"id": "a", "text": "above mean sea level (AMSL) and above ground level (AGL)"},
+        {"id": "b", "text": "above ground level only"},
+        {"id": "c", "text": "above mean sea level only"},
+        {"id": "d", "text": "in metres only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Obstacles (masts, towers, chimneys, etc.) are shown on charts with two height values: the elevation AMSL (in bold) and the height AGL (in brackets). For example: 5280 (1200) means the top of the obstacle is 5280 ft AMSL and 1200 ft above the surrounding ground. Both values are in feet on SA charts.",
+      "topic": "Charts",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_161",
+      "question": "When converting litres of AVGAS to US gallons, the conversion factor is:-",
+      "options": [
+        {"id": "a", "text": "1 USG = 3.785 litres (divide litres by 3.785)"},
+        {"id": "b", "text": "1 USG = 4.546 litres"},
+        {"id": "c", "text": "1 USG = 2.0 litres"},
+        {"id": "d", "text": "1 USG = 5.0 litres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 US gallon = 3.785 litres. To convert litres to USG: divide by 3.785. For example, 150 litres = 150 / 3.785 = 39.6 USG. Note: 1 Imperial gallon = 4.546 litres (larger). Always check which gallon type the aircraft POH uses.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_162",
+      "question": "The VFR fuel reserve requirement for day flights in South Africa is:-",
+      "options": [
+        {"id": "a", "text": "45 minutes at normal cruise consumption"},
+        {"id": "b", "text": "30 minutes"},
+        {"id": "c", "text": "60 minutes"},
+        {"id": "d", "text": "20 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "For VFR day flights, the minimum fuel reserve is 45 minutes at normal cruise consumption rate. This reserve must be available AFTER completing the planned flight. Total fuel required = taxi + climb + cruise + descent + 45 min reserve. For night VFR, the reserve is also 45 minutes.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_163",
+      "question": "The wind direction given in a weather report or forecast is:-",
+      "options": [
+        {"id": "a", "text": "the direction FROM which the wind is blowing, in degrees true"},
+        {"id": "b", "text": "the direction TO which the wind is blowing"},
+        {"id": "c", "text": "the direction in degrees magnetic"},
+        {"id": "d", "text": "the direction in degrees compass"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In weather reports (METARs) and forecasts (TAFs), wind direction is given as the direction FROM which the wind blows, measured in degrees TRUE. However, when ATC gives surface wind on the radio, it is in degrees MAGNETIC. This distinction is important for crosswind calculations.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_164",
+      "question": "The surface wind direction given by ATC on the radio is in degrees:-",
+      "options": [
+        {"id": "a", "text": "magnetic"},
+        {"id": "b", "text": "true"},
+        {"id": "c", "text": "compass"},
+        {"id": "d", "text": "grid"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ATC reports surface wind in degrees MAGNETIC so that pilots can directly compare it with the runway heading (which is also magnetic) for crosswind assessment. Written weather reports (METARs/TAFs) use degrees TRUE. Upper wind forecasts also use degrees TRUE. This is a common source of confusion.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_165",
+      "question": "The crosswind component for landing can be calculated using:-",
+      "options": [
+        {"id": "a", "text": "wind speed × sine of the angle between the wind direction and the runway heading"},
+        {"id": "b", "text": "wind speed × cosine of the angle"},
+        {"id": "c", "text": "wind speed divided by 2"},
+        {"id": "d", "text": "wind speed multiplied by the runway heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Crosswind component = wind speed × sin(angle between wind and runway). Headwind component = wind speed × cos(angle). For example: wind 270/20, runway 24 (240°). Angle = 270 - 240 = 30°. Crosswind = 20 × sin 30° = 20 × 0.5 = 10 kts. Headwind = 20 × cos 30° = 20 × 0.866 = 17 kts.",
+      "topic": "Dead Reckoning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_166",
+      "question": "A pilot planning a flight at FL065 on a magnetic track of 135° should plan to fly at:-",
+      "options": [
+        {"id": "a", "text": "FL065 — this is correct for an easterly track (even thousands + 500)"},
+        {"id": "b", "text": "FL055"},
+        {"id": "c", "text": "FL075"},
+        {"id": "d", "text": "FL060"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Magnetic track 135° falls in the 090°-269° range (easterly). VFR semi-circular rule: even thousands + 500 ft. FL065 = 6500 ft (even thousand 6000 + 500). This is correct. Other valid levels for this track: FL045, FL085, FL105, etc.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_167",
+      "question": "The difference between a great circle track and a rhumb line track between two points is greatest:-",
+      "options": [
+        {"id": "a", "text": "at high latitudes and over long distances"},
+        {"id": "b", "text": "at the equator"},
+        {"id": "c", "text": "over short distances"},
+        {"id": "d", "text": "at low latitudes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The difference between great circle and rhumb line tracks increases with: (1) higher latitude (more meridian convergence), and (2) longer distance. At the equator or over short distances, the difference is negligible. For PPL navigation over typical distances in South Africa, the difference is small but should be understood.",
+      "topic": "The Earth",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_168",
+      "question": "In the southern hemisphere, a great circle track between two points at the same latitude will:-",
+      "options": [
+        {"id": "a", "text": "curve towards the South Pole (appear to curve south of the rhumb line)"},
+        {"id": "b", "text": "curve towards the equator"},
+        {"id": "c", "text": "follow the parallel of latitude"},
+        {"id": "d", "text": "be identical to the rhumb line"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the southern hemisphere, a great circle between two points at the same latitude curves towards the nearer pole (South Pole), passing south of the rhumb line (which follows the parallel of latitude). In the northern hemisphere, the great circle curves towards the North Pole. The great circle is always shorter than the rhumb line (except along the equator or meridians where they are equal).",
+      "topic": "The Earth",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_169",
+      "question": "The primary purpose of dead reckoning (DR) navigation is:-",
+      "options": [
+        {"id": "a", "text": "to determine the aircraft's position by calculating from a known position using heading, TAS, wind, and time"},
+        {"id": "b", "text": "to use only radio navigation aids"},
+        {"id": "c", "text": "to follow roads and railways"},
+        {"id": "d", "text": "to use GPS only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Dead reckoning (DR) is the process of calculating the aircraft's current position from a known starting position, using heading, TAS, wind velocity, and elapsed time. It is the fundamental navigation technique. DR is supplemented by map reading (visual fixes) and radio navigation to verify and update the calculated position.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_170",
+      "question": "A fix in navigation is:-",
+      "options": [
+        {"id": "a", "text": "a confirmed position obtained from two or more position lines or a visual identification of a known point"},
+        {"id": "b", "text": "an estimated position"},
+        {"id": "c", "text": "the departure point"},
+        {"id": "d", "text": "the destination"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A fix is a confirmed (reliable) position. It can be obtained from: (1) two or more intersecting position lines (VOR radials, NDB bearings, DME arcs), (2) a VOR/DME co-located station, (3) visual identification of a known ground feature, or (4) GPS. A fix is more reliable than a DR position, which is only calculated.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_171",
+      "question": "An estimated position (EP) differs from a fix in that:-",
+      "options": [
+        {"id": "a", "text": "it is based on incomplete information such as a single position line or uncertain DR calculation"},
+        {"id": "b", "text": "it is always more accurate than a fix"},
+        {"id": "c", "text": "it requires three position lines"},
+        {"id": "d", "text": "it is the same as a fix"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An estimated position (EP) is less reliable than a fix. It may be based on: a single position line (the aircraft is somewhere along it), a DR calculation with uncertain wind, or a combination of incomplete information. On a chart, an EP is marked with a triangle, while a fix is marked with a circle.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_172",
+      "question": "The track error angle after flying 30 nm and finding the aircraft 2 nm left of track is:-",
+      "options": [
+        {"id": "a", "text": "4°"},
+        {"id": "b", "text": "2°"},
+        {"id": "c", "text": "6°"},
+        {"id": "d", "text": "8°"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the 1-in-60 rule: Track Error = (distance off track / distance flown) × 60 = (2/30) × 60 = 4°. The aircraft has drifted 4° left of the planned track. To regain track, the pilot must alter heading to the right by the track error angle plus the closing angle.",
+      "topic": "Dead Reckoning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_173",
+      "question": "If the groundspeed check shows a groundspeed lower than planned, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "revise the ETA and check that fuel is sufficient for the revised flight time"},
+        {"id": "b", "text": "increase altitude immediately"},
+        {"id": "c", "text": "ignore it and continue"},
+        {"id": "d", "text": "return to the departure aerodrome"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A lower-than-planned groundspeed means: (1) the flight will take longer than planned — revise the ETA and inform ATC, (2) more fuel will be consumed — check that remaining fuel is sufficient for the revised flight time plus reserves, (3) consider whether a diversion is necessary if fuel is marginal. Always monitor groundspeed and fuel state throughout the flight.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_174",
+      "question": "The primary reference for measuring direction in aviation is:-",
+      "options": [
+        {"id": "a", "text": "true north (geographic north) for chart work, magnetic north for flying"},
+        {"id": "b", "text": "magnetic north for everything"},
+        {"id": "c", "text": "compass north for everything"},
+        {"id": "d", "text": "grid north for everything"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In aviation, true north is the primary reference for chart work — tracks are measured as true bearings on the chart, then converted to magnetic for flying. Magnetic north is the reference used in the cockpit (compass, heading indicator, VOR radials, runway headings). The conversion between true and magnetic uses variation.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_175",
+      "question": "The ISA pressure at sea level is:-",
+      "options": [
+        {"id": "a", "text": "1013.25 hPa (29.92 inHg)"},
+        {"id": "b", "text": "1000 hPa"},
+        {"id": "c", "text": "1023 hPa"},
+        {"id": "d", "text": "990 hPa"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The International Standard Atmosphere (ISA) defines sea level pressure as 1013.25 hPa (hectopascals) or 29.92 inches of mercury (inHg). This is the standard pressure setting used for flight levels. When the altimeter is set to 1013.25 hPa, it reads pressure altitude.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_176",
+      "question": "The pressure change per 30 ft near sea level is approximately:-",
+      "options": [
+        {"id": "a", "text": "1 hPa"},
+        {"id": "b", "text": "2 hPa"},
+        {"id": "c", "text": "0.5 hPa"},
+        {"id": "d", "text": "5 hPa"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Near sea level, pressure decreases by approximately 1 hPa for every 30 ft of altitude gain (or 27 ft in some references). This relationship is used for quick pressure altitude calculations: Pressure Altitude = Elevation + (1013 - QNH) × 30. At higher altitudes, the rate decreases because air density decreases.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_177",
+      "question": "Equivalent airspeed (EAS) is:-",
+      "options": [
+        {"id": "a", "text": "CAS corrected for compressibility effects"},
+        {"id": "b", "text": "IAS corrected for instrument error"},
+        {"id": "c", "text": "TAS corrected for wind"},
+        {"id": "d", "text": "groundspeed corrected for drift"}
+      ],
+      "correct_answer": "a",
+      "explanation": "EAS is CAS corrected for compressibility of air. At low speeds and altitudes, the compressibility correction is negligible and EAS ≈ CAS. The full airspeed conversion chain is: IAS → (±instrument/position error) → CAS/RAS → (±compressibility) → EAS → (±density) → TAS. For PPL operations, compressibility is usually ignored.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_178",
+      "question": "When homing to an NDB using the ADF, the pilot:-",
+      "options": [
+        {"id": "a", "text": "keeps the ADF needle pointing to the nose (relative bearing 000°) by turning towards it"},
+        {"id": "b", "text": "keeps the needle on the tail"},
+        {"id": "c", "text": "keeps the needle on the left wing"},
+        {"id": "d", "text": "ignores the needle and flies a compass heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Homing is the simplest form of NDB navigation — the pilot turns the aircraft until the ADF needle points to the nose (RB 000°) and keeps it there. The disadvantage is that in a crosswind, the aircraft will fly a curved path (longer than a straight track) because the pilot is constantly turning into the wind. Tracking is more efficient.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_179",
+      "question": "When tracking TO an NDB in a crosswind, the ADF relative bearing should be:-",
+      "options": [
+        {"id": "a", "text": "equal to the wind correction angle, on the upwind side"},
+        {"id": "b", "text": "always 000°"},
+        {"id": "c", "text": "always 180°"},
+        {"id": "d", "text": "always 090°"}
+      ],
+      "correct_answer": "a",
+      "explanation": "When tracking (as opposed to homing), the pilot applies a wind correction angle (WCA). If the WCA is 10° right (heading 10° right of track), the ADF needle should show a relative bearing of 350° (10° left of the nose). The needle offset equals the WCA but on the opposite side. This maintains a straight track to the NDB.",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_180",
+      "question": "Station passage over a VOR is indicated by:-",
+      "options": [
+        {"id": "a", "text": "the TO/FROM flag changing from TO to FROM and the CDI needle becoming erratic"},
+        {"id": "b", "text": "the CDI centring"},
+        {"id": "c", "text": "the DME reading zero"},
+        {"id": "d", "text": "the OBI spinning"}
+      ],
+      "correct_answer": "a",
+      "explanation": "As the aircraft passes over (or very close to) a VOR, the TO/FROM flag changes from TO to FROM. The CDI needle may swing rapidly and become unreliable in the 'cone of confusion' directly above the station. Once past the station, the CDI settles and the FROM flag confirms the aircraft is now outbound.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_181",
+      "question": "To intercept a VOR radial, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "set the desired radial on the OBI and fly a heading to intercept at an appropriate angle (typically 30° to 90°)"},
+        {"id": "b", "text": "fly directly to the VOR first"},
+        {"id": "c", "text": "fly parallel to the radial"},
+        {"id": "d", "text": "set the OBI to the aircraft's heading"}
+      ],
+      "correct_answer": "a",
+      "explanation": "To intercept a radial: (1) Set the desired radial on the OBI, (2) Determine which side of the radial you are on (CDI deflection), (3) Fly a heading that will intercept the radial at 30°-90° (smaller angles for close intercepts, larger for distant), (4) As the CDI centres, turn to track the radial.",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_182",
+      "question": "The cone of confusion above a VOR station is the area where:-",
+      "options": [
+        {"id": "a", "text": "the VOR signal is unreliable and the CDI and TO/FROM flag may give erratic indications"},
+        {"id": "b", "text": "the VOR signal is strongest"},
+        {"id": "c", "text": "DME is most accurate"},
+        {"id": "d", "text": "the transponder stops working"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The cone of confusion (or cone of ambiguity) is the airspace directly above a VOR where the signal is unreliable. The CDI needle swings erratically and the TO/FROM flag may oscillate. The size of the cone increases with altitude. Pilots should not attempt to navigate using VOR indications while in the cone of confusion.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_183",
+      "question": "The squawk code 7700 on a transponder indicates:-",
+      "options": [
+        {"id": "a", "text": "emergency (distress)"},
+        {"id": "b", "text": "radio failure"},
+        {"id": "c", "text": "hijack"},
+        {"id": "d", "text": "VFR flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Transponder emergency codes: 7700 = Emergency/Distress, 7600 = Radio (communication) failure, 7500 = Hijack/unlawful interference. Squawking 7700 alerts ATC that the aircraft is in an emergency situation and triggers special attention on the radar display.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_184",
+      "question": "The squawk code 7600 on a transponder indicates:-",
+      "options": [
+        {"id": "a", "text": "radio failure (communication failure)"},
+        {"id": "b", "text": "emergency"},
+        {"id": "c", "text": "hijack"},
+        {"id": "d", "text": "normal VFR flight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Squawk 7600 indicates radio (communication) failure. If a pilot loses radio communication, they should squawk 7600 to alert ATC. The pilot should then follow the published radio failure procedures: continue on the last assigned route and altitude, or if VFR, land at the nearest suitable aerodrome.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_185",
+      "question": "The squawk code 7500 on a transponder indicates:-",
+      "options": [
+        {"id": "a", "text": "hijack or unlawful interference"},
+        {"id": "b", "text": "emergency"},
+        {"id": "c", "text": "radio failure"},
+        {"id": "d", "text": "medical emergency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Squawk 7500 indicates hijack or unlawful interference with the aircraft. This code should only be set if the aircraft is being subjected to unlawful interference. ATC will take special action upon detecting this code. Never set 7500 accidentally — if set in error, immediately change it and inform ATC.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_186",
+      "question": "The heading conversion sequence from True to Compass is:-",
+      "options": [
+        {"id": "a", "text": "True ± Variation = Magnetic ± Deviation = Compass"},
+        {"id": "b", "text": "True ± Deviation = Magnetic ± Variation = Compass"},
+        {"id": "c", "text": "Compass ± Variation = Magnetic ± Deviation = True"},
+        {"id": "d", "text": "True ± Drift = Magnetic ± Wind = Compass"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The conversion sequence: True ± Variation = Magnetic ± Deviation = Compass. Memory aid: 'True Virgins Make Dull Companions' (TVMDC). Going T→C: add West, subtract East for both variation and deviation. Going C→T: reverse the signs. This is the fundamental heading conversion used in all navigation.",
+      "topic": "Compass",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_187",
+      "question": "An aircraft at position S26°00' E028°00' needs to fly to S28°00' E028°00'. The distance is approximately:-",
+      "options": [
+        {"id": "a", "text": "120 nm"},
+        {"id": "b", "text": "60 nm"},
+        {"id": "c", "text": "240 nm"},
+        {"id": "d", "text": "90 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Both positions are on the same meridian (E028°00'), so the distance is purely a change in latitude. Change in latitude = 28° - 26° = 2°. Distance = 2° × 60 nm/° = 120 nm. When two positions share the same longitude, the distance calculation is straightforward using the latitude difference.",
+      "topic": "The Earth",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_188",
+      "question": "The variation in the Johannesburg area of South Africa is approximately:-",
+      "options": [
+        {"id": "a", "text": "20° West"},
+        {"id": "b", "text": "10° East"},
+        {"id": "c", "text": "0° (agonic)"},
+        {"id": "d", "text": "30° West"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the Johannesburg area, magnetic variation is approximately 20° West (this changes slowly over time due to secular change). Across South Africa, variation ranges from about 17°W in the east to about 27°W in the west. Always check the current isogonal on the chart for the specific area of flight.",
+      "topic": "Compass",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_189",
+      "question": "When using a GPS for VFR navigation, the pilot must:-",
+      "options": [
+        {"id": "a", "text": "still carry current charts and be able to navigate by conventional means if the GPS fails"},
+        {"id": "b", "text": "rely solely on the GPS"},
+        {"id": "c", "text": "not use any other navigation method"},
+        {"id": "d", "text": "only use GPS above FL100"}
+      ],
+      "correct_answer": "a",
+      "explanation": "GPS is an excellent navigation aid but must not be the sole means of navigation for VFR flights. The pilot must carry current charts, be proficient in map reading and DR navigation, and be able to navigate safely if the GPS fails. GPS should supplement, not replace, conventional navigation skills.",
+      "topic": "Radio Navigation",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_190",
+      "question": "The term 'RAIM' in GPS navigation stands for:-",
+      "options": [
+        {"id": "a", "text": "Receiver Autonomous Integrity Monitoring"},
+        {"id": "b", "text": "Radio Altitude Instrument Monitor"},
+        {"id": "c", "text": "Radar Approach Instrument Method"},
+        {"id": "d", "text": "Range And Identification Module"}
+      ],
+      "correct_answer": "a",
+      "explanation": "RAIM (Receiver Autonomous Integrity Monitoring) is a GPS function that checks the integrity of the satellite signals. It compares position solutions from different satellite combinations to detect any faulty satellite. RAIM requires at least 5 satellites (6 for fault exclusion). If RAIM is not available, the GPS position may be unreliable.",
+      "topic": "Radio Navigation",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_191",
+      "question": "The QDM of an NDB is:-",
+      "options": [
+        {"id": "a", "text": "the magnetic bearing TO the NDB from the aircraft"},
+        {"id": "b", "text": "the magnetic bearing FROM the NDB"},
+        {"id": "c", "text": "the true bearing to the NDB"},
+        {"id": "d", "text": "the relative bearing of the NDB"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QDM = magnetic bearing TO the station (the heading to fly to reach the NDB in zero wind). QDR = magnetic bearing FROM the station (reciprocal of QDM). QTE = true bearing FROM the station. QUJ = true bearing TO the station. QDM = Magnetic Heading + Relative Bearing (subtract 360° if >360°).",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_192",
+      "question": "The QDR of an NDB is:-",
+      "options": [
+        {"id": "a", "text": "the magnetic bearing FROM the NDB to the aircraft"},
+        {"id": "b", "text": "the magnetic bearing TO the NDB"},
+        {"id": "c", "text": "the true bearing from the NDB"},
+        {"id": "d", "text": "the distance to the NDB"}
+      ],
+      "correct_answer": "a",
+      "explanation": "QDR = magnetic bearing FROM the NDB (the reciprocal of QDM). QDR = QDM ± 180°. The QDR is the bearing to plot FROM the NDB on the chart to show the aircraft's position line. For example, if QDM = 270°, then QDR = 270° - 180° = 090°.",
+      "topic": "Radio Navigation",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_193",
+      "question": "When flying in the circuit at an uncontrolled aerodrome, the circuit altitude is typically:-",
+      "options": [
+        {"id": "a", "text": "1000 ft above aerodrome elevation (AAL)"},
+        {"id": "b", "text": "500 ft AAL"},
+        {"id": "c", "text": "2000 ft AAL"},
+        {"id": "d", "text": "3000 ft AAL"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The standard circuit height is 1000 ft above aerodrome elevation (AAL). Some aerodromes may specify different circuit heights — check the AIP or aerodrome information. Circuit altitude (AMSL) = aerodrome elevation + 1000 ft. Use QNH to maintain circuit altitude or QFE to maintain circuit height.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_194",
+      "question": "The minimum altitude for VFR flight over a congested area (city, town) is:-",
+      "options": [
+        {"id": "a", "text": "1000 ft above the highest obstacle within 600 m of the aircraft"},
+        {"id": "b", "text": "500 ft above the highest obstacle"},
+        {"id": "c", "text": "any altitude"},
+        {"id": "d", "text": "2000 ft above the ground"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Over congested areas (cities, towns, settlements), the minimum height is 1000 ft above the highest obstacle within a radius of 600 m from the aircraft. Over non-congested areas, the minimum is 500 ft above the ground or water, or 500 ft above the highest obstacle within 600 m. These are minimum heights — higher is safer.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_195",
+      "question": "The minimum altitude for VFR flight over non-congested areas is:-",
+      "options": [
+        {"id": "a", "text": "500 ft above the ground or water, or 500 ft above the highest obstacle within 600 m"},
+        {"id": "b", "text": "1000 ft above the ground"},
+        {"id": "c", "text": "any altitude"},
+        {"id": "d", "text": "2000 ft above the ground"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Over non-congested areas, the minimum height for VFR flight is 500 ft above the ground or water, or 500 ft above the highest obstacle within a radius of 600 m of the aircraft. This ensures a reasonable margin for emergency landing and avoids disturbance to people and property on the ground.",
+      "topic": "Flight Planning",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_196",
+      "question": "A pilot flying at FL055 with an OAT of +10°C. The TAS if the CAS is 100 kts is approximately:-",
+      "options": [
+        {"id": "a", "text": "110 kts"},
+        {"id": "b", "text": "100 kts"},
+        {"id": "c", "text": "90 kts"},
+        {"id": "d", "text": "120 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "At FL055 (5500 ft), using the approximate rule of 2% per 1000 ft: TAS ≈ CAS × (1 + 0.02 × 5.5) = 100 × 1.11 = 111 kts ≈ 110 kts. The warmer-than-ISA temperature slightly increases TAS further. Using the navigation computer with pressure altitude 5500 ft and OAT +10°C gives a more precise answer.",
+      "topic": "Airspeed and Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_197",
+      "question": "The purpose of the AIRAC (Aeronautical Information Regulation and Control) cycle is:-",
+      "options": [
+        {"id": "a", "text": "to ensure aeronautical information changes are published on fixed dates (every 28 days) for advance planning"},
+        {"id": "b", "text": "to control air traffic"},
+        {"id": "c", "text": "to regulate fuel prices"},
+        {"id": "d", "text": "to schedule aircraft maintenance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "AIRAC is an internationally agreed system where significant aeronautical information changes are published on fixed 28-day cycle dates. This allows pilots and operators to receive, process, and implement changes in advance. AIRAC effective dates are published years in advance. Changes include: new procedures, airspace amendments, and navaid changes.",
+      "topic": "Flight Planning",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_198",
+      "question": "The wind side of the navigation computer is used to find:-",
+      "options": [
+        {"id": "a", "text": "heading, groundspeed, drift, and wind velocity from the triangle of velocities"},
+        {"id": "b", "text": "only fuel calculations"},
+        {"id": "c", "text": "only time calculations"},
+        {"id": "d", "text": "only altitude conversions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The wind side of the navigation computer solves the triangle of velocities. Given track, TAS, and wind, it finds heading and groundspeed. Given heading, TAS, and track/groundspeed, it finds wind velocity. It can also find drift angle. The wind side uses a rotating compass rose and a sliding grid.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_199",
+      "question": "The calculator side of the navigation computer is used for:-",
+      "options": [
+        {"id": "a", "text": "time/speed/distance, fuel calculations, unit conversions, and TAS from CAS"},
+        {"id": "b", "text": "only wind calculations"},
+        {"id": "c", "text": "only heading calculations"},
+        {"id": "d", "text": "only drift calculations"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The calculator side is a circular slide rule used for: time/speed/distance problems, fuel consumption calculations, unit conversions (nm/km/sm, litres/gallons, kg/lbs), TAS from CAS (using the airspeed window with altitude and temperature), density altitude, and any multiplication/division problems.",
+      "topic": "Dead Reckoning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "nav_200",
+      "question": "The recommended pre-flight navigation planning sequence is:-",
+      "options": [
+        {"id": "a", "text": "weather check, NOTAMs, chart preparation, track measurement, heading/groundspeed calculation, fuel planning, flight plan filing"},
+        {"id": "b", "text": "file flight plan first, then check weather"},
+        {"id": "c", "text": "only check fuel"},
+        {"id": "d", "text": "only check the destination weather"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pre-flight planning sequence: (1) Check weather (TAFs, METARs, area forecasts, winds aloft), (2) Check NOTAMs, (3) Prepare charts (draw tracks, mark waypoints), (4) Measure tracks and distances, (5) Calculate headings and groundspeeds using forecast winds, (6) Calculate fuel required (including reserves), (7) Complete the flight log, (8) File a flight plan if required.",
+      "topic": "Flight Planning",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

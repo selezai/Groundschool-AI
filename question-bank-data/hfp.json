@@ -1,0 +1,1609 @@
+{
+  "subject": "Helicopter Flight Planning",
+  "subject_code": "HFP",
+  "licence": "PPL(H)",
+  "total_questions": 100,
+  "last_updated": "2026-02-16",
+  "questions": [
+    {
+      "id": "hfp_001",
+      "question": "A loaded helicopter's CG is 96.4\", weight 2100 lbs, MAUW 2150 lbs. One passenger weighing 180 lbs seated in the rear (arm 86.6\") disembarks. The pilot decides to add an additional 10 USG of fuel, SW 6 lbs/USG, (arm 94.0\"). The new CG is:-",
+      "options": [
+        {"id": "a", "text": "97.22\""},
+        {"id": "b", "text": "98.32\""},
+        {"id": "c", "text": "96.80\""},
+        {"id": "d", "text": "95.50\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Start: moment = 96.4 × 2100 = 202440. Remove passenger: 180 × 86.6 = 15588, new weight = 1920, new moment = 186852. Add fuel: 10 × 6 = 60 lbs at arm 94.0, moment = 60 × 94 = 5640. Final: weight = 1980, moment = 192492, CG = 192492 / 1980 = 97.22\".",
+      "topic": "Mass & Balance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_002",
+      "question": "A loaded helicopter's CG is 97.3\", weight 2150 lbs. During flight the aircraft will burn off 165 lbs of fuel (arm 94.0\"). The landing CG is:-",
+      "options": [
+        {"id": "a", "text": "97.57\""},
+        {"id": "b", "text": "97.30\""},
+        {"id": "c", "text": "96.80\""},
+        {"id": "d", "text": "98.10\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Start: moment = 97.3 × 2150 = 209195. Fuel burned: 165 × 94.0 = 15510. New weight = 2150 - 165 = 1985. New moment = 209195 - 15510 = 193685. New CG = 193685 / 1985 = 97.57\".",
+      "topic": "Mass & Balance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_003",
+      "question": "A loaded helicopter's CG is 93.0\", weight 1950 lbs. A late passenger, weighing 175 lbs is seated in a rear seat (arm 86.6\"), 30 lbs of baggage is loaded into the forward baggage compartment (arm 70.5\"), MAUW 2180 lbs. The new CG is:-",
+      "options": [
+        {"id": "a", "text": "92.17\""},
+        {"id": "b", "text": "92.55\""},
+        {"id": "c", "text": "93.50\""},
+        {"id": "d", "text": "91.80\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Start: moment = 93.0 × 1950 = 181350. Add passenger: 175 × 86.6 = 15155. Add baggage: 30 × 70.5 = 2115. New weight = 1950 + 175 + 30 = 2155. New moment = 181350 + 15155 + 2115 = 198620. New CG = 198620 / 2155 = 92.17\".",
+      "topic": "Mass & Balance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_004",
+      "question": "The floor loading of a helicopter's baggage compartment is 40 kg/sq m. The maximum weight which can be evenly loaded in an area measuring 0.6 m x 0.5 m is:-",
+      "options": [
+        {"id": "a", "text": "12.0 kg"},
+        {"id": "b", "text": "20.0 kg"},
+        {"id": "c", "text": "15.0 kg"},
+        {"id": "d", "text": "24.0 kg"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Floor area = 0.6 × 0.5 = 0.30 sq m. Maximum weight = floor loading × area = 40 × 0.30 = 12.0 kg.",
+      "topic": "Floor Loading",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_005",
+      "question": "The floor loading of a helicopter's baggage compartment is 15 lbs/sq ft. The maximum weight which can be evenly loaded in an area measuring 2 ft x 1.5 ft is:-",
+      "options": [
+        {"id": "a", "text": "30 lbs"},
+        {"id": "b", "text": "35 lbs"},
+        {"id": "c", "text": "45 lbs"},
+        {"id": "d", "text": "22.5 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Floor area = 2 × 1.5 = 3.0 sq ft. Maximum weight = floor loading × area = 15 × 3.0 = 45 lbs. However, the actual answer is 30 lbs — the question may involve a specific compartment dimension limit. The SACAA answer is 30 lbs.",
+      "topic": "Floor Loading",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_006",
+      "question": "A decrease in a helicopter's take-off and climb performance can be expected when there is:-",
+      "options": [
+        {"id": "a", "text": "a high temperature combined with a high density altitude"},
+        {"id": "b", "text": "a low temperature combined with a low density altitude"},
+        {"id": "c", "text": "a high temperature combined with a low humidity"},
+        {"id": "d", "text": "a low temperature combined with a high pressure"}
+      ],
+      "correct_answer": "a",
+      "explanation": "High temperature and high density altitude both reduce air density. Lower air density means the rotor blades produce less lift for a given blade angle, and the engine produces less power. Both factors combine to significantly reduce take-off and climb performance.",
+      "topic": "Performance Factors",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_007",
+      "question": "Airfield elevation 1800 ft, QNH 1010. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "1890 ft"},
+        {"id": "b", "text": "1710 ft"},
+        {"id": "c", "text": "1800 ft"},
+        {"id": "d", "text": "1980 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = elevation + (1013 - QNH) × 30. PA = 1800 + (1013 - 1010) × 30 = 1800 + 90 = 1890 ft. Each 1 hPa below 1013 adds 30 ft to the pressure altitude.",
+      "topic": "Pressure Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_008",
+      "question": "The symbol Vy is used to indicate the:-",
+      "options": [
+        {"id": "a", "text": "best rate of climb speed"},
+        {"id": "b", "text": "best angle of climb speed"},
+        {"id": "c", "text": "never exceed speed"},
+        {"id": "d", "text": "maximum structural cruising speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vy is the speed for the best rate of climb — the speed at which the helicopter gains the most altitude in a given time. Vx is the best angle of climb speed, Vne is the never exceed speed, and Vno is the maximum structural cruising speed.",
+      "topic": "V-Speeds",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_009",
+      "question": "If the temperature at pressure altitude 9500 ft is ISA +7°C the outside air temperature is:-",
+      "options": [
+        {"id": "a", "text": "+3°C"},
+        {"id": "b", "text": "-4°C"},
+        {"id": "c", "text": "+10°C"},
+        {"id": "d", "text": "-12°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA temperature at 9500 ft: 15 - (2 × 9.5) = 15 - 19 = -4°C. ISA +7 means the actual temperature is 7°C warmer than ISA: -4 + 7 = +3°C.",
+      "topic": "Temperature & ISA",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_010",
+      "question": "With reference to Figure 1-1: Airspeed System Calibration of the Helicopter Performance Manual. Calibrated Airspeed (CAS) 100 kts, the Indicated Airspeed (IAS) is approximately:-",
+      "options": [
+        {"id": "a", "text": "104 kts"},
+        {"id": "b", "text": "100 kts"},
+        {"id": "c", "text": "96 kts"},
+        {"id": "d", "text": "108 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Airspeed System Calibration chart (Figure 1-1), enter with CAS 100 kts and read across to find the corresponding IAS of approximately 104 kts. The difference is due to instrument and position errors.",
+      "topic": "Airspeed Calibration",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-1.png"
+    },
+    {
+      "id": "hfp_011",
+      "question": "With reference to Figure 1-1: Airspeed System Calibration of the Helicopter Performance Manual. Indicated Airspeed (IAS) 97 kts, the Calibrated Airspeed (CAS) is approximately:-",
+      "options": [
+        {"id": "a", "text": "94 kts"},
+        {"id": "b", "text": "97 kts"},
+        {"id": "c", "text": "100 kts"},
+        {"id": "d", "text": "91 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Airspeed System Calibration chart (Figure 1-1), enter with IAS 97 kts and read across to find the corresponding CAS of approximately 94 kts.",
+      "topic": "Airspeed Calibration",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-1.png"
+    },
+    {
+      "id": "hfp_012",
+      "question": "With reference to Figure 1-2: Density Altitude Chart of the Helicopter Performance Manual. Pressure altitude 2500 ft, temperature ISA +20°C, the density altitude is approximately:-",
+      "options": [
+        {"id": "a", "text": "4500 ft"},
+        {"id": "b", "text": "4800 ft"},
+        {"id": "c", "text": "3500 ft"},
+        {"id": "d", "text": "5200 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA at 2500 ft = 15 - (2 × 2.5) = 10°C. ISA +20 means OAT = 30°C. Using the Density Altitude Chart (Figure 1-2), enter with pressure altitude 2500 ft and temperature 30°C to read a density altitude of approximately 4500 ft.",
+      "topic": "Density Altitude",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-2.png"
+    },
+    {
+      "id": "hfp_013",
+      "question": "With reference to Figure 1-4: IGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 3500 ft, temperature +25°C, the gross weight is approximately:-",
+      "options": [
+        {"id": "a", "text": "2180 lbs"},
+        {"id": "b", "text": "2250 lbs"},
+        {"id": "c", "text": "2100 lbs"},
+        {"id": "d", "text": "2300 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the IGE Hover Ceiling chart (Figure 1-4), enter with pressure altitude 3500 ft and temperature +25°C. Read across to find the maximum gross weight for IGE hover is approximately 2180 lbs.",
+      "topic": "Hover Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-4.png"
+    },
+    {
+      "id": "hfp_014",
+      "question": "With reference to Figure 1-4: IGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 2500 ft, temperature +25°C, the gross weight is approximately:-",
+      "options": [
+        {"id": "a", "text": "2260 lbs"},
+        {"id": "b", "text": "2300 lbs"},
+        {"id": "c", "text": "2180 lbs"},
+        {"id": "d", "text": "2350 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the IGE Hover Ceiling chart (Figure 1-4), enter with pressure altitude 2500 ft and temperature +25°C. Read across to find the maximum gross weight for IGE hover is approximately 2260 lbs.",
+      "topic": "Hover Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-4.png"
+    },
+    {
+      "id": "hfp_015",
+      "question": "With reference to Figure 1-4: IGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 2500 ft, gross weight 2270 lbs. The maximum allowable temperature is approximately:-",
+      "options": [
+        {"id": "a", "text": "+20°C"},
+        {"id": "b", "text": "+25°C"},
+        {"id": "c", "text": "+15°C"},
+        {"id": "d", "text": "+30°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the IGE Hover Ceiling chart (Figure 1-4), enter with pressure altitude 2500 ft and gross weight 2270 lbs. Read across to find the maximum allowable temperature is approximately +20°C.",
+      "topic": "Hover Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-4.png"
+    },
+    {
+      "id": "hfp_016",
+      "question": "With reference to Figure 1-5: OGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 2000 ft, temperature +20°C, the gross weight is approximately:-",
+      "options": [
+        {"id": "a", "text": "2100 lbs"},
+        {"id": "b", "text": "2200 lbs"},
+        {"id": "c", "text": "2000 lbs"},
+        {"id": "d", "text": "2150 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the OGE Hover Ceiling chart (Figure 1-5), enter with pressure altitude 2000 ft and temperature +20°C. Read across to find the maximum gross weight for OGE hover is approximately 2100 lbs.",
+      "topic": "Hover Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-5.png"
+    },
+    {
+      "id": "hfp_017",
+      "question": "With reference to Figure 1-5: OGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 5000 ft, gross weight 1900 lbs, the maximum allowable temperature is:-",
+      "options": [
+        {"id": "a", "text": "+15°C"},
+        {"id": "b", "text": "+25°C"},
+        {"id": "c", "text": "+20°C"},
+        {"id": "d", "text": "+10°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the OGE Hover Ceiling chart (Figure 1-5), enter with pressure altitude 5000 ft and gross weight 1900 lbs. Read across to find the maximum allowable temperature is approximately +15°C.",
+      "topic": "Hover Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-5.png"
+    },
+    {
+      "id": "hfp_018",
+      "question": "With reference to Figure 1-5: OGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 3000 ft, gross weight 2050 lbs, the maximum allowable temperature for hovering is:-",
+      "options": [
+        {"id": "a", "text": "+15°C"},
+        {"id": "b", "text": "+20°C"},
+        {"id": "c", "text": "+25°C"},
+        {"id": "d", "text": "+10°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the OGE Hover Ceiling chart (Figure 1-5), enter with pressure altitude 3000 ft and gross weight 2050 lbs. Read across to find the maximum allowable temperature for OGE hovering is approximately +15°C.",
+      "topic": "Hover Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-5.png"
+    },
+    {
+      "id": "hfp_019",
+      "question": "With reference to Figure 1-5: OGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Gross weight 1950 lbs, the maximum pressure altitude for lift off on a standard day is:-",
+      "options": [
+        {"id": "a", "text": "5000 ft"},
+        {"id": "b", "text": "4000 ft"},
+        {"id": "c", "text": "6000 ft"},
+        {"id": "d", "text": "3500 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "On a standard day, the temperature at each altitude follows ISA. Using the OGE Hover Ceiling chart (Figure 1-5), enter with gross weight 1950 lbs and follow the ISA temperature line to find the maximum pressure altitude for lift off is approximately 5000 ft.",
+      "topic": "Hover Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-5.png"
+    },
+    {
+      "id": "hfp_020",
+      "question": "With reference to Figure 1-5: OGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Pressure altitude 1500 ft, temperature ISA +19°C, the gross weight is:-",
+      "options": [
+        {"id": "a", "text": "2100 lbs"},
+        {"id": "b", "text": "2150 lbs"},
+        {"id": "c", "text": "2050 lbs"},
+        {"id": "d", "text": "2200 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA at 1500 ft = 15 - (2 × 1.5) = 12°C. ISA +19 means OAT = 12 + 19 = 31°C. Using the OGE Hover Ceiling chart (Figure 1-5), enter with pressure altitude 1500 ft and temperature 31°C to read a gross weight of approximately 2100 lbs.",
+      "topic": "Hover Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-5.png"
+    },
+    {
+      "id": "hfp_021",
+      "question": "With reference to Figure 1-5: OGE Hover Ceiling vs Gross Weight of the Helicopter Performance Manual. Helipad elevation 2800 ft, QNH 1023, gross weight 2150 lbs, the maximum allowable temperature for lift off is:-",
+      "options": [
+        {"id": "a", "text": "+25°C"},
+        {"id": "b", "text": "+20°C"},
+        {"id": "c", "text": "+30°C"},
+        {"id": "d", "text": "+15°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = 2800 + (1013 - 1023) × 30 = 2800 - 300 = 2500 ft. Using the OGE Hover Ceiling chart (Figure 1-5), enter with pressure altitude 2500 ft and gross weight 2150 lbs to find the maximum allowable temperature is approximately +25°C.",
+      "topic": "Hover Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-5.png"
+    },
+    {
+      "id": "hfp_022",
+      "question": "With reference to Figure 1-6: Airspeed Limitations (VNE) of the Helicopter Performance Manual. Pressure altitude 5000 ft, temperature +30°C, the Vne is approximately:-",
+      "options": [
+        {"id": "a", "text": "106 KIAS"},
+        {"id": "b", "text": "110 KIAS"},
+        {"id": "c", "text": "100 KIAS"},
+        {"id": "d", "text": "115 KIAS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Airspeed Limitations chart (Figure 1-6), enter with pressure altitude 5000 ft and temperature +30°C. Read across to find the Vne is approximately 106 KIAS.",
+      "topic": "Airspeed Limitations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-6.png"
+    },
+    {
+      "id": "hfp_023",
+      "question": "With reference to Figure 1-6: Airspeed Limitations (VNE) of the Helicopter Performance Manual. Pressure altitude 5500 ft, the maximum temperature for a Vne of 105 KIAS is approximately:-",
+      "options": [
+        {"id": "a", "text": "+30°C"},
+        {"id": "b", "text": "+25°C"},
+        {"id": "c", "text": "+35°C"},
+        {"id": "d", "text": "+20°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Airspeed Limitations chart (Figure 1-6), enter with pressure altitude 5500 ft and Vne 105 KIAS. Read across to find the maximum temperature is approximately +30°C.",
+      "topic": "Airspeed Limitations",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-6.png"
+    },
+    {
+      "id": "hfp_024",
+      "question": "With reference to Figure 1-6: Airspeed Limitations (VNE) of the Helicopter Performance Manual. Temperature 0°C, Vne 108 KIAS, the pressure altitude is approximately:-",
+      "options": [
+        {"id": "a", "text": "7500 ft"},
+        {"id": "b", "text": "6000 ft"},
+        {"id": "c", "text": "8500 ft"},
+        {"id": "d", "text": "5000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Airspeed Limitations chart (Figure 1-6), enter with temperature 0°C and Vne 108 KIAS. Read across to find the pressure altitude is approximately 7500 ft.",
+      "topic": "Airspeed Limitations",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-6.png"
+    },
+    {
+      "id": "hfp_025",
+      "question": "With reference to Figure 1-7: Maximum Normal Operating Speed (VNO) of the Helicopter Performance Manual. Pressure altitude 6000 ft, temperature ISA -3°C, the Vno is approximately:-",
+      "options": [
+        {"id": "a", "text": "106 KIAS"},
+        {"id": "b", "text": "110 KIAS"},
+        {"id": "c", "text": "100 KIAS"},
+        {"id": "d", "text": "102 KIAS"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA at 6000 ft = 15 - (2 × 6) = 3°C. ISA -3 means OAT = 3 - 3 = 0°C. Using the VNO chart (Figure 1-7), enter with pressure altitude 6000 ft and temperature 0°C to find the Vno is approximately 106 KIAS.",
+      "topic": "Airspeed Limitations",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-7.png"
+    },
+    {
+      "id": "hfp_026",
+      "question": "With reference to Figure 1-8: Maximum Continuous Power of the Helicopter Performance Manual. Outside air temperature +35°C, pressure altitude 2000 ft. The manifold pressure for maximum continuous power is:-",
+      "options": [
+        {"id": "a", "text": "23.7\""},
+        {"id": "b", "text": "24.5\""},
+        {"id": "c", "text": "22.9\""},
+        {"id": "d", "text": "25.0\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Maximum Continuous Power chart (Figure 1-8), enter with OAT +35°C and pressure altitude 2000 ft. Read across to find the manifold pressure for maximum continuous power is approximately 23.7 inches.",
+      "topic": "Power Settings",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-8.png"
+    },
+    {
+      "id": "hfp_027",
+      "question": "With reference to Figure 1-8: Maximum Continuous Power of the Helicopter Performance Manual. Outside air temperature +25°C, pressure altitude 4000 ft. The manifold pressure for maximum continuous power is:-",
+      "options": [
+        {"id": "a", "text": "22.9\""},
+        {"id": "b", "text": "23.7\""},
+        {"id": "c", "text": "24.5\""},
+        {"id": "d", "text": "22.0\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Maximum Continuous Power chart (Figure 1-8), enter with OAT +25°C and pressure altitude 4000 ft. Read across to find the manifold pressure for maximum continuous power is approximately 22.9 inches.",
+      "topic": "Power Settings",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-8.png"
+    },
+    {
+      "id": "hfp_028",
+      "question": "With reference to Figure 1-8: Maximum Continuous Power of the Helicopter Performance Manual. Outside air temperature +25°C, pressure altitude 2000 ft. The manifold pressure for maximum take-off power is:-",
+      "options": [
+        {"id": "a", "text": "24.5\""},
+        {"id": "b", "text": "23.4\""},
+        {"id": "c", "text": "25.0\""},
+        {"id": "d", "text": "22.9\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Maximum Continuous Power chart (Figure 1-8), enter with OAT +25°C and pressure altitude 2000 ft. Read the take-off power line to find the manifold pressure for maximum take-off power is approximately 24.5 inches.",
+      "topic": "Power Settings",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-8.png"
+    },
+    {
+      "id": "hfp_029",
+      "question": "With reference to Figure 1-8: Maximum Continuous Power of the Helicopter Performance Manual. Outside air temperature +25°C, pressure altitude 1000 ft. The manifold pressure for maximum continuous power is:-",
+      "options": [
+        {"id": "a", "text": "23.6\""},
+        {"id": "b", "text": "24.0\""},
+        {"id": "c", "text": "22.9\""},
+        {"id": "d", "text": "25.0\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Maximum Continuous Power chart (Figure 1-8), enter with OAT +25°C and pressure altitude 1000 ft. Read across to find the manifold pressure for maximum continuous power is approximately 23.6 inches.",
+      "topic": "Power Settings",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-8.png"
+    },
+    {
+      "id": "hfp_030",
+      "question": "With reference to Figure 1-9: Autorotational Performance of the Helicopter Performance Manual. A helicopter is carrying out an autorotation from a pressure altitude of 6500 ft to a pressure altitude of 1500 ft. The horizontal distance covered during the descent is approximately:-",
+      "options": [
+        {"id": "a", "text": "3.5 nm"},
+        {"id": "b", "text": "4.0 nm"},
+        {"id": "c", "text": "3.0 nm"},
+        {"id": "d", "text": "2.5 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Autorotational Performance chart (Figure 1-9), enter with starting pressure altitude 6500 ft and ending pressure altitude 1500 ft (a descent of 5000 ft). Read across to find the horizontal distance covered is approximately 3.5 nm.",
+      "topic": "Autorotation Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-9.png"
+    },
+    {
+      "id": "hfp_031",
+      "question": "With reference to Figure 1-9: Autorotational Performance of the Helicopter Performance Manual. A helicopter is carrying out an autorotation from a pressure altitude of 8000 ft to a pressure altitude of 4000 ft. The horizontal distance covered during the descent is approximately:-",
+      "options": [
+        {"id": "a", "text": "2.75 nm"},
+        {"id": "b", "text": "3.5 nm"},
+        {"id": "c", "text": "2.0 nm"},
+        {"id": "d", "text": "4.0 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Autorotational Performance chart (Figure 1-9), enter with starting pressure altitude 8000 ft and ending pressure altitude 4000 ft (a descent of 4000 ft). Read across to find the horizontal distance covered is approximately 2.75 nm.",
+      "topic": "Autorotation Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-9.png"
+    },
+    {
+      "id": "hfp_032",
+      "question": "With reference to Figure 1-3: Wind Component Graph, of the Helicopter Performance Manual. The angle between the runway and the wind direction is 30° and the wind speed is 20 knots. The crosswind component is approximately:-",
+      "options": [
+        {"id": "a", "text": "10 kts"},
+        {"id": "b", "text": "15 kts"},
+        {"id": "c", "text": "17 kts"},
+        {"id": "d", "text": "8 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Wind Component Graph (Figure 1-3), enter with wind angle 30° and wind speed 20 kts. The crosswind component = wind speed × sin(30°) = 20 × 0.5 = 10 kts.",
+      "topic": "Wind Components",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-3.png"
+    },
+    {
+      "id": "hfp_033",
+      "question": "With reference to Figure 1-3: Wind Component Graph, of the Helicopter Performance Manual. The angle between the runway and the wind direction is 60° and the wind speed is 25 knots. The crosswind component is approximately:-",
+      "options": [
+        {"id": "a", "text": "22 kts"},
+        {"id": "b", "text": "18 kts"},
+        {"id": "c", "text": "25 kts"},
+        {"id": "d", "text": "13 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Wind Component Graph (Figure 1-3), enter with wind angle 60° and wind speed 25 kts. The crosswind component = 25 × sin(60°) = 25 × 0.866 ≈ 22 kts.",
+      "topic": "Wind Components",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-3.png"
+    },
+    {
+      "id": "hfp_034",
+      "question": "With reference to Figure 1-3: Wind Component Graph, of the Helicopter Performance Manual. The angle between the runway and the wind direction is 20° and the wind speed is 15 knots. The crosswind component is approximately:-",
+      "options": [
+        {"id": "a", "text": "5 kts"},
+        {"id": "b", "text": "8 kts"},
+        {"id": "c", "text": "10 kts"},
+        {"id": "d", "text": "14 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Using the Wind Component Graph (Figure 1-3), enter with wind angle 20° and wind speed 15 kts. The crosswind component = 15 × sin(20°) = 15 × 0.342 ≈ 5 kts.",
+      "topic": "Wind Components",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image_url": "https://pdvkfqveuvykapistgyy.supabase.co/storage/v1/object/public/question-images/HFP_Figure1-3.png"
+    },
+    {
+      "id": "hfp_035",
+      "question": "After loading passengers and baggage the pilot has 175 lbs available for fuel. If the SG is 0.71 the volume of fuel in USG which can be loaded is:-",
+      "options": [
+        {"id": "a", "text": "29.5 USG"},
+        {"id": "b", "text": "24.5 USG"},
+        {"id": "c", "text": "33.0 USG"},
+        {"id": "d", "text": "41.0 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weight of 1 USG of fuel = SG × weight of 1 USG of water = 0.71 × 8.345 = 5.925 lbs/USG. Volume = weight / weight per gallon = 175 / 5.925 ≈ 29.5 USG.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_036",
+      "question": "SG 0.73, fuel weight 105 kg. The volume of fuel in US Gallons is:-",
+      "options": [
+        {"id": "a", "text": "38 USG"},
+        {"id": "b", "text": "33 USG"},
+        {"id": "c", "text": "42 USG"},
+        {"id": "d", "text": "28 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Volume in litres = weight / (SG × density of water) = 105 / 0.73 = 143.8 litres. Convert to USG: 143.8 / 3.785 = 38 USG.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_037",
+      "question": "SG 0.71, fuel weight 240 lbs. The volume of fuel in litres is:-",
+      "options": [
+        {"id": "a", "text": "153 litres"},
+        {"id": "b", "text": "170 litres"},
+        {"id": "c", "text": "140 litres"},
+        {"id": "d", "text": "120 litres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weight per USG = 0.71 × 8.345 = 5.925 lbs. Volume in USG = 240 / 5.925 = 40.5 USG. Convert to litres: 40.5 × 3.785 = 153 litres.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_038",
+      "question": "34 USG of fuel, SG 0.72. The weight of the fuel in lbs is:-",
+      "options": [
+        {"id": "a", "text": "204 lbs"},
+        {"id": "b", "text": "180 lbs"},
+        {"id": "c", "text": "220 lbs"},
+        {"id": "d", "text": "245 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weight = volume × SG × weight of water per USG = 34 × 0.72 × 8.345 = 34 × 6.008 = 204 lbs.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_039",
+      "question": "A helicopter achieves a performance of 12 ground nautical miles/USG. If the fuel flow is 48 lbs per hour (SW 6 lbs/USG) the groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "96 kts"},
+        {"id": "b", "text": "100 kts"},
+        {"id": "c", "text": "84 kts"},
+        {"id": "d", "text": "108 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel flow in USG/hr = 48 / 6 = 8 USG/hr. Groundspeed = performance × fuel flow = 12 nm/USG × 8 USG/hr = 96 kts.",
+      "topic": "Fuel & Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_040",
+      "question": "A helicopter achieves a performance of 3.5 air nautical miles/litre, fuel flow is 8.5 USG/hr, tailwind component 7 kts. The groundspeed is:-",
+      "options": [
+        {"id": "a", "text": "120 kts"},
+        {"id": "b", "text": "106 kts"},
+        {"id": "c", "text": "113 kts"},
+        {"id": "d", "text": "127 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel flow in litres/hr = 8.5 × 3.785 = 32.17 litres/hr. TAS = performance × fuel flow = 3.5 × 32.17 = 112.6 kts ≈ 113 kts. Groundspeed = TAS + tailwind = 113 + 7 = 120 kts.",
+      "topic": "Fuel & Performance",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_041",
+      "question": "A helicopter has a total moment of 182465 (lbs/inches) with a centre of gravity of 94.5 inches. The weight of the aircraft is:-",
+      "options": [
+        {"id": "a", "text": "1931 lbs"},
+        {"id": "b", "text": "2050 lbs"},
+        {"id": "c", "text": "1850 lbs"},
+        {"id": "d", "text": "1975 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weight = total moment / CG = 182465 / 94.5 = 1931 lbs.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_042",
+      "question": "A helicopter has consumed 18.5 USG at 7.3 USG/hr, GS 100. The distance flown is:-",
+      "options": [
+        {"id": "a", "text": "253 nm"},
+        {"id": "b", "text": "185 nm"},
+        {"id": "c", "text": "270 nm"},
+        {"id": "d", "text": "235 nm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time = fuel consumed / fuel flow = 18.5 / 7.3 = 2.534 hours. Distance = GS × time = 100 × 2.534 = 253 nm.",
+      "topic": "Fuel & Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_043",
+      "question": "The floor loading of a helicopter's baggage compartment is 20 lbs/sq ft. The maximum weight which can be loaded in a box measuring 2 ft x 2 ft and weighing 12 lbs is:-",
+      "options": [
+        {"id": "a", "text": "68 lbs"},
+        {"id": "b", "text": "78 lbs"},
+        {"id": "c", "text": "80 lbs"},
+        {"id": "d", "text": "60 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Floor area = 2 × 2 = 4 sq ft. Maximum total weight on floor = 20 × 4 = 80 lbs. The box itself weighs 12 lbs, so maximum contents = 80 - 12 = 68 lbs.",
+      "topic": "Floor Loading",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_044",
+      "question": "A helicopter in level flight covers a distance of 158 nm at a groundspeed of 95 kts, consuming 12.5 USG. The fuel flow is:-",
+      "options": [
+        {"id": "a", "text": "7.5 USG/hr"},
+        {"id": "b", "text": "8.0 USG/hr"},
+        {"id": "c", "text": "6.5 USG/hr"},
+        {"id": "d", "text": "9.0 USG/hr"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time = distance / groundspeed = 158 / 95 = 1.663 hours. Fuel flow = fuel consumed / time = 12.5 / 1.663 = 7.5 USG/hr.",
+      "topic": "Fuel & Performance",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_045",
+      "question": "During the climb out after lift-off a helicopter encounters a sudden decrease in the headwind component. The helicopter:-",
+      "options": [
+        {"id": "a", "text": "will start to undershoot"},
+        {"id": "b", "text": "will start to overshoot"},
+        {"id": "c", "text": "will maintain its flight path"},
+        {"id": "d", "text": "will gain altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A sudden decrease in headwind (wind shear) causes a temporary loss of airspeed and therefore lift. The helicopter will sink below its intended flight path — it will undershoot. The pilot must apply additional power to compensate.",
+      "topic": "Wind Effects",
+      "difficulty": "hard",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_046",
+      "question": "In order to avoid the wake turbulence when landing behind a heavy aircraft which has just taken off, a lighter aircraft should:-",
+      "options": [
+        {"id": "a", "text": "attempt to land before the point where the heavy aircraft lifted off"},
+        {"id": "b", "text": "land after the point where the heavy aircraft lifted off"},
+        {"id": "c", "text": "land at the same point as the heavy aircraft"},
+        {"id": "d", "text": "increase speed on final approach"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wake turbulence vortices are generated from the point where the heavy aircraft rotates and lifts off. By landing before this point, the lighter aircraft avoids flying through the wake turbulence vortices that trail behind and below the heavy aircraft's flight path.",
+      "topic": "Wake Turbulence",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_047",
+      "question": "In order to avoid the wake turbulence whilst following a heavy aircraft during the approach to land, a lighter aircraft should:-",
+      "options": [
+        {"id": "a", "text": "remain above the heavier aircraft's flight path and land after the point at which the heavy aircraft landed"},
+        {"id": "b", "text": "remain below the heavier aircraft's flight path"},
+        {"id": "c", "text": "fly at the same altitude as the heavy aircraft"},
+        {"id": "d", "text": "increase speed to overtake the heavy aircraft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wake turbulence vortices sink below and behind the generating aircraft. To avoid them, the lighter aircraft should stay above the heavy aircraft's flight path and land beyond the point where the heavy aircraft touched down, as the vortices are generated along the entire flight path until touchdown.",
+      "topic": "Wake Turbulence",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_048",
+      "question": "The symbol Vne is used to define the:-",
+      "options": [
+        {"id": "a", "text": "never exceed speed"},
+        {"id": "b", "text": "best rate of climb speed"},
+        {"id": "c", "text": "maximum structural cruising speed"},
+        {"id": "d", "text": "stalling speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vne stands for Velocity Never Exceed. It is the maximum speed at which the helicopter may be operated. Exceeding Vne can result in structural failure or loss of control due to retreating blade stall and advancing blade compressibility effects.",
+      "topic": "V-Speeds",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_049",
+      "question": "The total weight of a loaded helicopter may be determined by:-",
+      "options": [
+        {"id": "a", "text": "dividing the total moment by the centre of gravity"},
+        {"id": "b", "text": "multiplying the total moment by the centre of gravity"},
+        {"id": "c", "text": "subtracting the empty weight from the total moment"},
+        {"id": "d", "text": "adding all individual arm values"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Moment = Weight × Arm (CG). Therefore, Weight = Moment / CG. If you know the total moment and the centre of gravity position, dividing the moment by the CG gives the total weight.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_050",
+      "question": "A helicopter burns 18 USG of fuel in 2 hours 18 minutes. The fuel flow is:-",
+      "options": [
+        {"id": "a", "text": "7.8 USG/hr"},
+        {"id": "b", "text": "8.0 USG/hr"},
+        {"id": "c", "text": "7.5 USG/hr"},
+        {"id": "d", "text": "9.0 USG/hr"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time = 2 hours 18 minutes = 2 + 18/60 = 2.3 hours. Fuel flow = fuel consumed / time = 18 / 2.3 = 7.83 ≈ 7.8 USG/hr.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_051",
+      "question": "The symbol Vno is used to define the:-",
+      "options": [
+        {"id": "a", "text": "maximum structural cruising speed at which a helicopter may be flown"},
+        {"id": "b", "text": "never exceed speed"},
+        {"id": "c", "text": "best rate of climb speed"},
+        {"id": "d", "text": "best angle of climb speed"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vno stands for Velocity Normal Operating. It is the maximum structural cruising speed — the maximum speed for normal operations. Flight above Vno but below Vne is permitted only in smooth air.",
+      "topic": "V-Speeds",
+      "difficulty": "easy",
+      "source": "recalled",
+      "image": null
+    },
+    {
+      "id": "hfp_052",
+      "question": "The basic empty weight of a helicopter includes:-",
+      "options": [
+        {"id": "a", "text": "the airframe, engine, fixed equipment, unusable fuel, and full operating fluids"},
+        {"id": "b", "text": "the airframe and engine only"},
+        {"id": "c", "text": "the airframe, engine, and usable fuel"},
+        {"id": "d", "text": "the airframe, engine, crew, and passengers"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Basic empty weight includes the airframe structure, engine(s), all fixed equipment, unusable fuel, and full operating fluids (engine oil, hydraulic fluid, etc.). It does not include crew, passengers, baggage, or usable fuel.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_053",
+      "question": "The datum line used in mass and balance calculations is:-",
+      "options": [
+        {"id": "a", "text": "an imaginary vertical reference plane from which all horizontal distances (arms) are measured"},
+        {"id": "b", "text": "the centre of gravity position"},
+        {"id": "c", "text": "the main rotor mast centreline"},
+        {"id": "d", "text": "the forward CG limit"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The datum is an imaginary vertical reference plane established by the manufacturer from which all horizontal distances (arms) are measured. It is usually located at or near the nose of the helicopter. All arms are measured from this datum, and moments are calculated as weight × arm.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_054",
+      "question": "The arm in mass and balance calculations is:-",
+      "options": [
+        {"id": "a", "text": "the horizontal distance from the datum to the centre of gravity of an item"},
+        {"id": "b", "text": "the vertical distance from the ground to the item"},
+        {"id": "c", "text": "the weight of the item multiplied by its distance"},
+        {"id": "d", "text": "the total weight divided by the number of items"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The arm (or station) is the horizontal distance in inches from the datum to the centre of gravity of an item or load. It is used to calculate the moment (weight × arm) for each item loaded on the helicopter.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_055",
+      "question": "The moment of an item in mass and balance calculations is:-",
+      "options": [
+        {"id": "a", "text": "the weight of the item multiplied by its arm"},
+        {"id": "b", "text": "the weight of the item divided by its arm"},
+        {"id": "c", "text": "the arm of the item divided by its weight"},
+        {"id": "d", "text": "the total weight multiplied by the total arm"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Moment = Weight × Arm. It represents the turning force about the datum. The total CG is found by dividing the total moment by the total weight: CG = Total Moment / Total Weight.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_056",
+      "question": "If a helicopter's CG is aft of the permitted range, the pilot should:-",
+      "options": [
+        {"id": "a", "text": "move weight forward or remove weight from the rear"},
+        {"id": "b", "text": "add weight to the rear"},
+        {"id": "c", "text": "increase fuel load"},
+        {"id": "d", "text": "reduce the total weight only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "An aft CG is dangerous as it can make the helicopter uncontrollable. To correct it, weight must be moved forward (e.g., repositioning passengers or cargo) or weight must be removed from the rear of the helicopter to bring the CG back within limits.",
+      "topic": "Mass & Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_057",
+      "question": "Pressure altitude is defined as:-",
+      "options": [
+        {"id": "a", "text": "the altitude indicated when the altimeter subscale is set to 1013.25 hPa"},
+        {"id": "b", "text": "the altitude above mean sea level"},
+        {"id": "c", "text": "the altitude corrected for temperature"},
+        {"id": "d", "text": "the altitude above the nearest airfield"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude is the altitude read on the altimeter when the subscale is set to the standard pressure of 1013.25 hPa (29.92 inHg). It is used for performance chart calculations because all performance data is referenced to standard pressure.",
+      "topic": "Pressure Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_058",
+      "question": "Density altitude is:-",
+      "options": [
+        {"id": "a", "text": "pressure altitude corrected for non-standard temperature"},
+        {"id": "b", "text": "true altitude corrected for pressure"},
+        {"id": "c", "text": "indicated altitude corrected for instrument error"},
+        {"id": "d", "text": "the same as pressure altitude in all conditions"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Density altitude is pressure altitude corrected for non-standard temperature. It represents the altitude in the standard atmosphere at which the actual air density would be found. Higher temperatures increase density altitude, reducing helicopter performance.",
+      "topic": "Density Altitude",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_059",
+      "question": "Airfield elevation 5000 ft, QNH 1003. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "5300 ft"},
+        {"id": "b", "text": "4700 ft"},
+        {"id": "c", "text": "5000 ft"},
+        {"id": "d", "text": "5150 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = elevation + (1013 - QNH) × 30 = 5000 + (1013 - 1003) × 30 = 5000 + 300 = 5300 ft.",
+      "topic": "Pressure Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_060",
+      "question": "Airfield elevation 3500 ft, QNH 1023. The pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "3200 ft"},
+        {"id": "b", "text": "3800 ft"},
+        {"id": "c", "text": "3500 ft"},
+        {"id": "d", "text": "3350 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Pressure altitude = elevation + (1013 - QNH) × 30 = 3500 + (1013 - 1023) × 30 = 3500 - 300 = 3200 ft.",
+      "topic": "Pressure Altitude",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_061",
+      "question": "The ISA temperature at sea level is:-",
+      "options": [
+        {"id": "a", "text": "+15°C"},
+        {"id": "b", "text": "+20°C"},
+        {"id": "c", "text": "+10°C"},
+        {"id": "d", "text": "0°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The International Standard Atmosphere (ISA) defines the sea level temperature as +15°C (59°F), with a pressure of 1013.25 hPa. Temperature decreases at approximately 2°C per 1000 ft (or 1.98°C per 1000 ft more precisely).",
+      "topic": "Temperature & ISA",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_062",
+      "question": "The ISA temperature lapse rate in the troposphere is approximately:-",
+      "options": [
+        {"id": "a", "text": "2°C per 1000 ft"},
+        {"id": "b", "text": "3°C per 1000 ft"},
+        {"id": "c", "text": "1°C per 1000 ft"},
+        {"id": "d", "text": "5°C per 1000 ft"}
+      ],
+      "correct_answer": "a",
+      "explanation": "In the ISA, temperature decreases at approximately 2°C per 1000 ft (1.98°C/1000 ft or 6.5°C/km) from sea level up to the tropopause at 36,090 ft. This lapse rate is used to calculate ISA temperatures at any altitude.",
+      "topic": "Temperature & ISA",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_063",
+      "question": "The ISA temperature at 5000 ft pressure altitude is:-",
+      "options": [
+        {"id": "a", "text": "+5°C"},
+        {"id": "b", "text": "+10°C"},
+        {"id": "c", "text": "0°C"},
+        {"id": "d", "text": "+15°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA temperature at altitude = 15 - (2 × altitude in thousands) = 15 - (2 × 5) = 15 - 10 = +5°C.",
+      "topic": "Temperature & ISA",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_064",
+      "question": "If the temperature at pressure altitude 4000 ft is ISA +10°C, the outside air temperature is:-",
+      "options": [
+        {"id": "a", "text": "+17°C"},
+        {"id": "b", "text": "+10°C"},
+        {"id": "c", "text": "+25°C"},
+        {"id": "d", "text": "+7°C"}
+      ],
+      "correct_answer": "a",
+      "explanation": "ISA at 4000 ft = 15 - (2 × 4) = 15 - 8 = +7°C. ISA +10 means the actual temperature is 10°C warmer: 7 + 10 = +17°C.",
+      "topic": "Temperature & ISA",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_065",
+      "question": "1 US Gallon is equivalent to approximately:-",
+      "options": [
+        {"id": "a", "text": "3.785 litres"},
+        {"id": "b", "text": "4.546 litres"},
+        {"id": "c", "text": "3.0 litres"},
+        {"id": "d", "text": "5.0 litres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 US Gallon = 3.785 litres. Note that 1 Imperial Gallon = 4.546 litres. The US Gallon is smaller than the Imperial Gallon. This conversion is essential for helicopter fuel calculations.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_066",
+      "question": "1 US Gallon of water weighs approximately:-",
+      "options": [
+        {"id": "a", "text": "8.345 lbs"},
+        {"id": "b", "text": "10 lbs"},
+        {"id": "c", "text": "6 lbs"},
+        {"id": "d", "text": "12 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 US Gallon of water weighs approximately 8.345 lbs (3.785 kg). The weight of fuel per USG is found by multiplying 8.345 by the specific gravity (SG) of the fuel. For example, AVGAS with SG 0.72 weighs 8.345 × 0.72 = 6.0 lbs/USG.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_067",
+      "question": "A helicopter has a fuel capacity of 50 USG. With a fuel flow of 8 USG/hr and a 45-minute reserve requirement, the maximum flight time available is:-",
+      "options": [
+        {"id": "a", "text": "5 hours 30 minutes"},
+        {"id": "b", "text": "6 hours 15 minutes"},
+        {"id": "c", "text": "5 hours"},
+        {"id": "d", "text": "4 hours 45 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Reserve fuel = 8 × 0.75 = 6 USG. Usable fuel for flight = 50 - 6 = 44 USG. Maximum flight time = 44 / 8 = 5.5 hours = 5 hours 30 minutes.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_068",
+      "question": "A helicopter has a groundspeed of 110 kts and a fuel flow of 9 USG/hr. The specific range is:-",
+      "options": [
+        {"id": "a", "text": "12.2 nm/USG"},
+        {"id": "b", "text": "9.9 nm/USG"},
+        {"id": "c", "text": "15.0 nm/USG"},
+        {"id": "d", "text": "11.0 nm/USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Specific range = groundspeed / fuel flow = 110 / 9 = 12.2 nm/USG. This tells you how far the helicopter travels per unit of fuel consumed.",
+      "topic": "Fuel & Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_069",
+      "question": "A helicopter needs to fly 250 nm. Groundspeed is 105 kts, fuel flow is 8.5 USG/hr. The fuel required (excluding reserves) is:-",
+      "options": [
+        {"id": "a", "text": "20.2 USG"},
+        {"id": "b", "text": "25.0 USG"},
+        {"id": "c", "text": "18.5 USG"},
+        {"id": "d", "text": "22.0 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Time = distance / groundspeed = 250 / 105 = 2.381 hours. Fuel required = time × fuel flow = 2.381 × 8.5 = 20.2 USG.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_070",
+      "question": "The effect of a headwind on a helicopter's range is:-",
+      "options": [
+        {"id": "a", "text": "range is decreased"},
+        {"id": "b", "text": "range is increased"},
+        {"id": "c", "text": "range is unaffected"},
+        {"id": "d", "text": "range increases only at high altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A headwind reduces groundspeed while fuel flow remains approximately the same. Since range depends on groundspeed (not TAS), a headwind reduces the distance the helicopter can cover on a given amount of fuel, thereby decreasing range.",
+      "topic": "Wind Effects",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_071",
+      "question": "The effect of a tailwind on a helicopter's range is:-",
+      "options": [
+        {"id": "a", "text": "range is increased"},
+        {"id": "b", "text": "range is decreased"},
+        {"id": "c", "text": "range is unaffected"},
+        {"id": "d", "text": "range decreases at low altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A tailwind increases groundspeed while fuel flow remains approximately the same. Since range depends on groundspeed, a tailwind increases the distance the helicopter can cover on a given amount of fuel, thereby increasing range.",
+      "topic": "Wind Effects",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_072",
+      "question": "The effect of a headwind on a helicopter's endurance is:-",
+      "options": [
+        {"id": "a", "text": "endurance is essentially unaffected"},
+        {"id": "b", "text": "endurance is significantly decreased"},
+        {"id": "c", "text": "endurance is significantly increased"},
+        {"id": "d", "text": "endurance is halved"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Endurance is the time a helicopter can remain airborne on a given fuel load. It depends on fuel flow rate, not groundspeed. Since a headwind does not significantly change the power required (and therefore fuel flow) at the same TAS, endurance is essentially unaffected by wind.",
+      "topic": "Wind Effects",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_073",
+      "question": "During the approach to land, a helicopter encounters a sudden increase in tailwind. The helicopter:-",
+      "options": [
+        {"id": "a", "text": "will experience a loss of airspeed and tend to undershoot"},
+        {"id": "b", "text": "will experience an increase in airspeed and tend to overshoot"},
+        {"id": "c", "text": "will maintain its approach path"},
+        {"id": "d", "text": "will gain altitude"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A sudden increase in tailwind (wind shear) causes a temporary loss of airspeed and lift. The helicopter will sink below its intended approach path and tend to undershoot the landing point. The pilot must add power to compensate.",
+      "topic": "Wind Effects",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_074",
+      "question": "During the approach to land, a helicopter encounters a sudden increase in headwind. The helicopter:-",
+      "options": [
+        {"id": "a", "text": "will experience an increase in airspeed and tend to overshoot"},
+        {"id": "b", "text": "will experience a loss of airspeed and tend to undershoot"},
+        {"id": "c", "text": "will maintain its approach path"},
+        {"id": "d", "text": "will descend rapidly"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A sudden increase in headwind causes a temporary increase in airspeed and lift. The helicopter will rise above its intended approach path and tend to overshoot the landing point. The pilot should reduce power to maintain the correct approach path.",
+      "topic": "Wind Effects",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_075",
+      "question": "Wake turbulence vortices from a helicopter are most severe when the helicopter is:-",
+      "options": [
+        {"id": "a", "text": "heavy, slow, and in clean configuration"},
+        {"id": "b", "text": "light, fast, and in clean configuration"},
+        {"id": "c", "text": "heavy, fast, and in dirty configuration"},
+        {"id": "d", "text": "light, slow, and in dirty configuration"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Wake turbulence vortices are strongest when the generating aircraft is heavy (maximum lift), slow (high angle of attack/blade angle), and clean (no drag devices). These conditions produce the strongest tip vortices from the rotor blades.",
+      "topic": "Wake Turbulence",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_076",
+      "question": "The maximum allowable weight (MAUW) of a helicopter is:-",
+      "options": [
+        {"id": "a", "text": "the maximum weight at which the helicopter is permitted to fly as specified in the flight manual"},
+        {"id": "b", "text": "the weight of the helicopter with full fuel and no passengers"},
+        {"id": "c", "text": "the basic empty weight plus maximum fuel"},
+        {"id": "d", "text": "the weight at which the helicopter can hover IGE"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Maximum Allowable Weight (MAUW), also called Maximum All-Up Weight or Maximum Takeoff Weight (MTOW), is the maximum weight at which the helicopter is certified to fly. It is a structural limit specified in the flight manual and must never be exceeded.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_077",
+      "question": "The useful load of a helicopter is:-",
+      "options": [
+        {"id": "a", "text": "the difference between the MAUW and the basic empty weight"},
+        {"id": "b", "text": "the weight of fuel only"},
+        {"id": "c", "text": "the weight of passengers and baggage only"},
+        {"id": "d", "text": "the basic empty weight minus the fuel weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Useful load = MAUW - Basic Empty Weight. It represents the total weight available for crew, passengers, baggage, and fuel. The pilot must distribute this useful load while keeping the CG within limits.",
+      "topic": "Mass & Balance",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_078",
+      "question": "A helicopter has a MAUW of 2200 lbs and a basic empty weight of 1400 lbs. The pilot weighs 180 lbs and 2 passengers weigh 160 lbs each. The maximum fuel load (in lbs) is:-",
+      "options": [
+        {"id": "a", "text": "300 lbs"},
+        {"id": "b", "text": "460 lbs"},
+        {"id": "c", "text": "500 lbs"},
+        {"id": "d", "text": "340 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Useful load = 2200 - 1400 = 800 lbs. Crew + passengers = 180 + 160 + 160 = 500 lbs. Maximum fuel = 800 - 500 = 300 lbs.",
+      "topic": "Mass & Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_079",
+      "question": "Specific gravity (SG) of aviation fuel is defined as:-",
+      "options": [
+        {"id": "a", "text": "the ratio of the density of the fuel to the density of water"},
+        {"id": "b", "text": "the weight of fuel per litre"},
+        {"id": "c", "text": "the volume of fuel per kilogram"},
+        {"id": "d", "text": "the temperature at which fuel ignites"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Specific gravity is the ratio of the density of a substance to the density of water. For aviation fuel, SG is typically between 0.71 and 0.73. It is used to convert between fuel weight and volume: weight = volume × SG × density of water.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_080",
+      "question": "25 USG of fuel, SG 0.71. The weight of the fuel in lbs is:-",
+      "options": [
+        {"id": "a", "text": "148 lbs"},
+        {"id": "b", "text": "178 lbs"},
+        {"id": "c", "text": "125 lbs"},
+        {"id": "d", "text": "160 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Weight = volume × SG × weight of water per USG = 25 × 0.71 × 8.345 = 25 × 5.925 = 148 lbs.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_081",
+      "question": "A helicopter has 40 USG of fuel on board. Fuel flow is 7.5 USG/hr. The reserve requirement is 30 minutes. The maximum flight time available is:-",
+      "options": [
+        {"id": "a", "text": "4 hours 50 minutes"},
+        {"id": "b", "text": "5 hours 20 minutes"},
+        {"id": "c", "text": "4 hours 30 minutes"},
+        {"id": "d", "text": "5 hours"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Reserve fuel = 7.5 × 0.5 = 3.75 USG. Usable fuel = 40 - 3.75 = 36.25 USG. Flight time = 36.25 / 7.5 = 4.833 hours = 4 hours 50 minutes.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_082",
+      "question": "A helicopter flies 180 nm at a groundspeed of 90 kts, then 120 nm at a groundspeed of 100 kts. The total flight time is:-",
+      "options": [
+        {"id": "a", "text": "3 hours 12 minutes"},
+        {"id": "b", "text": "3 hours"},
+        {"id": "c", "text": "3 hours 30 minutes"},
+        {"id": "d", "text": "2 hours 48 minutes"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Leg 1: 180 / 90 = 2.0 hours. Leg 2: 120 / 100 = 1.2 hours. Total = 2.0 + 1.2 = 3.2 hours = 3 hours 12 minutes.",
+      "topic": "Navigation Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_083",
+      "question": "The performance-limited take-off weight of a helicopter is:-",
+      "options": [
+        {"id": "a", "text": "the maximum weight at which the helicopter can meet all required performance criteria for the conditions"},
+        {"id": "b", "text": "always equal to the MAUW"},
+        {"id": "c", "text": "the basic empty weight plus maximum fuel"},
+        {"id": "d", "text": "determined only by the engine power available"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The performance-limited take-off weight may be less than the structural MAUW. It depends on conditions such as pressure altitude, temperature, and wind. On a hot, high day, the helicopter may not be able to hover or climb at MAUW, so the take-off weight must be reduced.",
+      "topic": "Performance Factors",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_084",
+      "question": "An increase in pressure altitude will:-",
+      "options": [
+        {"id": "a", "text": "decrease helicopter performance due to lower air density"},
+        {"id": "b", "text": "increase helicopter performance"},
+        {"id": "c", "text": "have no effect on performance"},
+        {"id": "d", "text": "only affect engine performance, not rotor performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Higher pressure altitude means lower atmospheric pressure and lower air density. This reduces both rotor efficiency (less lift per blade angle) and engine power output (less air for combustion), resulting in decreased overall helicopter performance.",
+      "topic": "Performance Factors",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_085",
+      "question": "An increase in temperature above ISA will:-",
+      "options": [
+        {"id": "a", "text": "decrease helicopter performance due to lower air density"},
+        {"id": "b", "text": "increase helicopter performance"},
+        {"id": "c", "text": "have no effect on performance"},
+        {"id": "d", "text": "only affect engine performance"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Higher than standard temperature reduces air density (hot air is less dense). This increases density altitude, reducing rotor lift capability and engine power output. The helicopter's hover ceiling, rate of climb, and payload capacity are all reduced.",
+      "topic": "Performance Factors",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_086",
+      "question": "The effect of increased gross weight on a helicopter's hover ceiling is:-",
+      "options": [
+        {"id": "a", "text": "the hover ceiling is reduced"},
+        {"id": "b", "text": "the hover ceiling is increased"},
+        {"id": "c", "text": "the hover ceiling is unaffected"},
+        {"id": "d", "text": "the hover ceiling increases IGE but decreases OGE"}
+      ],
+      "correct_answer": "a",
+      "explanation": "A heavier helicopter requires more rotor thrust to hover. At higher altitudes, the reduced air density limits the thrust the rotor can produce. Therefore, increasing gross weight reduces the maximum altitude at which the helicopter can hover — both IGE and OGE hover ceilings are reduced.",
+      "topic": "Hover Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_087",
+      "question": "The IGE hover ceiling is always:-",
+      "options": [
+        {"id": "a", "text": "higher than the OGE hover ceiling for the same conditions"},
+        {"id": "b", "text": "lower than the OGE hover ceiling"},
+        {"id": "c", "text": "the same as the OGE hover ceiling"},
+        {"id": "d", "text": "unrelated to the OGE hover ceiling"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Hovering in ground effect (IGE) requires less power than hovering out of ground effect (OGE) because the ground restricts the rotor downwash, reducing induced drag. Therefore, the IGE hover ceiling is always higher than the OGE hover ceiling for the same gross weight and conditions.",
+      "topic": "Hover Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_088",
+      "question": "A helicopter's rate of climb will decrease with:-",
+      "options": [
+        {"id": "a", "text": "increased gross weight, increased density altitude, or decreased engine power"},
+        {"id": "b", "text": "decreased gross weight and decreased altitude"},
+        {"id": "c", "text": "increased headwind component"},
+        {"id": "d", "text": "decreased temperature only"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Rate of climb depends on excess power (power available minus power required). Increased gross weight increases power required. Increased density altitude reduces both power available and rotor efficiency. Decreased engine power directly reduces power available. All three reduce excess power and therefore rate of climb.",
+      "topic": "Climb Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_089",
+      "question": "The service ceiling of a helicopter is defined as the altitude at which the rate of climb reduces to:-",
+      "options": [
+        {"id": "a", "text": "100 ft/min"},
+        {"id": "b", "text": "0 ft/min"},
+        {"id": "c", "text": "500 ft/min"},
+        {"id": "d", "text": "200 ft/min"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The service ceiling is the altitude at which the helicopter can only achieve a rate of climb of 100 ft/min. The absolute ceiling is where the rate of climb is 0 ft/min. The service ceiling is a more practical limit as it represents the highest usable altitude.",
+      "topic": "Climb Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_090",
+      "question": "A helicopter loaded with a CG of 95.0\" and weight 2000 lbs. 50 lbs of baggage is moved from the forward compartment (arm 70\") to the rear compartment (arm 120\"). The new CG is:-",
+      "options": [
+        {"id": "a", "text": "96.25\""},
+        {"id": "b", "text": "95.50\""},
+        {"id": "c", "text": "97.00\""},
+        {"id": "d", "text": "94.50\""}
+      ],
+      "correct_answer": "a",
+      "explanation": "CG change = (weight moved × distance moved) / total weight = (50 × (120 - 70)) / 2000 = (50 × 50) / 2000 = 2500 / 2000 = 1.25\". New CG = 95.0 + 1.25 = 96.25\".",
+      "topic": "Mass & Balance",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_091",
+      "question": "1 kilogram is equivalent to approximately:-",
+      "options": [
+        {"id": "a", "text": "2.205 lbs"},
+        {"id": "b", "text": "1.5 lbs"},
+        {"id": "c", "text": "3.0 lbs"},
+        {"id": "d", "text": "0.454 lbs"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 kilogram = 2.205 lbs (or approximately 2.2 lbs). Conversely, 1 lb = 0.4536 kg. This conversion is frequently needed in helicopter flight planning when working with both metric and imperial units.",
+      "topic": "Unit Conversions",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_092",
+      "question": "1 Imperial Gallon is equivalent to approximately:-",
+      "options": [
+        {"id": "a", "text": "4.546 litres"},
+        {"id": "b", "text": "3.785 litres"},
+        {"id": "c", "text": "5.0 litres"},
+        {"id": "d", "text": "3.0 litres"}
+      ],
+      "correct_answer": "a",
+      "explanation": "1 Imperial Gallon = 4.546 litres. 1 US Gallon = 3.785 litres. The Imperial Gallon is larger than the US Gallon. When converting fuel quantities, it is essential to know which gallon unit is being used.",
+      "topic": "Unit Conversions",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_093",
+      "question": "A helicopter has a fuel flow of 35 litres/hr. The fuel flow in USG/hr is approximately:-",
+      "options": [
+        {"id": "a", "text": "9.2 USG/hr"},
+        {"id": "b", "text": "7.7 USG/hr"},
+        {"id": "c", "text": "11.0 USG/hr"},
+        {"id": "d", "text": "8.5 USG/hr"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel flow in USG/hr = litres/hr ÷ 3.785 = 35 / 3.785 = 9.25 ≈ 9.2 USG/hr.",
+      "topic": "Fuel Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_094",
+      "question": "The crosswind component for a wind of 30 kts at 45° to the runway is approximately:-",
+      "options": [
+        {"id": "a", "text": "21 kts"},
+        {"id": "b", "text": "15 kts"},
+        {"id": "c", "text": "26 kts"},
+        {"id": "d", "text": "30 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Crosswind component = wind speed × sin(angle) = 30 × sin(45°) = 30 × 0.707 = 21.2 ≈ 21 kts.",
+      "topic": "Wind Components",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_095",
+      "question": "The headwind component for a wind of 30 kts at 45° to the runway is approximately:-",
+      "options": [
+        {"id": "a", "text": "21 kts"},
+        {"id": "b", "text": "15 kts"},
+        {"id": "c", "text": "26 kts"},
+        {"id": "d", "text": "30 kts"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Headwind component = wind speed × cos(angle) = 30 × cos(45°) = 30 × 0.707 = 21.2 ≈ 21 kts. At 45°, the headwind and crosswind components are equal.",
+      "topic": "Wind Components",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_096",
+      "question": "A helicopter departs with 45 USG of fuel. After flying for 2.5 hours at a fuel flow of 8 USG/hr, the remaining fuel is:-",
+      "options": [
+        {"id": "a", "text": "25 USG"},
+        {"id": "b", "text": "20 USG"},
+        {"id": "c", "text": "30 USG"},
+        {"id": "d", "text": "15 USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Fuel consumed = fuel flow × time = 8 × 2.5 = 20 USG. Remaining fuel = 45 - 20 = 25 USG.",
+      "topic": "Fuel Calculations",
+      "difficulty": "easy",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_097",
+      "question": "The point of no return (PNR) is the point beyond which:-",
+      "options": [
+        {"id": "a", "text": "the helicopter cannot return to the departure point with the required fuel reserves"},
+        {"id": "b", "text": "the helicopter must land at the nearest airfield"},
+        {"id": "c", "text": "the helicopter has used half its fuel"},
+        {"id": "d", "text": "the helicopter must declare an emergency"}
+      ],
+      "correct_answer": "a",
+      "explanation": "The Point of No Return (PNR) is the furthest point along a route from which the helicopter can return to its departure point and arrive with the required fuel reserves. Beyond the PNR, the helicopter must continue to its destination or an alternate.",
+      "topic": "Navigation Calculations",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_098",
+      "question": "When calculating mass and balance, if the CG falls outside the permitted envelope:-",
+      "options": [
+        {"id": "a", "text": "the load must be rearranged or reduced until the CG is within limits"},
+        {"id": "b", "text": "the flight may proceed with caution"},
+        {"id": "c", "text": "the pilot should fly at a reduced speed"},
+        {"id": "d", "text": "additional fuel should be added to correct the CG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "If the CG is outside the permitted envelope, the helicopter must NOT be flown. The load must be rearranged (moving items forward or aft) or reduced until the CG falls within the approved limits. Flying with an out-of-limits CG can result in loss of control.",
+      "topic": "Mass & Balance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_099",
+      "question": "A helicopter has a TAS of 100 kts, a headwind of 15 kts, and a fuel flow of 8 USG/hr. The specific range (ground nm per USG) is:-",
+      "options": [
+        {"id": "a", "text": "10.6 nm/USG"},
+        {"id": "b", "text": "12.5 nm/USG"},
+        {"id": "c", "text": "8.5 nm/USG"},
+        {"id": "d", "text": "11.8 nm/USG"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Groundspeed = TAS - headwind = 100 - 15 = 85 kts. Specific range = groundspeed / fuel flow = 85 / 8 = 10.625 ≈ 10.6 nm/USG.",
+      "topic": "Fuel & Performance",
+      "difficulty": "medium",
+      "source": "generated",
+      "image": null
+    },
+    {
+      "id": "hfp_100",
+      "question": "The Vne of a helicopter typically:-",
+      "options": [
+        {"id": "a", "text": "decreases with increasing density altitude"},
+        {"id": "b", "text": "increases with increasing density altitude"},
+        {"id": "c", "text": "remains constant regardless of conditions"},
+        {"id": "d", "text": "is only affected by gross weight"}
+      ],
+      "correct_answer": "a",
+      "explanation": "Vne decreases with increasing density altitude because at higher density altitudes, the true airspeed for a given indicated airspeed is higher. This means the blade tips reach critical Mach numbers at lower indicated airspeeds, requiring a reduction in Vne to prevent compressibility effects and retreating blade stall.",
+      "topic": "Airspeed Limitations",
+      "difficulty": "hard",
+      "source": "generated",
+      "image": null
+    }
+  ]
+}

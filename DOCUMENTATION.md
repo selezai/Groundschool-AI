@@ -97,6 +97,13 @@ supabase/                   # Edge Functions (PayFast, account deletion)
 | Captain's Club | 500MB | Unlimited | Yes |
 
 ## Decisions Log
+- **2025-02-16**: Finish Later + My Exams Tabs + Question Bank UI Redesign
+  - **Finish Later**: Added "Finish Later" button to quiz-taking screen. Saves current answers to `quiz_attempts` with `score = -1` as a sentinel for in-progress. On resume, answers are restored from the partial attempt. On final submit, partial attempt is deleted and replaced with the real score, and `quizzes.status` is set to `"completed"`.
+  - **My Exams Tabs**: Redesigned `/quizzes` page with pill-style "In Progress" / "Completed" tabs. In Progress shows `status = "active"` quizzes with Resume (Play) button + amber Clock icon. Completed shows `status = "completed"` quizzes with Retake (RotateCcw) button + green CheckCircle icon. Each tab shows a count badge. Empty states are tab-aware.
+  - **Question Bank UI**: Replaced the bottom "Start Exam Panel" with inline card expansion. Clicking a subject card toggles it open to reveal a `<select>` dropdown for question count + Start button. Added 30 to question count options (`[20, 30, 40, 60, 80]`). ChevronDown/ChevronUp icons indicate expandable state.
+  - **No DB migrations needed**: Uses existing `quizzes.status` column (`"active"` vs `"completed"`) and `quiz_attempts.metadata` JSON for storing partial answers.
+  - **Files changed**: `src/app/(app)/quiz/[id]/page.tsx`, `src/app/(app)/quizzes/page.tsx`, `src/app/(app)/question-bank/page.tsx`
+
 - **2025-02-14**: Admin Dashboard — single-user UUID-gated admin panel
   - **Route**: `/admin` inside `(app)` layout, shares sidebar with rest of app
   - **Security**: Triple-layer protection — (1) middleware redirects non-admin to `/dashboard`, (2) API routes check UUID server-side, (3) page-level client check. Admin UUID hardcoded + env var `ADMIN_USER_ID`

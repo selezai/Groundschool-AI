@@ -6,6 +6,7 @@ import { useAuth } from "@/components/providers/auth-provider";
 import { cn } from "@/lib/utils";
 import {
   Home,
+  BookOpen,
   ClipboardList,
   User,
   Crown,
@@ -22,6 +23,7 @@ const ADMIN_UUID = "c0023a5b-e4e9-4955-9ec7-2f9eed20db5a";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: Home },
+  { href: "/question-bank", label: "Question Bank", icon: BookOpen },
   { href: "/quizzes", label: "My Exams", icon: ClipboardList },
   { href: "/profile", label: "Profile", icon: User },
   { href: "/captains-club", label: "Captain's Club", icon: Crown },
