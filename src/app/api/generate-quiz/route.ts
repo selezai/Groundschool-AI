@@ -166,17 +166,34 @@ function parseQuestions(raw: string): QuizQuestion[] {
   const parsed = JSON.parse(jsonStr);
   const questions: QuizQuestion[] = parsed.questions || [];
 
-  // Normalize: ensure correct_answer_id exists
+  // Normalize: filter empty options, enforce 4 options, reassign sequential IDs
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return questions.map((q: any) => {
-    const correctId = q.correct_answer_id || q.correct || q.answer || "";
+    const rawCorrectId = String(q.correct_answer_id || q.correct || q.answer || "");
+
+    // Filter to only options that have actual text content
+    const validOptions = ((q.options || []) as { id?: string; text?: string }[])
+      .filter((opt) => opt && typeof opt.text === "string" && opt.text.trim().length > 0);
+
+    // Reassign IDs sequentially (a, b, c, d) — prevents duplicates from AI
+    // Also build a map from old ID → new ID so we can remap correct_answer_id
+    const idMap: Record<string, string> = {};
+    const options = validOptions.slice(0, 4).map((opt, i) => {
+      const newId = String.fromCharCode(97 + i);
+      if (opt.id) idMap[opt.id.toLowerCase()] = newId;
+      return { id: newId, text: String(opt.text || "") };
+    });
+
+    // Remap the correct answer ID if it used the old ID
+    const correctId = idMap[rawCorrectId.toLowerCase()] || rawCorrectId;
+
     return {
       question_text: String(q.question_text || ""),
-      options: (q.options || []) as { id: string; text: string }[],
-      correct_answer_id: String(correctId),
+      options,
+      correct_answer_id: correctId,
       explanation: String(q.explanation || ""),
     };
-  });
+  }).filter((q) => q.options.length === 4 && q.question_text.trim().length > 0);
 }
 
 // Groq multimodal with Llama 4 Scout - supports text and images

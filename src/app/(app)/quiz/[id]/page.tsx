@@ -82,15 +82,33 @@ export default function QuizPage() {
       }
 
       // Map database columns to expected interface
-      const mappedQuestions = questionsData.map((q: { id: string; quiz_id: string; text: string; options: { id: string; text: string }[]; correct_answer: string; explanation: string | null; image_url?: string | null }) => ({
-        id: q.id,
-        quiz_id: q.quiz_id,
-        question_text: q.text,
-        options: q.options,
-        correct_answer_id: q.correct_answer,
-        explanation: q.explanation,
-        image_url: q.image_url || null,
-      }));
+      const mappedQuestions = questionsData.map((q: { id: string; quiz_id: string; text: string; options: { id: string; text: string }[]; correct_answer: string; explanation: string | null; image_url?: string | null }) => {
+        const validOptions = (q.options || [])
+          .filter((opt: { id?: string; text?: string }) => opt && typeof opt.text === "string" && opt.text.trim().length > 0)
+          .slice(0, 4);
+
+        // Build old→new ID map and reassign sequential IDs
+        const idMap: Record<string, string> = {};
+        const options = validOptions.map((opt: { id?: string; text?: string }, i: number) => {
+          const newId = String.fromCharCode(97 + i);
+          if (opt.id) idMap[opt.id.toLowerCase()] = newId;
+          return { id: newId, text: String(opt.text || "") };
+        });
+
+        // Remap correct_answer to match new sequential IDs
+        const rawCorrect = (q.correct_answer || "").toLowerCase();
+        const correctAnswerId = idMap[rawCorrect] || q.correct_answer;
+
+        return {
+          id: q.id,
+          quiz_id: q.quiz_id,
+          question_text: q.text,
+          options,
+          correct_answer_id: correctAnswerId,
+          explanation: q.explanation,
+          image_url: q.image_url || null,
+        };
+      });
 
       setQuiz(quizData);
       setQuestions(mappedQuestions);
@@ -363,19 +381,20 @@ export default function QuizPage() {
                     </div>
                   )}
                   <div className="ml-7 space-y-1">
-                    {q.options.map((opt) => {
-                      const isUserChoice = userAnswer === opt.id;
-                      const isCorrectOption = q.correct_answer_id === opt.id;
+                    {q.options.filter((opt) => opt && (opt.id || opt.text)).map((opt, optIdx) => {
+                      const optId = opt.id || String.fromCharCode(97 + optIdx);
+                      const isUserChoice = userAnswer === optId;
+                      const isCorrectOption = q.correct_answer_id === optId;
                       return (
                         <p
-                          key={opt.id}
+                          key={optId}
                           className={cn(
                             "text-sm px-2 py-1 rounded",
                             isCorrectOption && "bg-green-500/10 text-green-400",
                             isUserChoice && !isCorrectOption && "bg-destructive/10 text-destructive"
                           )}
                         >
-                          {opt.id.toUpperCase()}. {opt.text}
+                          {optId.toUpperCase()}. {opt.text}
                           {isCorrectOption && " ✓"}
                           {isUserChoice && !isCorrectOption && " ✗"}
                         </p>
@@ -438,12 +457,13 @@ export default function QuizPage() {
             )}
           </CardHeader>
           <CardContent className="space-y-2">
-            {currentQuestion.options.map((opt) => {
-              const isSelected = answers[currentQuestion.id] === opt.id;
+            {currentQuestion.options.filter((opt) => opt && (opt.id || opt.text)).map((opt, optIdx) => {
+              const optId = opt.id || String.fromCharCode(97 + optIdx);
+              const isSelected = answers[currentQuestion.id] === optId;
               return (
                 <button
-                  key={opt.id}
-                  onClick={() => selectAnswer(opt.id)}
+                  key={optId}
+                  onClick={() => selectAnswer(optId)}
                   className={cn(
                     "w-full text-left px-4 py-4 sm:py-3 rounded-xl border transition-colors text-sm min-h-[52px] active:scale-[0.98]",
                     isSelected
@@ -452,7 +472,7 @@ export default function QuizPage() {
                   )}
                 >
                   <span className="font-medium mr-2">
-                    {opt.id.toUpperCase()}.
+                    {optId.toUpperCase()}.
                   </span>
                   {opt.text}
                 </button>
